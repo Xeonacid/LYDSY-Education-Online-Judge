@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3254. -- Xor-Mul Chessboard</title><center><h2>3254: Xor-Mul Chessboard</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>76&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3254'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3254'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3254'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: 12pt">一个n*m的棋盘，左上角为(1,1),右下角为(n,m)。相邻的2点之间有连边（如下图中实线）特殊地，(1,i)与(n,i)也连有一条边（如下图中虚线）,i=1..m。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">如下图，就是一个n=3,m=4 的棋盘。</span></div>
+<p><img height="640" alt="" width="567" src="upload/201308/1.jpg" /></p></div><h2>Input</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: 12pt">第一行2个整数n,m。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着n行，每行m个数，其中第i行第j个数表示a[i][j]。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着n行，每行m个数，其中第i行第j个数表示b[i][j]。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着n行，每行m-1个数，其中第i行第j个数表示(i,j)与(i,j+1)的边的c值。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着n-1行，每行m个数，其中第i行第j个数表示(i,j)与(i+1,j)的边的c值。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">最后一行m个数，其中第i个数表示(1,i)与(n,i)的边的c值。</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">一个整数，表示S1+S2的最小值</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2<br />
+3 6<br />
+7 3<br />
+9 9<br />
+1 8<br />
+9<br />
+5<br />
+3 9<br />
+4 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>49<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">对于100%的数据 2&lt;=n&lt;=5 1&lt;=m&lt;=10000<br /><br />
+a,b,c的值均为不大于10^6的正整数。<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3254'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3254'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3254'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

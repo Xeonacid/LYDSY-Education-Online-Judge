@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4256. -- 推箱子</title><center><h2>4256: 推箱子</h2><span class=green>Time Limit: </span>25 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>109&nbsp;&nbsp;<span class=green>Solved: </span>48<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4256'>Discuss</a>]</center><h2>Description</h2><div class=content><div>经典的推箱子是一个来自日本的古老游戏，目的是在训练你的逻辑思考能力。在一个狭</div>
+<div>小的仓库中，要求把木箱放到指定的位置，稍不小心就会出现箱子无法移动或者通道被堵住</div>
+<div>的情况，所以需要巧妙的利用有限的空间和通道，合理安排移动的次序和位置，才能顺利的</div>
+<div>完成任务。</div>
+<div><img src="upload/201509/aa.PNG" width="354" height="272" alt="" /></div>
+<div></div>
+<div>这个游戏有一个相对简单的版本， 就是只有一个木箱， 要将其推到一个确定的目标位置。</div>
+<div>举个例子：</div>
+<div>..#@.</div>
+<div>.X.O.</div>
+<div>##..#</div>
+<div>其中&ldquo;.&rdquo;表示没有障碍的格子，&ldquo;#&rdquo;表示有障碍的格子，&ldquo;X&rdquo;表示目标位置（注意这个格</div>
+<div>子是没有障碍的） ，&ldquo;O&rdquo;是箱子（对于人来说箱子存在的格子是不能越过的） ，&ldquo;@&rdquo;是人的位</div>
+<div>置。注意上面这个情况是可以将箱子推到目标点去的，因为人只要向右一格，向下一格，然</div>
+<div>后推着箱子向左走两格，就完成了任务。</div>
+<div>而下面这个例子是无解的：</div>
+<div>..#..</div>
+<div>.X.O.</div>
+<div>##.@#</div>
+<div>现在我们的主人公想知道，对于一个给定的地图（与上面两个不同的是没有了箱子和人</div>
+<div>的初始位置） ，有多少种箱子和人的初始摆放方法（箱子的初始位置和人的初始位置和目标</div>
+<div>位置必须两两不同）能够使得箱子能被人成功地推到目标位置。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行为两个正整数 n,m。表示整个地图有 n行 m 列。N,M均小于等于1000</div>
+<div>接下来是一个 n行 m 列的地图，用 n个长为 m 的字符串表示。</div>
+<p></p></div><h2>Output</h2><div class=content><div>一行，包含一个整数，为方案总数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 5<br />
+..#..<br />
+.X...<br />
+##..#<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=JOI2012'>JOI2012</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4256'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

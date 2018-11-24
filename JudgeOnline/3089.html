@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3089. -- Coci2009 ograda</title><center><h2>3089: Coci2009 ograda</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>18&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3089'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3089'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3089'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">给定平面里的 N 个矩形, 每个矩形的边都是和坐标系平行的.<br />
+并且满足 每个矩形的下面的边 和 x轴 重合.<br />
+</span><span style="font-size: medium">从 N 个矩形中删除最多的矩形, 使得 矩形并的区域的边界 保持不变.</span></p>
+<p><span style="font-size: medium"><img height="277" alt="" width="690" src="upload/201303/1(3).jpg" /></span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 第1行: 一个整数 N (1 &lt;= N &lt;= 100, 000)<br />
+&nbsp;&nbsp;&nbsp; 第2..N+1行: 每行3个整数 X, W, H, 表示一个矩形.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X 表示矩形左边界的x坐标.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W 表示矩形的宽度 (右边的x坐标 - 左边的x坐标)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H 表示矩形的高度 (上边的y坐标 - 下边的y坐标)</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 没有两个矩形是 完全重合 (X W H 都完全一样) 的.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &lt;= X, W, H &lt;= 10^9<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 所有矩形标号为 1..N</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><br />
+&nbsp;&nbsp;&nbsp; 第1行: 最少留下的矩形数量 B<br />
+&nbsp;&nbsp;&nbsp; </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+15 8 4<br />
+10 8 3<br />
+25 3 7<br />
+3 9 5<br />
+1 5 3<br />
+7 2 2<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3089'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3089'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3089'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

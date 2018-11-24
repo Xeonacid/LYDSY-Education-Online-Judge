@@ -1,0 +1,107 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5256. -- [Fjwc2018]井井点点</title><center><h2>5256: [Fjwc2018]井井点点</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5256'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在一个二维平面上有一个图形，如下图所示：</div>
+<div>###############</div>
+<div>#.............#</div>
+<div>#.###########.#</div>
+<div>#.#.........#.#</div>
+<div>#.#.#######.#.#</div>
+<div>#.#.#.....#.#.#</div>
+<div>#.#.#.###.#.#.#</div>
+<div>#.#.#.#.#.#.#.#</div>
+<div>#.#.#.###.#.#.#</div>
+<div>#.#.#.....#.#.#</div>
+<div>#.#.#######.#.#</div>
+<div>#.#.........#.#</div>
+<div>#.###########.#</div>
+<div>#.............#</div>
+<div>###############</div>
+<div>它是一个中心为一个字符'.'，之后按照一层'#'一层'.'的顺序围起来的无限大的图形。</div>
+<div>现在给定若干个位置上的字符，请你确定出这个图形中心位置的坐标，若有多个合法中心位置，</div>
+<div>则输出离原点曼哈顿距离最近的一个。若仍有多个，则输出横坐标最大的一个，</div>
+<div>若还有多个，输出纵坐标最大的一个；若没有合法中心点，输出&quot;Too damaged&quot;.</div></div><h2>Input</h2><div class=content><div>第一行一个正整数T表示数据组数。</div>
+<div>对于每组数据，第一行一个正整数n表示已知位置数。</div>
+<div>接下来n行，每行两个整数x,y和一个字符c，表示该位置的坐标以及该位置上的字符。</div>
+<div>n &le; 1000, |x|, |y| &le; 10^15, T &le; 50 , c &isin; {., #}</div></div><h2>Output</h2><div class=content><div>对于每组数据输出一行表示答案。</div>
+<div>格式为：&quot;Case #x: ans&quot;,其中x为当前数据的组编号，ans表示答案，#之前有一个空格，:之后有一个空格，</div>
+<div>除此之外不允许有任何多余字符。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+1<br />
+0 0 .<br />
+1<br />
+0 0 #<br />
+3<br />
+0 0 #<br />
+0 1 #<br />
+1 0 #<br />
+5<br />
+50 30 #<br />
+49 30 #<br />
+49 31 #<br />
+49 32 #<br />
+50 32 #<br />
+2<br />
+-98 0 #<br />
+99 50 .<br />
+4<br />
+88 88 .<br />
+88 89 .<br />
+89 88 .<br />
+89 89 .</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: 0 0<br />
+Case #2: 1 0<br />
+Case #3: 1 1<br />
+Case #4: 50 31<br />
+Case #5: 1 0<br />
+Case #6: Too damaged<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;ExfJoe'>By ExfJoe</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5256'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4394. -- [Usaco2015 dec]Bessie</title><center><h2>4394: [Usaco2015 dec]Bessie</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>128&nbsp;&nbsp;<span class=green>Solved: </span>52<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4394'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4394'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4394'>Discuss</a>]</center><h2>Description</h2><div class=content><p>After eating too much fruit in Farmer John's kitchen, Bessie the cow is getting some very strange dreams! In her most recent dream, she is trapped in a maze in the shape of an N&times;M grid of tiles (1&le;N,M&le;1,000). She starts on the top-left tile and wants to get to the bottom-right tile. When she is standing on a tile, she can potentially move to the adjacent tiles in any of the four cardinal directions.<br />
+<br />
+But wait! Each tile has a color, and each color has a different property! Bessie's head hurts just thinking about it:<br />
+<br />
+&nbsp;&nbsp;&nbsp; If a tile is red, then it is impassable.<br />
+&nbsp;&nbsp;&nbsp; If a tile is pink, then it can be walked on normally.<br />
+&nbsp;&nbsp;&nbsp; If a tile is orange, then it can be walked on normally, but will make Bessie smell like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is blue, then it contains piranhas that will only let Bessie pass if she smells like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is purple, then Bessie will slide to the next tile in that direction (unless she is unable to cross it). If this tile is also a purple tile, then Bessie will continue to slide until she lands on a non-purple tile or hits an impassable tile. Sliding through a tile counts as a move. Purple tiles will also remove Bessie's smell. <br />
+<br />
+(If you're confused about purple tiles, the example will illustrate their use.)<br />
+<br />
+Please help Bessie get from the top-left to the bottom-right in as few moves as possible.</p>
+<p></p>
+<p>奶牛Bessie被困在了N*M的网格图迷宫中，她位于左上角(1,1)，出口在右下角(N,M)。Bessie只能上下左右行走。</p>
+<p>每块地砖都有一个颜色：</p>
+<p>如果是红色，那么不可通行。</p>
+<p>如果是粉色，那么可以通行。</p>
+<p>如果是橙色，那么可以通行，但是会给Bessie带上橘子的气味。</p>
+<p>如果是蓝色，那么当且仅当Bessie带着橘子的气味时，才可以通行。</p>
+<p>如果是紫色，那么Bessie会保持原有方向滑过去，如果之后仍然是紫色，那么会继续滑。当滑到不是紫色的地砖上或者不可通行的时候，才会停下来。并且这会消除Bessie身上的气味。每一步滑行和走路一样，都需要耗费一单位时间。</p>
+<p>请输出Bessie逃到出口所需的最短时间。</p>
+<p></p></div><h2>Input</h2><div class=content><p>The first line has two integers N and M, representing the number of rows and columns of the maze.<br />
+<br />
+The next NN lines have MM integers each, representing the maze:<br />
+<br />
+&nbsp;&nbsp;&nbsp; The integer '0' is a red tile<br />
+&nbsp;&nbsp;&nbsp; The integer '1' is a pink tile<br />
+&nbsp;&nbsp;&nbsp; The integer '2' is an orange tile<br />
+&nbsp;&nbsp;&nbsp; The integer '3' is a blue tile<br />
+&nbsp;&nbsp;&nbsp; The integer '4' is a purple tile <br />
+<br />
+The top-left and bottom-right integers will always be '1'.</p></div><h2>Output</h2><div class=content><p>A  single integer, representing the minimum number of moves Bessie must  use to cross the maze, or -1 if it is impossible to do so.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+1 0 2 1<br />
+1 1 4 1<br />
+1 0 4 0<br />
+1 3 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10</span></div><h2>HINT</h2>
+			<div class=content><p><p>In this example, Bessie walks one square down and two squares to the right (and then slides one more square to the right). She walks one square up, one square left, and one square down (sliding two more squares down) and finishes by walking one more square right. This is a total of 10 moves (DRRRULDDDR).</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Gold鸣谢Claris提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4394'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4394'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4394'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

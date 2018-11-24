@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4712. -- 洪水</title><center><h2>4712: 洪水</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>442&nbsp;&nbsp;<span class=green>Solved: </span>139<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4712'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4712'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4712'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小A走到一个山脚下，准备给自己造一个小屋。这时候，小A的朋友（op，又叫管理员）打开了创造模式，然后飞到</div>
+<div>山顶放了格水。于是小A面前出现了一个瀑布。作为平民的小A只好老实巴交地爬山堵水。那么问题来了：我们把这</div>
+<div>个瀑布看成是一个n个节点的树，每个节点有权值（爬上去的代价）。小A要选择一些节点，以其权值和作为代价将</div>
+<div>这些点删除（堵上），使得根节点与所有叶子结点不连通。问最小代价。不过到这还没结束。小A的朋友觉得这样</div>
+<div>子太便宜小A了，于是他还会不断地修改地形，使得某个节点的权值发生变化。不过到这还没结束。小A觉得朋友做</div>
+<div>得太绝了，于是放弃了分离所有叶子节点的方案。取而代之的是，每次他只要在某个子树中（和子树之外的点完全</div>
+<div>无关）。于是他找到你。</div></div><h2>Input</h2><div class=content><p>&nbsp;输入文件第一行包含一个数n，表示树的大小。</p>
+<div>接下来一行包含n个数，表示第i个点的权值。</div>
+<div>接下来n-1行每行包含两个数fr，to。表示书中有一条边（fr，to）。</div>
+<div>接下来一行一个整数，表示操作的个数。</div>
+<div>接下来m行每行表示一个操作，若该行第一个数为Q，则表示询问操作，后面跟一个参数x，表示对应子树的根；若</div>
+<div>为C，则表示修改操作，后面接两个参数x，to，表示将点x的权值加上to。</div>
+<div>n&lt;=200000，保证任意to都为非负数</div></div><h2>Output</h2><div class=content><p>&nbsp;对于每次询问操作，输出对应的答案，答案之间用换行隔开。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+4 3 2 1<br />
+1 2<br />
+1 3<br />
+4 2<br />
+4<br />
+Q 1<br />
+Q 2<br />
+C 4 10<br />
+Q 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4712'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4712'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4712'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

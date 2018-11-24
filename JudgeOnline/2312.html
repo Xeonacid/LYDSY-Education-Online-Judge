@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2312. -- Y&Y</title><center><h2>2312: Y&Y</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>21&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2312'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2312'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2312'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-weight: bold; font-size: 14pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">对于一本小说来说，Y&amp;Y元素是很重要的。对于某一个深谙此道的人来说，Y&amp;Y更是一种符号，一种象征。</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">在研究一棵树的时候，他惊喜的发现了这种象征。于是他希望在这棵树中找到最大的两个Y</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">在树中的一个Y定义为一个中心点，以及与之相连的3条非空的链，且这三条链除了中心点之外没有其他的公共点。也就是说，一个Y最少有4个点。当然每一条链可以不断延长。一个Y的权值定义为这个Y包含的所有边的边权之和。</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">你的任务是对于输入的树，在其中找到两个不相交（既没有公共点，也没有公共边）Y，使两个Y的权值之和最大。</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: justify"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: 'Cambria Math'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">本题含有多组数据。</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">文件的第一行有一个正整数T，表示数据组数</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">接下来一共会有T个输入块</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每一个数据块：</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 21pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">第一行有两个正整数N,M，表示这棵树的节点数和边数。</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 21pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">接下来的M行，每行3个数</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">i,j,k,</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">分别表示一条边的两个节点编号（i,j）以及边的权值K</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 21pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 21pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每一组数据，输出一行：</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 11.88pt"></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt; text-indent: 11.88pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">最大的Y&amp;Y权值之和，或者，如果不能找到两个不相交的Y，输出&lsquo;POOR&nbsp;BB</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">&rsquo;</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'">（不含引号）</span><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 11pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>输入样例<br />
+<br />
+1 <br />
+<br />
+9 8<br />
+<br />
+1 2 6<br />
+<br />
+2 3 5<br />
+<br />
+2 4 5<br />
+<br />
+4 5 3<br />
+<br />
+4 6 4<br />
+<br />
+6 7 3<br />
+<br />
+7 8 9<br />
+<br />
+7 9 7<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+38<br />
+<br />
+<br />
+<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+T&lt;= 10 100% N&lt;=250000<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2312'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2312'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2312'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

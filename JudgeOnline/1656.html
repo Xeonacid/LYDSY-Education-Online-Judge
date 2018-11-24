@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1656. -- [Usaco2006 Jan] The Grove 树木</title><center><h2>1656: [Usaco2006 Jan] The Grove 树木</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>277&nbsp;&nbsp;<span class=green>Solved: </span>181<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1656'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1656'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1656'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">The pasture contains a small, contiguous grove of trees that has no 'holes' in the middle of the it. Bessie wonders: how far is it to walk around that grove and get back to my starting position? She's just sure there is a way to do it by going from her start location to successive locations by walking horizontally, vertically, or diagonally and counting each move as a single step. Just looking at it, she doesn't think you could pass 'through' the grove on a tricky diagonal. Your job is to calculate the minimum number of steps she must take. Happily, Bessie lives on a simple world where the pasture is represented by a grid with R rows and C columns (1 &lt;= R &lt;= 50, 1 &lt;= C &lt;= 50). Here's a typical example where '.' is pasture (which Bessie may traverse), 'X' is the grove of trees, '*' represents Bessie's start and end position, and '+' marks one shortest path she can walk to circumnavigate the grove (i.e., the answer): ...+... ..+X+.. .+XXX+. ..+XXX+ ..+X..+ ...+++* The path shown is not the only possible shortest path; Bessie might have taken a diagonal step from her start position and achieved a similar length solution. Bessie is happy that she's starting 'outside' the grove instead of in a sort of 'harbor' that could complicate finding the best path. </span></p>
+<div><span style="font-size: medium">牧场里有一片树林，林子里没有坑．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;贝茜很想知道，最少需要多少步能围绕树林走一圈，最后回到起点．她能上下左右走，也能走对角线格子．牧场被分成R行C列(1&le;R&le;50，1&le;C&le;50)．下面是一张样例的地图，其中&ldquo;．&rdquo;表示贝茜可以走的空地，&nbsp;&nbsp;&ldquo;X&rdquo;表示树林，&nbsp;&nbsp;&ldquo;*&rdquo;表示起点．而贝茜走的最近的路已经特别地用&ldquo;+&rdquo;表示出来．</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;<img height="209" width="252" alt="" src="upload/201401/11(5).jpg" /></span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div></div>
+<div><span style="font-size: medium">题目保证，最短的路径一定可以找到．</span></div></div><h2>Input</h2><div class=content><p><span style="font-size: medium">* Line 1: Two space-separated integers: R and C </span></p>
+<p><span style="font-size: medium">* Lines 2..R+1: Line i+1 describes row i with C characters (with no spaces between them). </span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入R和C，接下来R行C列表示一张地图．地图中的符号如题干所述．</span></div></div><h2>Output</h2><div class=content><p>* Line 1: The single line contains a single integer which is the smallest number of steps required to circumnavigate the grove.</p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出最少的步数．</span></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 7<br />
+.......<br />
+...X...<br />
+..XXX..<br />
+...XXX.<br />
+...X...<br />
+......*<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>13</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1656'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1656'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1656'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

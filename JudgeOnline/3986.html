@@ -1,0 +1,111 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3986. -- Tree and Sets</title><center><h2>3986: Tree and Sets</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3986'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3986'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3986'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有一棵n个结点的树，每条边有个长度leni (1&le;leni&le;10000)。</div>
+<div>有q个点集，每个点集给定两个整数u,d (1&le;u&le;n,1&le;d&le;109)，表示所有与u的距离不超过d的点（包括u）在这个点集中。</div>
+<div>两个点之间的距离为它们之间的最短路径的长度。</div>
+<div></div>
+<div>要求构造一个DAG（有向无环图），满足：</div>
+<div>1、这个DAG至少有n+q个点，至多有1200000(1.2&times;106)个点和2400000(2.4&times;106)条边</div>
+<div>2、对于每一条边u&rarr;v，u&gt;n 且 u&ne;v</div>
+<div>3、对于第i (1&le;i&le;q)个点集的每一个点x，第n+i个点到第x个点都有且仅有一条路径</div>
+<div>4、对于不在第i (1&le;i&le;q)个点集的每一个点x，第n+i个点到第x个点都不存在路径</div>
+<div></div>
+<div>由于一些奇怪的原因，树上可能多了若干条边，但是这些边覆盖的树链不会重合，且不会存在自环。（即这棵树是仙人掌）</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行三个整数n,m,q，其中m表示这棵仙人掌上一共有m条边。</div>
+<div>接下来m行，每行三个整数u,v,len，表示u和v之间有一条长度为len的无向边。</div>
+<div>接下来q行，每行两个整数u,d，第i行表示第i个点集。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>第一行两个整数V,E，表示你构造的DAG的点数和边数。</div>
+<div>接下来E行，每行两个整数u,v，表示u到v有一条有向边。</div>
+<div></div>
+<div>！！！请注意输出文件的大小，不能超过32MB，否则会显示TLE！！！</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 9 5<br />
+2 1 9553<br />
+3 2 8499<br />
+4 3 5171<br />
+5 1 7123<br />
+6 3 1904<br />
+7 5 5526<br />
+8 7 5853<br />
+9 6 6635<br />
+10 8 7858<br />
+6 4981<br />
+7 14400<br />
+3 21290<br />
+4 9451<br />
+10 16609</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>15 19<br />
+11 6<br />
+11 3<br />
+12 7<br />
+12 5<br />
+12 1<br />
+12 8<br />
+12 10<br />
+13 3<br />
+13 6<br />
+13 9<br />
+13 4<br />
+13 2<br />
+13 1<br />
+14 4<br />
+14 3<br />
+14 6<br />
+15 10<br />
+15 8<br />
+15 7</span></div><h2>HINT</h2>
+			<div class=content><p><p>N&lt;=10000,N-1&lt;=m&lt;=2*N-2,Q&lt;=10000</p><br />
+<p>尚无SPJ，请不要提交!</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2015%E5%B9%B4%E9%9B%86%E8%AE%AD%E9%98%9F%E4%BA%92%E6%B5%8B'>2015年集训队互测</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3986'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3986'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3986'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

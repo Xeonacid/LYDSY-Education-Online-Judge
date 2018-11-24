@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4741. -- [Usaco2016 Dec]Lots of Triangles</title><center><h2>4741: [Usaco2016 Dec]Lots of Triangles</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>68&nbsp;&nbsp;<span class=green>Solved: </span>35<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4741'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4741'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4741'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John is thinking of selling some of his land to earn a bit of extra income. His property cont</div>
+<div>ains n trees (3&le;N&le;300), each described by a point in the 2D plane, no three of which are collinear</div>
+<div>. FJ is thinking about selling triangular lots of land defined by having trees at their vertices; th</div>
+<div>ere are of course L =C(n,3)such lots he can consider, based on all possible triples of trees</div>
+<div>&nbsp;on his property.A triangular lot has value v if it contains exactly v trees in its interior (the tr</div>
+<div>ees on the corners do not count, and note that there are no trees on the boundaries since no three t</div>
+<div>rees are collinear). For every v = 0 \ldots N-3, please help FJ determine how many of his L potentia</div>
+<div>l lots have value v.</div>
+<div>
+<div>农夫约翰打算卖掉一些土地来获得额外的收入。他的土地上有N颗树(3 &le; N &le; 300)，可以看做一个平面上的点，</div>
+<div>并且没有三点在一条直线上。约翰打算出售一块由三棵树构成的三角形土地，当然这样一共有L =C(n,3)种</div>
+<div>可能性。如果一个三角形内部有v个点（不含边界），那么这块土地的价值为v。请帮助约翰统计当v = 0 ... N-3</div>
+<div>时，分别有多少块三角形土地价值为v。</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N.</div>
+<div>The following N lines contain the x and y coordinates of a single tree;&nbsp;</div>
+<div>these are both integers in the range 0 \ldots 1,000,000.</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Output N-2 lines, where output line i contains a count of the number of lots having value i-1.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+3 6<br />
+17 15<br />
+13 15<br />
+6 12<br />
+9 1<br />
+2 7<br />
+10 19</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>28<br />
+6<br />
+1<br />
+0<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum%20%E9%B8%A3%E8%B0%A2Firstlast%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Platinum 鸣谢Firstlast提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4741'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4741'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4741'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

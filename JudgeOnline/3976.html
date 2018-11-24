@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3976. -- [WF2012]Curvy Little Bottles</title><center><h2>3976: [WF2012]Curvy Little Bottles</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>38&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3976'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3976'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3976'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Jill在骑车周游Warsaw时，偶然发现一家销售有趣的玻璃瓶的商店。她认为用这些瓶子测量液体可能是一个有趣的</div>
+<div>计划，但是这需要在瓶子上做一些标记来指示各个体积。这些标记应该如何标在哪里呢？Jill将问题正式化如下。</div>
+<div>假设瓶子是由一条从X=Xlow到X=Xhigh的多项式曲线绕X轴旋转一周构成。因此，X轴与一条穿过瓶子底面中心的垂</div>
+<div>线重合。瓶底在X=Xlow由一个实心圆构成，瓶口在X=Xhigh，瓶口是敞开的。第一个样例表示瓶子由从Xlow=0到Xhi</div>
+<div>gh=12的多项式4-0.25X构成。瓶子的底部是一个半径为4的圆，瓶口是一个半径为1的圆。瓶子的高度是12。体积每</div>
+<div>增加25做一次增量标记。给定多项式P，Xlow，Xhigh，并给定瓶子上连续的两个标记间的体积增量，计算标记与Xl</div>
+<div>ow之间的距离。标记不能被标在瓶口以上的位置，标记的数量不能超过8个。</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行1个整数n，表示多项式的次数。</div>
+<div>第二行n+1个数，表示a0,a1,a2&hellip;an，为多项式P的实数系数，它们决定了瓶子的形状。 a0为常数项，a1为1次项系数&hellip;&hellip;an为n次项系数。</div>
+<div>第三行3个数，Xlow，Xhigh两个实数表示瓶底位置和瓶口位置。inc，一个整数表示每连续两个标记间体积的增量是多少。</div>
+<div>0&lt;=n&lt;=10，-100&lt;=ai&lt;=100，an不等于0，-100&lt;=Xlow&lt;Xhigh&lt;=100，Xhigh-Xlow&gt;0.1，1&lt;=inc&lt;=500，</div>
+<div>输入保证所有标记与瓶子顶部的距离不会小于0.01，瓶子的体积不超过1000，</div>
+<div>四舍五入后任意两个标记间的距离至少为0.05，对于任意X满足Xlow&lt;=X&lt;=Xhigh，P(X)&gt;0。</div>
+</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>第一行输出整个瓶子的体积。</div>
+<div>第二行输出一个长度不超过8的递增序列，依次表示从瓶底开始（不含瓶底）的连续标记距离瓶底的距离。</div>
+<div>体积和所有标记的距离精确到小数点后两位。</div>
+<div>如果没有标记，输出&rdquo; insufficient volume&rdquo;（不含引号）。</div>
+</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+5.0 -1.0<br />
+0.0 4.0 50</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: 129.85<br />
+0.74 1.91</span></div><h2>HINT</h2>
+			<div class=content><p><p>请不要提交，尚无SPJ</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3976'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3976'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3976'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

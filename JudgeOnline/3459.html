@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3459. -- Bomb</title><center><h2>3459: Bomb</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>30&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3459'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3459'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3459'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="pdcont"><span style="font-size: medium">S国正在进行核武器试验，数以亿计的科学家们前来观测。试验区位于S国某城市，此城市有n个区域，共有n-1条道路连接它们，任意两片区域可相互到达。其中核弹将于某个区域引爆，科学家们将去往一些度数为1的非引爆点区域，即观测点观察。抽象的说，若将此引爆区域设为有根树的根，科学家们将去往非根叶子节点。所有科学家可以同时行动，每条道路双向通行，且均给出一个所需通过的时间，然而每个观测点容纳人数有限，但是保证观测点容量大于等于科学家数。求科学家们最少所需移动时间，以使试验尽早开始。<br />
+</span></div></div><h2>Input</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行输入一个正整数n，表示点的数量，接下来n行，每行一条描述。<br />
+　　第i+1行第一个数字a<sub>i</sub>，表示i号节点的儿子数。接下来2a<sub>i</sub>个数，第2j-1个数b<sub>ij</sub>表示i号节点的孩子，第2j个数c<sub>ij</sub>表示其与i之间边权。接下来一个数t<sub>i</sub>，若a<sub>i</sub>等于0，表示此点最多可容纳人数，若a<sub>i</sub>不等于0，则表示此点现有人数。<br />
+</span></div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　一个数，表示最少所需时间。<br />
+</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+2 2 5 3 3 2<br />
+1 4 2 3<br />
+0 2<br />
+0 3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">　　100%的数据1&lt;=n&lt;=10000，0&lt;=cij，ti&lt;=100000，本题均为随机数据（树深度较小）。</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3459'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3459'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3459'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

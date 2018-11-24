@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4107. -- [Wf2015]Asteroids</title><center><h2>4107: [Wf2015]Asteroids</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>24&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4107'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4107'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4107'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;<span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;">二维平面上有2个凸多边形，每个凸多边形在x,y方向上都有一个速度，求两个凸多边形的交的面积最大的时刻。<br />
+</span></p>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;"></div></div><h2>Input</h2><div class=content><p>&nbsp;<span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;">输入共2行，分别描述2个凸多边形。每行的第一个正整数N(3 &lt;= N &lt;= 10)表示多边形的点数，接下来N对整数x_i,y_i表示多边形每个顶点的坐标（按顺时针给出）。每行的最后有2个整数v_x,v_y,代表多边形在x方向与y方向上每秒移动的距离。<br />
+</span></p>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;"></div></div><h2>Output</h2><div class=content><p>&nbsp;<span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;">如果两个凸多边形永远不会相交，则输出&quot;never&quot;，否则输出使</span><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 1.5;">2个凸多边形的交的面积最大的时刻，与标准答案相差不超过1e-3即可。<br />
+</span></p>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 19.16666603088379px;"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>输入1<br />
+6 3 2 2 4 3 6 6 6 7 4 6 2 2 2<br />
+4 18 5 22 9 26 5 22 1 -2 1<br />
+输入2<br />
+4 0 0 0 2 2 2 2 0 -1 1<br />
+4 10 0 10 2 12 2 12 0 1 1 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>输出1<br />
+4.193518<br />
+输出2<br />
+never </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2pyz5715%E6%8F%90%E4%BE%9BSPJ%E5%8F%8A%E9%A2%98%E9%9D%A2'>鸣谢pyz5715提供SPJ及题面</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4107'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4107'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4107'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

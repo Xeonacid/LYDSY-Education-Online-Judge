@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3983. -- [WF2012]Takeover Wars</title><center><h2>3983: [WF2012]Takeover Wars</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>149&nbsp;&nbsp;<span class=green>Solved: </span>69<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3983'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3983'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3983'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你正在学习一个两个公司间的商业战争，它们分别是X和Y（译者注：原文名称太复杂，这里简记).每一个公司包含一系列的子公司。这次战争可以看做是市场战争，X有n个子公司而Y有m个子公司(1&lt;=n,m&lt;=10^5)，你知道每个子公司的市场价值。</div>
+<div>每个子公司可以决定一个子公司来进行一次交易，交易既可以是友好的，也可以是敌对的。一个友好的交易意味着同属于一个公司子公司和子公司之间的合并。一次合并产生的新的子公司的市场价值是参与交易双方的价值之和。一次友好交易中，子公司的大小没有限制。</div>
+<div>一个敌对的交易意味着一个子公司A（既可以是X也可以是Y)希望和子公司B交易。为了让交易顺利进行，A的市场价值必须大于B的。这样做之后，B从市场上消失，A的市场价值不变。为了简化问题,我们可以认为，所有的操作序列不会出现相同价值的子公司间的交易。</div>
+<div>公司轮流行动，X先动。一个公司什么都不做当且仅当它什么都不能做。如果一个公司的是子公司全没了，那么它就输掉了这场商业竞争。</div>
+<div>你的目标算出哪个公司一定能赢得胜利。在样例一中，X公司可以用7-价值公司干掉Y的一个子公司。然后Y只能干掉X的一个1-价值公司，然后Y的最后一个公司就被干掉了。在样例二中，X公司一开始只能合并它的两个公司变为6-价值公司，Y此时应该用友好操作合并2个5-价值公司为10-价值公司。X就只能继续合并,但无论它怎么合并，都会被Y的10-公司吃掉一个，然后X只能pass，Y就再吃一个，就取胜了。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>每个测试数据包含三行。第一行两个数n,m表示X和Y的子公司数。第二行n个数描述X的子公司价值（用空格隔开），第三行m个数描述Y的子公司价值（用空格隔开）(价值&lt;=10^12)。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据，先输出测试数据组号，若X胜利，输出&quot;Takeover Incorporated&quot;，否则输出&quot;Buyout Limited&quot;。（译者注：其实这就是那个很复杂的名字。)</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+7 1 1<br />
+5 5<br />
+4 2<br />
+3 3 3 3<br />
+5 5<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: Takeover Incorporated<br />
+Case 2: Buyout Limited</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3983'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3983'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3983'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

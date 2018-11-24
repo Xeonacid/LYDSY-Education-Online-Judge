@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>1:注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671
+	</div>
+</div>
+</center>
+</div>
+<title>Problem 5424. -- 烧桥计划</title><center><h2>5424: 烧桥计划</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5424'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5424'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5424'>Discuss</a>]</center><h2>Description</h2><div class=content><div>&quot;经过精确的测量，整个桥梁可以被分为N段，从左往右标号1~N，每一段有一个'稳定值'来代表这一段的牢固程度-</div>
+<div>-越牢固的地方，需要越大的代价去烧毁或拆毁，这个数列记为A1~An。这个稳定值介于1000~2000之间。详细的计</div>
+<div>划分为两步：第一步，烧毁某些位置；第二步，拆掉某些位置。在第一步中，我们选择若干个位置，记为K个：Ap1</div>
+<div>,Ap2,&hellip;,Apk，其中p1&lt;p2&lt;..&lt;pk，然后逐一烧毁这些位置。由于放火是有危险的，所以对于从左往右的第i个位置p</div>
+<div>i，烧毁它的代价为i*Api。现在，桥的剩下的N-K个位置被烧成了K+1段--可能有些段为空。对于每一段，如果它的</div>
+<div>所有Ai之和不足M，那么说明这一段自己会坍塌，不必管它；否则，我们需要逐一拆毁这些位置，设这段Ai之和为T</div>
+<div>，当T&gt;M的时候我们就需要支付T的代价。两部分的代价加起来即为整个计划的总代价。整个计划一定会选取最优的</div>
+<div>方案进行，也就是最小化总代价。目前记者还没有得到关于总代价的信息&hellip;&hellip;不过全部的数据都有，你也可以自己</div>
+<div>计算这个值。&quot;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行是两个正整数N(&lt;=100000)和M（&lt;=2*10^8），含义如题目所述。&nbsp;</div>
+<div>第二行是N个用空格隔开的正整数，代表整个A数列。（1000&lt;=Ai&lt;=2000）</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一行一个正整数，之前所说的最小总代价。</div>
+<div>N&lt;=100000，1000&lt;=Ai&lt;=2000</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 9<br />
+5 3 3 9 1 4 2 2 4 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>17<br />
+【样例解释】<br />
+选择从左往右第3、5、9位置烧掉即可（下标从1开始标号）。<br />
+如果选择3、6、9，则总代价为33，明显不优。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5424'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5424'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5424'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br><div>版权所有 &copy;2008-2018 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a></div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

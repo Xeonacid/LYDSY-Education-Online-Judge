@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3018. -- [Usaco2012 Nov]Distant Pastures</title><center><h2>3018: [Usaco2012 Nov]Distant Pastures</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>142&nbsp;&nbsp;<span class=green>Solved: </span>72<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3018'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3018'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3018'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">Farmer John's farm is made up of an N x N grid of pastures, where each pasture contains one of two different types of grass. To specify these two types of grass, we use the characters ( and ), so for example FJ's farm might look like the following grid: </span></div>
+<div><span style="font-size: medium">(())</span></div>
+<div><span style="font-size: medium">)()(</span></div>
+<div><span style="font-size: medium">)(((</span></div>
+<div><span style="font-size: medium">))))</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">When Bessie the cow travels around the farm, it takes her A units of time to move from a pasture to an adjacent pasture (one step north, south, east, or west) with the same grass type, or B units of time to move to an adjacent pasture with a different grass type. Whenever Bessie travels from one pasture to a distant pasture, she always uses a sequence of steps that takes the minimum amount of time. Please compute the greatest amount of time Bessie will ever need to take while traveling between some pair of pastures on the farm.</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">问题描述</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">给定一个<i>n</i>&times;<i>n</i>的一个网格，每个格子有一个字符，要么是&rsquo;(&lsquo;，要么是&rsquo;)&rsquo;。每个格子和它的上下左右的四个格子相邻，对于相邻的两个格子<i>x</i>和<i>y</i>，从<i>x</i>走到<i>y</i>的过程中，如果<i>x</i>和<i>y</i>中的字符相同，消耗<i>A</i>单位时间，如果<i>x</i>和<i>y</i>中字符不同，消耗<i>B</i>单位时间。定义点<i>S</i>到点<i>T</i>的时间为<i>D</i>(<i>S</i>,<i>T</i>)，现在想请你求出网格中最大的<i>D</i>(<i>S</i>,<i>T</i>)。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行三个整数<i>n</i>，<i>A</i>，<i>B</i>；</span></div>
+<div><span style="font-size: medium">接下来<i>n</i>行描述这个<i>n</i>&times;<i>n</i>的网格。</span></div>
+<div>1 &lt;= n &lt;= 30，1 &lt;= A &lt;= 1,000,000，1 &lt;= B &lt;= 1,000,000。</div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;一个整数，最大的<i>D</i>(<i>S</i>,<i>T</i>)。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 1 2<br />
+(((<br />
+()(<br />
+(()</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+ 样例说明<br />
+左上角到右下角所需的时间为5，是最大值</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3018'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3018'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3018'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

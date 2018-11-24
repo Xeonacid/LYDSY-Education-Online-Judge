@@ -1,0 +1,110 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2865. -- 字符串识别</title><center><h2>2865: 字符串识别</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>638&nbsp;&nbsp;<span class=green>Solved: </span>208<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2865'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2865'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2865'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="NOI1" style="margin: 13pt 0cm"></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Times New Roman">XX</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在进行字符串研究的时候，遇到了一个十分棘手的问题。</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在这个问题中，给定一个字符串</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，与一个整数</span><span lang="EN-US"><font face="Times New Roman">K</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，定义</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的子串</span><span lang="EN-US"><font face="Times New Roman">T=S(i, j)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">是关于第</span><span lang="EN-US"><font face="Times New Roman">K</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">位的识别子串，满足以下两个条件：</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1"><font size="3"><font face="Times New Roman"><span lang="EN-US" style="mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore">1、</span></span><span lang="EN-US">i</span></font><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&le;</span><span lang="EN-US"><font face="Times New Roman">K</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&le;</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1"><font size="3"><span lang="EN-US" style="mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore"><font face="Times New Roman">2、</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">子串</span><span lang="EN-US"><font face="Times New Roman">T</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">只在</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中出现过一次。</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt; text-indent: 0cm; mso-char-indent-count: 0"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">例如，</span><span lang="EN-US"><font face="Times New Roman">S=&quot;banana&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">K=5</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，则关于第</span><span lang="EN-US"><font face="Times New Roman">K</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">位的识别子串有</span><span lang="EN-US"><font face="Times New Roman">&quot;nana&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">&quot;anan&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">&quot;anana&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">&quot;nan&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">&quot;banan&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">&quot;banana&quot;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt; text-indent: 0cm; mso-char-indent-count: 0"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">现在，给定</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">XX</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">希望知道对于</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的每一位，最短的识别子串长度是多少，请你来帮助他。</span></font></p>
+<p></p></div><h2>Input</h2><div class=content><p class="NOI" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">仅一行，输入长度为</span><span lang="EN-US"><font face="Times New Roman">N</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的字符串</span><span lang="EN-US"><font face="Times New Roman">S</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NOI" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 'Courier New'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="NOI" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出</span><span lang="EN-US"><font face="Times New Roman">N</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行一个整数，第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行的整数表示对于第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">位的最短识别子串长度。</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span lang="EN-US" style="font-size: 12pt; font-family: 'Courier New'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>agoodcookcooksgoodfood<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+1<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+3<br />
+<br />
+2<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+3<br />
+<br />
+2<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+3<br />
+<br />
+2<br />
+<br />
+1<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+3<br />
+<br />
+2<br />
+<br />
+1<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>N&lt;=5*10^5</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2865'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2865'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2865'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

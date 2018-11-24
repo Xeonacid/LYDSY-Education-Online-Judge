@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3607. -- 数据网络</title><center><h2>3607: 数据网络</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>24&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3607'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3607'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3607'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 一个简单的网络数据交换系统可以被描述成一棵带权无根树。每个叶子为用户，而非叶子节点则为服务器。连接服务器（或用户）与服务器的数据线则看做一条树边，边权可以看做这条数据线的长度。<br />
+　　两两用户之间的一次数据交换请求都可以看做这个无根树上的一条从一个叶子到另一个叶子的路径。并且，这次数据交换请求将会激活路径上的所有服务器。对于一个服务器，如果在某一时刻有至少一条数据通过，则这个服务器是激活的，反之则是失活的。同样地，这条请求也会激活路径上的所有数据线。<br />
+　　现在，你作为一个交换系统的管理员，要监控整个系统的运作状态。由于系统还未开发完全，你只能知道在每个时刻，有多少条数据交换的请求，以及登记某个被激活的服务器的编号（毕竟你一秒钟也干不了太多事）。<br />
+　　你连续监控了一段时间。现在，你要开始整理自己的监控记录了。为了检测系统的负荷是否过重，对于每条监控记录，你要求出最坏情况下，被激活的数据线长度的和的最大值。<br />
+　　为什么是数据线长度而不是服务器个数呢？因为出题人不喜欢单位 1。</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">　　第一行二个整数 n, m，分别描述树的大小，以及监控记录的数量。<br />
+　　接下来 n - 1 行，每行 3 个整数 a, b, v，描述一条连接 a, b 的权值为 v 的边。<br />
+　　接下来 m 行，每行 2 个整数 d, s, 描述一个监控记录。d 表示登记的服务器的编号，s表示请求的数量。</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">　　对于每个监控记录，输出一行一个整数，描述答案。</span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>    6 3 <br />
+    1 2 2<br />
+    2 3 2<br />
+    3 4 2<br />
+    4 6 1 <br />
+    3 5 10<br />
+    3 1<br />
+    4 1<br />
+    2 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>    14<br />
+    13<br />
+    17<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 对于记录 (3, 1) , 一种最坏情况为 { (1-&gt;2-&gt;3-&gt;5) }<br /><br />
+　　对于记录 (4, 1) , 一种最坏情况为 { (6-&gt;4-&gt;3-&gt;5) }<br /><br />
+　　对于记录 (2, 2) , 一种最坏情况为 { (6-&gt;4-&gt;3-&gt;5), (1-&gt;2-&gt;3-&gt;4-&gt;6) }</span></p><br />
+<p><span style="font-size: medium">【Range】<br /><br />
+　&nbsp; n, m &le; 100000，&sum;v &le; maxlongint，1 &le; d &le; n 且保证 d 不为叶子节点。</span></p><br />
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 输入均为非负整数。<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014%E5%B9%B4%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8D%81%E4%BA%94%E4%BA%BA%E4%BA%92%E6%B5%8B%20%E9%B8%A3%E8%B0%A2sumix173%E4%B8%8A%E4%BC%A0'>2014年国家集训队十五人互测 鸣谢sumix173上传<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3607'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3607'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3607'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

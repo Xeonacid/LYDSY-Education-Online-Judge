@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1992. -- Pku2055 Kid</title><center><h2>1992: Pku2055 Kid</h2><span class=green>Time Limit: </span>0 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1992'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1992'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1992'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Kid is a famous thief and he is known for his unique habit. Before his attempt, he will always inform the person who he is going to rob beforehand. Though the people have paid much attention to him, he has never failed. This time Kid informed a billionaire, Jack, that he is going to enter Jack's home to take away his expensive treasure. Jack is very afraid and he asked a brilliant boy, Conan, to help him. Conan designed a special lock for Jack&rsquo;s home. However, Kid is very tricky and he stole the structure map and the password of the lock. From the structure map (see Figure-1), Kid knows that the lock contains K dial plates and K gears, and every dial plate controls several gears. There are N teeth on each gear, which is numbered counter-clockwise from 1 to N. When a certain dial plate is dialed, the gears that refer to the plate will rotate counter-clockwise by several teeth (different gears may rotate different numbers of teeth). A dial plate can be dialed more than once. At the beginning, the numbers of the top teeth of the gears are all &quot;1&quot;. To open the lock, the number of the top tooth of every gear must be a certain number. These K numbers form the password. Take Figure-1 for an example where N=8, K=4; if the password is 1-2-8-1, the lock will open. With the password in hand, Kid wants to know whether he can open the lock; and if he can, he wants to know the least number of dials he has to use to open the lock. You may assume that the lock is always locked at the beginning, which means that the password cannot be K &quot;1&quot;s. </span></p>
+<p></p>
+<p><span style="font-size: medium">有k个旋钮，k个齿轮，每个旋钮控制若干个齿轮，问能否使齿轮到给定的值，若能给出一个最小总步数</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">There are several test cases. In the first line of each case there are two integers K (1 &lt;= K &lt;= 20) and N (2 &lt;= N &lt;= 10). Then follows a line with K integers expressing the password. Each number in the password is between 1 and N. Then come K lines, the i-th of which describes how the i-th dial plate controls the referred gears. These K lines have the following format: p a1 b1 a2 b2 ... ap bp Integer p (0 &lt;= p &lt;= K) expresses the number of gears that are referred to the dial plate. ai (1 &lt;= i &lt;= p) is an integer between 1 and K which tells that the ai-th gear is under the control of this dial plate. bi is an integer between 1 and N-1 which tells that when the dial plate is dialed once, the ai-th gear will rotate across by bi gears. A test case of K = 0 and N = 0 indicates the end of input, and should not be processed. </span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each test case, there is a single line. If the lock can be opened, the line contains the least number of times Kid should dial the dial plates; otherwise, output &quot;No solution&quot;. </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 4<br />
+2<br />
+1 1 2<br />
+4 8<br />
+8 8 8 8<br />
+4 1 1 2 2 4 1 3 1<br />
+2 4 7 3 2<br />
+2 1 5 3 5<br />
+1 2 7<br />
+0 0<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>No solution<br />
+2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1992'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1992'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1992'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1409. -- Password</title><center><h2>1409: Password</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>373&nbsp;&nbsp;<span class=green>Solved: </span>123<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1409'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1409'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1409'>Discuss</a>]</center><h2>Description</h2><div class=content><pre class="line mt-10 q-content" style="white-space: pre-wrap; word-wrap: break-word; font-size: 14px; line-height: 23px;">
+Rivest是密码学专家。近日他正在研究一种数列E = {E[1],E[2],&hellip;&hellip;,E[n]}，<br />且E[1] = E[2] = p（p为一个质数），E[i] = E[i-2]*E[i-1] （若2&lt;i&lt;=n）。<br /></pre>
+<div style="font-family: Arial; font-size: 14px; line-height: 23px;">例如{2,2,4,8,32,256,8192,&hellip;&hellip;}就是p = 2的数列。在此基础上他又设计了一种加密算法，该算法可以通过一个密钥q (q &lt; p)将一个正整数n加密成另外一个正整数d，计算公式为：d = E[n] mod q。现在Rivest想对一组数据进行加密，但他对程序设计不太感兴趣，请你帮助他设计一个数据加密程序。</div></div><h2>Input</h2><div class=content><p>第一行读入m，p。其中m表示数据个数，p用来生成数列E。 以下有m行，每行有2个整数n，q。n为待加密数据，q为密钥。 数据范围:  0 &lt; p n&lt; 2^31 0 &lt; q &lt; p 0 &lt; m &lt;= 5000。</p></div><h2>Output</h2><div class=content><p>将加密后的数据按顺序输出到文件 第i行输出第i个加密后的数据。  输入样例1 2 7 4 5 4 6  输入样例2 4 7 2 4 7 1 6 5 9 3</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>输入样例1 <br />
+2 7 <br />
+4 5 <br />
+4 6 <br />
+输入样例2 <br />
+4 7 <br />
+2 4 <br />
+7 1 <br />
+6 5 <br />
+9 3 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>输出样例1<br />
+3<br />
+1<br />
+<br />
+输出样例2<br />
+3<br />
+0<br />
+1<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1409'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1409'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1409'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

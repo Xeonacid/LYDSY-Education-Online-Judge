@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2235. -- Tower</title><center><h2>2235: Tower</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>97&nbsp;&nbsp;<span class=green>Solved: </span>47<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2235'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2235'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2235'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">给定一个无线网络。每一个无线网络的节点都有一个发射半径<span lang="EN-US">r<sub>i</sub></span>，只要两个节点的<span lang="EN-US">Euclid</span>距离&le;发射节点的半径，另外一个节点就能接收到信息。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">现在所有的节点都使用制度<span lang="EN-US">A</span>进行信息传输，但现在有一个新的，更好的制度<span lang="EN-US">B</span>可用，我们考虑将某些节点更新为使用制度<span lang="EN-US">B</span>。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">这里有一个限制，如果节点<span lang="EN-US">T</span>使用制度<span lang="EN-US">B</span>，那么所有可以接收到节点<span lang="EN-US">T</span>信息的节点都必须使用制度<span lang="EN-US">B</span>，反之则不一定。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt; mso-char-indent-count: 2.0"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">你的任务是选择一些节点进行更新。因为更新节点需要一定的费用，并且可以获得一定的收益，我们用</span><span lang="EN-US" style="font-size: 15pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">score<sub>i</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">来衡量节点<span lang="EN-US">i</span>的收益。我们希望所有更新的节点的<span lang="EN-US">score</span>之和最大。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">第一行，数据组数<span lang="EN-US">T</span>。每组数据以一个整数<span lang="EN-US">N</span>开始，接下来<span lang="EN-US">N</span>行每行<span lang="EN-US">4</span>个整数：<span lang="EN-US">x</span>，<span lang="EN-US">y</span>，<span lang="EN-US">r</span>，<span lang="EN-US">s</span>。他们代表一个节点的坐标（<span lang="EN-US">x</span>，<span lang="EN-US">y</span>），发射半径<span lang="EN-US">r</span>和<span lang="EN-US"> score </span>&mdash;<span lang="EN-US"> s</span>。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12"><span lang="EN-US"><o:p></o:p></span></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">对于每组数据，输出：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">Case<span style="mso-spacerun: yes">&nbsp; </span>#X:score<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">其中<span lang="EN-US">X</span>表示数据编号，从<span lang="EN-US">1</span>开始，<span lang="EN-US">score</span>表示该组数据的答案。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">Limits<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">1</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">T</span>&le;<span lang="EN-US">55<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">-10,000</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">x,y</span>&le;<span lang="EN-US">10,000<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">1</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">r</span>&le;<span lang="EN-US">20,000<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">-1000</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">s</span>&le;<span lang="EN-US">1000<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">Small dataset<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">1</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">n</span>&le;<span lang="EN-US">15<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">Large dataset<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">1</span><span style="font-size: 12pt; font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: CMBX12">&le;<span lang="EN-US">n</span>&le;<span lang="EN-US">500<o:p></o:p></span></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+5<br />
+0  1  7  10<br />
+0  -1  7  10<br />
+5  0  1  -15<br />
+10  0  6  10<br />
+15  1  2  -20<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case  #1:5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2235'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2235'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2235'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

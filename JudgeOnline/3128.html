@@ -1,0 +1,105 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3128. -- [Usaco2013 Open]Figure Eight</title><center><h2>3128: [Usaco2013 Open]Figure Eight</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>108&nbsp;&nbsp;<span class=green>Solved: </span>55<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3128'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3128'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3128'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Farmer John's cows recently received a large piece of marble, which, unfortunately, has a number of imperfections. To describe these, we can represent the piece of marble by an N by N square grid (5 &lt;= N &lt;= 300), where the character '*' represents an imperfection and '.' represents a flawless section of the marble. The cows want to carve a number &quot;8&quot; in this piece of marble (cows are quite fond of the number &quot;8&quot; since they have cloven hooves on each of their four feet, so they can effectively count up to 8 using their &quot;toes&quot;). However, the cows need your help to determine the optimally placed figure eight in the piece of marble. Here are a few properties that define a valid figure eight: * A figure eight consists of two rectangles, a top and a bottom. * Both the top and bottom have at least one cell in their interior. * The bottom edge of the top rectangle is a (not necessarily proper) subset of the top edge of the bottom rectangle. * The figure eight can only be carved from flawless regions of the piece of marble. The aesthetic score of a figure eight is equal to the product of the areas enclosed by its two rectangles. The cows wish to maximize this score. For example, given this piece of marble </span></p>
+<p><span style="font-size: medium">...............<br />
+...............<br />
+...*******.....<br />
+.*....*.......*<br />
+.*......*....*.<br />
+....*..........<br />
+...*...****....<br />
+...............<br />
+..**.*..*..*...<br />
+...*...**.*....<br />
+*..*...*.......<br />
+...............<br />
+.....*..*......<br />
+.........*.....<br />
+...............<br />
+<span style="font-size: medium">the optimally placed eight is:</span><br />
+..88888888888..<br />
+..8.........8..<br />
+..8*******..8..<br />
+.*8...*.....8.*<br />
+.*8.....*...8*.<br />
+..8.*.......8..<br />
+..8*...****.8..<br />
+.88888888888888<br />
+.8**.*..*..*..8<br />
+.8.*...**.*...8<br />
+*8.*...*......8<br />
+.8............8<br />
+.8...*..*.....8<br />
+.8.......*....8<br />
+.88888888888888&nbsp;</span><span style="font-size: medium"> </span></p>
+<p><span style="font-size: medium">The top rectangle has area 6x9=54, and the bottom rectangle has area 12x6=72. Thus, its aesthetic score is 54x72=3888. </span></p></div><h2>Input</h2><div class=content><p><font size="4">* Line 1: A single integer N, indicating the side length of the marble. </font></p>
+<p><font size="4">* Lines 2..N+1: Each line describes a row of the marble, and contains N characters which are each either '*' (an imperfection) or '.' (a flawless section).&nbsp;</font></p></div><h2>Output</h2><div class=content><p>&nbsp;Line 1: The highest aesthetic score of any figure eight which doesn't use any imperfect squares of the marble. If no figure eight is attainable, then output -1.&nbsp;</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>15<br />
+...............<br />
+...............<br />
+...*******.....<br />
+.*....*.......*<br />
+.*......*....*.<br />
+....*..........<br />
+...*...****....<br />
+...............<br />
+..**.*..*..*...<br />
+...*...**.*....<br />
+*..*...*.......<br />
+...............<br />
+.....*..*......<br />
+.........*.....<br />
+...............<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 3888 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3128'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3128'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3128'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

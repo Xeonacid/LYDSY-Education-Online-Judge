@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4948. -- [Wf2017]Airport Construction</title><center><h2>4948: [Wf2017]Airport Construction</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>150&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4948'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4948'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4948'>Discuss</a>]</center><h2>Description</h2><div class=content><div>位于热带的 Piconesia 岛国以其秀丽的沙滩、繁茂的植被、可可与咖啡原料的产出以及全年宜人的天气而闻名海</div>
+<div>外。天堂般美丽的这里将纳入未来举办 ACM-ICPC 世界总决赛的地点考虑名单中(至少也会是执行委员会度假地点</div>
+<div>的选择之一) 。但是还有一个小问题:这个岛真的很难到达。就目前而言,最快的方式是从最近的机场出发,并借助</div>
+<div>渔船、油轮、皮划艇和潜艇这些工具,花费三天时间才能到达小岛。为了让大家更轻松地参加 ICPC 世界总决赛,也</div>
+<div>为了推动小岛的旅游业发展,Piconesia 正在计划修建它的第一个机场。考虑到越长的起降跑道越有助于对大型飞</div>
+<div>机的支持, Piconesia 决定在其岛上修建一条最长的起降跑道带。不幸地是,他们无法确定这条跑道应该设置在哪</div>
+<div>里。也许你可以帮个忙?对于本题,我们将 Piconesia 的边界抽象成一个多边形的模型。根据这个多边形,你需要计</div>
+<div>算出最长的跑道长度(即最长的线段)使得跑道可以完全在小岛上修建。图 1 对应于第一个输入样例。</div>
+<div><img src="upload/201708/11.png" width="322" height="310" alt="" /></div>
+<div></div>
+<div>图 1. 小岛的多边形模型。最长的跑道已用粗线标出。</div></div><h2>Input</h2><div class=content><div>第一行包含一个整数 n (3 &le; n &le; 200) ,表示多边形的点数。</div>
+<div>接下来 n 行,每行包含两个整数 x 和 y (|x|, |y| &le; 10^6 ) ,表示多边形上的顶点 (x, y)&nbsp;</div>
+<div>顶点按照逆时针顺序给出。</div>
+<div>给出的多边形是简单多边形,即它的顶点互不相同,并且除了相邻的两条边在公共点相交之外</div>
+<div>它的任意两条边都不会相交。此外,相邻的两条边也不会共线。</div></div><h2>Output</h2><div class=content><p>&nbsp;输出能放进给定多边形内部的最长线段长度,其绝对误差或相对误差不能超过 10^-6 。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例1<br />
+7<br />
+0 20<br />
+40 0<br />
+40 20<br />
+70 50<br />
+50 70<br />
+30 50<br />
+0 50<br />
+样例2<br />
+3<br />
+0 2017<br />
+-2017 -2017<br />
+2017 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例1<br />
+76.157731059<br />
+样例2<br />
+4510.149110617</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Tangjz%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>鸣谢Tangjz提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4948'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4948'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4948'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

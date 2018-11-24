@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2468. -- [中山市选2010]三核苷酸</title><center><h2>2468: [中山市选2010]三核苷酸</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>280&nbsp;&nbsp;<span class=green>Solved: </span>78<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2468'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2468'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2468'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt">三核苷酸是组成DNA序列的基本片段。具体来说，核苷酸一共有4种，分别用&rsquo;A&rsquo;，&rsquo;G&rsquo;，&rsquo;C&rsquo;，&rsquo;T&rsquo;来表示。而三核苷酸就是由3个核苷酸排列而成的DNA片段。三核苷酸一共有64种，分别是&rsquo;AAA&rsquo;，&rsquo;AAG&rsquo;，&hellip;，&rsquo;GGG&rsquo;。给定一个长度为L的DNA序列，一共可以分辨出（L-2）个三核苷酸。现在我们想用一些统计学的方法来进行一些分析，步骤如下：</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>对于这（L-2）个三核苷酸，我们从左到右给予编号，分别为1到L-2。</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>从这（L-2）个三核苷酸挑选一对出来，一共有(L-2)*(L-3)/2种可能。如果某一对三核苷酸是一样的，我们就记录他们之间的距离。他们之间的距离定义为他们的编号之差。</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>根据我们所记录的&ldquo;样本数据&rdquo;，我们现在需要计算样本数据的方差。方差的计算公式是S2=[(x<sub>1</sub>-X)<sup> 2</sup>+(x<sub>2</sub>-X)<sup> 2</sup>+&hellip;+(x<sub>n</sub>-X)<sup>2</sup>]/n, X=(x<sub>1</sub>+x<sub>2</sub>+&hellip;+x<sub>n</sub>)/n。如果样本的大小n=0，那么我们认为S2=X=0。</div>
+<div style="margin: 0cm 0cm 0pt 21pt">&nbsp;</div>
+<div style="margin: 0cm 0cm 0pt 21pt">例如，我们要统计DNA序列&rsquo;ATATATA&rsquo;：</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>为三核苷酸编号. L<sub>1</sub>: ATA, L<sub>2</sub>:TAT, L<sub>3</sub>:ATA, L<sub>4</sub>:TAT, L<sub>5</sub>:ATA.</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>(L<sub>1</sub>,L<sub>3</sub>)=2, (L<sub>1</sub>,L<sub>5</sub>)=4, (L<sub>3</sub>,L<sub>5</sub>)=2, (L<sub>2</sub>,L<sub>4</sub>)=2. 所以样本数据是2,4,2,2.</div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span>3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>样本数据平均值X=(2+4+2+2)/4=2.5.</div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 18pt">方差S2=[(2-2.5)<sup>2</sup>+(4-2.5)<sup> 2</sup>+(2-2.5)<sup>2</sup>+(2-2.5)<sup>2</sup>]/4=0.75.</div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>给定一个DNA序列，请你计算出它的方差。</div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt">输入包含多组测试数据。第一行包含一个正整数T，表示测试数据数目。每组数据包含一个由&rsquo;A&rsquo;，&rsquo;G&rsquo;，&rsquo;C&rsquo;，&rsquo;T&rsquo;组成的字符串，代表要统计的DNA序列。DNA序列的长度大于等于3且不会超过100000。</div>
+<div style="text-indent: 21pt">&nbsp;</div></div><h2>Output</h2><div class=content><div style="line-height: 115%">&nbsp;</div>
+<div style="text-indent: 21pt">对每组测试数据，输出一行答案，为一个保留6位精度的实数，代表S2的值。如果你的答案和标准答案的&ldquo;相对误差&rdquo;小于1e-8，你的答案会被视为正确的答案。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+ATATATA<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.750000</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2468'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2468'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2468'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

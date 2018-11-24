@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4613. -- [Wf2016]Longest Rivers</title><center><h2>4613: [Wf2016]Longest Rivers</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>58&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4613'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4613'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4613'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有n条河流的发源地，有m个汇合点，每个汇合点都有若干条河流汇合，最后所有的河流汇合到一个点。给每个河流</div>
+<div>定义一个长度，即从汇合终点开始，遇到分叉即只保留一条主干，剩下的都是支流。现在对于每条河流询问最好可</div>
+<div>能的排名。n,m&lt;=500000。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行包含两个整数n(1&lt;n&lt;=500000)代表河流源头数，m(0&lt;=m&lt;n)表示汇合点数，这些汇合点被标号为1~m。</div>
+<div>接下来n行描述河流，每行包含一个字符串（长度不超过10），表示河流源头的名字，</div>
+<div>然后有两个整数c(0&lt;=c&lt;=m)和d(1&lt;=d&lt;=10^9)，c表示离其最近的河流下游交汇处的标号，d是到交汇处的距离。</div>
+<div>最后m行描述交汇点1~m。每行两个数该交汇点下游最近的交汇点和距离。</div></div><h2>Output</h2><div class=content><p>输出n行，每行输出河流的名字和最高的可能排名。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 3<br />
+Chi 1 1047<br />
+Mekong 2 2650<br />
+Mun 1 800<br />
+Nan 3 710<br />
+Salween 0 2815<br />
+Yom 3 787<br />
+2 100<br />
+0 1700<br />
+0 30<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Chi 1<br />
+Mekong 1<br />
+Mun 3<br />
+Nan 6<br />
+Salween 1<br />
+Yom 4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Yts1999%E4%B8%8A%E4%BC%A0%EF%BC%8Clbn187%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>鸣谢Yts1999上传，lbn187提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4613'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4613'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4613'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

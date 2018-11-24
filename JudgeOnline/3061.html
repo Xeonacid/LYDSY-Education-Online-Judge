@@ -1,0 +1,62 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3061. -- [Usaco2013 Feb]Partitioning the Farm</title><center><h2>3061: [Usaco2013 Feb]Partitioning the Farm</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>69&nbsp;&nbsp;<span class=green>Solved: </span>47<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3061'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3061'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3061'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;Farmer John's farm is divided into an N x N square grid of pastures (2 &lt;= N &lt;= 15). Right now, there is a fence around the outside of the farm, but cows can move freely from pasture to pasture. Farmer John has decided to build fences to separate the cows from each other. Because of zoning laws, each fence must be a horizontal or vertical line going across the entire farm and fences cannot go through pastures. Farmer John only has enough money to build at most K fences (1 &lt;= K &lt;= 2N - 2). Farmer John wants to build the fences in order to minimize the size of the largest resulting group of cows (two cows are in the same group if they can reach each other without going through any fences). Given the current number of cows in each pasture, help Farmer John compute the size of the largest group of cows if he builds the fences optimally. </span></p>
+<p></p>
+<div style="text-indent: 12pt"><span style="font-size: 12pt">FJ</span><span style="font-size: 12pt">的农场是</span><span style="font-size: 12pt">n*n(2&lt;=n&lt;=15)</span><span style="font-size: 12pt">的，每块地里有若干头牛，</span><span style="font-size: 12pt">FJ</span><span style="font-size: 12pt">最多能建</span><span style="font-size: 12pt">K(1&lt;=k&lt;=2n-2)</span><span style="font-size: 12pt">条篱笆，而这些篱笆只能沿着每块地的边缘建。建完篱笆之后，牛被分成了若干群。</span><span style="font-size: 12pt">FJ</span><span style="font-size: 12pt">想使得这些群中牛最多的那个群的牛尽量少。请输出满足</span><span style="font-size: 12pt">FJ</span><span style="font-size: 12pt">要求的情况下的牛最多的那个群有多少头牛。</span></div></div><h2>Input</h2><div class=content><p><font size="4">* Line 1: Two integers, N and K * Lines 2..1+N: There are N numbers per line, describing the cows in each pasture for one row of the farm (there are at least 0 and at most 1000 cows in each pasture)&nbsp;</font></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">&nbsp;Line 1: The minimum possible size of the largest group of cows. </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+1 1 2<br />
+1 1 2<br />
+2 2 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4 <br />
+OUTPUT DETAILS: Farmer John should build fences between columns 2 and 3 and between rows 2 and 3, which creates 4 groups each with 4 cows. </span></div><h2>HINT</h2>
+			<div class=content><p><p><img height="119" width="504" alt="" src="upload/201302/11.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3061'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3061'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3061'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

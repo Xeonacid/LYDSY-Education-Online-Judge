@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2492. -- Revenge of Fibonacci</title><center><h2>2492: Revenge of Fibonacci</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>46&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2492'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2492'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2492'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="panel_content"><span style="font-size: medium">The well-known Fibonacci sequence is defined as following:<br />
+<br />
+<br />
+&nbsp;&nbsp;Here we regard n as the index of the Fibonacci number F(n).<br />
+&nbsp;&nbsp;This sequence has been studied since the publication of Fibonacci's book Liber Abaci. So far, many properties of this sequence have been introduced.<br />
+&nbsp;&nbsp;You had been interested in this sequence, while after reading lots of papers about it. You think there&rsquo;s no need to research in it anymore because of the lack of its unrevealed properties. Yesterday, you decided to study some other sequences like Lucas sequence instead.<br />
+&nbsp;&nbsp;Fibonacci came into your dream last night. &ldquo;Stupid human beings. Lots of important properties of Fibonacci sequence have not been studied by anyone, for example, from the Fibonacci number 347746739&hellip;&rdquo;<br />
+&nbsp;&nbsp;You woke up and couldn&rsquo;t remember the whole number except the first few digits Fibonacci told you. You decided to write a program to find this number out in order to continue your research on Fibonacci sequence.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;输入一串数字，判断为第几个fib数的前缀，如有多个输出最前面的，不存在或者大于等于100000输出-1</span></div></div><h2>Input</h2><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases. The first line of input contains a single integer T denoting the number of test cases (T&lt;=50000).<br />
+&nbsp;&nbsp;For each test case, there is a single line containing one non-empty string made up of at most 40 digits. And there won&rsquo;t be any unnecessary leading zeroes.</span></div></div><h2>Output</h2><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;For each test case, output the smallest index of the smallest Fibonacci number whose decimal notation begins with the given digits. If no Fibonacci number with index smaller than 100000 satisfy that condition, output -1 instead &ndash; you think what Fibonacci wants to told you beyonds your ability.</span></div>
+<div class="panel_content">
+<pre></pre>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>15<br />
+1<br />
+12<br />
+123<br />
+1234<br />
+12345<br />
+9<br />
+98<br />
+987<br />
+9876<br />
+98765<br />
+89<br />
+32<br />
+51075176167176176176<br />
+347746739<br />
+5610<br />
+ <br />
+<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: 0<br />
+Case #2: 25<br />
+Case #3: 226<br />
+Case #4: 1628<br />
+Case #5: 49516<br />
+Case #6: 15<br />
+Case #7: 15<br />
+Case #8: 15<br />
+Case #9: 43764<br />
+Case #10: 49750<br />
+Case #11: 10<br />
+Case #12: 51<br />
+Case #13: -1<br />
+Case #14: 1233<br />
+Case #15: 22374<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Acm%202011%20%E4%B8%8A%E6%B5%B7'>Acm 2011 上海</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2492'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2492'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2492'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

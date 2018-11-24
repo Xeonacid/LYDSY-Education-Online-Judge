@@ -1,0 +1,127 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4374. -- Little Elephant and Boxes</title><center><h2>4374: Little Elephant and Boxes</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>55&nbsp;&nbsp;<span class=green>Solved: </span>25<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4374'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4374'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4374'>Discuss</a>]</center><h2>Description</h2><div class=content><p><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><b><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:&quot;Cambria Math&quot;;
+mso-font-kerning:1.0pt">利沃夫动物园的小象有</span><span lang="EN-US" style="font-size:
+10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;mso-fareast-font-family:
+宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">n</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:
+Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:&quot;Cambria Math&quot;;
+mso-font-kerning:1.0pt">个盒子，每个盒子里有一些钱或者钻石。他不知道每个盒子里具体是什么，但他知道如果打开第</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">i</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">个盒子，他有</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">Pi / 100</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">的概率能获得</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">Vi</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">美元的钱，而有</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">(1 &ndash; Pi / 100)</span><span style="font-size:10.5pt;mso-bidi-font-size:
+11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">的概率能获得一个钻石。现在有</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">m</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">个物品，分别编号为</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">0</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">到</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">m &ndash; 1</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">，</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt"> </span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">第</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">j</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">个物品需要花费恰好</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">Cj</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">美元的钱和</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:
+1.0pt">Dj</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt">个钻石。小象非常聪明，当他获得了一定量的钱和钻石后，他总会买尽可能多的物品。注意，每个物品只能购买一次。现在请你帮助小象计算出，当他打开所有的盒子后，他期望能够买到的物品个数是多少？</span><span lang="EN-US" style="font-size:10.5pt;
+mso-bidi-font-size:11.0pt;font-family:Calibri;mso-fareast-font-family:宋体;
+mso-bidi-font-family:&quot;Cambria Math&quot;;mso-font-kerning:1.0pt"><br />
+</span></b></p></div><h2>Input</h2><div class=content><p>输入的第一行包含一个正整数T，表示数据组数。<br />
+对于每组数据，第一行包含两个正整数n, m，分别表示盒子数与物品数。接下来n行，每行为两个整数Vi, Pi，分别表示小象能从第i个盒子中获得钱的数量与获得钱的概率。接下来m行，每行为两个整数Cj, Dj，分别表示第j个物品所需要的钱和钻石的数量。</p></div><h2>Output</h2><div class=content><p>输出总共T行。每行为一个实数，为对应的测试数据的答案，实数四舍五入保留到小数点后4位。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+2 2<br />
+2 50<br />
+2 100<br />
+2 0<br />
+2 0<br />
+2 2<br />
+2 100<br />
+2 50<br />
+0 2<br />
+0 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1.5000<br />
+0.5000</span></div><h2>HINT</h2>
+			<div class=content><p><p>1&le;T&le;5,&nbsp;&nbsp; 2&le;n&le;30,&nbsp;&nbsp; 1&le;m&le;30<br /><br />
+<br /><br />
+1&le;Vi, Cj&le;107,&nbsp;&nbsp; 0&le;Dj&le;30,&nbsp;&nbsp; 0&le;Pi&le;100<br /><br />
+<br /><br />
+&nbsp;</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4374'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4374'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4374'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

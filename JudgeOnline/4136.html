@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4136. -- [FJOI2015]带子串包含约束LCS问题</title><center><h2>4136: [FJOI2015]带子串包含约束LCS问题</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>87&nbsp;&nbsp;<span class=green>Solved: </span>28<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4136'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4136'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4136'>Discuss</a>]</center><h2>Description</h2><div class=content><div>带有子串包含约束的最长公共子序列问题可以具体表述如下。&nbsp;</div>
+<div>给定2个长度分别为n和m的序列X和Y，以及一个子串包含约束集S。</div>
+<div>S中共有k个字符串S={S1,S2,&hellip;,Sk}，其中字符串Si的长度为li，1&le;i&le;k。带有子串包含约束的最长公共子序列问题就是要找出X和Y的包含约束集S中所有字符串为其子串的最长公共子序列。&nbsp;</div>
+<div>例如，如果给定的序列X和Y分别为X=actaagacct, Y=gacctacctc，子串包含约束集S={ata, tact}，则子序列actacct是X和Y的一个无约束的最长公共子序列，而包含约束集S中所有字符串为其子串的一个最长公共子序列是atact 。&nbsp;</div>
+<div>在本题中请特别关注子串与子序列的区别。字符串T=t1&hellip;tn的子串是一个形如T&rsquo;=t1+i&hellip;tm+i的字符串，其中，0&le;i，m+i&le;n。例如，T=abcdefg，则bcd是T 的一个子串，而bce是T的一个子序列，但不是T 的子串。</div>
+<div>设计一个算法，找出给定序列X和Y带有子串包含约束S的最长公共子序列。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第1行中给出正整数n,m,k，m＜300, n＜300, k＜6。n和m分别表示给定序列X和Y的长度。k表示子串包含约束集S中共有k个字符串。</div>
+<div>
+<div>第2行中有k个整数li，0&le;li&le;300,1&le;i&le;k，分别表示子串包含约束集S中k个字符串的长度度。</div>
+<div>第3行和第4行分别给出序列X和Y 。</div>
+<div>接下来k行每行一个字符串Si</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>将计算出的X和Y带子串包含约束S的最长公共子序列的长度输出。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 10 2<br />
+3 4<br />
+actaagacct<br />
+gacctacctc<br />
+ata<br />
+tact</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p><p>字符串仅包含大小写字母.</p><br />
+<p>2016.3.26加强数据 By&nbsp;<span style="color: rgb(61, 136, 45); font-family: 'Microsoft Yahei', verdana; font-size: 14px; font-weight: bold; line-height: 23px;">immortalCO</span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4136'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4136'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4136'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

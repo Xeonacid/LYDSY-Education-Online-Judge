@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5032. -- [Jsoi2014]病毒分类</title><center><h2>5032: [Jsoi2014]病毒分类</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5032'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5032'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5032'>Discuss</a>]</center><h2>Description</h2><div class=content><div>JSOI爆发一种罕见的懒惰拖延症，为了拯救小伙伴们于水生火热之中，</div>
+<div>JYY 收集了 JSOI王国中所有病毒的DNA序列，并希望对这些DNA序列进行分类,&nbsp;</div>
+<div>以便深入分析来找出治疗拖延症的方法。</div>
+<div>JSOI王国里一共有N种不同的病毒，每种病毒的DNA序列都由一个大写字母序列来表示。</div>
+<div>JYY希望将这些病毒分成尽量少的类别,使得每个病毒都属于且仅属于某一个类别。</div>
+<div>分入同一个类别的病毒需要满足如下两条性质中的至少一条：</div>
+<div>1、 所有同类病毒DNA序列的&ldquo;k前缀&rdquo;（前k个大写字母）都相同；</div>
+<div>2、 所有同类病毒DNA序列的&ldquo;k后缀&rdquo;（后k个大写字母）都相同。</div>
+<div>JYY希望找出一种分类方案,使得所分成的类别满足要求并且类别总数最小。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行包含两个正整数 N 和 k 。</div>
+<div>接下来 N 行，第 i 行包含一个字符串 Si ，表示编号为 i 的病毒的 DNA 序列 。</div>
+<div>数据保证 Si 的长度不小于 k 。</div>
+<div>N&le;5000 &amp; k&le;550 &amp; k&le;|Si|&le;600</div>
+<div></div></div><h2>Output</h2><div class=content><div>第一行包含一个整数 C ，表示最少的类别的数量。</div>
+<div>接下来 C 行，每一行首先为一个正整数 w ，表示当前类别中的病毒数量，</div>
+<div>接下来 w 个正整数，表示属于当前类别的病毒的编号。</div>
+<div>如果有多个最佳方案，输出任意一组即可。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 1<br />
+A<br />
+AB<br />
+BB<br />
+BA</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+2 1 2<br />
+2 3 4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Round3'>Round3</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5032'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5032'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5032'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

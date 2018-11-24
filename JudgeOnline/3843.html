@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3843. -- ZCC loves Army</title><center><h2>3843: ZCC loves Army</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>59&nbsp;&nbsp;<span class=green>Solved: </span>18<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3843'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3843'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3843'>Discuss</a>]</center><h2>Description</h2><div class=content><div>ZCC owns an army with n soldiers. Soldiers are numbered from 1 to n. Soldier 1 is the commander in chief. Each soldier has a direct superior (which is called father in ACM) except soldier 1. x is a direct inferior (which is called son in ACM) of y if and only if y is the direct superior of x. Soldier use an ordered list called direct inferiors list to manage his direct inferiors (The indexes begin with 1). If soldier A and soldier B are in the same direct inferiors list, and A is in front of B, then we say A&rsquo;s level is higher than B. We assume that soldier 1 belongs to a direct inferior list that only contains soldier 1 for convenience.</div>
+<div>Messages can be transmitted among the soldiers. A soldier can directly send messages to his direct superior, his direct inferior, and those who are in the same direct inferior list with him. Messages can also be sent indirectly. That means if x wants to send a message to y, he first send it directly to a third soldier z, then z send this message directly to y. In this case, we say z is involved in this transmission as a middleman. Message transmission that involves more than one middleman is also allowed.</div>
+<div>Orders can be transmitted among the soldiers too. A soldier can directly give orders to his direct inferior and those who are in the same direct inferior list with him but have lower level. Orders can also be given indirectly. That means if x wants to give an order to y, he first give it to a third soldier z, then z give this order to y. In this case, we say z is involved in this transmission as a middleman. Order transmission that involves more than one middleman is also allowed.</div>
+<div>Unfortunately, sometimes some soldiers will change their direct superior. More specifically, event like &ldquo;the p-th soldier to (p+c-1)-th soldier in soldier x&rsquo;s direct inferior list change their direct superior to y and be inserted after the q-th soldier in y&rsquo;s direct inferior list (if q=0, that means these soldiers are inserted in front of the first soldier in y&rsquo;s direct inferior list)&rdquo; will sometimes happen.</div>
+<div>To examine the efficiency of the transmission of the messages and orders, ZCC will ask two types of question:&nbsp;</div>
+<div>1) If soldier x want to send messages to soldier y, at least how many soldiers will be involved in this transmission as a middleman.</div>
+<div>2) How many soldiers can give orders to soldier x.</div>
+<div>Now, m events, including direct superior change events and ZCC&rsquo;s questions, happen one by one. Can you answer all ZCC&rsquo;s questions?</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>The first line contains two integers n and m, indicating the number of soldiers and the number of events.</div>
+<div>Then n lines follow, describing the initial direct inferior list of each soldier. The i-th line contains several integers. The first integer is k, indicating the number of soldier i&rsquo;s direct inferior. Then k integers follow, indicating the direct inferior list of soldier i.</div>
+<div>After that m lines follow, describing the m events. Each line begins with an integer t, indicating the type of this event.</div>
+<div>If t = 1, then 5 integers x, p, c, y and q follow, indicating a direct superior change event;</div>
+<div>If t = 2, then 2 integers x and y follow, indicating ZCC&rsquo;s question 1;</div>
+<div>If t = 3, then an integer x follows, indicating ZCC&rsquo;s question 2.</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each question, output one line with one integer indicating your answer.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9 7<br />
+2 2 3<br />
+3 4 5 6<br />
+3 7 8 9<br />
+0<br />
+0<br />
+0<br />
+0<br />
+0<br />
+0<br />
+3 1<br />
+3 9<br />
+1 2 2 2 3 2<br />
+3 9<br />
+2 5 9<br />
+2 4 8<br />
+3 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+5<br />
+7<br />
+0<br />
+2<br />
+2</span></div><h2>HINT</h2>
+			<div class=content><p><div>&nbsp;n&lt;=100000, m&lt;=100000</div><br />
+<div>&nbsp;You can assume that the events are all legal, and the relationship among the soldiers forms a tree all the time.</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E9%95%87%E6%B5%B7%E4%B8%AD%E5%AD%A6'>By 镇海中学</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3843'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3843'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3843'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

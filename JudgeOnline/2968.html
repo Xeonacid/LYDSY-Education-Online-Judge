@@ -1,0 +1,104 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2968. -- 成长计划</title><center><h2>2968: 成长计划</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2968'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2968'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2968'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">你需要为你的宠物制定一个成长计划，使得宠物得到良好的发展。</span></div>
+<div><span style="font-size: medium">宠物有三项属性：体力<i>H</i>，逻辑<i>P</i>，感受<i>F</i>。</span></div>
+<div><span style="font-size: medium">这三项分别决定了宠物的：</span></div>
+<div><span style="font-size: medium">健康与强壮程度，逻辑判断与理科思维能力，文采与艺术素养。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">初始时3项属性均为0。(中途可为负数)</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">在接下来的<i>M</i>天里，第<i>i</i>天有温度<i>T</i>[<i>i</i>]，湿度<i>W</i>[<i>i</i>]。</span></div>
+<div><span style="font-size: medium">每天你可以选择让宠物：（以下除法均为整数除法）</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>在家玩</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">H&rsquo; = H*4/5 + 3 + F/6 + P/6</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">P&rsquo; = P - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">F&rsquo; = F - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>体育课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H + T[i] &ndash; W[i]</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + W[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>科学课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |W[i]| - F/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P + 3 + T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F &ndash; 1 + W[i]/9</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">4.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>艺术课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |T[i]| - P/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; 1 + T[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + 2 + W[i]/3</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">每天活动结束后，(<i>H</i>&rsquo;, <i>P</i>&rsquo;, <i>F</i>&rsquo;) 将会成为宠物的状态。</span></div>
+<div><span style="font-size: medium">宠物的培养是需要侧重点的。</span></div>
+<div><span style="font-size: medium">一个培养目标可以用三元组(<i>x</i>,<i>y</i>,<i>z</i>)来表示，其中<i>x</i>,<i>y</i>,<i>z</i>均为非负整数。</span></div>
+<div><span style="font-size: medium">即要求<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>最大。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行输入天数<i>M</i>，询问数<i>Q</i></span></div>
+<div><span style="font-size: medium">接下来一行为<i>T</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来一行为<i>W</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来<i>Q</i>行，每行是三个非负整数<i>x y z</i>表示一次询问</span></div></div><h2>Output</h2><div class=content><div style="margin: 13pt 0cm">&nbsp;</div>
+<div><span style="font-size: medium">对于<i>Q</i>次询问，每次输出一行，包括一个整数：</span></div>
+<div><span style="font-size: medium">即在最优成长计划下<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>的最大值。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3<br />
+10 10 -10 -10 0<br />
+10 -10 10 -10 0<br />
+1 0 0<br />
+0 1 0<br />
+0 0 1<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>22<br />
+17<br />
+10<br />
+【样例说明】<br />
+对于第一个询问：在家玩,体育课,在家玩,在家玩,在家玩<br />
+ <br />
+【范围】<br />
+100% 1 ≤ M ≤ 50; Q ≤ 600;     T[i],W[i],x,y,z的绝对值 ≤ 20</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;题解:<a href="upload/201604/sol(1).txt">JudgeOnline/upload/201604/sol(1).txt</a></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2968'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2968'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2968'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

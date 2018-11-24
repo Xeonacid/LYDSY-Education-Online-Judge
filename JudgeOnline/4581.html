@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4581. -- [Usaco2016 Open]Field Reduction</title><center><h2>4581: [Usaco2016 Open]Field Reduction</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>110&nbsp;&nbsp;<span class=green>Solved: </span>34<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4581'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4581'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4581'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Farmer John's N cows (5&le;N&le;50,000) are all located at distinct positions in his two-dimensional fie</div>
+<div>ld. FJ wants to enclose all of the cows with a rectangular fence whose sides are parallel to the x a</div>
+<div>nd y axes, and he wants this fence to be as small as possible so that it contains every cow (cows on</div>
+<div>&nbsp;the boundary are allowed).FJ is unfortunately on a tight budget due to low milk production last qua</div>
+<div>rter. He would therefore like to build an even smaller fenced enclosure if possible, and he is willi</div>
+<div>ng to sell up to three cows from his herd to make this possible.Please help FJ compute the smallest&nbsp;</div>
+<div>possible area he can enclose with his fence after removing up to three cows from his herd (and there</div>
+<div>after building the tightest enclosing fence for the remaining cows).For this problem, please treat c</div>
+<div>ows as points and the fence as a collection of four line segments (i.e., don't think of the cows as&nbsp;</div>
+<div>&quot;unit squares&quot;). Note that the answer can be zero, for example if all remaining cows end up standing</div>
+<div>&nbsp;in a common vertical or horizontal line.</div>
+<div>给定平面上N个点。现你可以删去至多3个点，接着你需要用一个矩形包含所有的点，点可以在矩形的边上，矩形的</div>
+<div>边须与坐标轴平行。最小化矩形的面积并输出这个值。</div>
+<div>5 &le; N &le; 50000, 1 &le; X_i, Y_i &le; 40000</div>
+</div>
+<div>
+<div style="font-family: Arial; font-size: 14px; line-height: 15.8666658401489px;"></div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N.</div>
+<div>The next N lines each contain two integers specifying the locati</div>
+<div>on of a cow. Cow locations are positive integers in the range 1&hellip;40,000.</div>
+<p></p>
+<p></p></div><h2>Output</h2><div class=content><p>&nbsp;Write a single integer specifying the minimum area FJ can enclose with his fence after removing up t</p>
+<div>o three carefully-chosen cows from his herd.</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+1 1<br />
+7 8<br />
+10 9<br />
+8 12<br />
+4 100<br />
+50 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver%E9%B8%A3%E8%B0%A2frank_c1%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>Silver鸣谢frank_c1提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4581'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4581'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4581'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

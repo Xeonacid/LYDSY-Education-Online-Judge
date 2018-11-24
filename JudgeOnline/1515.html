@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1515. -- [POI2006]Lis-The Postman</title><center><h2>1515: [POI2006]Lis-The Postman</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>180&nbsp;&nbsp;<span class=green>Solved: </span>49<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1515'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1515'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1515'>Discuss</a>]</center><h2>Description</h2><div class=content><div>每天早上邮递员都要走过每条街道来递送邮件. 所有的道路都是单向的. 两个岔路口间最多有两条边并且方向不同. 岔路口从1 到 编号. 邮递员从Byteotian邮政总部出发并且最终回到总部, 他可以自由选择自己喜欢的线路.最近他的上司给了他新的任务. 他被分派了一些路径的片段- 即一些需要依次经过的岔路口序列. 邮递员要选择一条路径使得:&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>经过每条街道一次,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>包含所有给定的路径片段,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>从第一个路口出发并回到第一个路口.&nbsp;</div>
+<div>很不幸,很可能这样的路径不一定存在. 请你帮邮递员找出一条可行的路径.</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行两个整数N和M,2&lt;=N&lt;=50000,1&lt;=M&lt;=200000 表示岔路口数目以及街道的数目. 接下来M行每行两个数字a, b,</div>
+<div>1&lt;=a,b&lt;=N,a&lt;&gt;b,, 表示一条单向道路. 每一队 a,b在数据中最多出现一次. 接下来一行一个整数t,0&lt;=t&lt;=10000&nbsp;</div>
+<div>表示给定的路径片段数目. 接下来t行用来描述这些路径片段. 每行开始一个整数 k,2&lt;=K&lt;=200000, 并且一个序列</div>
+<div>&nbsp;v1,v2&hellip;vk表示需要经过的路口总数以及这些路口的编号. 所有路径片段的总长不超过1000000.</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>第一行输出:&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>TAK - 如果存在一条满足条件的路径,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>NIE &ndash; 如果路径不存在.</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 10<br />
+1 5<br />
+1 3<br />
+4 1<br />
+6 4<br />
+3 6<br />
+3 4<br />
+4 3<br />
+5 6<br />
+6 2<br />
+2 1<br />
+4<br />
+3 1 5 6<br />
+3 3 4 3<br />
+4 4 3 6 4<br />
+3 5 6 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img border="0" src="images/1515.jpg" alt="" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1515'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1515'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1515'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

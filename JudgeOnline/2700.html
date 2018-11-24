@@ -1,0 +1,93 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2700. -- 聚会</title><center><h2>2700: 聚会</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>95&nbsp;&nbsp;<span class=green>Solved: </span>37<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2700'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2700'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2700'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">Alice正在组织一次有M位同学参加的同学聚会。Alice有N种不同的茶，每种茶有各自的单价和类别（红茶或绿茶）。每隔一单位时间，聚会上都有一个同学离开。Alice希望安排一种泡茶的方案，每单位时间都给所有剩下的同学们泡同一种之前没有泡过的茶，花费就是此茶的单价乘以剩余的同学数。同时，他不希望连续三次泡的茶都是红茶或都是绿茶。请你找出一种方案，在满足上面的条件下使得总花费最小。如果有多种方案，找出任意一种。保证存在解。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输入第一行两个数M和N，下面N行每行两个数ci和si，ci为第i种茶的单价，si=1表示第i种茶是红茶，si=0表示第i种茶是绿茶。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出第一行为最小总花费，</span><span style="font-size: medium"><b>样例数据</b></span></div>
+<p>
+<table cellspacing="0" cellpadding="0" border="1" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse">
+    <tbody>
+        <tr>
+            <td valign="top" width="155" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: black 1pt solid; width: 116.1pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">输入</span></div>
+            </td>
+            <td valign="top" width="155" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 116.1pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">输出</span></div>
+            </td>
+            <td valign="top" width="259" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 193.9pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">说明</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="155" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: black 1pt solid; width: 116.1pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">3 4</span></div>
+            <div><span style="font-size: medium">1 0</span></div>
+            <div><span style="font-size: medium">2 0</span></div>
+            <div><span style="font-size: medium">4 1</span></div>
+            <div><span style="font-size: medium">3 1</span></div>
+            </td>
+            <td valign="top" width="155" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 116.1pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">10</span></div>
+            </td>
+            <td valign="top" width="259" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 193.9pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">第一次泡单价1的绿茶，花费1*3；第二次泡单价2的绿茶，花费2*2；第三次泡单价3的红茶，花费3*1。总花费3+4+3=10。</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="margin: 12pt 0cm 3pt"><span style="font-size: medium"><b>数据规模</b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于20%的数据满足1 &le; M &le; N &le; 10</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">对于50%的数据满足1 &le; M &le; N &le; 100</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于100%的数据满足1 &le; M &le; N &le; 1000，1 &le; ci &le; 100000</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata></span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata></span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2700'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2700'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2700'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5187. -- [Usaco2018 Jan]Sprinklers</title><center><h2>5187: [Usaco2018 Jan]Sprinklers</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>17&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5187'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5187'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5187'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;农夫约翰有一块很大的田，他正在考虑种甜玉米。经过对他农田的调查，FJ发现它形成了一个（N-1）&times;（N-1）的</p>
+<div>正方形。西南角为坐标（0,0），东北角是（N-1，N-1）。在某些整数坐标的位置中有双头喷头，每一个都能够同</div>
+<div>时喷洒水和肥料。一个在（i，j）处的双头喷头会将水洒在农田中所有在其东面且在其北面的区域，将肥料洒在农</div>
+<div>田中所有在其南面且在其西面的区域。形式化地说，这个喷头将会将水洒在所有满足N&ge;x&ge;i和N&ge;y&ge;j的实数坐标</div>
+<div>(x,y)上，会将肥料洒在所有满足0&le;x&le;i和0&le;y&le;j的实数坐标上农民约翰想在一些边与坐标轴平行的长方形农田</div>
+<div>里种植甜玉米。然而，为了甜玉米的生长，矩形内的所有点都必须由双头喷头浇水和施肥。当然，矩形必须有正的</div>
+<div>面积，否则农民约翰就不能在里面种植任何玉米！帮助农民约翰确定可以种植甜玉米的拥有正面积的矩形农田数。</div>
+<div>由于这个数字可能很大，所以输出对为10^9 + 7取模</div>
+<div></div></div><h2>Input</h2><div class=content><p>&nbsp;第一行包含一个整数N，表示农场的大小（1&le;N&le;10^5）。</p>
+<div>接下来的n行各包含两个由空格分隔的整数。这些整数中0&le;i，j&le;N-1，这表示有一个双头喷头位于（i，j）的位置。</div>
+<div>保证每列都有一台喷头，每排正好有一台喷头。这也就是说，没有两个喷头有相同的x坐标或y坐标。</div>
+<div></div></div><h2>Output</h2><div class=content><p>输出包含一行，表示拥有正面积的合法矩形农田的个数，对10^9+7取模.</p>
+<div></div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+0 4<br />
+1 1<br />
+2 2<br />
+3 0<br />
+4 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>21</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum%20%E9%B8%A3%E8%B0%A2WenDavid%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>Platinum 鸣谢WenDavid提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5187'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5187'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5187'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4533. -- [BeiJing2014 WinterCamp] 数据</title><center><h2>4533: [BeiJing2014 WinterCamp] 数据</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>213&nbsp;&nbsp;<span class=green>Solved: </span>81<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4533'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4533'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4533'>Discuss</a>]</center><h2>Description</h2><div class=content><div>为了写论文，Alex经常要整理大量的数据。<span style="white-space:pre" class="Apple-tab-span">	</span>这一次，Alex面临一个严峻的考验：他需要实现一个数据结构来维护一个点集。&nbsp;</div>
+<div>现在，二维平面上有N个点。Alex 需要实现以下三种操作：&nbsp;</div>
+<div>1.<span style="white-space:pre" class="Apple-tab-span">	</span>在点集里添加一个点；&nbsp;</div>
+<div>2.<span style="white-space:pre" class="Apple-tab-span">	</span>给出一个点，查询它到点集里所有点的曼哈顿距离的最小值；&nbsp;</div>
+<div>3.<span style="white-space:pre" class="Apple-tab-span">	</span>给出一个点，查询它到点集里所有点的曼哈顿距离的最大值。&nbsp;</div>
+<div>两个点的曼哈顿距离定义为它们的横坐标差的绝对值与纵坐标差的绝对值的和。这么困难的问题，Alex当然不会做，只好再次请你帮忙了。&nbsp;</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个整数N，表示点集最初的点数。&nbsp;</div>
+<div>接下来N行，每行两个整数，依次表示每个点的横坐标和纵坐标。&nbsp;</div>
+<div>第N+2行包含一个整数Q，表示询问的数目。&nbsp;</div>
+<div>接下来Q行，每行三个整数，依次表示询问的类型，点的横坐标和纵坐标。0类型表示添加一个点，1类型表示查询到该点的曼哈顿距离的最小值，2类型表示查询最大值。&nbsp;</div>
+<div>1 &le; N, Q &le; 100,000，点的坐标是不超过10^9的非负整数</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出若干行，依次表示每个查询操作的答案。&nbsp;</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 <br />
+7 5 <br />
+6 2 <br />
+3 1 <br />
+5 <br />
+1 6 1 <br />
+1 5 5 <br />
+2 7 1 <br />
+0 3 2 <br />
+1 1 0 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 <br />
+2 <br />
+4 <br />
+3 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4533'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4533'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4533'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

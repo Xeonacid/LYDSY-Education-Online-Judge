@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1187. -- [HNOI2007]神奇游乐园</title><center><h2>1187: [HNOI2007]神奇游乐园</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1400&nbsp;&nbsp;<span class=green>Solved: </span>766<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1187'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1187'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1187'>Discuss</a>]</center><h2>Description</h2><div class=content><div>经历了一段艰辛的旅程后，主人公小P乘坐飞艇返回。在返回的途中，小P发现在漫无边际的沙漠中，有一块狭长的</div>
+<div>绿地特别显眼。往下仔细一看，才发现这是一个游乐场，专为旅途中疲惫的人设计。娱乐场可以看成是一块大小为</div>
+<div>n&times;m的区域，且这个n&times;m的区域被分成n&times;m个小格子，每个小格子中就有一个娱乐项目。然而，小P并不喜欢其中</div>
+<div>的所有娱乐项目，于是，他给每个项目一个满意度。满意度为正时表示小P喜欢这个项目，值越大表示越喜欢。为</div>
+<div>负时表示他不喜欢，这个负数的绝对值越大表示他越不喜欢。为0时表示他对这个项目没有喜恶。小P决定将飞艇停</div>
+<div>在某个小格中，然后每步他可以移动到相邻的上下左右四个格子的某个格子中。小P希望找一条路径，从飞艇所在</div>
+<div>格出发，最后又回到这个格子。小P有一个习惯，从不喜欢浪费时间。因此，他希望经过每个格子都是有意义的：</div>
+<div>他到一个地方后，就一定要感受以下那里的惊险和刺激，不管自己是不是喜欢那里的娱乐项目。而且，除了飞艇所</div>
+<div>在格，其他的格子他不愿意经过两次。小P希望自己至少要经过四个格子。在满足这些条件的情况下，小P希望自己</div>
+<div>玩过的娱乐项目的满意度之和最高。你能帮他找到这个最高的满意度之和吗？</div></div><h2>Input</h2><div class=content><div>第一行为两个正整数n和m，表示游乐场的大小为n&times;m。</div>
+<div>n和m满足：2&lt;=n&lt;=100，2&lt;=m&lt;=6。</div>
+<div>接下来的n行，每行有m个整数，第i行第j列表示游乐场的第i行第j列的小格子中的娱乐项目的满意度，</div>
+<div>满意度的范围是[-1000，1000]。同一行的两个整数之间用空格隔开。</div></div><h2>Output</h2><div class=content><p>输出文件中仅一行为一个整数，表示最高的满意度之和。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+100 300 -400 400<br />
+-100 1000 1000 1000<br />
+-100 -100 -100 -100<br />
+-100 -100 -100 1000</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4000</span></div><h2>HINT</h2>
+			<div class=content><p><p>大家测下这个数据 5 5 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 结果是30?</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1187'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1187'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1187'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

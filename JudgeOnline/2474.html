@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2474. -- 订单</title><center><h2>2474: 订单</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>138&nbsp;&nbsp;<span class=green>Solved: </span>55<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2474'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2474'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2474'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="color: black">A</span><span style="color: black">经常会收到很多的定单。定单的内容为在第</span><span style="color: black">a</span><span style="color: black">天到第</span><span style="color: black">b</span><span style="color: black">天</span><span style="color: black">**</span><span style="color: black">团队将要在</span><span style="color: black">A</span><span style="color: black">的公司狂欢（包括第</span><span style="color: black">a</span><span style="color: black">天与第</span><span style="color: black">b</span><span style="color: black">天）。一旦接受了某一个定单，</span><span style="color: black">A</span><span style="color: black">公司就必须在第</span><span style="color: black">a</span><span style="color: black">天到第</span><span style="color: black">b</span><span style="color: black">天为该团队提供娱乐服务，中途不能取消服务。要如何安排才能使得接受的定单最多呢？</span></div>
+<div style="text-indent: 21.75pt"><span style="color: black">现在告诉你</span><span style="color: black">A</span><span style="color: black">公司最多能同时服务的的团队数目以及收到的所有定单，求出可以接受的定单的最大值。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21.75pt"><span style="color: black">文件的第一行包含一个整数</span><span style="color: black">T</span><span style="color: black">，表示数据组数。</span></div>
+<div style="text-indent: 21.75pt"><span style="color: black">对于每组数据，第一行包含两个整数</span><span style="color: black">n</span><span style="color: black">和</span><span style="color: black">m</span><span style="color: black">，分别表示</span><span style="color: black">收到的定单数和公司能同时服务的团队数。接下来</span><span style="color: black">n</span><span style="color: black">行每行包含两个整数</span><span style="color: black">a</span><span style="color: black">和</span><span style="color: black">b</span><span style="color: black">，表示一个定单的内容：某个团队将在第</span><span style="color: black">a</span><span style="color: black">天与第</span><span style="color: black">b</span><span style="color: black">天之间在A</span><span style="color: black">公司进行狂欢。</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21.75pt"><span style="color: black">对于每组数据输出一行。该行仅包含一个整数，表示最多能接受的定单数。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+2 1<br />
+1 2<br />
+2 3<br />
+2 1<br />
+1 2<br />
+3 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+2<br />
+[<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据 T&lt;=50，m&lt;=40000，n&lt;=100000，&sum;n&lt;=200000<br /><br />
+&nbsp;</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2474'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2474'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2474'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

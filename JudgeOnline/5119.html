@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5119. -- [2017国家集训队测试]生成树计数</title><center><h2>5119: [2017国家集训队测试]生成树计数</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>52&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5119'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5119'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5119'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在一个s个点的图中，存在s-n条边，使图中形成了n个连通块，第i个连通块中有ai</div>
+<div>个点。现在我们需要再连接n?1条边，使该图变成一棵树。对一种连边方案，设原图中第i个连通块连出了di条边，那么这棵树T的价值为：</div>
+<div>&nbsp;<img src="upload/201712/11111.png" width="440" height="152" alt="" /></div>
+<div>你的任务是求出所有可能的生成树的价值之和，对998244353取模。</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入的第一行包含两个整数n,m意义见题目描述。</div>
+<div>接下来一行有n个整数，第i个整数表示ai(1&le;ai&lt;998244353)</div>
+<div>你可以由ai计算出图的总点数s，所以在输入中不再给出s的值。</div>
+<div>本题共有 20个测试点，每个测试点 5 分。</div>
+<div>20%的数据中，n&le;500</div>
+<div>另外 20% 的数据中，n&le;3000</div>
+<div>另外 10% 的数据中，n&le;10010,m=1</div>
+<div>另外 10%的数据中，n&le;10015,m=2</div>
+<div>另外 20% 的数据中，所有 ai相等。</div>
+<div>100% 的数据中，n&le;3&times;10^4,m&le;30</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出包含一行一个整数，表示答案。</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 1<br />
+2 3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1728<br />
+样例解释1<br />
+令i表示大小为i的原连通块，我们在连通块之间的连边有以下三种可能:<br />
+2−3−4<br />
+3−2−4<br />
+2−4−3<br />
+价值和为:<br />
+(2×3^2×4×2+3×2^2×4×2+2×4^2×3×2)×(1+2+1)=1728</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;测评似乎有问题，请自行下数据测<a href="upload/201801/5119.rar">JudgeOnline/upload/201801/5119.rar</a></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5119'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5119'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5119'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

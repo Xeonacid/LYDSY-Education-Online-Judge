@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3289. -- Mato的文件管理</title><center><h2>3289: Mato的文件管理</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4504&nbsp;&nbsp;<span class=green>Solved: </span>1840<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3289'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3289'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3289'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Mato同学从各路神犇以各种方式（你们懂的）收集了许多资料，这些资料一共有n份，每份有一个大小和一个编号</div>
+<div>。为了防止他人偷拷，这些资料都是加密过的，只能用Mato自己写的程序才能访问。Mato每天随机选一个区间[l,r</div>
+<div>]，他今天就看编号在此区间内的这些资料。Mato有一个习惯，他总是从文件大小从小到大看资料。他先把要看的</div>
+<div>文件按编号顺序依次拷贝出来，再用他写的排序程序给文件大小排序。排序程序可以在1单位时间内交换2个相邻的</div>
+<div>文件（因为加密需要，不能随机访问）。Mato想要使文件交换次数最小，你能告诉他每天需要交换多少次吗？</div>
+</div></div><h2>Input</h2><div class=content><div>第一行一个正整数n，表示Mato的资料份数。</div>
+<div>第二行由空格隔开的n个正整数，第i个表示编号为i的资料的大小。</div>
+<div>第三行一个正整数q，表示Mato会看几天资料。</div>
+<div>之后q行每行两个正整数l、r，表示Mato这天看[l,r]区间的文件。</div>
+<div>n,q &lt;= 50000</div></div><h2>Output</h2><div class=content><p>q行，每行一个正整数，表示Mato这天需要交换的次数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+1 4 2 3<br />
+2<br />
+1 2<br />
+2 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+2<br />
+//样例解释：第一天，Mato不需要交换<br />
+第二天，Mato可以把2号交换2次移到最后。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;taorunz'>By taorunz</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3289'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3289'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3289'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2561. -- 最小生成树</title><center><h2>2561: 最小生成树</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2553&nbsp;&nbsp;<span class=green>Solved: </span>1192<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2561'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2561'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2561'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　给定一个边带正权的连通无向图G=(V,E)，其中N=|V|，M=|E|，N个点从1到N依次编号，给定三个正整数u，v，和L (u&ne;v)，假设现在加入一条边权为L的边(u,v)，那么需要删掉最少多少条边，才能够使得这条边既可能出现在最小生成树上，也可能出现在最大生成树上？<br />
+</span></p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"><span style="font-size: medium">　</span></div></div><h2>Input</h2><div class=content><p></p>
+<p></p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"></div>
+</div>
+<p></p>
+<p><br />
+</p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">　<font size="4">　第一行包含用空格隔开的两个整数，分别为N和M；<br />
+　　接下来M行，每行包含三个正整数u，v和w表示图G存在一条边权为w的边(u,v)。<br />
+　　最后一行包含用空格隔开的三个整数，分别为u，v，和 L；<br />
+　　数据保证图中没有自环。<br />
+</font>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"><span style="font-size: medium">　</span></div>
+</div></div><h2>Output</h2><div class=content><p><font size="4">　输出一行一个整数表示最少需要删掉的边的数量。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+3 2 1<br />
+1 2 3<br />
+1 2 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于20%的数据满足N &le; 10，M &le; 20，L &le; 20；<br /><br />
+　　对于50%的数据满足N &le; 300，M &le; 3000，L &le; 200；<br /><br />
+　　对于100%的数据满足N &le; 20000，M &le; 200000，L &le; 20000。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2012%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9FRound%201%20day1'>2012国家集训队Round 1 day1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2561'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2561'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2561'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

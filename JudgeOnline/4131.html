@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4131. -- 并行博弈</title><center><h2>4131: 并行博弈</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>48&nbsp;&nbsp;<span class=green>Solved: </span>34<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4131'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4131'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4131'>Discuss</a>]</center><h2>Description</h2><div class=content><div>lyp和ld在一个n*m的棋盘上玩翻转棋，游戏棋盘坐标假设为(x, y)，1 &le; x &le; n，1 &le; y &le; m，这个游戏的游戏的的游戏规则如下：</div>
+<div>每次可以操作坐标为 (x, y) 的棋子，要求棋子 (x, y) 必须是黑色，并且同时翻转所有棋子坐标 (x&rsquo;, y&rsquo;) 满足 x&rsquo;&le;x, y&rsquo;&le;y。</div>
+<div>lyp觉得这样还不够过瘾,于是乎他打算同时玩 k 个这样的游戏, 每次可以对其中某一个游戏进行操作，lyp先手，ld后手，两人轮流进行操作，最后无法进行操作的人判输，现在给你这个游戏的局面，要求输出是先手必胜(&ldquo;lyp win&rdquo;)还是后手必胜(&ldquo;ld win&rdquo;)。</div>
+<div></div>
+<p class="NOI2"></p>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个数T，表示数据组数。</div>
+<div>接下来T组数据，对于每一组数据：</div>
+<div>接下来一行一个数K，表示有多少个游戏在进行中，</div>
+<div>接下来K部分，每部分第一行两个数n,m表示棋盘大小，</div>
+<div>接下来n行，每行m个数，0 表示这个棋子是白色，1表示为黑色，第一行第一列代表棋子坐标(1,1)。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每一组数据，换行输出先手必胜(&ldquo;lyp win&rdquo;)还是后手必胜(&ldquo;ld win&rdquo;)，输出不包含引号。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+2 2<br />
+1 1<br />
+1 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>lyp win</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于所有的测试数据，n*m*K &le; 105，T &le; 20。</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4131'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4131'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4131'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

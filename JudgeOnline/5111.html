@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5111. -- Tree</title><center><h2>5111: Tree</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>53&nbsp;&nbsp;<span class=green>Solved: </span>11<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5111'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5111'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5111'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给一棵n个结点的树，每个结点有一个正整数权值。要求选出一个结点的集合，满足：</div>
+<div>1.这个集合包含1号结点</div>
+<div>2.这个集合在树上是一个连通块。</div>
+<div>即，设这个集合为S，则树上存在|S|-1条边，这些边连接的结点都属于S。</div>
+<div>记一个集合的权值为该集合内所有结点的权值和。</div>
+<div>求权值第k小的集合的权值。</div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行两个整数n,k。</div>
+<div>接下来n-1行，每行两个整数u,v，表示结点u和结点v之间有一条边。</div>
+<div>接下来一行n个整数，表示每个结点的权值。</div>
+<div>保证存在权值第k小的集合</div>
+<div>对于60%的数据，n&lt;=300000,k&lt;=600000</div>
+<div>对于另外40%数据，n&lt;=100000,10^6&lt;=k&lt;=10^18,保证答案不超过500</div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一个整数，表示答案</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 7<br />
+1 2<br />
+2 3<br />
+2 4<br />
+4 5<br />
+1 2 3 4 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>15<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5111'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5111'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5111'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

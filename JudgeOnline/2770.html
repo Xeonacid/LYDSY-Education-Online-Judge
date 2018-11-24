@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2770. -- YY的Treap</title><center><h2>2770: YY的Treap</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>492&nbsp;&nbsp;<span class=green>Solved: </span>113<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2770'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2770'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2770'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">志向远大的</span><span lang="EN-US"><font face="Times New Roman">YY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小朋友在学完快速排序之后决定学习平衡树，左思右想再加上</span><span lang="EN-US"><font face="Times New Roman">SY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的教唆，</span><span lang="EN-US"><font face="Times New Roman">YY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">决定学习</span><span lang="EN-US"><font face="Times New Roman">Treap</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。友爱教教父</span><span lang="EN-US"><font face="Times New Roman">SY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如砍瓜切菜般教会了</span><span lang="EN-US"><font face="Times New Roman">YY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小朋友</span><span lang="EN-US"><font face="Times New Roman">Treap</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（<b style="mso-bidi-font-weight: normal">一种平衡树，通过对每个节点随机分配一个</b></span><span class="word"><b style="mso-bidi-font-weight: normal"><span lang="EN-US"><font face="Times New Roman">priority</font></span></b></span><span class="word"><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，同时保证这棵平衡树关于</span><span lang="EN-US"><font face="Times New Roman">priority</font></span></b></span><span class="word"><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">是一个小根堆以保证效率</span></b></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。这时候不怎么友爱的</span><span lang="EN-US"><font face="Times New Roman">510</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">跑了出来，他问了</span><span lang="EN-US"><font face="Times New Roman">YY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">小朋友一个极不和谐的问题：<b style="mso-bidi-font-weight: normal">怎么求</b></span><b style="mso-bidi-font-weight: normal"><span lang="EN-US"><font face="Times New Roman">Treap</font></span></b><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中两个点之间的路径长度。</span></b><span lang="EN-US"><font face="Times New Roman">YY</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">秒了之后决定把这个问题交给你来做，但只要求出树中两点的</span><span lang="EN-US"><font face="Times New Roman">LCA</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行两个整数</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">m</font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第二行</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数表示每个元素的</span><span lang="EN-US"><font face="Times New Roman">key</font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第三行</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数表示每个元素的</span><span class="word"><span lang="EN-US"><font face="Times New Roman">priority<o:p></o:p></font></span></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下</span><span lang="EN-US"><font face="Times New Roman">m</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行一条命令</span><span lang="EN-US"><o:p></o:p></span></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span class="word"><span lang="EN-US"><font face="Times New Roman">I A B</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，插入一个元素，</span></span><span lang="EN-US"><font face="Times New Roman">key</font></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为</span><span lang="EN-US"><font face="Times New Roman">A, priority</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为</span><span lang="EN-US"><font face="Times New Roman">B<o:p></o:p></font></span></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span class="word"><span lang="EN-US"><font face="Times New Roman">D A</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，删除一个元素，</span></span><span lang="EN-US"><font face="Times New Roman">key</font></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为</span><span lang="EN-US"><font face="Times New Roman">A<o:p></o:p></font></span></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span class="word"><span lang="EN-US"><font face="Times New Roman">Q A B</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，询问</span><span lang="EN-US"><font face="Times New Roman">key</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">分别为</span><span lang="EN-US"><font face="Times New Roman">A</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">B</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</span><span lang="EN-US"><font face="Times New Roman">LCA</font></span></span><span class="word"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</span><span lang="EN-US"><font face="Times New Roman">key</font></span></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><b style="mso-bidi-font-weight: normal"><span lang="EN-US"><o:p></o:p></span></b></font></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于每个</span><span lang="EN-US"><font face="Times New Roman">Q</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出一个整数。</span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><b style="mso-bidi-font-weight: normal"><span lang="EN-US"><o:p></o:p></span></b></font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2<br />
+<br />
+1 2<br />
+<br />
+4 5<br />
+<br />
+Q 1 2<br />
+<br />
+I 3 3<br />
+<br />
+ <br />
+<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+数据保证n&lt;=10^5,m&lt;=3*10^5</p><br />
+<p>其余整数均不超过long的范围</p><br />
+<p>数据保证任意时刻树中key和priority均不相同<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2770'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2770'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2770'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

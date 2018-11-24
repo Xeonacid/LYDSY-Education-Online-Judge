@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4330. -- JSOI2012 爱之项链</title><center><h2>4330: JSOI2012 爱之项链</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>77&nbsp;&nbsp;<span class=green>Solved: </span>41<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4330'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4330'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4330'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在进香河，流传着这样一段美丽的故事。zyg与kzn是两个生活在进香河的孩子，一天，他们两人闹矛盾了，于是zyg送给了kzn一条精美的爱之项链。从此他们幸福生活在一起。&nbsp;</div>
+<div>这则故事的真实性到今天已经没有意义了，然而我们关注的是那一条精美的爱之项链。这是一条由N个精致的戒指与一块特殊纪念品相连而成的环形，如下图中的爱心符号正是一种特殊纪念品。(据说是2012年情人节时zyg特意托人订制的)上面的每一枚戒指又是由M个带磁性的特殊彩色球状物组成的环形。也许你会认为，这所谓的戒指，更像是一条条小项链。&nbsp;</div>
+<div>下图给出了一种可行的方案，其中左边描述的是单一的一枚戒指，右图描述的是项链。&nbsp;</div>
+<div>&nbsp;</div>
+<div><img src="upload/201511/3454.jpg" width="425" height="324" alt="" /></div>
+<div></div>
+<div></div>
+<div>这里，所有带磁性的特殊彩色球状物的颜色只有R种，这里我们用1到R来表示。如果一枚戒指可以通过顺时针或逆时针的旋转后与另外一枚戒指相同，则认为这是两枚相同的戒指。&nbsp;</div>
+<div>对于一条爱之项链，要求满足任何相邻两枚戒指必须是不相同的。同时，特殊纪念品左右两枚戒指也必须是不同的。&nbsp;</div>
+<div>现在给定N，M和R，问究竟有多少种不同的爱之项链。&nbsp;</div>
+<div>注意：&nbsp;</div>
+<div>1、特殊纪念品的插入位置不同，也许会得到不同的爱之项链。&nbsp;</div>
+<div>2、这里我们只考虑旋转后是否相同，不考虑翻转操作，这一点不论是对于每一枚戒指，还是对于整条项链，都是这样的。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>一行，三个正整数，分别是N，M和R。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一行，表示有多少种不同的爱之项链。你只需要将答案模3214567。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 5 4 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1398595 </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，N&lt;=10^15，M&lt;=10^9，R&lt;=10^6。&nbsp;</p><br />
+<p>应上传者要求，此题不公开，如有异议，请提出.</p><br />
+<p></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4330'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4330'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4330'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

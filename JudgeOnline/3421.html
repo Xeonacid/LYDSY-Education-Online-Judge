@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3421. -- Poi2013 Walk</title><center><h2>3421: Poi2013 Walk</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>211&nbsp;&nbsp;<span class=green>Solved: </span>37<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3421'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3421'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3421'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">The names of towns in Byteotia are unique sequences of exactly N&nbsp; bits. There are 2^N &ndash; k towns in Byteotia, and thus, only K sequences of N&nbsp; bits do not correspond to any town.<br />
+Some pairs of towns are connected with roads. Specifically, two towns are directly linked by a road if and only if their names differ in a single bit. The roads do not cross outside of towns.<br />
+Byteasar intends to take a stroll - he intends to walk from the town x&nbsp; to the town y , taking the existing roads. Your task is to write a program that will determine if such a walk is possible.<br />
+</span></p>
+<p><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">有</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">2^N-k</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">个点，每个点有一个独一无二的、长度为</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">n</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">的</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">01</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">串，但是有</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">k</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">个</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">01</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">串没有出现过。每两个点之间有连边当且仅当两个</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">01</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">串之间有且仅有一个位置是不同的。现在询问</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">x</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">和</span><span lang="EN-US" style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">y</span><span style="font-size: 14px; line-height: 20.909090042114258px; font-family: 宋体;">两个字符串能不能互相到达</span></p></div><h2>Input</h2><div class=content><p><font size="4">In the first line of the standard input, there are two integers, N&nbsp; and K (1&lt;=N&lt;=60,0&lt;=K&lt;=1000000,k&lt;=2^N-1, N*k&lt;=5000000)&nbsp; separated by a single space. These are the length of town names in bits and the the number of N -bit sequences that do not correspond to any town, respectively. In the second line, there are two strings, separated by a single space, each consisting of&nbsp;&nbsp; characters 0 and/or 1. These are the names of the towns x and y. In the K lines that follow, all the sequences of N bits that do not correspond to any town are given, one sequence per line. Each such sequence is a string of&nbsp;&nbsp; characters 0 and/or1. You may assume that x&nbsp; and&nbsp; y&nbsp; are not among those K sequences.<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">Your program should print to the standard output the word TAK (Polish for yes) if walking from the town x to the town y&nbsp; is possible, and the word NIE (Polish for no) otherwise.<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 6<br />
+0000 1011<br />
+0110<br />
+0111<br />
+0011<br />
+1101<br />
+1010<br />
+1001<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2HJWJBSR%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>鸣谢HJWJBSR提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3421'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3421'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3421'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

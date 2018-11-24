@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2430. -- [Poi2003]Chocolate </title><center><h2>2430: [Poi2003]Chocolate </h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>250&nbsp;&nbsp;<span class=green>Solved: </span>201<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2430'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2430'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2430'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="text-indent: 24pt"><span class="Apple-style-span" style="font-size: medium"><br />
+</span><br clear="all" style="mso-ignore: vglayout" />
+<span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">有一块</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n*m</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的矩形巧克力，准备将它切成</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n*m</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">块。巧克力上共有</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n-1</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">条横线和</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">m-1</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">条竖线，你每次可以沿着其中的一条横线或竖线将巧克力切开，无论切割的长短，沿着每条横线切一次的代价依次为</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>2</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，&hellip;，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>n-1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，而沿竖线切割的代价依次为</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>2</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，&hellip;，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>m-1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。例如，对于下图</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">6*4</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的巧克力，</span></p>
+<p class="MsoNormal" style="text-indent: 24pt"><img alt="" src="upload/201108/11(2).jpg" /></p>
+<p class="MsoNormal" style="text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">我们先沿着三条横线切割，需要</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">3</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">刀，得到</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">4</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">条巧克力，然后再将这</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">4</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">条巧克力沿竖线切割，每条都需要</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">5</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">刀，则最终所花费的代价为</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>1</sub>+y<sub>2</sub>+y<sub>3</sub>+4*(x<sub>1</sub>+x<sub>2</sub>+x<sub>3</sub>+x<sub>4</sub>+x<sub>5</sub>)</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">当然，上述简单切法不见得是最优切法，那么怎样切割该块巧克力，花费的代价最少呢？</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行为两个整数</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">m</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n-1</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行一个整数，分别代表</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>2</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，&hellip;，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">x<sub>n-1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">m-1</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行一个整数，分别代表</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>2</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，&hellip;，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">y<sub>m-1</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">输出一整数，为切割巧克力的最小代价。</span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 4<br />
+2<br />
+1<br />
+3<br />
+1<br />
+4<br />
+4<br />
+1<br />
+2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>42</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin-left: 21pt; mso-para-margin-left: 2.0gd; tab-stops: 108.0pt"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">30%</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n&lt;=100,m&lt;=100<o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin-left: 21pt; mso-para-margin-left: 2.0gd"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">100%</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">n&lt;=10000</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt">m&lt;=10000<o:p></o:p></span></p><br />
+<p class="MsoNormal" align="center" style="text-align: center"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 18pt; color: red; mso-bidi-font-size: 10.0pt"><o:p>&nbsp;</o:p></span></b></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day1'>Day1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2430'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2430'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2430'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

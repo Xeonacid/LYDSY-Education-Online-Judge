@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3016. -- [Usaco2012 Nov]Clumsy Cows</title><center><h2>3016: [Usaco2012 Nov]Clumsy Cows</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>285&nbsp;&nbsp;<span class=green>Solved: </span>212<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3016'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3016'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3016'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">Bessie the cow is trying to type a balanced string of parentheses into her new laptop, but she is sufficiently clumsy (due to her large hooves) that she keeps mis-typing characters. Please help her by computing the minimum number of characters in the string that one must reverse (e.g., changing a left parenthesis to a right parenthesis, or vice versa) so that the string would become balanced. There are several ways to define what it means for a string of parentheses to be &quot;balanced&quot;. Perhaps the simplest definition is that there must be the same total number of ('s and )'s, and for any prefix of the string, there must be at least as many ('s as )'s. For example, the following strings are all balanced: </span></div>
+<div><span style="font-size: medium">()</span></div>
+<div><span style="font-size: medium">(())</span></div>
+<div><span style="font-size: medium">()(()()) </span></div>
+<div><span style="font-size: medium">while these are not: </span></div>
+<div><span style="font-size: medium">)(</span></div>
+<div><span style="font-size: medium">())(</span></div>
+<div><span style="font-size: medium">((())))</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">问题描述</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">给定长度为<i>n</i>的一个括号序列，每次修改可以修改一个位置的括号，若这个括号为&rsquo;(&lsquo;，则修改为&rsquo;)&rsquo;，若这个括号为&rsquo;)&rsquo;，则修改为&rsquo;(&lsquo;，问最少修改多少个使得原括号序列合法。</span></div>
+<div style="margin: 0cm 0cm 0pt 17.95pt"><span style="font-size: medium">其中：</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">①<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>()是合法的；</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">②<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>若<i>A</i>是合法的，则(<i>A</i>)是合法的；</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">③<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>若<i>A</i>，<i>B</i>都是合法的，则<i>AB</i>是合法的。</span></div>
+<div style="margin: 0cm 0cm 0pt 18pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;一个长度为<i>n</i>个括号序列。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">最少的修改次数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>  ())(</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 2<br />
+ 样例说明<br />
+       修改为()()，其中红色部分表示修改的括号。<br />
+ <br />
+数据范围<br />
+       100%的数据满足：1 <= n <= 100,000。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3016'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3016'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3016'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

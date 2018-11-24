@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2773. -- ispiti</title><center><h2>2773: ispiti</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>33&nbsp;&nbsp;<span class=green>Solved: </span>18<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2773'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2773'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2773'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21.75pt"><span style="font-size: medium">期末考试快到了，每个人都想用最少的努力通过考试，这当然不容易。Alice认识到最好去请教一个成绩比他好的，每个人都想这样做。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">我们规定一个学生成绩的好坏用两个整数A和B来表示，A表示对功课的理解力，B表示知识面。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">作为班长，Alice规定去请教的这个学生的理解力不得低于自己的理解力，同样知识面也不得低于自己的知识面，在这个基础上选择一个知识面（B值）跟自己差距最小的，如果还有多种选择，则在此基础上选择一个理解力（A值）跟自己差距最小的。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">该学校不断有学生转进来，这给每个人的选择带来困难，现在请你来帮忙。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">输入的第一行包含一个整数N（1&lt;=N&lt;=200000），表示询问和转进学生的总数，接下来N行，格式为以下两种之一：</span></div>
+<div style="text-justify: inter-ideograph; margin: 3pt 0cm 3pt 36pt; text-indent: -18pt"><span style="font-size: medium"><span style="color: black">&middot;</span>&ldquo;D A B&rdquo;，表示新转进一名学生，理解力为A，知识面为B；</span></div>
+<div style="text-indent: 18pt"><span style="font-size: medium">&middot;<span style="color: windowtext">&ldquo;</span><span style="color: windowtext">P i</span><span style="color: windowtext">&rdquo;，要求输出第</span><span style="color: windowtext">i</span><span style="color: windowtext">个转进的学生当前应该去请教谁（不能在后转进的学生中寻找）。</span></span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium"><span style="color: windowtext">数据保证：</span><span style="color: windowtext">1&lt;=A,B&lt;=2*10^9</span><span style="color: windowtext">，不会存在两个学生的</span><span style="color: windowtext">A</span><span style="color: windowtext">和</span><span style="color: windowtext">B</span><span style="color: windowtext">都相等。</span></span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">对于每个&ldquo;P i&rdquo;询问，输出应该请教的学生的编号，学生的编号按照转进的顺序从1开始编号，如果无人可以请教，则输出&ldquo;NE&rdquo;。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 <br />
+D 5 2 <br />
+D 5 3 <br />
+P 1 <br />
+D 7 1 <br />
+D 8 7 <br />
+P 3 <br />
+P 2 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+4<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2773'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2773'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2773'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

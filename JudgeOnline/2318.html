@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2318. -- Spoj4060  game with probability Problem</title><center><h2>2318: Spoj4060  game with probability Problem</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>570&nbsp;&nbsp;<span class=green>Solved: </span>283<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2318'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2318'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2318'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">Alice<font face="宋体">和</font><font face="Calibri">Bob</font><font face="宋体">在玩一个游戏。有</font><font face="Calibri">n</font><font face="宋体">个石子在这里，</font><font face="Calibri">Alice</font><font face="宋体">和</font><font face="Calibri">Bob</font><font face="宋体">轮流投掷硬币，如果正面朝上，则从</font><font face="Calibri">n</font><font face="宋体">个石子中取出一个石子，否则不做任何事。取到最后一颗石子的人胜利。</font><font face="Calibri">Alice</font><font face="宋体">在投掷硬币时有</font><font face="Calibri">p</font><font face="宋体">的概率投掷出他想投的一面，同样，</font><font face="Calibri">Bob</font><font face="宋体">有</font><font face="Calibri">q</font><font face="宋体">的概率投掷出他相投的一面。</font></span><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">现在<font face="Calibri">Alice</font><font face="宋体">先手投掷硬币，假设他们都想赢得游戏，问你</font><font face="Calibri">Alice</font><font face="宋体">胜利的概率为多少。</font></span><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">第一行一个正整数<font face="Calibri">t</font><font face="宋体">，表示数据组数。</font></span><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每组数据，一行三个数<font face="Calibri">n</font><font face="宋体">，</font><font face="Calibri">p</font><font face="宋体">，</font><font face="Calibri">q</font><font face="宋体">。</font></span><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">对于每组数据输出一行一个实数，表示<font face="Calibri">Alice</font><font face="宋体">胜利的概率，保留</font><font face="Calibri">6</font><font face="宋体">位小数。</font></span><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 'Calibri'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+<br />
+1 0.5 0.5<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.666667<br />
+<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据范围：</p><br />
+<p>1&lt;=t&lt;=50</p><br />
+<p>0.5&lt;=p,q&lt;=0.99999999</p><br />
+<p>对于100%的数据 1&lt;=n&lt;=99999999<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2318'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2318'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2318'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

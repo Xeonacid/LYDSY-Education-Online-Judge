@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5171. -- [Jsoi2013]黑白棋</title><center><h2>5171: [Jsoi2013]黑白棋</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>75&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5171'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5171'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5171'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小Z最近在玩一个叫做黑白棋的单机小游戏。</div>
+<div>这个游戏的规则如下：</div>
+<div>（1）棋盘为一个n*m的矩阵，每个格子可能是黑色或白色；</div>
+<div>（2）游戏目标是将所有格子变为黑色；</div>
+<div>（3）游戏参与者的每次操作是：选出一个白色格子，将它以及它所在行的格子与所</div>
+<div>在列的格子全部染成黑色；</div>
+<div>（4）当所有的格子都变为黑色时，游戏结束。</div>
+<div>完成这个游戏有许多种方案，每种方案可以表示成若干格子的一个序列。若两种方案长度不同或者存在i使得两种</div>
+<div>方案中的第i个格子不同，则认为这两种方案不同。由于完成这个游戏的难度系数为0，聪明的小Z自然不满足于此</div>
+<div>，他还想知道一共有多少种方案可以完成这个游戏。现在给你这个棋盘的初始状态，请你算一下不同方案的个数。</div>
+<div>由于方案可能很多，所以只需要求出答案对1000000007取模后的余数。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>每个测试点包含多组测试数据。</div>
+<div>第一行，包含一个整数，T，表示数据组数。</div>
+<div>接下来依次给出T组数据。</div>
+<div>每组数据第一行，包含两个整数，n、m，表示棋盘的大小。</div>
+<div>接下来n行，每行一个长度为m的字符串。</div>
+<div>其中第i行、第j个字符描述棋盘的第i行第j列的格子。&ldquo;B&rdquo;表示为黑色格子，&ldquo;.&rdquo;表示为白色格子。</div>
+<div>&nbsp;1&le;n,m,T&le;20，每个棋盘中的黑色格子不超过 8 个</div>
+<div></div>
+<div>
+<div></div>
+</div>
+<div>
+<div></div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一共包含T行，第i行包含一个整数，表示第i组数据的答案。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+2 3<br />
+. . .<br />
+B B .<br />
+4 4<br />
+. . . .<br />
+. . . .<br />
+. . . .<br />
+. . . .</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+576</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5171'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5171'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5171'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

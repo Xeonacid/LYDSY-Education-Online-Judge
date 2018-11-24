@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3831. -- [Poi2014]Little Bird</title><center><h2>3831: [Poi2014]Little Bird</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>565&nbsp;&nbsp;<span class=green>Solved: </span>363<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3831'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3831'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3831'>Discuss</a>]</center><h2>Description</h2><div class=content><div>In the Byteotian Line Forest there are &nbsp; trees in a row. On top of the first one, there is a little bird who would like to fly over to the top of the last tree. Being in fact very little, the bird might lack the strength to fly there without any stop. If the bird is sitting on top of the tree no. &nbsp;, then in a single flight leg it can fly to any of the trees no.i+1,i+2&hellip;I+K, and then has to rest afterward.</div>
+<div>Moreover, flying up is far harder to flying down. A flight leg is tiresome if it ends in a tree at least as high as the one where is started. Otherwise the flight leg is not tiresome.</div>
+<div>The goal is to select the trees on which the little bird will land so that the overall flight is least tiresome, i.e., it has the minimum number of tiresome legs. We note that birds are social creatures, and our bird has a few bird-friends who would also like to get from the first tree to the last one. The stamina of all the birds varies, so the bird's friends may have different values of the parameter &nbsp;. Help all the birds, little and big!</div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">有一排n棵树，第i棵树的高度是Di。</span></div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">MHY要从第一棵树到第n棵树去找他的妹子玩。</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">如果MHY在第i棵树，那么他可以跳到第i+1,i+2,...,i+k棵树。</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">如果MHY跳到一棵不矮于当前树的树，那么他的劳累值会+1，否则不会。</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">为了有体力和妹子玩，MHY要最小化劳累值。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>There is a single integer N(2&lt;=N&lt;=1 000 000) in the first line of the standard input: the number of trees in the Byteotian Line Forest. The second line of input holds &nbsp; integers D1,D2&hellip;Dn(1&lt;=Di&lt;=10^9) separated by single spaces: Di is the height of the i-th tree.</div>
+<div>The third line of the input holds a single integer Q(1&lt;=Q&lt;=25): the number of birds whose flights need to be planned. The following Q lines describe these birds: in the i-th of these lines, there is an integer Ki(1&lt;=Ki&lt;=N-1) specifying the i-th bird's stamina. In other words, the maximum number of trees that the i-th bird can pass before it has to rest is Ki-1.</div>
+<p></p></div><h2>Output</h2><div class=content><div>Your program should print exactly Q lines to the standard output. In the I-th line, it should specify the minimum number of tiresome flight legs of the i-th bird.</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9<br />
+4 6 3 6 3 7 2 6 5<br />
+2<br />
+2<br />
+5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div>Explanation: The first bird may stop at the trees no. 1, 3, 5, 7, 8, 9. Its tiresome flight legs will be the one from the 3-rd tree to the 5-th one and from the 7-th to the 8-th.</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2zhonghaoxi'>鸣谢zhonghaoxi</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3831'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3831'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3831'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

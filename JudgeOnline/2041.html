@@ -1,0 +1,60 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2041. -- [2009国家集训队]陶陶玩红警</title><center><h2>2041: [2009国家集训队]陶陶玩红警</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>20&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2041'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2041'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2041'>Discuss</a>]</center><h2>Description</h2><div class=content><p>陶陶最近开始玩红警了，他玩的是自己MOD的一个红警版本。这个版本是这样的：你只能造两样东西，战车工厂和坦克。最初你有一个战车工厂，然后在接下来的每一秒内你可以有两种选择(假设当前有k个战车工厂)：1，建造一个战车工厂；2，建造k辆坦克。注意，战车工厂和坦克是不能同时建造的。 陶陶在玩了一个月红警后，认为自己红警水平很厉害了。于是他向curimit发了一份挑战书，他还嚣张地说他会对curimit发动N次攻击。第i次攻击在第time[i]秒末，陶陶会使用num[i]辆坦克来进攻，消灭掉curimit家里同等数量的坦克。如果此时curimit家里没有这么多的坦克的话，那么curimit就死翘翘了。 curimit接到战书后看到看到陶陶如此强大的攻势，被吓得不轻。他想请你帮帮忙，帮他制定一份作战计划（什么时候造战车工厂，什么时候造坦克）：curimit希望在抵挡了陶陶的N轮进攻之后，在第final秒末发动最终的总攻击，一举歼灭陶陶的老家。他希望你的作战计划能够在第final秒末造出最多数量的坦克。</p></div><h2>Input</h2><div class=content><p>第1行为两个整数N，final，含义如题目中所述。 接下来N行，第i行有两个数time[i]和num[i]，含义如题目中所述。</p></div><h2>Output</h2><div class=content><p>如果curimit无法抵挡陶陶的进攻，那么输出&ldquo;No Answer!&rdquo;；否则输出第final秒末curimit最多能拥有多少辆坦克。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 10<br />
+5 3<br />
+7 13<br />
+9 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>第1秒：造战车工厂。 第2秒：造战车工厂。 第3秒：造战车工厂。 第4秒：造坦克，当前坦克数：4。 第5秒：造坦克，当前坦克数：8。 第5秒：陶陶带了3辆坦克冲了进来，当前坦克数：5。 第6秒：造坦克，当前坦克数：9。 第7秒：造坦克，当前坦克数：13。 第7秒：陶陶带了13辆坦克冲了进来，当前坦克数：0。 第8秒：造坦克，当前坦克数：4。 第9秒：造坦克，当前坦克数：8。 第9秒：陶陶带了4辆坦克冲了进来，当前坦克数：4。 第10秒：造坦克，当前坦克数：8。 在第10秒末，curimit家里最多有8辆坦克。【数据规模和约定】 10%的数据中N&le;5，final&le;10； 30%的数据中N&le;1000，final&le;1000； 100%的数据中N&le;100000，final&le;10^ 9，0&le;num[i]&le;10^ 18； 100%的数据中1&le;time[1]</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E7%89%88%E6%9D%83%E6%89%80%E6%9C%89%E8%80%85%EF%BC%9A%20%E5%AE%8B%E6%96%87%E6%9D%B0'>版权所有者： 宋文杰</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2041'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2041'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2041'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

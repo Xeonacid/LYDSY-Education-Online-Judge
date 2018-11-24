@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2485. --  Pku3633 Copying DNA </title><center><h2>2485:  Pku3633 Copying DNA </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>6&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2485'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2485'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2485'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman"><span id="1319334815942S" style="display: none">&nbsp;</span><span id="1319334725885S" style="display: none">&nbsp;</span>
+<p><font face="Times New Roman">Evolution is a seemingly random process which works in a way which resembles certain approaches we use to get approximate solutions to hard combinatorial problems. You are now to do something completely different. <br />
+<br />
+Given a DNA string S from the alphabet {A,C,G,T}, find the minimal number of copy operations needed to create another string T. You may reverse the strings you copy, and copy both from S and the pieces of your partial T. You may put these pieces together at any time. You may only copy contiguous parts of your partial T, and all copied strings must be used in your final T. Example: From S = &ldquo;ACTG&rdquo; create T = &ldquo;GTACTATTATA&rdquo; <br />
+<br />
+Get GT......... by copying and reversing &quot;TG&quot; from S. <br />
+Get GTAC....... by copying &quot;AC&quot; from S. <br />
+Get GTAC...TA.. by copying &quot;TA&quot; from the partial T. <br />
+Get GTAC...TAAT by copying and reversing &quot;TA&quot; from the partial T. <br />
+Get GTACAATTAAT by copying &quot;AAT&quot; from the partial T. <br />
+<br />
+<br />
+<br />
+给你两个字符串S和T，要求你用尽量少的步数从S构造出T。每一步你可以做以下操作：从S或者T的片段中拷贝一个字符串，然后可以将这个字符串反向，然后你得到一个片段。片段可以随时合并，但不能拆分，并且所有的片段都要使用。从T中拷贝字符串只能从一个片段中拷贝。求你最少需要的步数。两个串的字符数&le;18。 <br />
+</font></p>
+</font></span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">The first line of input gives a single integer, 1 &le; t &le; 100, the number of test cases. Then follow, for each test case, a line with the string S of length 1 &le; m &le; 18, and a line with the string T of length 1 &le; n &le; 18. <br />
+<br />
+</font></span></p>
+<p></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">Output for each test case the number of copy operations needed to create T from S, or &quot;impossible&quot; if it cannot be done. <br />
+<br />
+</font></span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><span id="1319334726112E" style="display: none">&nbsp;</span></p>
+<p></p>
+<p><span id="1319334815310E" style="display: none">&nbsp;</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+ACGT<br />
+GTAC<br />
+A<br />
+C<br />
+ACGT<br />
+TGCA<br />
+ACGT<br />
+TCGATCGA<br />
+A<br />
+AAAAAAAAAAAAAAAAAA<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+impossible<br />
+1<br />
+4<br />
+6<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2485'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2485'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2485'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

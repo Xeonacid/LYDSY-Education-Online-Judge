@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2238. -- Mst</title><center><h2>2238: Mst</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>390&nbsp;&nbsp;<span class=green>Solved: </span>116<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2238'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2238'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2238'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 24pt" align="left"><span style="font-size: 12pt">给出一个</span><i><span style="font-size: 12pt">N</span></i><span style="font-size: 12pt">个点</span><i><span style="font-size: 12pt">M</span></i><span style="font-size: 12pt">条边的无向带权图，以及</span><i><span style="font-size: 12pt">Q</span></i><span style="font-size: 12pt">个询问，每次询问在图中删掉一条边后图的最小生成树。</span><span style="font-size: 12pt">(</span><span style="font-size: 12pt">各询问间独立，每次询问不对之后的询问产生影响，即被删掉的边在下一条询问中依然存在</span><span style="font-size: 12pt">)</span></div>
+<div style="text-indent: 21.6pt">&nbsp;</div></div><h2>Input</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: 12pt">第一行两个正整数N,M(N&lt;=50000,M&lt;=100000)表示原图的顶点数和边数。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">下面M行，每行三个整数X,Y,W描述了图的一条边(X,Y)，其边权为W（W&lt;=10000）。保证两点之间至多只有一条边。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">接着一行一个正整数Q，表示询问数。(1&lt;=Q&lt;=100000)</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">下面Q行，每行一个询问，询问中包含一个正整数T，表示把编号为T的边删掉(边从1到M按输入顺序编号)。</span></div>
+<div style="text-indent: 24pt">&nbsp;</div></div><h2>Output</h2><div class=content><div style="text-indent: 30pt"><span style="font-size: 12pt">Q</span><span style="font-size: 12pt">行，对于每个询问输出对应最小生成树的边权和的值，如果图不连通则输出</span><span style="font-size: 12pt">&ldquo;Not connected&rdquo;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+1 2 3 <br />
+1 3 5 <br />
+2 3 9 <br />
+2 4 1 <br />
+4 <br />
+1 <br />
+2 <br />
+3 <br />
+4<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>15 <br />
+13 <br />
+9 <br />
+Not connected<br />
+ <br />
+样例解释:<br />
+无<br />
+ <br />
+数据规模：<br />
+10%的数据N,M,Q<=100。<br />
+另外30%的数据，N<=1000<br />
+100%的数据如题目。</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;更新数据---2015.6.9</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2238'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2238'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2238'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3292. -- Catherine与生日宴会</title><center><h2>3292: Catherine与生日宴会</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>42&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3292'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3292'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3292'>Discuss</a>]</center><h2>Description</h2><div class=content><div>再过几天就是Catherine的生日了！Catherine决定举办一个生日宴会，并想邀请她的好朋友们参加宴会。</div>
+<div>......</div>
+<div>Catherine是个很有魅力的人，她一共有N个好朋友。而她的这些好朋友互相之间可能认识，也可能不认识，还可能</div>
+<div>有矛盾。这N个人之间是否认识是无所谓的，但是如果两个人之间存在矛盾就会产生一些问题。这里，矛盾关系是</div>
+<div>双向的。Catherine知道，如果她邀请的任意一个好朋友小X在宴会上只看到一个与小X有矛盾的人小Y，就会不太高</div>
+<div>兴，不过可以假装没看见。但是，如果小X又看到另一个与小X有矛盾的人小Z，小X就会很生气并离开宴会。</div>
+<div>......</div>
+<div>为了防止这样的情形出现，Catherine决定只邀请她的一部分好朋友参加宴会，使得对于这些人中的任意一个人，</div>
+<div>至多有一个与他（或她）有矛盾的人同时受到邀请。这样，就不会有人中途离开宴会了。</div>
+<div>......</div>
+<div>经过调查，Catherine已经掌握了在她的N个好朋友中有哪些人之间存在矛盾。在保证上述原则的前提下，她希望邀</div>
+<div>请尽量多的好朋友参加宴会。请你帮助Catherine计算出她最多邀请多少个好朋友参加这个宴会。</div>
+<div>......</div>
+<div>注意，输入文件包含多组测试数据。</div></div><h2>Input</h2><div class=content><div>
+<div>
+<div>第一行包含一个正整数T，表示有T组测试数据。接下来依次是T组测试数据。</div>
+<div>每组测试数据的第一行包含一个正整数N，表示Catherine的好朋友数目。</div>
+<div>接下来N行，每行一个长度为N的字符串。其中第i个字符串Str[i]的第j个字符Str[i][j]表示第i个人和第j个人是否有矛盾。</div>
+<div>若Str[i][j]=&lsquo;Y&rsquo;，则表示i和j有矛盾；否则的话，Str[i][j]=&lsquo;N&rsquo;，表示没有矛盾。</div>
+<div>数据保证对于任意1&le;i,j&le;N，有Str[i][j]=Str[j][i]；对于任意1&le;i&le;N，有Str[i][i]=&lsquo;N&rsquo;。</div>
+<div>设M表示N个人之间存在多少对矛盾关系。</div>
+<div>1&le;N&le;40，0&le;M&le;780，1&le;T&le;50</div>
+</div>
+<div></div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出T行，每行一个整数，依次表示每组测试数据的答案。<span style="font-size: medium"><br />
+</span></div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+3<br />
+NYY<br />
+YNY<br />
+YYN<br />
+6<br />
+NYYNNN<br />
+YNYNYN<br />
+YYNYYY<br />
+NNYNNN<br />
+NYYNNY<br />
+NNYNYN<br />
+4<br />
+NNYN<br />
+NNNY<br />
+YNNN<br />
+NYNN<br />
+7<br />
+NNNNNNN<br />
+NNNNYNY<br />
+NNNYYYY<br />
+NNYNNYY<br />
+NYYNNNN<br />
+NNYYNNN<br />
+NYYYNNN</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+4<br />
+4<br />
+5<br />
+样例说明<br />
+第1组数据：3个人两两之间都有矛盾，所以最多同时邀请两个人。<br />
+第2组数据：一个可行的最优方案是邀请编号为1、4、5、6的朋友。<br />
+第3组数据：每个人恰好和一个人有矛盾，因此可以邀请所有人。<br />
+第4组数据：最优方案是唯一的，即邀请编号为1、2、4、5、6的朋友。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3292'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3292'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3292'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

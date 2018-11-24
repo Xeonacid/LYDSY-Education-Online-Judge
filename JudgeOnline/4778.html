@@ -1,0 +1,125 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4778. -- [Usaco2017 Open]COWBASIC</title><center><h2>4778: [Usaco2017 Open]COWBASIC</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>37&nbsp;&nbsp;<span class=green>Solved: </span>21<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4778'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4778'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4778'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Bessie has invented a new programming language, but since there is no compiler yet, she needs your h</div>
+<div>elp to actually run her programs.COWBASIC is a simple, elegant language. It has two key features: ad</div>
+<div>dition and MOO loops. Bessie has devised a clever solution to overflow: all addition is done modulo&nbsp;</div>
+<div>109+7. But Bessie's real achievement is the MOO loop, which runs a block of code a fixed number of t</div>
+<div>imes. MOO loops and addition can, of course, be nested.Given a COWBASIC program, please help Bessie&nbsp;</div>
+<div>determine what number it returns.</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>You are given a COWBASIC program at most 100 lines long, with each line being at most 350 characters</div>
+<div>&nbsp;long. A COWBASIC program is a list of statements.</div>
+<div></div>
+<div>There are three types of statements:</div>
+<div></div>
+<div>&lt;variable&gt; = &lt;expression&gt;</div>
+<div></div>
+<div>&lt;literal&gt; MOO {</div>
+<div>&nbsp; &lt;list of statements&gt;</div>
+<div>}</div>
+<div></div>
+<div>RETURN &lt;variable&gt;</div>
+<div></div>
+<div>There are three types of expressions:</div>
+<div></div>
+<div>&lt;literal&gt;</div>
+<div></div>
+<div>&lt;variable&gt;</div>
+<div></div>
+<div>( &lt;expression&gt; ) + ( &lt;expression&gt; )</div>
+<div></div>
+<div>A literal is a positive integer at most 100,000.</div>
+<div></div>
+<div>A variable is a string of at most 10 lowercase English letters.</div>
+<div></div>
+<div>It is guaranteed that no variable will be used or RETURNed before it is defined. It is guaranteed th</div>
+<div>at RETURN will happen exactly once, on the last line of the program.</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>Output a single positive integer, giving the value of the RETURNed variable.</div>
+<div></div>
+<div>Scoring</div>
+<div></div>
+<div>In 20 percent of all test cases - MOO loops are not nested.</div>
+<div>In another 20 percent of all test cases - The program only has 1 variable. MOO loops can be nested.</div>
+<div>In the remaining test cases, there are no further restrictions.&nbsp;</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>x = 1<br />
+10 MOO {<br />
+  x = ( x ) + ( x )<br />
+}<br />
+RETURN x<br />
+<br />
+SAMPLE OUTPUT:<br />
+<br />
+1024<br />
+<br />
+This COWBASIC program computes 210.<br />
+SAMPLE INPUT:<br />
+<br />
+n = 1<br />
+nsq = 1<br />
+100000 MOO {<br />
+  100000 MOO {<br />
+    nsq = ( nsq ) + ( ( n ) + ( ( n ) + ( 1 ) ) )<br />
+    n = ( n ) + ( 1 )<br />
+  }<br />
+}<br />
+RETURN nsq<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4761<br />
+This COWBASIC program computes (10^5+10^5+1)^2 (modulo 10^9+7). </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum'>Platinum</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4778'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4778'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4778'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5139. -- [Usaco2017 Dec]Greedy Gift Takers</title><center><h2>5139: [Usaco2017 Dec]Greedy Gift Takers</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>40&nbsp;&nbsp;<span class=green>Solved: </span>31<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5139'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John's nemesis, Farmer Nhoj, has NN cows (1&le;N&le;10^5), conveniently numbered 1&hellip;N. They have&nbsp;</div>
+<div>unexpectedly turned up at Farmer John's farm, so the unfailingly polite Farmer John is attempting to</div>
+<div>&nbsp;give them gifts.To this end, Farmer John has brought out his infinite supply of gifts, and Nhoj's c</div>
+<div>ows have queued up in front of him, with cow 11 at the head of the queue and cow N at the tail. Farm</div>
+<div>er John was expecting that at every timestep, the cow at the head of the queue would take a gift fro</div>
+<div>m Farmer John and go to the tail of the queue. However, he has just realized that Nhoj's cows are no</div>
+<div>t that polite! After receiving her gift, each cow may not go to the tail of the queue, but rather ma</div>
+<div>y cut some number of cows at the tail, and insert herself in front of them. Specifically, cow ii wil</div>
+<div>l always cut exactly cici cows (0&le;ci&le;N-1).Farmer John knows that some cows might receive multiple&nbsp;</div>
+<div>gifts; as he has an infinite supply, this does not worry him. But he is worried that some cows might</div>
+<div>&nbsp;become unhappy if they do not get any gifts.Help Farmer John find the number of cows who never rece</div>
+<div>ive any gifts, no matter how many gifts are handed out.</div>
+<div>
+<div>有 N (1 &lt;= N &lt;= 10^5)头牛按顺序排成一列，编号从1到N，1 号牛在队头，N 号牛在队尾。每次位于队头的牛 i&nbsp;</div>
+<div>拿到一个礼物，然后插入到从队尾数 c_i 头牛之前的位置。举个栗子： 初始队列 1 2 3 4 5， c_1 = 2，c_2 =&nbsp;</div>
+<div>3，则第一次操作后的序列为 2 3 4 1 5，第二次操作后的序列为 3 2 4 1 5 。重复无限次操作，求最后有几头牛</div>
+<div>拿不到礼物。</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line contains a single integer, N.</div>
+<div>The second line contains N space-separated integers c1,c2,&hellip;,cN</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Please output the number of cows who cannot receive any gifts.</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1 2 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum'>Platinum</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5139'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

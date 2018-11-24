@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4048. -- [Cerc2014] Outer space invaders</title><center><h2>4048: [Cerc2014] Outer space invaders</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>147&nbsp;&nbsp;<span class=green>Solved: </span>85<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4048'>Discuss</a>]</center><h2>Description</h2><div class=content><div>The aliens from outer space have (finally!) invaded Earth. Defend yourself, or be disintegrated!&nbsp;</div>
+<div>Or assimilated. Or eaten. We are not yet sure.&nbsp;</div>
+<div>The aliens follow a known attack pattern. There are 'n attackers, the i-th one appears at time&nbsp;</div>
+<div>ai, at distance di from you. He must be destroyed no later than at time bi, or else he will fire his&nbsp;</div>
+<div>weapon, which will definitely end the fight.&nbsp;</div>
+<div>Your weapon is an area-blaster, which can be set to any given power. If fired with power R,&nbsp;</div>
+<div>it momentarily destroys all aliens at distance R or smaller. It also consumes R fuel cells.&nbsp;</div>
+<div>Determine the minimal cost (measured in fuel cells) of destroying all the aliens, without being&nbsp;</div>
+<div>killed.&nbsp;</div>
+<div>有N个外星人，第i个外星人会在ai时间出现，离你距离di，并且必须在bi之前被消灭。你有一把很NB的武器，</div>
+<div>攻击范围是个半径为R的圆，R可以任意调整，不过你以R的范围每攻击一次就要消耗R单位能量。外星人被</div>
+<div>攻击一次就会死掉。求需要消灭所有外星人的最小消耗能量。&nbsp;</div>
+<div>N&lt;=300, ai,bi,di&lt;=10000&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains the number of test cases T. The descriptions of the test cases&nbsp;</div>
+<div>
+<div>follow:&nbsp;</div>
+<div>Each test case starts with a line containing the number of aliens n (1 &lt;= n &lt;= 300). Of the next&nbsp;</div>
+<div>n lines, the i-th one contains three integers ai, bi, di, (1 &lt; ai &lt; bi&le; 10 000; I &lt; di&le; 10 000).&nbsp;</div>
+<div>The i-th alien appears at time ai, is idle until bi, and his distance from vou is di.&nbsp;</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each test case, output one line containing the mimmum number of cells needed to destrov&nbsp;</div>
+<div>all the aliens.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+3<br />
+1 4 4<br />
+4 7 5<br />
+3 4 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4048'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3135. -- [Baltic2013]pipes</title><center><h2>3135: [Baltic2013]pipes</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>166&nbsp;&nbsp;<span class=green>Solved: </span>65<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3135'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3135'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3135'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">有<code>n</code>个水库，<code>m</code>条管道。Jester会在某些管道中间凿开一个洞，让水流出来或者用水泵把水打进去。保证这个流速是偶数。对于一条管道<code>(u, v)</code>，如果在中间凿开了一个洞让水流出来，流速是<code>2d m^3/s</code>，那么水库<code>u</code>和<code>v</code>失水速度为<code>d m^3/s</code>。同理，如果往一条管道<code>(u, v)</code>注水，流速为<code>2p m^3/s</code>，那么<code>u</code>和<code>v</code>得到水的速度是<code>p m^3/s</code>。</span></p>
+<p><span style="font-size: medium">给定图的构造以及每个水库的水流的变化，问每条边的方案是否唯一。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第一行：水库数量<code>n</code>，管道数量<code>m</code> （<code>1 &lt;= n &lt;= 100 000, 1 &lt;= m &lt;= 500 000</code>）下面<code>n</code>行：第<code>i</code>个水库的变化速度<code>ci</code> （<code>-10^9 &lt;= ci &lt;= 10^9</code>）接下来<code>m</code>行：<code>(u, v)</code>，保证没有重边</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">如果方案唯一，输出方案，每行一个数<code>xi</code>（<code>-10^9 &lt;= xi &lt;= 10^9</code>）表示第<code>i</code>条管道的流量变化。放水为负数，灌水为正数。否则输出<code>0</code>。</span></p>
+<h2><span style="font-size: medium">输入样例1</span></h2>
+<pre><span style="font-size: medium"><code>4 3
+-1
+1
+-3
+1
+1 2
+1 3
+1 4
+</code></span></pre>
+<h2><span style="font-size: medium">输入样例2</span></h2>
+<pre><span style="font-size: medium"><code>4 5
+1
+2
+1
+2
+1 2
+2 3
+3 4
+4 1
+1 3
+</code></span></pre>
+<h2></h2></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata></span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>输出样例1<br />
+2<br />
+-6<br />
+2<br />
+<br />
+输出样例2<br />
+0<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=abcdabcd987%E6%8F%90%E4%BE%9B'>abcdabcd987提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3135'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3135'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3135'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

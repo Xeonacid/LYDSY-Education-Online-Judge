@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5325. -- [Jsoi2017]码农</title><center><h2>5325: [Jsoi2017]码农</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5325'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5325'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5325'>Discuss</a>]</center><h2>Description</h2><div class=content><div>JSOI 王国的码农JYY 最近沉迷氪金手游无法自拔，于是他想尽可能快地完成上司交付的编码工作才能有更多的时间肝手游。</div>
+<div>JYY 在用光速读完代码要求之后，以常人难以想象的速度先在脑海中构造出了对应的代码，接下来的问题就只有录入了。</div>
+<div>JYY 想输入的程序可以表示为由数字0到9组成的一个字符串。他有两种输入方式：</div>
+<div>第一种输入方式是在字符串末尾直接输入某个字符。但由于沉迷氪金，JYY只能买得起很糟糕的键盘，用这个键盘输入数字i需要ci时间。</div>
+<div>第二种输入方式是复制粘贴，JYY 可以先选中已经输入内容的某个子串再将其粘贴到目前串的末尾。但由于沉迷氪金，JYY 的鼠标也很糟糕，</div>
+<div>每多选中一个字符他就需要花tc时间，并且需要额外tp时间来完成粘贴操作。</div>
+<div>所以复制一段长度为 l 的子串并粘贴到末尾所需要的时间是tc * l + tp。粘贴完成后被选中的子串将不再被选中</div>
+<div>（下次复制粘贴操作即便粘贴同一子串，仍需重新选中）。</div>
+<div>现在JYY 想知道只使用这两种操作最短要花多长时间才能输入他想输入的程序。</div>
+<div></div></div><h2>Input</h2><div class=content><div>输入第一行一个字符串S表示JYY 想要输入的程序。</div>
+<div>输入第二行十个正整数分别表示c0到c9，表示直接录入一个字符需要的时间。</div>
+<div>输入第三行两个正整数tc和tp表示复制粘贴需要的时间。</div>
+<div>|S| &le; 10^5, 1 &le; ci &le; 10^3, 1 &le; tc, tp &le; 10^4。</div>
+<div></div></div><h2>Output</h2><div class=content><div>输入一个正整数，表示所需要的最少总时间。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>0123<br />
+1 2 3 4 5 6 7 8 9 10<br />
+1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5325'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5325'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5325'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

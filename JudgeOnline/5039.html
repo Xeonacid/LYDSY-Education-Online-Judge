@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5039. -- [Jsoi2014]序列维护</title><center><h2>5039: [Jsoi2014]序列维护</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>327&nbsp;&nbsp;<span class=green>Solved: </span>197<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5039'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5039'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5039'>Discuss</a>]</center><h2>Description</h2><div class=content><div>JYY 有一个维护数列的任务。 他希望你能够来帮助他完成。</div>
+<div>JYY 现在有一个长度为 N 的序列 a1,a2,&hellip;,aN，有如下三种操作：</div>
+<div>1、 把数列中的一段数全部乘以一个值；</div>
+<div>2、 把数列中的一段数全部加上一个值；</div>
+<div>3、 询问序列中的一段数的和。</div>
+<div>由于答案可能很大，对于每个询问，你只需要告诉 JYY 这个询问的答案对 P</div>
+<div>取模的结果即可。</div></div><h2>Input</h2><div class=content><div>第一行包含两个正整数， N 和 P；</div>
+<div>第二行包含 N 个非负整数，从左到右依次为 a1,a2,&hellip;,aN。</div>
+<div>第三行有一个整数 M，表示操作总数。</div>
+<div>接下来 M 行，每行满足如下三种形式之一：</div>
+<div>1、&ldquo; 1 t g c&rdquo;（不含引号）。表示把所有满足 t &le; i &le; g 的 ai 全部乘以 c；</div>
+<div>2、&ldquo; 2 t g c&rdquo;（不含引号）。表示把所有满足 t &le; i &le; g 的 ai 全部加上 c；</div>
+<div>3、&ldquo; 3 t g&rdquo;（不含引号）。表示询问满足 t &le; i &le; g 的 ai 的和对 P 取模的值。</div>
+<div>1 &le; N,M &le; 10^5， 1 &le; P, c, ai &le; 2*10^9， 1 &le; t &le; g &le; N</div></div><h2>Output</h2><div class=content><div>对于每个以 3 开头的操作，依次输出一行，包含对应的结果。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 43<br />
+1 2 3 4 5 6 7<br />
+5<br />
+1 2 5 5<br />
+3 2 4<br />
+2 3 7 9<br />
+3 1 3<br />
+3 4 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+35<br />
+8<br />
+【样例说明】<br />
+初始时数列为(1,2,3,4,5,6,7)。<br />
+经过第 1 次操作后，数列为(1,10,15,20,25,6,7)。<br />
+对第 2 次操作，和为 10+15+20=45，模 43 的结果是 2。<br />
+经过第 3 次操作后，数列为(1,10,24,29,34,15,16}<br />
+对第 4 次操作，和为 1+10+24=35，模 43 的结果是 35。<br />
+对第 5 次操作，和为 29+34+15+16=94,模 43 的结果是 8。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Round1'>Round1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5039'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5039'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5039'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

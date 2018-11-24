@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5355. -- Query on a tree</title><center><h2>5355: Query on a tree</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>23&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5355'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5355'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5355'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>给出一棵n 个节点的树，标号为1~n，每个点的父亲标号一定小于他的标号，当然1</div>
+<div>号节点就是这棵树的根</div>
+<div>现在你需要执行m 次操作，操作有6 种，如下：</div>
+<div>&nbsp;</div>
+<div>注：①询问中[l,r]范围不一定全部有节点存在（详见样例）</div>
+<div>②l,r&isin;Z 且l,r&isin;[0,n]</div>
+<div>③val&isin;Z 且val&isin;[1,2*10^5]</div>
+</div>
+<div><img src="upload/201805/1111.png" width="761" height="374" alt="" /></div>
+<div></div>
+<p></p>
+<p></p></div><h2>Input</h2><div class=content><div>第1 行，一个整数T，为测试点编号</div>
+<div>第2 行，一个正整数n</div>
+<div>接下来的n-1 行，每行一个正整数fai 为i 号点在树上的父亲</div>
+<div>第n+2 行，一个正整数m</div>
+<div>接下来m 行，每行表示一个操作，格式如题中表格所示</div>
+<div>N,M&lt;=10^5</div>
+<div></div></div><h2>Output</h2><div class=content><div>对于每个1、4 操作输出一行，为该询问的答案</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>0<br />
+5<br />
+1<br />
+1<br />
+2<br />
+2<br />
+6<br />
+2 1 0 1 1<br />
+1 1 0 0<br />
+3 2 0 2 1<br />
+5 5 1<br />
+6 3 2<br />
+4 5<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+6</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5355'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5355'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5355'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

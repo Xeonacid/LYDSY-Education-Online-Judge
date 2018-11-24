@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3471. -- Dragon Scroll </title><center><h2>3471: Dragon Scroll </h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>18&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3471'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3471'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3471'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Minecraft中有一种名叫&ldquo;附魔&rdquo;的操作，当走近附魔台时，周围书架上的书中会有一<br />
+些奇形怪状的符号飞向附魔台，打开附魔台后，附魔台上也会出现一些奇形怪状的文字，描<br />
+述了这次附魔的属性信息。这些奇怪的符号和文字被称作&ldquo;龙语&nbsp;(Dragon Scroll)&rdquo;。由于附魔<br />
+是需要消耗经验值的，Rainbow企图破译龙语，以便于提前知道这次附魔是对他来说否物有<br />
+所值。 <br />
+经过对Minecraft内部程序的研究，Rainbow发现一条龙语实际上是由一串仅包含数字<br />
+和逗号的字符串转化而来的，并且字符串中用逗号隔开的各个数是递增的，在此前提下，前<br />
+面的数尽可能小。由于Rainbow的研究不够深入，他只能确定字符串中的一部分字符，还<br />
+有许多字符（数字或逗号）不能够确定，用问号代替。由于Rainbow还要研究字符串具体<br />
+是如何转化为龙语的，确定每个问号代表的是什么字符的任务就交给你了。&nbsp;&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">输入包含若干行，以EOF结尾。每行一个仅由数字、逗号和问号组成的字符串。&nbsp;&nbsp;<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">确定字符串中每个问号代表什么字符，并输出确定之后的字符串。注意你最终输出的字 符串中逗号隔开的各个数应该是递增的，并且每个数都不能有前导零；在此前提下，前面的<br />
+数尽可能小。如果输入数据不合法(有相邻的两个逗号或者开头结尾是逗号)或者不存在满足要求的字符串，输出impossible。&nbsp;<br />
+&nbsp;<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>?2?5??6?,?? <br />
+10,???,12 <br />
+ <br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12,50,60,61 <br />
+impossible <br />
+ <br />
+ <br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p></p><br />
+<p>对于100% 的数据，字符串长度不超过 200，每个测试点不超过100 组测试数据。 <br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Adera%202%20%E6%9D%AF%E7%9C%81%E9%80%89%E6%A8%A1%E6%8B%9F%E8%B5%9B'>Adera 2 杯省选模拟赛</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3471'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3471'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3471'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

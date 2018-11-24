@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1165. -- [Baltic2008]Gates</title><center><h2>1165: [Baltic2008]Gates</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>74&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1165'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">厌倦了你的工作, 你从IT行业跳槽到了一家水产养殖公司.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">你的第一项任务是把两个水槽分隔开. 尝试了操作手册的内容并仔细观察之后, 你了解了水槽的工作机制.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">两个水槽由n条通道相连, 每个通道上有两个水闸. 只有两个水闸都打开时通道才开启, 其余情况下通道都是封闭的.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">这2n个水闸的状态由开关控制. 每个水闸的状态恰好由一个开关控制, 当然某个开关可能控制多个水闸或者不控制任何水闸. 一条通道上的两个水闸也有可能由同一个开关控制.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">开关一共有m个, 编号为1; 2;&hellip;&hellip;;m, 每个开关有两种状态: 开和关. 而水闸受开关控制的方式有两种:</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>开关开时水闸打开, 开关关时水闸关闭.</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>开关关时水闸打开, 开关开时水闸关闭.</span></div>
+<p><span style="font-size: medium"><img height="454" alt="" width="301" src="upload/201108/11(3).jpg" /></span></p></div><h2>Input</h2><div class=content><p>输入的第一行包含两个整数n和m.<br />
+接下来n行每行包含了一条通道的信息, 由四个整数a; S a; b; S b表示. a和b表示控制两个水闸的开关编号,而S a和S b为0或1, 表示水闸受开关控制的方式. S i = 0表示开关i关时水闸关, 以此类推.<br />
+</p></div><h2>Output</h2><div class=content><p>如果存在一种开关的状态使得所有通道都封闭, 则输出m行, 每行一个整数0或1. 第i行为0表示编号为i的开关应当关, 为1则表示开关应当开.<br />
+如果不存在这样的状态, 输出一行&ldquo;IMPOSSIBLE&rdquo;.<br />
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+1 0 2 1<br />
+1 0 2 0<br />
+1 1 2 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体"><font size="3">对所有数据<span lang="EN-US">, n &lt;= 250000;m &lt;= 500000.</span></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体"><font size="3"><span lang="EN-US"><o:p></o:p></span></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-family: 宋体"><font size="3"><span lang="EN-US">需要SJ，请不要提交！</span></font></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1165'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

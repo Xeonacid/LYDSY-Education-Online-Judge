@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4248. -- AAQQZ</title><center><h2>4248: AAQQZ</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>88&nbsp;&nbsp;<span class=green>Solved: </span>41<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4248'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4248'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4248'>Discuss</a>]</center><h2>Description</h2><div class=content><div>IOI2015将要在哈萨克斯坦举行。哈萨克斯坦的&ldquo;哈萨克&rdquo;是用字母的&ldquo;QAZAQ&rdquo;拼写的。这个&ldquo;QAZQA&rdquo;是回文&mdash;</div>
+<div>&mdash;知晓这一点的JOI君出于对回文的喜爱，准备用眼前的字符串制作一个回文。JOI君找到了一个长为N的字符串S=(</div>
+<div>S1,S2,...,SN)，每个字符可以用1...C之间的一个整数来表示。从这个字符串第i个位置到第j个位置的字符串(Si,</div>
+<div>Si+1,...,Sj)称作子串(i,j)。如果子串(i,j)翻转后和原来相等，即(Si,Si+1,...,Sj)=(Sj,Sj-1,...,Si)，则称</div>
+<div>子串(i,j)是回文的。JOI君进行如下操作来制造回文：</div>
+<div>1. &nbsp; &nbsp; &nbsp; &nbsp;首先，选择S的一个子串。不妨设选择的子串为T。</div>
+<div>2. &nbsp; &nbsp; &nbsp; &nbsp;将子串T按照升序排序，得到T&rsquo;</div>
+<div>3. &nbsp; &nbsp; &nbsp; &nbsp;在S中，用T&rsquo;替换T，得到S&rsquo;。我们可以这样描述这三项操作：JOI君选择一个子串(i,j)，将Si,Si+1,</div>
+<div>...,Sj按升序排序得到T&rsquo;i,T&rsquo;i+1,...,T&rsquo;j，最终得到S&rsquo;=(S1,S2,...,Si-1,T&rsquo;i,T&rsquo;i+1,...,T&rsquo;j,Sj+1,...,SN)</div>
+<div>4. &nbsp; &nbsp; &nbsp; &nbsp;在这之后，寻找S&rsquo;中的回文子串</div>
+<div>JOI进行如上操作后，想要得到最长的回文子串</div>
+<div>现在JOI君将字符串S交给了你，请你输出JOI君进行如上操作后能得到的最长回文子串的长度。</div></div><h2>Input</h2><div class=content><div>第一行两个空格分隔的正整数N和C，分别表示字符串的长度和字符集大小</div>
+<div>接下来N行，第i行一个正整数Si，表示字符串S中第i个位置的字符</div>
+<div>
+<div>1&lt;=N&lt;=3000</div>
+<div>1&lt;=C&lt;=3000</div>
+<div>1&lt;=Si&lt;=C</div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><p>输出一行一个正整数，表示JOI君进行操作后能得到的最长回文子串的长度。</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12 26<br />
+26<br />
+17<br />
+17<br />
+17<br />
+1<br />
+26<br />
+1<br />
+17<br />
+19<br />
+20<br />
+1<br />
+14<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+样例输入中，N=12,C=26,S=(26,17,17,17,1,26,1,17,19,20,1,14)。JOI君可以选择子串(4,8)，将其按照升序排列<br />
+，得到S’=(26,17,17,1,1,17,17,26,19,20,1,14)，这样子串(1,8)就是回文了。这个回文长度为8，是最长可能得<br />
+到的回文子串。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=JOI%202014~2015%20%E6%98%A5%E5%AD%A3training%E5%90%88%E5%AE%BF%20%E7%AB%9E%E6%8A%803%20By%20PoPoQQQ'>JOI 2014~2015 春季training合宿 竞技3 By PoPoQQQ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4248'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4248'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4248'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

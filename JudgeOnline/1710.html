@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1710. -- [Usaco2007 Open]Cheappal 廉价回文</title><center><h2>1710: [Usaco2007 Open]Cheappal 廉价回文</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>690&nbsp;&nbsp;<span class=green>Solved: </span>387<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1710'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1710'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1710'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">为了跟踪所有的牛,农夫JOHN在农场上装了一套自动系统. 他给了每一个头牛一个电子牌号 当牛走过这个系统时,牛的名字将被自动读入. 每一头牛的电子名字是一个长度为M (1 &lt;= M &lt;= 2,000) 由N (1 &lt;= N &lt;= 26) 个不同字母构成的字符串.很快,淘气的牛找到了系统的漏洞:它们可以倒着走过读 码器. 一头名字为&quot;abcba&quot;不会导致任何问题,但是名为&quot;abcb&quot;的牛会变成两头牛(&quot;abcb&quot; 和 &quot;bcba&quot;).农 夫JOHN想改变牛的名字,使得牛的名字正读和反读都一样.例如,&quot;abcb&quot;可以由在尾部添加&quot;a&quot;.别的方法包 括在头上添加&quot;bcb&quot;,得到&quot;bcbabcb&quot;或去掉&quot;a&quot;,得到&quot;bcb&quot;.JOHN可以在任意位置添加或删除字母.因为名字 是电子的,添加和删除字母都会有一定费用.添加和删除每一个字母都有一定的费用(0 &lt;= 费用 &lt;= 10,000). 对与一个牛的名字和所有添加或删除字母的费用,找出修改名字的最小的费用.空字符串也是一个合法的名字. </span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">* 第一行: 两个用空格分开的数, N 和 M. </span></p>
+<p><span style="font-size: medium">* 第二行: M个自符,初始的牛的名字. </span></p>
+<p><span style="font-size: medium">* 第3...N+2行: 每行含有一个字母和两个整数,分别是添加和删除这个字母的费用.</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">一个整数, 改变现有名字的最小费用. </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+3 4<br />
+abcb<br />
+a 1000 1100<br />
+b 350 700<br />
+c 200 800<br />
+输入解释:<br />
+名字是 "abcb", 操作费用如下:<br />
+<br />
+    添加   删除<br />
+a  1000   1100<br />
+b   350    700<br />
+c   200    800<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+900<br />
+输出解释:<br />
+在尾部添加"a"得到"abcba"的费用为1000. 删除头上的"a",得到"bcb"的费用为1100.在头上添加"bcb"可以得到最小费用,350+200+350=900.<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1710'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1710'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1710'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

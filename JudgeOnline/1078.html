@@ -1,0 +1,63 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1078. -- [SCOI2008]斜堆</title><center><h2>1078: [SCOI2008]斜堆</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1148&nbsp;&nbsp;<span class=green>Solved: </span>640<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1078'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1078'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1078'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　斜堆(skew heap)是一种常用的数据结构。它也是二叉树，且满足与二叉堆相同的堆性质：每个非根结点的值<br />
+都比它父亲大。因此在整棵斜堆中，根的值最小。但斜堆不必是平衡的，每个结点的左右儿子的大小关系也没有任<br />
+何规定。在本题中，斜堆中各个元素的值均不相同。 在斜堆H中插入新元素X的过程是递归进行的：当H为空或者X<br />
+小于H的根结点时X变为新的树根，而原来的树根（如果有的话）变为X的左儿子。当X大于H的根结点时，H根结点的<br />
+两棵子树交换，而X（递归）插入到交换后的左子树中。 给出一棵斜堆，包含值为0~n的结点各一次。求一个结点<br />
+序列，使得该斜堆可以通过在空树中依次插入这些结点得到。如果答案不惟一，输出字典序最小的解。输入保证有<br />
+解。</p></div><h2>Input</h2><div class=content><p>　　第一行包含一个整数n。第二行包含n个整数d1, d2, ... , dn， di &lt; 100表示i是di的左儿子，di&gt;=100表示i<br />
+是di-100的右儿子。显然0总是根，所以输入中不含d0。</p></div><h2>Output</h2><div class=content><p>　　仅一行，包含n+1整数，即字典序最小的插入序列。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+100 0 101 102 1 2	</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0 1 2 3 4 5 6</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1078'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1078'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1078'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

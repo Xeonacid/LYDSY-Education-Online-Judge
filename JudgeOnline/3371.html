@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3371. -- [Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼</title><center><h2>3371: [Usaco2004 Mar]Moo University - Emergency Pizza Order 定制比萨饼</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3371'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3371'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3371'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;Moo大学的餐厅必须为C(1&le;C&le;1000)头入学的奶牛新生定制比萨饼．比萨饼可以在比萨小屋订做．一个饼只能给一头奶牛吃．尽管比萨小屋想为每一头奶牛都做一个比萨饼，但是他们必须服从以下三个条件：</span></div>
+<div><span style="font-size: medium">&middot;比萨小屋拥有T(1&le;T&le;30)种素菜馅，每个比萨饼有且仅有K(1&le;K&le;T)种馅．</span></div>
+<div><span style="font-size: medium">&middot;任何一个比萨饼里不能有两种相同的馅（比如一个比萨饼里不能有两份洋葱）．</span></div>
+<div><span style="font-size: medium">&middot;任何两个比萨饼不能有完全相同的馅，即任何两个比萨饼至少有一种馅是不同的．当然，馅&nbsp;&nbsp;的编号是1到T.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;Moo大学的奶牛对比萨饼馅十分挑剔，有的奶牛可能什么馅都不喜欢．一头奶牛只吃那种所有的馅他都喜欢的比萨饼．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;请你计算最多能喂几头奶牛．</span></div>
+<div></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：三个整数C，T，K.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到C+1行：每行有若干个用空格分开的整数，表示这头奶牛喜欢的馅．第一个数是这头奶牛喜欢的馅的种数．接下来的几个整数是这头奶牛喜欢的馅的编号．</span></div>
+<div></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">一个整数，即最多能有几头牛被喂养．</span></div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 11.25pt"><span style="font-size: medium">&nbsp;</span></div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 1<br />
+2 2 1<br />
+1 1<br />
+1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>    2<br />
+样例说阴<br />
+    只能生产两种饼：一个有1号馅的比萨饼和一个有2号馅的比萨饼．第一个饼给第1号牛，第二块饼给3号牛，这样两头牛被喂饱了．同时将三头都喂饱的办法不存在<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Green'>Green</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3371'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3371'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3371'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

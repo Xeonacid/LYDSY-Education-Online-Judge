@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5213. -- [Zjoi2018]迷宫</title><center><h2>5213: [Zjoi2018]迷宫</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>45&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5213'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5213'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5213'>Discuss</a>]</center><h2>Description</h2><div class=content><div>九条可怜是一个贪玩的女孩子。</div>
+<div></div>
+<div>暑假快要到了，可怜打算在她家的私人海滩旁边建一座城堡，这样就可以在放暑假的时候邀请她的朋友们来玩了。</div>
+<div>同时，可怜打算在城堡的地下修建一座迷宫，因为探险总是一件充满乐趣的事情。经过简单的设计，可怜打算修建</div>
+<div>一座这样的迷宫：</div>
+<div>1:迷宫可以被抽象成n个点，nm条边的有向图。1号点是唯一的入口也是唯一的出口。</div>
+<div>2:每一个点恰好有m条出边，且这些出边被依次标号为[0,m)的正整数。</div>
+<div>3:迷宫允许自环和重边。</div>
+<div>同时，一座优秀的迷宫应该有一定的解谜因素。因此可怜希望每一条从1号点出发并回到1号点的回路都有着一定的</div>
+<div>规律。</div>
+<div></div>
+<div>可怜发现，如果把一条从1出发的路径经过的所有边的编号都记录下来，那么能得到一个（可能有前导0）的m进制</div>
+<div>数；同时对于每一个（可能有前导0）的m进制数，都能对应回一条从1出发的路径。</div>
+<div></div>
+<div>于是可怜选定了一个整数K，她希望这个迷宫满足一条从1出发的路径能回到1当且仅当这条路径对应的数是K的倍数</div>
+<div>。</div>
+<div>现在可怜已经选定了m和K，但是她发现并不是对所有的n，都存在满足上述所有条件的迷宫设计方案。建造迷宫是</div>
+<div>一件费时费力的事情，于是可怜想要找到一个最小的满足条件的n。然而可怜对复杂的计算并不感兴趣，因此她想</div>
+<div>让你来帮她计算一下这个数值。</div>
+<div></div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行输入一个整数T表示数据组数。</div>
+<div>接下来T行每行两个十进制正整数m,K表示可怜选定的整数。</div>
+<div>2&lt;=M&lt;=10^18</div>
+<div>K&lt;=10^18</div>
+<div>t&lt;=3*10^5</div>
+<div></div></div><h2>Output</h2><div class=content><div>对于每组数据，输出一行一个整数表示能够满足所有条件的最小的n。</div>
+<div>如果不存在这样的n，输出-1</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+2 3<br />
+2 4<br />
+6 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+3<br />
+5</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;<img src="upload/201803/1(2).jpg" width="625" height="196" alt="" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5213'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5213'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5213'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

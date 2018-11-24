@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4322. -- 压缩规则</title><center><h2>4322: 压缩规则</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>4 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4322'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4322'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4322'>Discuss</a>]</center><h2>Description</h2><div class=content><div>聪明的小C想到了一个很棒的压缩规则，一次压缩，就是把这个无限长的大数从左往右选择连续的相同的数字（比如说这段区间是X（这个数不能有前导0）个相同的Y（这个数只能是一个字符）），那么这段区间在压缩后的数中就用XY代替。比若说&ldquo;1122&rdquo;经过一次压缩就变成了&ldquo;2122&rdquo;，但是不能是&ldquo;11111212&rdquo;（把连续的相同的不在一起压缩，这是不合法的）。悲剧的是小C实在是太萝莉了，这个数字在压缩了一次之后还是特别大，不过幸运的是这个数字只要报一年就可以报完了，但是小C还是觉得报这个数字太浪费他的青春了，所以他压缩了两次。但是大家知道，这种压缩并不是一一对应的，现在我们已知了小C报出的这个数字（呵呵！只有最多500位了），现在我们想知道最开始的那个大数的值有多少种不同的可能。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个不超过500个字符的字符串st，表示压缩过两次的字符串。</div>
+<p></p></div><h2>Output</h2><div class=content><div>一个数，表示最开始的大数的值的可能方案数 mod 1000000009.<span class="Apple-tab-span" style="white-space: pre;">	</span></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>22</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1</span></div><h2>HINT</h2>
+			<div class=content><p><div>样例解释：</div><br />
+<div>原大数只能是22.</div><br />
+<div>经过一次压缩变成22;</div><br />
+<div>再一次压缩变成22。</div><br />
+<div>原大数只能是22.</div><br />
+<div>字符串长度&lt;=50000</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4322'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4322'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4322'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

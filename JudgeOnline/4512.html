@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4512. -- [Usaco2016 Jan] Build Gates</title><center><h2>4512: [Usaco2016 Jan] Build Gates</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>109&nbsp;&nbsp;<span class=green>Solved: </span>56<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4512'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4512'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4512'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>
+<div>Farmer John decides to build a new fence around parts of his farm, but he keeps getting distracted a</div>
+<div>nd ends up building the fence into a much stranger shape than he intended!Specifically, FJ starts at</div>
+<div>&nbsp;position (0,0)and takes N steps, each moving one unit of distance north, south, east, or west. Each</div>
+<div>&nbsp;step he takes, he lays a unit of fence behind him. For example, if his first step is to the north,&nbsp;</div>
+<div>he adds a segment of fence from (0,0) to (0,1). FJ might re-visit points multiple times and he may e</div>
+<div>ven lay the same segment of fence multiple times. His fence might even cross over itself if his path</div>
+<div>&nbsp;cuts through a run of fencing he has already built.Needless to say, FJ is rather dismayed at the re</div>
+<div>sult after he completes the fence. In particular, he notices that it may be the case that he has now</div>
+<div>&nbsp;partitioned off some areas of the farm from others, so that one can no longer walk from one region&nbsp;</div>
+<div>to another without crossing a fence. FJ would like to add gates to his fences to fix this problem. A</div>
+<div>&nbsp;gate can be added to any unit-length segment of fence he has built, allowing passage between the tw</div>
+<div>o sides of this segment.Please determine the minimum number of gates FJ needs to build so that every</div>
+<div>&nbsp;region of the farm is once again reachable from every other region.</div>
+<div>给定一个包含N,S,E,W的移动序列。FJ初始在(0,0)，依次按照移动序列移动，并在移动过程中建设篱笆。如FJ在(0</div>
+<div>,0)点，要向N移动，则FJ移动到(0,1)，并在(0,0)和(0,1)之间建一段篱笆。注意到这样建设出的篱笆可能自交，</div>
+<div>把平面划分成若干区域。现在要拆除若干段篱笆，使平面连通。输出最少拆除的篱笆段数。1 &le; N &le; 1000</div>
+</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N(1&le;N&le;1000). The next line contains a string of length N</div>
+<div>describing FJ's path. Each character is either N (north), E (east), S (south), or W (west).</div>
+<p></p></div><h2>Output</h2><div class=content><div>Write out a single integer giving the minimum number of gates FJ needs to build to restore complete connectivity to all regions of his farm. Note that the answer could be zero if the farm is connected to begin with.</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>14<br />
+NNNESWWWSSEEEE<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver%E9%B8%A3%E8%B0%A2frank_c1%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>Silver鸣谢frank_c1提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4512'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4512'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4512'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

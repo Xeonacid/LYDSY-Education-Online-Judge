@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2224. -- Pku3872 K-equivalence
+</title><center><h2>2224: Pku3872 K-equivalence
+</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>29&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2224'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2224'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2224'>Discuss</a>]</center><h2>Description</h2><div class=content>对于正整数集合K, 非零十进制数字p, q被称作K-等价当且仅当以下条件成立:对于所有n∈K, 如果将n中的数字p替换成数字q, 或者将n中的数字q替换成p, 得到的新数字依然属于集合K.
+
+例如, K是所有能被3整除的数构成的集合, 那么数字1, 4, 7是K-等价的.
+
+可以看到, K-等价是一个等价关系(它满足自反性, 对称性和传递性).
+
+给定一个有限集合K, 你的任务是找到数字1到数字9的等价类(即将[1,9]划分为若干个不相交的子集, 使得每个子集中的元素两两K-等价, 且任意两个属于不同集合的元素不K-等价).
+
+</div><h2>Input</h2><div class=content>第一行为整数n, 接下来有n行, 每行两个整数Li, Ri, 代表区间[Li, Ri]属于集合K. 0<=Li<=Ri<=1018, 且对于i>=2, Li>Ri-1.
+
+</div><h2>Output</h2><div class=content>输出[1,9]的等价类. 每个等价类用一串递增的数字表示, 按照字典序输出.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+1 566<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1234<br />
+5<br />
+6<br />
+789<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Neerc2010'>Neerc2010</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2224'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2224'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2224'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

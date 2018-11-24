@@ -1,0 +1,92 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2985. -- [Balkan2009]year2012</title><center><h2>2985: [Balkan2009]year2012</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2985'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2985'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2985'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: 22pt">&nbsp;</span><span style="font-size: 14pt">传说</span><span style="font-size: 14pt">2012-12-21</span><span style="font-size: 14pt">是世界末日啊！（虽然今天已经是</span><span style="font-size: 14pt">2012-12-26</span><span style="font-size: 14pt">了&hellip;&hellip;）人们都要逃亡了。到处都是自然灾害，导致地球上只有</span><span style="font-size: 14pt">n</span><span style="font-size: 14pt">个地方可以存活了。其中，我们在</span><span style="font-size: 14pt">s</span><span style="font-size: 14pt">号点，喜马拉雅山在</span><span style="font-size: 14pt">t</span><span style="font-size: 14pt">号点。对于这</span><span style="font-size: 14pt">n</span><span style="font-size: 14pt">个点，我们会用</span><span style="font-size: 14pt">(X<sub>i, </sub>Y<sub>i, </sub>Z<sub>i</sub>)</span><span style="font-size: 14pt">来描述这些点，而坐标原点则是地球中心。显然，这</span><span style="font-size: 14pt">n</span><span style="font-size: 14pt">个地点是不会靠在一起的，那么我们必须要用飞机来飞行。已知我们所坐的飞机会保持一个恒定的速度</span><span style="font-size: 14pt">v</span><span style="font-size: 14pt">，并有一个容量为</span><span style="font-size: 14pt">c</span><span style="font-size: 14pt">的油箱。刚出发时，油箱是满的。而这</span><span style="font-size: 14pt">n</span><span style="font-size: 14pt">个点之中，不是能够两两之间互相飞行的。可以飞的航线只有</span><span style="font-size: 14pt">m</span><span style="font-size: 14pt">条，而每一条所需的油量都不一样（双向航线）。更糟糕的是，不是所有的点都能加油，那么就意味着飞行员每到一个地点，就不得不把油加满！已知两点之间的距离为坐标之间的球面距离（因为是在地球上嘛），而飞行总时间为</span><span style="font-size: 14pt">(</span><span style="font-size: 14pt">总距离</span><span style="font-size: 14pt">/v)</span><span style="font-size: 14pt">，那么我们要从</span><span style="font-size: 14pt">s</span><span style="font-size: 14pt">号点飞到</span><span style="font-size: 14pt">t</span><span style="font-size: 14pt">号点至少需要多少时间呢？答案保留</span><span style="font-size: 14pt">10</span><span style="font-size: 14pt">位小数。</span></div>
+<div><span style="font-size: 22pt">【数据范围及保证】</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">2&lt;=n&lt;=1000</span><span style="font-size: 14pt">，整数，表示地点的数量。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">1&lt;=m&lt;=10000</span><span style="font-size: 14pt">，整数，表示可互相飞的航线数量。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">1&lt;=v&lt;=1000</span><span style="font-size: 14pt">，实数，精度最高为</span><span style="font-size: 14pt">1e-3</span><span style="font-size: 14pt">，表示飞机的恒定速度。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">1&lt;=c&lt;=1000</span><span style="font-size: 14pt">，整数，表示飞机油箱容量。</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">-100&lt;= X<sub>i, </sub>Y<sub>i, </sub>Z<sub>i</sub>&lt;=100</span><span style="font-size: 14pt">，实数，精度最高为</span><span style="font-size: 14pt">1e-18</span><span style="font-size: 14pt">，表示第</span><span style="font-size: 14pt">i</span><span style="font-size: 14pt">个点的坐标，其中数据保证</span><span style="font-size: 14pt">X<sub>i</sub><sup>2</sup>+Y<sub>i</sub><sup>2</sup>+Z<sub>i</sub><sup>2</sup></span><span style="font-size: 14pt">（即地球半径）为一个恒定的正整数（尽管存在精度差，但是</span><span style="font-size: 14pt">|</span><span style="font-size: 14pt">精度差</span><span style="font-size: 14pt">|&lt;=1e-10</span><span style="font-size: 14pt">，因此可认为每个点都严格在地球表面）。并保证，任意航线的长度</span><span style="font-size: 14pt">&gt;=1e-6.</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">1&lt;=</span><span style="font-size: 14pt">可加油的站点数量</span><span style="font-size: 14pt">&lt;=20</span></div>
+<div style="text-indent: 21.75pt"><span style="font-size: 14pt">1&lt;=</span><span style="font-size: 14pt">地点的编号</span><span style="font-size: 14pt">&lt;=n;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&lt;=</span><span style="font-size: 14pt">航线所需油量</span><span style="font-size: 14pt">&lt;=c</span></div>
+<div><span style="font-size: 22pt">【注意事项】</span></div>
+<div style="margin: 0cm 0cm 0pt 39.75pt; text-indent: -18pt"><span style="font-size: 14pt">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 14pt">两点之间的距离为最短球面距离，可能有不止一条，但是只有一条有用。</span></div>
+<div style="margin: 0cm 0cm 0pt 39.75pt; text-indent: -18pt"><span style="font-size: 14pt">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 14pt">a, b</span><span style="font-size: 14pt">之间的航线可能中途经过</span><span style="font-size: 14pt">c</span><span style="font-size: 14pt">点，但这不代表</span><span style="font-size: 14pt">a</span><span style="font-size: 14pt">和</span><span style="font-size: 14pt">c</span><span style="font-size: 14pt">之间或</span><span style="font-size: 14pt">b</span><span style="font-size: 14pt">和</span><span style="font-size: 14pt">c</span><span style="font-size: 14pt">之间有航线。</span></div>
+<div style="margin: 0cm 0cm 0pt 39.75pt; text-indent: -18pt"><span style="font-size: 14pt">3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 14pt">起飞，降落，加油等时间都可无视。</span></div>
+<div style="margin: 0cm 0cm 0pt 39.75pt; text-indent: -18pt"><span style="font-size: 14pt">4.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 14pt">若无解，则输出</span><span style="font-size: 14pt">0.</span></div>
+<div style="margin: 0cm 0cm 0pt 39.75pt; text-indent: -18pt"><span style="font-size: 14pt">5.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 14pt">若</span><span style="font-size: 14pt">|</span><span style="font-size: 14pt">你输出的答案</span><span style="font-size: 14pt">-</span><span style="font-size: 14pt">标准答案</span><span style="font-size: 14pt">|&lt;=1e-4</span><span style="font-size: 14pt">，则算正确。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 14pt">第</span><span style="font-size: 14pt">1</span><span style="font-size: 14pt">行四个正数</span><span style="font-size: 14pt">n, m, v, c</span></div>
+<div><span style="font-size: 14pt">&nbsp;&nbsp; </span><span style="font-size: 14pt">接下来</span><span style="font-size: 14pt">n</span><span style="font-size: 14pt">行，每行四个数，</span><span style="font-size: 14pt">X<sub>i</sub>, Y<sub>i</sub>, Z<sub>i</sub>, R<sub>i</sub></span><span style="font-size: 14pt">，其中</span><span style="font-size: 14pt">R<sub>i</sub>=1</span><span style="font-size: 14pt">表示该点可加油，</span><span style="font-size: 14pt">R<sub>i</sub>=0</span><span style="font-size: 14pt">表示该点不可加油。</span></div>
+<div><span style="font-size: 14pt">&nbsp;&nbsp; </span><span style="font-size: 14pt">接下来</span><span style="font-size: 14pt">m</span><span style="font-size: 14pt">行，每行</span><span style="font-size: 14pt">3</span><span style="font-size: 14pt">个正整数，</span><span style="font-size: 14pt">A<sub>k</sub>, B<sub>k</sub>, C<sub>k</sub></span><span style="font-size: 14pt">，其中</span><span style="font-size: 14pt">A<sub>k</sub>, B<sub>k</sub></span><span style="font-size: 14pt">表示第</span><span style="font-size: 14pt">k</span><span style="font-size: 14pt">条航线所连接的两个站点。</span><span style="font-size: 14pt">C<sub>k</sub></span><span style="font-size: 14pt">表示该航线所需油量。</span></div>
+<div><span style="font-size: 14pt">&nbsp;&nbsp; </span><span style="font-size: 14pt">最后</span><span style="font-size: 14pt">1</span><span style="font-size: 14pt">行，两个正整数，</span><span style="font-size: 14pt">s</span><span style="font-size: 14pt">和</span><span style="font-size: 14pt">t</span><span style="font-size: 14pt">。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: 14pt">&nbsp;&nbsp; </span><span style="font-size: 14pt">仅一行，为所需最短时间。若无法到达</span><span style="font-size: 14pt">t</span><span style="font-size: 14pt">号点，则输出</span><span style="font-size: 14pt">0.</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+6 9 2.5 9<br />
+0.0 5.0 0.0 1<br />
+0.0 0.0 -5.0 0<br />
+0.0 -5.0 0.0 0<br />
+0.0 0.0 5.0 0<br />
+3.0 4.0 0.0 0<br />
+4.0 3.0 0.0 1<br />
+1 2 5<br />
+2 3 8<br />
+1 4 5<br />
+4 3 5<br />
+1 5 1<br />
+5 6 9<br />
+5 2 1<br />
+2 6 2<br />
+6 4 4<br />
+1 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+12.5663706144</span></div><h2>HINT</h2>
+			<div class=content><p><p><img height="417" width="551" alt="" src="upload/201212/11(10).jpg" /></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2985'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2985'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2985'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

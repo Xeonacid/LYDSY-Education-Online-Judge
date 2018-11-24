@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3840. -- ZCC Loves COT</title><center><h2>3840: ZCC Loves COT</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>14<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3840'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3840'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3840'>Discuss</a>]</center><h2>Description</h2><div class=content><div>After solves all problem of the series COT(count on a tree), ZCC feels bored and came up with a new COT problem, where letter T stands of Tetrahedron.</div>
+<div>In this problem, Tetrahedron is define as a set of point:</div>
+<div>T(n) = {(x, y, z) | 1&le;z&le;y&le;x&le;n}</div>
+<div>Imagine T(n) is divided into n layers, the k-th layer contains k rows, of which the l-th row contains l points.</div>
+<div>Moreover, we define sub-Tetrahedron a set of point, too:</div>
+<div>sT(x, y, z, a) = {(x+i, y+j, z+k) | 0&le;k&le;j&le;i＜a}</div>
+<div>First of all, you are given a Tetrahedron T(N), every point of T(N) has a value of 0.</div>
+<div>Then, you should deal with M operation (Mxi, Myi, Mzi, Mai), means you should add 1 to every point&rsquo;s value if it belongs to sT(Mxi, Myi, Mzi, Mai).</div>
+<div>Then, you should deal with Q queries (Qxi, Qyi, Qzi, Qai), you should output the sum of values of points in sT(Qxi, Qyi, Qzi, Qai).</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>First line: three positive integer N, M, Q.(N&le;100, M&le;100000, Q&le;100000)</div>
+<div>Then followed M lines, each line contains four integers Mxi, Myi, Mzi, Mai, which describe an operation.</div>
+<div>Then followed Q lines, each line contains four integers Qxi, Qyi, Qzi, Qai, which describe a query.</div>
+<p></p></div><h2>Output</h2><div class=content><div>For every query, output a line with one integer, the answer to the query.&nbsp;</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 2<br />
+1 1 1 2<br />
+1 1 1 2<br />
+2 1 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><div>It is guaranteed, for every sT(x, y, z, a): 1&le;z&le;y&le;x&le;x+a-1&le;N.&nbsp;</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E9%95%87%E6%B5%B7%E4%B8%AD%E5%AD%A6'>By 镇海中学</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3840'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3840'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3840'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3482. -- [COCI2013]hiperprostor</title><center><h2>3482: [COCI2013]hiperprostor</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>372&nbsp;&nbsp;<span class=green>Solved: </span>106<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3482'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3482'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3482'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>在遥远的未来，行星之间的食品运输将依靠单向的贸易路线。每条路径直接连接两个行星，且其运输时间是已知的</div>
+<div>。贸易商协会打算利用一项最近发现的新技术&mdash;&mdash;超空间旅行，以增加一些新的航线。通过超空间旅行的航线也是</div>
+<div>单向的。由于该项技术仍处于试验阶段，超空间旅行的时间目前是未知的，但它不取决于行星之间的距离，所以每</div>
+<div>个超空间旅行的路线将花费等量的时间。下图是三个相互联通的行星及其运输时间的例子。行星使用正整数标号，</div>
+<div>超空间旅行时间记为&ldquo;x&rdquo;（图片对应第输入样例）：过境的时间以天计，并且始终是一个正整数。贸易商协会希</div>
+<div>望对引进新航线的后果进行分析：对于某两个行星A和B，他们想知道对于任意的x，从A到B的最短路径的总中转时</div>
+<div>间的所有可能的值。例如，在上述情况中，从星球2到星球1的最短路径所需时间可以取值5（如果x&ge;5），4，3，2</div>
+<div>，或1天（如果x&lt;5）</div>
+</div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "><img src="upload/201403/aa.jpg" width="339" height="186" alt="" /></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span lang="EN-US">&nbsp;</span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p></div><h2>Input</h2><div class=content><div>输入的第一行包含两个整数P和R，分别代表行星的数目和航线数量，1&le;P&le;500，0&le;R&le;10000。接下来的R条航线</div>
+<div>路径包含两或三个整数：行星标号C和D（1&le;C，D&le;P，C&ne;D），和T，从C到D的旅行时间。对于传统的路径，T是一</div>
+<div>个整数（1&le;T&le;1000000），超空间航线中，T是字符&ldquo;x&rdquo;。 可以存在多行有两个相同的行星。下面的行中包含的</div>
+<div>整数Q（1&le;Q&le;10），表示查询的数量。以下Q行包含两个整数星球标号（A和B，A&ne;B），为贸易商协会的查询：&ldquo;</div>
+<div>从A到B的最短路径时间的可能值是什么？</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出必须包含q行，每行??一个查询。每一行都必须包含两个整数：不同的可能值的数目和它们的总和。如果不同</div>
+<div>的可能值的数目是无限的，该行只输出&ldquo;inf&rdquo;。如果没有从A到B的路径，不同的可能值的数目及它们的总和都是0</div>
+<div>。</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+1 2 x<br />
+2 3 x<br />
+3 4 x<br />
+1 4 8<br />
+3<br />
+2 1<br />
+1 3<br />
+1 4<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0 0<br />
+inf<br />
+3 17</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;2016.6.15新加数据一组，未重测</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;Hta'>By Hta</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3482'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3482'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3482'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

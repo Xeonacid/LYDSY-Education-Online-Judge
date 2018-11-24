@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1102. -- [POI2007]山峰和山谷Grz</title><center><h2>1102: [POI2007]山峰和山谷Grz</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>973&nbsp;&nbsp;<span class=green>Solved: </span>498<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1102'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1102'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1102'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　FGD小朋友特别喜欢爬山，在爬山的时候他就在研究山峰和山谷。为了能够让他对他的旅程有一个安排，他想<br />
+知道山峰和山谷的数量。给定一个地图，为FGD想要旅行的区域，地图被分为n*n的网格，每个格子(i,j) 的高度w(<br />
+i,j)是给定的。若两个格子有公共顶点，那么他们就是相邻的格子。（所以与(i,j)相邻的格子有(i?1, j?1),(i?1<br />
+,j),(i?1,j+1),(i,j?1),(i,j+1),(i+1,j?1),(i+1,j),(i+1,j+1)）。我们定义一个格子的集合S为山峰（山谷）当<br />
+且仅当：1.S的所有格子都有相同的高度。2.S的所有格子都联通3.对于s属于S，与s相邻的s&rsquo;不属于S。都有ws &gt; <br />
+ws&rsquo;（山峰），或者ws &lt; ws&rsquo;（山谷）。你的任务是，对于给定的地图，求出山峰和山谷的数量，如果所有格子<br />
+都有相同的高度，那么整个地图即是山峰，又是山谷。</p></div><h2>Input</h2><div class=content><p>　　第一行包含一个正整数n，表示地图的大小（1&lt;=n&lt;=1000）。接下来一个n*n的矩阵，表示地图上每个格子的高<br />
+度。(0&lt;=w&lt;=1000000000)</p></div><h2>Output</h2><div class=content><p>　　应包含两个数，分别表示山峰和山谷的数量。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>输入样例1<br />
+5<br />
+8 8 8 7 7<br />
+7 7 8 8 7<br />
+7 7 7 7 7<br />
+7 8 8 7 8<br />
+7 8 8 8 8<br />
+输入样例2<br />
+5<br />
+5 7 8 3 1<br />
+5 5 7 6 6<br />
+6 6 6 2 8<br />
+5 7 2 5 8<br />
+7 1 0 1 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>输出样例1<br />
+2 1<br />
+输出样例2<br />
+3 3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img border="0" alt="" src="images/1102.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1102'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1102'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1102'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

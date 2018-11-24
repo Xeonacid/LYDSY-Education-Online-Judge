@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4017. -- 小Q的无敌异或</title><center><h2>4017: 小Q的无敌异或</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>736&nbsp;&nbsp;<span class=green>Solved: </span>242<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4017'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4017'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4017'>Discuss</a>]</center><h2>Description</h2><div class=content><div>背景</div>
+<div></div>
+<div>小Q学习位运算时发现了异或的秘密。</div>
+<div></div>
+<div>描述</div>
+<div></div>
+<div>小Q是一个热爱学习的人，他经常去维基百科（http://en.wikipedia.org/wiki/Main_Page）学习计算机科学。</div>
+<div></div>
+<div>就在刚才，小Q认真地学习了一系列位运算符（http://en.wikipedia.org/wiki/Bitwise_operation），其中按位异或的运算符 xor 对他影响很大。按位异或的运算符是双目运算符。按位异或具有交换律，即i xor j = j xor i。</div>
+<div></div>
+<div>他发现，按位异或可以理解成被运算的数字的二进制位对应位如果相同，则结果的该位置为0，否则为1，例如1(01) xor 2(10) = 3(11)。</div>
+<div></div>
+<div>他还发现，按位异或可以理解成数字的每个二进制位进行了不进位的加法，例如3(11) xor 3(11) = 0(00)。</div>
+<div></div>
+<div>于是他想到了两个关于异或的问题，这两个问题基于一个给定的非负整数序列A1, A2, ..., An，其中n是该序列的长度。</div>
+<div></div>
+<div>第一个问题是，如果用f(i, j)表示Ai xor Ai+1 xor ... xor Aj，则任意的1 &lt;= i &lt;= j &lt;= n的f(i, j)相加是多少。</div>
+<div></div>
+<div>第二个问题是，如果用g(i, j)表示Ai + Ai+1 + ... + Aj，则任意的1 &lt;= i &lt;= j &lt;= n的g(i, j)异或在一起是多少。</div>
+<div></div>
+<div>比如说，对于序列{1, 2}，所有的f是{1, 2, 1 xor 2}，加起来是6；所有的g是{1, 2, 1 + 2}，异或起来是0。</div>
+<div></div>
+<div>他觉得这两个问题都非常的有趣，所以他找到了你，希望你能快速解决这两个问题，其中第一个问题的答案可能很大，你只需要输出它对998244353（一个质数）取模的值即可。</div>
+<div></div>
+<p class="MsoNormal" align="left"></p>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个正整数n，表示序列的长度。</div>
+<div>
+<div></div>
+<div>第二行n个非负整数A1, A2, ..., An，表示这个序列。</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>两个整数，表示两个问题的答案，空格隔开，其中第一个问题的答案要对998244353（一个质数）取模。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 <br />
+1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6 0<br />
+<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><div>100%的数据满足n &lt;= 10^5, Ai &lt;= 10^6。</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>鸣谢佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4017'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4017'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4017'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1783. -- [Usaco2010 Jan]Taking Turns</title><center><h2>1783: [Usaco2010 Jan]Taking Turns</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>526&nbsp;&nbsp;<span class=green>Solved: </span>269<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1783'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1783'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1783'>Discuss</a>]</center><h2>Description</h2><div class=content>Farmer John has invented a new way of feeding his cows. He lays out
+N (1 <= N <= 700,000) hay bales conveniently numbered 1..N in a
+long line in the barn. Hay bale i has weight W_i (1 <= W_i <=
+2,000,000,000). A sequence of six weights might look something like:
+        17 5 9 10 3 8 
+A pair of cows named Bessie and Dessie walks down this line after
+examining all the haybales to learn their weights. Bessie is the
+first chooser. They take turns picking haybales to eat as they walk
+(once a haybale is skipped, they cannot return to it). For instance,
+if cows Bessie and Dessie go down the line, a possible scenario is:
+
+* Bessie picks the weight 17 haybale
+* Dessie skips the weight 5 haybale and picks the weight 9 haybale
+* Bessie picks the weight 10 haybale
+* Dessie skips the weight 3 haybale and picks the weight 8 haybale
+Diagrammatically:
+
+Bessie   |      |
+        17 5 9 10 3 8 
+Dessie       |      |
+This scenario only shows a single skipped bale; either cow can skip
+as many as she pleases when it's her turn.Each cow wishes to maximize the total weight of 
+hay she herself consumes (and each knows that the other cow has this goal).Furthermore, a cow 
+will choose to eat the first bale of hay thatmaximimizes her total weight consumed.
+Given a sequence of hay weights, determine the amount of hay that
+a pair of cows will eat as they go down the line of hay.
+
+
+一排数，两个人轮流取数，保证取的位置递增，每个人要使自己取的数的和尽量大，求两个人都在最优策略下取的和各是多少。
+
+</div><h2>Input</h2><div class=content>* Line 1: A single integer: N
+
+* Lines 2..N+1: Line i+1 contains a single integer: W_i
+
+</div><h2>Output</h2><div class=content>* Line 1: Two space-separated integers, the total weight of hay
+        consumed by Bessie and Dessie respectively
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+17<br />
+5<br />
+9<br />
+10<br />
+3<br />
+8<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>27 17<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1783'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1783'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1783'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

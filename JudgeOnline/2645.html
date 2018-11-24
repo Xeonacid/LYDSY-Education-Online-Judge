@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2645. --  Vijos1676 陶陶吃苹果</title><center><h2>2645:  Vijos1676 陶陶吃苹果</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>45&nbsp;&nbsp;<span class=green>Solved: </span>31<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2645'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2645'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2645'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">curimit知道陶陶很喜欢吃苹果。于是curimit准备在陶陶生日的时候送给他一棵苹果树。 <br />
+<br />
+curimit准备了一棵这样的苹果树作为生日礼物：这棵苹果树有n个节点，每个节点上有c[i]个苹果，这棵树高度为h。 <br />
+<br />
+可是，当curimit把这棵树给陶陶看的时候，陶陶却说：&ldquo;今年生日不收礼，收礼只收节点数减高度不超过k的苹果树。&rdquo;这下curimit犯难了，curimit送来的树枝繁叶茂，不满足节点数-高度&le;k。于是curimit决定剪掉一些枝条，使得修剪过后的树满足节点数-高度&le;k，但是curimit又想保留尽量多的苹果数目。curimit想请你帮他算算经过修剪后的树最多能保留多少个苹果。 <br />
+<br />
+注： <br />
+一， 节点1为树根，不能把它剪掉。 <br />
+二， 1个节点的树高度为1。 <br />
+</font></span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">输入文件的第一行为两个整数n，k分别表示这棵树有n个节点，修剪后的树节点数-高度&le;k。 <br />
+<br />
+第二行开始到第n+1行，每行有两个数，第i+1行的两个数father[i]和c[i]分别表示节点i的父亲是father[i]和节点i处有c[i]个苹果。 <br />
+<br />
+规定：节点1的父亲为0。 <br />
+</font></span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">输出文件仅包含一行，ans，表示在满足修建后的树节点数-高度&le;k的条件下，最多能保留多少个苹果。 <br />
+<br />
+<br />
+</font></span></p>
+<p align="left"></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 3<br />
+0 89928<br />
+1 38219<br />
+1 91615<br />
+2 5517<br />
+3 15244<br />
+3 78458<br />
+1 76512<br />
+4 99582<br />
+7 64607<br />
+1 91175<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>494494<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p align="left"><font face="Times New Roman" size="3">对于10%的数据， n&le;10 <br /><br />
+对于30%的数据， n&le;100　　0&le;k&le;20 <br /><br />
+对于100%的数据，n&le;4000 0&le;k&le;=500&nbsp;</font><span id="1332744975363E" style="display: none">&nbsp;</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2645'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2645'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2645'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

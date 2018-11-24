@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5294. -- [Bjoi2018]二进制</title><center><h2>5294: [Bjoi2018]二进制</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>69&nbsp;&nbsp;<span class=green>Solved: </span>43<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5294'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5294'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5294'>Discuss</a>]</center><h2>Description</h2><div class=content><div>pupil 发现对于一个十进制数，无论怎么将其的数字重新排列，均不影响其是不是333 的倍数。他想研究对于二进</div>
+<div>制，是否也有类似的性质。于是他生成了一个长为n 的二进制串，希望你对于这个二进制串的一个子区间，能求出</div>
+<div>其有多少位置不同的连续子串，满足在重新排列后（可包含前导0 ）是一个3 的倍数。两个位置不同的子区间指开</div>
+<div>始位置不同或结束位置不同。由于他想尝试尽量多的情况，他有时会修改串中的一个位置，并且会进行多次询问。</div></div><h2>Input</h2><div class=content><div>输入第一行包含一个正整数n ，表示二进制数的长度。</div>
+<div>之后一行n 个空格隔开的整数，保证均是0 或1 ，表示该二进制串。</div>
+<div>之后一行一个整数m ，表示询问和修改的总次数。</div>
+<div>之后m 行每行为1 i，表示pupil 修改了串的第i个位置（0 变成1 或1 变成0 ），或2 l r</div>
+<div>表示pupil 询问的子区间是[l,r] 。</div>
+<div>串的下标从1 开始。</div>
+<div>1&le;n,m&le;100000</div></div><h2>Output</h2><div class=content><div>对于每次询问，输出一行一个整数表示对应该询问的结果。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+1 0 1 0<br />
+3<br />
+2 1 3<br />
+1 3<br />
+2 3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+3<br />
+说明<br />
+样例解释<br />
+对于第一个询问，区间[2,2] 只有数字0 ，是3 的倍数，区间[1,3] <br />
+可以重排成011(2)=3(10)，是3 的倍数，其他区间均不能重排成3 的倍数。<br />
+对于第二个询问，全部三个区间均能重排成3 的倍数（注意00 也是合法的）。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>鸣谢佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5294'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5294'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5294'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

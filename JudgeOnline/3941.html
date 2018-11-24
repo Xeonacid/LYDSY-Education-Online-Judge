@@ -1,0 +1,126 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3941. -- [Usaco2015 Feb]Fencing the Herd</title><center><h2>3941: [Usaco2015 Feb]Fencing the Herd</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>123&nbsp;&nbsp;<span class=green>Solved: </span>36<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3941'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3941'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3941'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John needs your help deciding where to build a fence in the shape of a straight line to help&nbsp;</div>
+<div>restrict the movement of his cows. He has considered several possible fence locations and needs your&nbsp;</div>
+<div>help to determine which of these are usable, where a fence is considered usable if all of the cows&nbsp;</div>
+<div>are on the same side of the fence. A fence is not usable if there is a cow that lies directly on it.&nbsp;</div>
+<div>FJ will be asking you a number of queries regarding possible fence locations; a query should be&nbsp;</div>
+<div>answered &quot;YES&quot; if it corresponds to a usable fence location, &quot;NO&quot; otherwise.</div>
+<div>Additionally, FJ may occasionally bring new cows into the herd. When a new cow joins the herd, all&nbsp;</div>
+<div>fence queries from that point onward will require her to be on the same side of a fence as the rest&nbsp;</div>
+<div>of the herd for the fence to be usable.FJ需要你帮助他决定在哪里建造形状是一条无限长的直线的栅栏来限制</div>
+<div>他的牛的活动。他选出了几个可能的建造栅栏的位置，你需要帮助他判断哪些栅栏是有用的。一个栅栏是有用的当且</div>
+<div>仅当所有奶牛都在栅栏的同一侧(如果有牛群在栅栏所在的直线上，那么栅栏是没用的)，FJ将会问你一些问题，如果</div>
+<div>这个栅栏是有用的，需要输出&ldquo;YES&rdquo;，反之输出&ldquo;NO&rdquo;。 另外，FJ也可能会带来一些新的奶牛加入这个牛群。一头牛</div>
+<div>加入之后，以后的所有询问中，这头牛也需要与其它的牛在栅栏的同一侧。&nbsp;</div>
+<p style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></p>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>The first line of input contains N (1 &lt;= N &lt;= 100,000) and Q (1 &lt;= Q &lt;= 100,000) separated by a space.&nbsp;</div>
+<div>These give the number of cows initially in the herd and the number of queries, respectively.</div>
+<div>The following N lines describe the initial state of the herd. Each line will contain two space separated&nbsp;</div>
+<div>integers x and y giving the position of a cow.</div>
+<div>The remaining Q lines contain queries either adding a new cow to the herd or testing a fence for usability.&nbsp;</div>
+<div>A line of the form &quot;1 x y&quot; means that a new cow has been added to the herd at position (x, y). A line of&nbsp;</div>
+<div>the form &quot;2 A B C&quot; indicates that FJ would like to test a fence described by the line Ax + By = C.</div>
+<div>All cow positions will be unique over the whole data set and will satisfy (-10^9 &lt;= x, y &lt;= 10^9).&nbsp;</div>
+<div>Additionally the fence queries will satisfy -10^9 &lt;= A, B &lt;= 10^9 and -10^18 &lt;= C &lt;= 10^18. No fence&nbsp;</div>
+<div>query will have A = B = 0.</div>
+<div>第一行包含两个用空格隔开的整数N和Q代表最开始奶牛的数目和FJ的提问的个数。&nbsp;</div>
+<div>接下来的N行每行包含两个整数x和y，代表每只奶牛的坐标&nbsp;</div>
+<div>最后的Q行，每行代表一个提问，形如&ldquo;1 x y&rdquo;的提问代表FJ在坐标为(x,y)的位置放置了一头新的奶牛。形如&quot;2 A B C&quot;的</div>
+<div>提问代表FJ向你询问位于直线Ax+By+C上的栅栏是否是有用的。</div>
+<div>
+<div>输入数据保证所有奶牛的坐标都是互不相同的，而且不会出现A=B=0的询问</div>
+<div>1&lt;=N&lt;=100000&nbsp;</div>
+<div>1&lt;=Q&lt;=100000&nbsp;</div>
+<div>-10^9&lt;=x,y&lt;=10^9&nbsp;</div>
+<div>-10^9&lt;=A,B&lt;=10^9&nbsp;</div>
+<div>-10^18&lt;=C&lt;=10^18&nbsp;</div>
+</div>
+</div>
+<div>
+<p style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></p>
+</div>
+<p></p></div><h2>Output</h2><div class=content><h4>
+<div>
+<div>
+<div style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">
+<div></div>
+</div>
+<div><span style="font-size: 14px; font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;">For each fence query, output &quot;YES&quot; if the fence is usable. </span></div>
+<div><span style="font-size: 14px; font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;">Otherwise output &quot;NO&quot;.</span></div>
+<div><font face="Raleway, Helvetica Neue, Helvetica, Arial, sans-serif"><span style="font-size: 14px;">对于每个形如&ldquo;2 A B C&rdquo;的提问，输出一行。&nbsp;</span></font></div>
+<div><font face="Raleway, Helvetica Neue, Helvetica, Arial, sans-serif"><span style="font-size: 14px;">如果栅栏是有用的，输出&quot;YES&quot;，否则输出&quot;NO&quot;(不包含引号)。</span></font></div>
+<div style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">
+<div></div>
+</div>
+<div style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></div>
+</div>
+<div style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></div>
+</div>
+<div style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></div>
+</h4>
+<p style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+0 0<br />
+0 1<br />
+1 0<br />
+2 2 2 3<br />
+1 1 1<br />
+2 2 2 3<br />
+2 0 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+NO<br />
+NO<br />
+//最开始的三头牛都在2x+2y=3这条直线同侧，但是奶牛(1,1)加入后，与其它三头牛不在同一侧，所有第二个栅栏是没用的。因为奶牛(0,1)和奶牛(1,1)在直线y=1上，所以第三个栅栏是没用的 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3941'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3941'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3941'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

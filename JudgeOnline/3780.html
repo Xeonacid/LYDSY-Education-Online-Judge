@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3780. -- 数字统计</title><center><h2>3780: 数字统计</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>145&nbsp;&nbsp;<span class=green>Solved: </span>58<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3780'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3780'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3780'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小A正在研究一些数字统计问题。有一天他突然看到了一个这样的问题：</div>
+<div>将[L..R]中的所有整数用M位二进制数表示（允许出现前导0）。现在将这些数中的每一个作如下变换：</div>
+<div>从这个数的最低两位开始，如果这两位都是0，那么X=1，否则X=0。现在将这两位删去，然后将X放在原来最低位的位置上。重复这个变换直到这个数只剩下一位为止。</div>
+<div>例如01001的变换过程如下：</div>
+<div>01001--&gt;0100--&gt;011--&gt;00--&gt;1。</div>
+<div>现在的问题是变换后的所有数中，值为Y（Y为0或1）的有多少个？</div>
+<div>小A不会了，他想让你帮助他完成这个问题。</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入文件包含多组测试数据。</div>
+<div>第一行，一个整数T，表示测试数据的组数。</div>
+<div>接下来的T节，每节对应一组测试数据，格式如下：</div>
+<div>第一行，两个整数M、Y。</div>
+<div>第二行，两个M位二进制数L、R。</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组测试数据，输出一行，一个二进制数，表示该组测试数据中[L..R]中的所有整数变换后的值为Y的个数。这里的二进制数不允许出现前导0。</div>
+<div></div>
+<div>
+<p></p>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+3 1<br />
+001 101<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>11</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0">对于全部的数据，1&lt;=M&lt;=200，1&lt;=T&lt;=50。</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3780'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3780'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3780'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4606. -- [Apio2008]DNA</title><center><h2>4606: [Apio2008]DNA</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>131&nbsp;&nbsp;<span class=green>Solved: </span>80<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4606'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4606'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4606'>Discuss</a>]</center><h2>Description</h2><div class=content><div>分析如DNA序列这样的生命科学数据是计算机的一个有趣应用。从生物学的角度上说,DNA 是一种由腺嘌呤、胞嘧啶</div>
+<div>、鸟嘌呤和胸腺嘧啶这四种核苷酸组成的链式结构。这四种核苷酸分别用大写字母A、C、G、T表示。这样,一条DNA</div>
+<div>单链可以被表示为一个只含以上四种字符的字符串。我们将这样的字符串称作一个DNA序列 。有时生物学家可能无</div>
+<div>法确定一条DNA单链中的某些核苷酸。在这种情况下,字符N将被用来表示一个不确定的核苷酸。换句话说,N可以用</div>
+<div>来表示A、C、G、T中的任何一个字符。我们称包含一个或者多个N的DNA序列为未完成序列;反之,就称作完成序列。</div>
+<div>如果一个完成序列可以通过将一个未完成序列中的每个N任意替换成A、C、G、T得到的话,就称完成序列适合这个未</div>
+<div>完成序列。举例来说,ACCCT适合ACNNT,但是AGGAT不适合。研究者们经常按照如下方式排序四种核苷酸:A优先于C,C</div>
+<div>优先于G,G优先于T。如果一个DNA序列中的每个核苷酸都与其右边的相同或者优先,就将其归类为范式-1。举例来说</div>
+<div>,AACCGT是范式-1,但是AACGTC不是。一般来说,一个DNA序列属于范式-j(j&gt;1),只要它属于范式-(j-1)或者是一个范</div>
+<div>式-(j-1)和一个范式-1的连接。举例来说,AACCC、ACACC和ACACA都是范式-3,但GCACAC和ACACACA不是。同样,研究</div>
+<div>者们按照字典序对 DNA 序列进行排序。按照这个定义,最小的属于范式-3的DNA序列是AAAAA,最大的是TTTTT。这里</div>
+<div>是另外一个例子,考虑未完成序列 ACANNCNNG。那么前7个适合这个未完成序列的DNA序列是:</div>
+<div>ACAAACAAG</div>
+<div>ACAAACACG</div>
+<div>ACAAACAGG</div>
+<div>ACAAACCAG</div>
+<div>ACAAACCCG</div>
+<div>ACAAACCGG</div>
+<div>ACAAACCTG</div>
+<div>写一个程序,找到按字典序的第R个适合给定的长度为M的未完成序列的范式-K。</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入第一行包含三个由空格隔开的整数:M(1&le;M&le;50,000),K(1&le;K&le;10)和R(1&le;R&le;2&times;10^12)。</div>
+<div>第二行包含一个长度为M的字符串,表示未完成序列。</div>
+<div>保证适合该未完成序列的范式-K的总数不超过4&times;10^18&nbsp;</div>
+<div>因此该数可以用C和C++中的long long类型或者Pascal中的Int64类型表示。</div>
+<div>同时,R不会超过适合给定未完成序列的范式-K的总数。</div>
+<p></p></div><h2>Output</h2><div class=content><div>在第一行中输出第R个适合输入中的未完成序列的范式-K。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9 3 5<br />
+ACANNCNNG<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>ACAAACCCG</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Yts1999%E4%B8%8A%E4%BC%A0'>鸣谢Yts1999上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4606'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4606'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4606'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

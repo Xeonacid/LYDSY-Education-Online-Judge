@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3537. -- [Usaco2014 Open]Code Breaking </title><center><h2>3537: [Usaco2014 Open]Code Breaking </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3537'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3537'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3537'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;The cows keep getting in trouble by taking rides on Farmer John's tractor, so he has hidden the keys to the tractor in a fancy new safe in his office. Undeterred, the cows have vowed to try and break into this safe. The safe is protected by a rather complicated passcode system. The passcode entry system is arranged as a rooted tree of N (1 &lt;= N &lt;= 20,000) nodes, each of which requires a digit between 0 and 9. The nodes are indexed 0..N-1. The only information that the cows have is that certain sequences of length 5 do not occur along particular paths upwards through the tree. For instance, suppose the tree is the following (rooted at A):&nbsp;</span></p>
+<p><span style="font-size: medium"><img height="106" width="208" alt="" src="upload/201404/1.jpg" /></span></p>
+<p><span style="font-size: medium">&nbsp;The cows might know that the sequence 01234 does not occur starting at F, and that the sequence 91234 does not occur starting at E. This information rules out 19 possible passcodes: all those of the form </span></p>
+<p><span style="font-size: medium"><img height="106" width="208" alt="" src="upload/201404/2.jpg" /></span></p>
+<p><span style="font-size: medium">or</span></p>
+<p><span style="font-size: medium">&nbsp;<img height="106" width="208" alt="" src="upload/201404/3.jpg" /></span></p>
+<p><span style="font-size: medium"> which gives 19 once we account for the fact that </span></p>
+<p><span style="font-size: medium"><img height="106" width="208" alt="" src="upload/201404/4.jpg" /></span></p>
+<p><span style="font-size: medium">appears twice. Given M (1 &lt;= M &lt;= 50,000) length-5 sequences, together with their starting nodes in the tree, help the cows figure out how many passcodes have been ruled out. You should compute your answer modulo 1234567. </span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div><span style="font-size: medium"><span style="background: white; color: black">有一棵N</span><span style="background: white; color: black">个节点的有根树</span><span style="background: white; color: black">,</span><span style="background: white; color: black">每个节点可以填0~9.</span></span></div>
+<div><span style="font-size: medium"><span style="background: white; color: black">有M</span><span style="background: white; color: black">个事实</span><span style="background: white; color: black">,</span><span style="background: white; color: black">就是从</span><span style="background: white; color: black">X</span><span style="background: white; color: black">开始往祖先一直跑的的包含</span><span style="background: white; color: black">X</span><span style="background: white; color: black">的</span><span style="background: white; color: black">5</span><span style="background: white; color: black">个节点</span><span style="background: white; color: black">(</span><span style="background: white; color: black">保证</span><span style="background: white; color: black">X</span><span style="background: white; color: black">上面一定存在这样一条路径</span><span style="background: white; color: black">,</span><span style="background: white; color: black">也就是说</span><span style="background: white; color: black">X</span><span style="background: white; color: black">的深度至少为</span><span style="background: white; color: black">5),</span><span style="background: white; color: black">一定不是ABCDE.(0&lt;=A,B,C,D,E&lt;=9)</span></span></div>
+<div><span style="font-size: medium"><span style="background: white; color: black">求,</span><span style="background: white; color: black">根据这</span><span style="background: white; color: black">M</span><span style="background: white; color: black">个事实</span><span style="background: white; color: black">,</span><span style="background: white; color: black">共有多少种给这棵树全部填上数的方案一定是不可能的.</span></span></div>
+<p></p></div><h2>Input</h2><div class=content><p><font size="4">* Line 1: Two space-separated integers, N and M.</font></p>
+<p><font size="4">&nbsp;* Lines 2..N: Line i+1 contains a single integer p(i), denoting the parent of node i in the tree (0 &lt;= p(i) &lt; i). </font></p>
+<p><font size="4">* Lines N+1..N+M: Line N+i describes the ith sequence known not to occur in the code. The line will contain v(i) and s(i) separated by a space, where v(i) is the starting node of the sequence, and s(i) is a 5-digit string known not to occur starting at v(i) and proceeding upward in the tree. It is guaranteed that the root is at least 4 steps upward from v(i).</font></p></div><h2>Output</h2><div class=content><p><font size="4">* Line 1: A single integer giving the number of ruled-out configurations, modulo 1234567. </font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 2<br />
+0<br />
+1<br />
+2<br />
+3<br />
+3<br />
+4 01234<br />
+5 91234<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>19 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold&#32;By&#32;liyizhen2'>Gold By liyizhen2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3537'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3537'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3537'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1785. -- [Usaco2010 Jan]telephone</title><center><h2>1785: [Usaco2010 Jan]telephone</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>121&nbsp;&nbsp;<span class=green>Solved: </span>73<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1785'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1785'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1785'>Discuss</a>]</center><h2>Description</h2><div class=content>奶牛们建立了电话网络，这个网络可看作为是一棵无根树连接n(1 n 100,000)个节点，节点编号为1 .. n。每个节点可能是(电话交换机，或者电话机)。每条电话线连接两个节点。第i条电话线连接两个节点Ai和Bi(1 Ai,Bi n; Ai Bi)。
+叶子节点只连接一条电话线，这些叶子节点是位于电话网中的一个电话亭。两头奶牛需要通话，信号是沿着电话网络中连接两个顶点之间最短的路径传递。每部交换机最多可容纳K (1 K 10)对牛同时通话，对于输入的无根树，求出在任何一个时间最多可同时对话奶牛的对数。
+下面是6个节点的电话网络(无根树)：
+     
+
+<img border="0" src="images/1785.jpg"> 
+
+在叶子节点1,3,5和6中有四头奶牛，如果奶牛1和奶牛3，奶牛5和奶牛6通话，那么同时通话的最大数目是2(2对奶牛同时通话)。
+</div><h2>Input</h2><div class=content>第1行: 用空格分开的两个整数:n和k。
+第2..n+1行: 第i+1行用空格分开的两个整数，Ai和Bi。
+
+</div><h2>Output</h2><div class=content>仅1行: 一个整数表示可同时对话奶牛的对数。 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 1<br />
+1 2<br />
+2 3<br />
+2 4<br />
+4 5<br />
+4 6<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1785'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1785'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1785'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

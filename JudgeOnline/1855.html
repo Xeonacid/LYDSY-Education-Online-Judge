@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1855. -- [Scoi2010]股票交易
+
+</title><center><h2>1855: [Scoi2010]股票交易
+
+</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1475&nbsp;&nbsp;<span class=green>Solved: </span>769<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1855'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1855'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1855'>Discuss</a>]</center><h2>Description</h2><div class=content>最近lxhgww又迷上了投资股票，通过一段时间的观察和学习，他总结出了股票行情的一些规律。
+通过一段时间的观察，lxhgww预测到了未来T天内某只股票的走势，第i天的股票买入价为每股APi，第i天的股票卖出价为每股BPi（数据保证对于每个i，都有APi>=BPi），但是每天不能无限制地交易，于是股票交易所规定第i天的一次买入至多只能购买ASi股，一次卖出至多只能卖出BSi股。
+另外，股票交易所还制定了两个规定。为了避免大家疯狂交易，股票交易所规定在两次交易（某一天的买入或者卖出均算是一次交易）之间，至少要间隔W天，也就是说如果在第i天发生了交易，那么从第i+1天到第i+W天，均不能发生交易。同时，为了避免垄断，股票交易所还规定在任何时间，一个人的手里的股票数不能超过MaxP。
+在第1天之前，lxhgww手里有一大笔钱（可以认为钱的数目无限），但是没有任何股票，当然，T天以后，lxhgww想要赚到最多的钱，聪明的程序员们，你们能帮助他吗？
+</div><h2>Input</h2><div class=content>输入数据第一行包括3个整数，分别是T，MaxP，W。
+接下来T行，第i行代表第i-1天的股票走势，每行4个整数，分别表示APi，BPi，ASi，BSi。
+</div><h2>Output</h2><div class=content>输出数据为一行，包括1个数字，表示lxhgww能赚到的最多的钱数。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 2 0<br />
+2 1 1 1<br />
+2 1 1 1<br />
+3 2 1 1<br />
+4 3 1 1<br />
+5 4 1 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>   对于30%的数据，0 < =W<T < =50,1 < =MaxP < =50<br />
+   对于50%的数据，0 < =W<T < =2000,1 < =MaxP < =50<br />
+   对于100%的数据，0 < =W<T < =2000,1 < =MaxP < =2000<br />
+<br />
+   对于所有的数据，1 < =BPi < =APi < =1000,1 < =ASi,BSi < =MaxP<br />
+<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day1'>Day1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1855'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1855'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1855'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

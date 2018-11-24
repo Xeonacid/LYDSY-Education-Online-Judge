@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2252. -- [2010Beijing wc]矩阵距离 </title><center><h2>2252: [2010Beijing wc]矩阵距离 </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>687&nbsp;&nbsp;<span class=green>Solved: </span>341<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2252'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2252'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2252'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">假设我们有矩阵</span><span lang="EN-US"><font face="Times New Roman">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">其元素值非零即</span><span lang="EN-US"><font face="Times New Roman">1<o:p></o:p></font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><font size="3"><font face="Times New Roman">a11&hellip;&hellip; a<st1:chmetcnv w:st="on" tcsc="0" numbertype="1" negative="False" hasspace="False" sourcevalue="1" unitname="m">1m</st1:chmetcnv><o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><font face="Times New Roman" size="3">&hellip;&hellip;&hellip;&hellip;&hellip;.</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><font size="3"><font face="Times New Roman">an1&hellip;&hellip;.anm<o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Times New Roman"></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">定义</span><span lang="EN-US"><font face="Times New Roman">aij</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">与</span><span lang="EN-US"><font face="Times New Roman">akl</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">之间的距离为</span><span lang="EN-US"><font face="Times New Roman">D(aij,akl)=abs(i-k)+abs(j-L) <o:p></o:p></font></span></font></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件的第一行为两个整数，分别代表n和m。 <br />
+接下来的n行，第i行的第 j个字符代表aij<br />
+</span></font></p></div><h2>Output</h2><div class=content><p>输出包含N行，每行M个用空格分开的数字，其中第i行第J个数字代表<br />
+Min(D(aij,axy) 1&lt;=x&lt;=N 1&lt;=y&lt;m,且axy=1</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4 <br />
+0001 <br />
+0011 <br />
+0110 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 2 1 0 <br />
+2 1 0 0 <br />
+1 0 0 1 </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，满足 0 &lt;  m n&nbsp;&lt;=1000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2252'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2252'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2252'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

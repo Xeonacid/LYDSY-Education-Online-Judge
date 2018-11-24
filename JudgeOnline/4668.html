@@ -1,0 +1,92 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4668. -- 冷战</title><center><h2>4668: 冷战</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>529&nbsp;&nbsp;<span class=green>Solved: </span>264<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4668'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4668'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4668'>Discuss</a>]</center><h2>Description</h2><div class=content><div>1946 年 3 月 5 日，英国前首相温斯顿&middot;丘吉尔在美国富尔顿发表&ldquo;铁</div>
+<div>幕演说&rdquo;，正式拉开了冷战序幕。</div>
+<div>美国和苏联同为世界上的&ldquo;超级大国&rdquo;，为了争夺世界霸权，两国及其</div>
+<div>盟国展开了数十年的斗争。在这段时期，虽然分歧和冲突严重，但双方都</div>
+<div>尽力避免世界范围的大规模战争（第三次世界大战）爆发，其对抗通常通</div>
+<div>过局部代理战争、科技和军备竞赛、太空竞争、外交竞争等&ldquo;冷&rdquo;方式进</div>
+<div>行，即&ldquo;相互遏制，不动武力&rdquo;，因此称之为&ldquo;冷战&rdquo;。</div>
+<div>Reddington 是美国的海军上将。由于战争局势十分紧张，因此他需要</div>
+<div>时刻关注着苏联的各个活动，避免使自己的国家陷入困境。苏联在全球拥</div>
+<div>有 N 个军工厂，但由于规划不当，一开始这些军工厂之间是不存在铁路</div>
+<div>的，为了使武器制造更快，苏联决定修建若干条道路使得某些军工厂联通。</div>
+<div>Reddington 得到了苏联的修建日程表，并且他需要时刻关注着某两个军工</div>
+<div>厂是否联通，以及最早在修建哪条道路时会联通。具体而言，现在总共有</div>
+<div>M 个操作，操作分为两类：</div>
+<div>&bull; 0 u v，这次操作苏联会修建一条连接 u 号军工厂及 v 号军工厂的铁</div>
+<div>路，注意铁路都是双向的;</div>
+<div>&bull; 1 u v， Reddington 需要知道 u 号军工厂及 v 号军工厂最早在加入第</div>
+<div>几条条铁路后会联通，假如到这次操作都没有联通，则输出 0;</div>
+<div>作为美国最强科学家， Reddington 需要你帮忙设计一个程序，能满足</div>
+<div>他的要求。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个整数 N, M。</div>
+<div>接下来 M 行，每行为 0 u v 或 1 u v 的形式。</div>
+<div>数据是经过加密的，对于每次加边或询问，真正的 u, v 都等于读入的</div>
+<div>u, v 异或上上一次询问的答案。一开始这个值为 0。</div>
+<div>1 &le; N, M &le; 500000，解密后的 u, v 满足1 &le; u, v &le; N, u不等于v</div></div><h2>Output</h2><div class=content><div>对于每次 1 操作，输出 u, v 最早在加入哪条边后会联通，若到这个操</div>
+<div>作时还没联通，则输出 0。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 9<br />
+0 1 4<br />
+1 2 5<br />
+0 2 4<br />
+0 3 4<br />
+1 3 1<br />
+0 7 0<br />
+0 6 1<br />
+0 1 6<br />
+1 2 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+3<br />
+5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4668'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4668'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4668'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

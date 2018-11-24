@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2384. -- [Ceoi2011]Match</title><center><h2>2384: [Ceoi2011]Match</h2><span class=green>Time Limit: </span>70 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>383&nbsp;&nbsp;<span class=green>Solved: </span>164<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2384'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2384'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2384'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><img alt="" src="upload/201107/cc1.jpg" /></span></p>
+<p><span style="font-size: medium">作为新一轮广告大战的一部分，格丁尼亚的一家大公司准备在城市的某处设置公司的标志（logo）。公司经理决定用一些整栋的建筑来构成标志的组成部分。<br />
+v标志由不同高度的竖直条纹组成。这些条纹从左到右依次编号为1&hellip;n。标志用数字1,2,&hellip;,n的排列(s1,s2,&hellip;,sn)来描述。编号s1的条纹高度最低，编号s2的条纹第二低，&hellip;，编号sn的条纹最高。条纹的实际高度无关紧要。 <br />
+v沿格丁尼亚城市的主干道共有m栋建筑，这些建筑的高度各不相同。问题是如何找出标志与建筑相匹配的所有位置。 <br />
+v请帮助公司找出匹配标志的建筑序列的连续部分。若编号s1的建筑在序列中最低，编号s2的建筑在序列中第二低,&hellip;，那么这个连续的建筑序列就与标志匹配。例如，建筑高度的序列5,10,4与用编号排列(3,1,2)描述的标志相匹配，因为编号3的建筑(高度4)最低，编号1的建筑第二低，编号2的建筑最高<br />
+</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><img alt="" src="upload/201107/cc2.jpg" /></span></p>
+<p><span style="font-size: medium">&nbsp; </span></p>
+<div v:shape="_x0000_s1026">
+<div><span style="font-size: medium"><span style="color: #000066"><span style="left: -3.5%; color: #d2761a; position: absolute; top: 0.1em">v</span></span></span></div>
+</div>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><span style="font-size: medium">◆第一行包含两个整数n, m (2&le;n&le;m&le;1000000)。 <br />
+&nbsp;&nbsp; 第二行包含n个整数si，构成1,2,&hellip;,n的排列，1&le;si&le;n且si&ne;sj。 <br />
+&nbsp;&nbsp; 第三行包含m个整数hi，表示建筑的高度(1&le;hi&le;109,1&le;i&le;m)，所有的hi均不相同。 <br />
+&nbsp;&nbsp; 每一行的整数之间用单个空格隔开。 <br />
+◆至少35分的数据，n&le;5000, m&le;2000 <br />
+◆至少60分的数据，n&le;50000, m&le;200000</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><img alt="" src="upload/201107/cc3.jpg" /></span></p>
+<p><span style="font-size: medium">&nbsp;第一行包含1 个整数k ，表示匹配的序列数目。<br />
+&nbsp;第二行包含k 个整数，分别为在正确匹配的每个序列中与标志编号1 的条纹相对应的第1 栋建筑的编号。这些数字按升序排列，用空格隔开。如果k=0 ，第二行为空行。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 10<br />
+2 1 5 3 4<br />
+5 6 3 8 12 7 1 10 11 9<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+2 6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img alt="" src="upload/201107/cc4.jpg" /></p><br />
+<p></p><br />
+<p></p><br />
+<p>题解http://pan.baidu.com/s/1dEnBnOX</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2384'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2384'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2384'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

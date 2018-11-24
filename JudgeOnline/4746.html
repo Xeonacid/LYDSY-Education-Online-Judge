@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4746. -- [Usaco2016 Dec]Lasers and Mirrors</title><center><h2>4746: [Usaco2016 Dec]Lasers and Mirrors</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>111&nbsp;&nbsp;<span class=green>Solved: </span>58<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4746'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4746'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4746'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>For some reason, Farmer John's cows always seem to be running laser light shows.For their latest sho</div>
+<div>w, the cows have procured a large powerful laser -- so large, in fact, that they cannot seem to move</div>
+<div>&nbsp;it easily from the location where it was delivered. They would like to somehow send the light from&nbsp;</div>
+<div>the laser to the barn on the other side of FJ's property. Both the laser and the barn can be conside</div>
+<div>red to be located at points in the 2D plane on a map of FJ's farm. The cows plan to point the laser&nbsp;</div>
+<div>so that it sends a beam of light out either horizontally or vertically (i.e., aligned with the x or&nbsp;</div>
+<div>y axes). They will then bounce this beam off a number of mirrors to direct it to the barn.On the far</div>
+<div>m there are N fence posts (1&le;N&le;100,000) located at distinct 2D points (also distinct from the lase</div>
+<div>r and the barn) at which the cows can mount mirrors. The cows can choose not to mount a mirror on a&nbsp;</div>
+<div>fence post, in which case the laser would simply pass straight over the top of the post without chan</div>
+<div>ging direction. If the cows do mount a mirror on a fence post, they align it diagonally like / or \&nbsp;</div>
+<div>so that it will re-direct a horizontal beam of light in a vertical direction or vice versa.Please co</div>
+<div>mpute the minimum possible number of mirrors the cows need to use in order to re-direct the laser to</div>
+<div>&nbsp;the barn.</div>
+<div>出于某种原因，农夫约翰的奶牛总是喜欢使用激光。奶牛们搞到了一个强大的激光发射器，它很重，所以不能移动</div>
+<div>它的位置。奶牛想用它照射到约翰的谷仓的另一端。众所周知，光沿直线传播，所以必须通过镜子的反射来使光线</div>
+<div>发生偏折。激光射出的方向只能是平行于x轴或y轴的。农场上有N（1&lt;=N&lt;=100000）个坑位于平面直角坐标系上的</div>
+<div>不同点（和激光发射器的位置和目标点的位置也不相同）。奶牛可以把镜子安装在坑里（当然也可以不安）。镜子</div>
+<div>可以摆成&ldquo;/&rdquo;或者&ldquo;\&rdquo;。由物理知识可以知道，一道平行于x轴的光射到镜子上一定会平行于y轴射出，平行于y</div>
+<div>轴的光一定会平行于x轴射出。现在给你激光发射器的坐标、目标点的坐标和所有坑的坐标，请你用最少的镜子来</div>
+<div>实现奶牛的梦想。</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains 5 space-separated integers: N,xL,yL,xB,yB&nbsp;</div>
+<div>where (xL,yL) is the location of the laser and (xB,yB) is the location of the barn.&nbsp;</div>
+<div>All coordinates are between 0 and 1,000,000,000</div>
+<div>The next N lines each contain the xx and y locations of a fence post,</div>
+<div>both integers in the range 0&hellip;1,000,000,000</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">第一行包含5个正整数，分别是N,x1,y1,x2,y2，N的意义如题所述，(x1,y1)为激光发射器的坐标，(x2,y2)为目标点的坐标。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">0&lt;=x1,y1,x2,y2&lt;=1,000,000,000</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">接下来N行，每行两个整数x,y表示坑的坐标。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">0&lt;=x,y&lt;=1,000,000,000</span></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>output the minimum number of mirrors needed to direct the laser to the barn,</div>
+<div>
+<div>or -1 if this is impossible to do.</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">最少安装多少个镜子。如果无论怎样都无法完成，输出-1。</span></div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 0 0 7 2<br />
+3 2<br />
+0 2<br />
+1 6<br />
+3 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4746'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4746'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4746'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

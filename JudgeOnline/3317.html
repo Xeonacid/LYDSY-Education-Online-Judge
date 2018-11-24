@@ -1,0 +1,92 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3317. -- [Swerc2008]First Knight</title><center><h2>3317: [Swerc2008]First Knight</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>111&nbsp;&nbsp;<span class=green>Solved: </span>28<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3317'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3317'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3317'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><img height="321" width="777" alt="" src="upload/201311/fprob.jpg" /></span></p>
+<p></p>
+<div class="O" v:shape="_x0000_s1026">
+<div style="mso-line-spacing: '100 -48 0'; mso-margin-left-alt: 230; mso-text-indent-alt: 52; mso-char-wrap: 1; mso-kinsoku-overflow: 1"><span style="font-size: medium"><span style="left: -2.91%; color: #3891a7; font-family: &quot;Wingdings 2&quot;; position: absolute; top: 0.22em; mso-special-format: bullet; mso-color-index: 4"></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">一个</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>m</i></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">&times;</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>n</i></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的棋盘，左上至右下编号为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(1, 1)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">至</span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>m</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">, </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>n</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">，并给定每个格子到周围四个格子的概</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">率　　。 </span></span></div>
+<div style="mso-line-spacing: '100 -48 0'; mso-margin-left-alt: 230; mso-text-indent-alt: 52; mso-char-wrap: 1; mso-kinsoku-overflow: 1"><span style="font-size: medium"><span style="left: -2.82%; color: #3891a7; font-family: &quot;Wingdings 2&quot;; position: absolute; top: 0.22em; mso-special-format: bullet; mso-color-index: 4"></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">一个骑士从</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(1, 1)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">开始，按照给定概率走，问到</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">达</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>m</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">, </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><i>n</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的期望步数。 </span></span></div>
+<div style="mso-line-spacing: '100 -48 0'; mso-margin-left-alt: 230; mso-text-indent-alt: 52; mso-char-wrap: 1; mso-kinsoku-overflow: 1"><span style="font-size: medium"><span style="left: -2.8%; color: #3891a7; font-family: &quot;Wingdings 2&quot;; position: absolute; top: 0.22em; mso-special-format: bullet; mso-color-index: 4"></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">题目保证从任一格开始到</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(m, n)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的概率均为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1 </span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">。</span></span></div>
+</div></div><h2>Input</h2><div class=content><p><img height="456" width="781" alt="" src="upload/201311/fin.jpg" /></p></div><h2>Output</h2><div class=content><p><img height="78" alt="" width="779" src="upload/201311/fout.jpg" /></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2<br />
+0.01 0.50<br />
+0.00 0.00<br />
+0.99 0.00<br />
+0.50 0.00<br />
+0.00 0.00<br />
+0.50 0.00<br />
+0.00 0.50<br />
+0.00 0.00<br />
+1 5<br />
+0.0 0.0 0.0 0.0 0.0<br />
+1.0 0.1 0.7 0.5 0.0<br />
+0.0 0.0 0.0 0.0 0.0<br />
+0.0 0.9 0.3 0.5 0.0<br />
+3 3<br />
+0.000001 0.0 1.0<br />
+0.0 1.0 1.0<br />
+0.0 0.0 0.0<br />
+0.999999 1.0 0.0<br />
+1.0 0.0 0.0<br />
+0.000001 0.000001 0.0<br />
+0.0 0.0 0.0<br />
+0.0 0.0 0.0<br />
+0.999999 0.0 0.0<br />
+0.0 0.0 0.0<br />
+0.0 0.0 0.0<br />
+0.0 0.999999 0.0<br />
+0 0<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4.0<br />
+41.142857142857146<br />
+7.999994000002</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=WCMG%E6%8F%90%E4%BE%9BSPJ'>WCMG提供SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3317'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3317'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3317'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

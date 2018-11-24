@@ -1,0 +1,61 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2873. -- 光之大陆</title><center><h2>2873: 光之大陆</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>74&nbsp;&nbsp;<span class=green>Solved: </span>37<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2873'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2873'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2873'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">在光之大陆的土地上，各种势力盘根错节。来自光之峡谷的精灵，来自黑暗森林的亡灵，来自古老东方的人类共同生活在一起。善于打造装置的矮人，善于发明的侏儒，隐匿于山林的巨人也坚守着属于自己的领土。这些种族之间关系错综复杂，构成了极其庞大的关系网络。大魔法师小</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">想要研究其中的种族关系。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">两个物种之间可以是盟友，也可以不是盟友，如果</span><span style="font-size: 12pt">a1,a2..an</span><span style="font-size: 12pt">满足</span><span style="font-size: 12pt">ai</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">ai+1</span><span style="font-size: 12pt">是盟友，且</span><span style="font-size: 12pt">an</span><span style="font-size: 12pt">和</span><span style="font-size: 12pt">a1</span><span style="font-size: 12pt">是盟友，则他们构成了一个联盟。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">由于光之大陆正处于微妙的和平之中。所以一个合理的物种关系应满足如下条件</span><span style="font-size: 12pt">:</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">1</span><span style="font-size: 12pt">、对于任意两个物种</span><span style="font-size: 12pt">A,B,</span><span style="font-size: 12pt">都存在一个序列</span><span style="font-size: 12pt">A,a1,a2..an,B,</span><span style="font-size: 12pt">使得任意相邻两个种族是盟友</span><span style="font-size: 12pt">(</span><span style="font-size: 12pt">注意</span><span style="font-size: 12pt">A,B</span><span style="font-size: 12pt">不一定是盟友</span><span style="font-size: 12pt">)</span><span style="font-size: 12pt">。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">2</span><span style="font-size: 12pt">、对于任意两个联盟</span><span style="font-size: 12pt">Sa,Sb,</span><span style="font-size: 12pt">都不存在一个物种既参加了联盟</span><span style="font-size: 12pt">Sa</span><span style="font-size: 12pt">，又参加了联盟</span><span style="font-size: 12pt">Sb</span><span style="font-size: 12pt">。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">小</span><span style="font-size: 12pt">P</span><span style="font-size: 12pt">想知道，大陆上的</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">个种族一共有多少种可能的结盟关系，由于结果可能很大，你只需要输出答案</span><span style="font-size: 12pt">mod M</span><span style="font-size: 12pt">的值。</span></div>
+<div style="text-indent: 21pt">&nbsp;</div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">一行两个正整数：</span><span style="font-size: 12pt">N,M</span><span style="font-size: 12pt">（含义如题所述）</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">一个整数：</span><span style="font-size: 12pt">ans</span><span style="font-size: 12pt">表示方案</span><span style="font-size: 12pt">mod M</span><span style="font-size: 12pt">的值</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 1000000</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>31</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">100%</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">测试点保证</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri"> n &lt;= 200, m &lt;= 1000000<o:p></o:p></font></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2873'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2873'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2873'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2428. -- [HAOI2006]均分数据</title><center><h2>2428: [HAOI2006]均分数据</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3610&nbsp;&nbsp;<span class=green>Solved: </span>1153<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2428'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2428'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2428'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">已知</span><span lang="EN-US" style="line-height: 150%; text-indent: 21pt;">N</span><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">个正整数：</span><span lang="EN-US" style="line-height: 150%; text-indent: 21pt;">A1</span><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">、</span><span lang="EN-US" style="line-height: 150%; text-indent: 21pt;">A2</span><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">、&hellip;&hellip;、</span><span lang="EN-US" style="line-height: 150%; text-indent: 21pt;">An </span><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">。今要将它们分成</span><span lang="EN-US" style="line-height: 150%; text-indent: 21pt;">M</span><span style="line-height: 150%; text-indent: 21pt; font-family: 宋体;">组，使得各组数据的数值和最平均，即各组的均方差最小。均方差公式如下：</span></p>
+<p><img src="upload/201410/aa(1).jpg" width="390" height="94" alt="" />,<span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">其中</span><span style="font-family:
+宋体">&sigma;</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">为均方差，<img src="upload/201410/bb.jpg" width="34" height="46" alt="" /></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是各组数据和的平均值，</span><span lang="EN-US">x<sub>i</sub></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为第</span><span lang="EN-US">i</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组数据的数值和。</span></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p></p></div><h2>Input</h2><div class=content><div>第一行是两个整数，表示N,M的值（N是整数个数，M是要分成的组数）</div>
+<div>第二行有N个整数，表示A1、A2、&hellip;&hellip;、An。整数的范围是1--50。</div>
+<div>（同一行的整数间用空格分开）</div></div><h2>Output</h2><div class=content><p><a id="fck_paste_padding"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这一行只包含一个数，表示最小均方差的值</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">保留小数点后两位数字</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></a></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata> 6  3<br />
+1  2  3  4  5  6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.00</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于全部的数据，保证有K&lt;=N &lt;= 20，2&lt;=K&lt;=6</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day2'>Day2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2428'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2428'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2428'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2058. -- [Usaco2010 Nov]Cow Photographs</title><center><h2>2058: [Usaco2010 Nov]Cow Photographs</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>220&nbsp;&nbsp;<span class=green>Solved: </span>124<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2058'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2058'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2058'>Discuss</a>]</center><h2>Description</h2><div class=content>奶牛的图片 
+Farmer John希望给他的N(1<=N<=100,000)只奶牛拍照片,这样他就可以向他的朋友炫耀他的奶牛.这N只奶牛被标号为1..N.
+在照相的那一天,奶牛们排成了一排.其中第i个位置上是标号为c_i(1<=c_i<=N)的奶牛.对于奶牛的站位,Farmer John有他自己的想法.
+FJ是这么想的,标号为i(1<=i<=n-1)的奶牛只能站在标号为i+1的奶牛的左边,而标号为N的奶牛只能站在标号为1的奶牛的左边.当然,没有牛可以站在队列中最左边的奶牛的左边了.也就是说,最左边的奶牛编号是随意的.
+这些奶牛都非常的饿,急切的希望吃到FJ承诺的在拍照后的大餐,所以FJ想尽快的拍照.奶牛们的方向感非常的不好,所以FJ每一分钟只可以选择相邻的两只奶牛然后让他们交换位置.FJ最小需要多少时间就能使奶牛站成一个可以接受的序列?
+比方说一个有5只奶牛的例子,一开始序列是这样的:
+     左边           右边
+        3  5  4  2  1
+
+第一分钟,FJ可以交换第二队奶牛(即5和4),交换后的队列:
+        3  4  5  2 1
+第二分钟,FJ交换最右边的一对,序列变成这样:
+        3  4  5  1  2
+这样,只用了2分钟,就是序列变为了一个FJ所希望的序列.
+</div><h2>Input</h2><div class=content>第1行:一个单独的数N
+第2到n+1行:第i+1行上的数表示站在第i的位置上的奶牛的编号(即c_i).
+</div><h2>Output</h2><div class=content>一个整数,表示是奶牛的序列变为一个合法的序列的最小花费时间.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+<br />
+3<br />
+<br />
+5<br />
+<br />
+4<br />
+<br />
+2<br />
+<br />
+1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2058'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2058'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2058'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

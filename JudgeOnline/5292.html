@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5292. -- [Bjoi2018]治疗之雨</title><center><h2>5292: [Bjoi2018]治疗之雨</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>101&nbsp;&nbsp;<span class=green>Solved: </span>51<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5292'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5292'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5292'>Discuss</a>]</center><h2>Description</h2><div class=content><div>（没玩过《炉石传说》的人可以跳过这一段）今天我们来探讨下《炉石传说》中&ldquo;治疗之雨&rdquo;（恢复12点生命值，</div>
+<div>随机分配到所有友方角色上）和&ldquo;暗影打击装甲&rdquo;（每当一个角色获得治疗，便对随机敌人造成1点伤害）这两张</div>
+<div>卡牌之间的互动效果。假设你场上有m个剩余生命值无限大且生命值上限减去剩余生命值也无限大的随从，而对方</div>
+<div>的场上有k个暗影打击装甲，你的英雄剩余生命值为p、生命值上限为n，现在你使用了一张可以恢复无限多（而不</div>
+<div>是12点）生命值的治疗之雨，问治疗之雨期望总共恢复了几点生命值以后你的英雄会死亡（生命值降为0；治疗之</div>
+<div>雨的判定机制使得在此后再也不会为英雄恢复生命值）。</div>
+<div>注：题目背景与题目描述有冲突的地方请以题目描述为准</div>
+<div>下面让我们再形式化地描述一遍问题。</div>
+<div>题目描述</div>
+<div>你现在有m+1个数：第一个为p，最小值为0，最大值为n；剩下m个都是无穷，没有最小值或最大值。</div>
+<div>你可以进行任意多轮操作，每轮操作如下：</div>
+<div>在不为最大值的数中等概率随机选择一个（如果没有则不操作），把它加一；</div>
+<div>进行k次这个步骤：在不为最小值的数中等概率随机选择一个（如果没有则不操作），把它减一。</div>
+<div>现在问期望进行多少轮操作以后第一个数会变为最小值0。</div>
+<div></div></div><h2>Input</h2><div class=content><div>输入包含多组数据。</div>
+<div>输入第一行包含一个正整数T，表示数据组数。</div>
+<div>接下来T行，每行4个非负整数n、p、m、k（含义见题目描述），表示一次询问。</div>
+<div>1&le;T&le;100&nbsp;</div>
+<div>1&le;p&le;n&le;1500</div>
+<div>0&le;m,k&le;1000000000 。</div>
+<div>保证不存在n=p=k=1 ,m=0 的情况（因为出题人判错了）</div>
+<div>保证不存在答案的分母是1000000007 的倍数的情况（因为出题人没想到）</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出T行，每行一个整数，表示一次询问的答案。</div>
+<div>如果无论进行多少轮操作，第一个数都不会变为最小值0，那么输出-1；</div>
+<div>否则，可以证明答案一定为有理数，那么请输出答案模1000000007的余数，</div>
+<div>即设答案为b/a（a、b为互质的正整数），你输出的整数为x，</div>
+<div>那么你需要保证0&le;x&lt;1000000007且a&equiv;bx mod 1000000007</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+2 1 1 1<br />
+2 2 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+8</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>鸣谢佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5292'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5292'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5292'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

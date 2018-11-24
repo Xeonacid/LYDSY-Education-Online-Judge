@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3192. -- [JLOI2013]删除物品</title><center><h2>3192: [JLOI2013]删除物品</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1301&nbsp;&nbsp;<span class=green>Solved: </span>750<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3192'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3192'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3192'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">箱子再分配问题需要解决如下问题：</span></div>
+<div><span style="font-size: medium">&nbsp;（1）一共有N个物品，堆成M堆。</span></div>
+<div><span style="font-size: medium">&nbsp;（2）所有物品都是一样的，但是它们有不同的优先级。</span></div>
+<div><span style="font-size: medium">&nbsp;（3）你只能够移动某堆中位于顶端的物品。</span></div>
+<div><span style="font-size: medium">&nbsp;（4）你可以把任意一堆中位于顶端的物品移动到其它某堆的顶端。若此物品是当前所有物品中优先级最高的，可以直接将之删除而不用移动。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">（5）求出将所有物品删除所需的最小步数。删除操作不计入步数之中。</span></div>
+<div><span style="font-size: medium">&nbsp;（6）只是一个比较难解决的问题，这里你只需要解决一个比较简单的版本：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不会有两个物品有着相同的优先级，且M=2</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行是包含两个整数N1,N2分别表示两堆物品的个数。</span></div>
+<div><span style="font-size: medium">接下来有N1行整数按照从顶到底的顺序分别给出了第一堆物品中的优先级，数字越大，优先级越高。</span></div>
+<div><span style="font-size: medium">再接下来的N2行按照同样的格式给出了第二堆物品的优先级。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">对于每个数据，请输出一个整数，即最小移动步数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+1<br />
+4<br />
+5<br />
+2<br />
+7<br />
+3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+ <br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">1&lt;=N1+N2&lt;=100000</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3192'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3192'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3192'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

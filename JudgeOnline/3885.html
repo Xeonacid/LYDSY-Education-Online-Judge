@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3885. -- [Usaco2015 Jan]Cow Rectangles</title><center><h2>3885: [Usaco2015 Jan]Cow Rectangles</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>172&nbsp;&nbsp;<span class=green>Solved: </span>92<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3885'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3885'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3885'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-family: monospace; font-size: 14px; white-space: pre-wrap;">The locations of Farmer John's N cows (1 &lt;= N &lt;= 500) are described by distinct points in the 2D plane.  The cows belong to two different breeds: Holsteins and Guernseys.  Farmer John wants to build a rectangular fence with sides parallel to the coordinate axes enclosing only Holsteins, with no Guernseys (a cow counts as enclosed even if it is on the boundary of the fence).  Among all such fences, Farmer John wants to build a fence enclosing the maximum number of Holsteins.  And among all these fences, Farmer John wants to build a fence of minimum possible area.  Please determine this area.  A fence of zero width or height is allowable.<br />
+</span><font face="monospace"><span style="font-size: 14px; white-space: pre-wrap;">坐标系上给出n个点，分&rdquo;H&rdquo;和&rdquo;G&rdquo;，一个整点坐标上至多一个点。  现在求一个不包含&rdquo;G&rdquo;的包含尽量多&rdquo;H&rdquo;的子矩形，然后在保证&rdquo;H&rdquo;最多的情况下还要问最小面积。  输出&rdquo;H&rdquo;的最大数量，和保证&rdquo;H&rdquo;最多时的最小矩形面积。</span></font></p>
+<p></p></div><h2>Input</h2><div class=content><div><span style="font-family: monospace; font-size: 14px; white-space: pre-wrap;">The first line of input contains N.  Each of the next N lines describes a cow, and contains two integers and a character. The integers indicate a point (x,y) (0 &lt;= x, y &lt;= 1000) at which the cow is located. The character is H or G, indicating the cow's breed.  No two cows are located at the same point, and there is always at least one Holstein.<br />
+</span></div>
+<p></p></div><h2>Output</h2><div class=content><div></div>
+<div>of Holsteins that can be enclosed by a fence containing no Guernseys,</div>
+<div>and second line should contain the minimum area enclosed by such a<span style="font-family: monospace; font-size: 14px; white-space: pre-wrap;"><br />
+</span></div>
+<div>
+<p></p>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 1 H<br />
+2 2 H<br />
+3 3 G<br />
+4 4 H<br />
+6 6 H</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold&amp;%E9%B8%A3%E8%B0%A218357'>Gold&鸣谢18357</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3885'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3885'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3885'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

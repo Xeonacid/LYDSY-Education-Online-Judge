@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2600. -- [Ioi2011]ricehub</title><center><h2>2600: [Ioi2011]ricehub</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>896&nbsp;&nbsp;<span class=green>Solved: </span>481<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2600'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2600'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2600'>Discuss</a>]</center><h2>Description</h2><div class=content><p>乡间有一条笔直而长的路称为&ldquo;米道&rdquo;。沿着这条米道上 R 块稻田，每块稻田的坐标均<br />
+为一个 1 到 L 之间(含 1 和 L)的整数。这些稻田按照坐标以不减的顺序给出，即对于 0 &le; i &lt;<br />
+R，稻田 i 的坐标 X[i]满足 1 &le; X[0] &le; ... &le; X[R-1] &le; L。 <br />
+注意：可能有多块稻田位于同一个坐标上。 <br />
+我们计划建造一个米仓用于储存尽可能多的稻米。和稻田一样，米仓将建在米道上，其<br />
+坐标也是一个 1 到 L 之间的整数（含 1 和 L）。这个米仓可以建在满足上述条件的任一个位<br />
+置上，包括那些原来已有一个或多个稻田存在的位置。 <br />
+在收获季节，每一块稻田刚好出产一滿货车的稻米。为了将这些稻米运到米仓，需要雇<br />
+用一位货车司机来运米。司机的收费是每一满货车运送一个单位的距离收取 1 元。換言之，<br />
+将稻米从特定的稻田运到米仓的费用在数值上等于稻田坐标与米仓坐标之差的绝对值。 <br />
+不幸的是，今年预算有限，我们至多只能花费 B 元运费。你的任务是要帮我们找出一个<br />
+建造米仓的位置，可以收集到尽可能多的稻米。 <br />
+</p></div><h2>Input</h2><div class=content><p>第一行 三个整数 R L B<br />
+接下来R行 每行一个整数 表示X[i]<br />
+</p></div><h2>Output</h2><div class=content><p><br />
+一个整数 最多稻米数<br />
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+5 20 6<br />
+1<br />
+2<br />
+10<br />
+12<br />
+14<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+3<br />
+HINT<br />
+1 ≤ R ≤ 100,000  <br />
+1 ≤ L ≤ 1,000,000,000 <br />
+0 ≤ B ≤ 2,000,000,000,000,000 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2600'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2600'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2600'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

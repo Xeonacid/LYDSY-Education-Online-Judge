@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2769. -- YY的快速排序</title><center><h2>2769: YY的快速排序</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>124&nbsp;&nbsp;<span class=green>Solved: </span>43<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2769'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2769'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2769'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">友爱的YY小朋友,正在学习快速排序，聪明的他很快就发现，快排是会出现退化的情况的。于是乎他友爱地发明了用随机化的方法。但是这个时候友爱的小YY还是不满足于现状，他想知道怎么证明快速排序的期望复杂度是O(nlogn)。于是他决定自己定义代价自己算，他的快速排序过程是这样的：首先在待排序的数字里随机选取一个X作为基准点,然后代价变量S=划分代价（<b>划分代价即在</b><b>X</b><b>的左边比X</b><b>大的数字的个数+</b><b>在X</b><b>的右边比X</b><b>小的数字的个数</b>）+将两部分分别递归下去的S。<b>划分的过程中保持相对位置不变。</b>聪明又友爱的他很快就发现S的最大期望是nlogn的级别的，但是好学的他还想知道对于一个具体的，数字不重复的序列，S的期望是多少。当然你要知道YY是要拿UOI金牌的人，所以他决定让你来完成计算的工作。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">第一行一个整数n。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第二行n个整数，表示待排序数列（每个数字均在long范围内）。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">一个实数,S的期望值。（保留六位小数）</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">输入样例</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">3</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">1 2 3</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+0.000000<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata></span></div><h2>HINT</h2>
+			<div class=content><p><p>数据规模<br /><br />
+20%的数据保证1&lt;=n&lt;=300<br /><br />
+100%的数据保证1&lt;=n&lt;=15000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2769'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2769'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2769'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

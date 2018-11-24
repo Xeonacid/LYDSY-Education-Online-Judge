@@ -1,0 +1,93 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4242. -- 水壶</title><center><h2>4242: 水壶</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>1032&nbsp;&nbsp;<span class=green>Solved: </span>263<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4242'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4242'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4242'>Discuss</a>]</center><h2>Description</h2><div class=content><div>JOI君所居住的IOI市以一年四季都十分炎热著称。</div>
+<div>IOI市是一个被分成纵H*横W块区域的长方形，每个区域都是建筑物、原野、墙壁之一。建筑物的区域有P个，编号为1...P。</div>
+<div>JOI君只能进入建筑物与原野，而且每次只能走到相邻的区域中，且不能移动到市外。</div>
+<div>JOI君因为各种各样的事情，必须在各个建筑物之间往返。虽然建筑物中的冷气设备非常好，但原野上的日光十分强烈，因此在原野上每走过一个区域都需要1单位的水。此外，原野上没有诸如自动售货机、饮水处之类的东西，因此IOI市的市民一般都携带水壶出行。大小为x的水壶最多可以装x单位的水，建筑物里有自来水可以将水壶装满。</div>
+<div>由于携带大水壶是一件很困难的事情，因此JOI君决定携带尽量小的水壶移动。因此，为了随时能在建筑物之间移动，请你帮他写一个程序来计算最少需要多大的水壶。</div>
+<div>现在给出IOI市的地图和Q个询问，第i个询问(1&lt;=i&lt;=Q)为&ldquo;在建筑物Si和Ti之间移动，最小需要多大的水壶？&rdquo;，请你对于每个询问输出对应的答案。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行四个空格分隔的整数H,W,P,Q，表示IOI市被分成了纵H*横W块区域，有P个建筑物，Q次询问。</div>
+<div>接下来H行，第i行(1&lt;=i&lt;=H)有一个长度为W的字符串，每个字符都是&rsquo;.&rsquo;或&rsquo;#&rsquo;之一，&rsquo;.&rsquo;表示这个位置是建筑物或原野，&rsquo;#&rsquo;表示这个位置是墙壁。</div>
+<div>接下来P行描述IOI市每个建筑物的位置，第i行(1&lt;=i&lt;=P)有两个空格分隔的整数Ai和Bi，表示第i个建筑物的位置在第Ai行第Bi列。保证这个位置在地图中是&rsquo;.&rsquo;</div>
+<div>接下来Q行，第i行(1&lt;=i&lt;=Q)有两个空格分隔的整数Si和Ti，表示第i个询问为&ldquo;在建筑物Si和Ti之间移动，最小需要多大的水壶？&rdquo;</div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>输出Q行，第i行(1&lt;=i&lt;=Q)一个整数，表示在建筑物Si和Ti之间移动最小需要多大的水壶。</div>
+<div>如果无法到达，输出-1。此外，如果不需要经过原野就能到达，输出0。</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5 4 4<br />
+.....<br />
+..##.<br />
+.#...<br />
+..#..<br />
+.....<br />
+1 1<br />
+4 2<br />
+3 3<br />
+2 5<br />
+1 2<br />
+2 4<br />
+1 3<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+4<br />
+4<br />
+2</span></div><h2>HINT</h2>
+			<div class=content><p><div>1&lt;=H&lt;=2000</div><br />
+<div>1&lt;=W&lt;=2000</div><br />
+<div>2&lt;=P&lt;=2*10^5</div><br />
+<div>1&lt;=Q&lt;=2*10^5</div><br />
+<div>1&lt;=Ai&lt;=H(1&lt;=i&lt;=P)</div><br />
+<div>1&lt;=Bi&lt;=W(1&lt;=i&lt;=P)</div><br />
+<div>(Ai,Bi)&ne;(Aj,Bj)(1&lt;=i&lt;j&lt;=P)</div><br />
+<div>1&lt;=Si&lt;Ti&lt;=P(1&lt;=i&lt;=Q)</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=JOI%202013~2014%20%E6%98%A5%E5%AD%A3training%E5%90%88%E5%AE%BF%20%E7%AB%9E%E6%8A%802%20By%20PoPoQQQ'>JOI 2013~2014 春季training合宿 竞技2 By PoPoQQQ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4242'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4242'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4242'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

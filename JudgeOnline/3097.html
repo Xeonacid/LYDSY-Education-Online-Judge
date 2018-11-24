@@ -1,0 +1,110 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3097. -- Hash Killer I</title><center><h2>3097: Hash Killer I</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>1305&nbsp;&nbsp;<span class=green>Solved: </span>483<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3097'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3097'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3097'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">这天天气不错，hzhwcmhf神犇给VFleaKing出了一道题：<br />
+给你一个长度为N的字符串S，求有多少个不同的长度为L的子串。<br />
+子串的定义是S[l]、S[l + 1]、... S[r]这样连续的一段。<br />
+两个字符串被认为是不同的当且仅当某个位置上的字符不同。</span></p>
+<p><span style="font-size: medium">VFleaKing一看觉得这不是Hash的裸题么！于是果断写了哈希 + 排序。<br />
+而hzhwcmhf神犇心里自然知道，这题就是后缀数组的height中 &lt; L的个数 + 1，就是后缀自动机上代表的长度区间包含L的结点个数，就是后缀树深度为L的结点的数量。<br />
+但是hzhwcmhf神犇看了看VFleaKing的做法表示非常汗。于是想卡掉他。</span></p>
+<p><span style="font-size: medium">VFleaKing使用的是字典序哈希，其代码大致如下：<br />
+u64 val = 0;<br />
+for (int i = 0; i &lt; l; i++)<br />
+&nbsp;val = val * base + s[i] - 'a';<br />
+u64是无符号int64，范围是[0, 2^64)。VFleaKing让val自然溢出。<br />
+base是一个常量，VFleaKing会根据心情决定其值。<br />
+VFleaKing还求出来了base ^ l，即base的l次方，这样就能方便地求出所有长度为L的子串的哈希值。<br />
+然后VFleaKing给哈希值排序，去重，求出有多少个不同的哈希值，把这个数作为结果。<br />
+其算法的C++代码如下：</span></p>
+<p><span style="font-size: medium">typedef unsigned long long u64;</span></p>
+<p><span style="font-size: medium">const int MaxN = 100000;</span></p>
+<p><span style="font-size: medium">inline int hash_handle(const char *s, const int &amp;n, const int &amp;l, const int &amp;base)<br />
+{<br />
+&nbsp;u64 hash_pow_l = 1;<br />
+&nbsp;for (int i = 1; i &lt;= l; i++)<br />
+&nbsp;&nbsp;hash_pow_l *= base;</span></p>
+<p><span style="font-size: medium">&nbsp;int li_n = 0;<br />
+&nbsp;static u64 li[MaxN];</span></p>
+<p><span style="font-size: medium">&nbsp;u64 val = 0;<br />
+&nbsp;for (int i = 0; i &lt; l; i++)<br />
+&nbsp;&nbsp;val = val * base + s[i] - 'a';<br />
+&nbsp;li[li_n++] = val;<br />
+&nbsp;for (int i = l; i &lt; n; i++)<br />
+&nbsp;{<br />
+&nbsp;&nbsp;val = val * base + s[i] - 'a';<br />
+&nbsp;&nbsp;val -= (s[i - l] - 'a') * hash_pow_l;<br />
+&nbsp;&nbsp;li[li_n++] = val;<br />
+&nbsp;}</span></p>
+<p><span style="font-size: medium">&nbsp;sort(li, li + li_n);<br />
+&nbsp;li_n = unique(li, li + li_n) - li;<br />
+&nbsp;return li_n;<br />
+}</span></p>
+<p><span style="font-size: medium">hzhwcmhf当然知道怎么卡啦！但是他想考考你。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">没有输入。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">你需要输出一组数据使得VFleaKing的代码WA掉。我们会使用Special Judge检查你的结果的正确性。<br />
+输出文件共两行。<br />
+第一行两个用空格隔开的数n、l。<br />
+第二行是一个长度为n的字符串。只能包含'a'~'z'。<br />
+需要保证1 &lt;= n &lt;= 10^5, 1 &lt;= l &lt;= n，<br />
+不符合以上格式会WA。<br />
+不要有多余字符，很可能导致你WA。</font></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>没有<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8 4<br />
+buaabuaa<br />
+（当然这个输出是会WA的）<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>orz 波兰人 &amp; fotile96 &amp; sillycross<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=VFleaKing&#32;&amp;&#32;hzhwcmhf'>VFleaKing & hzhwcmhf<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3097'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3097'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3097'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

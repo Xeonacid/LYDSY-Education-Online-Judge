@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3962. -- [WF2011]Coffee Central</title><center><h2>3962: [WF2011]Coffee Central</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>66&nbsp;&nbsp;<span class=green>Solved: </span>27<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3962'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3962'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3962'>Discuss</a>]</center><h2>Description</h2><div class=content><div>这只是一时的狂热还是将长久地持续下去？你并不能肯定，不过在你家乡数目持续增长的咖啡馆着实成了一种风尚。显然，人们对于咖啡是如此地着迷以至于那些靠近更多咖啡馆的公寓需要更多的租金。</div>
+<div>这引起了当地一家房地产公司的注意。他们对于根据靠近大量咖啡馆来确定城市当中最有价值的区域很感兴趣。他们给你了城市地图，标记了咖啡馆的位置。假定老百姓们只会为了早点走过一定数目的街区，你需要找到能到达最多咖啡馆的位置。就像你可能知道的那样，你的家乡是按照方格网的布局设计建造的，所以街区之间按南北和东西轴线对齐。(a,b)和(c,d)两个交叉口之间的距离是|a-c|+|b-d|。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>测试数据的第一行包含四个整数dx,dy,n和q。它们分别代表城市网格的面积为dx*dy，咖啡馆的数量n，以及询问个数q。接下来的n行每行包含两个整数xi和yi；它们说明了第i个咖啡馆的位置。每个十字路口最多只有一个咖啡馆。接下来的q行每行包含了一个整数m，表示人们为了咖啡会走过的最长距离。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于测试数据的每个询问输出一行。每行输出在给定的距离m以内可以抵达咖啡馆的最大数目，紧跟着输出最佳位置。比如说样例输出说明了从最佳位置(3,4)出发，在询问要求的1的距离范围内可以抵达3个咖啡馆。如果存在多个最佳位置，选择最南边的那个（也就是y坐标最小的），如果任然多解，选择最西边的那个（也就是x坐标最小的）。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 5 3<br />
+1 1<br />
+1 2<br />
+3 3<br />
+4 4<br />
+2 4<br />
+1<br />
+2<br />
+4<br />
+0 0 0 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1:<br />
+3 (3,4)<br />
+4 (2,2)<br />
+5 (3,1)</span></div><h2>HINT</h2>
+			<div class=content><p><p>0&le;n&le;500000,1&le;dx,dy&le;1000,1&le;q&le;20,1&le;xi&le;dx,1&le;yi&le;dy,1&le;m&le;1000000</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3962'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3962'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3962'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

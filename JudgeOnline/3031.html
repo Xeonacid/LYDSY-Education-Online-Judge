@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3031. -- 理科男</title><center><h2>3031: 理科男</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>155&nbsp;&nbsp;<span class=green>Solved: </span>54<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3031'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3031'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3031'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　　吃过草莓刨冰之后，Vani和cl有些疲倦地坐在一个长椅上。<br />
+　　&ldquo;呐，玩得开心吗？&rdquo;Vani忽然问道。<br />
+　　&ldquo;嗯&hellip;&hellip;很，很开心的说。&rdquo;<br />
+　　&ldquo;那么，我有一个问题想要问你呢。&rdquo;<br />
+　　cl的脸有点红了起来。<br />
+　　&ldquo;嗯&hellip;&hellip;好吧。问、问吧&hellip;&hellip;我会告诉你的哦&hellip;&hellip;&rdquo;<br />
+　　&ldquo;那好。对于一个分数A / B&hellip;&hellip;&rdquo;<br />
+　　&ldquo;嗯&hellip;&hellip;哎？哎？！&rdquo;<br />
+　　&ldquo;&hellip;&hellip;就是这个问题。我觉得这个问题好纠结啊&hellip;&hellip;&rdquo;<br />
+　　Vani淡定地说完这句话。<br />
+　　&ldquo;啊？！哈啊？！&rdquo; </span></p>
+<p><span style="font-size: medium">　　对于给定的分数 A / B，求其在 K 进制下是有限小数还是循环小数。如果是有限小数，求小数点后的位数；如果是循环小数，则求混循环部分和循环节的长度又分别是多少。<br />
+　　注意，循环节指的是最短循环节，且混循环部分的长度也指最短。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">　　第一行一个正整数 T，表示测试数据的数目。<br />
+　　每个测试数据包含三个空格分隔的整数 A, B, K。含义如题目所示。</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">　　对于每个测试数据，在单独的一行内输出两个空格分隔的整数 M, R。<br />
+　　其中 M 表示混循环部分的长度，R 表示循环节的长度。<br />
+　　如果 A / B 在 K 进制下是有限小数，则 R = 0，M 为小数点后面的位数；如果 A / B 在 K 进制下是纯循环小数，则 M = 0。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1 8 10<br />
+17 99 10<br />
+217 990 10</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 0<br />
+0 2<br />
+1 2</span></div><h2>HINT</h2>
+			<div class=content><p><p>　对于 100% 的数据，1&le;A&lt;B&le;10^12，K&le;10^12，T&le;10。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Poetize2'>Poetize2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3031'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3031'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3031'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

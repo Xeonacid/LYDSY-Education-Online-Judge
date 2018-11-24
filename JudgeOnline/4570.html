@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4570. -- [Scoi2016]妖怪</title><center><h2>4570: [Scoi2016]妖怪</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1188&nbsp;&nbsp;<span class=green>Solved: </span>369<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4570'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4570'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4570'>Discuss</a>]</center><h2>Description</h2><div class=content><div>邱老师是妖怪爱好者，他有n只妖怪，每只妖怪有攻击力atk和防御力dnf两种属性。邱老师立志成为妖怪大师，于</div>
+<div>是他从真新镇出发，踏上未知的旅途，见识不同的风景。环境对妖怪的战斗力有很大影响，在某种环境中，妖怪可</div>
+<div>以降低自己k&times;a点攻击力，提升k&times;b点防御力或者，提升自己k&times;a点攻击力，降低k&times;b点防御力，a，b属于正实数</div>
+<div>，k为任意实数，但是atk和dnf必须始终非负。妖怪在环境(a,b)中的战斗力为妖怪在该种环境中能达到的最大攻击</div>
+<div>力和最大防御力之和。strength(a,b)=max(atk(a,b))+max(dnf(a,b))环境由a，b两个参数定义，a，b的含义见前</div>
+<div>文描述。比如当前环境a=3，b=2，那么攻击力为6，防御力为2的妖怪，能达到的最大攻击力为9，最大防御力为6。</div>
+<div>所以该妖怪在a=3，b=2的环境下战斗力为15。因此，在不同的环境，战斗力最强的妖怪可能发生变化。作为一名优</div>
+<div>秀的妖怪训练师，邱老师想发掘每一只妖怪的最大潜力，他想知道在最为不利的情况下，他的n只妖怪能够达到的</div>
+<div>最强战斗力值，即存在一组正实数(a,b)使得n只妖怪在该环境下最强战斗力最低。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行一个n，表示有n只妖怪。接下来n行，每行两个整数atk和dnf，表示妖怪的攻击力和防御力。</div>
+<div>1&le;n&le;10^6, 0＜atk,dnf&le;10^8</div></div><h2>Output</h2><div class=content><p>&nbsp;输出在最不利情况下最强妖怪的战斗力值，保留4位小数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 <br />
+1 1 <br />
+1 2 <br />
+2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8.0000</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4570'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4570'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4570'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

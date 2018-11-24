@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1465. -- 糖果传递</title><center><h2>1465: 糖果传递</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>696&nbsp;&nbsp;<span class=green>Solved: </span>367<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1465'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1465'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1465'>Discuss</a>]</center><h2>Description</h2><div class=content>
+老师准备了一堆糖果, 恰好n个小朋友可以分到数目一样多的糖果. 老师要n个小朋友去拿糖果, 然后围着圆桌坐好, 第1个小朋友的左边是第n个小朋友, 其他第i个小朋友左边是第i-1个小朋友. 大家坐好后, 老师发现, 有些小朋友抢了很多的糖果, 有的小朋友只得到了一点点糖果, 甚至一颗也没有 &#61516;, 设第i个小朋友有ai颗糖果. 小朋友们可以选择将一些糖果给他左边的或者右边的小朋友, 通过”糖果传递”最后使得每个小朋友得到的糖果数是一样多的, 假设一颗糖果从一个小朋友传给另一个小朋友的代价是1, 问怎样传递使得所耗的总代价最小.
+</div><h2>Input</h2><div class=content>第一行一个正整数n,表示小朋友的个数.
+n行,每行一个整数ai,表示第i个小朋友得到的糖果的颗数.
+</div><h2>Output</h2><div class=content>输出只有一个数, 表示最小代价.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4                               <br />
+1<br />
+2<br />
+5<br />
+4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4</span></div><h2>HINT</h2>
+			<div class=content><p>数据范围  <br />
+   30%的测试数据, n<=1000.<br />
+   100%的测试数据, n<=1000000.<br />
+   ai>=0, 保证ai在longint/int范围内, ai的总和在int64/long long范围内.<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1465'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1465'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1465'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

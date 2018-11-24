@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4579. -- [Usaco2016 Open]Closing the Farm</title><center><h2>4579: [Usaco2016 Open]Closing the Farm</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>202&nbsp;&nbsp;<span class=green>Solved: </span>118<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4579'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4579'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4579'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John and his cows are planning to leave town for a long vacation, and so FJ wants to temporar</div>
+<div>ily close down his farm to save money in the meantime.The farm consists of NN barns connected with M</div>
+<div>M bidirectional paths between some pairs of barns (1&le;N,M&le;200,000). To shut the farm down, FJ plans</div>
+<div>&nbsp;to close one barn at a time. When a barn closes, all paths adjacent to that barn also close, and ca</div>
+<div>n no longer be used.FJ is interested in knowing at each point in time (initially, and after each clo</div>
+<div>sing) whether his farm is &quot;fully connected&quot; -- meaning that it is possible to travel from any open b</div>
+<div>arn to any other open barn along an appropriate series of paths. Since FJ's farm is initially in som</div>
+<div>ewhat in a state of disrepair, it may not even start out fully connected.</div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.549334526062px;">给你N点M边的无向图(1&lt;=N,M&lt;=200000)，一共删n次点，</span></div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.549334526062px;">每次询问删这个点之前是否完全联通</span></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N and M. The next M lines each describe a path in terms of the pair</div>
+<div>&nbsp;of barns it connects (barns are conveniently numbered 1&hellip;N). The final N lines give a permutation o</div>
+<div>f 1&hellip;N describing the order in which the barns will be closed.</div>
+<p></p></div><h2>Output</h2><div class=content><div>The output consists of N lines, each containing &quot;YES&quot; or &quot;NO&quot;. The first line indicates whether the&nbsp;</div>
+<div>initial farm is fully connected, and line i+1 indicates whether the farm is fully connected after th</div>
+<div>e iith closing.</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+1 2<br />
+2 3<br />
+3 4<br />
+3<br />
+4<br />
+1<br />
+2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+NO<br />
+YES<br />
+YES</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold%20%E9%B8%A3%E8%B0%A2duan2%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Gold 鸣谢duan2提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4579'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4579'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4579'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2387. -- [Ceoi2011]Traffic</title><center><h2>2387: [Ceoi2011]Traffic</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>109&nbsp;&nbsp;<span class=green>Solved: </span>67<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2387'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2387'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2387'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><img alt="" src="upload/201107/e1.jpg" /></span></p>
+<div>格丁尼亚的中心位于Kacza河中的一座岛屿。每天清晨，成千上万辆汽车通过岛屿从西岸的住宅区（由桥连接岛的</div>
+<div>西部）到东岸的工业区（由桥连接岛的东部）。该岛类似于矩形，它的边平行于主方向。故可将它看作是笛卡尔坐</div>
+<div>标系中的一个A*B的矩形，它的对角分别为（0, 0）和（A, B）。岛上有n个交通节点，编号为1&hellip;n（junction, 此</div>
+<div>处可理解为广义的路口），第i个节点坐标为(xi, yi)。如果一个节点的坐标为(0, y)，它就位于岛的西岸。类似</div>
+<div>的，坐标为(A, y)的节点位于岛的东岸。各个节点由街道连接，每条街道用线段连接两个节点。街道有单向行驶或</div>
+<div>双向行驶之分。除端点外任意两条街道都没有公共点。也没有桥梁或者隧道。你不能对道路网络形状做任何其他假</div>
+<div>设。沿河岸的街道或节点可能没有入口或者出口街道。由于交通堵塞日趋严重，市长聘请你测试岛上当前的道路网</div>
+<div>是否足够。要求你写一个程序确定从岛的西岸的每个节点能够到达东岸的多少个节点。</div></div><h2>Input</h2><div class=content><p><img alt="" src="upload/201107/e2.jpg" /></p>
+<div>第1行包含4个整数n, m, A, B(1&le;n&le;300000, 0&le;m&le;900000,1&le;A,B&le;109)，</div>
+<div>分别表示格丁尼亚市中心的节点数，街道数和岛屿的尺寸。</div>
+<div>接下来的n行，每行包含两个整数xi，yi (0&le;xi&le;A,0&le;yi&le;B)，表示第i个节点的坐标。任意两个节点的坐标都不相同。</div>
+<div>再往下的m行表示街道，每条街道用3个整数ci, di, ki（1&le;ci, di&le;n, ci&ne;di, ki&isin;{1,2}），</div>
+<div>表示节点ci、di有街道连接</div>
+<div>如果ki=1,表示从ci到di的街道是单向的，否则，这条街道可以双向行驶。每个无序对{ci, di}最多出现1次。</div>
+<div>你可以假设西岸节点中至少有1个能够到达东岸的一些节点。</div></div><h2>Output</h2><div class=content><p><img height="100" alt="" width="886" src="upload/201107/e3.jpg" /></p>
+<p><font size="4">为每个西岸节点输出1行，包括从这个节点出发能够到达东岸的节点数目</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3 1 3<br />
+0 0<br />
+0 1<br />
+0 2<br />
+1 0<br />
+1 1<br />
+1 4 1<br />
+1 5 2<br />
+3 5 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+0<br />
+2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2387'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2387'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2387'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

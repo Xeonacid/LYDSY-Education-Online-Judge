@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2369. -- 区间</title><center><h2>2369: 区间</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>162&nbsp;&nbsp;<span class=green>Solved: </span>76<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2369'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2369'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2369'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt" align="left"><span style="color: black">对于一个区间集合</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">{A1,A2&hellip;&hellip;Ak}(K&gt;1,Ai</span><span style="color: black">不等于Aj(i不等于J)</span><span style="color: black">，定义其权值</span></div>
+<div style="text-indent: 21pt" align="left">&nbsp;</div>
+<div style="text-indent: 21pt" align="left">S=｜A1&cup;A2&cup;<span>&hellip;&hellip;AK|*|A1&cap;A2&hellip;&hellip;&cap;Ak|</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">即它们的交区间的长度乘上它们并区间的长度。</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">显然，如果这些区间没有交集则权值为0。</span></div>
+<div align="left"><b><span style="font-size: 12pt; color: black">Your Task</span></b></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">给定你若干互不相等的区间，选出若干区间使其权值最大。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt" align="left"><span style="color: black">第一行n表示区间的个数</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">接下来n行每行两个整数l r描述一个区间[l,r] </span></div></div><h2>Output</h2><div class=content><div align="left">&nbsp;</div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">在一行中输出最大权值</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+1 6<br />
+4 8<br />
+2 7<br />
+3 5<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>24</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+样例解释<br /><br />
+&nbsp;&nbsp;&nbsp; 选择[1,6]和[2,7]是最优的。<br /><br />
+数据约定 <br /><br />
+100%：1&lt;N&lt;=10^6,1&lt;=L&lt;R&lt;=10^6</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2369'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2369'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2369'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4567. -- [Scoi2016]背单词</title><center><h2>4567: [Scoi2016]背单词</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>928&nbsp;&nbsp;<span class=green>Solved: </span>369<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4567'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4567'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4567'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Lweb 面对如山的英语单词，陷入了深深的沉思，&ldquo;我怎么样才能快点学完，然后去玩三国杀呢？&rdquo;。这时候睿智</div>
+<div>的凤老师从远处飘来，他送给了 Lweb 一本计划册和一大缸泡椒，他的计划册是长这样的：</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div>序号 &nbsp;单词</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div>&nbsp;1</div>
+<div>&nbsp;2</div>
+<div>&hellip;&hellip;</div>
+<div>n-2</div>
+<div>n-1</div>
+<div>&nbsp;n</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div></div>
+<div>然后凤老师告诉 Lweb ，我知道你要学习的单词总共有 n 个，现在我们从上往下完成计划表，对于一个序号为 x&nbsp;</div>
+<div>的单词（序号 1...x-1 都已经被填入）：</div>
+<div>1) 如果存在一个单词是它的后缀，并且当前没有被填入表内，那他需要吃 n&times;n 颗泡椒才能学会；</div>
+<div>2) 当它的所有后缀都被填入表内的情况下，如果在 1...x-1 的位置上的单词都不是它的后缀，那么你吃 x 颗泡</div>
+<div>椒就能记住它；</div>
+<div>3) 当它的所有后缀都被填入表内的情况下，如果 1...x-1的位置上存在是它后缀的单词，所有是它后缀的单词中</div>
+<div>，序号最大为 y ，那么你只要吃 x-y 颗泡椒就能把它记住。</div>
+<div>Lweb 是一个吃到辣辣的东西会暴走的奇怪小朋友，所以请你帮助 Lweb ，寻找一种最优的填写单词方案，使得他</div>
+<div>记住这 n 个单词的情况下，吃最少的泡椒。</div>
+<div></div></div><h2>Input</h2><div class=content><div>输入一个整数 n ，表示 Lweb 要学习的单词数。接下来 n 行，每行有一个单词（由小写字母构成，且保证任意单</div>
+<div>词两两互不相同）1&le;n&le;100000, 所有字符的长度总和 1&le;|len|&le;510000</div>
+<div></div></div><h2>Output</h2><div class=content><p>&nbsp;Lweb 吃的最少泡椒数</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 <br />
+a <br />
+ba</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4567'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4567'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4567'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

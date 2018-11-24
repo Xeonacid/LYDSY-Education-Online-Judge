@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4750. -- 密码安全</title><center><h2>4750: 密码安全</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>181&nbsp;&nbsp;<span class=green>Solved: </span>96<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4750'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4750'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4750'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有些人在社交网络中使用过许多的密码，我们通过将各种形式的信息转化为 01 信号，再转化为整数，可以将这个</div>
+<div>人在一段时间内使用过的密码视为一个长度为 n 的非负整数序列 A_1,A_2,...,A_n 。一个人相邻几次在社交网络</div>
+<div>中使用的密码很有可能是类似的，这使得密码并不是足够安全。为了检验某些人在某些时间段内是否可能受到不安</div>
+<div>全的影响，我们需要计算上述序列的复杂程度。</div>
+<div><img src="upload/201701/aa.jpg" width="833" height="170" alt="" /></div>
+<div></div>
+<div></div>
+<div>的值，这将作为我们评估密码复杂程度的一个部分。由于答案可能很大，你只需要给出答案对10^9+61 取模的值即可。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数 T ，表示有 T 组测试数据。</div>
+<div>接下来依次给出每组测试数据。对于每组测试数据：</div>
+<div>第一行包含一个正整数 n 。</div>
+<div>第二行包含 n 个非负整数，表示 A_1,A_2,?,A_n 。</div>
+<div>保证在一行中的每个整数之间有恰好一个空格，没有其他额外的空格。</div>
+<div>100% 的数据满足：1&le;T&le;200,1&le;n&le;10^5,1&le;&sum;n&le;10^6,0&le;A_i&le;10^9</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据输出一行，包含一个整数，表示答案对10^9+61 取模的值。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+61<br />
+5<br />
+1 2 3 4 5<br />
+5<br />
+10187 17517 24636 19706 18756</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3721<br />
+148<br />
+821283048<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Tangjz%E6%8F%90%E4%BE%9B%E8%AF%95%E9%A2%98'>鸣谢Tangjz提供试题</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4750'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4750'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4750'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,101 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3583. -- 杰杰的女性朋友</title><center><h2>3583: 杰杰的女性朋友</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>264&nbsp;&nbsp;<span class=green>Solved: </span>158<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3583'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3583'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3583'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　　杰杰是魔法界的一名传奇人物。他对魔法具有深刻的洞察力，惊人的领悟力，以及令人叹为观止的创造力。自从他从事魔法竞赛以来，短短几年时间，就已经成为世界公认的实力最强的魔法选手之一。更让人惊叹的是，他几乎没有借助外界力量，完全凭借自己的努力达到了普通人难以企及的高度。在最近的世界魔法奥林匹克竞赛上，他使用高超的魔法本领，一路过关斩将，在最后时刻一举击败了前冠军&ldquo;旅行者&rdquo;，获得了魔法界最高的荣耀：女神奖杯！女神奖杯可不是一个普通的奖杯，她能够帮杰杰实现一个愿望。<br />
+　　杰杰本着实事求是的态度，审时度势，向女神奖杯提出了自己的愿望：想要一个女性朋友。</span></p>
+<p><span style="font-size: medium">　　杰杰的愿望实现了，可是女性朋友却和他不在一个城市。杰杰想要知道：如果要到达女性朋友的所在城市，有多少种方案供他选择？<br />
+　　杰杰所在的世界有n个城市，从1到n进行编号。任意两个城市都通过有向道路连接。每个城市u有k个入点权：in[u][1],in[u][2]...in[u][k]，有k个出点权：ou[u][1],ou[u][2]...ou[u][k]。对于任意两个城市(u,v)（u可以等于v），u到v的道路条数为(ou[u][1]*in[v][1]+ou[u][2]*in[v][2]+...+ou[u][k]*in[v][k])条。杰杰有m次询问，每次询问由三元组(u,v,d)构成，询问从u城市通过不超过d条道路到达v城市的方案数。<br />
+　　为了温柔的杰杰和他的女性朋友的美好未来，帮助他解答这个问题吧。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">　　第一行读入两个正整数n，k，含义如题所示。</font><span style="font-size: medium">接下来n行每行2k个整数，第i行代表第i个城市，前k个整数代表i号城市的出点权，后k个整数代表i号城市的入点权：<br />
+　　ou[i][1],ou[i][2],&hellip;,ou[i][k],in[i][1],in[i][2],&hellip;,in[i][k]<br />
+　　接下来一个整数m，表示m个询问。<br />
+　　接下来m行，每行三个整数:u,v,d，询问从u城市通过不超过d条道路到达v城市的方案数。<br />
+　　将每个方案所经过的道路，按顺序写成一个序列（序列可以为空）。两个方案不同，当且仅当他们的道路序列不完全相同。<br />
+</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><br />
+<font size="4">　　对于每个询问，输出一个方案数。由于答案可能太大，输出其除以1000000007后的余数。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+5 2<br />
+2 5 4 3<br />
+7 9 2 4<br />
+0 1 5 2<br />
+6 3 9 2<br />
+2147483647 1000000001 233522 788488<br />
+10<br />
+1 1 0<br />
+2 2 1<br />
+2 4 5<br />
+4 3 10<br />
+3 4 50<br />
+1 5 1000<br />
+3 5 1000000000<br />
+1 2 500000000<br />
+4 5 2147483647<br />
+3 1 2147483647<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+51<br />
+170107227<br />
+271772358<br />
+34562176<br />
+890241289<br />
+8516097<br />
+383966304<br />
+432287042<br />
+326522835<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">数据规模和约定<br /><br />
+n&lt;=1000<br /><br />
+k&lt;=20<br /><br />
+m&lt;=50</span></p><br />
+<p><span style="font-size: medium">　　保证1&lt;=u, v&lt;=n, 其它所有读入为不超过2147483647的非负整数<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E6%8F%90%E4%BE%9B'>By 佚名提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3583'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3583'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3583'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

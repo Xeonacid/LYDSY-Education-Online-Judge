@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3439. -- Kpm的MC密码</title><center><h2>3439: Kpm的MC密码</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1097&nbsp;&nbsp;<span class=green>Solved: </span>506<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3439'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3439'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3439'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><br />
+&nbsp;背景</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 想Kpm当年为了防止别人随便进入他的MC，给他的PC设了各种奇怪的密码和验证问题（不要问我他是怎么设的。。。），于是乎，他现在理所当然地忘记了密码，只能来解答那些神奇的身份验证问题了。。。</span></p>
+<p><span style="font-size: medium">&nbsp;描述</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; Kpm当年设下的问题是这样的：</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 现在定义这么一个概念，如果字符串s是字符串c的一个后缀，那么我们称c是s的一个kpm串。</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 系统将随机生成n个由a&hellip;z组成的字符串，由1&hellip;n编号（s1,s2&hellip;,sn），然后将它们按序告诉你，接下来会给你n个数字，分别为k1&hellip;kn，对于每一个ki，要求你求出列出的n个字符串中所有是si的kpm串的字符串的编号中第ki小的数，如果不存在第ki小的数，则用-1代替。（比如说给出的字符串是cd,abcd,bcd,此时k1=2，那么&rdquo;cd&rdquo;的kpm串有&rdquo;cd&rdquo;,&rdquo;abcd&rdquo;,&rdquo;bcd&rdquo;,编号分别为1,2,3其中第2小的编号就是2）（PS：如果你能在相当快的时间里回答完所有n个ki的查询，那么你就可以成功帮kpm进入MC啦~~）</span></p></div><h2>Input</h2><div class=content><p>&nbsp;</p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 第一行一个整数 n 表示字符串的数目</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 接下来第二行到n+1行总共n行，每行包括一个字符串，第i+1行的字符串表示编号为i的字符串</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 接下来包括n行，每行包括一个整数ki，意义如上题所示</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p></div><h2>Output</h2><div class=content><p>&nbsp;</p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 包括n行，第i行包括一个整数，表示所有是si的kpm串的字符串的编号中第ki小的数</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+    3<br />
+    cd<br />
+    abcd<br />
+    bcd<br />
+    2<br />
+    3<br />
+    1<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>    2<br />
+    -1<br />
+    2<br />
+<br />
+样例解释<br />
+<br />
+    “cd”的kpm 串有”cd”,”abcd”,”bcd”,编号为1,2,3，第2小的编号是<br />
+<br />
+    2，”abcd”的kpm串只有一个，所以第3小的编号不存在，”bcd”的kpm<br />
+<br />
+    串有”abcd”,”bcd”,第1小的编号就是2。<br />
+<br />
+数据范围与约定<br />
+<br />
+    设所有字符串的总长度为len<br />
+<br />
+<br />
+    对于100%的数据，1<=n<=100000,0<len<=300000<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Kpmcup#0 By Greens
+'>Kpmcup#0 By Greens<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3439'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3439'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3439'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

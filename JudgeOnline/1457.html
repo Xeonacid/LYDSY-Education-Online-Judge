@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1457. -- 棋盘游戏</title><center><h2>1457: 棋盘游戏</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>370&nbsp;&nbsp;<span class=green>Solved: </span>211<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1457'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1457'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1457'>Discuss</a>]</center><h2>Description</h2><div class=content>
+有一个100 * 100的棋盘，其中左下角的编号为(0, 0), 右上角编号为(99, 99)。棋盘上有N个Queen，最开始第i个Queen的位置为(Xi, Yi)。现在有两个玩家依次来操作，每一次一个玩家可以选择其中一个Queen，将它跳到(Xi – k, Yi)或(Xi, Yi - k)或(Xi – k, Yi - k), 其中k > 0。注意在游戏的过程中，一个格子里面可能出现多个Queen。如果谁先将任意一个Queen移动到(0, 0), 谁就获胜。问先手必胜还是后手必胜?
+</div><h2>Input</h2><div class=content>注意本题是多组数据。
+第一行有一个数T, 表示数据组数。
+接下来有T组数据，每组数据的第一行一个正整数N表示Queen的个数。接下来N行每行两个数表示第i个Queen的初始位置Xi, Yi(0 <= Xi <= 99, 0 <= Yi <= 99)。
+</div><h2>Output</h2><div class=content>对于每一组数据，你需要输出是先手必胜还是后手必胜。
+如果是先手必胜，输出“^o^“, 如果是后手必胜，输出”T_T”。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+2<br />
+3 4<br />
+3 5<br />
+3<br />
+3 2<br />
+4 2<br />
+3 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>^o^<br />
+T_T<br />
+数据范围<br />
+T <= 10, N <= 1000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1457'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1457'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1457'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

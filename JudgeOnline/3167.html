@@ -1,0 +1,115 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3167. -- [Heoi2013]Sao</title><center><h2>3167: [Heoi2013]Sao</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>282&nbsp;&nbsp;<span class=green>Solved: </span>135<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3167'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3167'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3167'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<div>WelcometoSAO(StrangeandAbnormalOnline)。这是一个VRMMORPG，含有n个关卡。但是，挑战不同关卡的顺序是一</div>
+<div>个很大的问题。有n&ndash;1个对于挑战关卡的限制，诸如第i个关卡必须在第j个关卡前挑战，或者完成了第k个关卡才</div>
+<div>能挑战第l个关卡。并且，如果不考虑限制的方向性，那么在这n&ndash;1个限制的情况下，任何两个关卡都存在某种程</div>
+<div>度的关联性。即，我们不能把所有关卡分成两个非空且不相交的子集，使得这两个子集之间没有任何限制。</div></div><h2>Input</h2><div class=content><div>第一行，一个整数T，表示数据组数。对于每组数据，第一行一个整数n，表示关卡数。接下来n&ndash;1行，每行为&ldquo;i&nbsp;</div>
+<div>sign j&rdquo;，其中0&le;i,j&le;n&ndash;1且i&ne;j，sign为&ldquo;&lt;&rdquo;或者&ldquo;&gt;&rdquo;，表示第i个关卡必须在第j个关卡前/后完成。</div>
+<div>T&le;5，1&le;n&le;1000</div></div><h2>Output</h2><div class=content><p>对于每个数据，输出一行一个整数，为攻克关卡的顺序方案个数，mod1,000,000,007输出。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+10<br />
+5 > 8<br />
+5 > 6<br />
+0 < 1<br />
+9 < 4<br />
+2 > 5<br />
+5 < 9<br />
+8 < 1<br />
+9 > 3<br />
+1 < 7<br />
+10<br />
+6 > 7<br />
+2 > 0<br />
+9 < 0<br />
+5 > 9<br />
+7 > 0<br />
+0 > 3<br />
+7 < 8<br />
+1 < 2<br />
+0 < 4<br />
+10<br />
+2 < 0<br />
+1 > 4<br />
+0 > 5<br />
+9 < 0<br />
+9 > 3<br />
+1 < 2<br />
+4 > 6<br />
+9 < 8<br />
+7 > 1<br />
+10<br />
+0 > 9<br />
+5 > 6<br />
+3 > 6<br />
+8 < 7<br />
+8 > 4<br />
+0 > 6<br />
+8 > 5<br />
+8 < 2<br />
+1 > 8<br />
+10<br />
+8 < 3<br />
+8 < 4<br />
+1 > 3<br />
+1 < 9<br />
+3 < 7<br />
+2 < 8<br />
+5 > 2<br />
+5 < 6<br />
+0 < 9</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2580<br />
+3960<br />
+1834<br />
+5208<br />
+3336</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3167'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3167'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3167'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

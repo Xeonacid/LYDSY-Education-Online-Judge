@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3589. -- 动态树</title><center><h2>3589: 动态树</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>723&nbsp;&nbsp;<span class=green>Solved: </span>260<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3589'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3589'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3589'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<div>别忘了这是一棵动态树, 每时每刻都是动态的. 小明要求你在这棵树上维护两种事件</div>
+<div>事件0:</div>
+<div>这棵树长出了一些果子, 即某个子树中的每个节点都会长出K个果子.</div>
+<div>事件1:</div>
+<div>小明希望你求出几条树枝上的果子数. 一条树枝其实就是一个从某个节点到根的路径的一段. 每次小明会选定一些树枝, 让你求出在这些树枝上的节点的果子数的和. 注意, 树枝之间可能会重合, 这时重合的部分的节点的果子只要算一次.</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行一个整数n(1&lt;=n&lt;=200,000), 即节点数.</div>
+<div>接下来n-1行, 每行两个数字u, v. 表示果子u和果子v之间有一条直接的边. 节点从1开始编号.</div>
+<div>在接下来一个整数nQ(1&lt;=nQ&lt;=200,000), 表示事件.</div>
+<div>最后nQ行, 每行开头要么是0, 要么是1.</div>
+<div>如果是0, 表示这个事件是事件0. 这行接下来的2个整数u, delta表示以u为根的子树中的每个节点长出了delta个果子.</div>
+<div>如果是1, 表示这个事件是事件1. 这行接下来一个整数K(1&lt;=K&lt;=5), 表示这次询问涉及K个树枝. 接下来K对整数u_k, v_k, 每个树枝从节点u_k到节点v_k. 由于果子数可能非常多, 请输出这个数模2^31的结果.</div></div><h2>Output</h2><div class=content><p><font size="4">对于每个事件1, 输出询问的果子数.<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 2<br />
+2 3<br />
+2 4<br />
+1 5<br />
+3<br />
+0 1 1<br />
+0 2 3<br />
+1 2 3 1 1 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>13<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">&nbsp;1 &lt;= n &lt;= 200,000, 1 &lt;= nQ &lt;= 200,000, K = 5.<br /><br />
+</span></p><br />
+<p><span style="font-size: medium">生成每个树枝的过程是这样的:先在树中随机找一个节点, 然后在这个节点到根的路径上随机选一个节点, 这两个节点就作为树枝的两端.<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E6%8F%90%E4%BE%9B'>By 佚名提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3589'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3589'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3589'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

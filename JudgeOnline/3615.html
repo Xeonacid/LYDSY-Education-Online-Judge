@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3615. -- MSS</title><center><h2>3615: MSS</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>104&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3615'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3615'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3615'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="probtitle" id="ptit"><span style="font-size: medium">　小C正在出一道题...因为语文水平有限他想不出复杂的背景，所以以下就是题意了。<br />
+　　平面上有N个点，开始时每个点属于一个不同的集合。不妨设点P<sub>i</sub>属于集合S<sub>i</sub>。请维护数据结构支持以下三种操作：<br />
+　　&quot;Merge x y&quot;：将集合S<sub>y</sub>中的点到S<sub>x</sub>中；<br />
+　　&quot;Split i d v&quot;（d &isin; {0, 1}）：创建新集合S<sub>c + 1</sub>，S<sub>c + 2</sub>，之后将集合S<sub>i</sub>中的所有点中，第d维坐标不超过v的到集合S<sub>c + 1</sub>中，超过v的移动到集合S<sub>c + 2</sub>中，其中c为现有集合数（ 包括之前合并和分割中产生的空集 ）；<br />
+　　&quot;Query i&quot;：查询集合S<sub>i</sub>中点权值的最大值，最小值及和；<br />
+　　&quot;Add i d&quot;：将集合S<sub>i</sub>中所有点的权值增加d。<br />
+　　方便起见，对于d &isin; {0, 1}，输入的所有点的第d维坐标不重复。所有操作涉及的集合非空。</span></div>
+<div id="pcont1" style="margin-top: 20px; display: block"></div></div><h2>Input</h2><div class=content><div id="pcont1" style="margin-top: 20px; display: block">
+<div class="pdcont"><span style="font-size: medium">　　第一行一个整数N表示点数。<br />
+　　接下来N行，每行3个整数分别表示P<sub>i</sub>的坐标与权值。<br />
+　　接下来一个整数Q表示操作数。<br />
+　　接下来Q行，每行描述一个操作，格式如上所述。</span></div>
+</div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　对于每个Q操作，输出三个整数，依次表示询问集合权值的最大值，最小值与和。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+4 7 3<br />
+18 16 2<br />
+14 13 1<br />
+10 2 10<br />
+3 8 5<br />
+11<br />
+Merge 2 3<br />
+Merge 4 5<br />
+Split 2 1 13<br />
+Query 4<br />
+Query 6<br />
+Add 6 2<br />
+Query 6<br />
+Merge 6 4<br />
+Split 6 0 10<br />
+Query 9<br />
+Split 8 0 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10 5 15<br />
+1 1 1<br />
+3 3 3<br />
+3 3 3</span></div><h2>HINT</h2>
+			<div class=content><p><p>N&lt;=50000</p><br />
+<p>Q&lt;=100000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014%E5%B9%B4%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8D%81%E4%BA%94%E4%BA%BA%E4%BA%92%E6%B5%8B%20%E9%B8%A3%E8%B0%A2Dragonite%E4%B8%8A%E4%BC%A0'>2014年国家集训队十五人互测 鸣谢Dragonite上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3615'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3615'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3615'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

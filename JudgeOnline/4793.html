@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4793. -- [CERC2016]Hangar Hurdles</title><center><h2>4793: [CERC2016]Hangar Hurdles</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>51&nbsp;&nbsp;<span class=green>Solved: </span>31<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4793'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4793'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4793'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你正在评估一些关于一个巨型飞机仓库的建设计划。飞机仓库的地面可以表示为n行n列的网格图，其中每个格子要</div>
+<div>么是空的，要么有障碍物。行从上到下依次被编号为1到n，列从左到右依次被编号为1到n。存放飞机零件的大型集</div>
+<div>装箱能在飞机仓库的地面上自由移动是很重要的。我们可以将每个集装箱看作一个以某个格子为中心的边平行于坐</div>
+<div>标轴的正方形。对于一个奇数k，一个尺寸为k的集装箱是一个包含k行k列的正方形。一个集装箱的坐标为其中心格</div>
+<div>子的坐标。集装箱可以向上下左右移动，但不能碰到障碍物，且不能移出仓库的边界。给定q对格子A_k和B_k，对</div>
+<div>于每对格子，请找到能从A_k移动到B_k的集装箱的最大尺寸，注意这个尺寸也要是一个奇数。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行包含一个正整数n(2&lt;=n&lt;=1000)，表示仓库的尺寸。</div>
+<div>接下来n行，每行n个字符，描述整个仓库，其中&ldquo;.&rdquo;表示空格子，&ldquo;#&rdquo;表示障碍物。</div>
+<div>接下来一行包含一个正整数q(1&lt;=q&lt;=300000)，表示询问的个数。</div>
+<div>接下来q行，每行4个正整数r_A,c_A,r_B,c_B(1&lt;=r_A,c_A,r_B,c_B&lt;=n)，分别表示A和B的坐标。</div>
+<div>输入数据保证A和B是不同的空格子。</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出q行，每行一个整数，对于每个询问输出最大尺寸，如果不存在解，那么输出0。</div>
+<div>
+<div></div>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+7<br />
+.....#.<br />
+...#.#.<br />
+....#..<br />
+....###<br />
+....#..<br />
+#......<br />
+.......<br />
+5<br />
+2 5 5 2<br />
+2 5 3 6<br />
+2 2 6 3<br />
+2 2 6 6<br />
+1 1 7 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+0<br />
+3<br />
+1<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4793'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4793'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4793'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

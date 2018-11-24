@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1155. -- [CTSC2006]投篮游戏shooting</title><center><h2>1155: [CTSC2006]投篮游戏shooting</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>101&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1155'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1155'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1155'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在大学里，体育课有很多门，每个人都可以选自己最喜欢的项目。King这学期选的是篮球，因为篮球课的老师是一</div>
+<div>个十分有趣的人。上课的第一天，老师宣布了这门课的评分规则：有n个篮球(n&ge;m)，老师事先在每个球上写了一</div>
+<div>个整数(不一定相同，绝对值小于10000)。有m个篮，每个篮板上有一个计分器，显示一个整数。一个学生开始考核</div>
+<div>前先将所有计分器显示值赋为1。每个学生考核时要进行n次投篮：选择任意一个篮球投向任意一个篮。最后他必须</div>
+<div>将所有球全部投出且每个球恰好投出一次，要求每个篮至少被投进过一次。如果学生将一个写有整数x的篮球投进</div>
+<div>了某个计分器显示为y的篮，则该篮板上的计分器显示值将从y变成y&times;x。一个学生的原始得分S定义为m个计分器的</div>
+<div>显示值之和，如果S越大则老师给这个学生的最终打分越高（事实上，老师根据名次按照正态分布给分，但此超出</div>
+<div>本题了讨论范围）。King是一个神投手，他保证能将n个球全都投进。但是King的数学十分糟糕，他不知道该如何</div>
+<div>安排投篮，才能使得自己的原始得分最大，你能帮帮他吗？</div></div><h2>Input</h2><div class=content><div>
+<div>输入有多组数据，</div>
+<div>每组数据有两行：第一行两个整数n,m。第二行n个整数，用一个空格分开，表示老师在n个篮球上分别写下的整数。</div>
+<div>文件以0 0结尾。一个文件中最多只有10组数据。</div>
+<div>1&le; m&le;n&le; 2000</div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>每组数据一行，包含一个整数Smax，表示最大可能的原始得分。</div>
+<div>提示：Smax可能超过任何基本整数类型。Smax也可能比0小。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 2<br />
+0 -1 -2 0 1 2 3 2 10 1<br />
+10 3<br />
+0 -1 -2 0 1 2 3 2 10 1<br />
+0 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>240<br />
+241</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1155'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1155'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1155'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5215. -- [Lydsy2017省队十连测]商店购物</title><center><h2>5215: [Lydsy2017省队十连测]商店购物</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>399&nbsp;&nbsp;<span class=green>Solved: </span>124<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5215'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5215'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5215'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在 Byteland一共开着 n家商店，编号依次为 1到 n，其中编号为1到 m的商店有日消费量上限，第 i家商店的日消</div>
+<div>费量上限为wi。Byteasar每次购物的过程是这样的：依次经过每家商店，然后购买非负整数价格的商品，并在结账</div>
+<div>的时候在账本上写上在这家商店消费了多少钱。当然，他在这家商店也可以什么都不买，然后在账本上写上一个0</div>
+<div>。这一天， Byteasar日常完成了一次购物，但是他不慎遗失了他的账本。他只记得自己这一天一共消费了多少钱</div>
+<div>，请写一个程序，帮助 Byteasar计算有多少种可能的账单。&nbsp;</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行包含三个正整数&nbsp;</div>
+<div>n, m, k，分别表示商店的个数、有限制的商店个数以及总消费量。</div>
+<div>第二行包含 m个整数，依次表示 w1;w2...wm。&nbsp;</div>
+<div>1 &le; m &le; n，0&le; wi &le; 300，1 &le; n, k &le; 5000000</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">m&lt;=300</span></div>
+<div></div></div><h2>Output</h2><div class=content><div>输出一行一个整数，即可能的账单数，由于答案可能很大，请对1000000007取模输出。&nbsp;</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 8<br />
+2 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+HINT<br />
+6 种方案分别为：{0; 0; 8}; {1; 0; 7}; {2; 0; 6}; {0; 1; 7}; <br />
+{1; 1; 6}; {2; 1; 5}。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Claris%E5%8E%9F%E5%88%9B%EF%BC%8C%E6%9C%AC%E7%AB%99%E7%89%88%E6%9D%83%E6%89%80%E6%9C%89'>Claris原创，本站版权所有</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5215'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5215'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5215'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

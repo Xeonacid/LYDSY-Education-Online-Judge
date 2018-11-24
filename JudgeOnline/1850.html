@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1850. -- Submatrix</title><center><h2>1850: Submatrix</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>101&nbsp;&nbsp;<span class=green>Solved: </span>37<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1850'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1850'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1850'>Discuss</a>]</center><h2>Description</h2><div class=content><p>很久很久很久以前，有一个古老的主题公园，有一个伟大的工程师QDC，她打算在公园修建一个花坛，花坛周围修建一片绿化带。如果把公园看成一个M*N的矩形，也就是说把公园划分成了M*N块土地，那么绿化带和花坛可以看成一个A*B的矩形，花坛可以看成一个C*D的矩形。如图所示<br />
+20 19 18 17 16 <br />
+15 14 13 12 11 <br />
+10&nbsp; 9 8&nbsp; 7&nbsp; 6 <br />
+5&nbsp; 4&nbsp; 3&nbsp; 2&nbsp; 1 <br />
+QDC经过一段时间的对土地的考察，给每一块土地定了一个&ldquo;肥沃度&rdquo;。绿化带的肥沃度定义为A*B-C*D块土地的肥沃度的综合，她希望修建这样的一片绿化带，使得绿化带的肥沃度最大。 花坛一定要完全在绿化带的包围之中，也就是说，A*B的矩阵边上的元素一定不在C*D的举证中。 淡然，这种问题是难不倒QDC的，但是她还有别的更重要的工作要做，于是这个工作就交个你了，薪水很高的哦！<br />
+</p></div><h2>Input</h2><div class=content><p>第一行有六个正整数M,N,A,B,C,D。结下来M行，每行有N 个正整数，表示（i,j)的肥沃度。</p></div><h2>Output</h2><div class=content><p>一个正整数，表示绿化带的最大肥沃程度。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5 4 4 2 2<br />
+20 19 18 17 16<br />
+15 14 13 12 11<br />
+10 9 8 7 6<br />
+5 4 3 2 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>132<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>30%的数据， 1&lt;= m , n &lt;= 50 100%的数据, 1&lt;= m , n &lt;= 1000 100%的数据, 1&lt;= A &lt;= M 1 &lt;= B &lt;= n 1 &lt;= C &lt;= A-2 1 &lt;= D &lt;= B-2 1 &lt;= 肥沃度 &lt;= 100</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1850'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1850'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1850'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

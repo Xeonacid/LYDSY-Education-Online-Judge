@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3194. -- Pku2520 DNA Sequence Alignment</title><center><h2>3194: Pku2520 DNA Sequence Alignment</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>8&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3194'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3194'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3194'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">Gnaileux Iew is attracted in Bioinformatics recently. He reads papers day and night and devotes all his mind in studying. Today he is going to review the basic problem in Bioinformatics: DNA sequence alignment. His purpose is to find a simple and effective algorithm that performs global alignment with two highly similar DNA sequences. <br />
+<br />
+A DNA sequence is presented as a sequence of characters, which may be 'A', 'G', 'C' or 'T'. To align two DNA sequences, some gaps may be inserted to sequences so that two sequences have the same length. And then it is counted up for every pair of matched characters by a score matrix. Gnaileux Iew uses a minimal-score matrix hence the total score of alignment should be minimized. Following is the score matrix Gnaileux Iew uses: <br />
+</span><center><span style="font-size: medium"><img src="http://poj.org/images/2520_1.jpg" alt="" /></span></center><span style="font-size: medium"><br />
+For example, an alignment for DNA sequences &quot;AAGACG&quot; and &quot;CAGAGCTC&quot; may be: <br />
+-AAGA-C-G <br />
+CA-GAGCTC <br />
+The total score is 3+0+3+0+0+3+0+3+4=16. <br />
+<br />
+Gnaileux Iew is only interested in aligning highly similar sequences. Strictly speaking, |LCS(A,B)| * 2 / (|A |+ |B|) &gt;= 90%, where A and B are the sequences to align, and LCS(A,B) is the longest common subsequence of A and B. <br />
+</span></div>
+<p></p></div><h2>Input</h2><div class=content><p class="pst"><span style="font-size: medium">contains two lines, which are the two DNA sequences to align. DNA sequences contain only characters 'A', 'G', 'C' and 'T'. The length of each sequence is not greater than 50000. <br />
+<br />
+You can assume that all the input cases are highly similar sequences. <br />
+</span></p></div><h2>Output</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">For each test case print the minimal total score of alignment in one line.</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>AGTGCTGAAAGTTGCGCCAGTGAC<br />
+AGTGCTGAAGTTCGCCAGTTGACG<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3194'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3194'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3194'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

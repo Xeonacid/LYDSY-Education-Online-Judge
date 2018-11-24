@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5300. -- [Cqoi2018]九连环</title><center><h2>5300: [Cqoi2018]九连环</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>107&nbsp;&nbsp;<span class=green>Solved: </span>60<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5300'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5300'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5300'>Discuss</a>]</center><h2>Description</h2><div class=content><div>九连环是一种源于中国的传统智力游戏。</div>
+<div><img src="upload/201804/v1.png" width="217" height="165" alt="" /></div>
+<div>如图所示，九个的圆环套在一把&ldquo;剑&rdquo;上，并且互相牵连。游戏的目标是把九个圆环全部从&ldquo;剑&rdquo;上卸下。</div>
+<div>圆环的装卸需要遵守两个规则</div>
+<div>1．第一个（最右边）环任何时候都可以任意装上或卸下</div>
+<div>2．如果第k个环没有被卸下，且第k个环右边的所有环都被卸下，则第k+l个环（第k个环左边相邻的环）</div>
+<div>可以任意装上或卸下与魔方的千变万化不同，解九连环的最优策略是唯一的。</div>
+<div>为简单起见，我们以&ldquo;四连环&rdquo;为例，演示这一过程。这里用1表示环在&ldquo;剑&rdquo;上，0表示环已经卸下。</div>
+<div>初始状态为1111，每步的操作如下</div>
+<div>1. 1101（根据规则2卸下第2个环）</div>
+<div>2. 1100（根据规则1卸下第1个环）</div>
+<div>3. 0100（根据规则2卸下第4个环）</div>
+<div>4. 0101（根据规则1装上第1个环）</div>
+<div>5. 0111（根据规则2装上第2个环）</div>
+<div>6. 0110（根据规则1卸下第1个环）</div>
+<div>7. 0010（根据规则2卸下第3个环）</div>
+<div>8. 0001（根据规则1装上第1个环）</div>
+<div>9. 0001（根据规则2卸下第2个环）</div>
+<div>10. 0000（根据规则1卸下第1个环）</div>
+<div>由此可见，卸下&ldquo;四连环&rdquo;至少需要10步。</div>
+<div>随着环数增加，需要的步数也会随之增多。例如卸下九连环．就至少需要341步。</div>
+<div>请你计算，有n个环的情况下，按照规则，全部卸下至少需要多少步。</div></div><h2>Input</h2><div class=content><div>输入文件第一行，为一个整数m，表示测试点数目。</div>
+<div>接下来m行，每行一个整数n。</div>
+<div>1&le;n&le;10^5，1&le;m&le;10</div></div><h2>Output</h2><div class=content><div>输出文件共m行，对应每个测试点的计算结果。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+3<br />
+5<br />
+9</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+21<br />
+341</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Amphetamine%E6%95%B4%E7%90%86%E9%A2%98%E9%9D%A2'>鸣谢Amphetamine整理题面</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5300'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5300'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5300'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

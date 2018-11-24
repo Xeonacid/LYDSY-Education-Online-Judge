@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2011. -- [Ceoi2010]Mp3 Player</title><center><h2>2011: [Ceoi2010]Mp3 Player</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>164&nbsp;&nbsp;<span class=green>Solved: </span>70<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2011'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2011'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2011'>Discuss</a>]</center><h2>Description</h2><div class=content>Georg有个MP3 Player，没有任何操作T秒钟就会锁定，这时按下任意一个键就会变回没锁定的状态，但不会改变频道。只有在没锁定的状态下按键才有可能改变频道。
+	MP3的频道为0~Vmax(2<=Vmax<=5000)，如果现在是X频道，若X<>Vmax,在无锁状态下按+，X就会加1。若X<>0,在无锁状态下按-，X就会减一。
+	想在Georg忘记了MP3的T是多少。他想通过一段操作试验一下。然后他就写下他的操作顺序和最后停留的频道V2(0<=V2<=Vmax),然后就给你了，你要求的是T的最大值和T在这个值的情况下，第一个操作前的频道V1的最大可能数。若T为无限大时经过这段操作最后能停在V2，则输出infinity。
+
+</div><h2>Input</h2><div class=content>
+	第1行：N，Vmax，V2   N表示Georg操作了N次(2<=N<=100000);
+	以下N行，每行第一个为字符C(C为'+'或'-')，第二个为数字Ti(0<=Ti<=10^9)，  表示Georg在Ti秒按下了C键。
+
+
+	</div><h2>Output</h2><div class=content>如题所述。</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 4 3<br />
+- 0<br />
++ 8<br />
++ 9<br />
++ 13<br />
+- 19<br />
+- 24<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5 4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2011'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2011'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2011'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

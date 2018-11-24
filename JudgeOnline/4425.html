@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4425. -- [Nwerc2015]Assigning Workstations分配工作站</title><center><h2>4425: [Nwerc2015]Assigning Workstations分配工作站</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>61&nbsp;&nbsp;<span class=green>Solved: </span>44<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4425'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4425'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4425'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Penelope is part of the admin team of the newly built supercomputer. Her job is to assign workstations to the researchers who come here to run their computations at the supercomputer.</div>
+<div>Penelope is very lazy and hates unlocking machines for the arriving researchers. She can unlock the machines remotely from her desk, but does not feel that this menial task matches her qualifications. Should she decide to ignore the security guidelines she could simply ask the researchers not to lock their workstations when they leave, and then assign new researchers to workstations that are not used any more but that are still unlocked. That way, she only needs to unlock each workstation for the first researcher using it, which would be a huge improvement for Penelope.</div>
+<div></div>
+<div>Unfortunately, unused workstations lock themselves automatically if they are unused for more than mm minutes. After a workstation has locked itself, Penelope has to unlock it again for the next researcher using it. Given the exact schedule of arriving and leaving researchers, can you tell Penelope how many unlockings she may save by asking the researchers not to lock their workstations when they leave and assigning arriving researchers to workstations in an optimal way? You may assume that there are always enough workstations available.</div>
+<div></div>
+<div>Input</div>
+<div>The input consists of:</div>
+<div>one line with two integers n (1&le;n&le;300000), the number of researchers, and m (1&le;m&le;10^8), the number of minutes of inactivity after which a workstation locks itself;</div>
+<div>n lines each with two integers a and s (1&le;a,s&le;10^8), representing a researcher that arrives after a minutes and stays for exactly s minutes.</div>
+<div>Output</div>
+<div>Output the maximum number of unlockings Penelope may save herself.</div>
+<div></div>
+<div>佩内洛普是新建立的超级计算机的管理员中的一员。 她的工作是分配工作站给到这里来运行他们的计算研究任务的研究人员。</div>
+<div>佩内洛普非常懒惰，不喜欢为到达的研究者们解锁机器。 她可以从在她的办公桌远程解锁这些机器，但她并不觉得这卑贱的任务配得上她，所以她决定忽略安全指南偷偷懒。她可以直接地要求，研究者在他们离开时不用锁定自己的工作站，然后把未在使用且还在未锁定状态的工作站分配给新来的研究人员。 这样，她只需要为每一个工作站第一次被使用所属的研究员解锁工作站，这对佩内洛普的工作来说是一个巨大的改善。</div>
+<div></div>
+<div>不幸的是，如果一个工作站在未锁定且没被使用的状态下超过m分钟，会自动锁定自己，佩内洛普必须为使用它的下一个研究员再次打开它。 鉴于抵达和离开的研究人员的确切时间表，你可以告诉佩内洛普，要求研究者在离开时不锁定工作站最多可以使她节约多少次的解锁工作。你可以认为这儿总是有足够的可用工作站。</div>
+<p></p></div><h2>Input</h2><div class=content><div>一行两个整数n (1&le;n&le;300000) 研究员的数量n，以及 m (1&le;m&le;100000000) 工作站在未锁定且没被使用的状态下超过m分钟会自动锁定。</div>
+<div>下面的n行，每一行两个整数a与s (1&le;a,s&le;100000000) 表示一个研究员在第a分钟时到达以及待了s分钟后离开。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出研究者在离开时不锁定工作站最多可以使她节约多少次解锁工作。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Sample Input 1<br />
+3 5<br />
+1 5<br />
+6 3<br />
+14 6 <br />
+Sample Input 2<br />
+5 10<br />
+2 6<br />
+1 2<br />
+17 7<br />
+3 9<br />
+15 6 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Sample Output 1<br />
+2<br />
+<br />
+Sample Output 2<br />
+3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4425'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4425'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4425'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2607. -- [Poi2003]Smugglers</title><center><h2>2607: [Poi2003]Smugglers</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>78&nbsp;&nbsp;<span class=green>Solved: </span>26<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2607'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2607'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2607'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">Byteotia 因为它丰富的金矿资源而闻名世界. 所以在和它的邻国Bitland的边界上每年都有大量的金矿交易。不幸的是由于税务的繁重，商人带着矿产穿过边境时都要交纳矿产价格的50% 作为关税。但是幸运的是，有一些炼金术士已经发明了一些方法能把某一种矿产转化成另一种。于是这样在交易时就可以先把昂贵的矿产转化成便宜的，等到带过边境以后在转换回来。但是由于这项工作费时费力，炼金术士对于每种转换都要收取相应的费用。现在有个商人想将1<i>kg</i>金子带过边境，他想知道最少的花费是多少。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行仅一个数<i>n</i>表示有多少种金属矿产。1 &lt;= <i>n</i> &lt;= 5000. 接下来<i>n</i>行表示每种金属1<i>kg</i>的单价。第<i>k</i> +1行的数<i>p<sub>k</sub></i>为第<i>k</i>种金属的单价。0 &lt;= <i>p<sub>k</sub></i> &lt;= 10<sup>9</sup>. 我们假设金子的标号为1。接下来一个正数<i>m</i>表示一共有<i>m</i>种转换方式。0 &lt;= <i>m</i> &lt;= 100000. 接下来<i>m</i>行每行描述一个转换，它由三个数<i>a</i>, <i>b</i>, <i>c </i>表示把1<i>kg</i>的<i>a</i>金属转换为1<i>kg</i>的<i>b</i>金属需要<i>c</i>的代价。1 &lt;= <i>a</i>,<i>b</i> &lt;= n, 0 &lt;= <i>c</i> &lt;= 10000. 对于特定的金属对<i>a</i>和 <i>b</i> 最多只会出现一次。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">输出一行，表示把1<i>kg</i>的金子带过边境的最小花费。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+<br />
+<br />
+200<br />
+100<br />
+40<br />
+2<br />
+6<br />
+1 2 10<br />
+1 3 5<br />
+2 1 25<br />
+3 2 10<br />
+3 4 5<br />
+4 1 50<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>60<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2607'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2607'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2607'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

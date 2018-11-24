@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3796. -- Mushroom追妹纸</title><center><h2>3796: Mushroom追妹纸</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>468&nbsp;&nbsp;<span class=green>Solved: </span>173<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3796'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3796'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3796'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Mushroom最近看上了一个漂亮妹纸。他选择一种非常经典的手段来表达自己的心意&mdash;&mdash;写情书。考虑到自己的表达能力，Mushroom决定不手写情书。他从网上找到了两篇极佳的情书，打算选择其中共同的部分。另外，Mushroom还有个一个情敌Ertanis，此人也写了封情书给妹子。</div>
+<div>Mushroom不希望自己的情书中完整的出现了情敌的情书。（这样抄袭的事情就暴露了）。</div>
+<div>Mushroom把两封情书分别用字符串s1和s2来表示，Ertanis的情书用字符串s3来表示，他要截取的部分用字符串w表示。</div>
+<div>需满足：</div>
+<div>1、w是s1的子串</div>
+<div>2、w是s2的子串</div>
+<div>3、s3不是w的子串</div>
+<div>4、w的长度应尽可能大</div>
+<div>所谓子串是指：在字符串中连续的一段</div>
+<div>【输入】</div>
+<div>输入文件为girl.in</div>
+<div>输入有三行，第一行为一个字符串s1第二行为一个字符串s2，&nbsp;</div>
+<div>第三行为一个字符串s3。输入仅含小写字母，字符中间不含空格。</div>
+<div>【输出】</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>输出文件为girl.out</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>输出仅有一行，为w的最大可能长度，如w不存在，则输出0。</div>
+<div>【输入样例】</div>
+<div>abcdef</div>
+<div>abcf</div>
+<div>bc</div>
+<div>【输出样例】</div>
+<div>2</div>
+<div>【样例解释】</div>
+<div>s1和s2的公共子串有abc,ab,bc,a,b,c,f，其中abc,bc包含子串bc不合法，所以最长的合法子串为ab。</div>
+<div>【数据规模】</div>
+<div>对于30%的数据：1&lt;=s1、s2、s3的长度&lt;=500</div>
+<div>对于60%的数据：1&lt;=s1、s2、s3的长度&lt;=5000</div>
+<div>对于100%的数据：1&lt;=s1、s2的长度&lt;=50000,1&lt;=s3的长度&lt;=10000</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入有三行，第一行为一个字符串s1第二行为一个字符串s2，&nbsp;</div>
+<div>
+<div>第三行为一个字符串s3。输入仅含小写字母，字符中间不含空格。</div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出仅有一行，为w的最大可能长度，如w不存在，则输出0。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>abcdef<br />
+abcf<br />
+bc<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+【样例解释】<br />
+s1和s2的公共子串有abc,ab,bc,a,b,c,f，其中abc,bc包含子串bc不合法，所以最长的合法子串为ab。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div>对于100%的数据：1&lt;=s1、s2的长度&lt;=50000,1&lt;=s3的长度&lt;=10000</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3796'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3796'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3796'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3651. -- 网络通信</title><center><h2>3651: 网络通信</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>169&nbsp;&nbsp;<span class=green>Solved: </span>97<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3651'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3651'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3651'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp; 有一个由M 条电缆连接的 N 个站点组成的网络。为了防止垄断，由 C 个公司控制所有的电缆，规定任何公司不能控制连接同一个站点的两条以上的电缆（可以控制两条）。同时规定，每个公司不能有多余的电缆，所谓的多余，是指属于同一个公司的电缆不能形成环。&nbsp; <br />
+在运作过程中，不同公司之间会进行电缆买卖。请你写一个程序判断买卖是否合法。 <br />
+</span></p></div><h2>Input</h2><div class=content><p><br />
+<font size="4">输入第一行有4个由空格隔开的整数 N，M，C和 T。N(1&le;N&le; 8 000)表示站点数，M(0&le;M&le;100 000)表示连接站点的电缆数。C(1&le;C&le; 100)表表示公司数量，T 表示电缆买卖次<br />
+数。后面有M行，每行三个整数Sj1,Sj2和Kj，表示连接站点Sj1和Sj2(1&le;Sj1&lt; Sj2&nbsp; &le; n)的电缆属于Kj(1&le;Kj&le;C)公司拥有，任意两个站点只有一条直接相连的电缆，输入状态合法。最后T(0&le;T&le;100 000)行，每行三个整数 Si1, Si2和&nbsp; Ki,表示 Ki公司想购买站点Si1和Si2之间的电缆。 <br />
+</font></p></div><h2>Output</h2><div class=content><p><br />
+<font size="4">输出共 T行，表示处理的结果，有以下几种可能的结果： <br />
+1、&ldquo;No such cable.&rdquo;&nbsp; 两个站点间没有电缆。 <br />
+2、 &ldquo;Already owned.&rdquo;&nbsp; 电缆己经是 Ki 公司控制。 <br />
+3、 &ldquo;Forbidden: monopoly.&rdquo; Ki 公司己经控制了两条连接 Si1&nbsp; 或&nbsp; Si2 的电缆。 <br />
+4、 &ldquo;Forbidden: redundant.&rdquo; Ki 公司控制的线路会出现环。 <br />
+5、 &ldquo;Sold.&rdquo;&nbsp; 可以买卖。 </font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5 3 5 <br />
+1 2 1 <br />
+2 3 1 <br />
+3 4 2 <br />
+1 4 2 <br />
+1 3 3 <br />
+1 2 3 <br />
+1 2 3 <br />
+1 4 3 <br />
+2 3 3 <br />
+2 4 3 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Sold. <br />
+Already owned. <br />
+Forbidden: monopoly. <br />
+Forbidden: redundant. <br />
+No such cable. </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3651'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3651'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3651'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

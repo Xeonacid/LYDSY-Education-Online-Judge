@@ -1,0 +1,111 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2272. -- [Usaco2011 Feb]Cowlphabet  奶牛文字</title><center><h2>2272: [Usaco2011 Feb]Cowlphabet  奶牛文字</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>206&nbsp;&nbsp;<span class=green>Solved: </span>139<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2272'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2272'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2272'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><br />
+Like all bovines, Farmer John's cows speak the peculiar 'Cow'<br />
+language. Like so many languages, each word in this language comprises<br />
+a sequence of upper and lowercase letters (A-Z and a-z).&nbsp; A word<br />
+is valid if and only if each ordered pair of adjacent letters in<br />
+the word is a valid pair.<br />
+<br />
+Farmer John, ever worried that his cows are plotting against him,<br />
+recently tried to eavesdrop on their conversation. He overheard one<br />
+word before the cows noticed his presence. The Cow language is<br />
+spoken so quickly, and its sounds are so strange, that all that<br />
+Farmer John was able to perceive was the total number of uppercase<br />
+letters, U (1 &lt;= U &lt;= 250) and the total number of lowercase<br />
+letters, L (1 &lt;= L &lt;= 250) in the word.<br />
+<br />
+Farmer John knows all P (1 &lt;= P &lt;= 200) valid ordered pairs of<br />
+adjacent letters.&nbsp; He wishes to know how many different valid<br />
+words are consistent with his limited data.&nbsp; However, since<br />
+this number may be very large, he only needs the value modulo<br />
+97654321.<br />
+<br />
+</span></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;约翰的奶牛讲的是别人听不懂的&ldquo;牛语&rdquo;。牛语使用的字母就是英文字母，有大小写之分。牛语中存在P个合法的词素，每个词素都由两个字母组成。牛语的单词是由字母组成的序列，一个单词是有意义的充要条件是任意相邻的字母都是合法的词素。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰担心他的奶牛正在密谋反对他，于是最近一直在偷听他们的对话。可是，牛语太复</span></div>
+<div><span style="font-size: medium">杂了，他模模糊糊地只听到了一个单词，并确定了这个单词中有U个大写字母，L个小写字</span></div>
+<div><span style="font-size: medium">母。现在他想知道，如果这个单词是有意义的，那么有多少种可能性呢？由于这个数字太大</span></div>
+<div><span style="font-size: medium">了，你只要输出答案取97654321的余数就可以了。</span></div></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><br />
+* Line 1: Three space-separated integers: U, L and P<br />
+<br />
+* Lines 2..P+1: Two letters (each of which may be uppercase or<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lowercase), representing one valid ordered pair of adjacent<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; letters in Cow.<br />
+<br />
+</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行：三个用空格隔开的整数：</span><span lang="EN-US"><font face="Times New Roman">U</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">L</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">P</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&le;</span><span lang="EN-US"><font face="Times New Roman">U</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">．</span><span lang="EN-US"><font face="Times New Roman">L</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&le;</span><span lang="EN-US"><font face="Times New Roman">250</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&le;</span><span lang="EN-US"><font face="Times New Roman">P&lt;=</font></span><span lang="EN-US"><font face="Times New Roman">200</font></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第二行到</span><span lang="EN-US"><font face="Times New Roman">P+1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行：第</span><span lang="EN-US"><font face="Times New Roman">i+l</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">有两个字母，表示第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个词素，没有两个词素是完全相同的</span></span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><br />
+* Line 1: A single integer, the number of valid words consistent with<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Farmer&nbsp; John's data mod 97654321.<br />
+<span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">单个整数，表示符合条件的单词数量除以</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体">97654321</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">的余数</span></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2 7<br />
+AB<br />
+ab<br />
+BA<br />
+ba<br />
+Aa<br />
+Bb<br />
+bB<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+The word Farmer John overheard had 2 uppercase and 2 lowercase<br />
+letters.  The valid pairs of adjacent letters are AB, ab, BA, ba,<br />
+Aa, Bb and bB.<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体">(</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">可能的单词为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-fareast-font-family: 宋体">AabB,&nbsp;Abba,&nbsp;abBA,&nbsp;BAab,BbBb,&nbsp;bBAa,&nbsp;bBbB)</span></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2272'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2272'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2272'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5216. -- [Lydsy2017省队十连测]公路建设</title><center><h2>5216: [Lydsy2017省队十连测]公路建设</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>229&nbsp;&nbsp;<span class=green>Solved: </span>108<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5216'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5216'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5216'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在Byteland一共有n个城市，编号依次为1到n，它们之间计划修建m条双向道路，其中修建第i条道路的费用为ci。B</div>
+<div>yteasar作为Byteland公路建设项目的总工程师，他决定选定一个区间[l,r]，仅使用编号在该区间内的道路。他希</div>
+<div>望选择一些道路去修建，使得连通块的个数尽量少，同时，他不喜欢修建多余的道路，因此每个连通块都可以看成</div>
+<div>一棵树的结构。为了选出最佳的区间， Byteasar会不断选择 q个区间，请写一个程序，帮助 Byteasar计算每个区</div>
+<div>间内修建公路的最小总费用。&nbsp;</div></div><h2>Input</h2><div class=content><div>第一行包含三个正整数n; m; q，表示城市数、道路数和询问数。</div>
+<div>接下来m 行，每行三个正整数ui; vi; ci，表示一条连接城市ui 和vi 的双向道路，费用为ci。</div>
+<div>接下来q 行，每行两个正整数li; ri，表示一个询问。</div>
+<div>
+<div>1 &le; ui, vi &le; n, ui ̸= vi, 1 &le; li &le; ri &le; m, 1 &le; ci &le; 10^6</div>
+<div>N&lt;=100,M&lt;=100000,Q&lt;=15000</div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出q 行，每行一个整数，即最小总费用。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 5 2<br />
+1 3 2<br />
+2 3 1<br />
+2 1 6<br />
+3 1 7<br />
+2 3 7<br />
+2 5<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+13</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Claris%E5%8E%9F%E5%88%9B%EF%BC%8C%E6%9C%AC%E7%AB%99%E7%89%88%E6%9D%83%E6%89%80%E6%9C%89'>Claris原创，本站版权所有</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5216'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5216'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5216'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

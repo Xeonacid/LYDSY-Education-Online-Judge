@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2919. -- [Poi1998]Word equations</title><center><h2>2919: [Poi1998]Word equations</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>40&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2919'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2919'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2919'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">每个非空的0，1元素的序列称作一个二进制单词。一个单词等式是一个形式为X1X2&hellip;XL＝Y1Y2&hellip;YR的等式，XI和YJ是二进制数字（0或1）或者变体的英文小写字母（即通常我们所说的变量）。对于每个变体代替一个固定长度的二进制单词，这个长度称作变体的长度。为了解决一个单词等式我们必须给所有的变体分配适当长度的二进制单词（分配给变体X的单词长度必须等于这个变体的长度）。采用这种方式，如果用变体代替单词，那么等式的两边（替换后的二进制单词）相等。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">对于一个给定的等式，计算它有多少种不同的方法使等式成立。</span></div>
+<div><span style="font-size: 12pt">例如：A，B，C，D，E是变体，它们的长度分别是4，2，4，4，2，（即A的长度是4，B的长度是2，&hellip;&hellip;）；考虑等式：1BAD1＝ACBE</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">这个等式有16种不同的方法能使等式成立。</span></div>
+<div><b><span style="font-size: 12pt">【任务】编写程序：</span></b></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: 12pt">１、<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">读入等式的总数及它们的描述；</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: 12pt">２、<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">寻找对于每个等式最多有多少种不同方法使等式成立；</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: 12pt">３、<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size: 12pt">将结果输出</span></div></div><h2>Input</h2><div class=content><div>&nbsp;<span style="font-size: 12pt">第一行有一个整数X，1&le;X&le;5，表示等式的总数。下面的行包含X个等式的描述，每个等式的描述包含6行，描述的等式间没有空行，每个等式的描述是：第一行有一个整数K，0&le;K&le;26，表示等式中不同变体的个数，并且假定是用英文字母表中的前K个小写字母；第二行有K个正整数，它们由空格分开，代表等式中K个变体的长度；第三行有一个整数L，表示等式左边二进制单词的长度，这个长度包括0、1、及变体；第四行是等式左边的二进制单词；第五行有一个整数R，表示等式右边二进制单词的长度；第六行是等式右边的二进制单词。在等式两边的二进制单词的长度总和不超过10000。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">对于每个I，1&le;I&le;X，你的程序应该在输出文件PRO．OUT的第I行上写出第I个等式有多少种不同的方法使等式成立。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1                                         <br />
+5<br />
+4 2 4 4 2<br />
+5<br />
+1BAD1<br />
+4<br />
+ACBE</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 16<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2919'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2919'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2919'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

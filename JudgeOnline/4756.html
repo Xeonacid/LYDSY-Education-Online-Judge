@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4756. -- [Usaco2017 Jan]Promotion Counting</title><center><h2>4756: [Usaco2017 Jan]Promotion Counting</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>462&nbsp;&nbsp;<span class=green>Solved: </span>326<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4756'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4756'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4756'>Discuss</a>]</center><h2>Description</h2><div class=content><div>The cows have once again tried to form a startup company, failing to remember from past experience t</div>
+<div>hat cows make terrible managers!The cows, conveniently numbered 1&hellip;N1&hellip;N (1&le;N&le;100,000), organize t</div>
+<div>he company as a tree, with cow 1 as the president (the root of the tree). Each cow except the presid</div>
+<div>ent has a single manager (its &quot;parent&quot; in the tree). Each cow ii has a distinct proficiency rating,&nbsp;</div>
+<div>p(i), which describes how good she is at her job. If cow ii is an ancestor (e.g., a manager of a man</div>
+<div>ager of a manager) of cow jj, then we say jj is a subordinate of ii.</div>
+<div></div>
+<div>Unfortunately, the cows find that it is often the case that a manager has less proficiency than seve</div>
+<div>ral of her subordinates, in which case the manager should consider promoting some of her subordinate</div>
+<div>s. Your task is to help the cows figure out when this is happening. For each cow ii in the company,&nbsp;</div>
+<div>please count the number of subordinates jj where p(j)&gt;p(i).</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">n只奶牛构成了一个树形的公司，每个奶牛有一个能力值pi，1号奶牛为树根。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">问对于每个奶牛来说，它的子树中有几个能力值比它大的。</span></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N</div>
+<div>The next N lines of input contain the proficiency ratings p(1)&hellip;p(N)&nbsp;</div>
+<div>for the cows. Each is a distinct integer in the range 1&hellip;1,000,000,000</div>
+<div>The next N-1 lines describe the manager (parent) for cows 2&hellip;N&nbsp;</div>
+<div>Recall that cow 1 has no manager, being the president.</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">n，表示有几只奶牛 n&lt;=100000</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">接下来n行为1-n号奶牛的能力值pi</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">接下来n-1行为2-n号奶牛的经理（树中的父亲）</span><span style="font-family: arial, verdana, helvetica, sans-serif;"><br />
+</span></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Please print N lines of output. The ith line of output should tell the number of&nbsp;</div>
+<div>subordinates of cow ii with higher proficiency than cow i.</div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">共n行，每行输出奶牛i的下属中有几个能力值比i大</span></div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+804289384<br />
+846930887<br />
+681692778<br />
+714636916<br />
+957747794<br />
+1<br />
+1<br />
+2<br />
+3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+0<br />
+1<br />
+0<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum%E9%B8%A3%E8%B0%A2Acty%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Platinum鸣谢Acty提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4756'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4756'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4756'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

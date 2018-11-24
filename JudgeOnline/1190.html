@@ -1,0 +1,94 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1190. -- [HNOI2007]梦幻岛宝珠</title><center><h2>1190: [HNOI2007]梦幻岛宝珠</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1255&nbsp;&nbsp;<span class=green>Solved: </span>714<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1190'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1190'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1190'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给你N颗宝石，每颗宝石都有重量和价值。要你从这些宝石中选取一些宝石，保证总重量不超过W，且总价值最大为</div>
+<div>，并输出最大的总价值。</div>
+<div>数据范围：N&lt;=100;W&lt;=2^30,并且保证每颗宝石的重量符合a*2^b（a&lt;=10;b&lt;=30）</div></div><h2>Input</h2><div class=content><div>输入文件中包含多组数据。</div>
+<div>每组数据的格式如下：</div>
+<div>第一行是两个正整数n和W，1&le;n&le;100,1&le;W&le;2^30，分别表示宝石的数目和最多能带走的宝石重量。</div>
+<div>接下来的n行，每行有两个正整数weighti和valuei，1&le;weighti&le;2^30, 0&le;valuei&le;2^30，</div>
+<div>分别表示第i颗宝石的重量和价值，且保证weighti能写成a*2^b(1&le;a&le;10,0&le;b&le;30)的形式。</div>
+<div>同一行的两个正整数之间用空格隔开。</div>
+<div>最后一组数据的后面有两个-1，表示文件的结束。这两个-1并不代表一组数据，</div>
+<div>你不需对这组数据输出结果。并且输入文件中数据的组数不超过20。</div></div><h2>Output</h2><div class=content><div>对于输入的每组数据，输出一个整数C，表示小P最多能带走的宝石的总价值。</div>
+<div>每个结果整数C单独占一行，且保证C不会超过2^30。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 10<br />
+8 9<br />
+5 8<br />
+4 6<br />
+2 5<br />
+4 13<br />
+8 9<br />
+5 8<br />
+4 6<br />
+2 5<br />
+16 75594681<br />
+393216 5533<br />
+2 77<br />
+32768 467<br />
+29360128 407840<br />
+112 68<br />
+24576 372<br />
+768 60<br />
+33554432 466099<br />
+16384 318<br />
+33554432 466090<br />
+2048 111<br />
+24576 350<br />
+9216 216<br />
+12582912 174768<br />
+16384 295<br />
+1024 76<br />
+-1 -1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>14<br />
+19<br />
+1050650</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1190'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1190'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1190'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

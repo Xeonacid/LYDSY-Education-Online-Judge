@@ -1,0 +1,92 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4623. -- Styx</title><center><h2>4623: Styx</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>83&nbsp;&nbsp;<span class=green>Solved: </span>14<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4623'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>A国计划在战争中对B国发动反物质武器，此计划定名为Styx。为阻止两国从此大肆使用反物质武器，你决定破坏A</div>
+<div>国的反物质武器（假设你有破坏它们的奇怪技巧）。武器的位置显然是机密，但是某人留下了关于武器位置的加密</div>
+<div>信息，并告诉了你解密方式。</div>
+<div>该信息是一个n个点（1..n）的树，根节点为1，每个点上均有一个点权Ai。</div>
+<div>定义f(n)= &sum;gcd(i,n)，其中i=1..n；</div>
+<div>g(n)=&sum;d|nf(d)；</div>
+<div>S(i)= &prod;Aj,其中j节点在i节点到根的路径上;</div>
+<div>s(i)表示以i节点为根的子树大小；</div>
+<div>i节点对应的三维向量F(i)=(g(S(i)),4*i,s(i))。</div>
+<div>A国存放武器的地点共有m个，每个地点都被表示为数对（x，y），代表着F(x)&times;F(v1)&times;F(v2)&times;F(v3)&times;&hellip;&times;F(y)</div>
+<div>（其中vi在x到y的路径上），即路径上的向量按次序排列后的向量积，最后得出的向量即是存放武器的位置。你的</div>
+<div>任务即是对每条信息进行解密，阻止Styx。</div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行包含两个正整数n，m (n,m&lt;=100,000)</div>
+<div>第二行n个数字表示Ai,(1&lt;=Ai&lt;=1,000,000)</div>
+<div>以下n-1行表示树边（无向）</div>
+<div>接下来为一个空行，之后m行表示每个地点的加密信息x,y(1&lt;=x,y&lt;=n)</div>
+<div></div>
+</div></div><h2>Output</h2><div class=content><div>
+<div>对于每个地点，输出解密后的坐标（mod 1000000007，取值在0..1,000,001）</div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+9 4 9 <br />
+1 2<br />
+1 3<br />
+<br />
+1 1<br />
+3 2<br />
+3 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>27 4 3<br />
+999988451 419872 385168<br />
+405 12 1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img src="upload/201606/无标题(1).png" width="444" height="218" alt="" /></p><br />
+<p></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;tlzmybm'>By tlzmybm</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4623'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

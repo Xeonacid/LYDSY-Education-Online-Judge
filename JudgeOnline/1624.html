@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1624. -- [Usaco2008 Open] Clear And Present Danger 寻宝之路</title><center><h2>1624: [Usaco2008 Open] Clear And Present Danger 寻宝之路</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>867&nbsp;&nbsp;<span class=green>Solved: </span>567<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1624'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1624'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1624'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;农夫约翰正驾驶一条小艇在牛勒比海上航行．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;海上有N(1&le;N&le;100)个岛屿，用1到N编号．约翰从1号小岛出发，最后到达N号小岛．一</span></div>
+<div><span style="font-size: medium">张藏宝图上说，如果他的路程上经过的小岛依次出现了Ai，A2，&hellip;，AM(2&le;M&le;10000)这样的序列（不一定相邻），那他最终就能找到古老的宝藏．&nbsp;&nbsp;但是，由于牛勒比海有海盗出没．约翰知道任意两个岛屿之间的航线上海盗出没的概率，他用一个危险指数Dij(0&le;Dij&le;100000)来描述．他希望他的寻宝活动经过的航线危险指数之和最小．那么，在找到宝藏的前提下，这个最小的危险指数是多少呢？</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入N和M，之后M行一行一个整数表示A序列，之后输入一个NxN的方阵，表示两两岛屿之间航线的危险指数．数据保证Dij=Dji，Dii=0．</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;最小的危险指数和．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+1<br />
+2<br />
+1<br />
+3<br />
+0 5 1<br />
+5 0 2<br />
+1 2 0<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+There are 3 islands and the treasure map requires Farmer John to<br />
+visit a sequence of 4 islands in order: island 1, island 2, island<br />
+1 again, and finally island 3. The danger ratings of the paths are<br />
+given: the paths (1, 2); (2, 3); (3, 1) and the reverse paths have<br />
+danger ratings of 5, 2, and 1, respectively.<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+He can get the treasure with a total danger of 7 by traveling in<br />
+the sequence of islands 1, 3, 2, 3, 1, and 3. The cow map's requirement<br />
+(1, 2, 1, and 3) is satisfied by this route. We avoid the path<br />
+between islands 1 and 2 because it has a large danger rating.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1624'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1624'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1624'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5077. -- [Ctsc2016]时空旅行</title><center><h2>5077: [Ctsc2016]时空旅行</h2><span class=green>Time Limit: </span>60 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>95&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5077'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5077'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5077'>Discuss</a>]</center><h2>Description</h2><div class=content><div>2045年，人类的技术突飞猛进，已经找到了进行时空旅行的方法。小R得到了一台时空旅行仪，他想用它调查不同</div>
+<div>时空中人类的发展状况。根据平行时空理论，宇宙中存在着很多独立的时空，每个时空在下一个时间点还会分化出</div>
+<div>若干个不同的时空。宇宙是一个三维空间，人类使用空间直角坐标系来描述空间中的一个位置，三维坐标分别是 x</div>
+<div>,y,z。我们假设在初始的时空（编号为 0）中，人类存在于地球上（地球的坐标为 (0,0,0)），其它的时空都是从</div>
+<div>一个现有的时空发展而来。一个时空发生一个事件之后会发展成为另外一个时空（原来的时空不发生任何变化）。</div>
+<div>会影响小R的事件包括两类：人类殖民了一个新的星球，该星球的状态变成&quot;已被殖民&quot;；人类放弃了一个已被殖民</div>
+<div>的星球，该星球的状态变成&quot;未被殖民&quot;。每次进行时空旅行时，小R会先选定一个时空。在这个时空中，人类已经</div>
+<div>殖民了一些星球。小R只要到达该时空中任意一个已被殖民的星球，就能调查人类的发展状况。小R的时空旅行仪出</div>
+<div>现了一些问题，调整 x 坐标的按钮坏掉了，因此到达点的 x 坐标被固定了（每次旅行的 x 坐标值可能不同）。</div>
+<div>与此同时，他仍能任意调整到达点的 y 坐标和 z 坐标。这个问题大大增大了小R的花费：因为时空旅行没有花费</div>
+<div>，但在太空中航行却需要花钱；同时，在不同的星球进行调查也可能会产生不同的费用。假设小R将时空旅行的终</div>
+<div>点设为 A，他要进行调查的星球为 B：如果 A 与 B 的欧几里德距离为 d，那么他太空航行的花费就为 d^2；又如</div>
+<div>果星球 B 上进行调查的费用为 c，那么小R此次调查的总花费就为 d^2+c。现在给定小R每次旅行到达的时空以及</div>
+<div>时空旅行仪上固定的 x 坐标值，请你计算出小R每次旅行完成调查的最小总花费。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入的第一行包含三个非负整数 n,m,c_0，</div>
+<div>n 表示平行时空数量，这些平行时空的编号为 0 到 n-1 的整数，初始时空的编号为 0。</div>
+<div>m 表示小R进行的时空旅行的次数，</div>
+<div>c_0 表示在地球进行调查的花费。保证 n,m 是正整数，0&le;c_0&le;10^12。</div>
+<div>接下来 n-1 行，依次描述平行时空 1 到 n-1，其中第 i 行分两种情况：</div>
+<div>0 fr id x y z c：表示编号为 i 的平行时空由编号为 fr 的时空发展而来，数据保证人类殖民了一个编号为 id 的星球，</div>
+<div>该星球的坐标为 (x,y,z)，在该星球进行调查的花费为 c。</div>
+<div>数据保证给出的星球编号不重复，且 0&lt;id&lt;n；保证 |x|,|y|,|z|&le;10^6，0&le;c&le;10^12。</div>
+<div>1 fr id：表示编号为 i 的平行时空由编号为 fr 的时空发展而来，人类放弃了编号为 id 的星球。</div>
+<div>数据保证该星球在编号为 fr 的时空中处于被殖民的状态；保证 id&gt;0，即地球一定不会被放弃。</div>
+<div>上述两种情况中，各参数均为整数，相邻整数之间均用一个空格隔开；均保证 0&le;fr&lt;i。保证不会出现上述两种之外的情况。</div>
+<div>接下来 m 行，每行表示小R进行的一次时空旅行。</div>
+<div>每行包括 2 个整数 s 和 x_0，表示小R到编号为 s 的平行时空进行了一次时空旅行，时空旅行仪上的 x 坐标被固定为了 x_0。</div>
+<div>保证 0&le;s&lt;n，|x_0 |&le;10^6。</div>
+<div>N,M&lt;=5*10^5</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出 m 行，分别表示每次旅行完成调查的最小总花费。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 2<br />
+0 0 1 8 2 3 7<br />
+0 1 2 10 1 6 2<br />
+1 1 1<br />
+1 4<br />
+2 8<br />
+2 6<br />
+3 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>18<br />
+6<br />
+11<br />
+66</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5077'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5077'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5077'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

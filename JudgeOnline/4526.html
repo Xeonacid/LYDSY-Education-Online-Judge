@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4526. -- Hamming Triples</title><center><h2>4526: Hamming Triples</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>53&nbsp;&nbsp;<span class=green>Solved: </span>25<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4526'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4526'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4526'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小克里斯现今遇上了可怕的事情，甚至他在梦中也总是想着数学。</div>
+<div>克里斯梦到了m个从1到m编号的长度为n的二进制串。最使人震惊的</div>
+<div>是，每个二进制串的各个位均按照不下降或者不上升顺序排列。例如，克里斯能</div>
+<div>梦到接下来这四个长度为五的二进制串：</div>
+<div>00011</div>
+<div>00000</div>
+<div>11110</div>
+<div>11111</div>
+<div>两个长度为n的串a和b之间的汉明距离H(a，b)为对应符号不相同的位</div>
+<div>数。克里斯认为每三个有不同编号的二进制串组成一个三角；并且他有一种错觉，</div>
+<div>只要他能计算出在所有用梦到的二进制串构成的三角a，b，c中，和H(a，</div>
+<div>b)+H(b，c)+H(c，a)为最大值的三角数，就能醒来。</div>
+<div>请帮助困于噩梦中的克里斯</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入第一行包含两个整数n和m（1&lt;=n&lt;=10^9;3&lt;=m&lt;=10^5），二进制串的长度及数量。</div>
+<div>接下来m行描述这些二进制串。第i行包含两个整数si及fi（0&lt;=si&lt;=1;1&lt;=fi&lt;=n），</div>
+<div>描述编号为i的二进制串：第i个二进制串的前fi位等于si，</div>
+<div>然后剩下n-fi位等于1-si。注意在克里斯梦中可以有多个相同的二进制串。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出单独一个整数，这些个汉明距离和为最大值的二进制串三角的个数</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4<br />
+0 3<br />
+0 5<br />
+1 4<br />
+1 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4526'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4526'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4526'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

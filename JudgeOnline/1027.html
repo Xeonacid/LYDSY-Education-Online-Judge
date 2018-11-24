@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1027. -- [JSOI2007]合金</title><center><h2>1027: [JSOI2007]合金</h2><span class=green>Time Limit: </span>4 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>4706&nbsp;&nbsp;<span class=green>Solved: </span>1457<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1027'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1027'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1027'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　某公司加工一种由铁、铝、锡组成的合金。他们的工作很简单。首先进口一些铁铝锡合金原材料，不同种类的<br />
+原材料中铁铝锡的比重不同。然后，将每种原材料取出一定量，经过融解、混合，得到新的合金。新的合金的铁铝<br />
+锡比重为用户所需要的比重。 现在，用户给出了n种他们需要的合金，以及每种合金中铁铝锡的比重。公司希望能<br />
+够订购最少种类的原材料，并且使用这些原材料可以加工出用户需要的所有种类的合金。</p></div><h2>Input</h2><div class=content><p>　　第一行两个整数m和n（m, n &le; 500），分别表示原材料种数和用户需要的合金种数。第2到m + 1行，每行三<br />
+个实数a, b, c（a, b, c &ge; 0 且 a + b + c = 1），分别表示铁铝锡在一种原材料中所占的比重。第m + 2到m +<br />
+&nbsp;n + 1行，每行三个实数a, b, c（a, b, c &ge; 0 且 a + b + c = 1），分别表示铁铝锡在一种用户需要的合金中<br />
+所占的比重。</p></div><h2>Output</h2><div class=content><p>　　一个整数，表示最少需要的原材料种数。若无解，则输出&ndash;1。 </p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 10<br />
+0.1 0.2 0.7<br />
+0.2 0.3 0.5<br />
+0.3 0.4 0.3<br />
+0.4 0.5 0.1<br />
+0.5 0.1 0.4<br />
+0.6 0.2 0.2<br />
+0.7 0.3 0<br />
+0.8 0.1 0.1<br />
+0.9 0.1 0<br />
+1 0 0<br />
+0.1 0.2 0.7<br />
+0.2 0.3 0.5<br />
+0.3 0.4 0.3<br />
+0.4 0.5 0.1<br />
+0.5 0.1 0.4<br />
+0.6 0.2 0.2<br />
+0.7 0.3 0<br />
+0.8 0.1 0.1<br />
+0.9 0.1 0<br />
+1 0 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1027'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1027'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1027'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

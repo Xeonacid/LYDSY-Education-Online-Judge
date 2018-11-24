@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1039. -- [ZJOI2008]无序运动Movement</title><center><h2>1039: [ZJOI2008]无序运动Movement</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>284&nbsp;&nbsp;<span class=green>Solved: </span>62<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1039'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1039'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1039'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　D博士对物理有着深入的研究，经典物理、天体物理、量子物理都有着以他的名字命名的定理。最近D博士着迷<br />
+于研究粒子运动的无规则性。对圣经深信不疑的他相信，上帝创造的任何事物必然是有序的、有理可循的，而不是<br />
+无规则的、混沌的。 经过长时间的研究，D博士找到了很多出现相当频繁的轨迹片断，他把这些轨迹片断储存在一<br />
+个很大的数据库内。他需要你帮助他写一个程序，对于一个给出的粒子运动轨迹，统计数据库中每个轨迹片断的出<br />
+现的次数。 为清楚起见，我们定义一个粒子的轨迹为二维平面上的一个点列（P1, P2, &hellip; PN）。点列P的一个子<br />
+列[i, j]定义为P中一段连续的子序列（Pi, Pi+1, &hellip; Pj）。点列P的一个子列[u, v]被称为点列Q = (Q1, Q2 &hellip; <br />
+Qv-u+1)在P中的一次出现，当且仅当Q经过有限次的平移、旋转、翻转、放缩之后得到Q&rsquo;满足Q&rsquo;k = Pu+k-1（k =<br />
+&nbsp;1 &hellip; u &ndash; v + 1）。 对平面X-Y进行四种操作的解释平移 设平移向量为(dx, dy)，则任意点(x,y)平移后的结果<br />
+为(x+dx, y+dy) 旋转 设旋转角为t，则任意点(x,y)旋转后的结果为 (x cos t &ndash; y sin t, x sin t + y cos t)<br />
+&nbsp;翻转 任意点(x,y) 翻转后的结果为(x, -y) 放缩 设放缩比例为p (p &ne; 0)，则任意点(x,y)放缩后的结果为(px,<br />
+&nbsp;py)</p></div><h2>Input</h2><div class=content><p>　　第一行两个整数N、M，分别描述待处理的粒子运动轨迹的点列大小与数据库内的轨迹片断个数。接下来M行依<br />
+次给出每个轨迹片断。每行先是一个正整数K，表示该轨迹片断点列的长度。然后2K个整数，依次描述点列中的K个<br />
+点的横坐标与纵坐标。接下来一行2N个整数，依次描述待处理的粒子运动轨迹的点列中N个点的横坐标与纵坐标。<br />
+注：输入中的每条轨迹中任意相邻两点不会相同。</p></div><h2>Output</h2><div class=content><p>　　应包含M行，依次给出每个片段在待处理运动轨迹中的出现次数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+2 17 0 10 1<br />
+3 0 0 1 0 1 -1<br />
+0 0 1 0 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p>N, K &le; 200 000，<span style="color: rgb(255, 0, 0);">片段总长度 &le; 1600000</span>，输入中给出所有点坐标绝对值均不大于10 000。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2tangjz%E9%87%8D%E6%96%B0%E5%88%B6%E4%BD%9C%E6%95%B0%E6%8D%AE'>鸣谢tangjz重新制作数据</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1039'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1039'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1039'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

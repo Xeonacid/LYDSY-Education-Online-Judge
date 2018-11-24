@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3200. -- 表达式</title><center><h2>3200: 表达式</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>15<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3200'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3200'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3200'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="left"><span style="font-size: medium">Tar的第一项家庭作业是一大堆中缀表达式。他要把这些表达式写成后缀形式之后交给老师。Tar不会做这个作业，所以他找同学要了一份答案来抄。Tar的老师是一个近视眼，分不清连续一串的相同字符和一个字符的区别。Tar今天感觉非常累，于是他决定偷懒，少抄几个字糊弄一下老师。请你帮他完成这个任务。</span></div>
+<div align="left"><span style="font-size: medium">我们来做几个必要的定义。</span></div>
+<div align="left"><span style="font-size: medium"><b>表达式</b>由a-z的小写字母和一些二元运算符构成，运算符可以是a-z以外的任意可见字符。</span></div>
+<div align="left"><span style="font-size: medium"><b>中缀表达式</b>就是一般情况下使用的表达式，比如((a+h)/b)*(c+d)，将运算符置于两个运算数中间（注意运算数本身可以是变量或者一个表达式，因此这是一个递归定义）。一般可以利用括号指定运算顺序。</span></div>
+<div align="left"><span style="font-size: medium"><b>后缀表达式</b>的特点是把运算符置于两个运算数之后，比如和上式等价的后缀表达式是ah+b/cd+*。后缀表达式不需要括号，严格从左到右进行计算。</span></div>
+<div align="left"><span style="font-size: medium">另外我们假定这个表达式系统内，<b>相同的运算符号</b>满足结合律和交换律，具体来说：</span></div>
+<div align="left"><span style="font-size: medium"><b>结合律</b>：A*(B*C) = (A*B)*C 写成后缀时，ABC** = AB*C*。</span></div>
+<div align="left"><span style="font-size: medium"><b>交换律</b>：A*B = B*A 写成后缀时，AB* = BA*</span></div></div><h2>Input</h2><div class=content><div align="left"><span style="font-size: medium">一行字符，表示Tar同学的答案。以后缀表达式的形式给出。</span></div></div><h2>Output</h2><div class=content><div align="left"><span style="font-size: medium">输出一个数字，表示Tar能够蒙混过关至少要写几个字。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例输入1<br />
+af+b*cd**<br />
+<br />
+样例输入2<br />
+xy*x*y*x*y*</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出1<br />
+7<br />
+<br />
+样例输出2<br />
+3</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">样例解释2<br /><br />
+xy*x*y*x*y* = xxxyyy***** = (xy*) 长度为3 <br /><br />
+100%的数据满足：输入长度&lt;=2500</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3200'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3200'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3200'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

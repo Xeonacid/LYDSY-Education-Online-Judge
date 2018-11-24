@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5178. -- [Jsoi2011]棒棒糖</title><center><h2>5178: [Jsoi2011]棒棒糖</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>65&nbsp;&nbsp;<span class=green>Solved: </span>33<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5178'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5178'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5178'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Coffee的世界里也是有棒棒糖卖的，Coffee买了N(1&le;N&le;50000)只连着的。这N只棒棒糖包裹在小塑料袋中，排成</div>
+<div>一列，相邻的两只棒棒糖的塑料袋是接起来的。为了方便，我们把棒棒糖从左到右编号为1..N。每只棒棒糖有一种</div>
+<div>口味。第i只的口味是ci(1&le;ci&le;50000)。两只棒棒糖i,j的口味相同，当且仅当ci=cj。Coffee对m只棒棒糖总体口</div>
+<div>味的评价比较奇怪。如果这m只棒棒糖中，有一种口味c0的数量严格大于总数的一半m/2，那么Coffee认为这m只棒</div>
+<div>棒糖主要是c0口味的。Coffee知道，这里的c0如果存在就一定是唯一的。而当c0不存在时，Coffee认为这m只棒棒</div>
+<div>糖是混合口味的。Coffee暂时舍不得吃棒棒糖，它在想一些好玩的问题。如果考虑棒棒糖序列的一个连续子序列s.</div>
+<div>.t(1&le;s&le;t&le;N)，包括棒棒糖s和t。那么这t-s+1只棒棒糖的总体口味是什么呢？</div>
+<div>Coffee有一堆这样的问题，一共M(1&le;M&le;50000)个。</div>
+<div>第i个问题是棒棒糖子序列si..ti的总体口味。请你帮忙解决。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第1行：两个用空格隔开的整数，分别表示N,M。</div>
+<div>第2..N+1行：每行一个整数，第i+1行表示ci。</div>
+<div>第N+2..N+M+1行：每行两个用空格隔开的整数</div>
+<div>第i+N+1行表示，si,ti。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>第1..M行：每行一个整数</div>
+<div>第i个整数表示你对第i个问题的回答，也就是si..ti的总体口味。</div>
+<div>如果总体口味是c0，那么回答用c0表示。</div>
+<div>如果总体口味是混合口味，那么回答用0表示</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3 <br />
+1 <br />
+2 <br />
+2<br />
+1<br />
+1<br />
+1 5<br />
+2 5<br />
+2 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+0<br />
+2<br />
+棒棒糖1..5中，口味1的棒棒糖有3只，一共5只棒棒糖，而3>5/2=2.5，所以主要口味为1。棒棒糖2..5中，一共4只<br />
+棒棒糖，没有一种口味的棒棒糖个数严格大于4/2=2，所以是混合口味的。棒棒糖2..4中，一共3只棒棒糖，口味2<br />
+的棒棒糖有2只，2>3/2=1.5，主要口味为2。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5178'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5178'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5178'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

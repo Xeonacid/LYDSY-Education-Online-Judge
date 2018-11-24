@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4655. -- Clan</title><center><h2>4655: Clan</h2><span class=green>Time Limit: </span>60 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4655'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4655'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4655'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有这么一个人叫做农民王 Q，他有一个家谱，现在他在想自己和上古农民王 U 到底有</div>
+<div>多大的关系， 关系式中有这么些个亲戚：</div>
+<div>&ldquo;father, mother, son, daughter, husband, wife, brother, sister, grandfather, grandmother,</div>
+<div>grandson, granddaughter, uncle, aunt, nephew, niece&rdquo;</div>
+<div>中文意思分别是：</div>
+<div>&ldquo;父亲，母亲，儿子，女儿，丈夫，妻子，兄弟，姐妹，爷爷，奶奶，孙子，孙女，叔</div>
+<div>叔，阿姨，侄儿，侄女&ldquo;</div>
+<div>对于亲戚关系，满足以下几点：</div>
+<div>1. Q 的兄弟等同于 Q 的父亲的或者母亲的儿子（ Q 自己除外）；</div>
+<div>2. Q 的爷爷等同于 Q 的父亲的或者母亲的父亲；</div>
+<div>3. Q 的孙子等同于 Q 的儿子的或者女儿的儿子；</div>
+<div>4. Q 的叔叔等同于 Q 的父亲的或者母亲的兄弟；</div>
+<div>5. Q 的侄儿等同于 Q 的兄弟的或者姐妹的儿子；</div>
+<div>6. 上述规则对于姐妹，奶奶，孙女，阿姨和侄女类似。</div>
+<div>血缘关系的定义如下：</div>
+<div>1. Q 到 Q 的父亲， Q 的母亲， Q 的儿子或者 Q 的女儿的距离为 1；</div>
+<div>2. Q 到 Q 的丈夫（妻子）的距离为 0；</div>
+<div>3. Q 到 U 的距离等于在上述规则下推断出的 Q 到 U 的最短距离。</div>
+<div>由于一条关系会出现很多种情况，所以农民王想知道他跟上古农民王的血缘关系距</div>
+<div>离究竟有多少种？分别是多少？请你帮帮他好吗？</div>
+<div>注明： 不会出现的关系包括收养，亲戚间结婚（家族树中无环），离婚，复婚，重婚，</div>
+<div>同性恋等。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第 1 行包括一个字符串表示氏族谱图上的关系式，格式如下：</div>
+<div>Q is U&rsquo;s relation&rsquo;s relation&rsquo;s &hellip; relation 设关系式中出现的亲戚关系总个数为 l</div>
+<div>100% 0 &lt;= l &lt;= 100， 不保证一定存在一种情况满足关系式</div></div><h2>Output</h2><div class=content><div>第 1 行一个整数 c，表示一共有多少种情况</div>
+<div>第 2 行 c 个数，表示每种情况的距离，空格隔开，按升序输出</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Q is U's father's brother's son's aunt<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+3 5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4655'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4655'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4655'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

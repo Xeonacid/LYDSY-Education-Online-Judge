@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3540. -- [Usaco2014 Open]Fair Photography </title><center><h2>3540: [Usaco2014 Open]Fair Photography </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>292&nbsp;&nbsp;<span class=green>Solved: </span>143<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3540'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3540'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3540'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">FJ's N cows (2 &lt;= N &lt;= 100,000) are standing at various positions along a long one-dimensional fence. The ith cow is standing at position x_i (an integer in the range 0...1,000,000,000) and is either a plain white cow or a spotted cow. No two cows occupy the same position, and there is at least one white cow. FJ wants to take a photo of a contiguous interval of cows for the county fair, but in fairness to his different cows, he wants to ensure there are equal numbers of white and spotted cows in the photo. FJ wants to determine the maximum size of such a fair photo, where the size of a photo is the difference between the maximum and minimum positions of the cows in the photo. To give himself an even better chance of taking a larger photo, FJ has with him a bucket of paint that he can use to paint spots on an arbitrary subset of his white cows of his choosing, effectively turning them into spotted cows. Please determine the largest size of a fair photo FJ can take, given that FJ has the option of painting some of his white cows (of course, he does not need to paint any of the white cows if he decides this is better).</span></p>
+<p></p>
+<p>可以先任意把0染成1.</p>
+<p>区间长度定义为,[L,R]中最右和最左的数的差的绝对值.</p>
+<p>求一个最长区间,满足区间中所有数0和1的个数相同.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp;* Line 1: The integer N. </font></p>
+<p><font size="4">* Lines 2..1+N: Line i+1 contains x_i and either W (for a white cow) or S (for a spotted cow).&nbsp;</font></p></div><h2>Output</h2><div class=content><p><font size="4">* Line 1: The maximum size of a fair photo FJ can take, after possibly painting some of his white cows to make them spotted. </font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+8 W<br />
+11 S<br />
+3 W<br />
+10 W<br />
+5 S<br />
+<br />
+INPUT DETAILS: There are 5 cows. One of them is a white cow at position 8, and so on. <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7 <br />
+OUTPUT DETAILS: FJ takes a photo of the cows from positions 3 to positions 10. <br />
+There are 4 cows in this range -- 3 white and 1 spotted -- so he needs to paint one <br />
+of the white cows to make it spotted. </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver&#32;By&#32;liyizhen2'>Silver By liyizhen2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3540'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3540'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3540'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

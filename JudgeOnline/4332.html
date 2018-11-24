@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4332. -- JSOI2012 分零食</title><center><h2>4332: JSOI2012 分零食</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>207&nbsp;&nbsp;<span class=green>Solved: </span>107<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4332'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4332'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4332'>Discuss</a>]</center><h2>Description</h2><div class=content><div>这里是欢乐的进香河，这里是欢乐的幼儿园。&nbsp;</div>
+<div>今天是2月14日，星期二。在这个特殊的日子里，老师带着同学们欢乐地跳着，笑着。校长从幼儿园旁边的小吃店买了大量的零食决定分给同学们。听到这个消息，所有同学都安安静静地排好了队，大家都知道，校长不喜欢调皮的孩子。&nbsp;</div>
+<div>同学们依次排成了一列，其中有A位小朋友，有三个共同的欢乐系数O，S和U。如果有一位小朋友得到了x个糖果，那么她的欢乐程度就是f(x)=O*x2+S*x+U。&nbsp;</div>
+<div>现在校长开始分糖果了，一共有M个糖果。有些小朋友可能得不到糖果，对于那些得不到糖果的小朋友来说，欢乐程度就是1。如果一位小朋友得不到糖果，那么在她身后的小朋友们也都得不到糖果。（即这一列得不到糖果的小朋友一定是最后的连续若干位）&nbsp;</div>
+<div>所有分糖果的方案都是等概率的。现在问题是：期望情况下，所有小朋友的欢乐程度的乘积是多少？呆呆同学很快就有了一个思路，只要知道总的方案个数T和所有方案下欢乐程度乘积的总和S，就可以得到答案Ans=S/T。现在他已经求出来了T的答案，但是S怎么求呢？他就不知道了。你能告诉他么？&nbsp;</div>
+<div>因为答案很大，你只需要告诉他S对P取模后的结果。&nbsp;</div>
+<div></div>
+<div>后记：&nbsp;</div>
+<div>虽然大家都知道，即便知道了T，知道了S对P取模后的结果，也没有办法知道期望情况下，所有小朋友欢乐程度的乘积。但是，当呆呆想到这一点的时候，已经彻底绝望了。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行有2个整数，分别是M和P。&nbsp;</div>
+<div>第二行有一个整数A，第三行有一个整数O。&nbsp;</div>
+<div>第四行有一个整数S，第五行有一个整数U。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一个整数S，因为答案可能很大，你只需要输出S 对P取模后的结果。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 100 <br />
+4 <br />
+1 <br />
+0 <br />
+0 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>63 <br />
+<br />
+样例说明 <br />
+函数f(x)=x^2。一共有4份零食，4位同学。如果只有第一个同学得到，欢乐程度为16，若前两位同学得到，欢乐程度的所有可能依次为9，9，16，若有三位同学得到，欢乐程度有4，4，4，最后一种情况，每一个同学都得到了零食，欢乐程度为1。相加后得到S=63。 <br />
+<br />
+应上传者要求，此题不公开，如有异议，请提出.</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，M&lt;=10000，P&lt;=255，A&lt;=108，O&lt;=4，S&lt;=300，U&lt;=100。&nbsp;</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4332'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4332'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4332'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

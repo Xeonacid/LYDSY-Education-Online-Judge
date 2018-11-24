@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5204. -- [CodePlus 2018 3 月赛]投票统计</title><center><h2>5204: [CodePlus 2018 3 月赛]投票统计</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>127&nbsp;&nbsp;<span class=green>Solved: </span>60<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5204'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5204'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5204'>Discuss</a>]</center><h2>Description</h2><div class=content><div>为了总结过去一段时间的命题工作，王队长组织了&ldquo;我最喜欢的题目&rdquo;评选活动，并邀请各位选手给题目进行投票</div>
+<div>。具体来说，每道题目有一个正整数作为它的编号，一共有n名选手给它们进行投票，每位选手投且仅投给一道题</div>
+<div>，其中第i位选手所投票的题目编号为ai,由于投票的选手众多，所以王队长请你来帮忙统计得票数。你需要找出收</div>
+<div>获选手投票最多的题目数量与他们的编号，并按从小到大的顺序列出这些编号。但这里有一个例外情况：如果所有</div>
+<div>被投票的题目得票数都相同，则王队长认为这次活动比较失败，你应该输出-1。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入数据第一行包含一个正整数T，表示测试数据的组数，各组数据之间没有空行。</div>
+<div>接下来2T行，依次描述每组数据：</div>
+<div>每组数据包含两行，其中第一行包含一个正整数n，表示参与这次活动的选手人数。</div>
+<div>第二行包含n个由空格隔开的正整数a1～an，其中第i个数ai表示第i位选手所投票的题目编号。</div>
+<div>N&lt;=100000,Ai&lt;=10^9</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出应由T组数据组成，各组数据之间没有空行。对于每一组数据：</div>
+<div>若没有出现题面所述的例外情况，则这组测试数据输出两行，</div>
+<div>其中第一行输出一个正整数m，表示收获选手投票最多的题目数量，</div>
+<div>第二行按从小到大的顺序输出m个正整数，表示这些题目的编号。</div>
+<div>若出现题面所述的例外情况，则这组测试数据输出一行，请输出-1。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+10<br />
+2 6 1 2 1 1 2 6 7 1<br />
+10<br />
+10 3 6 6 3 10 6 6 6 2<br />
+10<br />
+8 8 10 10 10 10 8 5 8 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+1<br />
+6<br />
+1<br />
+8</span></div><h2>HINT</h2>
+			<div class=content><p><div>来自 CodePlus 2017 3 月赛，清华大学计算机科学与技术系学生算法与竞赛协会 荣誉出品。</div><br />
+<div>Credit：idea/何昊天　命题/何昊天　验题/丁子钧</div><br />
+<div>Git Repo：https://git.thusaac.org/publish/CodePlus3</div><br />
+<div>感谢腾讯公司对此次比赛的支持。</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5204'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5204'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5204'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

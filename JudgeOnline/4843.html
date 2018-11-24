@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4843. -- [Neerc2016]Expect to Wait</title><center><h2>4843: [Neerc2016]Expect to Wait</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>116&nbsp;&nbsp;<span class=green>Solved: </span>64<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4843'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4843'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4843'>Discuss</a>]</center><h2>Description</h2><div class=content><div>ls最近开了一家图书馆，大家听说是ls开的，纷纷过来借书，自然就会出现供不应求的情况，<span class="Apple-tab-span" style="white-space:pre">	</span>并且借书的过程类</div>
+<div>似一个队列，每次有人来借书就将它加至队尾，每次有人来还书就把书借给队头的若干个人，定义每个人的等待时</div>
+<div>间为拿到书的时刻减去加至队列的时刻，如果一个人根本就拿不到书，则等待时间为inf，现在给出所有时刻借书</div>
+<div>还书的情况，和若干个询问，每次询问当图书馆初始有x本书时所有人的等待时间之和是多少（如果存在一个人根</div>
+<div>本拿不到书，则输出INFINITY）。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个整数n,q（1&lt;=n,q&lt;=100000),表示有n个时刻有借书还书的情况，以及有q个询问。</div>
+<div>接下来n行，每行表示一个操作，操作如下：</div>
+<div>1.&quot;+ t k&quot; 在t时刻有k本书被还回来。</div>
+<div>2.&quot;- t k&quot; 在t时刻有k个人来借书。</div>
+<div>（1&lt;=t&lt;=1e9,1&lt;=k&lt;=10000）</div>
+<div>输入顺序保证t递增。</div>
+<div>接下来一行q个数，第i个数bi（1&lt;=bi&lt;=1e9）表示图书馆初始有bi本书，询问所有人的等待时间之和为多少。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一共q行，每行一个数表示等待时间之和，如果存在一个人根本拿不到书，则输出INFINITY。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4<br />
+- 1 1<br />
+- 2 2<br />
++ 4 1<br />
+- 6 1<br />
++ 7 2<br />
+0 3 1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>INFINITY<br />
+0<br />
+8<br />
+3</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4843'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4843'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4843'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

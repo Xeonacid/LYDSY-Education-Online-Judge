@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2198. -- [Usaco2011 Jan]瓶颈</title><center><h2>2198: [Usaco2011 Jan]瓶颈</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>66&nbsp;&nbsp;<span class=green>Solved: </span>32<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2198'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2198'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2198'>Discuss</a>]</center><h2>Description</h2><div class=content>Farmer John有一张N个农场构成的网络(1 <= N <= 100,000) ，我们将农场标记为1N。
+农场被N-1条单向道路连接，保证从任何一个农场可以到达1号农场。FJ想让奶牛到1号农场集中
+（P.S. 至于要做什么我也不知道）。
+
+对于每个农场i > 1都有一条单独的单向道路通往P_i，并且这个农场里有C_i只奶牛
+（1 <= C_i <= 1,000,000,000）。在每个单位时间里，这条道路允许不超过M_i
+ (0 <= M_i <= 1,000,000,000)只奶牛从农场i走到农场P_i (1 <= P_i <= N)。
+
+Farmer John 想让所有的奶牛都集中在1号农场（农场容纳奶牛的数量是没有限制的）。
+下面是奶牛集中到1号农场过程的规则：
+
+    * 我们认为时间是离散的
+
+    * 任何奶牛都可以在一个单位时间里走过任意多条道路。但是，必须满足每条道路的上限M_i。
+
+    * 奶牛从来不会离开1号农场。
+
+换句话说，每一个单位时间，每只奶牛可以选择下面行动之一：
+
+    a) 留在当前的农场
+
+    b) 经过一条或者多条道路，向1号农场移动。同样，需要满足每条道路的上限M_i。
+
+FJ想知道有多少奶牛可以在某个特定的时刻到达1号农场。特别的，他有一张列着K (1 <= K <= 10,000)
+个时间T_i (1 <= T_i <= 1,000,000,000)的单子，他想知道对于每个T_i，如果采用最优
+的策略在这个时刻结束时最多能有多少奶牛到达1号农场。
+
+考虑如下一个样例（树退化成链），列表里只有T_1=5一个时刻，奶牛如下分布：
+ <img border="0" src="images/2198_1.jpg"> 
+</div><h2>Input</h2><div class=content>* 第1行：两个空格隔开的整数N和K
+
+* 第2到N行：第i行包含三个空格隔开的整数，表示农场i（不是i+1）的P_i，C_i，M_i
+
+* 第N+1到N+K行：第N+i行包含一个整数T_i
+
+</div><h2>Output</h2><div class=content>* 第1K行：第i行包含一个整数，表示到T_i个单位时间为止能够到达1号农场奶牛的最多数量。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 1<br />
+1 1 5<br />
+2 12 7<br />
+3 12 3<br />
+5<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>25<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2198'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2198'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2198'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

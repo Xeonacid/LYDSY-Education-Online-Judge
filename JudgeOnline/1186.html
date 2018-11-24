@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1186. -- [HNOI2007]胜负一子</title><center><h2>1186: [HNOI2007]胜负一子</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1186'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1186'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1186'>Discuss</a>]</center><h2>Description</h2><div class=content><div>五子棋是一种流传很广的棋类游戏，在一个15&times;15的棋盘上，对弈双方执黑白棋子（类似于围棋），执黑子者先下</div>
+<div>，凡落下的棋子不能被提起，即不存在挪子和吃子的情况。为了简化问题，假设黑方不存在&ldquo;禁手&rdquo;，&ldquo;禁手&rdquo;是</div>
+<div>五子棋术语，指禁止走棋子的地方。当某选手的棋子在横、竖、45度斜线方向、135度斜线方向之一先出现相连的5</div>
+<div>个棋子时，该选手获胜。先考虑轮到黑棋走的一盘残局，请给出黑棋获胜的最少步数和在该步数下能获胜的所有不</div>
+<div>同的下一步走法。</div></div><h2>Input</h2><div class=content><div>共有15行，每行有15个由一个空格隔开的整数。</div>
+<div>第i行，第j列的整数记做vij，用vij=0，1，2表示第i行，第j列的位置为空、有1黑子、有1白子，</div>
+<div>从左上角开始，按从左至右，自上而下的顺序输入，</div>
+<div>即输入的第1行第1列整数v11表示第1行第1列位置的状态，</div>
+<div>输入的第15行第15列整数v15，15表示第15行第15列位置的状态。</div></div><h2>Output</h2><div class=content><div>第一行为两个整数a和b，</div>
+<div>其中：a表示黑棋获胜的最少步数，b表示黑棋在a步获胜的所有不同的下一步走法的种数。</div>
+<div>从第二行到第b+1行，每行有两个整数，</div>
+<div>分别表示黑棋在a步获胜的一种下一步走法落子位置的行数i和列数j，</div>
+<div>要求这些走法按照15i+j的大小从小到大排列。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 2 0 0 0 0 0<br />
+0 0 0 0 0 0 0 2 0 2 0 0 0 0 0<br />
+0 0 0 0 0 0 2 1 1 2 0 0 0 0 0<br />
+0 0 0 0 0 0 0 1 2 1 0 0 0 0 0<br />
+0 0 0 0 0 0 2 1 1 1 1 2 0 0 0<br />
+0 0 0 0 0 0 0 1 0 1 0 1 0 0 0<br />
+0 0 0 0 0 0 2 2 0 1 1 0 2 0 0<br />
+0 0 0 0 0 0 0 0 0 2 0 2 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 2<br />
+10 9<br />
+10 11</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%95%B0%E6%8D%AE%E7%94%B1SillyHook%E7%94%9F%E6%88%90'>数据由SillyHook生成</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1186'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1186'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1186'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

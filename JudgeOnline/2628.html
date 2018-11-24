@@ -1,0 +1,106 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2628. -- JZPSTR</title><center><h2>2628: JZPSTR</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>71&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2628'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2628'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2628'>Discuss</a>]</center><h2>Description</h2><div class=content><div id="pcont" style="margin-top: 20px">
+<div class="pdsec"><span style="font-size: medium">问题描述</span></div>
+<div class="pdcont"><span style="font-size: medium">　　你要对一个字符串进行三种操作：<br />
+　　0. 在位置x_i处插入一个字符串y_i<br />
+　　1. 删除位置[x_i, y_i)的字符串<br />
+　　2. 查询位置[x_i, y_i)的字符串包含多少次给定的子串z_i<br />
+</span></div>
+</div></div><h2>Input</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行，一个整数T，表示操作个数。<br />
+　　下面T行，每行第一个数p_i，表示这个操作的类型：<br />
+　　若p_i=0，则接下来有一个整数x_i和一个字符串y_i，表示进行插入操作；<br />
+　　若p_i=1，则接下来有两个整数x_i和y_i，表示进行删除操作；<br />
+　　若p_i=2，则接下来有两个整数x_i和y_i，以及一个字符串z_i，表示进行询问。<br />
+　　字符串的下标从0开始(即第一个字符的下标为0)。<br />
+　　初始时字符串为空。<br />
+　　对于插入操作，插入后字符串y_i的首字符的下标应为x_i；<br />
+　　对于删除操作，删除的区间[x_i, y_i)为左闭右开区间；<br />
+　　对于查询操作，询问的区间[x_i, y_i)为左闭右开区间。<br />
+　　所有插入的和查询的字符串均不为空，且只包含0~9的字符。<br />
+　　所有询问的区间和删除的区间均不为空。<br />
+　　保证输入数据合法。<br />
+　　对于&quot;左闭右开区间&quot;不理解的可以去看样例解释。<br />
+</span></div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　对每个询问操作，输出一行，表示这个询问的答案。<br />
+</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8<br />
+0 0 894894894<br />
+2 0 2 894<br />
+2 0 9 894<br />
+0 2 6<br />
+2 0 9 64<br />
+2 0 9 894<br />
+1 2 6<br />
+2 0 6 894<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+3<br />
+1<br />
+1<br />
+2<br />
+<br />
+样例说明<br />
+　　第一次操作后，字符串为894894894；<br />
+　　第二次操作，询问的区间为89，不包含任何894；<br />
+　　第三次操作，询问的区间为894894894，包含三个894；<br />
+　　第四次操作后，字符串为8964894894；<br />
+　　第五次操作，询问的区间为896489489，包含一个64；<br />
+　　第六次操作，询问的区间为896489489，包含一个894；<br />
+　　第七次操作后，字符串为894894；<br />
+　　第八次操作，询问的区间为894894，包含两个894。<br />
+<br />
+数据规模和约定<br />
+　　50%的数据中，询问个数<=100 (不是操作个数)<br />
+　　100%的数据中，插入总长度<=2000000，任何时刻字符串长度<=1000000，插入次数<=1001，删除次数<=1000，询问的z_i的总长度<=10000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2628'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2628'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2628'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

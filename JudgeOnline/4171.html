@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4171. -- Rhl的游戏</title><center><h2>4171: Rhl的游戏</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>91&nbsp;&nbsp;<span class=green>Solved: </span>39<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4171'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4171'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4171'>Discuss</a>]</center><h2>Description</h2><div class=content><div>RHL最近迷上一个小游戏：Flip it。游戏的规则很简单，在一个N*M的格子上，有一些格子是黑色，有一些是白色</div>
+<div>。每选择一个格子按一次，格子以及周围边相邻的格子都会翻转颜色（边相邻指至少与该格子有一条公共边的格子</div>
+<div>），黑变白，白变黑。RHL希望把所有格子都变成白色的。不幸的是，有一些格子坏掉了，无法被按下。这时，它</div>
+<div>可以完成游戏吗？</div></div><h2>Input</h2><div class=content><div>第一行一个整数T，表示T组数据。</div>
+<div>每组数据开始于三个整数n,m,k，分别表示格子的高度和宽度、坏掉格子的个数。接下来的n行，每行一个长度m的</div>
+<div>字符串，表示格子状态为'B'或'W'。最后k行，每行两个整数Xi,Yi(1&le;Xi&le;n,1&le;Yi&le;m)，表示坏掉的格子。</div>
+<div>n,m,k&lt;=256,T&lt;=10</div></div><h2>Output</h2><div class=content><div>对于每组数据，先输出一行Case #i: (1&le;i&le;T)</div>
+<div>如果可以成功，输出YES，否则输出NO。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3 3 0<br />
+WBW<br />
+BBB<br />
+WBW<br />
+3 3 2<br />
+WBW<br />
+BBB<br />
+WBW<br />
+2 2<br />
+3 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1:<br />
+YES<br />
+Case #2:<br />
+NO</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4171'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4171'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4171'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

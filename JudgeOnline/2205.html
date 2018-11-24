@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2205. -- 神奇的地图</title><center><h2>2205: 神奇的地图</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2205'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2205'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2205'>Discuss</a>]</center><h2>Description</h2><div class=content>在Starcraft某个古怪的薇操地图中，你被要求在一个狭窄的高地上用1个marine来打败2只zergling。由于你认为这是不可能完成的任务，你打算编程验证这一点。
+为了方便处理，你抽象出了这样一个模型：
+作为战场的狭窄高低可以认为是一个5*5的方格阵，每个方格可能是“可通过”和“不可通过”两种情况。marine和zergling总是占据其中的一个可通过方格。两个zergling可以处于同一方格，但任意时刻，marine不能任一未死亡的zergling处于同一方格。marine和zergling均拥有生命值(HP)，marine的初始生命值为m，所有zerglint的初始生命值均为z。
+游戏可以抽象为回合制，在每个回合中，marine首先行动。marine可以选择沿竖直或水平方向移动一格，或站在原地朝某只zergling开枪（由于高低非常狭窄，marine可以集中处于高地任何位置的zergling）。marine的每一枪会减少目标zergling得生命值1点，当一只zergling得生命值降低到0点或以下时会死亡。
+marine行动完毕后，所有尚未死亡的zergling会同时行动，如果某只zergling和marine相邻，它会攻击marine，否则它会沿着自己当前位置到marine当前位置的最短路前进一格，如果有多条最短路，zergling会按左、上、右、下的顺序一次尝试行动（例如如果左、上都是最短路，zergling会向左走）如果两只zergling同时在同一格攻击marine，marine的生命值只会减少1点，否则每只zergling的攻击都会使marine的生命值减少1点。
+当某个回合结束时，若zergling全部死亡则认为游戏胜利，若marine的低到0点或以下，或者游戏进行了34个回合但仍未胜利则认为游戏失败。
+你需要判定游戏是否可能取得胜利，如果可能，输出取得胜利的最少回合数。
+</div><h2>Input</h2><div class=content>输入文件的前5行有5个字符，表示战场每个方格的情况。
+字符“1”表示对应方格不可通过，其他字符表示对应方格可通过。大写字母“M”表示marine初始位置，大小写字母“Z”和“z”表示两只zergling的初始位置。
+输入文件的第6行有两个整数m、z，分别表示marine的初始生命值和zergling的初始生命值。1< = m < = 16，1< = z< =99</div><h2>Output</h2><div class=content>如果游戏可以取得胜利，输出一行“WIN”，并在第二行输出一个整数，表示取得胜利需要的最少回合数。否则输出一行“LOSE”</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>zZ000 <br />
+11110 <br />
+00M10 <br />
+01100 <br />
+00000 <br />
+15 15 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>WIN <br />
+30 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%A8%A1%E6%8B%9F%E9%A2%98%E7%B3%BB%E5%88%97'>模拟题系列</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2205'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2205'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2205'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

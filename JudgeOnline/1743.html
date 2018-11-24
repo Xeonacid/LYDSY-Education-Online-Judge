@@ -1,0 +1,105 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1743. -- [Usaco2005 nov]Walk the Talk</title><center><h2>1743: [Usaco2005 nov]Walk the Talk</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>30&nbsp;&nbsp;<span class=green>Solved: </span>17<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1743'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1743'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1743'>Discuss</a>]</center><h2>Description</h2><div class=content>Farmer John has set up a puzzle for his cows to solve.  At the
+entrance to the barn, he has laid out an H x W (1 <= H <= 30, 1 <=
+W <= 30) grid of letters.  Before a cow can enter the barn, she
+must spell out a valid English word by jumping from square to square,
+creating a sequence of letters.  She can start at any square but
+may only jump to a subsequent square that is located to the right
+and/or above the current square (i.e., neither to the left nor
+lower).  The next square can be any distance from the current one
+since the cows are world-class jumpers!
+
+No two cows may traverse the exact same path, although two cows are
+allowed to spell the same word via different paths.
+
+As an example, consider this grid (presuming 'TO' and 'OX' are
+words):
+
+  T X X O
+  T X Q T
+  X T X Q
+
+Four paths are valid, all spelling 'TO' (one spelling requires a
+'T' from the bottom row and an 'O' from the top row).  'OX' is a
+valid word, but would require jumping to an 'X' square left of the
+'O', which is not allowed.
+
+Given the grid and a list of valid words, compute the number of
+cows that can enter the barn without any cow repeating a path.  The
+file `dict.txt' will be available and will contain the list of valid
+words, one per line. See a copy of it at
+http://ace.delos.com/usaco/dict-twalk.txt .
+
+</div><h2>Input</h2><div class=content>* Line 1: Two integers: H and W
+
+* Lines 2..H+1: Each line contains W characters, without spaces,
+        representing a row in the grid.  The first row is the top row.
+         The first character in each row is the left-most character.
+
+</div><h2>Output</h2><div class=content>* Line 1: The number of cows that can enter the barn without repeating
+        a path.
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+TXXO<br />
+TXQT<br />
+XTXQ<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+4 cows can enter the barn, each one spelling out one of the 'TO's.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>请不要提交此题....</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1743'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1743'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1743'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

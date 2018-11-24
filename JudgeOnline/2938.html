@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2938. -- [Poi2000]病毒</title><center><h2>2938: [Poi2000]病毒</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1395&nbsp;&nbsp;<span class=green>Solved: </span>713<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2938'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2938'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2938'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">二进制病毒审查委员会最近发现了如下的规律：某些确定的二进制串是病毒的代码。如果某段代码中不存在任何一段病毒代码，那么我们就称这段代码是安全的。现在委员会已经找出了所有的病毒代码段，试问，是否存在一个无限长的安全的二进制代码。</span></div>
+<div><span style="font-size: medium">示例：</span></div>
+<div><span style="font-size: medium">例如如果{011, 11, 00000}为病毒代码段，那么一个可能的无限长安全代码就是010101&hellip;。如果{01, 11, 000000}为病毒代码段，那么就不存在一个无限长的安全代码。</span></div>
+<div><span style="font-size: medium">任务：</span></div>
+<div><span style="font-size: medium">请写一个程序：</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>读入病毒代码；</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>判断是否存在一个无限长的安全代码；</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>将结果输出</span></div></div><h2>Input</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">第一行包括一个整数n，表示病毒代码段的数目。以下的n行每一行都包括一个非空的01字符串&mdash;&mdash;就是一个病毒代码段。所有病毒代码段的总长度不超过30000。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">你应在在文本文件WIN.OUT的第一行输出一个单词：</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>TAK&mdash;&mdash;假如存在这样的代码；</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>NIE&mdash;&mdash;如果不存在。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+01 <br />
+11 <br />
+00000<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>NIE<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2938'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2938'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2938'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3788. -- ZL密码锁</title><center><h2>3788: ZL密码锁</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3788'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3788'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3788'>Discuss</a>]</center><h2>Description</h2><div class=content><div>话说考古学家ZL走进了一个山洞&hellip;&hellip;&hellip;&hellip;</div>
+<div>ZL在山洞深处发现了一组密码锁，并断定这里藏着数不清的宝藏。经过一番寻找，ZL发现该密码锁上写着一串阿拉伯数字，看起来这些数字中有着一些微妙的联系。于是他动用了120分脑细胞，凭着藐视一切IMO选手的强大逻辑推理能力，找到了规律，并破解了几个密码锁。</div>
+<div>可ZL毕竟是人，他也是会累的呀T_T</div>
+<div>况且他的GPS显示前方还有成百上千个密码锁~！！！！</div>
+<div>于是他把问题简化了一下，求助于身为OI神犇的你。</div>
+<div>{============================================}</div>
+<div>数列a[n]由如下关系式定义：</div>
+<div>a[0]=0;</div>
+<div>a[n]=f(a[n-1])</div>
+<div>其中f(x)是一个正整数系数的m次多项式</div>
+<div>对任意给定的x和y，求a[x]和a[y]的最大公约数d</div>
+<div>令s为d模x的余数，t为d模y的余数</div>
+<div>给定r和一个奇质数p，保证r不是p的整数倍</div>
+<div>废话完毕，现在我们的问题是：</div>
+<div>求方程 (rx2+sx+t) mod p = 0</div>
+<div>有几个模p意义下的正整数解</div>
+<div>对每个函数y=f(x)将进行T次询问</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入文件包括T+3行</div>
+<div>第一行一个正整数m</div>
+<div>第二行m+1个正整数cm，&hellip;，c0，其中ci(i=m，m-1，&hellip;，0)表示f(x)中xi的系数</div>
+<div>第三行一个正整数T，表示询问次数</div>
+<div>以下T行每行4个正整数，分别表示x，y，r，p</div>
+<div>//保证输入文件合法</div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>输出文件包含T行，每行仅输出一个整数表示方程有多少组解（模p的意义下）</div>
+</div>
+<div>
+<p></p>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+2 1<br />
+1<br />
+4 8 7 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><a id="fck_paste_padding">﻿</a>对于100%的数据，T&lt;=1000，m&lt;=10，x&lt;y，x&lt;=10^5，y&lt;=10^8，p&lt;=10^8。</p><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3788'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3788'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3788'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

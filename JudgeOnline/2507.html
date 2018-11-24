@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2507. -- untitled</title><center><h2>2507: untitled</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>24&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2507'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2507'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2507'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 考虑一个序列S1与另一个序列S2，如果满足下列条件，则两个序列等价：</span></div>
+<div style="margin: 0cm 0cm 0pt 60pt; text-indent: -18pt"><span style="font-size: medium">1、&nbsp;两个序列长度相等。</span></div>
+<div style="margin: 0cm 0cm 0pt 60pt; text-indent: -18pt"><span style="font-size: medium">2、&nbsp;设序列长度为len，对于任意的i,j(1&lt;=i,j&lt;=Len,i!=j)，若s1[i]&lt;s1[j]，则s2[i]&lt;s2[j]；若s1[i]&gt;s1[j]，则s2[i]&gt;s2[j]。</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt"><span style="font-size: medium">现给出序列S和另外n个序列T1,T2,&hellip;Tn。</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt"><span style="font-size: medium">位置i可行，当且仅当S[1..i]的某个后缀等价于T1&hellip;Tn中的某个序列。你需要输出所有可行i的值，按照升序输出。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据有若干组，第一行一个数Test，表示数据组数。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以下有Test组数据。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每组数据，第一行一个整数m，表示序列的个数，其中，第一个序列表示序列S,以下m-1个序列表示T1,T2,&hellip;,Tn（m=n+1）。对于每个序列，第一行一个数表示其长度Len，第二行Len个数，表示这个序列。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每组数据用一个空行隔开。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;</span></div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每组数据，按升序输出可行的i值，一行一个数。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 每组数据之间不要加入多余空行。</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata> <br />
+         2<br />
+         2<br />
+         1<br />
+         1<br />
+         1<br />
+         2<br />
+ <br />
+         3<br />
+         3<br />
+         3 1 2<br />
+         2<br />
+         4 5<br />
+         2<br />
+         10 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+2<br />
+3<br />
+<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+数据范围：<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S的长度小于400000，m&gt;1，T的总长度小于100000。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2507'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2507'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2507'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

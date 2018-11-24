@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4740. -- 石家庄的工人阶级队伍比较坚强</title><center><h2>4740: 石家庄的工人阶级队伍比较坚强</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>32&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4740'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4740'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4740'>Discuss</a>]</center><h2>Description</h2><div class=content><div>n=3^m个人在玩石头剪刀布，一共有t轮游戏，每轮有m次石头剪刀布。</div>
+<div>在同一轮的m次游戏中，每个人的决策必须是提前确定的，也就是说不能采用随机策略，也不能根据前若干局的结果决定下一局的决策；这样，显然一共有n=3^m种决策。</div>
+<div>这n=3^m个人会采取两两不同的决策。为了方便表达，对于第x（0&le;x&lt;n）个人，将x转换成三进制得到一个m位的数。其中0表示剪刀，1表示石头，2表示布。就得到了第x个人采取的策略。</div>
+<div>由于编号是固定的，因此每个人在不同轮的m次游戏中都会采取同一套决策。</div>
+<div>第x个人在最初时有一个分数f<sub>0,x</sub>。</div>
+<div>在第i轮中，他将和另一个人y进行m次的石头剪刀布的比赛。</div>
+<div>我们用W(x,y)表示x在和y的m次比赛中赢的次数；用L(x,y)表示x在和y的m次比赛中输的次数。</div>
+<div>在第i轮结束之后，第x个人分数是：</div>
+<div>fi,x=&sum;f<sub>i&minus;1,y</sub>b<sub>u,v</sub>(0&le;y&lt;n)</div>
+<div>其中u=W(x,y)=L(y,x),v=L(x,y)=W(y,x)，平局不计入次数；bu,v则是一个给定的评分数组。</div>
+<div>注意即使y和x一样（自己转移到自己）也会乘上一个系数b0,0（即自己跟自己打全为平局）。</div>
+<div>显然随着轮数越来越多，分数也会越来越大，这个计分系统和我们平时用的计算机一样，也会溢出。当要储存的分数f大于等于p的时候，就会变成f mod p。</div>
+<div>B君想知道t轮之后所有人的分数，也就是f<sub>t,0</sub>,f<sub>t,1</sub>,&hellip;,f<sub>t,n&minus;1</sub>。</div>
+<div>G君：「诶，我发现这个数p有特殊的性质诶！不存在两个正整数，使得他们倒数的和等于3/p」</div>
+<div>B君：「G君好棒！不过这个题怎么做呢？」</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行三个整数，表示m,t,p。保证0&le;m&le;12，0&le;t&le;1000000000，1&le;p&le;1000000000。</div>
+<div>第二行有n=3m个整数，表示f<sub>0,0</sub>,f<sub>0,1</sub>,&hellip;,f<sub>0,n&minus;1</sub>。保证0&le;f<sub>0,i</sub>&lt;p。</div>
+<div>接下来的部分是一个数组b，第1行m+1个数，第2行m个数&hellip;&hellip;第m+1行1个数。</div>
+<div>其中第i行的第j个数为b<sub>i&minus;1,j&minus;1</sub>（i,j&ge;1,i+j&minus;2&le;m），保证0&le;b<sub>i,j</sub>&lt;p。</div>
+<div>不存在两个正整数，使得他们倒数的和等于3/p。即不存在正整数x,y&gt;0，使得1/x+1/y=3/p。</div>
+<div>m&lt;=12,T&lt;=10^9</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出n=3^m行，每行一个整数，表示每个人最终的得分。</div>
+<div>其中第i行表示第i个人的得分f<sub>t,i</sub>。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 1 10009<br />
+10 100 1000<br />
+2 3<br />
+4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4320<br />
+3240<br />
+2430</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4740'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4740'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4740'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2568. -- 比特集合</title><center><h2>2568: 比特集合</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>588&nbsp;&nbsp;<span class=green>Solved: </span>279<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2568'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2568'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2568'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　比特集合是一种抽象数据类型</span><span style="color: #200000">(Abstract Data Type) </span><span style="color: #200000">，其包含一个集合</span><span style="color: #200000">S</span><span style="color: #200000">，并支持如下几种操作：</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　</span><span style="color: #200000">INS M : </span><span style="color: #200000">将元素</span><span style="color: #200000"> M </span><span style="color: #200000">插入到集合</span><span style="color: #200000">S</span><span style="color: #200000">中；</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　</span><span style="color: #200000">DEL M : </span><span style="color: #200000">将集合</span><span style="color: #200000">S</span><span style="color: #200000">中所有等于</span><span style="color: #200000"> M </span><span style="color: #200000">的元素删除；</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　</span><span style="color: #200000">ADD M : </span><span style="color: #200000">将集合</span><span style="color: #200000">S</span><span style="color: #200000">中的所有元素都增加数值</span><span style="color: #200000">M </span><span style="color: #200000">；</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　</span><span style="color: #200000">QBIT k : </span><span style="color: #200000">查询集合中有多少个元素满足其二进制的第</span><span style="color: #200000"> k</span><span style="color: #200000">位为</span><span style="color: #200000"> 1 </span><span style="color: #200000">。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　初始时，集合</span><span style="color: #200000">S</span><span style="color: #200000">为空集。请实现一个比特集合，并对于所有的</span><span style="color: #200000">QBIT</span><span style="color: #200000">操作输出相应的答案。</span></span></div></div><h2>Input</h2><div class=content><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　输入第一行包含一个正整数</span><span style="color: #200000">N</span><span style="color: #200000">，表示操作的数目。</span><span style="color: #200000"><br />
+</span><span style="color: #200000">　　接下来</span><span style="color: #200000">N</span><span style="color: #200000">行，每行为一个操作，格式见问题描述。</span></span></div></div><h2>Output</h2><div class=content><div style="background: white" align="left"><span style="font-size: medium"><span style="color: #200000">　　对于每一个</span><span style="color: #200000">QBIT</span><span style="color: #200000">操作，输出一行，表示相应的答案。</span></span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8<br />
+INS 1<br />
+QBIT 0<br />
+ADD 1<br />
+QBIT 0<br />
+QBIT 1<br />
+DEL 2<br />
+INS 1<br />
+QBIT 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+0<br />
+1<br />
+0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据规模和约定<br /><br />
+　　时间限制2s。<br /><br />
+　　对于30%的数据，1 &le; N &le; 10000。<br /><br />
+　　对于100%的数据，1 &le; N &le; 500000；QBIT操作中的k满足, 0 &le; k &lt; 16。INS/DEL操作中，满足0 &le; M &le; 10^9；ADD操作中, 满足0 &le; M &le; 1000。<br /><br />
+注意<br /><br />
+　　注意集合S可以包含多个重复元素。<br /><br />
+&nbsp;</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2012%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9FRound%201%20day4'>2012国家集训队Round 1 day4</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2568'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2568'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2568'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1197. -- [HNOI2006]花仙子的魔法</title><center><h2>1197: [HNOI2006]花仙子的魔法</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1389&nbsp;&nbsp;<span class=green>Solved: </span>779<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1197'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1197'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1197'>Discuss</a>]</center><h2>Description</h2><div class=content><div>相传，在天地初成的远古时代，世界上只有一种叫做&ldquo;元&rdquo;的花。接下来，出 现了一位拥有魔法的花仙子，她能</div>
+<div>给花附加属性，从此，&ldquo;元&rdquo;便不断变异，产生了大千世界千奇百怪的各种各样的花。据说，花仙子既可存在于二</div>
+<div>维空间（平 面），又可存在于三维空间（立体），还可存在于n维空间（想象）。二维空间的点可用向量（x1,x2</div>
+<div>）表示，三维空间的点可用向量（x1,x2,x3）表 示，一般来说，n维空间的点可用向量（x1,x2,&hellip;,xn）表示。而n</div>
+<div>维空间中两点（x1,x2,&hellip;,xn）与（w1,w2,&hellip;,wn）之间的距离定义为</div>
+<div><img src="upload/201802/1(5).png" width="150" height="35" alt="" /></div>
+<div>在n维空间中，花仙子每实施魔法就要选择一个参考点（w1,w2,&hellip;,wn）和一个作用半径r，并且参考点的位置和作</div>
+<div>用半径的大小可以任意选择。这时，n 维空间中所有与参考点（w1,w2,&hellip;,wn）之间的距离小于作用半径r的花都会</div>
+<div>受到这次魔法的影响。每次魔法都会给受到影响的花带来不同的属性，且的效 果可以叠加。一般来说，若花仙子</div>
+<div>总共实施了m次魔法，则n维空间中处于某点的花所具有的属性可用长度为m的二进制串a1a2&hellip;am来描述，其中对 1</div>
+<div>&le;i&le;m，若该花受到第i次魔法的影响，则ai的值为1,否则为0。显然，不同的属性对应不同的花。 现在的问题是</div>
+<div>：花仙子在n维空间中实施了m次魔法后，最多能得到多少种不同的花？</div></div><h2>Input</h2><div class=content><div>包含两个整数，并用一个空格隔开，</div>
+<div>第一个整数表示实施魔法的次数m，第二个整数表示空间的维数n。</div>
+<div>其中，1&le;m&le;100,1&le;n&le;15。</div></div><h2>Output</h2><div class=content><p>仅包含一个整数，表示花仙子在n维空间中实施了m次魔法后，最多能得到多少种不同的花。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1197'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1197'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1197'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

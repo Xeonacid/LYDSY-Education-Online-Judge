@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4759. -- [Usaco2017 Jan]Balanced Photo</title><center><h2>4759: [Usaco2017 Jan]Balanced Photo</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>147&nbsp;&nbsp;<span class=green>Solved: </span>123<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4759'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4759'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4759'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John is arranging his N cows in a line to take a photo (1&le;N&le;100,000). The height of the iit</div>
+<div>h cow in sequence is hihi, and the heights of all cows are distinct.As with all photographs of his c</div>
+<div>ows, FJ wants this one to come out looking as nice as possible. He decides that cow ii looks &quot;unbala</div>
+<div>nced&quot; if Li and RRi differ by more than factor of 2, where LiLi and RiRi are the number of cows tall</div>
+<div>er than i on her left and right, respectively. That is, ii is unbalanced if the larger of Li and Ri&nbsp;</div>
+<div>is strictly more than twice the smaller of these two numbers. FJ is hoping that not too many of his&nbsp;</div>
+<div>cows are unbalanced.Please help FJ compute the total number of unbalanced cows.</div>
+<div>农夫约翰正在安排他的N头牛拍照片， 每头牛有一个身高，从1到N编号，排列成一行(h1,h2...hn)，每头牛i左边</div>
+<div>比他高的牛的数量记为Li，右边比他高的牛的数量记为Ri，如果存在i满足max(Ri,Li)&gt;2*min(Li,Ri)则这个牛i是</div>
+<div>不平衡的，现在FJ需要你告诉他有多少头牛不平衡。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N. The next NN lines contain h1&hellip;hN</div>
+<div>each a nonnegative integer at most 1,000,000,000.</div>
+<div>输入第一行为N(N&lt;=1e5)，接下来的一行有N个数，每个数表示第i头牛的身高，不超过1e9</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Please output a count of the number of cows that are unbalanced.</div>
+<div>输出有多少头牛是不平衡的</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+34<br />
+6<br />
+23<br />
+0<br />
+5<br />
+99<br />
+2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+//在这个样例中，身高为34，5,2的牛是不平衡的</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4759'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4759'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4759'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1076. -- [SCOI2008]奖励关</title><center><h2>1076: [SCOI2008]奖励关</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3492&nbsp;&nbsp;<span class=green>Solved: </span>1846<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1076'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1076'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1076'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　你正在玩你最喜欢的电子游戏，并且刚刚进入一个奖励关。在这个奖励关里，系统将依次随机抛出k次宝物，<br />
+每次你都可以选择吃或者不吃（必须在抛出下一个宝物之前做出选择，且现在决定不吃的宝物以后也不能再吃）。<br />
+&nbsp;宝物一共有n种，系统每次抛出这n种宝物的概率都相同且相互独立。也就是说，即使前k-1次系统都抛出宝物1（<br />
+这种情况是有可能出现的，尽管概率非常小），第k次抛出各个宝物的概率依然均为1/n。 获取第i种宝物将得到Pi<br />
+分，但并不是每种宝物都是可以随意获取的。第i种宝物有一个前提宝物集合Si。只有当Si中所有宝物都至少吃过<br />
+一次，才能吃第i种宝物（如果系统抛出了一个目前不能吃的宝物，相当于白白的损失了一次机会）。注意，Pi可<br />
+以是负数，但如果它是很多高分宝物的前提，损失短期利益而吃掉这个负分宝物将获得更大的长期利益。 假设你<br />
+采取最优策略，平均情况你一共能在奖励关得到多少分值？</p></div><h2>Input</h2><div class=content><p>　　第一行为两个正整数k和n，即宝物的数量和种类。以下n行分别描述一种宝物，其中第一个整数代表分值，随<br />
+后的整数依次代表该宝物的各个前提宝物（各宝物编号为1到n），以0结尾。</p></div><h2>Output</h2><div class=content><p>　　输出一个实数，保留六位小数，即在最优策略下平均情况的得分。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 2<br />
+1 0<br />
+2 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1.500000</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">【数据规模】<br /><br />
+1&lt;=k&lt;=100,1&lt;=n&lt;=15，分值为[-10^6,10^6]内的整数。<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1076'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1076'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1076'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

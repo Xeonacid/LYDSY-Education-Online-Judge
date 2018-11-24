@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5280. -- [Usaco2018 Open]Milking Order</title><center><h2>5280: [Usaco2018 Open]Milking Order</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>34&nbsp;&nbsp;<span class=green>Solved: </span>14<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5280'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5280'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5280'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Farmer John的N头奶牛（1&le;N&le;105），仍然编号为1&hellip;N，正好闲得发慌。因此，她们发展了一个与Farmer John每</div>
+<div>天早上为她们挤牛奶的时候的排队顺序相关的复杂的社会阶层。经过若干周的研究，Farmer John对他的奶牛的社</div>
+<div>会结构总计进行了M次观察（1&le;M&le;50,000）。每个观察结果都是他的某些奶牛的一个有序序列，表示这些奶牛应</div>
+<div>该以与她们在序列中出现的顺序相同的顺序进行挤奶。比方说，如果Farmer John的一次观察结果是序列2、5、1，</div>
+<div>Farmer John应该在给奶牛5挤奶之前的某个时刻给奶牛2挤奶，在给奶牛1挤奶之前的某个时刻给奶牛5挤奶。Farme</div>
+<div>r John的观察结果是按优先级排列的，所以他的目标是最大化X的值，使得他的挤奶顺序能够符合前X个观察结果描</div>
+<div>述的状态。当多种挤奶顺序都能符合前X个状态时，Farmer John相信一个长期以来的传统&mdash;&mdash;编号较小的奶牛的地</div>
+<div>位高于编号较大的奶牛，所以他会最先给编号最小的奶牛挤奶。更加正式地说，如果有多个挤奶顺序符合这些状态</div>
+<div>，Farmer John会采用字典序最小的那一个。挤奶顺序x的字典序比挤奶顺序y要小，如果对于某个j，xi=yi对所有i</div>
+<div>&lt;j成立，并且xj&lt;yj（也就是说，这两个挤奶顺序到某个位置之前都是完全相同的，在这个位置上x比y要小）。请</div>
+<div>帮助Farmer John求出为奶牛挤奶的最佳顺序。</div>
+<div></div>
+</div>
+<div></div></div><h2>Input</h2><div class=content><div>
+<div>第一行包含N和M。</div>
+<div>接下来的M行，每行描述了一个观察结果。</div>
+<div>第i+1行描述了观察结果i，第一个数是观察结果中的奶牛数量mi，后面是一列mi个整数，给出这次观察中奶牛的顺序。</div>
+<div>所有mi的和至多为200,000</div>
+<div></div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>
+<div>输出N个空格分隔的整数，给出一个1&hellip;N的排列，为Farmer John给他的奶牛们挤奶应该采用的的顺序。</div>
+<div></div>
+</div>
+<div>
+<div></div>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+3 1 2 3<br />
+2 4 2<br />
+3 3 4 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 4 2 3<br />
+<br />
+这里，Farmer John有四头奶牛，他的挤奶顺序应该是奶牛1在奶牛2之前、奶牛2在奶牛3之前（第一个观察结果）<br />
+，奶牛4在奶牛2之前（第二个观察结果），奶牛3在奶牛4之前、奶牛4在奶牛1之前（第三个观察结果）。前两个观<br />
+察结果可以同时被满足，但是Farmer John不能同时满足所有的规则，因为这样的话会要求奶牛1在奶牛3之前，同<br />
+时奶牛3在奶牛1之前。这意味着总共有两种可能的挤奶顺序：1 4 2 3和4 1 2 3，第一种是字典序较小的。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5280'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5280'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5280'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3417. -- Poi2013  Tales of seafaring</title><center><h2>3417: Poi2013  Tales of seafaring</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>496&nbsp;&nbsp;<span class=green>Solved: </span>170<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3417'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3417'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3417'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium; ">Young Bytensson loves to hang out in the port tavern, where he often listens to the sea dogs telling their tales of seafaring. Initially, he believed them all, however incredible they sounded. Over time though, he became suspicious. He has decided to write a program that will verify if there may be any grain of truth in those tall stories. Bytensson reasoned that while he cannot tell if the sailors indeed weathered all those storms, he can at least find out if their travel itineraries make sense. This is a task for a programmer, which Bytensson, unfortunately, is not. Help him out!<br />
+There are&nbsp;&nbsp; ports and&nbsp;&nbsp; waterways connecting them in the waters frequented by the sailors Bytensson listened to. If there is a waterway between two ports, then sailing from one to the other is possible. Any waterway can be sailed in both directions.<br />
+Bytensson got to know K seafaring tales. Each tells of a sailor who began his journey in one port, sailed a number of waterways, and ended up in another port, which may have been the one he initially set sail from. The sailor in question may have sailed through the same waterway many times, each time in any direction.<br />
+</span></p>
+<p><span style="font-size: medium; "><br type="_moz" />
+</span></p>
+<p><span style="font-size: medium; ">一个<span lang="EN-US">n</span>点<span lang="EN-US">m</span>边无向图，边权均为<span lang="EN-US">1</span>，有<span lang="EN-US">k</span>个询问</span></p>
+<p class="MsoPlainText"><span style="font-size: medium; ">每次询问给出<span lang="EN-US">(s,t,d)</span>，要求回答是否存在一条从<span lang="EN-US">s</span>到<span lang="EN-US">t</span>的路径，长度为<span lang="EN-US">d</span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoPlainText"><span style="font-size: medium; ">路径不必是简单路<span lang="EN-US">(</span>可以自交<span lang="EN-US">)</span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p><font size="4">In the first line of the standard input, there are three integers, N,M and K (2&lt;=N&lt;=5000,1&lt;=M&lt;=5000,1&lt;=K&lt;=1000000) These denote, respectively: the number of ports in the waters frequented by the sailors who told Bytensson their stories, the number of waterways, and the number of tales.<br />
+The M lines that follow specify the waterways. A single waterway's description consists of a single line that contains two integers, a and b (1&lt;=a,b&lt;=N,a&lt;&gt;b) separated by a single space; these specify the numbers of ports at the two ends of this particular waterway.<br />
+The K lines that follow specify the tales that Bytensson has heard. A single tale's description consists of a single line with three integers, s,t&nbsp; and d (1&lt;=S,T&lt;=N,1&lt;=d&lt;=1000000000) separated by single spaces. These indicate that the tale's protagonist set sail from port no. s, ended the journey in port no. t, and sailed exactly d times through various waterways.<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">Your program should print exactly K lines to the standard output; the i-th of them should contain the word TAK (Polish for yes) if the journey described in the i-th tale (in input order) could have taken place. If it could not, then the line should contain the word NIE(Polish for no).<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8 7 4<br />
+1 2<br />
+2 3<br />
+3 4<br />
+5 6<br />
+6 7<br />
+7 8<br />
+8 5<br />
+2 3 1<br />
+1 4 1<br />
+5 5 8<br />
+1 8 10<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+NIE<br />
+TAK<br />
+NIE<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img height="138" width="420" alt="" src="upload/201401/aff(4).jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Wcmg%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>鸣谢Wcmg提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3417'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3417'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3417'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

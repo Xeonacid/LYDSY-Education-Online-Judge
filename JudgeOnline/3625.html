@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3625. -- [Codeforces Round #250]小朋友和二叉树</title><center><h2>3625: [Codeforces Round #250]小朋友和二叉树</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>857&nbsp;&nbsp;<span class=green>Solved: </span>390<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3625'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3625'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3625'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">我们的小朋友很喜欢计算机科学，而且尤其喜欢二叉树。<br />
+考虑一个含有n个互异正整数的序列c[1],c[2],...,c[n]。如果一棵带点权的有根二叉树满足其所有顶点的权值都在集合{c[1],c[2],...,c[n]}中，我们的小朋友就会将其称作神犇的。并且他认为，一棵带点权的树的权值，是其所有顶点权值的总和。<br />
+给出一个整数m，你能对于任意的s(1&lt;=s&lt;=m)计算出权值为s的神犇二叉树的个数吗？请参照样例以更好的理解什么样的两棵二叉树会被视为不同的。<br />
+我们只需要知道答案关于998244353(7*17*2^23+1,一个质数)取模后的值。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">第一行有2个整数 n,m(1&lt;=n&lt;=10^5; 1&lt;=m&lt;=10^5)。<br />
+第二行有n个用空格隔开的互异的整数 c[1],c[2],...,c[n]（1&lt;=c[i]&lt;=10^5)。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">输出m行，每行有一个整数。第i行应当含有权值恰为i的神犇二叉树的总数。请输出答案关于998244353(=7*17*2^23+1,一个质数)取模后的结果。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例一：<br />
+2 3<br />
+1 2<br />
+样例二：<br />
+3 10<br />
+9 4 3<br />
+样例三：<br />
+5 10<br />
+13 10 6 4 15<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例一：<br />
+1<br />
+3<br />
+9<br />
+样例二：<br />
+0<br />
+0<br />
+1<br />
+1<br />
+0<br />
+2<br />
+4<br />
+2<br />
+6<br />
+15<br />
+样例三：<br />
+0<br />
+0<br />
+0<br />
+1<br />
+0<br />
+1<br />
+0<br />
+2<br />
+0<br />
+5<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于第一个样例，有9个权值恰好为3的神犇二叉树：<br /><br />
+<img height="432" alt="" width="819" src="upload/201406/a.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=VFleaKing%20&amp;%20pyx1997%20%E6%84%9F%E8%B0%A2wyl8899%E6%8F%90%E4%BE%9B%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91'>VFleaKing & pyx1997 感谢wyl8899提供中文翻译<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3625'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3625'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3625'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

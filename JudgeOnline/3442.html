@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3442. -- 学习小组</title><center><h2>3442: 学习小组</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>611&nbsp;&nbsp;<span class=green>Solved: </span>280<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3442'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3442'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3442'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">【背景】</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">坑校准备鼓励学生参加学习小组。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 共有n个学生，m个学习小组，每个学生有一定的喜好，只愿意参加其中的一些学习小组，但是校领导为学生考虑，规定一个学生最多参加k个学习小组。财务处的大叔就没那么好了，他想尽量多收钱，因为每个学生参加学习小组都要交一定的手续费，不同的学习小组有不同的手续费。然而，事与愿违，校领导又决定对学习小组组织者进行奖励，若有a个学生参加第i个学习小组，那么给这个学习小组组织者奖励Ci*a^2元。在参与学生（而不是每个学习小组的人数总和）尽量多的情况下，求财务处最少要支出多少钱（若为负数，则输出负数）（支出=总奖励费-总手续费）。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">输入有若干行，第一行有三个用空格隔开的正整数n、m、k。接下来的一行有m个正整数，表示每个Ci。第三行有m个正整数，表示参加每个学习小组需要交的手续费Fi。再接下来有一个n行m列的矩阵，表若第i行j列的数字是1，则表示第i个学生愿意参加第j个学习小组，若为0，则为不愿意。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">输出只有一个整数，为最小的支出。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+3 3 1<br />
+1 2 3<br />
+3 2 1<br />
+111<br />
+111<br />
+111<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+-2<br />
+【样例解释】<br />
+    参与学生最多为3，每个学生参加一个学习小组，若有两个学生参加第一个学习小组，一个学生参加第二个学习小组（一定要有人参加第二个学习小组），支出为-2，可以证明没有更优的方案了。<br />
+【数据范围与约定】<br />
+100%的数据，0＜n≤100，0＜m≤90，0＜k≤m，0＜Ci≤10，0＜Fi≤100。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20lll6924%20at%20%E2%80%9C%E5%86%AC%E4%BB%A4%E8%90%A5%E5%90%8E%E7%AB%9E%E9%80%9F%E6%94%BE%E6%9D%BE%E8%B5%9B%E2%80%9D'>By lll6924 at “冬令营后竞速放松赛”</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3442'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3442'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3442'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

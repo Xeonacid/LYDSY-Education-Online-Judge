@@ -1,0 +1,128 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2497. -- Winmine.exe</title><center><h2>2497: Winmine.exe</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2497'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2497'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2497'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="panel_content">
+<p><span style="font-size: medium">&nbsp;&nbsp;The Windows Minesweeper (WinMine) is one of the most well-known games on the Windows system. The rule is quite easy and it takes only a few minutes to play a set. First of all, let&rsquo;s briefly introduce this game (if you believe that you are familiar enough with this game, you can skip the next paragraph):<br />
+<br />
+&nbsp;&nbsp;<i>The goal of the game is to uncover all the squares that do not contain mines (with the left mouse button) without being &quot;destroyed&quot; by clicking on a mine. The location of the mines is discovered by a process of logic. Clicking on the game board will reveal what is hidden underneath the chosen square or squares (a large number of blank squares may be revealed in one go if they are adjacent to each other). Some squares are blank but some contain numbers (1 to 8), each number being the number of mines adjacent to the uncovered square. The game is won once all blank squares have been uncovered without hitting a mine, any remaining mines not identified by flags being automatically flagged by the computer. The distinctive feature of minesweeper is the randomness at the initial stage and at some intermediate stages.<br />
+----Wikipedia<br />
+</i><br />
+&nbsp;&nbsp;Jaddy loves playing WinMine at free time very much due to its simplicity and ingenuity. However, sometimes it makes him frustrated when he reaches some undeterminable states during the game. See the following state as an example:<br />
+</span></p>
+<center></center>
+<p></p>
+<p></p>
+<p><span style="font-size: medium"><br />
+In the red circle of this example, the rest two squares are absolutely undeterminable and there are apparently two possible distributions of the rest ONE mine.<br />
+<br />
+&nbsp;&nbsp;When Jaddy gets into this kind of trouble, he has no choice but to guess. Sometimes there are only two possible choices (as what the example says) but sometimes there are many. This way, he needs an assistant of this game to calculate the number of different possible distributions of mines depending on the current state of game board.<br />
+<br />
+&nbsp;&nbsp;This assistant of game is pretty useful and interesting, at least for him, so that he immediately starts coding. Unfortunately, Jaddy spent all the time to play WinMine in the class of Programming and Algorithm, so he feels such a complex task is a mission impossible. Jaddy loves WinMine very much so that he asks you, an excellent programmer, for help. In addition, in order to reduce the difficulty, he added three constraints:<br />
+1. It is guaranteed that the input state of game can always be created by making only ONE click on the initial board.<br />
+2. In the given state, if two unrevealed squares are connected directly or by any other unrevealed squares, they are also bi-connected. That is to say, even after any one of the other unrevealed squares is removed, these two squares are still connected. Here we say two squares are connected if and only if they share an edge. That means a square has at most four squares connected.<br />
+3. In the given state, if two numbers are connected by sharing an edge directly or by other numbers, all the unrevealed cells adjacent to the connected set of numbers must be connected.<br />
+<br />
+Help Jaddy please!</span></p>
+</div></div><h2>Input</h2><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases, the first line of input is a positive integer T (T &lt;= 50) indicating the number of test cases. Then T cases follow. For each test case, the first line contains three positive integers n, m and M where 1 &lt;= n, m &lt;= 100 and 1 &lt;= M &lt;= 1000 denoting the number of rows and columns in the given board and the total number of mines on the board. Then an n*m matrix of chars describing the current state of board will be given. In this matrix, there are 2 styles of symbols:<br />
+1. digits from 0 to 8: that means the number of mines around this square (&lsquo;0&rsquo; implies a blank square).<br />
+2. &lsquo;.&rsquo; (quotes for clarifying): that means this square is unrevealed.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium"><br />
+</span>&nbsp;</p></div><h2>Output</h2><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;For each test case, output an integer leading by the case number, denoting the number of possible distribution of mine in the given state, module by 1000003. See the sample output for further details.<br />
+</span></div>
+<div class="panel_content"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+4 5 2<br />
+…..<br />
+.....<br />
+11111<br />
+00000<br />
+4 5 4<br />
+…..<br />
+.....<br />
+22222<br />
+00000<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: 2<br />
+Case #2: 1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">Notice</span></p><br />
+<p><span style="font-size: medium">(a) The upper bound of w (the number of mines) should be 1500, rather than<br /><br />
+1000 in the problem statement.<br /><br />
+(b) There is another (the third) constraint about the initial state of board: for any<br /><br />
+pair of unrevealed squares A and B, if A and B are both adjacent to a connected<br /><br />
+component S, where S is a connected area consisting of only squares with positive positive positive positive<br /><br />
+numbers, then A and B can always be connected by unrevealed squares. For example,<br /><br />
+the following board contradicts this constraint due to the disconnection of squares on<br /><br />
+row 7 column 3 and row 8 column 4:</span></p><br />
+<p><span style="font-size: medium">00000001 1 .<br /><br />
+11000001..<br /><br />
+.1000002..<br /><br />
+11000001..<br /><br />
+0000000111<br /><br />
+0111000000<br /><br />
+01.3221100<br /><br />
+012....100<br /><br />
+0012221100<br /><br />
+1100001110<br /><br />
+.100001.10<br /><br />
+, whereas the following one is acceptable:<br /><br />
+..10000000<br /><br />
+2210011100<br /><br />
+000001.100<br /><br />
+000001.100<br /><br />
+000011.221<br /><br />
+00001.....<br /><br />
+01122.....<br /><br />
+12........<br /><br />
+..........</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Acm%202011%20%E4%B8%8A%E6%B5%B7'>Acm 2011 上海</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2497'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2497'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2497'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

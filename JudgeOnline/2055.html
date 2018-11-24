@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2055. -- 80人环游世界</title><center><h2>2055: 80人环游世界</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>678&nbsp;&nbsp;<span class=green>Solved: </span>423<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2055'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2055'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2055'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<p></p>
+<div>&nbsp; &nbsp; 想必大家都看过成龙大哥的《80天环游世界》，里面的紧张刺激的打斗场面一定给你留下了深刻的印象。现在就有这么</div>
+<div>&nbsp; &nbsp; 一个80人的团伙，也想来一次环游世界。</div>
+<div>&nbsp; &nbsp; 他们打算兵分多路，游遍每一个国家。</div>
+<div>&nbsp; &nbsp; 因为他们主要分布在东方，所以他们只朝西方进军。设从东方到西方的每一个国家的编号依次为1...N。假若第i个人的游历路线为P1、P2......Pk(0&le;k&le;N)，则P1&lt;P2&lt;......&lt;Pk。</div>
+<div>&nbsp; &nbsp; 众所周知，中国相当美丽，这样在环游世界时就有很多人经过中国。我们用一个正整数Vi来描述一个国家的吸引程度，Vi值越大表示该国家越有吸引力，同时也表示有且仅</div>
+<div>有Vi个人会经过那一个国家。</div>
+<div>&nbsp; &nbsp; 为了节省时间，他们打算通过坐飞机来完成环游世界的任务。同时为了省钱，他们希望总的机票费最小。</div>
+<div>&nbsp; &nbsp; 明天就要出发了，可是有些人临阵脱逃，最终只剩下了M个人去环游世界。他们想知道最少的总费用，你能告诉他们吗？</div>
+<p></p></div><h2>Input</h2><div class=content><p></p>
+<div>第一行两个正整数N，M。</div>
+<div>第二行有N个不大于M正整数，分别表示V1，V2......VN。</div>
+<div>接下来有N-1行。第i行有N-i个整数，该行的第j个数表示从第i个国家到第i+j个国家的机票费（如果该值等于-1则表示这两个国家间没有通航）。</div>
+<p></p></div><h2>Output</h2><div class=content><p>在第一行输出最少的总费用。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 3<br />
+2 1 3 1 2 1<br />
+2 6 8 5 0<br />
+8 2 4 1<br />
+6 1 0<br />
+4 -1<br />
+4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>27</span></div><h2>HINT</h2>
+			<div class=content><p><p>1&lt;= N &lt; =100 1&lt;= M &lt;= 79</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2055'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2055'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2055'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3631. -- [JLOI2014]松鼠的新家</title><center><h2>3631: [JLOI2014]松鼠的新家</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2683&nbsp;&nbsp;<span class=green>Solved: </span>1440<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3631'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3631'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3631'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">松鼠的新家是一棵树，前几天刚刚装修了新家，新家有n个房间，并且有n-1根树枝连接，每个房间都可以相互到达，且俩个房间之间的路线都是唯一的。天哪，他居然真的住在&ldquo;树&rdquo;上。松鼠想邀请小熊维尼前来参观，并且还指定一份参观指南，他希望维尼能够按照他的指南顺序，先去a1，再去a2，&hellip;&hellip;，最后到an，去参观新家。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">可是这样会导致维尼重复走很多房间，懒惰的维尼不听地推辞。可是松鼠告诉他，每走到一个房间，他就可以从房间拿一块糖果吃。维尼是个馋家伙，立马就答应了。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">现在松鼠希望知道为了保证维尼有糖果吃，他需要在每一个房间各放至少多少个糖果。因为松鼠参观指南上的最后一个房间an是餐厅，餐厅里他准备了丰盛的大餐，所以当维尼在参观的最后到达餐厅时就不需要再拿糖果吃了。</span></div></div><h2>Input</h2><div class=content><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">第一行一个整数n，表示房间个数</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">第二行n个整数，依次描述a1-an</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">接下来n-1行，每行两个整数x，y，表示标号x和y的两个房间之间有树枝相连。</span></div></div><h2>Output</h2><div class=content><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">一共n行，第i行输出标号为i的房间至少需要放多少个糖果，才能让维尼有糖果吃。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 4 5 3 2<br />
+1 2<br />
+2 4<br />
+2 3<br />
+4 5<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+2<br />
+1<br />
+2<br />
+1<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">2&lt;= n &lt;=300000<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3631'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3631'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3631'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

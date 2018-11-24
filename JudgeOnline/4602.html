@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4602. -- [Sdoi2016]齿轮</title><center><h2>4602: [Sdoi2016]齿轮</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>970&nbsp;&nbsp;<span class=green>Solved: </span>468<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4602'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4602'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4602'>Discuss</a>]</center><h2>Description</h2><div class=content><div>现有一个传动系统，包含了N个组合齿轮和M个链条。每一个链条连接了两个组合齿轮u和v，并提供了一个传动比x&nbsp;</div>
+<div>: y。即如果只考虑这两个组合齿轮，编号为u的齿轮转动x圈，编号为v的齿轮会转动y圈。传动比为正表示若编号</div>
+<div>为u的齿轮顺时针转动，则编号为v的齿轮也顺时针转动。传动比为负表示若编号为u的齿轮顺时针转动，则编号为v</div>
+<div>的齿轮会逆时针转动。若不同链条的传动比不相容，则有些齿轮无法转动。我们希望知道，系统中的这Ｎ个组合齿</div>
+<div>轮能否同时转动。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>有多组数据，第一行给定整数Ｔ，表示总的数据组数，之后依次给出Ｔ组数据。每一组数据的第一行给定整数Ｎ和</div>
+<div>Ｍ，表示齿轮总数和链条总数。之后有Ｍ行，依次描述了每一个链条，其中每一行给定四个整数u，v，x和y，表示</div>
+<div>只考虑这一组联动关系的情况下，编号为u的齿轮转动x圈，编号为v的齿轮会转动y圈。请注意，x为正整数，而y为</div>
+<div>非零整数，但是y有可能为负数。</div>
+<div>T&lt;=32，N&lt;=1000，M&lt;=10000且x与y的绝对值均不超过100</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出T行，对应每一组数据。首先应该输出标识这是第几组数据，参见样例输出。之后输出判定结果，如果N个组合</div>
+<div>齿轮可以同时正常运行，则输出Yes，否则输出No。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3 3<br />
+1 2 3 5<br />
+2 3 5 -7<br />
+1 3 3 -7<br />
+3 3<br />
+1 2 3 5<br />
+2 3 5 -7<br />
+1 3 3 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: Yes<br />
+Case #2: No</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20AHdoc%E5%91%BD%E9%A2%98%20%E9%B8%A3%E8%B0%A2Loi_DQS%E4%B8%8A%E4%BC%A0'>By AHdoc命题 鸣谢Loi_DQS上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4602'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4602'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4602'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

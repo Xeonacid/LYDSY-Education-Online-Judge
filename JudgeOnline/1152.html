@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1152. -- [CTSC2006]歌唱王国Singleland</title><center><h2>1152: [CTSC2006]歌唱王国Singleland</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>162&nbsp;&nbsp;<span class=green>Solved: </span>97<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1152'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1152'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1152'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在歌唱王国，所有人的名字都是一个非空的仅包含整数1~n的字符串。王国里生活着一大群咕噜兵，他们靠不停的</div>
+<div>歌唱首领&mdash;&mdash;牛人酋长们的名字来获取力量。咕噜兵每一次歌唱过程是这样的：首先，他从整数生成器那儿获得一</div>
+<div>个数字，然后花一个时间单位将此数字唱出来，如果他发现某个牛人酋长的名字已经被歌唱出来（即此名字是歌唱</div>
+<div>序列的一个连续子串），那么这次歌唱过程就立即结束。相关名词定义歌唱序列：如果某人歌唱了x个数字，第i次</div>
+<div>歌唱的数字为ai，那么歌唱序列=(a1,a2,&hellip;,ax)。整数生成器：歌唱王国的神物，它有一个按钮，如果你按一下按</div>
+<div>钮，将从1~n数字中等概率的随机返回一个整数。歌唱时间：在一次歌唱过程中花费的时间。歌唱时间是随机的，</div>
+<div>无法预料；不过歌唱时间的期望值是固定的，此期望值即平均来说歌唱时间有多长，亦可称作平均歌唱时间。王国</div>
+<div>里的人非常喜欢歌唱，他们希望歌唱的时间越长越好，所以他们决定罢免一些牛人酋长，使得平均歌唱时间变长。</div>
+<div>但是他们不能罢免掉所有的牛人酋长，否则他们每次歌唱都无法停止，无法获取力量；于是他们决定只保留一个牛</div>
+<div>人酋长而罢免其余的牛人酋长。你的任务是：对于给定的n、牛人酋长的个数t以及每一个牛人酋长的名字，告诉王</div>
+<div>国里的人们，对于1&le;i&le;t，如果保留第i个牛人酋长，罢免掉其余的，那么平均歌唱时间将是多少。提示：此数为</div>
+<div>一个非负整数！输出要求：由于这个数字太大，所以你只需输出这个数的末4位数字。如果不足4位，则前面补0(见</div>
+<div>样例)。</div></div><h2>Input</h2><div class=content><div>
+<div>第一行，两个整数n、t；以下t行描述t个牛人酋长名字。</div>
+<div>文件第i+1(1&le;i&le;t)行格式如下</div>
+<div>第一个数为mi表示第i个牛人酋长的名字的长度，在一个空格之后，</div>
+<div>接下来有mi个数，用来描述这个牛人酋长的名字，相邻两个整数之间用一个空格分开。</div>
+<div>1&le;n&le;10^5，t&le;50，1&le;mi&le;10^5</div>
+</div></div><h2>Output</h2><div class=content><p>共 t 行，第 i 行为一个整数，表示若保留第 i 个牛人酋长而罢免其余的，则平均歌唱时间最长的末四位数字是多少。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2<br />
+1 1<br />
+3 1 2 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0002<br />
+0010</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1152'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1152'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1152'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

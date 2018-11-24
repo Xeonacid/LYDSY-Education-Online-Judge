@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2739. -- 最远点</title><center><h2>2739: 最远点</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>307&nbsp;&nbsp;<span class=green>Solved: </span>81<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2739'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="inl vmid"><span style="font-size: medium">　　给你一个N个点的凸多边形，求离每一个点最远的点。<br />
+</span></div>
+<div id="pcont1" style="margin-top: 20px; display: block"></div></div><h2>Input</h2><div class=content><div id="pcont1" style="margin-top: 20px; display: block">
+<div class="pdcont"><span style="font-size: medium">　　本题有多组数据，第一行一个数T，表示数据组数。<br />
+　　每组数据第一行一个数N，表示凸多边形点的个数，接下来N对数，依次表示1~N这N个点的坐标，按照逆时针给出。<br />
+</span></div>
+</div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　对于每组数据输出N个数，第i个数表示离第i个点最远的点的编号，如果有多个最远点，输出编号最小的。<br />
+</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+4<br />
+0 0<br />
+1 0<br />
+1 1<br />
+0 1<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+4<br />
+1<br />
+2<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据规模和约定<br /><br />
+　　坐标的绝对值在1e9以内；<br /><br />
+　　任意点对距离数值的平方不会超过long long；<br /><br />
+　　令S为每组数据凸多边形点数之和；<br /><br />
+　　对于20%的数据，S&lt;=2000；<br /><br />
+　　对于50%的数据，S&lt;=50000；<br /><br />
+　　对于100%的数据，S&lt;=500000；<br /><br />
+　　数据有梯度。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2739'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

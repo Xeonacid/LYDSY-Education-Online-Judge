@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2640. -- 可见区域</title><center><h2>2640: 可见区域</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2640'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2640'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2640'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">在平面直角坐标系中有n条互不相交(没有公共点)且所在直线不会经过(0,0)的线段。有一个人站在(0,0)，他的视野是360度的。但是他在某一个方向上的视野会被该方向上碰到的第一条线段所阻挡，问他能看到的区域面积有多大（数据保证是有限面积）。如下图（样例），可以看到的面积就是11。<br />
+<img alt="" width="203" height="205" src="upload/201203/ff(1).jpg" /></span></p>
+<p></p>
+<p><span style="font-size: medium">　　为了加大难度，他想知道，在删除一条线段的情况下能看到最大多大的面积（不保证是有限面积）。<br />
+　　进一步，他还想知道，在删除两条线段的情况下能看到最大多大的面积（不保证是有限面积）。<br />
+</span></p></div><h2>Input</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行一个整数n表示线段条数。<br />
+　　接下来n行，每行四个整数x1,y1,x2,y2表示一条线段两个端点的坐标。<br />
+</span></div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行一个保留两位小数的实数，表示可见区域的面积。<br />
+　　第二行两种可能，如果删除一条线段以后能使得看到的区域有无限大输出&rdquo;infinite&rdquo;，否则输出一个保留两位小数的实数，表示这种情况下能看到的最大面积。<br />
+　　第三行两种可能，如果删除两条线段以后能使得看到的区域有无限大输出&rdquo;infinite&rdquo;，否则输出一个保留两位小数的实数，表示这种情况下能看到的最大面积。<br />
+</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+-1 -1 0 -1<br />
+0 -2 1 -1<br />
+-1 1 0 2<br />
+0 1 1 1<br />
+2 -2 2 2<br />
+-2 -2 -2 2<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>11.00<br />
+infinite<br />
+infinite<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据规模和约定<br /><br />
+　　对于所有数据<br /><br />
+　　1&lt;=n&lt;=50000<br /><br />
+　　坐标的绝对值&lt;=10^3<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2640'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2640'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2640'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

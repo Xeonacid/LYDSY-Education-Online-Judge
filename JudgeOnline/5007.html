@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5007. -- TCP协议</title><center><h2>5007: TCP协议</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5007'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5007'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5007'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在如今的网络中，TCP是一种被广泛使用的网络协议，它在传输层提供了可靠的通信服务。众所周知，网络是存在</div>
+<div>时延的，例如用户先后向服务器发送了两个指令op1和op2，并且希望服务器先处理指令op1，再处理指令op2；但由</div>
+<div>于网络时延，这两个指令可能会失序到达，而导致服务器先执行了指令op2，这是我们不希望看到的。TCP协议拥有</div>
+<div>将失序到达的报文按顺序重组的功能，一种方法是给每一个报文打上一个时间戳。而你今天要实现的功能比这个要</div>
+<div>简单很多。我们需要你维护一个服务器，这个服务器的功能是一个简单的栈，你会接收三种用户的指令：</div>
+<div>push x t --- 表示将x元素入栈，这条指令的时间戳为t</div>
+<div>pop t --- 表示将栈顶元素弹出，这条指令的时间戳为t</div>
+<div>peak t --- 用户询问现在栈顶元素的值，这条指令的时间戳为t</div>
+<div></div>
+<div>当一条时间戳为t的指令到达时，你需要进行如下处理：</div>
+<div>1.将所有之前执行的时间戳大于t的push和pop指令全部撤销</div>
+<div>2.执行当前这条指令</div>
+<div>3.按时间戳顺序重新执行在第1步被撤销的指令</div>
+<div></div>
+<div>注意你不需要撤销以及重新执行之前已经执行过的peak指令</div>
+<div>也就是说每一条peak指令只有在它到达的时候会被执行一次。</div>
+<div></div>
+<div>我们保证每一条指令的时间戳都是唯一的；</div>
+<div>若你在需要执行一条pop指令时发现当前栈为空，则当前你可以忽略这条指令。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个整数n，表示指令总数。</div>
+<div>接下来n行按指令到达服务器的顺序给出每一条指令，有三种类型</div>
+<div>push x t</div>
+<div>pop t</div>
+<div>peak t</div>
+<div>1 &lt;= n &lt;= 300000，0 &lt;= x，t &lt;= 1000000000</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每一条peak指令，输出对应的答案占一行；若栈为空，输出-1。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+push 100 3<br />
+push 200 7<br />
+peak 4<br />
+push 50 2<br />
+pop 5<br />
+peak 6<br />
+peak 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>100<br />
+50<br />
+200</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>By 佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5007'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5007'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5007'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

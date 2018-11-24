@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5214. -- 可持久化权值妹子树</title><center><h2>5214: 可持久化权值妹子树</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>700 MB<br><span class=green>Submit: </span>89&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5214'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5214'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5214'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小y有n个妹子，编号分别为1, 2，... n。为了更好管理这些妹子，小y想把他们分成若干组～</div>
+<div></div>
+<div>在开始的开始（我们记作分组方案0）中，每个妹子各成一组。</div>
+<div>每次小y会选择一个已有的分组方案i，挑出其中两个不在同组的妹子x, y，将她们所在的组合并。</div>
+<div>我们将第j次操作得到的分组方案记作分组方案j。这样就可以得到许多不同的分组方案啦！</div>
+<div></div>
+<div></div>
+<div>为了知道这些分组方案孰优孰劣，因此小y想知道关于分组方案的一些信息。</div>
+<div>每次，小y会选择某一个分组方案i，询问x所在的组中编号第k小的妹子是谁。</div>
+<div></div>
+<div></div>
+<div>为了小y的幸福（划掉），来帮帮他把（逃</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个整数n, m。表示妹子数和操作数。</div>
+<div>接下来的m行，首先有一个整数opt。</div>
+<div>如果opt=0，接下来三个整数i, x, y，表示一次合并。保证分组方案i已经出现过，x, y在不同组中。</div>
+<div>如果opt=1，接下来三个整数i, x, k，表示一次询问。保证x所在的组中至少有k个妹子。</div>
+<div>1 &lt;=n, q &lt;= 100000，合并不超过60000次，询问不超过60000次</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每个询问操作输出一个整数，表示该妹子的编号</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 6<br />
+0 0 1 2<br />
+1 1 1 2<br />
+1 1 2 1<br />
+0 1 2 3<br />
+0 1 1 3<br />
+1 3 3 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1<br />
+2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Awd%E4%B8%8A%E4%BC%A0'>Awd上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5214'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5214'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5214'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

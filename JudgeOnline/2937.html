@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2937. -- [Poi2000]建造酿酒厂</title><center><h2>2937: [Poi2000]建造酿酒厂</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>138&nbsp;&nbsp;<span class=green>Solved: </span>46<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2937'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2937'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2937'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: 12pt">Abstinence</span><span style="font-size: 12pt">岛上的居民很喜欢饮用纯酿的啤酒。迄今为止，他们都是从波兰进口啤酒，自己不生产。但今年岛上的一个城市决定建造一个酿酒厂，供给其他城市的啤酒需求。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt">岛上所有的城市都环绕在海岸线上，相邻两城之间用高速公路连接（也就是说，它们近似分布在一个圆上）。对于建造酿酒厂的城市来说，它将得到的信息是其余城市对于啤酒的日需求量，并且还有一张记载着相邻两城市之间距离的表格。经过计算，每一桶啤酒每英里的运费为一泰勒。每天的成本为所有城市的运费之和，前提是每个城市的日需求量必须得到满足。可以看出，日成本与酿酒厂建造位置是息息相关的。我们的问题是：为投资者找出最理想的酿酒厂位置，使得日成本最小。</span></div>
+<div>&nbsp;</div></div><h2>Input</h2><div class=content><div><span style="font-size: 12pt">第一行包含一个数</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">，为城市数目，</span><span style="font-size: 12pt">5&lt;=n&lt;=10000</span><span style="font-size: 12pt">（我们假设城市已经沿着海边高速公路顺序编号，为</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">&hellip;&hellip;</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">，对于</span><span style="font-size: 12pt">1&lt;=i&lt;n</span><span style="font-size: 12pt">，编号为</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">的城市的下一个城市为</span><span style="font-size: 12pt">i+1</span><span style="font-size: 12pt">，而</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">号城市的下一个城市为</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">号）。接下来的</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">行每行包含两个数字。第</span><span style="font-size: 12pt">i+1</span><span style="font-size: 12pt">行的两个数字为</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">，</span><span style="font-size: 12pt">表示的是</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号城市的日需求量，</span><span style="font-size: 12pt">则表示</span><span style="font-size: 12pt">i</span><span style="font-size: 12pt">号城市与它的下一个城市之间的距离（单位：英里）。海边高速公路的总长度不大于</span><span style="font-size: 12pt">1000000</span><span style="font-size: 12pt">英里</span><span style="font-size: 12pt">，所有城市啤酒的日需求量不大于</span><span style="font-size: 12pt">1000</span><span style="font-size: 12pt">。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="layout-grid-mode: char; text-indent: 24pt"><span style="font-size: 12pt">仅包含一个数，为所求最小的日成本。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+1 2<br />
+2 3<br />
+1 2<br />
+5 2<br />
+1 10<br />
+2 3<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>41</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2937'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2937'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2937'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

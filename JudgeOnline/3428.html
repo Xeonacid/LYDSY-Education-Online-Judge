@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3428. -- [Usaco2014 Jan]Cow Curling </title><center><h2>3428: [Usaco2014 Jan]Cow Curling </h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>123&nbsp;&nbsp;<span class=green>Solved: </span>46<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3428'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3428'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3428'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium;"><span class="mono prewrap" id="probtext-text">Cow curling is a popular cold-weather sport played in the Moolympics.    Like regular curling, the sport involves two teams, each of which slides N heavy stones (3 &lt;= N &lt;= 50,000) across a sheet of ice.  At the end of the game, there are 2N stones on the ice, each located at a distinct 2D point.   Scoring in the cow version of curling is a bit curious, however.  A stone is said to be &quot;captured&quot; if it is contained inside a triangle whose corners are stones owned by the opponent (a stone on the boundary of such a triangle also counts as being captured).  The score for a team is the number of opponent stones that are captured.    Please help compute the final score of a cow curling match, given the locations of all 2N stones.</span></span></p>
+<p></p>
+<p></p>
+<div>给二维平面n个白点和n个黑点，定义一个点被捕获是在另外一种颜色的某三个点组成的三角形内部(包括边界)，问被捕获的黑白点各有多少</div>
+<div></div></div><h2>Input</h2><div class=content><p><span class="mono prewrap" id="probtext-text">* Line 1: The integer N. </span></p>
+<p><span class="mono prewrap" id="probtext-text"> * Lines 2..1+N: Each line contains 2 integers specifying the x and y         coordinates of a stone for team A (each coordinate lies in the         range -40,000 .. +40,000).</span></p>
+<p><span class="mono prewrap" id="probtext-text">  * Lines 2+N..1+2N: Each line contains 2 integers specifying the x and         y coordinates of a stone for team B (each coordinate lies in         the range -40,000 .. +40,000).</span></p></div><h2>Output</h2><div class=content><p>* Line 1: Two space-separated integers, giving the scores for teams A and B.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 <br />
+0 0 <br />
+0 2 <br />
+2 0 <br />
+2 2 <br />
+1 1 <br />
+1 10 <br />
+-10 3 <br />
+10 3<br />
+<br />
+ INPUT DETAILS: Each team owns 4 stones. Team A has stones at (0,0), (0,2), (2,0), and (2,2), and team B has stones at (1,1), (1,10), (-10,3), and (10,3).</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 2 <br />
+<br />
+OUTPUT DETAILS: Team A captures their opponent's stone at (1,1). Team B captures their opponent's stones at (0,2) and (2,2).</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3428'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3428'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3428'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

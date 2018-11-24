@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1233. -- [Usaco2009Open]干草堆tower</title><center><h2>1233: [Usaco2009Open]干草堆tower</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1051&nbsp;&nbsp;<span class=green>Solved: </span>502<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1233'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1233'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1233'>Discuss</a>]</center><h2>Description</h2><div class=content><p>奶牛们讨厌黑暗。 为了调整牛棚顶的电灯的亮度，Bessie必须建一座干草堆使得她能够爬上去够到灯泡 。一共有N大包的干草（1&lt;=N&lt;=100000）(从1到N编号)依靠传送带连续的传输进牛棚来。第i包干草有一个 宽度W_i(1&lt;=w_i&lt;=10000)。所有的干草包的厚度和高度都为1. Bessie必须利用所有N包干草来建立起干草堆，并且按照他们进牛棚的顺序摆放。她可以相放多少包就放 多少包来建立起tower的地基（当然是紧紧的放在一行中）。接下来他可以放置下一个草包放在之前一级 的上方来建立新的一级。注意：每一级不能比下面的一级宽。她持续的这么放置，直到所有的草包都被安 置完成。她必须按顺序堆放，按照草包进入牛棚的顺序。说得更清楚一些：一旦她将一个草包放在第二级 ，她不能将接下来的草包放在地基上。 Bessie的目标是建立起最高的草包堆。</p></div><h2>Input</h2><div class=content><p>第1行：一个单一的整数N。 第2~N+1行：一个单一的整数:W_i。</p></div><h2>Output</h2><div class=content><p>第一行：一个单一的整数，表示Bessie可以建立的草包堆的最高高度。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+2<br />
+3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+输出说明：<br />
+前两个（宽度为1和2的）放在底层，总宽度为3，在第二层放置宽度为3的。<br />
+           +----------+<br />
+           |    3     |<br />
+           +---+------+<br />
+           | 1 |   2  |<br />
+           +---+------+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='><br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1233'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1233'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1233'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

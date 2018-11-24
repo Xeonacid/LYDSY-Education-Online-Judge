@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2860. -- [Ceoi2012]wagons</title><center><h2>2860: [Ceoi2012]wagons</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>15&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2860'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2860'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2860'>Discuss</a>]</center><h2>Description</h2><div class=content><p>现在有n个马车在铁路口等着，每个马车上有一种垃圾。我们有一些垃圾处理器，每种垃圾处理器能处理一些特定的垃圾。每天只能用一个垃圾处理器<br />
+铁路旁边还有一个栈<br />
+n个马车按顺序过去，如果当前的垃圾处理器能处理他，就处理了；否则要么过一天换一个垃圾处理器，要么你可以把它放入栈中<br />
+你每次既能处理铁路上的垃圾，也能处理栈中的垃圾&hellip;&hellip;处理有顺序要求，铁路上的垃圾得按顺序处理，栈中的垃圾得按入栈顺序的逆序处理（所以才叫栈）。<br />
+每天一个垃圾处理器能处理无限垃圾<br />
+你要处理三天垃圾，你需要通过调整三天里分别用哪种垃圾处理器，从而处理最多数目的垃圾，同时还要求三天后栈是空的</p></div><h2>Input</h2><div class=content><p>第一行N,K,S，表示n个马车，有K种垃圾，有S种垃圾处理器，n&lt;=20000,K,S&lt;=1000<br />
+接下来S行，每行若干个数，表示垃圾处理器能处理的垃圾集合。每行以0结尾<br />
+最后一行N个数表示每辆马车上面的垃圾种类<br />
+保证每种垃圾至少一种最多十种垃圾处理器能处理</p></div><h2>Output</h2><div class=content><p>第一行输出最多能处理多少垃圾<br />
+第二行输出三个数，分别表示三天的的垃圾处理器<br />
+如果第一问答案是n，存在两天的方案，那么要求输出两天的；如果第一问答案是n，存在一天的方案，要求输出一天的<br />
+如果存在两天的方案，第三个数字应该是0；如果存在一天的方案，第二、三个数字应该是0</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>13 5 4<br />
+1 0<br />
+4 5 0<br />
+5 3 0<br />
+2 5 0<br />
+4 5 2 5 5 4 1 1 5 4 5 3 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>11<br />
+2 1 4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Ydc%E6%8F%90%E4%BE%9BSPJ'>鸣谢Ydc提供SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2860'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2860'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2860'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

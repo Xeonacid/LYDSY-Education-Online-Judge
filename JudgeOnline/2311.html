@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2311. -- 迷宫</title><center><h2>2311: 迷宫</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>166&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2311'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2311'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2311'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">小Z一觉醒来，发现自己在了一个迷宫之中，苦心探索了若干次，却仍然回到了起点。小Z绝望无比，此时，他决定听天由命。</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">具体来说，这个迷宫有n行m列，小Z现在位于(1,1)，只要走到(n,m)就可以马上离开迷宫。某些格子间有墙而无法通过，迷宫的周围也有一圈墙。而对于可以通过的地方，小Z决定按下述规则移动：在每个格子中，随机选择上下左右四个方向移动，概率由小Z按照自己的方向感确定，当然这个概率会满足下述要求：</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 39pt; text-indent: -18pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">1.</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">有墙的方向概率为0。</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 39pt; text-indent: -18pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">2.</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">除了(n,m)，每个格子往四个方向的概率加起来等于1。</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 39pt; text-indent: -18pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">3.</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">一旦到了(n,m)就马上离开迷宫，故从(n,m)往任意方向的概率均为0。</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: left"><span style="font-weight: bold; font-size: 12pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">Your&nbsp;Task</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">求出小Z离开迷宫的期望步数。</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: 'Cambria Math'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">第一行n&nbsp;m表示迷宫大小</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">接下来4个n*m的矩阵，第k个矩阵的第i行第j列的数表示了在格子(i,j)时往k方向移动的概率，k=1为向下(i+1,j)，k=2为向右(i,j+1)，k=3为向上(i-1,j)，k=4为向左(i,j-1)</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">由(n,m)往任意方向走的概率均为0</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: 'Cambria Math'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt; text-align: left"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">输出一个数表示答案，保留三位小数</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: justify"><span style="font-weight: bold; font-size: 12pt; color: rgb(255,255,255); font-family: '幼圆'; mso-spacerun: 'yes'">样例输入一</span><span style="font-weight: normal; font-size: 10.5pt; color: rgb(255,255,255); font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-weight: normal; font-size: 10pt; color: rgb(255,255,255); font-family: '宋体'; mso-spacerun: 'yes'">2&nbsp;</span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-weight: normal; font-size: 10.5pt; color: rgb(0,0,0); font-family: 'Cambria Math'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例输入一<br />
+	2 2<br />
+	0.1 0.1<br />
+	0 0<br />
+	0.9 0<br />
+	0.1 0<br />
+	0 0<br />
+	0.9 0<br />
+	0 0.9<br />
+	0 0<br />
+样例输出一<br />
+	20.000<br />
+样例输入二<br />
+	1 5<br />
+	0.0 0.0 0.0 0.0 0.0<br />
+	1.0 0.1 0.7 0.5 0.0<br />
+	0.0 0.0 0.0 0.0 0.0<br />
+	0.0 0.9 0.3 0.5 0.0<br />
+样例输出二<br />
+	41.143</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata></span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+100%：1&le;n,m&le;50，迷宫合法，一定可以走到终点，答案不超过10^7<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2311'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2311'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2311'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2852. -- 强大的区间</title><center><h2>2852: 强大的区间</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>90&nbsp;&nbsp;<span class=green>Solved: </span>27<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2852'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2852'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2852'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">curimit很喜欢区间，最近发现了一种很强大的区间。<br />
+curimit发现有的区间虽小，比如 (1.99998, 2.000001)，但是其中却包含了一个整数2。<br />
+但是有的区间较大，比如(1.0001, 1.99998)，但是其中却一个整数都没有。<br />
+他觉得包含整数的区间很强大，并且提出了一个问题：<br />
+我们先给出两个非负实数a,b我们要求一个最小的正整数k ，使得区间(a*k, b*k)是一个包含至少一个整数的区间。<br />
+举个例子来说吧，比如我们输入a=1.2&nbsp;&nbsp; b=1.3 ，那么：<br />
+当k=1时， 区间为(1.2 , 1.3)&nbsp; 其中没有整数；<br />
+当k=2时， 区间为(2.4 , 2.6)&nbsp; 其中没有整数；<br />
+当k=3时， 区间为(3.6 , 3.9)&nbsp; 其中没有整数；<br />
+当k=4时， 区间为(4.8 , 5.2)&nbsp; 其中包含了一个整数5。<br />
+所以使得区间(1.2*k, 1.3*k)包含一个整数的最小正整数k是4。</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">两个非负实数a，b。</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><br />
+最小的k的值。</span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1.2 1.3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+<br />
+Hint<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>a,b整数部分不超过2^31-1，a,b小数部分位数不超过300位。</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E5%AE%8B%E6%96%87%E6%9D%B0'>宋文杰<br />
+<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2852'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2852'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2852'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3515. -- EvenPaths</title><center><h2>3515: EvenPaths</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>64&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3515'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3515'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3515'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">有一个迷宫，迷宫由房间和单向的走廊组成。每条走廊都是从一个房间单向走向另一个房间。房间编号为0到N-1。迷宫有一个性质，对于每个房间，一旦通过走廊离开房间，则无法再回到这个房间。</span></span></div>
+<div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">每个房间可能或者不可能包含一个障碍物。有障碍物的房间则无法通过。</span></span></div>
+<div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">如果有K个房间可能包含障碍物，则整个迷宫有2^K种状态。问在这些状态中，有多少种状态，从0号房间到1号房间有偶数条路径。</span></span></div></div><h2>Input</h2><div class=content><div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">第一行一个整数N。</span></span></div>
+<div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">第二行一个长度为N的字符串，第i个字符为-或?。-表示第i-1个房间不含有障碍物，?表示第i-1个房间可能含有障碍物。</span></span></div>
+<div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">第三行至结束是一个邻接矩阵，第i行第j列为Y则表示房间i到j有一条单向走廊。</span></span></div></div><h2>Output</h2><div class=content><div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left">&nbsp;</div>
+<div style="margin: 0cm 0cm 10pt; line-height: 115%" align="left"><span style="font-size: medium"><span style="line-height: 115%">一个整数，如题目中描述。</span></span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+--???<br />
+NYYNN<br />
+NNNNY<br />
+NYNNN<br />
+YNNNN<br />
+NNNNN<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" align="left" style="margin: 0cm 0cm 10pt; line-height: 115%; text-align: left; mso-layout-grid-align: none"><span style="font-size: 11pt; line-height: 115%; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: ZH-CN">对于100%的数据，1&lt;=N&lt;=50，邻接矩阵中最多有500个Y，?最多有32个，0号和1号房间不会有可能有障碍物。<o:p></o:p></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3515'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3515'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3515'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1272. -- [BeiJingWc2008]Gate Of Babylon</title><center><h2>1272: [BeiJingWc2008]Gate Of Babylon</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>310&nbsp;&nbsp;<span class=green>Solved: </span>157<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1272'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1272'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1272'>Discuss</a>]</center><h2>Description</h2><div class=content><div>《基尔伽美修》是人类历史上第一部英雄史诗，两河流域最杰出的文学作品之一。作品讲述了基尔伽美修一生的传</div>
+<div>奇故事。在动画Fate／staynight中，基尔伽美修与亚瑟王等传说中的英雄人物一起出现在了现实世界，展开了一</div>
+<div>场惊天地、泣鬼神的战斗一&middot;在记载于12块泥板的史诗中，基尔伽美修与同伴安吉杜一起降伏了森林的守护者&mdash;&mdash;</div>
+<div>神兽洪芭芭，成为地上最强的王者，同时将世间所有财宝收归手中。王之财宝(GateofBabylon)成为Fate中金皮卡</div>
+<div>（基尔伽美修的外号&hellip;）炫耀的资本&hellip;&hellip;一天金皮卡突发奇想：如果从自己无尽的财宝里面，随便抽不超过M件宝</div>
+<div>具出来砸死敌人的话。一共有多少种搭配方法呢一一？假设金皮卡一共有N种不同类型的宝具，大部分类型的宝具</div>
+<div>都有无限多，但其中T种超级神器的数量是有限的。设第i种超级神器的数量不超过Bi件。若相同类型的宝具数量相</div>
+<div>同，则认为是相同的搭配方案。金皮卡知道方案数会很大，从小数学成绩就好的他挑选了一个质数P，请你帮他计</div>
+<div>算一下方案数模P后的余数。注意，一件也不选也是一种方案。</div></div><h2>Input</h2><div class=content><div>第一行包含4个整数，分别为N，T，M，P</div>
+<div>之后T行，每行一个鏊数，代表Bi</div>
+<div>N，M&le;10^9，P&le;10^5，Bi&le;10^9</div>
+<div>0&le;T&le;N，M&gt;O，Bi&gt;0，T&le;15</div></div><h2>Output</h2><div class=content><div>仅包含一个整数，即方案数模P后的余数。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 10 13<br />
+3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12<br />
+【样例说明1】<br />
+只有一种超级神器，数量不超过3<br />
+当不选择超级神器时，另一种宝具可以挑选0到10件，共11种方案<br />
+当选择1件神器出来时，另一种宝具可以挑选0到9件，共10种方案<br />
+当挑选2件神器时，共9种方案<br />
+挑选3件神器时，共8种方案<br />
+一共有11+10+9+8=38种方案，38mod13=12，于是答案等于12<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1272'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1272'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1272'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

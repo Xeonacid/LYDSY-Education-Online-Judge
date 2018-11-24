@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3966. -- [WF2011]Trash Removal</title><center><h2>3966: [WF2011]Trash Removal</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>8&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3966'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3966'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3966'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Allied Chute公司是一个建造垃圾管道的公司。垃圾管道建造在楼房中，垃圾从顶部进入，顺着管道与地下室连接。建造垃圾管道是一个高水平的工作。根据人们丢入不同种类的垃圾，垃圾管道需要有一个适当的尺寸。并且由于制作垃圾管道的费用正比于它的尺寸，公司总是想要建造尽可能的管道，尽管确定合适的尺寸十分困难。</div>
+<div>为了简化这个问题，我们考虑一个二维的空间。垃圾管道是一个有着固定宽度、垂直下降的槽。物体可以看作一个多边形的模型。在物体落入管道之前它可以旋转来达到和管道最佳拟合。当它下落时，它会垂直落下并且不再旋转。下图展示了一个垃圾是怎样旋转来符合管道的。</div>
+<div>你的任务是计算让一个给定的多边形物体通过的最小管道宽度。</div>
+<div><img src="upload/201504/66.bmp" width="558" height="379" alt="" /></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入包含多组数据。每组数据开始于一个数字n,代表垃圾的模型&mdash;一个多边形的顶点数。</div>
+<div>接下来n行每行一对整数xi和yi，按顺序给出多边形的顶点。</div>
+<div>最后以一个0表示结束</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组测试数据，输出数据编号以 及物体能够穿过垃圾管道并落下的最小宽度。输出的最小宽度并 向上舍入到最接近1/100倍数的数 ，你的答案与标准答案误差不能超过1/100。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+0 0<br />
+3 0<br />
+0 4<br />
+4<br />
+0 10<br />
+10 0<br />
+20 10<br />
+10 20<br />
+0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: 2.40<br />
+Case 2: 14.15</span></div><h2>HINT</h2>
+			<div class=content><p><div>100%的数据3&lt;=n&lt;=100</div><br />
+<div>0&lt;=xi,yi&lt;=10^4</div><br />
+<div>保证在一组数据中的所有的点互不不同，并且多边形的边不会相交（技术上，两条相邻的边不可避免的会有一个公共顶点，当然，这种情况我们不认为是相交）。</div><br />
+<div>请不要提交，尚无SPJ</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3966'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3966'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3966'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

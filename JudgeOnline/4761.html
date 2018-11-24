@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4761. -- [Usaco2017 Jan]Cow Navigation</title><center><h2>4761: [Usaco2017 Jan]Cow Navigation</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>106&nbsp;&nbsp;<span class=green>Solved: </span>53<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4761'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4761'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4761'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Bessie has gotten herself stuck on the wrong side of Farmer John's barn again, and since her vision&nbsp;</div>
+<div>is so poor, she needs your help navigating across the barn.The barn is described by an N&times;N grid of&nbsp;</div>
+<div>square cells (2&le;N&le;20), some being empty and some containing impassable haybales. Bessie starts in&nbsp;</div>
+<div>the lower-left corner (cell 1,1) and wants to move to the upper-right corner (cell N,N). You can gui</div>
+<div>de her by telling her a sequence of instructions, each of which is either &quot;forward&quot;, &quot;turn left 90 d</div>
+<div>egrees&quot;, or &quot;turn right 90 degrees&quot;. You want to issue the shortest sequence of instructions that wi</div>
+<div>ll guide her to her destination. If you instruct Bessie to move off the grid (i.e., into the barn wa</div>
+<div>ll) or into a haybale, she will not move and will skip to the next command in your sequence.Unfortun</div>
+<div>ately, Bessie doesn't know if she starts out facing up (towards cell 1,2) or right (towards cell 2,1</div>
+<div>). You need to give the shortest sequence of directions that will guide her to the goal regardless o</div>
+<div>f which case is true. Once she reaches the goal she will ignore further commands.</div>
+<div></div>
+<div>给定一个N*N的网格(N&lt;=20)，你从左下角出发，要到达右上角，网格中会有障碍物你要给定一个长度最短的行为序</div>
+<div>列（往前走，左转，右转），使得无论Bessie处于左下角时是头朝向上还是朝向左都可以在执行完这个序列后到达</div>
+<div>右上角如果当前的行为会导致Bessie走到障碍物上或者越界，则Bessie会忽视这个行为</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N.</div>
+<div>第一行为N表示网格大小</div>
+<div>Each of the NN following lines contains a string of exactly N characters, representing the barn. The</div>
+<div>&nbsp;first character of the last line is cell 1,1. The last character of the first line is cell N, N.Eac</div>
+<div>h character will either be an H to represent a haybale or an E to represent an empty square.</div>
+<div></div>
+<div>接下来N行每行N列，描述这个网格，H表示障碍物，E表示空地</div>
+<div></div>
+<div>It is guaranteed that cells 1,1 and N,N will be empty, and furthermore it is guaranteed that there i</div>
+<div>s a path of empty squares from cell 1,1 to cell N,N</div>
+<div></div>
+<div>数据保证左下角和右上角一定是空地，且一定有解</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>On a single line of output, output the length of the shortest sequence of directions that will guide</div>
+<div>&nbsp;Bessie to the goal, irrespective whether she starts facing up or right.</div>
+<div>输出最短命令序列的长度</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+EHE<br />
+EEE<br />
+EEE</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9<br />
+In this example, the instructions "Forward, Right, Forward, Forward, Left, Forward, Left, Forward, F<br />
+orward" will guide Bessie to the destination irrespective of her starting orientation.<br />
+当Bessie在左下角的时候，执行前进，右转，前进，前进，左转，前进，左转，前进，前进无论Bessie一开始是朝<br />
+向上还是朝向下，都可以到达右上角。</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">1.&ldquo;无论Bessie处于左下角时是头朝向上还是朝向左&rdquo;根据英文原文&ldquo;Bessie doesn't know if she starts out facing up (towards cell 1,2) or right (towards cell 2,1).&rdquo;应为无论Bessie处于左下角时是头朝向上还是朝向右</span><br style="font-family: arial, verdana, helvetica, sans-serif;" /><br />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">2.漏了原题很重要的一点:&quot;Once she reaches the goal she will ignore further commands.&quot;即如果Bessie已经到达终点，她会忽视以后的所有行为</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4761'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4761'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4761'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

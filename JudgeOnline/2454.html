@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2454. -- TopCoder SRM 463 RabbitPuzzle</title><center><h2>2454: TopCoder SRM 463 RabbitPuzzle</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>40&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2454'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2454'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2454'>Discuss</a>]</center><h2>Description</h2><div class=content><p style="text-indent: 21pt"><span style="position: relative; top: 3pt">从前，森林里有三只寂寞的兔子。&nbsp;</span><span style="font-family: '宋体'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'">它们平时搞<font face="Times New Roman">OI</font><font face="宋体">，做题做累了就开始玩游戏。</font></span><span style="font-family: 'Times New Roman'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-family: '宋体'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'">游戏在一个无限长的由树桩组成的直线上进行，相邻两树桩距离相同，为了方便表示，兔子们把树桩标号为&hellip;，<font face="Times New Roman">-2</font><font face="宋体">，</font><font face="Times New Roman">-1</font><font face="宋体">，</font><font face="Times New Roman">0</font><font face="宋体">，</font><font face="Times New Roman">1</font><font face="宋体">，</font><font face="Times New Roman">2</font><font face="宋体">，&hellip;。游戏开始时，三只兔子站在不同的三个树桩上。游戏中，兔子可以跳过另一只兔子到达轴对称的那个树桩上。</font></span><span style="font-family: 'Times New Roman'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-family: 'Times New Roman'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'"><img height="285" alt="" width="550" src="upload/201109/11.jpg" /></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-family: 'Times New Roman'; position: relative; top: 3pt; mso-text-raise: -3.0000pt; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><span style="font-family: 宋体; position: relative; top: 3pt; mso-text-raise: -3.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">但是，兔子不能落在已有兔子的树桩，也不能一次跃过两只兔子。</span></span><span lang="EN-US" style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><span style="font-family: 宋体; position: relative; top: 3pt; mso-text-raise: -3.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">出于</span><span lang="EN-US" style="position: relative; top: 3pt; mso-text-raise: -3.0pt">OIer</span><span style="font-family: 宋体; position: relative; top: 3pt; mso-text-raise: -3.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的本性，兔子们想探究一下，从游戏的初始局面，恰跳</span><span lang="EN-US" style="position: relative; top: 3pt; mso-text-raise: -3.0pt">K</span><span style="font-family: 宋体; position: relative; top: 3pt; mso-text-raise: -3.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">次到达某个特定局面，有多少种不同的跳跃顺序。</span></span><span lang="EN-US" style="position: relative; top: 3pt; mso-text-raise: -3.0pt"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"></p>
+<!--EndFragment--></div><h2>Input</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 150%"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">输入一行，前三个数字，表示三只兔子的起始位置。接下来三个数字，表示终止局面的位置。最后一个数字，表示<font face="Times New Roman">K</font><font face="宋体">。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 150%"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Output</h2><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 150%"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">输出不同方案数模<font face="Times New Roman">1,000,000,007</font><font face="宋体">的结果。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>0 5 8 0 8 11 3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>100%数据满足1&le;k&le;100，位置标号的绝对值不超过10^18。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2454'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2454'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2454'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

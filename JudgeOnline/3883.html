@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3883. -- [Wc2015]混淆与破解</title><center><h2>3883: [Wc2015]混淆与破解</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>20&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3883'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3883'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3883'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;<img width="0" height="0" src="upload/201502/111.jpg" alt="" /><img width="1176" height="782" alt="" src="upload/201503/111.jpg" /></p></div><h2>Input</h2><div class=content><p><img width="412" height="92" alt="" src="upload/201503/222.PNG" /></p></div><h2>Output</h2><div class=content><p>&nbsp;<img width="0" height="0" src="upload/201502/333.PNG" alt="" /><img width="1164" height="85" alt="" src="201503/333.PNG" /></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 4 1<br />
+0 1 2 2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>001<br />
+010<br />
+1110</span></div><h2>HINT</h2>
+			<div class=content><p><p>样例输入等价于如下代码<br /><br />
+y[] = 0000 input x[0..n-1] y[0..n-1] = x[0..n-1] y[0] = (not (y[1] and y[2])) xor y[2] xor y[2] output y[0]<br /><br />
+其中 x[0..n-1] 表示 01 串 x 的第 0 位到第 n&minus;1 位。<br /><br />
+在这段代码中，每一种输入对应的输出如下：<br /><br />
+input &nbsp;&nbsp;&nbsp; 000 &nbsp;&nbsp;&nbsp; 001 &nbsp;&nbsp;&nbsp; 010 &nbsp;&nbsp;&nbsp; 011 &nbsp;&nbsp;&nbsp; 100 &nbsp;&nbsp;&nbsp; 101 &nbsp;&nbsp;&nbsp; 110 &nbsp;&nbsp;&nbsp; 111<br /><br />
+output &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 0<br /><br />
+样例输出是一种破解方案，等价于如下代码：<br /><br />
+input x[0..n-1] z[0] = x[2] z[1] = x[1] output h(z[])<br /><br />
+h 函数的输入和输出有如下对应关系：<br /><br />
+z[] &nbsp;&nbsp;&nbsp; 00 &nbsp;&nbsp;&nbsp; 01 &nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp; 11<br /><br />
+h(z[]) &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 0<br /><br />
+可以发现，对于每一种输入，破解版算法和混淆版算法的输出是相同的。<br /><br />
+对于所有的数据，1&le;n&le;64，1&le;L&le;256，1&le;Q&le;1024，0&le;p&le;0.01，0&le;u,v,s,d,e&lt;L（注意，输入中并没有把 p 的值给你）。<br /><br />
+<br /><br />
+提示<br /><br />
+使用位运算一次在多个输入上求出函数值可以极大的加速你的程序。<br /><br />
+数据范围<br /><br />
+1&lt;=N&lt;=64,1&lt;=L&lt;=256,1&lt;=Q&lt;=1024,0&lt;=P&lt;=0.01,0&lt;=U,V,S,D,E&lt;=L</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3883'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3883'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3883'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

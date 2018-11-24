@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2197. -- [Usaco2011 Mar]Tree Decoration</title><center><h2>2197: [Usaco2011 Mar]Tree Decoration</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>282&nbsp;&nbsp;<span class=green>Solved: </span>145<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2197'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2197'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2197'>Discuss</a>]</center><h2>Description</h2><div class=content><p>Farmer John is decorating his Spring Equinox Tree (like a Christmas tree but popular about three months later). It can be modeled as a rooted mathematical tree with N (1 &lt;= N &lt;= 100,000) elements, labeled 1...N, with element 1 as the root of the tree. Each tree element e &gt; 1 has a parent, P_e (1 &lt;= P_e &lt;= N). Element 1 has no parent (denoted '-1' in the input), of course, because it is the root of the tree. Each element i has a corresponding subtree (potentially of size 1) rooted there. FJ would like to make sure that the subtree corresponding to element i has a total of at least C_i (0 &lt;= C_i &lt;= 10,000,000) ornaments scattered among its members. He would also like to minimize the total amount of time it takes him to place all the ornaments (it takes time K*T_i to place K ornaments at element i (1 &lt;= T_i &lt;= 100)). Help FJ determine the minimum amount of time it takes to place ornaments that satisfy the constraints.  Note that this answer might not fit into a 32-bit integer, but it will fit into a signed 64-bit integer. For example, consider the tree below where nodes located higher on the display are parents of connected lower nodes (1 is the root):</p>
+<p><img border="0" src="images/2197_1.jpg" alt="" /></p>
+<p>Suppose that FJ has the following subtree constraints:</p>
+<p><img border="0" src="images/2197_2.jpg" alt="" /></p>
+<p>Then FJ can place all the ornaments as shown below, for a total cost of 20:</p>
+<p><img border="0" src="images/2197_3.jpg" alt="" /></p>
+<p>FJ要装饰一棵Spring Equinox树（N个节点，标号为1--N，1为根节点）。&nbsp;</p>
+<p><img border="0" src="images/2197_4.jpg" alt="" /></p></div><h2>Input</h2><div class=content><p>* Line 1: A single integer: N  * Lines 2..N+1: Line i+1 contains three space-separated integers: P_i,         C_i, and</p>
+<p>T_i</p>
+<p>&nbsp;第一行：N -----代表N个节点 接下来N行 每行三个数P_i -----i的父亲节点 C_i ----以i为根节点的子树需要至少C_i个装饰品 T_i ----在i这个节点挂一个装饰品需要T_i的时间&nbsp;</p></div><h2>Output</h2><div class=content><p>* Line 1: A single integer: The minimum time to place all the         ornaments</p>
+<p>挂上所有装饰品所需要的总时间</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+-1 9 3<br />
+1 2 2<br />
+5 3 2<br />
+5 1 4<br />
+2 3 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>20<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2197'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2197'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2197'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

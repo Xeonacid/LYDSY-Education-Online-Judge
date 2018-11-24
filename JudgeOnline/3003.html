@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3003. -- LED</title><center><h2>3003: LED</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>148&nbsp;&nbsp;<span class=green>Solved: </span>38<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3003'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3003'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3003'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="center"></div>
+<div><span style="font-size: 12pt">LED屏是由一个庞大的点阵小灯泡组成的，一开始每个小灯泡都不发光。每一行一共有N个小灯泡，依次标号为1~n。现在给定K个点，要求这K个点发光，其余点必须保持熄灭状态。而这块LED屏的操作方式各种奇葩，一共有L种操作方法，第i种表示你能将任意长度恰为A_i的连续一段灯泡的状态取反（灭变亮，亮变灭）。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">已知LED屏一共有m行，为了节省时间，请你算出每一行达到目标状态所需的最少操作次数。</span></div>
+<div>&nbsp;</div></div><h2>Input</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">输入文件第一行一个数m，表示LED屏的行数。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">对于LED屏的每一行：</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第一行为n,k,l，意义见上。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第二行为k个数，表示要求发光的k个点。</span></div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">第三行为l个数，表示l种操作方式。</span></div>
+<div>&nbsp;</div></div><h2>Output</h2><div class=content><div>
+<div>&nbsp;</div>
+<div><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 12pt">对于LED屏的每一行：如果无法达到目标状态，输出-1，否则输出最少次数。</span></div>
+<div>&nbsp;</div>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+    2<br />
+    10 8 2<br />
+    1 2 3 5 6 7 8 9<br />
+    3 5<br />
+    3 2 1<br />
+    1 2<br />
+    3<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+2<br />
+-1<br />
+ <br />
+【数据规模】<br />
+对于100%的数据，T≤10，N≤10000，K≤10,L≤100,1≤A_i≤N。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3003'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3003'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3003'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

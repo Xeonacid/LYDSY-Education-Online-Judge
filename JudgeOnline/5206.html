@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5206. -- [Jsoi2017]原力</title><center><h2>5206: [Jsoi2017]原力</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>206&nbsp;&nbsp;<span class=green>Solved: </span>62<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5206'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5206'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5206'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一个原力网络可以看成是一个可能存在重边但没有自环的无向图。每条边有一种属性和一个权值。属性可能是R、G</div>
+<div>、B三种当中的一种，代表这条边上原力的类型。权值是一个正整数，代表这条边上的原力强度。原力技术的核心</div>
+<div>在于将R、G、B三种不同的原力融合在一起产生单一的、便于利用的原力。为了评估一个能源网络，JYY需要找到所</div>
+<div>有满足要求的三元环（首尾相接的三条边），其中R、G、B三种边各一条。一个三元环产生的能量是其中三条边的</div>
+<div>权值之积。</div>
+<div>现在对于给出的原力网络，JYY想知道这个网络的总能量是多少。网络的总能量是所有满足要求三元环的能量之和。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含两个正整数N、M。表示原力网络的总顶点个数和总边数。</div>
+<div>接下来M行，每行包含三个正整数ui，vi，wi和一个字符ci。</div>
+<div>表示编号ui和vi的顶点之间存在属性为ci权值为wi的一条边。</div>
+<div>N&le;50,000,M&le;100,000,1&le;?Wi&le;10^6</div>
+<p></p></div><h2>Output</h2><div class=content><p>输出一行一个整数，表示这个原力网络的总能量模10^9+7的值</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 6<br />
+1 2 2 R<br />
+2 4 3 G<br />
+4 3 5 R<br />
+3 1 7 G<br />
+1 4 11 B<br />
+2 3 13 B</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>828</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5206'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5206'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5206'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1134. -- [POI2009]Wys 三角形岛</title><center><h2>1134: [POI2009]Wys 三角形岛</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>24&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1134'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1134'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1134'>Discuss</a>]</center><h2>Description</h2><div class=content><p>在三角形图上，每个小正三角形的面积都是1。可以在边上走出一个多边形，（即三角形网格图的边界，见下图）使得围成一定的面积。 我们可以用编码来表示走法：（即从一条边到下一条边的方向改变量） a左转120&deg; b左转60&deg; c直走 d右转60&deg; e右转120&deg;</p>
+<p>&nbsp;<img border="0" alt="" src="images/1134.jpg" /></p>
+<p>可以描述为cdddcddd 或dddcdddc，cbbbcbbb 对于描述同样形状的图形的不同序列，我们只用字典序最小的，即bbbcbbbc 两个多边形在几何的概念上全等即看做等价。显然等价的图形用字母路径表示出来是一样的。 你的任务有两个： 1． 对于给定的N输出所有面积为N的可以走出来的图形的编码 2． 对于给定的形状序列，求出其面积K并计算在这个图形基础上加一个小三角形可以组成哪些可编码图形。 每个测试点 询问不超过5次 数据保证 N,K &le; 10</p></div><h2>Input</h2><div class=content><p>第一行数据总数t， t&le;5 每个询问以&ldquo;N&rdquo;开头则表示任务1，接下来一个整数N 以&ldquo;K&rdquo;开头则表示任务2，接下来是一个字符串。</p></div><h2>Output</h2><div class=content><p>对于每个任务，输出两行， 第一行表示满足要求的方案总数， 第二行按字典序输出所有序列，两个序列之间用一个空格隔开。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+K adeccecced<br />
+N 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+acedccecced addebcecced adebebecced adecbedcced cceccecce<br />
+4<br />
+aeddde bdecdde bececde ccedcde</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1134'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1134'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1134'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

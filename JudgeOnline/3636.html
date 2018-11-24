@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3636. -- 教义问答手册</title><center><h2>3636: 教义问答手册</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>271&nbsp;&nbsp;<span class=green>Solved: </span>131<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3636'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3636'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3636'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&ldquo;汉中沃野如关中，四五百里烟蒙蒙。黄云连天夏麦熟，水稻漠漠吹秋风。&rdquo;&mdash;&mdash;摘自 黄裳《汉中行》<br />
+&ldquo;泉岭精神不朽，汉中诸球永生。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;把神犇烤一烤，味道会更好。&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;秀恩爱有利于身心健康！&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+&ldquo;楼上说的对！&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;不会做积分，怎么找妹子！&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;切实保护耕地以放置更多的哨戒炮。&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;就算两个包子一起吃掉，也不能阻止我修筑梯田。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;我来自泉岭，他来自汉中，我们半道而逢。&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+【问题描述】<br />
+&nbsp;&nbsp;&nbsp; 作为泉岭精神的缔造者、信奉者、捍卫者、传承者，Pear决定印制一些教义问答手册，以满足泉岭精神日益增多的信徒。Pear收集了一些有关的诗选、语录，其中部分内容摘录在了【题目背景】里。这些语录是按出现的时间排好序的&mdash;&mdash;Pear很喜欢这样的作风，于是决定在按时间排好序的基础上，选择部分语录，制作成若干本教义问答手册。<br />
+&nbsp;&nbsp;&nbsp; 一共有N条语录。Pear决定从中选出某一段时间内的所有语录，在此基础上印制大小为L的若干本教义问答手册。Pear对印制的手册有如下要求：<br />
+&nbsp;&nbsp;&nbsp; 1.每本手册必须包含这个区间内连续的恰好L条语录。<br />
+&nbsp;&nbsp;&nbsp; 2.不同手册包含的语录不能相同。<br />
+&nbsp;&nbsp;&nbsp; 3.每条语录有一个&ldquo;主题相关程度&rdquo;，这个数可正可负。Pear希望所有手册的语录的&ldquo;主题相关程度&rdquo;之和尽可能大。<br />
+&nbsp;&nbsp;&nbsp; 例如，对于区间[3,15]和L=3，一种选择方法是：[4,6]+[9,11]+[12,14]。这三个区间长度都恰好为L，且互不重叠。<br />
+&nbsp;&nbsp;&nbsp; Pear并没有决定选哪段时间的语录，因此他有Q次询问。每次询问，给出两个数[l,r]表示候选语录的范围是第l条到第r条。你能回答出每个询问的最大&ldquo;主题相关程度&rdquo;之和么？<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行两个正整数N，L，含义如上所述。注意对于所有询问，L都是一样的。<br />
+&nbsp;&nbsp;&nbsp; 第二行N个整数，绝对值&lt;=10000。第i个数表示第i条语录的&ldquo;主题相关程度&rdquo;。<br />
+&nbsp;&nbsp;&nbsp; 接下来Q行，每行两个正整数l和r，表示询问区间。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">&nbsp;&nbsp;&nbsp; 输出Q行，每行表示这组询问的答案。注意，这个答案可以是0，如果区间负数过于多的话。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>    15 3<br />
+    3 1 5 -2 3 -2 -2 2 2 2 0 3 2 -1 0 <br />
+    9<br />
+    8 10<br />
+    10 10<br />
+    9 11<br />
+    2 14<br />
+    5 14<br />
+    5 13<br />
+    12 13<br />
+    7 13<br />
+    2 10<br />
+<br />
+  </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+    0<br />
+    4<br />
+    17<br />
+    11<br />
+    11<br />
+    0<br />
+    11<br />
+    12<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">【数据范围】<br /><br />
+&nbsp;&nbsp;&nbsp; 对于10%的数据，N=1000,Q=1000,L&lt;=50<br /><br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=5<br /><br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=10<br /><br />
+&nbsp;&nbsp;&nbsp; 对于100%的数据，N=100000,Q=100000,L&lt;=50</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014%E5%B9%B4%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8D%81%E4%BA%94%E4%BA%BA%E4%BA%92%E6%B5%8B'>2014年国家集训队十五人互测</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3636'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3636'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3636'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

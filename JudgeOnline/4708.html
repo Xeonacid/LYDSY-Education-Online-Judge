@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4708. -- [Jsoi2011]Apple 的美食</title><center><h2>4708: [Jsoi2011]Apple 的美食</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4708'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4708'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4708'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Apple很喜欢吃巧克力，但它是一头挑剔的猪，有的品种的巧克力并不能满足它的胃口。如果主人给它的巧克力它</div>
+<div>不喜欢吃，它就会很不开心。主人并不知道，什么样的巧克力Apple喜欢吃，但她知道巧克力的可可含量是巧克力</div>
+<div>口感的重要因素，因此她决定根据巧克力的可可含量来判断什么样的巧克力拿给Apple吃，什么样的巧克力不拿给A</div>
+<div>pple吃。假设一块巧克力的可可含量有1-N种不同的计量，则她认为可可含量在[a，b]的范围内的巧克力是好吃的</div>
+<div>。不过她不知道的这个范围到底是多少，需要你来帮忙确定这个范围，使得她可以让Apple吃到最多的喜欢吃的巧</div>
+<div>克力。设posi是可可脂含量为i，且Apple认为是好吃的巧克力的数量，negi是可可脂含量为i，且apple认为是不好</div>
+<div>吃的巧克力的数量。这两个序列由以下方法生成：posi=a[i*2-1]negi=a[i*2]其中a[i]=(a[i-1]*p1+p2)modM(i&gt;1)</div>
+<div>a[1]=a0设</div>
+<div>TP(truepositive)是Apple认为好吃的、且被主人认为是好吃的巧克力数量。</div>
+<div>TN(truenegative)是Apple认为不好吃的、且被主人认为是不好吃的巧克力数量。</div>
+<div>FP(falsepositive)是Apple认为不好吃的、且被主人认为是好吃的巧克力数量。</div>
+<div>FN(falsenegative)是Apple认为好吃的、且被主人认为是不好吃的巧克力数量。</div>
+<div>设r为被正确判断为好吃的巧克力数占所有好吃的巧克力的比率，p为被正确判断为好吃的巧克力占所有被判定为好</div>
+<div>吃的巧克力数的比率。则r=TP/(TP+FN)p=TP/(TP+FP)请你帮助Apple求出一个范围，使得f=2pr/(p+r)最大。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入由若干行组成，每行是一组数据：N，a0，p1，p2，M，中间用空格分开。</div>
+<div>(1&lt;=N&lt;=1000000，a0，p1，p2&lt;M&lt;=20)输入以一个0结束，数据组数不超过1000。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>每组数据输出一行，为f的最大值（四舍五入保留6位小数），输入保证至少有一块Apple</div>
+<div>认为好吃的巧克力。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 4 1 5<br />
+12 9 6 6 11<br />
+0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.800000<br />
+0.683938</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4708'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4708'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4708'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

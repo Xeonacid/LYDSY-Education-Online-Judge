@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3372. -- [Usaco2004 Feb]Moo University -- Financial Aid 财政补助</title><center><h2>3372: [Usaco2004 Feb]Moo University -- Financial Aid 财政补助</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>30&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3372'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3372'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3372'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;贝茜统计到人类拥有很多大学可以去就读，而奶牛们却一个大学也没有．为了解决这个问</span></div>
+<div><span style="font-size: medium">题，她和她的同伴们建立了一所奶牛大学Moo大学．为了防止笨牛入学，学校的创立者搞了一个奶牛智力测试(CSAT)，它的分数在区间[1，2&times;10^9]内．Moo大学的学费很昂贵：不是所有奶牛都能负担．事实上，大多数奶牛需要一些财政帮助a(0&le;o&le;100000)．政府不会给奶牛任何资金，所以所有的资金都来自于学校有限的资金，资金总数为F(0&le;F&le;2&times;10^9).更糟的是，虽然有C(N&le;C&le;100000)头奶牛报考，Moo大学却只能接受N(1&le;N&le;19999)头奶牛，N为奇数．贝茜既要让这N头奶牛享受最大限度的教育资源，又要它们CSAT分数的中位数尽可能高．&nbsp;&nbsp;&nbsp;&nbsp;这里说一下对于一个奇数个数组成的集合中中位数的概念．例如，集合3，8，9，7，5的中位数是7，因为有两个数小于7，有两个数大于7．&nbsp;&nbsp;&nbsp;&nbsp;给出每头奶牛的分数和所需的财政补贴数，可以接纳的奶牛数，补助的资金总数，求出中位数最大的可能值．</span></div>
+<div></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：三个用空格分开的整数N，C，F.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到C+1行：每行有两介用空格隔开的整数．第一个数表示这头奶牛的CSAT分数；第二个</span></div>
+<div><span style="font-size: medium">整数表示这头奶牛所需的补助数额．</span></div>
+<div></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;仅一行，一个整数即最大的中位数可能值．如不存在输出-1.</span></div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>    3  5  70<br />
+    30  25<br />
+    50  21<br />
+    20  20<br />
+    5  18<br />
+    35  30<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>    35<br />
+样例说明<br />
+    如果贝茜接收CSAT分数为5，35，50的奶牛，中位数为35.总的资金要求为18+30+21=69<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Green'>Green</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3372'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3372'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3372'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

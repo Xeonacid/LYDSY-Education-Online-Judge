@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4429. -- [Nwerc2015] Elementary Math小学数学</title><center><h2>4429: [Nwerc2015] Elementary Math小学数学</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>242&nbsp;&nbsp;<span class=green>Solved: </span>103<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4429'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4429'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4429'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Ellen is teaching elementary math to her students and the time for the final exam has come. The exam consists of n questions. In each question the students have to add (+), subtract (&minus;) or multiply (&lowast;) a pair of numbers.</div>
+<div>Ellen has already chosen the n pairs of numbers. All that remains is to decide for each pair which of the three possible operations the students should perform. To avoid students getting bored, Ellen wants to make sure that the n correct answers to her exam are all different.</div>
+<div>Please help Ellen finish constructing the exam by automating this task.</div>
+<div>Ellen给她的学生教小学数学。期末考试已经来临了。考试有n个题目，每一个题目学生们都要对一对数字进行加（+），减（-），乘（*）运算。</div>
+<div>Ellen已经选好了n对数。剩下的是决定学生们应该对每对数执行什么运算。为了不让学生们感到厌烦，Ellen想确保n个正确答案都不一样。</div>
+<div>请帮助Ellen自动化地构建考试。</div>
+<p></p></div><h2>Input</h2><div class=content><div>The input consists of:</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>one line with one integer n (1&le;n&le;2500), the number of pairs of numbers;</div>
+<div>&bull;<span class="Apple-tab-span" style="white-space: pre;">	</span>n lines each with two integers a and b (&minus;10^6&le;a,b&le;10^6), a pair of numbers used.</div>
+<div>输入包括：</div>
+<div>第一行是一个整数n（1&lt;=n&lt;=2500），表示共有n道题目。</div>
+<div>接下来n行每行有2个整数a和b（-10^6&lt;=a,b&lt;=10^6）,表示每一题使用的整数。</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each pair of numbers (a,b) in the same order as in the input, output a line containing a valid equation. Each equation should consist of five parts: a, one of the three operators, b, an equals sign (=), and the result of the expression. All the n expression results must be different.</div>
+<div>If there are multiple valid answers you may output any of them. If there is no valid answer, output a single line with the string &ldquo;impossible&rdquo; instead.</div>
+<div>对于输入中的每一对(a,b)，输出一行有效的方程。每一个方程应该包含5部分：a，+、-、*中的一个运算符，b，=，答案。N个答案必须不同。</div>
+<div>如果有多个有效答案，你可以输出任意一个。如果没有答案，输出&ldquo;impossible&rdquo;。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Sample input 1<br />
+4<br />
+1 5<br />
+3 3<br />
+4 5<br />
+-1 -6<br />
+Sample input 2<br />
+4<br />
+-4 2<br />
+-4 2<br />
+-4 2<br />
+-4 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Sample output 1<br />
+1 + 5 = 6<br />
+3 * 3 = 9<br />
+4 - 5 = -1<br />
+-1 - -6 = 5<br />
+<br />
+Sample output 2<br />
+impossible<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4429'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4429'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4429'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

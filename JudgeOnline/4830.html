@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4830. -- [Hnoi2017]抛硬币</title><center><h2>4830: [Hnoi2017]抛硬币</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>496&nbsp;&nbsp;<span class=green>Solved: </span>198<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4830'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4830'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4830'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小A和小B是一对好朋友，他们经常一起愉快的玩耍。最近小B沉迷于**师手游，天天刷本，根本无心搞学习。但是</div>
+<div>已经入坑了几个月，却一次都没有抽到SSR，让他非常怀疑人生。勤勉的小A为了劝说小B早日脱坑，认真学习，决</div>
+<div>定以抛硬币的形式让小B明白他是一个彻彻底底的非洲人，从而对这个游戏绝望。两个人同时抛b次硬币，如果小A</div>
+<div>的正面朝上的次数大于小B正面朝上的次数，则小A获胜。但事实上，小A也曾经沉迷过拉拉游戏，而且他一次UR也</div>
+<div>没有抽到过，所以他对于自己的运气也没有太大把握。所以他决定在小B没注意的时候作弊，悄悄地多抛几次硬币</div>
+<div>，当然，为了不让小B怀疑，他不会抛太多次。现在小A想问你，在多少种可能的情况下，他能够胜过小B呢？由于</div>
+<div>答案可能太大，所以你只需要输出答案在十进制表示下的最后k位即可。</div>
+<div></div></div><h2>Input</h2><div class=content><div>有多组数据，对于每组数据输入三个数a,b,k，分别代表小A抛硬币的次数，小B抛硬币的次</div>
+<div>数，以及最终答案保留多少位整数。</div>
+<div>1&le;a,b&le;10^15,b&le;a&le;b+10000,1&le;k&le;9，数据组数小于等于10。</div>
+<div></div></div><h2>Output</h2><div class=content><div>对于每组数据，输出一个数，表示最终答案的最后k位为多少，若不足k位以0补全。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 9</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>000000004<br />
+6<br />
+3 2 1<br />
+【样例解释】<br />
+对于第一组数据，当小A抛2次硬币，小B抛1次硬币时，共有4种方案使得小A正面朝上的<br />
+次数比小B多。(01,0),(10,0),(11,0),(11,1)<br />
+对于第二组数据，当小A抛3次硬币，小B抛2次硬币时，共有16种方案使得小A正面朝上的次数比小B多。(001,00),<br />
+(010,00),(100,00),(011,00),(101,00),(110,00),(111,00),(011,01),(101,01),(110,01),(111,01),(011,10),<br />
+(101,10),(110,10),(111,10),(111,11)</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4830'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4830'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4830'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

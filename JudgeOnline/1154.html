@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1154. -- [CTSC2006]方块填数Fill</title><center><h2>1154: [CTSC2006]方块填数Fill</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>41&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1154'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1154'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1154'>Discuss</a>]</center><h2>Description</h2><div class=content><div>最近，一个方块填数的游戏风靡全球：给定一个n*m的方块。n行从上到下标号为1到n，m列从左到右标号为1到m。</div>
+<div>如果一个方格所在的行的标号和所在的列的标号都是奇数，那么该方格就称为奇方格。游戏的开始所有的奇方格中</div>
+<div>都填上了数。你需要在其他的方格里填数，如果填完数后，方块满足下面条件，你就赢得了这个游戏：</div>
+<div>1、任意一个a1*b1的子方块中所有数的和大于0；</div>
+<div>2、任意一个a2*b2的子方块中所有数的和小于0；</div>
+<div>其中，a1、 b1、 a2、 b2都是在游戏的开始给定的。 一个a*b的子方块是指行标号在i（1&le;i&le;n-a+1）到i+a-1之</div>
+<div>间，列标号在j(1&le;j&le;m-b+1)到j+b-1之间的所有的方格的集合。小P很喜欢这种游戏，他希望你帮助写一个程序给</div>
+<div>出一种填数的方案，或者告诉他这样的方案不存在。</div></div><h2>Input</h2><div class=content><div>
+<div>第一行为用空格分开的6个正整数n,m,a1,b1,a2,b2，都在1到100之间。</div>
+<div>从第2行起到(n+1)/2行，每一行有(m+1)/2个整数，</div>
+<div>第i+1行的第k(k=1,2,&hellip;,(m+1)/2)个数表示在游戏开始时方块的第2i-1行，2j-1列的方格所填的整数。这些整数都在-100到100之间。</div>
+<div>n,m,a1,b1,a2,b2，都在1到100之间。</div>
+</div></div><h2>Output</h2><div class=content><div>如果填数方案不存在，输出一行&ldquo;No&rdquo;。</div>
+<div>如果填数方案存在，第一行输出&ldquo;Yes&rdquo;。</div>
+<div>接下来的n行，每一行有用空格分开的m个整数，描述一个填数方案。&nbsp;</div>
+<div>输出的每一个整数必须在-10^9到10^9之间。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3 2 2 3 3<br />
+1 1<br />
+1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Yes<br />
+1 -1 1<br />
+-4 5 -4<br />
+1 -1 1<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%20vfleaking'>鸣谢 vfleaking</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1154'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1154'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1154'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

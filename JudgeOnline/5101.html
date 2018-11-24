@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5101. -- [POI2018]Powódź</title><center><h2>5101: [POI2018]Powódź</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>129&nbsp;&nbsp;<span class=green>Solved: </span>80<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5101'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5101'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5101'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在地面上有一个水箱，它的俯视图被划分成了n行m列个方格，相邻两个方格之间有一堵厚度可以忽略不计的墙，水</div>
+<div>箱与外界之间有一堵高度无穷大的墙，因此水不可能漏到外面。已知水箱内每个格子的高度都是[0,H]之间的整数</div>
+<div>，请统计有多少可能的水位情况。因为答案可能很大，请对10^9+7取模输出。两个情况不同当且仅当存在至少一个</div>
+<div>方格的水位在两个情况中不同。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含三个正整数n,m,H(n*m&lt;=500000,1&lt;=H&lt;=10^9)。</div>
+<div>接下来n行，每行m-1个整数a[i][j](1&lt;=a[i][j]&lt;=H)，表示(i,j)和(i,j+1)之间的墙的高度。</div>
+<div>接下来n-1行，每行m个整数b[i][j](1&lt;=b[i][j]&lt;=H)，表示(i,j)和(i+1,j)之间的墙的高度。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一行一个整数，即方案数模10^9+7的结果。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 2<br />
+1<br />
+1<br />
+1<br />
+1 2<br />
+1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>65<br />
+HINT<br />
+要么全部格子水位都是2，要么全部格子水位都在[0,1]之间，共1+2^6=65种情况。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Claris%E4%B8%8A%E4%BC%A0%E8%AF%95%E9%A2%98'>鸣谢Claris上传试题</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5101'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5101'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5101'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

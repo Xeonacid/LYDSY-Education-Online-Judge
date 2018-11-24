@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3010. -- [Usaco2012 Dec]Gangs of Istanbull</title><center><h2>3010: [Usaco2012 Dec]Gangs of Istanbull</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>36&nbsp;&nbsp;<span class=green>Solved: </span>26<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3010'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3010'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3010'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Life is tough on the farm, and when life is tough you have to get tough. The cows have formed gangs (conveniently numbered 1 to M). The gangs coexisted in peace for a while, but now things are really getting out of control! The cows are competing over control of a great grazing field. This conflict happens over a series of minutes. Each minute a single cow walks into the field. If the field is empty the new cow's gang is considered to take control of the field. If the field is already controlled by the new cow's gang then the cow just starts grazing. Otherwise, a single cow from the controlling gang that is grazing confronts the new cow. These confrontations between two cows start with some arguing and inevitably end up with the pair coming to realize how much more more alike than different they are. The cows, seeing the error in their ways, leave the gang and the field and get a cold glass of soy milk at FJ's tavern. If after this confrontation the field is empty than no gang controls the field. Bessie realizes how these confrontations will occur. She knows how many cows are in each gang. Bessie really wants her gang to control the field after the conflict is over and all cows are either on the field or at FJ's tavern. Help Bessie determine if it is possible for her gang, labeled 1, to control the field in the end. If it is possible, Bessie wants to know the maximum number of cows from her gang that could be on the field at the end. Output this number and the lexicographically earliest ordering of cows that results in this number of cows from Bessie's gang at the end. An ordering X is said to be lexicographically earlier than Y if there is some k such that X[k] &lt; Y[k] and X[i] = Y[i] for i &lt; k.&nbsp;</span></p>
+<p><span style="font-size: medium"><font face="System">n头牛结成了m个帮派，现在它们争夺一块草地。每个单位时间内会有一头牛来。如果草地上还没有牛或者只有自己帮派的牛，他会留在这里。但如果已经有别的帮派的牛，它们会打一架，这使得当前牛和草地上的一头牛去找农夫思考人生。问如何安排来的牛的编号顺序，能使一 &nbsp;号帮派最后有最多的牛留在草地上，如果不为0，还要输出字典序最小的一组方案。</font><br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp;* Line 1: N (1 &lt;= N &lt;= 100) and M (1 &lt;= M &lt;= N) separated by a space. The total number of cows in all the gangs will be N. The total number of gangs is M.</font></p>
+<p><font size="4">&nbsp;* Lines 2..1+M: The (1+i)th line indicates how many members are in gang i. Each gang has at least 1 member.&nbsp;</font></p></div><h2>Output</h2><div class=content><p>&nbsp;* Line 1: Output YES on a single line if Bessie's gang can control the field after the conflict. Otherwise output NO on a single line.</p>
+<p>* Line 2: If Bessie's gang can control the field after the conflict output the maximum number of cows that could be on the field on a single line. * Lines 3..2+N: On the (i+2)th line output the index of the gang of the cow that appears in the ith minute in the lexicographically earliest ordering that leaves the maximum number of cows on the field after the conflict.&nbsp;</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata> 5 3 <br />
+2<br />
+1<br />
+2<br />
+ INPUT DETAILS: There are 5 cows and 3 gangs. Bessie's gang (gang 1) has 2 members, gang 2 has 1 member, and gang 3 has 2 members. </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+1<br />
+1<br />
+3 <br />
+2 <br />
+3 <br />
+1 <br />
+<br />
+OUTPUT DETAILS: Only one cow from Bessie's gang can end up on the field. </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3010'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3010'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3010'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

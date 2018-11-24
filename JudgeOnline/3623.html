@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3623. -- CATS</title><center><h2>3623: CATS</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3623'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">CATS(Counter and Two Stacks)是一门有一个counter和两个栈的语言。S1和S2是两个栈，初始时候每个栈中有无数个0，压栈和出栈的操作分别为&ldquo;PUSH&rdquo;和&ldquo;POP&rdquo;。&ldquo;ADD&rdquo;取出栈顶两个元素，并把和重新压栈。下程序中T1，T2分别表示S1，S2的栈顶元素。</span></div>
+<div align="left"><span style="font-size: medium">COUNTER = X</span></div>
+<div align="left"><span style="font-size: medium">WHILE COUNTER &gt; 0</span></div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium">S2 PUSH T1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //把S1栈顶元素压入S2</span></div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium">S1 POP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //S1栈顶元素出栈</span></div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium">FLIP LAST BINARY BIT OF ALL NUMBERS IN S1&nbsp;//把S1中所有数的最后一位取反</span></div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium">IF T2 &gt; L</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">COUNTER = COUNTER - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">IF COUNTER == 0 PRINT T2</span></div>
+<div style="text-indent: 21pt" align="left"><span style="font-size: medium">ELSE</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S2 PUSH N</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S2 PUSH N</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S2 ADD</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S2 ADD</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S1 PUSH T2</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S1 PUSH T2</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt" align="left"><span style="font-size: medium">S2 POP</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt"><span style="font-size: medium">S2 POP</span></div>
+<div><span style="font-size: medium">求该程序对于给定输入X,L,N的输出。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行一个整数Q，接下来Q行每行有三个正整数分别为X,L和N，其中L不是N的倍数。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">输出共Q行，每行一个整数，为题目程序对于每组X,L和N的输出。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+4 5 2<br />
+18 6 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+9<br />
+样例输入输出解释：.<br />
+对于第一组X,L和N，以下为程序循环时栈S1和COUNTER的数值。为了表示方便，只显示栈S1最顶端的4个元素。每行最左边的数为S1的栈顶元素。<br />
+COUNTER: 4<br />
+S1: 0000...<br />
+COUNTER: 4<br />
+S1: 4411...<br />
+COUNTER: 4<br />
+S1: 8850...<br />
+COUNTER: 3<br />
+S1: 9411...<br />
+COUNTER: 2<br />
+S1: 5000...<br />
+COUNTER: 2<br />
+S1: 9911...<br />
+COUNTER: 1<br />
+S1: 8000...<br />
+在下个循环中，COUNTER= 0 所以输出为8。</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium"><br /><br />
+&nbsp;<br /><br />
+数据规模：OJ中只有一组数据，Q=223100，X,N,L&lt;=2^60-1。</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;Hta'>By Hta</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3623'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

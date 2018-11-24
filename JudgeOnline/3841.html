@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3841. -- ZCC Loves Intersection</title><center><h2>3841: ZCC Loves Intersection</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>36&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3841'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3841'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3841'>Discuss</a>]</center><h2>Description</h2><div class=content><div>After beats all opponents in 3-dimension-world OI, ZCC feels bored and sets about going to other universes. In a universe with D dimension(s), ZCC finds D segments floating in the air. To be more precise: if we build a rectangular coordinate system with D axis, each of the segments is parallel with one axis, whose endpoints have a coordination of which all components belong to the set {x&isin;Z|0&le;x＜N}. For each axis, there is exactly one segment parallel with it.</div>
+<div>Each of the D segments changes location every second. Read the pseudo code below for more details:</div>
+<div><img src="upload/201501/aa.jpg" width="555" height="290" alt="" /></div>
+<div></div>
+<div></div>
+<div></div>
+<div>Every second, from every pair of segments intersect, ZCC acquires a unit of Energy. Calculate the Expectation of the amount of the acquired energy per second please.</div>
+<p></p></div><h2>Input</h2><div class=content><div>There are several test cases in one input file. EOF indicates the end of input file.</div>
+<div>Every test case contain two positive numbers N, D in one line.</div>
+<div>It is guaranteed that 1＜N&le;10^9, D&le;99. The number of test cases&le;10.</div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>For each test case, output a line with an integer or an irreducible fraction p/q, which is the Expectation.</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2<br />
+3 3<br />
+5 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+49/81<br />
+18/625</span></div><h2>HINT</h2>
+			<div class=content><p><div>For the first test case of the sample input, there are 2 segments in a 2*2 lattice.</div><br />
+<div>Because two endpoint couldn&rsquo;t coincide, two segments must be (0,y)-(1,y) and (x,0)-(x,1). (x, y&isin;{0,1})&nbsp;</div><br />
+<div>Thus, they always intersect at (x,y). As an irreducible fraction the answer is 1/1, where q = 1, so we should output an integer 1 instead.</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E9%95%87%E6%B5%B7%E4%B8%AD%E5%AD%A6'>By 镇海中学</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3841'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3841'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3841'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

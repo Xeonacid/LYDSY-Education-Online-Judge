@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1153. -- [CTSC2006]拼图Jigsaw</title><center><h2>1153: [CTSC2006]拼图Jigsaw</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>102&nbsp;&nbsp;<span class=green>Solved: </span>28<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1153'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1153'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1153'>Discuss</a>]</center><h2>Description</h2><div class=content><div>5岁的小P对剪纸很感兴趣，他总是喜欢把一个矩形的纸片剪成一个又一个的凸多边形。但是，每一次剪完后，他总</div>
+<div>是怀疑自己弄丢了一些纸片。聪明的他想到了一个方法来检测纸片是否弄丢：他将这些凸多边形拼起来，如果能够</div>
+<div>拼成一个矩形，他就认为纸片没有弄丢。由于纸片的数量不是很多，这个工作并不难。但是，久而久之，他对这项</div>
+<div>工作不感兴趣了，所以，他找到了你，希望你能够告诉他，这些凸多边形纸片能不能够拼成矩形。</div></div><h2>Input</h2><div class=content><div>第一行只有一个正整数n（1&le;n&le;8），表示凸多边形的个数。</div>
+<div>以下n行每一行描述一个凸多边形，</div>
+<div>格式如下：第i+1行的第一个数mi（3&le;mi&le;8）表示凸多边形的点数，</div>
+<div>接下来有mi对实数，一对实数给出了一个点的坐标，</div>
+<div>这mi个顶点按照从任意一个顶点出发的逆时针顺序给出。</div>
+<div>且所有实数都在(-1000,1000)的范围内，小数点后不超过8位。</div></div><h2>Output</h2><div class=content><div>如果不能拼成矩形，输出只有一行&ldquo;No&rdquo;。</div>
+<div>如果能拼成矩形，输出的第一行为&ldquo;Yes&rdquo;。接下来的n行描述拼法。</div>
+<div>如果能够拼成一个X*Y的矩形，那么矩形的四个顶点的坐标是(0,0)、(0,Y)、(X,Y)、(X,0)。</div>
+<div>这n行输出每一个凸多边形的顶点的坐标（拼成矩形后）。</div>
+<div>按照输入的顺序，即第一个输出的凸多边形对应输入的第一个凸多边形。</div>
+<div>对于每一个凸多边形，输出也按照输入的顺序，即一个多边形的第一个顶点对应输入的第一个顶点。</div>
+<div>这样，输出总共有n行，第i行有mi对数。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+4 0 0 4 -1 5 4 0 4<br />
+4 0 0 5 -1 8 3 0 3<br />
+4 0 0 0 -8 3 -4 4 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Yes<br />
+0 4 4 3 5 8 0 8<br />
+5 8 4 3 8 0 8 8<br />
+0 0 8 0 4 3 0 4</span></div><h2>HINT</h2>
+			<div class=content><p><p><img alt="" border="0" src="images/1153.jpg" />&nbsp;</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1153'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1153'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1153'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

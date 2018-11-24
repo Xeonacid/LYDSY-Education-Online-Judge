@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1456. -- 电子警察</title><center><h2>1456: 电子警察</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>64&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1456'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1456'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1456'>Discuss</a>]</center><h2>Description</h2><div class=content>
+    在Y城,有n条街道,每条街道由两个路口连接. Y城的交通系统十分特别,任意两个路口都有唯一的路径可以互相到达. 作为Y城的交通局长的小O,决定在这个城市启用一些电子警察来监控这个城市的所有街道和路口.电子警察的设置有2种:
+1)	设置在某个路口,那么这个路口,所有的被它连接的街道,和所有它连接的街道的另一端的路口将被监控.
+2)	设置在某条街道的中央,那么这条街道和连接这条街道的两个路口以及这两个路口所连接的其他街道将被监控.
+     当然,由于经费问题,小O希望设置最少的电子警察来监控所有的街道和路口.
+</div><h2>Input</h2><div class=content>第一行为一个正整数n,表示街道的数目.
+接下来n行,每行两个数x,y(x<>y,x,y<=100000000),表示连接这条街道的两个路口的编号,不同的路口的编号一定不同.(由于某些原因,Y城的路口编号不一定是1,2…)
+</div><h2>Output</h2><div class=content>只有一个正整数,表示最少需要的电子警察的数目.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+1 10<br />
+10 100<br />
+100 1000<br />
+1000 10000<br />
+10000 100000<br />
+100000 1000000<br />
+1000000 10000000  <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+Hint : 3个电子警察分别设置在编号为10的路口,第4条街道的中央和编号为1000000的路口.<br />
+数据范围<br />
+30%的数据,n<=1000<br />
+100%的数据,n<=200000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1456'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1456'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1456'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

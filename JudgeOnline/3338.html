@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3338. -- Zju1505 Solitaire</title><center><h2>3338: Zju1505 Solitaire</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>77&nbsp;&nbsp;<span class=green>Solved: </span>35<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3338'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3338'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3338'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Solitaire is a game played on a chessboard 8x8. The rows and columns of the chessboard are numbered from 1 to 8, from the top to the bottom and from left to right respectively.<br />
+<br />
+There are four identical pieces on the board. In one move it is allowed to:</span></p>
+<p><span style="font-size: medium">&gt; move a piece to an empty neighboring field (up, down, left or right),</span></p>
+<p><span style="font-size: medium">&gt; jump over one neighboring piece to an empty field (up, down, left or right). </span></p>
+<p align="center"><span style="font-size: medium"><img height="378" alt="" width="369" src="http://acm.zju.edu.cn/onlinejudge/showImage.do?name=0000%2F1505%2F1505.gif" /></span></p>
+<p><span style="font-size: medium">There are 4 moves allowed for each piece in the configuration shown above. As an example let's consider a piece placed in the row 4, column 4. It can be moved one row up, two rows down, one column left or two columns right.<br />
+<br />
+Write a program that:<br />
+<br />
+&gt; reads two chessboard configurations from the standard input,<br />
+<br />
+&gt; verifies whether the second one is reachable from the first one in at most 8 moves,<br />
+<br />
+&gt; writes the result to the standard output.</span></p>
+<p><span style="font-size: medium"><font face="仿宋_GB2312">在一个8*8的棋盘上,方上4颗<strong><wbr></wbr>相同</strong><wbr></wbr>的棋子,每次可以将其中一颗棋子上下左右移动一格;如果有阻碍,也可以跳过一颗棋子.按照这样的移动规则,问是否能从给定的一种棋盘状态在8步之内移动到另一种状态</font><br />
+</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><br />
+<font size="4">Each of two input lines contains 8 integers a1, a2, ..., a8 separated by single spaces and describes one configuration of pieces on the chessboard. Integers a2j-1 and a2j (1 &lt;= j &lt;= 4) describe the position of one piece - the row number and the column number respectively. Process to the end of file.</font></p>
+<p><span style="font-size: medium"><br />
+</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><br />
+<font size="4">The output should contain one word for each test case - YES if a configuration described in the second input line is reachable from the configuration described in the first input line in at most 8 moves, or one word NO otherwise.</font></p>
+<p><span style="font-size: medium"><br />
+</span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 4 5 5 4 6 5<br />
+2 4 3 3 3 6 4 6<br />
+<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E5%8F%8C%E5%90%91BFS'>双向BFS</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3338'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3338'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3338'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

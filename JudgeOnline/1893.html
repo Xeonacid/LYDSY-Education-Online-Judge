@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1893. -- Ural 鹰蛋</title><center><h2>1893: Ural 鹰蛋</h2><span class=green>Time Limit: </span>4 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>42&nbsp;&nbsp;<span class=green>Solved: </span>19<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1893'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1893'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1893'>Discuss</a>]</center><h2>Description</h2><div class=content>Imagine that you are in a building with F floors (starting at floor 1, the lowest floor), and you have a large number of identical eggs, each in its own identical protective container. For each floor in the building, you want to know whether or not an egg dropped from that floor will break. If an egg breaks when dropped from floor i, then all eggs are guaranteed to break when dropped from any floor j ≥ i. Likewise, if an egg doesn't break when dropped from floor i, then all eggs are guaranteed to never break when dropped from any floor j ≤ i.
+We can define Solvable(F, D, B) to be true if and only if there exists an algorithm to determine whether or not an egg will break when dropped from any floor of a building with F floors, with the following restrictions: you may drop a maximum of D eggs (one at a time, from any floors of your choosing), and you may break a maximum of B eggs. You can assume you have at least D eggs in your possession.
+</div><h2>Input</h2><div class=content>The first line of input gives the number of cases, N. N test cases follow. Each case is a line formatted as:
+F D B
+Solvable(F, D, B) is guaranteed to be true for all input cases.
+</div><h2>Output</h2><div class=content>For each test case, output one line containing "Case #x: " followed by three space-separated integers: Fmax, Dmin, and Bmin. 
+The definitions are as follows:
+1.	Fmax is defined as the largest value of F' such that Solvable(F', D, B) is true, or -1 if this value would be greater than or equal to 232 .(In other words, Fmax = -1 if and only if Solvable(232, D, B) is true.)
+2.	Dmin is defined as the smallest value of D' such that Solvable(F, D', B) is true.
+3.	Bmin is defined as the smallest value of B' such that Solvable(F, D, B') is true.
+
+Limits
+1 ≤ N ≤ 100. 
+Small dataset
+1 ≤ F ≤ 100,
+1 ≤ D ≤ 100,
+1 ≤ B ≤ 100. 
+Large dataset
+1 ≤ F ≤ 2000000000,
+1 ≤ D ≤ 2000000000,
+1 ≤ B ≤ 2000000000. 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3 3 3<br />
+7 5 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: 7 2 1<br />
+Case #2: 25 3 2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1893'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1893'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1893'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

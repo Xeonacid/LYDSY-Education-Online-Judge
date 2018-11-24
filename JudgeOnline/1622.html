@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1622. -- [Usaco2008 Open]Word Power 名字的能量</title><center><h2>1622: [Usaco2008 Open]Word Power 名字的能量</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>703&nbsp;&nbsp;<span class=green>Solved: </span>395<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1622'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1622'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1622'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰想要计算他那N(1&le;N&le;1000)只奶牛的名字的能量．每只奶牛的名字由不超过1000个字待构成，没有一个名字是空字体串，&nbsp;&nbsp;约翰有一张&ldquo;能量字符串表&rdquo;，上面有M(1&le;M&le;100)个代表能量的字符串．每个字符串由不超过30个字体构成，同样不存在空字符串．一个奶牛的名字蕴含多少个能量字符串，这个名字就有多少能量．所谓&ldquo;蕴含&rdquo;，是指某个能量字符串的所有字符都在名字串中按顺序出现（不一定一个紧接着一个）．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;所有的大写字母和小写字母都是等价的．比如，在贝茜的名字&ldquo;Bessie&rdquo;里，蕴含有&ldquo;Be&rdquo;</span></div>
+<div><span style="font-size: medium">&ldquo;sI&rdquo;&ldquo;EE&rdquo;以及&ldquo;Es&rdquo;等等字符串，但不蕴含&ldquo;lS&rdquo;或&ldquo;eB&rdquo;．请帮约翰计算他的奶牛的名字的能量．</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入两个整数N和M，之后N行每行输入一个奶牛的名字，之后M行每行输入一个能量字符串．</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一共N行，每行一个整数，依次表示一个名字的能量．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3<br />
+Bessie<br />
+Jonathan<br />
+Montgomery<br />
+Alicia<br />
+Angola<br />
+se<br />
+nGo<br />
+Ont<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+There are 5 cows, and their names are "Bessie", "Jonathan",<br />
+"Montgomery", "Alicia", and "Angola". The 3 good strings are "se",<br />
+"nGo", and "Ont".<br />
+<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+2<br />
+0<br />
+1<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+"Bessie" contains "se", "Jonathan" contains "Ont", "Montgomery" contains<br />
+both "nGo" and "Ont", Alicia contains none of the good strings, and<br />
+"Angola" contains "nGo".<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1622'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1622'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1622'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2574. -- [Poi1999]Store-Keeper</title><center><h2>2574: [Poi1999]Store-Keeper</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>60&nbsp;&nbsp;<span class=green>Solved: </span>27<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2574'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2574'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2574'>Discuss</a>]</center><h2>Description</h2><div class=content><p>
+<p></p>
+<p></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">有一个仓库被分成</span><span lang="EN-US"><font face="Times New Roman">n*m </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个矩形区域，如果两个区域有一条公共边，则被认为这两个区域相邻。包裹都放在一个区域中，剩余的区域或者空闲或者被集装箱占有，这是因为集装箱太重，仓库管理员不能将集装箱搬走。仓库管理员目是是要将包裹从开始的</span><span lang="EN-US"><font face="Times New Roman">P</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">区域移动到最后的</span><span lang="EN-US"><font face="Times New Roman">K</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">区域。他可以从空区域走到与之相邻的一个空区域。当仓库管理员走到与包裹相邻的区域时，它可以推动包裹，具体的推动方法如下所示：</span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"></p>
+<p></p>
+</p>
+<p><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><img alt="" src="upload/201112/1(10).jpg" /></span></p>
+<p></p>
+<p></p>
+<p><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">&nbsp;</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">读入一个储藏表，开始位置为仓库管理员，最后位置为包裹移动的位置</span><span lang="EN-US"><font face="Times New Roman"> </font></span></p>
+<p></p></div><h2>Input</h2><div class=content><p></p>
+<p></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">S &ndash; </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">集装箱</span><span lang="EN-US"><font face="Times New Roman">, </font></span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">M &ndash;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">仓库管理员的位置</span><span lang="EN-US"><font face="Times New Roman">, </font></span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">P &ndash;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">包裹开始的位置</span><span lang="EN-US"><font face="Times New Roman">, </font></span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">K &ndash;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">包裹最后的位置</span><span lang="EN-US"><font face="Times New Roman">, </font></span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">w &ndash;</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">空区域</span><span lang="EN-US"><font face="Times New Roman">.&nbsp; </font></span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span lang="EN-US"><font face="Times New Roman">S, M, P </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman"> K </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在文件</span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">中只出现一次</span><span lang="EN-US"><font face="Times New Roman">.</font></span></span></p>
+<p></p>
+<p>&nbsp;</p>
+<p><span style="font-size: large"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行有两个用单个空格分隔的正整数</span><span lang="EN-US"><font face="Times New Roman">n,m&lt;=100. </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来是货物存放二维表</span><span lang="EN-US"><font face="Times New Roman">.</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">共</span><span lang="EN-US"><font face="Times New Roman">N</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行为</span><span lang="EN-US"><font face="Times New Roman">M </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个字母组成的单词，字母分别是</span><span lang="EN-US"><font face="Times New Roman">S, M, P, K, w. </font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">单词的第</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个位置表示第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行第</span><span lang="EN-US"><font face="Times New Roman">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">列区域的信息，可能是如下内容</span><span lang="EN-US"><font face="Times New Roman">:&nbsp;</font></span></span></p></div><h2>Output</h2><div class=content><p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果包裹不能移动到目的位置，则写入</span><span lang="EN-US"><font face="Times New Roman">NO</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 24pt"><span style="font-size: large"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果包裹能移动到目的位置，则写入最小的移动次数。</span></span></p>
+<p class="MsoBodyTextIndent" style="margin: 6pt 0cm 0pt; text-indent: 21pt"></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 12<br />
+<br />
+SSSSSSSSSSSS<br />
+<br />
+SwwwwwwwSSSS<br />
+<br />
+SwSSSSwwSSSS<br />
+<br />
+SwSSSSwwSKSS<br />
+<br />
+SwSSSSwwSwSS<br />
+<br />
+SwwwwwPwwwww<br />
+<br />
+SSSSSSSwSwSw<br />
+<br />
+SSSSSSMwSwww<br />
+<br />
+SSSSSSSSSSSS<br />
+<br />
+SSSSSSSSSSSS<br />
+<br />
+<br />
+<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2574'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2574'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2574'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

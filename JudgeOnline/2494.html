@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2494. -- Triangles and Quadrangle</title><center><h2>2494: Triangles and Quadrangle</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2494'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2494'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2494'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;Little Yuan is two years old and she is learning about some triangles and quadrangles. She is such a smart girl that she soon realizes two triangles can form a quadrangle without overlapping each other. She picks up a lot of triangles and uses them to form some quadrangles. Unfortunately, she is not good at this kind of jigsaw game and makes some mistakes.<br />
+&nbsp;&nbsp;As her brother, you are curious about whether she has made a mistake when forming two triangles into a quadrangle. You are thinking about to write a program to determine it.<br />
+&nbsp;&nbsp;Notice that the quadrangle in this problem is defined as a simple polygon with four vertexes. And you may also assume that all triangles and quadrangle have positive area.<br />
+&nbsp;&nbsp;Note that two graphs are considered as the same if and only if they can overlap completely by shifting, rotation and flipping. You can also shifting, rotation and flipping one of the triangles to form the triangles to a quadrangle.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium"><br />
+</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases. The first line of input contains a single integer T denoting the number of test cases. (T &lt;= 500)<br />
+&nbsp;&nbsp;For each test case, there are 10 lines in total.<br />
+&nbsp;&nbsp;The first 3*2 lines describe the two triangles. Each line with two integers denotes the coordinates of a point.<br />
+&nbsp;&nbsp;The next 4 lines describe the quadrangle in clockwise order or counter-clockwise order.<br />
+&nbsp;&nbsp;All coordinates are less than 15000 in absolute value.<br />
+</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;For each test case, output &ldquo;Yes&rdquo; if the given triangles can form a quadrangle without overlapping, &ldquo;No&rdquo; otherwise.</span></p>
+<div class="panel_content">
+<pre></pre>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+0 0<br />
+0 1<br />
+1 0<br />
+0 0<br />
+0 1<br />
+1 0<br />
+-1 0<br />
+0 0<br />
+1 0<br />
+0 1<br />
+0 0<br />
+-1 1<br />
+1 0<br />
+0 0<br />
+0 1<br />
+1 0<br />
+-1 0<br />
+0 0<br />
+1 0<br />
+0 1<br />
+ <br />
+<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: Yes<br />
+Case #2: No<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Acm%202011%20%E4%B8%8A%E6%B5%B7'>Acm 2011 上海</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2494'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2494'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2494'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

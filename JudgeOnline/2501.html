@@ -1,0 +1,135 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2501. --  [usaco2010 Oct]Soda Machine</title><center><h2>2501:  [usaco2010 Oct]Soda Machine</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>284&nbsp;&nbsp;<span class=green>Solved: </span>195<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2501'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2501'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2501'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">
+<p><font face="Times New Roman">To meet the ever-growing demands of his N (1 &lt;= N &lt;= 50,000) cows, <br />
+Farmer John has bought them a new soda machine. He wants to figure <br />
+out the perfect place to install the machine. <br />
+<br />
+The field in which the cows graze can be represented as a one-dimensional <br />
+number line. Cow i grazes in the range A_i..B_i (1 &lt;= A_i &lt;= B_i; <br />
+A_i &lt;= B_i &lt;= 1,000,000,000) (a range that includes its endpoints), <br />
+and FJ can place the soda machine at any integer point in the range <br />
+1..1,000,000,000. Since cows are extremely lazy and try to move <br />
+as little as possible, each cow would like to have the soda machine <br />
+installed within her grazing range. <br />
+<br />
+Sadly, it is not always possible to satisfy every cow's desires. <br />
+Thus FJ would like to know the largest number of cows that can be <br />
+satisfied. <br />
+<br />
+To demonstrate the issue, consider four cows with grazing ranges <br />
+3..5, 4..8, 1..2, and 5..10; below is a schematic of their grazing <br />
+ranges: <br />
+</font></p>
+</font></span><font face="Times New Roman" size="3">
+<pre><span style="font-size: medium"><br />         1   2   3   4   5   6   7   8   9  10  11  12  13
+<br />         |---|---|---|---|---|---|---|---|---|---|---|---|-...
+<br />                 aaaaaaaaa
+<br />                     bbbbbbbbbbbbbbbbb
+<br />         ccccc           ddddddddddddddddddddd
+<br /></span></pre>
+<p></p>
+</font></p>
+<p></p>
+<p></p>
+<p></p>
+<p align="left"><b><font color="#333399" size="5">Sample Output</font> </b></p>
+<p>
+<p></p>
+<span id="1320118971464E" style="display: none">&nbsp;</span><span style="font-size: medium"><font face="Times New Roman">
+<p><br />
+As can be seen, the first, second and fourth cows share the point 5, <br />
+but the third cow's grazing range is disjoint. Thus, a maximum of <br />
+3 cows can have the soda machine within their grazing range. <br />
+有N个人要去膜拜JZ，他们不知道JZ会出现在哪里，因此每个人有一个活动范围，只要JZ出现在这个范围内就能被膜拜， <br />
+伟大的JZ当然希望膜拜他的人越多越好，但是JZ不能分身，因此只能选择一个位置出现，他最多可以被多少人膜拜呢， <br />
+这个简单的问题JZ当然交给你了 <br />
+<br />
+<br />
+</p>
+</font></span></p>
+<pre>
+3
+
+OUTPUT DETAILS:
+
+If the soda machine is placed at location 5, cows 1, 2, and 4 can be
+satisfied. It is impossible to satisfy all four cows.
+
+</pre></div><h2>Input</h2><div class=content><p>&nbsp;</p>
+<p></p>
+<p><span style="font-size: medium"><font face="Times New Roman">* Line 1: A single integer: N <br />
+<br />
+* Lines 2..N+1: Line i+1 contains two space-separated integers: A_i <br />
+and B_i <br />
+<br />
+</font></span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium"><font face="Times New Roman">* Line 1: A single integer representing the largest number of cows <br />
+whose grazing intervals can all contain the soda machine. <br />
+</font></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+3 5<br />
+4 8<br />
+1 2<br />
+5 10<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+If the soda machine is placed at location 5, cows 1, 2, and 4 can be<br />
+satisfied. It is impossible to satisfy all four cows.<br />
+<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2501'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2501'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2501'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

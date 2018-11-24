@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4204. -- 取球游戏</title><center><h2>4204: 取球游戏</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>192&nbsp;&nbsp;<span class=green>Solved: </span>113<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4204'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4204'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4204'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有M个球，一开始每个球均有一个初始标号，标号范围为1～N且为整数，标号为i的球有ai个，并保证&Sigma;ai = M。</div>
+<div>每次操作等概率取出一个球（即取出每个球的概率均为1/M），若这个球标号为k（k &lt; N），则将它重新标号为k + 1；若这个球标号为N，则将其重标号为1。（取出球后并不将其丢弃）</div>
+<div>现在你需要求出，经过K次这样的操作后，每个标号的球的期望个数。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第1行包含三个正整数N，M，K，表示了标号与球的个数以及操作次数。</div>
+<div>第2行包含N个非负整数ai，表示初始标号为i的球有ai个。</div>
+<p></p></div><h2>Output</h2><div class=content><div>包含N行，第i行为标号为i的球的期望个数，四舍五入保留3位小数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 3 2<br />
+3 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1.667<br />
+1.333<br />
+<br />
+【样例说明】<br />
+第1次操作后，由于标号为2球个数为0，所以必然是一个标号为1的球变为标号为2的球。所以有2个标号为1的球，有1个标号为2的球。<br />
+第2次操作后，有1/3的概率标号为2的球变为标号为1的球（此时标号为1的球有3个），有2/3的概率标号为1的球变为标号为2的球（此时标号为1的球有1个），所以标号为1的球的期望个数为1/3*3+2/3*1 = 5/3。同理可求出标号为2的球期望个数为4/3。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，N &le; 1000, M &le; 100,000,000, K &le; 2,147,483,647。</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4204'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4204'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4204'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

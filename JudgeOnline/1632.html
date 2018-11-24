@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1632. -- [Usaco2007 Feb]Lilypad Pond</title><center><h2>1632: [Usaco2007 Feb]Lilypad Pond</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>745&nbsp;&nbsp;<span class=green>Solved: </span>249<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1632'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1632'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1632'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Farmer John 建造了一个美丽的池塘，用于让他的牛们审美和锻炼。这个长方形的池子被分割成了 M 行和 N 列( 1 &le; M &le; 30 ; 1 &le; N &le; 30 ) 正方形格子的 。某些格子上有惊人的坚固的莲花，还有一些岩石，其余的只是美丽，纯净，湛蓝的水。 贝茜正在练习芭蕾舞，她从一个莲花跳跃到另一个莲花，当前位于一个莲花。她希望在莲花上一个一个的跳，目标是另一个给定莲花。她能跳既不入水，也不到一个岩石上。 令门外汉惊讶的是，贝茜的每次的跳跃像中国象棋的马一样：横向移动1，纵向移动2，或纵向移动1，横向移动2。贝茜有时可能会有多达8个选择的跳跃。 Farmer John 在观察贝茜的芭蕾舞联系，他意识到有时候贝茜有可能跳不到她想去的目的地，因为路上有些地方没有莲花。于是他想要添加几个莲花使贝茜能够完成任务。一贯节俭的Farmer John想添加最少数量的莲花。当然，莲花不能放在石头上。 请帮助Farmer John确定必须要添加的莲花的最少数量。在添加的莲花最少基础上，算出贝茜从起始点跳到目标点需要的最少的步数。最后，还要算出满足添加的莲花的最少数量时，跳跃最少步数的跳跃路径的条数。 </span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第 1 行: 两个整数 M , N </span></p>
+<p><span style="font-size: medium">第 2..M + 1 行:第 i + 1 行，第 i + 1 行 有 N 个整数，表示该位置的状态: 0 为水; 1 为莲花; 2 为岩石; 3 为贝茜开始的位置; 4 为贝茜要去的目标位置.</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">第 1 行: 一个整数: 需要添加的最少的莲花数. 如果无论如何贝茜也无法跳到，输出 -1.</span></p>
+<p><span style="font-size: medium">&nbsp;第 2 行: 一个整数: 在添加的莲花最少基础上，贝茜从起始点跳到目标点需要的最少的步数。如果第1行输出-1，这行不输出。 第 3 行: 一个整数: 添加的莲花的最少数量时，跳跃步数为第2行输出的值的跳跃路径的条数 如果第1行输出-1，这行不输出。 </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 8<br />
+0 0 0 1 0 0 0 0<br />
+0 0 0 0 0 2 0 1<br />
+0 0 0 0 0 4 0 0<br />
+3 0 0 0 0 0 1 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+6<br />
+2<br />
+<br />
+输出说明 <br />
+<br />
+至少要添加2朵莲花，放在了'x'的位置。 <br />
+<br />
+  0 0 0 1 0 0 0 0     0 0 0 1 0 0 0 0<br />
+  0 x 0 0 0 2 0 1     0 0 0 0 0 2 0 1<br />
+  0 0 0 0 x 4 0 0     0 0 x 0 x 4 0 0<br />
+  3 0 0 0 0 0 1 0     3 0 0 0 0 0 1 0<br />
+贝茜至少要条6步，有以下两种方案 <br />
+<br />
+  0 0 0 C 0 0 0 0     0 0 0 C 0 0 0 0<br />
+  0 B 0 0 0 2 0 F     0 0 0 0 0 2 0 F<br />
+  0 0 0 0 D G 0 0     0 0 B 0 D G 0 0<br />
+  A 0 0 0 0 0 E 0     A 0 0 0 0 0 E 0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1632'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1632'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1632'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

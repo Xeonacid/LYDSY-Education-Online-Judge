@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2106. -- PostfixRLE</title><center><h2>2106: PostfixRLE</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>24&nbsp;&nbsp;<span class=green>Solved: </span>17<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2106'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2106'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2106'>Discuss</a>]</center><h2>Description</h2><div class=content>我们都知道，后缀表达式（也称为逆波兰式）是一种不需要括号就能描述算术表达式的方法。对于一个单独的变量，它的后缀表达式就是本身；而对于一个表达式A#B（这里A和B都是表达式而#是最后一次计算的运算符），它的后缀表达式是由A的后缀表达式，B的后缀表达式和#连接而成的。举例来说，((a+f)*b)*(c*d)的后缀表达式为af+b*cd**。
+	
+给定一个仅有变量和运算符组成的后缀表达式。在本题中，所有的变量均由一个小写字母表示；所有的运算符都是二元的，并且均满足结合律与交换律，也就是说，对于任何一个运算符#，表达式A、B和C，下面的两条性质始终成立：
+&#61656;	结合律：A#(B#C)=(A#B)#C。
+&#61656;	交换律：A#B=B#A。
+
+你可以根据结合律与交换律调整操作数的顺序，举例来说，对于上面提到过的表达式：
+&#61656;	将表达式((a+f)*b)*(c*d)调整为d*((a+f)*(b*c))。
+&#61656;	同时，后缀表达式从af+b*cd**变为daf+bc***。
+
+你的任务就是寻找一个最有的调整方案，使得调整后的后缀表达式的RLE长度最小。一个字符串的RLE长度是这个字符串中连续相同字符块的个数（也就是说，字符串xx+yy+zz+**的RLE长度为7）。
+
+数据规模：
+输入表达式的长度不超过2500。
+</div><h2>Input</h2><div class=content>一个合法的后缀表达式</div><h2>Output</h2><div class=content>最短的RLE长度</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>af+b*cd**</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=SRM&#32;327'>SRM 327</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2106'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2106'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2106'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

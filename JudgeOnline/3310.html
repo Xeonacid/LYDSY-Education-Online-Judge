@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3310. -- [Usaco2013 Nov]Empty Stalls</title><center><h2>3310: [Usaco2013 Nov]Empty Stalls</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>155&nbsp;&nbsp;<span class=green>Solved: </span>102<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3310'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3310'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3310'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Farmer John's new barn consists of a huge circle of N stalls (2 &lt;= N &lt;= 3,000,000), numbered 0..N-1, with stall N-1 being adjacent to stall 0. At the end of each day, FJ's cows arrive back at the barn one by one, each with a preferred stall they would like to occupy. However, if a cow's preferred stall is already occupied by another cow, she scans forward sequentially from this stall until she finds the first unoccupied stall, which she then claims. If she scans past stall N-1, she continues scanning from stall 0. Given the preferred stall of each cow, please determine the smallest index of a stall that remains unoccupied after all the cows have returned to the barn. Notice that the answer to this question does not depend on the order in which the cows return to the barn. In order to avoid issues with reading huge amounts of input, the input to this problem is specified in a concise format using K lines (1 &lt;= K &lt;= 10,000) each of the form: X Y A B One of these lines specifies the preferred stall for XY total cows: X cows prefer each of the stalls f(1) .. f(Y), where f(i) = (Ai + B) mod N. The values of A and B lie in the range 0...1,000,000,000. Do not forget the standard memory limit of 64MB for all problems.&nbsp;</span></p>
+<p><b><span style="font-size: 12pt; font-family: 宋体; background-position: initial initial; background-repeat: initial initial;">有<span lang="EN-US">n</span>个位置绕成一个环，编号为（<span lang="EN-US">0...n-1)</span>，有很多头牛，每头牛喜欢一个位置并且会占领它，如果这个 位置已经有了牛便会向后找到第一个没有牛的位置占领；由于数据过大，采用更高端的方法读入，读入<span lang="EN-US">x </span>，<span lang="EN-US">y</span>，<span lang="EN-US">a</span>，<span lang="EN-US">b</span>表示有<span lang="EN-US">x</span>个牛喜欢<span lang="EN-US">f(1)..f(y),f(i) = (a*i+b)%n;</span></span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体"><o:p></o:p></span></p>
+<p></p>
+<p></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp;* Line 1: Two space-separated integers: N and K. </font></p>
+<p><font size="4">&nbsp;* Lines 2..1+K: Each line contains integers X Y A B, interpreted as above. The total number of cows specified by all these lines will be at most N-1. Cows can be added to the same stall by several of these lines.&nbsp;</font></p></div><h2>Output</h2><div class=content><p><font size="4">&nbsp;* Line 1: The minimum index of an unoccupied stall. <br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 3<br />
+3 2 2 4<br />
+2 1 0 1<br />
+1 1 1 7 <br />
+<br />
+INPUT DETAILS: There are 10 stalls in the barn, numbered 0..9. The second line of input states that 3 cows prefer stall (2*1+4) mod 10 = 6, and 3 cows prefer stall (2*2+4) mod 10 = 8. The third line states that 2 cows prefer stall (0*1+1) mod 10 = 1. Line four specifies that 1 cow prefers stall (1*1+7) mod 10 = 8 (so a total of 4 cows prefer this stall). </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5 <br />
+OUTPUT DETAILS: All stalls will end up occupied except stall 5. </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3310'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3310'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3310'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

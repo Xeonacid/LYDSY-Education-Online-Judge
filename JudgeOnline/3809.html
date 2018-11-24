@@ -1,0 +1,113 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3809. -- Gty的二逼妹子序列</title><center><h2>3809: Gty的二逼妹子序列</h2><span class=green>Time Limit: </span>80 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>28 MB<br><span class=green>Submit: </span>2522&nbsp;&nbsp;<span class=green>Solved: </span>774<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3809'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3809'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3809'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Autumn和Bakser又在研究Gty的妹子序列了！但他们遇到了一个难题。</div>
+<div></div>
+<div>对于一段妹子们，他们想让你帮忙求出这之内美丽度&isin;[a,b]的妹子的美丽度的种类数。</div>
+<div></div>
+<div>为了方便，我们规定妹子们的美丽度全都在[1,n]中。</div>
+<div></div>
+<div>给定一个长度为n(1&lt;=n&lt;=100000)的正整数序列s(1&lt;=si&lt;=n)，对于m(1&lt;=m&lt;=1000000)次询问&ldquo;l,r,a,b&rdquo;，每次输出sl...sr中，权值&isin;[a,b]的权值的种类数。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包括两个整数n,m(1&lt;=n&lt;=100000,1&lt;=m&lt;=1000000),表示数列s中的元素数和询问数。</div>
+<div></div>
+<div>第二行包括n个整数s1...sn(1&lt;=si&lt;=n)。</div>
+<div></div>
+<div>接下来m行,每行包括4个整数l,r,a,b(1&lt;=l&lt;=r&lt;=n,1&lt;=a&lt;=b&lt;=n),意义见题目描述。</div>
+<div></div>
+<div>保证涉及的所有数在C++的int内。</div>
+<div></div>
+<div>保证输入合法。</div>
+<p></p></div><h2>Output</h2><div class=content><p>对每个询问，单独输出一行，表示sl...sr中权值&isin;[a,b]的权值的种类数。</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 10<br />
+4 4 5 1 4 1 5 1 2 1<br />
+5 9 1 2<br />
+3 4 7 9<br />
+4 4 2 5<br />
+2 3 4 7<br />
+5 10 4 4<br />
+3 9 1 1<br />
+1 4 5 9<br />
+8 9 3 3<br />
+2 2 1 6<br />
+8 9 1 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+0<br />
+0<br />
+2<br />
+1<br />
+1<br />
+1<br />
+0<br />
+1<br />
+2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div>样例的部分解释：</div><br />
+<div></div><br />
+<div>5 9 1 2</div><br />
+<div>子序列为4 1 5 1 2</div><br />
+<div>在[1,2]里的权值有1,1,2，有2种，因此答案为2。</div><br />
+<div></div><br />
+<div>3 4 7 9</div><br />
+<div>子序列为5 1</div><br />
+<div>在[7,9]里的权值有5，有1种，因此答案为1。</div><br />
+<div></div><br />
+<div>4 4 2 5</div><br />
+<div>子序列为1</div><br />
+<div>没有权值在[2,5]中的，因此答案为0。</div><br />
+<div></div><br />
+<div>2 3 4 7</div><br />
+<div>子序列为4 5</div><br />
+<div>权值在[4,7]中的有4,5，因此答案为2。</div><br />
+<div></div><br />
+<div>建议使用输入/输出优化。</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3809'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3809'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3809'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

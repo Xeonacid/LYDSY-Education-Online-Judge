@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4798. -- [Ceoi2015]Calvinball championship</title><center><h2>4798: [Ceoi2015]Calvinball championship</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>51&nbsp;&nbsp;<span class=green>Solved: </span>36<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4798'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4798'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4798'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有n个人参加一场比赛，需要把他们分成若干组，然后就会给他们每人一个编号。</div>
+<div>编号发放的规则：</div>
+<div>1：每个组的队长为组员中名字字典序最小的那个人</div>
+<div>2：每个组的编号为这个组的队长名字的排名（按字典序，且只有队长参与排名）</div>
+<div>3：每个人的编号即为他所在组的编号</div>
+<div>然后将所有人按字典序排好，根据他们的编号就可以产生一个序列。</div>
+<div></div>
+<div>例如：</div>
+<div>有6个人，分为3组</div>
+<div>（Calvin，Hobbes，Susie），（Batman），（Jerry ，Tom） &nbsp;下划线的是队长</div>
+<div>（Batman）为第一组，（Calvin，Hobbes，Susie）为第二组，（Jerry ，Tom）为第三组</div>
+<div>所以6人编号分别为Batman 1 ，Calvin 2，Hobbes 2，Susie 2，Jerry 3，Tom 3。</div>
+<div>再将6人名字排序，有</div>
+<div>Batman 1</div>
+<div>Calvin 2</div>
+<div>Hobbes 2</div>
+<div>Jerry 3</div>
+<div>Susie 2</div>
+<div>Tom 3</div>
+<div>所以序列为1 2 2 3 2 3。</div>
+<div>现在给出一个序列，求它按照字典序是第多少大的，答案mod &nbsp;1000007。（具体意思见样例解释）</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个n代表有多少个人参赛</div>
+<div>接下来一行n个数，代表序列</div>
+<div>n&lt;=10000，保证给出的序列是存在的</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出这个序列是第几大的，mod 1000007。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1 2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+样例解释<br />
+有三个人，假设他们叫A、B、C<br />
+当为（A，B，C）时，序列为 1 1 1<br />
+当为（A，B），（C）时，序列为1 1 2<br />
+当为（A，C），（B）时，序列为1 2 1<br />
+当为（A），（B，C）时，序列为1 2 2<br />
+当为（A），（B），（C）时，序列为1 2 3.<br />
+所以，1 2 2是第4大的<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4798'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4798'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4798'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

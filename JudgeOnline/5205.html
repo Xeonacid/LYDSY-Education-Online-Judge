@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5205. -- [CodePlus 2018 3 月赛]白金元首与莫斯科</title><center><h2>5205: [CodePlus 2018 3 月赛]白金元首与莫斯科</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>64&nbsp;&nbsp;<span class=green>Solved: </span>14<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5205'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5205'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5205'>Discuss</a>]</center><h2>Description</h2><div class=content><div>寒冷刺骨的天气、疲惫不堪的军队&hellip;&hellip;包围首都的作战计划陷入了困境。空军或许是拯救战况的最后希望了，元首</div>
+<div>Adolf想道。在一个n&times;m的网格区域中存在一个陆军单位需要补给，区域中的每个格子为空地或障碍物中的一种。</div>
+<div>航空舰队需要派遣若干运输机前往此区域，每一架运输机可以向两个相邻（有一条公共边）的空地投放物资。为防</div>
+<div>止不必要的损坏，一个标记为空地的格子至多只能得到一次投放。由于天气原因，陆军单位所在的确切位置并不能</div>
+<div>确定。因此元首想知道，对于每个空地格子，当陆军单位在其中（视作障碍物）时，用若干（可以为0）架运输机</div>
+<div>向其余空地投放任意数量的物资的不同方案数。两个投放方案不同，当且仅当存在一个格子在一个方案中被投放而</div>
+<div>另一方案中未被投放，或存在两个被投放的格子，在一个方案中被同一架运输机投放而在另一方案中非然。若仍有</div>
+<div>疑问，请参考「样例1解释」。</div>
+<div>你需要编写程序帮助元首计算这些值。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数T&mdash;&mdash;数据的组数。</div>
+<div>接下来包含T组数据，格式如下，数据间没有空行。</div>
+<div>第1行：两个空格分隔的正整数n,m&mdash;网格区域的行数和列数。</div>
+<div>接下来n行：其中第i行包含m个空格分隔的整数Ai1,Ai2,&hellip;,Aim&mdash;其中Aij=0表示第iii行第j列的格子为空地；Aij=1表示该格为障碍物。</div>
+<div>1&le;n,m&le;17,Aij&isin;{0,1}</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据输出n行</div>
+<div>第i行包含m个空格分隔的整数Bi1,Bi2,&hellip;,Bim&mdash;若第i行第j列的格子为空地，Bij为该格变为障碍物后投放的方案数；否则Bij=0</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 4<br />
+0 0 0 0<br />
+0 0 0 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>14 13 10 22<br />
+15 11 17 0</span></div><h2>HINT</h2>
+			<div class=content><p><div><br />
+<div>以第 2行第 1 列的空地格为例，其变为障碍物后的网格如下图，其中白色格子代表空地，黑色格子代表障碍物。</div><br />
+<div><img src="upload/201803/1(1).png" width="200" height="104" alt="" /></div><br />
+<div>15种方案如下图所示，不同颜色代表不同运输机的投放位置</div><br />
+<div><img src="upload/201803/2.png" width="400" height="400" alt="" /></div><br />
+</div><br />
+<div>来自 CodePlus 2018 3 月赛，清华大学计算机科学与技术系学生算法与竞赛协会 荣誉出品。</div><br />
+<div>Credit：idea/吕时清　命题/吕时清　验题/吕欣，王聿中</div><br />
+<div>Git Repo：https://git.thusaac.org/publish/CodePlus3</div><br />
+<div>感谢腾讯公司对此次比赛的支持。</div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5205'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5205'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5205'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

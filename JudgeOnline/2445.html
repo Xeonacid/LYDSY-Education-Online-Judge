@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2445. -- 最大团</title><center><h2>2445: 最大团</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>83&nbsp;&nbsp;<span class=green>Solved: </span>49<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2445'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2445'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2445'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">一个</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">个点的无向图被叫做是一个</span><i><span style="font-size: 12pt">symmetric labeled cliquer</span></i><span style="font-size: 12pt">当且仅当该图的任意一个连通子图拥有相同的点数，并且任意一个连通子图都是完全图。现在用</span><span style="font-size: 12pt">m</span><span style="font-size: 12pt">种颜色给所有的</span><span style="font-size: 12pt">n</span><span style="font-size: 12pt">个点的</span><i><span style="font-size: 12pt">symmetric labeled cliquer</span></i><span style="font-size: 12pt">染色，可以染相同的颜色，问方案数对</span><span style="font-size: 12pt">10<sup>9</sup>-401</span><span style="font-size: 12pt">取模的结果。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">不超过</span><span style="font-size: 12pt">2</span><span style="font-size: 12pt">组数据。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 10.5pt">第一行读入一个数，表示数据组数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 10.5pt">接下来每行包含两个数</span><span style="font-size: 10.5pt">n,m</span><span style="font-size: 10.5pt">，如题所述。</span></div>
+<div style="text-indent: 21pt">&nbsp;</div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 10.5pt">输出包含</span><span style="font-size: 10.5pt">T</span><span style="font-size: 10.5pt">行，每行输出答案。</span></div>
+<div style="text-indent: 21pt">&nbsp;</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+4 2<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>32<br />
+ <br />
+对于100%，n,m<=2*10^9。</span></div><h2>HINT</h2>
+			<div class=content><p><p>题目中的意思是把所有的symmetric labeled cliquer组成一个集合<br /><br />
+这里的染色是指将每个元素染色，两种方案不同当且仅当有一种元素被染的颜色不一样</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2445'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2445'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2445'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

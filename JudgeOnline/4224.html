@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4224. -- Togle</title><center><h2>4224: Togle</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4224'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4224'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4224'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给你一个长度为n的01串，以及一个指针，初始时指针在第i0个字符上。每回合随机一个0到n-1中的数j，如果指针</div>
+<div>之前在i上，就花费abs(i-j)的时间把指针从i移动到j上，并且把01串的第j位取反。不停这样随机，直到01串变成</div>
+<div>全0或者全1为止，问到终止前期望花费的时间是多少？</div></div><h2>Input</h2><div class=content><div>第一行两个整数，n，t，表示串长和数据组数，每组数据的串长是相等的</div>
+<div>接下来t行，每行一个01串和一个整数，s，i0，表示初始时的串和初始位置，s的长度为n</div>
+<div>n&lt;=30 t&lt;=100000 0&lt;=i0&lt;n</div>
+<p></p></div><h2>Output</h2><div class=content><div>t行，每行一个实数表示答案。你的答案被认为是正确的当且仅当，你与标准答案的相对误差小于1e-7</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+1000 0<br />
+0010 1<br />
+0011 2<br />
+1010 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8.9375<br />
+8.5625<br />
+9.75<br />
+10.25</span></div><h2>HINT</h2>
+			<div class=content><p><div></div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4224'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4224'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4224'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

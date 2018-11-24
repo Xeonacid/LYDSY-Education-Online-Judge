@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2487. -- Super Poker II </title><center><h2>2487: Super Poker II </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>112&nbsp;&nbsp;<span class=green>Solved: </span>32<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2487'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2487'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2487'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">I have a set of super poker cards, consisting of an infinite number of cards. For each positive composite integer p, there <br />
+are exactly four cards whose value is p: Spade(S), Heart(H), Club(C) and Diamond(D). There are no cards of other values.<br />
+By &ldquo;composite integer&rdquo;, we mean integers that have more than 2 divisors. For example, 6 is a composite integer, since it <br />
+has 4 divisors: 1, 2, 3, 6; 7 is not a composite number, since 7 only has 2 divisors: 1 and 7. Note that 1 is not composite <br />
+(it has only 1 divisor). <br />
+&nbsp;<br />
+Given a positive integer n, how many ways can you pick up exactly one card from each suit (i.e. exactly one spade card, <br />
+one heart card, one club card and one diamond card), so that the card values sum to n? For example, if n=24, one way is <br />
+4S+6H+4C+10D, shown below:</span></p>
+<p></p>
+<p><span style="font-size: medium"><img alt="" src="upload/201110/11.jpg" /></span></p>
+<p></p>
+<p></p>
+<p><span style="font-size: medium">Unfortunately, some of the cards are lost, but this makes the problem more interesting. To further make the problem even <br />
+more interesting (and challenging!), I&rsquo;ll give you two other positive integers a and b, and you need to find out all the <br />
+answers for n=a, n=a+1, &hellip;, n=b.&nbsp;</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">The input contains at most 25 test cases. Each test case begins with 3 integers a, b and c, where c is the number of lost <br />
+cards. The next line contains c strings, representing the lost cards. Each card is formatted as valueS, valueH, valueC or <br />
+valueD, where value is a composite integer. No two lost cards are the same. The input is terminated by a=b=c=0. There <br />
+will be at most one test case where a=1, b=50,000 and c&lt;=10,000. For other test cases, 1&lt;=a&lt;=b&lt;=100, 0&lt;=c&lt;=10.&nbsp;<br />
+&nbsp;</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each test case, print b-a+1 integers, one in each line. Since the numbers might be large, you should output each <br />
+integer modulo 1,000,000. Print a blank line after each test case.&nbsp;<br />
+&nbsp;</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12 20 2 <br />
+4S 6H <br />
+0 0 0 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0 <br />
+0 <br />
+0 <br />
+0 <br />
+0 <br />
+0 <br />
+1 <br />
+0 <br />
+3 </span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;湖南省第七届大学生程序设计大赛</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E5%88%98%E6%B1%9D%E4%BD%B3%E5%85%88%E7%94%9F%E6%8E%88%E6%9D%83%E4%BD%BF%E7%94%A8'>鸣谢刘汝佳先生授权使用</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2487'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2487'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2487'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

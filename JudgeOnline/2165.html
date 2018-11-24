@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2165. -- 大楼</title><center><h2>2165: 大楼</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>957&nbsp;&nbsp;<span class=green>Solved: </span>353<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2165'>Discuss</a>]</center><h2>Description</h2><div class=content><p>xz是一个旅游爱好者，这次他来到了一座新的城市。城市中央有一幢高耸入云的大楼。这幢楼到底有多少层呢？据说和非负整数的个数是一样多的。xz想爬上这座大楼来观赏新城市的全景。这幢大楼的楼层从下至上用从小到大的非负整数编号。每层楼有n个房间，用1到n的正整数编号。楼层之间用电梯连接，电梯只能上行，不能下行或者同层移动。（下楼一般自行解决）电梯用(u,v,w)的形式给出，表示对于任意正整数i，有第i层的房间u到第i+w层的房间v有一部电梯。电梯只能从起点开往终点，不能中途停留。 xz想要观赏城市全景，至少需要登上第m层楼，即最终需要到达的楼层数&ge;m。由于乘坐电梯要缴纳高额的费用，而如果花销太大回家就没法报账了，xz希望乘坐电梯的次数最少。现在xz在第0层的1号房间，你需要求出这个最少的乘坐次数。</p></div><h2>Input</h2><div class=content><p>第一行包含一个正整数T，表示数据的组数。接下来的数据分为T个部分。每个部分第一行包含两个正整数n和m，意义见题目描述。接下来n行，每行包含n个非负整数。这n行中，第i行第j个数为Wi,j，如果wi,j非零，则表示有电梯(i,j,Wi,j)。同一行各个数之间均用一个空格隔开。</p></div><h2>Output</h2><div class=content><p>对于每组数据，输出一行一个正整数，最少的乘坐次数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+6 147<br />
+0 1 0 50 0 0<br />
+0 0 1 0 0 0<br />
+20 0 0 0 0 0<br />
+0 0 0 0 1 50<br />
+0 0 0 8 0 0<br />
+0 0 0 0 0 3<br />
+6 152<br />
+0 1 0 50 0 0<br />
+0 0 1 0 0 0<br />
+20 0 0 0 0 0<br />
+0 0 0 0 1 50<br />
+0 0 0 8 0 0<br />
+0 0 0 0 0 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9<br />
+10<br />
+【样例说明】<br />
+第一组数据中，使用电梯的顺序为1→2→3→1→2→3→1→4→6→6；第二组数据中，使用电梯的顺序为1→2→3→1→2→3→1→4→5→4→6。第二组数据最后到达了153层，但是没有更短的路径使得恰好到达152层，因此答案为10。</span></div><h2>HINT</h2>
+			<div class=content><p><p>有如下几类具有特点的数据： 1、有10%的数据所有的n=2； 2、有20%的数据m&le;3000； 3、有20%的数据对于满足1&le;i,j&le;n的整数i和j，若wi,j&ne;0，则有wi,j&ge;1015； 4、有30%的数据所有的n=40。以上各类数据均不包含其他类数据。对于所有数据T=5，1&le;n&le;100，1&le;m&le;1018；对于满足1&le;i,j&le;n的整数i和j，有0&le;wi,j&le;1018。数据保证能够到达m层或更高的楼层。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2165'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

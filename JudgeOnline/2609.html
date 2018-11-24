@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2609. -- [Poi2003]Printed-Circuit Boards</title><center><h2>2609: [Poi2003]Printed-Circuit Boards</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2609'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2609'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2609'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span lang="EN-US"><font face="Verdana">Bytel </font></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">公司开始生产一种串</span><span lang="EN-US"><font face="Verdana">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">并联电路，每个这样的电路包含很多相连的电子单元以及两个电源，一个串</span><span lang="EN-US"><font face="Verdana">-</font></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">并联电路可能有以下组成</span><span lang="EN-US"><font face="Verdana">: </font></span></p>
+<p><span lang="EN-US"><font face="Verdana"><img height="457" width="487" alt="" src="upload/201203/1(3).jpg" /></font></span></p>
+<p><span lang="EN-US"><font face="Verdana">
+<p><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">这些电路都将组装在一个双面的电路板上。现在的问题就是要确定哪些电路印在正面和哪些印在反面。因为一些技术原因电路应该尽量多的印在反面，但是要求每个单元至少要有一条连接的线路印在正面。求怎样规划使得印在正面的线路最少。</span></span></p>
+</font></span></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">电路的定义由以下的递归方式进行</span><span lang="EN-US" style="font-family: Verdana">: </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></p>
+<ul type="disc">
+    <li class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: list 36.0pt; mso-list: l0 level1 lfo1"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">如果第一行有一个大写字母</span><tt><span lang="EN-US"><font face="宋体">S</font></span></tt><span lang="EN-US" style="font-family: Verdana"> </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">和一个整数</span><i><span lang="EN-US" style="font-family: Verdana">n</span></i><span lang="EN-US" style="font-family: Verdana"> (2 &lt;= <i>n</i> &lt;= 10000) </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，那么这个电路将由</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-family: Verdana">n</span></i><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">个小的串</span><span lang="EN-US" style="font-family: Verdana">-</span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">并联电路串联在一起构成，这些小网络紧接着在下面的行进行描述</span><span lang="EN-US" style="font-family: Verdana">, </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></li>
+    <li class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: list 36.0pt; mso-list: l0 level1 lfo1"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">如果第一行有一个大写字母</span><tt><span lang="EN-US"><font face="宋体">R</font></span></tt><span lang="EN-US" style="font-family: Verdana"> </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">和一个整数</span><i><span lang="EN-US" style="font-family: Verdana">n</span></i><span lang="EN-US" style="font-family: Verdana"> (2 &lt;= <i>n</i> &lt;= 10000) </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，那么这个电路将由</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-family: Verdana">n</span></i><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">个小的串</span><span lang="EN-US" style="font-family: Verdana">-</span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">并联电路并联在一起构成，这些小网络紧接着在下面的行进行描述</span><span lang="EN-US" style="font-family: Verdana">, </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></li>
+    <li class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: list 36.0pt; mso-list: l0 level1 lfo1"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">如果一行只有一个大写字母</span><tt><span lang="EN-US"><font face="宋体">X</font></span></tt><span lang="EN-US" style="font-family: Verdana"> </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">那么这个电路仅有一个电子单元</span><span lang="EN-US" style="font-family: Verdana">. </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></li>
+</ul>
+<p style="margin-left: 36pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">大写字母</span><tt><span lang="EN-US"><font face="宋体">X</font></span></tt><span lang="EN-US"><font face="Verdana"> </font></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">的出现总数不会超过</span><span lang="EN-US"><font face="Verdana">10000000, </font></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">递归的层数最大不超过</span><span lang="EN-US"><font face="Verdana">500.</font></span></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">输出仅一个数，表示最少有多少线路印在正面</span><span lang="EN-US" style="font-family: Verdana">. </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>R 3<br />
+S 2<br />
+X<br />
+R 2<br />
+S 2<br />
+X<br />
+X<br />
+S 2<br />
+X<br />
+X<br />
+S 3<br />
+X<br />
+X<br />
+X<br />
+R 2<br />
+X<br />
+X<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+8<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2609'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2609'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2609'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

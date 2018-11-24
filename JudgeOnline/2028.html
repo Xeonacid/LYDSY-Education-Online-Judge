@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2028. -- [SHOI2009]会场预约</title><center><h2>2028: [SHOI2009]会场预约</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>440&nbsp;&nbsp;<span class=green>Solved: </span>223<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2028'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2028'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2028'>Discuss</a>]</center><h2>Description</h2><div class=content><p>PP大厦有一间空的礼堂，可以为企业或者单位提供会议场地。这些会议中的大多数都需要连续几天的时间（个别的可能只需要一天），不过场地只有一个，所以不同的会议的时间申请不能够冲突。也就是说，前一个会议的结束日期必须在后一个会议的开始日期之前。所以，如果要接受一个新的场地预约申请，就必须拒绝掉与这个申请相冲突的预约。一般来说，如果PP大厦方面事先已经接受了一个会场预约，例如从10日到15日，就不会在接受与之相冲突的预约，例如从12日到17日。不过，有时出于经济利益，PP大厦方面有时会为了接受一个新的会场预约，而拒绝掉一个甚至几个之前预订的预约。于是，礼堂管理员QQ的笔记本上笔记本上经常记录着这样的信息： 本题中为方便起见，所有的日期都用一个整数表示。例如，如果一个为期10天的会议从&ldquo;90日&rdquo;开始到&ldquo;99日&rdquo;，那么下一个会议最早只能在&ldquo;100日&rdquo;开始。最近，这个业务的工作量与日俱增，礼堂的管理员QQ希望参加SHTSC的你替他设计一套计算机系统，方便他的工作。这个系统应当能执行下面两个操作： A操作：有一个新的预约是从&ldquo;start日&rdquo;到&ldquo;end日&rdquo;，并且拒绝掉所有与它相冲突的预约。执行这个操作的时候，你的系统应当返回为了这个新预约而拒绝掉的预约个数，以方便QQ与自己的记录相校对。 B操作：请你的系统返回当前的仍然有效的预约的总数。</p></div><h2>Input</h2><div class=content><p>输入文件的第一行是一个整数n，表示你的系统将接受的操作总数。接下去n行每行表示一个操作。每一行的格式为下面两者之一： &ldquo;A start end&rdquo;表示一个A操作； &ldquo;B&rdquo;表示一个B操作。</p></div><h2>Output</h2><div class=content><p>输出文件有n行，每行一次对应一个输入。表示你的系统对于该操作的返回值。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+A 10 15<br />
+A 17 19<br />
+A 12 17<br />
+A 90 99<br />
+A 11 12<br />
+B<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+0<br />
+2<br />
+0<br />
+1<br />
+2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>N&lt; = 200000 1&lt; = Start End &lt; = 100000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day2'>Day2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2028'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2028'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2028'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

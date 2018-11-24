@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2921. -- [Poi1998]Assembler circuits</title><center><h2>2921: [Poi1998]Assembler circuits</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2921'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2921'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2921'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: medium">Bytetel公司想改进它们生产的计算机，它们想用一些特殊的汇编电路门系统来替代汇编程序。汇编程序由许多单独的任务组成，每个任务有四个元素。</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>两个寄存器作为输入</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>一个运算符</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>一个寄存器作为输出</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">我们假设最多有26个寄存器，分别用小写字母a～z表示。此外有四种运算，用大写字母A，B，C，D表示。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">一个汇编电路包括：</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>输入端映射到寄存器，该寄存器的初值作为电路的输入</span></div>
+<div style="margin: 0cm 0cm 0pt 45pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>输出端同样映射到寄存器，电路的输出作为给寄存器的值</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">一个电路由许多门组成，每个门包括两个输入和一个输出，它将输入的值进行一个基本运算，并将结果输出。门的输入和整个电路的输出要么与其它门的输出端相连，要么和整个电路的输出端相连。门的输出和整个电路的输入要么与其它门的输入端相连，要么和整个电路的输出端相连。电路门之间不会形成回路。</span></div>
+<div style="text-indent: 24pt"><span style="font-size: medium">如果一个电路门系统和一个汇编程序对于任意的输入，它们的输出都相同，那么我们就称它们是等效的。</span></div>
+<div><span style="font-size: medium">任务：</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">1、读入一个汇编程序的描述</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">2、计算最少要几个门可以组成与汇编程序等效的电路系统</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">3、输出</span></div></div><h2>Input</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 24pt"><span style="font-size: medium">第一行包含一个整数n，(1&lt;=n&lt;1000)，表示汇编程序的指令数。以后n行每行包含4个字母表示一条指令，第一个字母为A,B,C,D中的一个，表示操作的类型，第二和第三个字母为小写字母，表示输入的寄存器，第四个字母也是小写字母，表示输出的寄存器。</span></div></div><h2>Output</h2><div class=content><p>&nbsp;</p>
+<div style="text-indent: 24pt"><span style="font-size: medium">包含一个整数，表示与给汇编程序等效的电路门系统中最少需要几个电路门。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8<br />
+Afbc<br />
+Bfbd<br />
+Cddd<br />
+Bcbc<br />
+Afcc<br />
+Afbf<br />
+Cfbb<br />
+Dfdb<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+6</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2921'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2921'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2921'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

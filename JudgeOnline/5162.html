@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5162. -- 拓扑序列</title><center><h2>5162: 拓扑序列</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5162'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5162'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5162'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小C最近学习了拓扑排序的相关知识。对一个有向无环图G进行拓扑排序，是将G中所有顶点排成一个线性序列，使</div>
+<div>得对图G中任意一条有向边(u,v)，u在线性序列中出现在v之前。例如，如果图G的点集为{1,2,3,4}，边集为{(1,2)</div>
+<div>,(1,3),(2,4),(3,4)}，那么(1,2,3,4)和(1,3,2,4)都是图G的拓扑序列。现在小C对一个简单（无重边）有向无环</div>
+<div>图进行了拓扑排序，但不小心把原图弄丢了。除了拓扑序列，小C只记得原图的边数为k，而且图中存在一个顶点u</div>
+<div>可以到达其他所有顶点。他想知道有多少个满足上述要求的简单有向无环图。由于答案可能很大，你只需要输出答</div>
+<div>案模m的余数。</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入第一行包含3个整数n、k、m。</div>
+<div>第二行是空格隔开的n个正整数a1,a2,&hellip;,an，表示原图的一个拓扑序列，保证是1到n的一个排列。</div>
+<div>0 &le; k &le; n &le; 200000， 1 &le; m &le; 10^200000。</div>
+<p></p></div><h2>Output</h2><div class=content><div>仅输出一个整数， 表示满足要求的简单有向无环图个数模 m 的余数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 4<br />
+1 2 3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+【样例说明】<br />
+共有 9 个满足要求的简单有向无环图，边集分别为：<br />
+{(1, 2), (1, 3), (1, 4), (2, 3)},<br />
+{(1, 2), (1, 3), (1, 4), (2, 4)},<br />
+{(1, 2), (1, 3), (1, 4), (3, 4)},<br />
+{(1, 2), (1, 3), (2, 3), (2, 4)},<br />
+{(1, 2), (1, 3), (2, 3), (3, 4)},<br />
+{(1, 2), (1, 3), (2, 4), (3, 4)},<br />
+{(1, 2), (1, 4), (2, 3), (2, 4)},<br />
+{(1, 2), (1, 4), (2, 3), (3, 4)},<br />
+{(1, 2), (2, 3), (2, 4), (3, 4)}。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E5%BE%90%E6%98%8E%E5%AE%BD'>By 徐明宽</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5162'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5162'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5162'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

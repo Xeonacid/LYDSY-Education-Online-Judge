@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4150. -- [AMPPZ2014]The Staging</title><center><h2>4150: [AMPPZ2014]The Staging</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>46&nbsp;&nbsp;<span class=green>Solved: </span>25<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4150'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4150'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4150'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在舞台上有n个枪手，第i个枪手瞄准了第p[i]个枪手，将于第u[i]秒开枪。一个枪手如果成功开枪，</div>
+<div>那么被瞄准的枪手会立刻死亡。</div>
+<div>现在给出q次修改操作，请在一开始和每次修改操作后统计出最后存活的枪手个数。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数n(1&lt;=n&lt;=200000)，表示枪手的个数。</div>
+<div>第二行包含n个互不相同的正整数p[1],p[2],...,p[n](1&lt;=p[i]&lt;=n,p[i]!=i)，依次表示每个枪手的目标。</div>
+<div>第三行包含n个正整数u[1],u[2],...,u[n](1&lt;=u[i]&lt;=10^9)，依次表示每个枪手的开枪时间。</div>
+<div>接下来一行包含一个正整数q，表示修改操作的个数。</div>
+<div>接下来q行，每行包含两个正整数k,v(1&lt;=k&lt;=n,1&lt;=v&lt;=10^9)，表示把u[k]修改为v。</div>
+<div>数据保证任何时刻任意两个枪手的开枪时间都不同。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>第一行包含一个正整数，即在进行修改之前最后存活的枪手个数。</div>
+<div>接下来q行，每行包含一个正整数，第i行输出在第i次修改之后最后存活的枪手个数。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+2 3 4 1<br />
+1 2 3 4<br />
+3<br />
+1 8<br />
+2 7<br />
+3 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+2<br />
+1<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Claris%E4%B8%8A%E4%BC%A0'>鸣谢Claris上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4150'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4150'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4150'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

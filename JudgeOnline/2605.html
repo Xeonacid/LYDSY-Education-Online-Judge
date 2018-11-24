@@ -1,0 +1,61 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2605. -- [Poi2003]Tiles</title><center><h2>2605: [Poi2003]Tiles</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2605'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2605'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2605'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">Byteasar, 是一个砖瓦工人, 和他的下属Byteolini 一起在Bytesons的浴室工作. 他们现在要把一条线用不同的挖片来进行装饰. 这一条线有<i>n</i> 片瓦片构成. Mrs Byteson 告诉Byteolini 要把这条线装饰成每<i>k</i> 片为循环. 当Mrs Byteson 离开后, Mr Byteson 又来告诉Byteolini 要把这条线装饰成每<i>l</i> 片为循环. 迷惑的Byteolini 来找Byteasar 征求意见: </span></div>
+<div><span style="font-size: medium">&quot;长官, 我到底应该怎么切? 每<i>k</i>个循环还是<i>l</i>个循环?&quot;</span></div>
+<div><span style="font-size: medium">&quot;随他们怎样要求! 你把它装饰成既是<i>k</i> 片循环又是 <i>l</i> 循环就好了. 记住你要尽量多的用不同样式的瓦片使得花纹不是那么单一. 好, 开始工作吧!&quot;</span></div>
+<div><span style="font-size: medium">Byteolini 没了主意. 帮帮他吧!</span></div></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">输入文件三行分别描述三个整数</span><i><span lang="EN-US" style="font-family: Verdana">n</span></i><span lang="EN-US" style="font-family: Verdana">, <i>k</i> and <i>l</i>. </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">三个数满足</span><span lang="EN-US" style="font-family: Verdana">1 &lt;= <i>n</i> &lt;= 10<sup>500</sup>, 1 &lt;= <i>k</i>, <i>l</i> &lt;= <i>n</i>. </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">注意</span><span lang="EN-US" style="font-family: Verdana">: </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">整数</span><i><span lang="EN-US" style="font-family: Verdana">k</span></i><span lang="EN-US" style="font-family: Verdana"> </span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">和</span><span style="font-family: Verdana"> <i><span lang="EN-US">l</span></i><span lang="EN-US"> </span></span><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">并不需要一定是</span><i><span lang="EN-US" style="font-family: Verdana">n</span></i><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">的约数</span><span lang="EN-US" style="font-family: Verdana">. </span></span><span lang="EN-US" style="font-size: 9pt; font-family: Verdana"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">输出一个数表示最多能用多少不同的瓦片。</span></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10<br />
+5<br />
+7<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2605'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2605'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2605'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

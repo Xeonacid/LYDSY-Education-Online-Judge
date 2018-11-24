@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4522. -- [Cqoi2016]密钥破解</title><center><h2>4522: [Cqoi2016]密钥破解</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>931&nbsp;&nbsp;<span class=green>Solved: </span>542<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4522'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4522'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4522'>Discuss</a>]</center><h2>Description</h2><div class=content><div></div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">一种非对称加密算法的密钥生成过程如下：</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">1. 任选两个不同的质数 p ，q</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">2. 计算 N=pq , r=(p-1)(q-1)</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">3. 选取小于r ，且与 r 互质的整数 e&nbsp;</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">4. 计算整数 d ，使得 ed&equiv;1 mod r</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">5. 二元组 (N,e) 称为公钥，二元组 (N,d) 称为私钥</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">当需要加密消息 n 时（假设 n 是一个小于 N 整数，因为任何格式的消息都可转为整数表示），使用公钥 (N,e)，按照</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">n^e&equiv;c mod N</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">运算，可得到密文 c 。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">对密文 c 解密时，用私钥 (N,d) ，按照</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">c^d&equiv;n mod N</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">运算，可得到原文 n 。算法正确性证明省略。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">由于用公钥加密的密文仅能用对应的私钥解密，而不能用公钥解密，因此称为非对称加密算法。通常情况下，公钥由消息的接收方公开，而私钥由消息的接收方自己持有。这样任何发送消息的人都可以用公钥对消息加密，而只有消息的接收方自己能够解密消息。</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">现在，你的任务是寻找一种可行的方法来破解这种加密算法，即根据公钥破解出私钥，并据此解密密文。</span></div>
+<div></div></div><h2>Input</h2><div class=content><p>输入文件内容只有一行，为空格分隔的j个正整数e,N,c。N&lt;=2^62,c&lt;N</p>
+<div></div></div><h2>Output</h2><div class=content><p>输出文件内容只有一行，为空格分隔的k个整数d,n。</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 187 45 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>107 12<br />
+//样例中 p = 11, q = 17</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4522'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4522'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4522'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

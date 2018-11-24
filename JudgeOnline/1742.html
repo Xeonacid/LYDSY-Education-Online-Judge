@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1742. -- [Usaco2005 nov]Grazing on the Run 边跑边吃草</title><center><h2>1742: [Usaco2005 nov]Grazing on the Run 边跑边吃草</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>465&nbsp;&nbsp;<span class=green>Solved: </span>253<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1742'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1742'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1742'>Discuss</a>]</center><h2>Description</h2><div class=content><div>John养了一只叫Joseph的奶牛。一次她去放牛，来到一个非常长的一片地，上面有N块地方长了茂盛的草。我们可</div>
+<div>以认为草地是一个数轴上的一些点。Joseph看到这些草非常兴奋，它想把它们全部吃光。于是它开始左右行走，吃</div>
+<div>草。John和Joseph开始的时候站在p位置。Joseph的移动速度是一个单位时间一个单位距离。不幸的是，草如果长</div>
+<div>时间不吃，就会腐败。我们定义一堆草的腐败值是从Joseph开始吃草到吃到这堆草的总时间。Joseph可不想吃太腐</div>
+<div>败的草，它请John帮它安排一个路线，使得它吃完所有的草后，总腐败值最小。John的数学很烂，她不知道该怎样</div>
+<div>做，你能帮她么？</div></div><h2>Input</h2><div class=content><div>* Line 1 : Two space-separated integers: N and L. N&lt;=1000</div>
+<div>* Lines 2..N+1: Each line contains a single integer giving the position P of a clump (1 &lt;= P &lt;= 1,000,000).</div></div><h2>Output</h2><div class=content><p><span style="font-size: medium">* Line 1: A single integer: the minimum total staleness Bessie can achieve while eating all the clumps. </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 10<br />
+1<br />
+9<br />
+11<br />
+19<br />
+INPUT DETAILS:<br />
+Four clumps: at 1, 9, 11, and 19. Bessie starts at location 10.</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>44<br />
+OUTPUT DETAILS:<br />
+Bessie can follow this route:<br />
+* start at position 10 at time 0<br />
+* move to position 9, arriving at time 1<br />
+* move to position 11, arriving at time 3<br />
+* move to position 19, arriving at time 11<br />
+* move to position 1, arriving at time 29<br />
+giving her a total staleness of 1+3+11+29 = 44.  There are other routes<br />
+with the same total staleness, but no route with a smaller one.44</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1742'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1742'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1742'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

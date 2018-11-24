@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4337. -- BJOI2015 树的同构</title><center><h2>4337: BJOI2015 树的同构</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1184&nbsp;&nbsp;<span class=green>Solved: </span>493<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4337'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4337'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4337'>Discuss</a>]</center><h2>Description</h2><div class=content><div>树是一种很常见的数据结构。</div>
+<div>我们把N个点，N-1条边的连通无向图称为树。</div>
+<div>若将某个点作为根，从根开始遍历，则其它的点都有一个前驱，这个树就成为有根树。</div>
+<div>对于两个树T1和T2，如果能够把树T1的所有点重新标号，使得树T1和树T2完全相</div>
+<div>同，那么这两个树是同构的。也就是说，它们具有相同的形态。</div>
+<div>现在，给你M个有根树，请你把它们按同构关系分成若干个等价类。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行，一个整数M。</div>
+<div>接下来M行，每行包含若干个整数，表示一个树。第一个整数N表示点数。接下来N</div>
+<div>个整数，依次表示编号为1到N的每个点的父亲结点的编号。根节点父亲结点编号为0。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出M行，每行一个整数，表示与每个树同构的树的最小编号。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 <br />
+4 0 1 1 2 <br />
+4 2 0 2 3 <br />
+4 0 1 1 1 <br />
+4 0 1 2 3 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 <br />
+1 <br />
+3 <br />
+1 <br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><div>【样例解释】&nbsp;</div><br />
+<div>编号为1, 2, 4 的树是同构的。编号为3 的树只与它自身同构。&nbsp;</div><br />
+<div>100% 的数据中，1 &le; N, M &le; 50。&nbsp;</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4337'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4337'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4337'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

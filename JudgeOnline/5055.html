@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5055. -- 膜法师</title><center><h2>5055: 膜法师</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>335&nbsp;&nbsp;<span class=green>Solved: </span>150<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5055'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5055'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5055'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在经历过1e9次大型战争后的宇宙中现在还剩下n个完美维度，</div>
+<div>现在来自多元宇宙的膜法师，想偷取其中的三个维度为伟大的长者续秒，</div>
+<div>显然，他能为长者所续的时间，为这三个维度上能量的乘积，</div>
+<div>但目前的宇宙很不乐观，胡乱偷取可能造成维度的崩溃，</div>
+<div>所以，他必须按逆序偷取这些维度，且在偷取中，</div>
+<div>每次偷取的维度的能量必须严格小于他上次偷取的能量，</div>
+<div>由于膜法师生活在多元宇宙，所以他可以让所有可能的偷取方案全部发生</div>
+<div>题目描述</div>
+<div>但他数学不好，所以找到了你帮他求出能为长者续几秒，</div>
+<div>你要做的，就是在给定的维度序列a中，</div>
+<div>求出所有满足i&lt;j&lt;k且ai&lt;aj&lt;ak的ai*aj*ak的和</div>
+<div>即 &sum; (a_i*a_j*a_k)，要求 &nbsp;i&lt;j&lt;k &nbsp;且 a_i&lt;a_j&lt;a_k</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行1个数 n</div>
+<div>第二行n个数 a_i</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>一个数，表示能为长者续几秒，由于长者是不朽的，</div>
+<div>所以能活很久，不妨将答案对**19260817**取模吧</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例1<br />
+4<br />
+1 2 3 4<br />
+<br />
+样例二<br />
+10<br />
+6 8 4 1 3 0 7 5 9 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出1<br />
+50<br />
+样例输出2<br />
+1737<br />
+样例解释<br />
+对于样例 1<br />
+有满足条件的序列为<br />
+{1，2，3}——6<br />
+{1，2，4}——8<br />
+{1，3，4}——12<br />
+{2，3，4}——24<br />
+ans=6+8+12+24=50<br />
+数据范围<br />
+30%的数据n<=300<br />
+60%的数据n<=3000<br />
+100%的数据n<=300000<br />
+0<=a[i]<=2147483647</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;szwujq'>By szwujq</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5055'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5055'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5055'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

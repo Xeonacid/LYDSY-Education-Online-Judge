@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3857. -- Multiplication table</title><center><h2>3857: Multiplication table</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>44&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3857'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3857'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3857'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Teacher Mai has a multiplication table in base p.</div>
+<div></div>
+<div>For example, the following is a multiplication table in base 4:</div>
+<div></div>
+<div></div>
+<div>* 0 1 2 3</div>
+<div>0 00 00 00 00</div>
+<div>1 00 01 02 03</div>
+<div>2 00 02 10 12</div>
+<div>3 00 03 12 21</div>
+<div></div>
+<div></div>
+<div>But a naughty kid maps numbers 0..p-1 into another permutation and shuffle the multiplication table.</div>
+<div></div>
+<div>For example Teacher Mai only can see:</div>
+<div></div>
+<div></div>
+<div>1*1=11 1*3=11 1*2=11 1*0=11</div>
+<div>3*1=11 3*3=13 3*2=12 3*0=10</div>
+<div>2*1=11 2*3=12 2*2=31 2*0=32</div>
+<div>0*1=11 0*3=10 0*2=32 0*0=23</div>
+<div></div>
+<div></div>
+<div>Teacher Mai wants you to recover the multiplication table. Output the permutation number 0..p-1 mapped into.</div>
+<div></div>
+<div>It's guaranteed the solution is unique.</div>
+<p></p></div><h2>Input</h2><div class=content><div>There are multiple test cases, terminated by a line &quot;0&quot;.</div>
+<div></div>
+<div>For each test case, the first line contains one integer p(2&lt;=p&lt;=500).</div>
+<div></div>
+<div>In following p lines, each line contains 2*p integers.The (2*j+1)-th number x and (2*j+2)-th number y in the i-th line indicates equation i*j=xy in the shuffled multiplication table.</div>
+<div></div>
+<div>Warning: Large IO!</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each case, output one line.</div>
+<div>
+<div></div>
+<div>First output &quot;Case #k:&quot;, where k is the case number counting from 1. The following are p integers, indicating the permutation number 0..p-1 mapped into.</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+2 3 1 1 3 2 1 0<br />
+1 1 1 1 1 1 1 1<br />
+3 2 1 1 3 1 1 2<br />
+1 0 1 1 1 2 1 3<br />
+0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case #1: 1 3 2 0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E9%95%87%E6%B5%B7%E4%B8%AD%E5%AD%A6%20%E9%B8%A3%E8%B0%A2David%20Lee%E9%87%8D%E6%96%B0%E5%88%B6%E4%BD%9C%E6%95%B0%E6%8D%AE'>By 镇海中学 鸣谢David Lee重新制作数据</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3857'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3857'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3857'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

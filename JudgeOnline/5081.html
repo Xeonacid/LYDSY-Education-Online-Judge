@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5081. -- 树</title><center><h2>5081: 树</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5081'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5081'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5081'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给出一棵n个点的树，每个点有两层，每层有权值和颜色（黑白）。要</div>
+<div>求支持以下操作。</div>
+<div>1. Cover s t color，将 s 到 t 的路径上的点的两层的颜色全部置为 color(0</div>
+<div>白 1 黑)</div>
+<div>2. CVal index layer val 将 index 号点的 layer 层的权值修改为 val</div>
+<div>3. CColor index layer color 将 index 号点的 layer 层的颜色修改为 color</div>
+<div>4. QMax s t 询问 s 到 t 的路径上的白色最大权值和路径的权值（任意</div>
+<div>白色层为起点，每次只能往相同点不同层或者相邻点同一层上移动，</div>
+<div>每个点的每一层最多走一次，路径经过的层必须都是白色），若 s 到</div>
+<div>t 上的路径没有白点则输出&rdquo;Bad Request.&rdquo;</div>
+<div>5. QLen s t 询问 s 到 t 的路径上的白色最大权值和路径的最大长度，若</div>
+<div>s 到 t 的路径上没有白点则输出 0</div>
+<div>初始树上权值均为1，颜色均为白色。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个整数n表示树的点数</div>
+<div>接下来n&minus;1行每行两个数s,t表示s,t有边相连</div>
+<div>接下来一行一个数Q表示操作数</div>
+<div>接下来Q行表示一个操作</div>
+<div>n, Q &le; 50000, val &le; 1000</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每个 Qmax QLen 输出一行表示答案</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+6<br />
+1 2<br />
+2 4<br />
+2 5<br />
+1 3<br />
+3 6<br />
+7<br />
+CVal 1 0 5<br />
+CVal 1 1 3<br />
+CColor 1 0 1<br />
+CVal 2 0 5<br />
+CVal 3 0 3<br />
+QMax 5 6<br />
+QLen 5 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>17<br />
+9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5081'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5081'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5081'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

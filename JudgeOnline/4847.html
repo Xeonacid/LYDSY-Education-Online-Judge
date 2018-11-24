@@ -1,0 +1,106 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4847. -- [Neerc2016]Kids Designing Kids</title><center><h2>4847: [Neerc2016]Kids Designing Kids</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>13&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4847'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4847'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4847'>Discuss</a>]</center><h2>Description</h2><div class=content><div>ls和他的妹子sl都进入了青春期，额头上长出了雀斑。他们分别把雀斑的图案描成了一个矩阵，由&quot;.&quot;和&quot;*&quot;组成，</div>
+<div>&quot;.&quot;代表无雀斑，&quot;*&quot;代表有雀斑。他们幻想着未来结婚生子，定义了他们的孩子的额头前的雀斑的生成规则：可以</div>
+<div>选择sl的雀斑图案然后进行平行移动，然后他们的儿子的某一个位置有雀斑当且仅当他们中恰好有一人该位置有雀</div>
+<div>斑。例如：如果不进行平行移动，则ls的矩阵a[i][j]就对应sl的矩阵b[i][j]，如果将sl的矩阵向右平移x，那么l</div>
+<div>s的矩阵a[i+x][j]就对应着sl的矩阵b[i][j]。那么这就可能存在a[i][j]与b[i][j]之间无法对应（因为ls和sl的</div>
+<div>矩阵大小不一定相同，也就是可能a[i][j]有字符而b[i][j]没有），于是定义如果某矩阵对应位置没有字符，则与</div>
+<div>&quot;.&quot;对应。例如：</div>
+<div>ls的矩阵：</div>
+<div>.x.x</div>
+<div>xx..</div>
+<div>..xx</div>
+<div>sl的矩阵：</div>
+<div>xx.</div>
+<div>.xx</div>
+<div>x.x</div>
+<div>.xx</div>
+<div>那么孩子的矩阵：</div>
+<div>x..x</div>
+<div>x.x.</div>
+<div>x..x</div>
+<div>.xx.</div>
+<div>现给出ls的矩阵，sl的矩阵和孩子的矩阵，问能不能找到一种平行变换方式</div>
+<div>使得sl平行变换矩阵后与ls的矩阵生成的儿子的矩阵经过平行变换</div>
+<div>（此处的平行变换允许随便移动）后与给出的儿子的矩阵完全重合。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个数n1,m1,表示ls的矩阵的大小。</div>
+<div>接下来n1行，每行字符串长m1，表示ls的矩阵。</div>
+<div>接下来一行两个数n2,m2,表示sl的矩阵的大小。</div>
+<div>接下来n2行，每行字符串长m2，表示sl的矩阵。</div>
+<div>接下来一行两个数n3,m3,表示他们的孩子的矩阵的大小。</div>
+<div>接下来n3行，每行字符串长m3，表示孩子的矩阵。</div>
+<div>1&lt;=n1,m1,n2,m2,n3,m3&lt;=1000。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>第一行输出一个字符串&quot;YES&quot;或&quot;NO&quot;。</div>
+<div>如果第一行输出&quot;YES&quot;，那么第二行再输出两个数x,y，</div>
+<div>表示平行变换的方式为向右移x格，向下移y格（x&lt;0则表示向左移-x格，y&lt;0则表示向上移-y格）。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+..*<br />
+.*.<br />
+*.*<br />
+3 3<br />
+**.<br />
+..*<br />
+.*.<br />
+5 2<br />
+.*<br />
+*.<br />
+**<br />
+.*<br />
+*.</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+0 2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4847'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4847'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4847'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4908. -- [BeiJing2017]开车</title><center><h2>4908: [BeiJing2017]开车</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>95&nbsp;&nbsp;<span class=green>Solved: </span>42<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4908'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4908'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4908'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你有n辆车，分别a1, a2, ..., an位置和n个加油站，分别在b1, b2, ... ,bn 。每个加油站只能支持一辆车的加</div>
+<div>油，所以你要把这些车开到不同的加油站加油。一个车从x位置开到y位置的代价为 |x-y| ，问如何安排车辆，使</div>
+<div>得代价之和最小。同时你有q个操作，每次操作会修改第i辆车的位置到x，你要回答每次修改操作之后最优安排方</div>
+<div>案的总代价。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个正整数n，接下来一行n个整数a1, a2, ...,an，接下来一行n个整数b1, b2,... ,bn。</div>
+<div>接下来一行一个正整数q，表示操作的个数。</div>
+<div>接下来q行，每行有两个整数i(1 &le; i &le; n)和x，表示将i这辆车开到x位置的操作。</div>
+<div>1 &le; n, q &le; 5 * 10^4，所有的车和加油站的范围一直在0到10^9之间。</div></div><h2>Output</h2><div class=content><div>共q+1行，第一行表示一开始的最优代价。接下来q行，第i行表示操作i之后的最优代价。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+1 2<br />
+3 4<br />
+1<br />
+1 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+2<br />
+【样例解释】<br />
+一开始将第一辆车开到位置4，将第二辆车开到位置3，代价为 |4-1|+|3-2|=4。<br />
+修改后第一辆车的位置变成3，代价为 |3-3|+|4-2|=2。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4908'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4908'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4908'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

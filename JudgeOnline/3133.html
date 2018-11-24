@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3133. -- [Baltic2013]ballmachine</title><center><h2>3133: [Baltic2013]ballmachine</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>204&nbsp;&nbsp;<span class=green>Solved: </span>89<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3133'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3133'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3133'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">有一个装球机器，构造可以看作是一棵树。有下面两种操作：</span></p>
+<ul>
+    <li><span style="font-size: medium">从根放入一个球，只要下方有空位，球会沿着树滚下。如果同时有多个点可以走，那么会选择编号最小的节点所在路径的方向。比如依次在树根<code>4</code>放2个球，第一个球会落到<code>1</code>，第二个会落到<code>3</code>： </span></li>
+    <li><span style="font-size: medium"><img height="204" width="424" alt="" src="upload/201304/1(7).jpg" /></span></li>
+</ul>
+<p></p>
+<ul>
+    <li><span style="font-size: medium">从某个位置拿走一个球，那么它上方的球会落下来。比如依次拿走<code>5, 7, 8</code>三个球： </span></li>
+</ul>
+<p><span style="font-size: medium"><img height="351" width="480" alt="" src="upload/201304/2(1).jpg" /></span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第一行：球的个数<code>N</code>，操作个数<code>Q</code> （<code>N, Q &lt;= 100 000</code>）下面<code>N</code>行：第<code>i</code>个节点的父亲。如果是根，则为<code>0</code> 接下来<code>Q</code>行：<code>op num</code></span></p>
+<ol>
+    <li><span style="font-size: medium"><code>op == 1</code>：在根放入<code>num</code>个球 </span></li>
+    <li><span style="font-size: medium"><code>op == 2</code>：拿走在位置<code>num</code>的球 </span></li>
+</ol></div><h2>Output</h2><div class=content><p><span style="font-size: medium">保证输入合法</span></p>
+<ol>
+    <li><span style="font-size: medium"><code>op == 1</code>：输出最后一个球落到了哪里 </span></li>
+    <li><span style="font-size: medium"><code>op == 2</code>：输出拿走那个球后有多少个球会掉下来 </span></li>
+</ol></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8 4<br />
+0<br />
+1<br />
+2<br />
+2<br />
+3<br />
+3<br />
+4<br />
+6<br />
+1 8<br />
+2 5<br />
+2 7<br />
+2 8<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+3<br />
+2<br />
+2<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=abcdabcd987%E6%8F%90%E4%BE%9B'>abcdabcd987提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3133'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3133'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3133'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

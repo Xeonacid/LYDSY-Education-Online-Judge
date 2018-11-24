@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2929. -- [Poi1999]洞穴攀行</title><center><h2>2929: [Poi1999]洞穴攀行</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>508&nbsp;&nbsp;<span class=green>Solved: </span>301<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2929'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2929'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2929'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>洞穴学者在Byte Mountain的Grate Cave里组织了一次训练。训练中，每一位洞穴学者要从最高的一个室到达最底下的一个室。他们只能向下走。一条路上每一个连续的室都要比它的前一个低。此外，每一个洞穴学者都要从最高的室出发，沿不同的路走到最低的室。</div>
+<div>限制：</div>
+<div>1.起点连接的通道同一时间只能容纳一个人通过</div>
+<div>2.终点连接的通道同一时间只能容纳一个人通过</div>
+<div>3.其他边都很宽敞，同一时间可以容纳无限多的人</div>
+<div>问：可以有多少个人同时参加训练？</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">第一行有一个整数n(2&lt;=n&lt;=200)，等于洞穴中室的个数。用1~n给室标号，号码越大就在越下面。最高的室记为1，最低的室记为n。以下的n-1行是对通道的描述。第I+1行包含了与第I个室有通道的室（只有比标号比I大的室）。这一行中的第一个数是m,0<i>&lt;=</i>m<i>&lt;=</i>(n-i+1)，表示被描述的通道的个数。接着的m个数字是与第I个室有通道的室的编号。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21.75pt"><span style="font-size: medium">输出一个整数。它等于可以同时参加训练的洞穴学者的最大人数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12<br />
+4 3 4 2 5<br />
+1 8<br />
+2 9 7<br />
+2 6 11<br />
+1 8<br />
+2 9 10<br />
+2 10 11<br />
+1 12<br />
+2 10 12<br />
+1 12<br />
+1 12</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2929'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2929'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2929'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

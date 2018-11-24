@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>1:注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671
+2:替用户ir1d发布如下信息,希望大家能够积极支持。
+OI Wiki 致力于成为一个开放自由的 OI 知识整合站点，欢迎感兴趣的同学参与贡献 https://oi-wiki.org	</div>
+</div>
+</center>
+</div>
+<title>Problem 5463. -- [APIO2018] 铁人两项</title><center><h2>5463: [APIO2018] 铁人两项</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>13&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5463'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5463'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5463'>Discuss</a>]</center><h2>Description</h2><div class=content><div>比特镇的路网由 m 条双向道路连接的 n 个交叉路口组成。</div>
+<div></div>
+<div>最近，比特镇获得了一场铁人两项锦标赛的主办权。这场比赛共有两段赛程：选手先完成一段长跑赛程，然后骑自行车完成第二段赛程。</div>
+<div></div>
+<div>比赛的路线要按照如下方法规划：</div>
+<div></div>
+<div>1、先选择三个两两互不相同的路口 s， c 和 f ，分别作为比赛的起点、切换点（运动员在长跑到达这个点后，骑自行车前往终点）、终点。</div>
+<div></div>
+<div>2、选择一条从 s 出发，经过 c 最终到达 f 的路径。考虑到安全因素，选择的路径经过同一个点至多一次。</div>
+<div></div>
+<div>在规划路径之前，镇长想请你帮忙计算，总共有多少种不同的选取 s， c 和 f 的方案，使得在第 2 步中至少能设计出一条满足要求的路径。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含两个整数 n 和 m ，分别表示交叉路口和双向道路的数量。</div>
+<div>接下来 m 行，每行两个整数 v_i， u_i 。表示存在一条双向道路连接交叉路口 v_i， u_i (1 &lt;= v_i, u_i &lt;= n, v_i != u_i)。</div>
+<div>保证任意两个交叉路口之间，至多被一条双向道路直接连接。</div>
+<div>n&lt;=1e5, m&lt;=2e5</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一行，包含一个整数，表示能满足要求的不同的选取s,c和f的方案数</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+1 2<br />
+2 3<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Qingyu%E4%B8%8A%E4%BC%A0'>鸣谢Qingyu上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5463'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5463'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5463'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br><div>版权所有 &copy;2008-2018 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a></div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

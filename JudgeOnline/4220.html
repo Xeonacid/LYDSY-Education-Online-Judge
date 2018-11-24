@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4220. -- 谈笑风生</title><center><h2>4220: 谈笑风生</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>233 MB<br><span class=green>Submit: </span>13&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4220'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4220'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4220'>Discuss</a>]</center><h2>Description</h2><div class=content><div>最近 n+e 发现了一个好玩的游戏，他打算和萌妹子们一起来玩，以便在玩的过程中他们可以谈笑风生。这个游戏的规则十分简单，因此妹子萌也很愿意玩：最开始 n+e 有 m 张牌，妹子萌有 n 张牌，并且还有一张牌盖在桌子上。因此，在最开始有 n + m + 1 张牌。除此之外，游戏的玩家知道所有牌的组成，也就是他们知道这些牌都是什么，玩家们也能看见自己的牌，当然玩家们是看不见对方的牌和桌子上的牌的。现在 n+e 和妹子萌轮流玩游戏，从 n+e 先开始。在每一个回合，他们可以干这两件事中的一件：</div>
+<div>A、猜测桌子上的牌是什么。如果猜对，那么这个玩家获胜，游戏结束。如果猜错，游戏同样结束，不过对方获胜。</div>
+<div>B、指定一张牌。如果对方手上有这一张牌，那么把它亮出来并且放在一边（之后的游戏中这张牌就被除外,不能再被指定），如果对方手上没有,那么什么都不做。</div>
+<div>n+e 自然是十分的聪明，他为了能够一直能和萌妹子们谈笑风生，早已计算出了最优的策略和胜利的概率，这样他就可以自由决定每一局到底是赢还是输。但是萌妹子最近得到了一片粉色药片，这种药片是很神奇的，吃下它你会变得和 n+e 一样聪明，这样萌妹子每次都可以以最优的策略来玩游戏，n+e 只好也用最优策略来应对。</div>
+<div>由于 n+e 忙着和妹子萌谈笑风生，他想让你帮他算一算，在妹子萌吃下那个药片后，他们都用最厉害的方法玩游戏，n+e 获胜的概率和妹子萌获胜的概率有多大？</div>
+<p></p></div><h2>Input</h2><div class=content><div>包含一行，包含两个整数 n, m，表示 n+e 和妹子萌最开始有的牌数</div>
+<p></p></div><h2>Output</h2><div class=content><div>包含一行，表示 n+e 获胜的概率和妹子萌获胜的概率，你的答案要保留到小数点后 6 位</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>【样例输入2】<br />
+0 3<br />
+<br />
+【样例输入2】<br />
+2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>【样例输出1】<br />
+0.250000 0.750000<br />
+【样例输出2】<br />
+0.555556 0.444444<br />
+【样例说明】<br />
+对于第一个样例，由于 n+e 手上没有牌，也就是说妹子萌知道桌上的牌是什么了，所以 n+e 只能直接猜，因此猜对的概率是 0.25<br />
+对于第二个样例，有一个伟大的人给了我们一个解释，十分可惜他现在已经不在了，这个解释也跟着消失在历史中了，但是十分聪明的 n+e 和妹子萌却早已了解，不信去问他们</span></div><h2>HINT</h2>
+			<div class=content><p><div>对于 100% 的数据，0 &lt;= n, m &lt;= 1000</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4220'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4220'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4220'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

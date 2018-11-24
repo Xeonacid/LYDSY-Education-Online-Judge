@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1590. -- [Usaco2008 Dec]Secret Message 秘密信息</title><center><h2>1590: [Usaco2008 Dec]Secret Message 秘密信息</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>32 MB<br><span class=green>Submit: </span>371&nbsp;&nbsp;<span class=green>Solved: </span>256<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1590'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1590'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1590'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;贝茜正在领导奶牛们逃跑．为了联络，奶牛们互相发送秘密信息．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;信息是二进制的，共有M(1&le;M&le;50000)条．反间谍能力很强的约翰已经部分拦截了这些</span><span style="font-size: medium">信息，知道了第i条二进制信息的前bi(l《bi&le;10000)位．他同时知道，奶牛使用N(1&le;N&le;</span><span style="font-size: medium">50000)条密码．但是，他仅仅了解第J条密码的前cj(1&le;cj&le;10000)位．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;对于每条密码J，他想知道有多少截得的信息能够和它匹配．也就是说，有多少信息和这条密码有着相同的前缀．当然，这个前缀长度必须等于密码和那条信息长度的较小者．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;在输入文件中，位的总数（即&sum;Bi+&sum;Ci）不会超过500000.</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入N和M，之后N行描述秘密信息，之后M行描述密码．每行先输入一个整数表示信息或密码的长度，之后输入这个信息或密码．所有数字之间都用空格隔开．</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;共M行，输出每条密码的匹配信息数．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5<br />
+3 0 1 0<br />
+1 1<br />
+3 1 0 0<br />
+3 1 1 0<br />
+1 0<br />
+1 1<br />
+2 0 1<br />
+5 0 1 0 0 1<br />
+2 1 1<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+Four messages; five codewords.<br />
+The intercepted messages start with 010, 1, 100, and 110.<br />
+The possible codewords start with 0, 1, 01, 01001, and 11.<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+3<br />
+1<br />
+1<br />
+2<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>0 matches only 010: 1 match 1 matches 1, 100, and 110: 3 matches 01 matches only 010: 1 match 01001 matches 010: 1 match 11 matches 1 and 110: 2 matches</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1590'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1590'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1590'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

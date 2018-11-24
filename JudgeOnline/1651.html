@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1651. -- [Usaco2006 Feb]Stall Reservations 专用牛棚</title><center><h2>1651: [Usaco2006 Feb]Stall Reservations 专用牛棚</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1087&nbsp;&nbsp;<span class=green>Solved: </span>617<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1651'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1651'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1651'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium; ">Oh those picky N (1 &lt;= N &lt;= 50,000) cows! They are so picky that each one will only be milked over some precise time interval A..B (1 &lt;= A &lt;= B &lt;= 1,000,000), which includes both times A and B.  Obviously, FJ must create a reservation system to determine which stall each cow can be assigned for her milking time. Of course, no cow will share such a private moment with other cows.  Help FJ by determining: * The minimum number of stalls required in the barn so that each   cow can have her private milking period * An assignment of cows to these stalls over time  </span></p>
+<p><span style="font-size: medium; ">有N头牛,每头牛有个喝水时间,这段时间它将专用一个Stall 现在给出每头牛的喝水时间段,问至少要多少个Stall才能满足它们的要求</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium; ">* Line 1: A single integer, N </span></p>
+<p><span style="font-size: medium; "> * Lines 2..N+1: Line i+1 describes cow i's milking interval with two         space-separated integers.</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium; ">* Line 1: The minimum number of stalls the barn must have.</span></p>
+<p><span style="font-size: medium; ">  * Lines 2..N+1: Line i+1 describes the stall to which cow i will be         assigned for her milking period.</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 10<br />
+2 4<br />
+3 6<br />
+5 8<br />
+4 7<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+Here's a graphical schedule for this output:<br />
+<br />
+Time     1  2  3  4  5  6  7  8  9 10<br />
+Stall 1 c1>>>>>>>>>>>>>>>>>>>>>>>>>>><br />
+Stall 2 .. c2>>>>>> c4>>>>>>>>> .. ..<br />
+Stall 3 .. .. c3>>>>>>>>> .. .. .. ..<br />
+Stall 4 .. .. .. c5>>>>>>>>> .. .. ..<br />
+<br />
+Other outputs using the same number of stalls are possible.</span></div><h2>HINT</h2>
+			<div class=content><p><p>不妨试下这个数据,对于按结束点SORT,再GREEDY的做法 1 3 5 7 6 9 10 11 8 12 4 13 正确的输出应该是3</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1651'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1651'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1651'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

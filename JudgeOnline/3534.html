@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3534. -- [Sdoi2014]重建</title><center><h2>3534: [Sdoi2014]重建</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>1327&nbsp;&nbsp;<span class=green>Solved: </span>648<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3534'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3534'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3534'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp; T国有N个城市，用若干双向道路连接。一对城市之间至多存在一条道路。<br />
+&nbsp;&nbsp;&nbsp; 在一次洪水之后，一些道路受损无法通行。虽然已经有人开始调查道路的损毁情况，但直到现在几乎没有消息传回。<br />
+&nbsp;&nbsp;&nbsp; 辛运的是，此前T国政府调查过每条道路的强度，现在他们希望只利用这些信息估计灾情。具体地，给定每条道路在洪水后仍能通行的概率，请计算仍能通行的道路恰有N-1条，且能联通所有城市的概率。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp; 输入的第一行包含整数N。<br />
+&nbsp; 接下来N行，每行N个实数，第i+l行，列的数G[i][j]表示城市i与j之<br />
+间仍有道路联通的概率。<br />
+&nbsp;&nbsp;&nbsp; 输入保证G[i][j]=G[j][i]，且G[i][j]=0；G[i][j]至多包含两位小数。<br />
+</font></p></div><h2>Output</h2><div class=content><p><br />
+<font size="4">&nbsp;&nbsp;&nbsp; 输出一个任意位数的实数表示答案。<br />
+&nbsp;&nbsp;&nbsp; 你的答案与标准答案相对误差不超过10^(-4)即视为正确。<br />
+<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+    3<br />
+    0 0.5 0.5<br />
+    0.5 0 0.5<br />
+    0.5 0.5 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>    0.375</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">1 &lt; N &lt; =50</span></p><br />
+<p><span style="font-size: medium">数据保证答案非零时，答案不小于10^-4</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Round&#32;1&#32;Day&#32;2'>Round 1 Day 2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3534'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3534'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3534'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

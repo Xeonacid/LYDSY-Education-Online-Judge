@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3664. -- 乾坤大挪移 </title><center><h2>3664: 乾坤大挪移 </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3664'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3664'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3664'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">目录哥最喜欢和 XYF 玩了。但是目录哥发现 XYF 被邪恶的DBJ 给抓走了。于是目录哥开始了英雄救美的旅程。目录哥通过自己高超的黑客技术，探明 XYF被关在了吉萨金字塔群底下（坐标：29&deg;58&prime;43.41&Prime;N 31&deg;8&prime;5.06&Prime;E）。于是目录哥带上了神犬扎昆，带上军需官巨胖，坐上猴猴猴家开的泛埃及航空公司的飞机，前往埃及。到达吉萨金字塔群底下后，目录哥发现一个由 T 层棋盘组成的塔状结构，初始时目录哥在塔顶，而 XYF 在塔底。对于每一层棋盘，目录哥都需要把下一层的钥匙移动到自己手上，才能进入下一层.对于每一层棋盘，目录哥以自己所在的格子为中心(0,0)，在每一层上建立了平面直角坐标系，而下一层的钥匙在(X,Y)处。现在的任务就是使用各种咒语，将下一层的钥匙移动到目录哥手上。可是由于记载咒语的石板年代太久远了，石板上的字由于风化而有所磨损，所以目录哥现在能看清楚的只有 X 咒语和十咒语。每念一次咒语，可以选择某坐标格为中心，扩展出一个长度为 L 的 X 形状或者十形状，并且顺时针或者逆时针旋转 90 度，每个格子上的所有物品会被一起旋转。详细描述如图，红色格子为中心，4 个方向扩展出的格子数包括中心格子为长度，箭头表示物品的转移路径。 </span></p>
+<p><span style="font-size: medium"><img height="203" width="607" alt="" src="upload/201407/22(1).jpg" /></span></p>
+<p><span style="font-size: medium">为了尽快找到XYF，目录哥想知道，每层至少要念多少个咒语才能完成任务，但是似乎扳手指数不出来，所以只好求助于过去世界的你。如果目录哥无法找到XYF，如果无法完成任务，请输出&ldquo;Poor MLG！&rdquo; </span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第一行一个正整数T，表示一共有 T 层需要计算的坐标及长度。</span><span style="font-size: medium">接下来T 行每行 3 个整数X、Y、L，表示每层钥匙坐标为(X,Y)，咒语中扩展出的X 形状和十形状的长度为 L，当然咒语不可能白念，所以 L&gt;1。</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">包含T 行，对于每层棋盘输出一个整数ANS，表示至少<br />
+要念ANS 个咒语才能完成任务。 <br />
+如果无法完成任务，请输出&ldquo;Poor MLG！&rdquo;&nbsp;&nbsp; </span></p>
+<p>&nbsp;</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+3 <br />
+12 20 5 <br />
+14 22 5 <br />
+0 1 2 <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+4 <br />
+5 <br />
+Poor MLG！ </span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">对于100%的数据，X、Y、L 的绝对值&lt;=10500，T&lt;=1000； <br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3664'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3664'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3664'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4490. -- 随机数生成器Ⅱ加强版</title><center><h2>4490: 随机数生成器Ⅱ加强版</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>34&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4490'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4490'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4490'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>继NOI2014后，小H又发现了一种新的生成随机数的方法。</div>
+<div>首先，给定三个随机种子P,C1,C2(C1&le;C2)生成一个序列{xi}，{xi}满足</div>
+<div>对于任意的i&ge;0，满足以下递推式Xi+2=(Xi+1+Xi) mod P</div>
+<div>其中x0=C1, x1=C2。</div>
+<div>接着，利用序列{xi}，可以生成一个序列{ai}。序列{ai}的生成方式如下</div>
+<div>对于任意的i&ge;1，ai=&sum;xj^2(0&le;j&le;i) mod P</div>
+<div>然后，给定一个正整数Q，小H会进行Q次下述操作：每次选定两个正整数x, y，将ax和ay互换。</div>
+<div>小H希望检验一下序列{ai}是否是随机的。</div>
+<div>他还是希望使用NOI2014那道题的方法，生成一个N&times;M的矩阵，其中N表示行，M表示列。</div>
+<div>我们记这个矩阵为D，在D的第1行依次放入a1~aM，第2行放入aM+1~a2M，以此类推，</div>
+<div>那么矩阵D的第i行第j列的数Di,j就应该为a(i-1)*M+j。</div>
+<div>然后，类似方格取数，从矩阵的左上角(1,1)走到右下角(N,M)，途中只能向右走或者向下走，</div>
+<div>这样他经过的方格数就应该是(N+M-1)。然后按照经过的顺序将每个方格的数字提取出来，</div>
+<div>组成一个序列叫做路径序列。</div>
+<div>他想知道，自己能得到的字典序最小的路径序列是什么。</div>
+<div>注意：为了方便，如果当前格向下和向右的方格的数字相同，</div>
+<div>那么我们认为向下的方格的数字小于向右的方格的数字。</div>
+</div></div><h2>Input</h2><div class=content><div>输入的第一行为六个正整数N,M,Q,P,C1,C2。意义见题目描述。</div>
+<div>接下来的Q行，每行一个操作：包含两个正整数x, y</div>
+<div>本题共3个测试点，每个测试点的数据规模大致如下：</div>
+<div>N,M&le;{200,000, 500,000, 500,000}；</div>
+<div>Q=50,000；</div>
+<div>P,C1,C2&le;1,000,000,000。</div>
+<div>另外，为了方便，输入数据中不会出现交换a1或aNM的情况。</div>
+<div>请注意I/O优化，以免TLE。</div>
+<div></div></div><h2>Output</h2><div class=content><p>设这个路径序列为{si|1&le;i&le;N+M-1}，你只要输出&sum;(i&times;si) mod P的值就可以</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 3 2 1000000 0 1<br />
+5 3<br />
+2 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>465</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4490'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4490'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4490'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

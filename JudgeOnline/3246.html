@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3246. -- [Ioi2013]Dreaming</title><center><h2>3246: [Ioi2013]Dreaming</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>647&nbsp;&nbsp;<span class=green>Solved: </span>245<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3246'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3246'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3246'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Serpent(水蛇)生活的地方有N个水坑，编号为0，...，N - 1，有M条双向小路连接这些水坑。每两个水坑之间至多有一条路径（路径包含一条或多条小路）相互连接，有些水坑之间根本无法互通(即M &le; N-1 )。Serpent走过每条小路需要一个固定的天数，不同的小路需要的天数可能不同。Serpent的朋友袋鼠希望新修 N - M - 1条小路，让Serpent可以在任何两个水坑间游走。袋鼠可以在任意两个水坑之间修路，Serpent通过每条新路的时间都是L天。袋鼠希望找到一种修路方式使得修路之后Serpent在每两个水坑之间游走的最长时间最短。</span></p>
+<p><span style="font-size: medium">举例说明</span></p>
+<p><span style="font-size: medium"><img height="433" width="544" alt="" src="upload/201307/1.jpg" /></span></p>
+<p><span style="font-size: medium">上图中有12个水坑8条小路(&nbsp;N = 12,&nbsp;M = 8)。假如L = 2&nbsp;,即Serpent通过任何一条新路都需要2天。那么，袋鼠可以修建3条新路： <br />
+水坑1和水坑2之间；<br />
+水坑1和水坑6之间；<br />
+水坑4和水坑10之间。</span></p>
+<p><span style="font-size: medium"><img height="402" width="574" alt="" src="upload/201307/1(1).jpg" /></span></p>
+<p><span style="font-size: medium">上图显示了修路后的最终状态。从水坑0走到水坑11的时间最长，需要18天。这是 最佳结果，无论袋鼠如何选择修路方式，总会存在一些水坑对，Serpent需要18天 或者更长时间从其中一个走到另一个。<br />
+&nbsp;</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">N&nbsp;: 水坑的数目。<br />
+M&nbsp;: 原本存在的小路的数目。<br />
+L&nbsp;: Serpent通过新修的路经的时间。<br />
+A, B 和&nbsp;T: 三个包含M个元素的数组，分别表示每条小路的两个端点和通过这条小路的时间。例如，第i条小路连接水坑&nbsp;A[i-1]和水坑B[i-1],通过这条小路的时间是T[i-1]天。<br />
+&nbsp;<br />
+&nbsp;</span></p></div><h2>Output</h2><div class=content><p><br />
+<font size="4">如上所述，表示游走于两个距离最远的水坑之间所需的时间。</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12 8 2<br />
+0 8 4<br />
+8 2 2<br />
+2 7 4<br />
+5 11 3<br />
+5 1 7<br />
+1 3 1<br />
+1 9 5<br />
+10 6 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>18</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">n &lt;= 500000</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3246'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3246'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3246'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

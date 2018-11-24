@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4210. -- 香果屋</title><center><h2>4210: 香果屋</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>26&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4210'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4210'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4210'>Discuss</a>]</center><h2>Description</h2><div class=content><div>&ldquo;即使执政官再圆，也不是我子民的样子！&rdquo;&mdash;&mdash;西瓜王</div>
+<div>xgw为了见到真正的西瓜，来到了小镇著名的水果店&ldquo;香果屋&rdquo;。他在这里看到了很多又大又圆的西瓜，他决定带几个西瓜回家。&ldquo;香果屋&rdquo;里有n种西瓜，每种西瓜有一个权值x_i,而有钱任性的xgw把每种西瓜都买了一个带回家！！</div>
+<div>将西瓜带回家后，xgw自然是要向他们的子民训话。每次他会从中选出一个子集进行训话，每次训话的愉悦度是选出西瓜的权值的最小公倍数乘最大公约数。</div>
+<div>他是个任性的国王，他会把每种可以选择的方式都来一遍，当然，每次选择至少选出一个西瓜（也就是不会为空集）。</div>
+<div>你需要求的是xgw训话完之后的愉悦值之和。由于答案可能过大，请输答案ans \mod 10^5的值。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个整数 T, 代表测试数据的组数。</div>
+<div>接下来是 T 组测试数据，对每一组测试数据：</div>
+<div>第一行包含一个整数 n, 代表元素的个数。</div>
+<div>第二行包含 n 个用空格隔开的互不相同的正整数x_i。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对每组测试数据，在新的一行输出答案</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2  <br />
+2  <br />
+2 3  <br />
+3  <br />
+2 4 10  </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>19  <br />
+228</span></div><h2>HINT</h2>
+			<div class=content><p><p>1&lt;=T&lt;=400, 2&lt;=n&lt;=100, 1 &lt;= x_i &lt;= 250</p><br />
+<div>第一组数据：</div><br />
+<div>子集 1 : {2} ==&gt; lcm = 2, gcd = 2, lcm*gcd = 4</div><br />
+<div>子集 2 : {3} ==&gt; lcm = 3, gcd = 3, lcm*gcd = 9</div><br />
+<div>子集 3 : {2,3} ==&gt; lcm = 6, gcd = 1, lcm*gcd = 6</div><br />
+<div>答案 = 4 + 9 + 6 = 19</div><br />
+<div></div><br />
+<div>第二组数据：</div><br />
+<div>子集 1 : {2} ==&gt; lcm = 2, gcd = 2, lcm*gcd = 4</div><br />
+<div>子集 2 : {4} ==&gt; lcm = 4, gcd = 4, lcm*gcd = 16</div><br />
+<div>子集 3 : {10} ==&gt; lcm = 10,gcd = 10 , lcm*gcd = 100</div><br />
+<div>子集 4 : {2,4} ==&gt; lcm = 4, gcd = 2 , lcm*gcd = 8</div><br />
+<div>子集 5 : {4,10} ==&gt; lcm = 20,gcd = 2 , lcm*gcd = 40</div><br />
+<div>子集 6 : {2,10} ==&gt; lcm = 10,gcd = 2 , lcm*gcd = 20</div><br />
+<div>子集 7 : {2,4,10} ==&gt; lcm = 20,gcd = 2 , lcm*gcd = 40</div><br />
+<div></div><br />
+<div>答案 = 4 + 16 + 100 + 8 + 40 + 20 + 40 = 228&nbsp;</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4210'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4210'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4210'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

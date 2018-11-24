@@ -1,0 +1,145 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1991. -- Pku2422 The Wolves and the Sheep</title><center><h2>1991: Pku2422 The Wolves and the Sheep</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>14&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1991'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1991'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1991'>Discuss</a>]</center><h2>Description</h2><div class=content>三只狼和一只羊在一片草地上相遇了~ 群狼很饥饿,后果很严重……
+草地是一个R*C的矩形，矩形内“X”点代表石头是不能过的，“.”代表草地。狼用“W”表示，羊用“S”表示。
+狼和羊交替的走，轮到狼走的时候，可以选择3只中的任意一只走一步，如果三只狼都走不动，那么可以不走。轮到羊走的时候，羊必须走。
+如果某个时候羊不能走了，即它被围住了，那么羊就要被吃掉了，否则的话如果它逃出了草地，那么它就得救了。狼想知道他们能不能在有限步内围住羊然后美餐一顿。
+
+</div><h2>Input</h2><div class=content>首先两个数R,C
+接下来一个R*C的矩阵描述草地。
+多组数据，处理到文件尾。
+
+</div><h2>Output</h2><div class=content>如果狼能围住羊，打印danger，否则打印safe。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5<br />
+..X.X<br />
+W..X.<br />
+....W<br />
+.SWX.<br />
+<br />
+5 5<br />
+..WXS<br />
+W.WXX<br />
+...X.<br />
+.XX..<br />
+..X.X<br />
+<br />
+4 4<br />
+.WW.<br />
+...S<br />
+.XX.<br />
+..W.<br />
+<br />
+4 4<br />
+S..W<br />
+X.X.<br />
+....<br />
+..WW<br />
+<br />
+5 5<br />
+...W.<br />
+.X...<br />
+XW..X<br />
+..S.X<br />
+.W...<br />
+<br />
+5 5<br />
+XXXXX<br />
+X...X<br />
+XXW.X<br />
+XWWSX<br />
+XXXXX<br />
+<br />
+5 4<br />
+X.W.<br />
+SXXW<br />
+..X.<br />
+.W..<br />
+X...<br />
+<br />
+4 5<br />
+XXXXX<br />
+XS.WX<br />
+XWW.X<br />
+XXXXX<br />
+<br />
+5 4<br />
+..X.<br />
+..X.<br />
+..X.<br />
+WX.S<br />
+W.W.<br />
+<br />
+4 5<br />
+XXXXX<br />
+XW.SX<br />
+X.WWX<br />
+XXXXX<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>safe<br />
+safe<br />
+safe<br />
+safe<br />
+safe<br />
+danger<br />
+safe<br />
+danger<br />
+safe<br />
+danger<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><br />
+对于40%的数据保证 <br />
+对于100%的数据保证 <br />
+数据组数小于等于10。<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1991'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1991'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1991'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

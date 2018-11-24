@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4737. -- 组合数问题</title><center><h2>4737: 组合数问题</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>154&nbsp;&nbsp;<span class=green>Solved: </span>51<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4737'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4737'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4737'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;组合数C(n,m)表示的是从n个物品中选出m个物品的方案数。举个例子，从(1,2,3)三个物品中选择两个物品可以有(</p>
+<div>1,2),(1,3),(2,3)这三种选择方法。根据组合数的定义，我们可以给出计算组合数C(n,m)的一般公式：</div>
+<div>C(n,m)=n!/m!*(n?m)!</div>
+<div>其中n!=1&times;2&times;?&times;n。（额外的，当n=0时，n!=1）</div>
+<div>小葱想知道如果给定n,m和k，对于所有的0&le;i&le;n，0&le;j&le;min(i,m)有多少对(i,j)满足C(i,j)是k的倍数。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行有两个整数t,k，其中t代表该测试点总共有多少组测试数据，k的意义见。</div>
+<div>接下来t行每行两个整数n,m，其中n,m的意义见。</div>
+<div></div></div><h2>Output</h2><div class=content><p>&nbsp;t行，每行一个整数代表所有的0&le;i&le;n，0&le;j&le;min(i,m)中有多少对(i,j))满足C(i,j)是k的倍数</p>
+<div>答案对10^9+7取模。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 23<br />
+23333333 23333333<br />
+233333333 233333333<br />
+2333333333 2333333333</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>851883128<br />
+959557926<br />
+680723120</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;1&le;n,m&le;10^18，1&le;t,k&le;100，且 k 是一个质数</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4737'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4737'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4737'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

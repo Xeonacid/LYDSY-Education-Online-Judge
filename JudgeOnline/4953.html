@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4953. -- [Wf2017]Posterize</title><center><h2>4953: [Wf2017]Posterize</h2><span class=green>Time Limit: </span>4 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>144&nbsp;&nbsp;<span class=green>Solved: </span>73<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4953'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4953'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4953'>Discuss</a>]</center><h2>Description</h2><div class=content><div>数字图像的像素可以用三个在0到255之间的整数表示,它们分别表示红色、绿色和蓝色的强度。为了压缩图片或是</div>
+<div>为了产生艺术效果,许多图像编辑工具收录了如下所述的&quot;色调分离&quot;操作。每个颜色通道会分别考虑,本题只考虑红</div>
+<div>色通道的情况。不同于在红色通道使用0到255之间全部的整数,一张色调分离后的图片只会使用这些数字里至多 k&nbsp;</div>
+<div>种整数。每个像素原来的红色强度会被替换成最相近的可用强度。图像编辑工具会选择k个整数来最小化替换过程</div>
+<div>引起的平方误差之和。假设原图有n个像素,它们的红色取值是r1,&middot;&middot;&middot;,rn,而 k 种可用整数为v1,&middot;&middot;&middot;,vk ,那</div>
+<div>么平方误差之和被定义为</div>
+<div><img src="upload/201708/44.png" width="267" height="120" alt="" /></div>
+<div>你的任务是计算可以实现的最小平方误差之和,参数k和图片的红色强度会给出。</div></div><h2>Input</h2><div class=content><div>第一行包含两个整数d(1&le;d&le;256)和k(1&le;k&le;d)</div>
+<div>分别表示原图中不同的红色强度有多少种,色调分离后可以使用的红色强度有多少种。</div>
+<div>接下来d行描述了每种红色强度在原图中占据的像素点数量。</div>
+<div>每行包含两个整数r(0&le;r&le;255)和p(1&le;p&le;226)</div>
+<div>这里r是一种红色强度的取值,而p是这种取值对应的像素点数量。这d行信息按照红色强度取值升序给出。</div></div><h2>Output</h2><div class=content><div>输出最优的 k 种可选取值对应的平方误差之和。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例1<br />
+2 1<br />
+50 20000<br />
+150 10000<br />
+样例2<br />
+2 2<br />
+50 20000<br />
+150 10000<br />
+样例3<br />
+4 2<br />
+0 30000<br />
+25 30000<br />
+50 30000<br />
+255 30000</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例1<br />
+66670000<br />
+样例2<br />
+0<br />
+样例3<br />
+37500000</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Tangjz%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>鸣谢Tangjz提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4953'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4953'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4953'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

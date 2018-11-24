@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3130. -- [Sdoi2013]费用流</title><center><h2>3130: [Sdoi2013]费用流</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>1716&nbsp;&nbsp;<span class=green>Solved: </span>778<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3130'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3130'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3130'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;Alice和Bob在图论课程上学习了最大流和最小费用最大流的相关知识。<br />
+&nbsp;&nbsp;&nbsp; 最大流问题：给定一张有向图表示运输网络，一个源点S和一个汇点T，每条边都有最大流量。一个合法的网络流方案必须满足：(1)每条边的实际流量都不超过其最大流量且非负；(2)除了源点S和汇点T之外，对于其余所有点，都满足该点总流入流量等于该点总流出流量；而S点的净流出流量等于T点的净流入流量，这个值也即该网络流方案的总运输量。最大流问题就是对于给定的运输网络，求总运输量最大的网络流方案。</span></p>
+<p><span style="font-size: medium"><br />
+&nbsp; 上图表示了一个最大流问题。对于每条边，右边的数代表该边的最大流量，左边的数代表在最优解中，该边的实际流量。需要注意到，一个最大流问题的解可能不是唯一的。&nbsp;&nbsp;&nbsp; 对于一张给定的运输网络，Alice先确定一个最大流，如果有多种解，Alice可以任选一种；之后Bob在每条边上分配单位花费（单位花费必须是非负实数），要求所有边的单位花费之和等于P。总费用等于每一条边的实际流量乘以该边的单位花费。需要注意到，Bob在分配单位花费之前，已经知道Alice所给出的最大流方案。现茌Alice希望总费用尽量小，而Bob希望总费用尽量大。我们想知道，如果两个人都执行最优策略，最大流的值和总费用分别为多少。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行三个整数N，M，P。N表示给定运输网络中节点的数量，M表示有向边的数量，P的含义见问题描述部分。为了简化问题，我们假设源点S是点1，汇点T是点N。<br />
+&nbsp;&nbsp;&nbsp; 接下来M行，每行三个整数A，B，C，表示有一条从点A到点B的有向边，其最大流量是C。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">第一行一个整数，表示最大流的值。<br />
+第二行一个实数，表示总费用。建议选手输出四位以上小数。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 1<br />
+1 2 10<br />
+2 3 15</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10<br />
+10.0000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">【样例说明】<br /><br />
+&nbsp;&nbsp;&nbsp; 对于Alice，最大流的方案是固定的。两条边的实际流量都为10。<br /><br />
+&nbsp;&nbsp;&nbsp; 对于Bob，给第一条边分配0.5的费用，第二条边分配0.5的费用。总费用<br /><br />
+为：10*0.5+10*0.5=10。可以证明不存在总费用更大的分配方案。<br /><br />
+【数据规模和约定】<br /><br />
+&nbsp;&nbsp;&nbsp; 对于20%的测试数据：所有有向边的最大流量都是1。<br /><br />
+&nbsp;&nbsp;&nbsp; 对于100%的测试数据：N &lt; = 100，M &lt; = 1000。<br /><br />
+&nbsp;&nbsp;&nbsp; 对于l00%的测试数据：所有点的编号在I..N范围内。1 &lt; = 每条边的最大流<br /><br />
+量 &lt; = 50000。1 &lt; = P &lt; = 10。给定运输网络中不会有起点和终点相同的边。<br /><br />
+&nbsp; </span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3130'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3130'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3130'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

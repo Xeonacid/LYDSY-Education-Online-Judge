@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1159. -- [CTSC2005]孤独的牧羊女dalarna</title><center><h2>1159: [CTSC2005]孤独的牧羊女dalarna</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>41&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1159'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1159'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1159'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在瑞典的达拉纳洲有一座高山。山上有一个小屋，里面住着一位牧羊女。每天清晨，隔壁的山头会传来一阵悠扬的</div>
+<div>长笛声，而牧羊女则会站在屋里用自己的歌声回应。小屋的俯视图是一个有n个顶点的简单多边形，每一面墙可以</div>
+<div>反射声音，但是由于不可避免的能量损失，最多只能反射k次（k=0表示不能反射声音）。墙面非常光滑，因此声音</div>
+<div>的反射遵循反射角等于入射角，如图1。墙角不能反射声音，而每面墙的其他部分&mdash;&mdash;即使离墙角很近&mdash;&mdash;都可以</div>
+<div>反射声音。</div>
+<p><img border="0" alt="" src="images/1159_1.jpg" /> 图1.</p>
+<div>声音的反射 突然有一天，牧羊女问自己：在小屋的哪些地方能听到她的歌声？假设所有听众都在屋里靠墙而坐，</div>
+<div>那么歌声能到达的墙一共有多长？图2的四幅示意图分别画出了初始情况和声音经过0、1、2次反射后到达的区域。</div>
+<div>灰色部分表示能听到歌声的部分，黑点表示牧羊女的位置。本题所求即灰色部分在多边形边界上的总长度。</div>
+<p><img border="0" alt="" src="images/1159_2.jpg" />&nbsp;</p>
+<p>(a) 初始情况 (b)声音发出后未经反射</p>
+<p><img border="0" alt="" src="images/1159_3.jpg" /> (</p>
+<p>c) 声音1次反射 (d) 声音2次反射图2. 能听到歌声的区域</p></div><h2>Input</h2><div class=content><div>第一行包含4个整数n，k，x，y分别表示小屋的墙角数、最多反射的次数以及牧羊女的坐标</div>
+<div>（牧羊女所在位置保证在屋内且至少离墙1个单位）。</div>
+<div>以下n行每行两个整数x, y，表示第i个墙角的坐标。</div>
+<div>墙角按照顺时针或逆时针排列。</div></div><h2>Output</h2><div class=content><p>输出文件仅包含一个实数L，表示能听到歌声的墙的总长度。保留两位小数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>【样例输入1】<br />
+5 0 100 135<br />
+20 200<br />
+200 100<br />
+300 125<br />
+40 10<br />
+100 100<br />
+【样例输入2】<br />
+8 1 25 15<br />
+0 0<br />
+0 20<br />
+30 20<br />
+30 0<br />
+20 0<br />
+20 10<br />
+10 10<br />
+10 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>【样例输出1】<br />
+469.86<br />
+【样例输出2】<br />
+106.67</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-family: arial, verdana, helvetica, sans-serif; text-align: -webkit-center; white-space: nowrap;">鸣谢刘汝佳先生授权使用</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1159'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1159'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1159'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

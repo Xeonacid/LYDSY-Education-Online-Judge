@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5296. -- [Cqoi2018]破解D-H协议</title><center><h2>5296: [Cqoi2018]破解D-H协议</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>131&nbsp;&nbsp;<span class=green>Solved: </span>87<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5296'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5296'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5296'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Diffie-Hellman密钥交换协议是一种简单有效的密钥交换方法。它可以让通讯双方在没有事先约定密钥（密码）的情况下</div>
+<div>通过不安全的信道（可能被窃听）建立一个安全的密钥K，用于加密之后的通讯内容。</div>
+<div>假定通讯双方名为Alice和Bob，协议的工作过程描述如下（其中mod表示取模运算）：</div>
+<div>1．协议规定一个固定的质数P，以及模P的一个原根g。P和g的数值都是公开的，无需保密。</div>
+<div>2．Alice生成一个随机数a，并计算A=g^a mod P，将A通过不安全信道发送给Bob。</div>
+<div>3．Bob生成一个随机数b，并计算B=g^b mod P，将B通过不安全信道发送给Alice。</div>
+<div>4．Bob根据收到的A计算出K=A^b mod P，而Alice根据收到的B计算出K=B^a mod P。</div>
+<div>5．双方得到了相同的K，即g^(a*b) mod P。K可以用于之后通讯的加密密钥。</div>
+<div>可见，这个过程中可能被窃听的只有A、B，而a、b、K是保密的。并且根据A、B、P、g这4个数，不能轻易计算出</div>
+<div>K，因此K可以作为一个安全的密钥。</div>
+<div>当然安全是相对的，该协议的安全性取决于数值的大小，通常a、b、P都选取数百位以上的大整数以避免被破解。然而如</div>
+<div>果Alice和Bob编程时偷懒，为了避免实现大数运算，选择的数值都小于2^31，那么破解他们的密钥就比较容易了。</div></div><h2>Input</h2><div class=content><div>输入文件第一行包含两个空格分开的正整数g和P。</div>
+<div>第二行为一个正整数n，表示Alice和Bob共进行了n次连接（即运行了n次协议）。</div>
+<div>接下来n行，每行包含两个空格分开的正整数A和B，表示某次连接中，被窃听的A、B数值。</div>
+<div>2&le;A，B&lt;P&lt;231，2&le;g&lt;20， n&lt;=20&nbsp;</div></div><h2>Output</h2><div class=content><div>输出包含n行，每行1个正整数K，为每次连接你破解得到的密钥。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 31<br />
+3<br />
+27 16<br />
+21 3<br />
+9 26</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+21<br />
+25</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Amphetamine%E6%95%B4%E7%90%86%E9%A2%98%E9%9D%A2'>鸣谢Amphetamine整理题面</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5296'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5296'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5296'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

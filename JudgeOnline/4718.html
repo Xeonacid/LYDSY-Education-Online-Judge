@@ -1,0 +1,134 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4718. -- 梯形阵</title><center><h2>4718: 梯形阵</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>26&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4718'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4718'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4718'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小Q最近喜欢上了一款游戏，名为《舰队connection》，在游戏中，小Q指挥强大的舰队南征北战，从而成为了一名</div>
+<div>dalao。在战斗中，布阵往往是决定胜败的关键，其中梯形阵捉摸不定的攻守能力深受小Q喜爱。</div>
+<div>【题意描述】</div>
+<div>小Q的舰队有n艘船在海上航行，每艘船都拥有自己的坐标(xi,yi)。我们规定x表示行，y表示列，x从上到下增加，</div>
+<div>y从左到右增加，左上角为(1,1)，右下角为(Xmax, Ymax)。梯形阵由舰队中的至少4艘船构成，阵中的所有船只都</div>
+<div>在一条直线上，且刚好与坐标轴夹角为45度。阵型中所有船只组成的线段上不能有其他的船只，但延长线上可以有</div>
+<div>其他船只。例如，在以下阵列中(.表示海，*表示船)</div>
+<div>.*.**.</div>
+<div>*.***.</div>
+<div>.*.*..</div>
+<div>**..*.</div>
+<div>*..*.*</div>
+<div>....*.</div>
+<div>存在6种梯形阵，其中3种如下(被X标注的为阵中的船只)：</div>
+<div>.*.**..*.X*..*.*X.</div>
+<div>X.***.*.X**.*.*X*.</div>
+<div>.X.*...X.*...*.*..</div>
+<div>**..*.X*..*.*X..*.</div>
+<div>*..X.**..*.*X..*.*</div>
+<div>....X.....*.....*.</div>
+<div>另外的3种均在同一条直线上，但它们被视为不同的梯形阵，如下：</div>
+<div>.X.**..*.**..X.**.</div>
+<div>*.X**.*.X**.*.X**.</div>
+<div>.*.X...*.X...*.X..</div>
+<div>**..X.**..X.**..X.</div>
+<div>*..*.**..*.X*..*.X</div>
+<div>....*.....*.....*.</div>
+<div>需要注意的是，以下三种不被认为是梯形阵，因为它们所在线段上包含了其他船只。</div>
+<div>（X表示选出的船只，#表示不合法的其他船只）</div>
+<div>.X.**..X.**..X.**.</div>
+<div>*.#**.*.X**.*.X**.</div>
+<div>.*.X...*.#...*.X..</div>
+<div>**..X.**..X.**..#.</div>
+<div>*..*.X*..*.X*..*.X</div>
+<div>....*.....*.....*.</div>
+<div>小Q会不断给出两种询问(type, L, R, k)</div>
+<div>询问1：在L&lt;=xi&lt;=R的所有船中，至少由1/k的船组成的梯形阵有多少种</div>
+<div>询问2：在L&lt;=yi&lt;=R的所有船中，至少由1/k的船组成的梯形阵有多少种</div>
+<div>例如，在上图的舰队中：</div>
+<div>.*.**.</div>
+<div>*.***.</div>
+<div>.*.*..</div>
+<div>**..*.</div>
+<div>*..*.*</div>
+<div>....*.</div>
+<div>对于询问(1,1,5,3)来说，1~5行共计15艘船，至少由其中1/3的船即5艘船组成的梯形阵只有1种。</div>
+<div>对于询问(1,1,5,4)来说，至少由1/4的船，即15/4艘船组成的梯形阵，由于船必须是整数艘</div>
+<div>也即至少4艘船组成，有5种。</div>
+<div>对于询问(2,2,5,6)来说，2~5列共计12艘船，至少由1/6的船组成，即至少由2艘船组成</div>
+<div>但是梯形阵至少要由4艘船组成，所以只有1种。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行三个数，n, Xmax, Ymax，空格分隔，表示船数和最大坐标。</div>
+<div>接下来n行，每行两个数Xi, Yi，空格分隔，表示每艘船的位置。</div>
+<div>接下来1行，一个数q，表示任务2的询问个数。</div>
+<div>接下来q行，每行4个数type, L, R, k，空格分隔，描述一个询问。</div>
+<div>n&lt;=200000，1&lt;=Xmax&lt;=500000，1&lt;=Ymax&lt;=500000，1&lt;=q&lt;=100000，1&lt;=k&lt;=n</div>
+<div>所有询问k之和不超过200000</div>
+<p></p></div><h2>Output</h2><div class=content><div>共计q行，每行一个数，表示每个询问的答案。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>16 6 6<br />
+1 2<br />
+1 4<br />
+1 5<br />
+2 1<br />
+2 3<br />
+2 4<br />
+2 5<br />
+3 2<br />
+3 4<br />
+4 1<br />
+4 2<br />
+4 5<br />
+5 1<br />
+5 4<br />
+5 6<br />
+6 5<br />
+3<br />
+1 1 5 3<br />
+1 1 5 4<br />
+2 2 5 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+5<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4718'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4718'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4718'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

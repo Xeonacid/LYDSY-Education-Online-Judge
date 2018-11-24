@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2646. -- neerc2011 flight</title><center><h2>2646: neerc2011 flight</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>46&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2646'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2646'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2646'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">给</span><span lang="EN-US"><font face="Calibri">N</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个抛物线</span><span lang="EN-US"><font face="Calibri">(</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">只会完整地存在在第一象限，不在第一象限的部分不需考虑，</span><font face="Calibri"> </font><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">如图</span><span lang="EN-US"><font face="Calibri">)</font></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">询问</span><span lang="EN-US"><font face="Calibri">M</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">次</span><font face="Calibri"> </font><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">每次询问第</span><span lang="EN-US"><font face="Calibri">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">到第</span><span lang="EN-US"><font face="Calibri">j</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">个抛物线在</span><span lang="EN-US"><font face="Calibri">[l, r]</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的</span><span lang="EN-US"><font face="Calibri">x</font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">坐标区间上的最小值</span></font></p>
+<p><img height="159" alt="" width="586" src="upload/201203/1(12).jpg" /></p></div><h2>Input</h2><div class=content><div><span style="font-size: medium">
+<div>所有输入均为整数</div>
+<div>第一行 N</div>
+<div>接下来N行 每行p, x, y 表示抛物线左边界的x坐标，顶点的x y坐标</div>
+<div>接下来 M</div>
+<div>接下来M行 每行i, j, l, r如题意所示</div>
+</span></div>
+<p></p></div><h2>Output</h2><div class=content><div><span style="font-size: medium">M行每行一个实数 表示第M次询问的答案 误差&lt;1e-4即可</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+10 30 10<br />
+20 30 30<br />
+4<br />
+1 2 0 11<br />
+1 2 20 25<br />
+1 2 25 35<br />
+1 2 45 100<br />
+ <br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> <br />
+0.975<br />
+22.5<br />
+30.0<br />
+4.375<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">1 </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> n </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> 50 000</font></span></font></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">0 </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> p &lt; x </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> 50 000,</font></span></font></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">0 &lt; y </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> 50</font></span></font></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">1 </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> m </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> 20 000</font></span></font></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">0 </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> l </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> r </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> 50 000</font></span></font></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><font face="Calibri">1 </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> a </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> b </font></span><span style="font-family: 宋体; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">&le;</span><span lang="EN-US"><font face="Calibri"> n</font></span></font></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Kac'>鸣谢Kac</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2646'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2646'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2646'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

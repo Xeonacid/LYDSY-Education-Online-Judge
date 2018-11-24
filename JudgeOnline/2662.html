@@ -1,0 +1,105 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2662. -- [BeiJing wc2012]冻结 </title><center><h2>2662: [BeiJing wc2012]冻结 </h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1208&nbsp;&nbsp;<span class=green>Solved: </span>661<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2662'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2662'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2662'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp; &ldquo;我要成为魔法少女！&rdquo;&nbsp;&nbsp; <br />
+&nbsp; &ldquo;那么，以灵魂为代价，你希望得到什么？&rdquo; <br />
+&ldquo;我要将有关魔法和奇迹的一切，封印于卡片之中&bdquo;&bdquo;&rdquo;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; <br />
+&nbsp; 在这个愿望被实现以后的世界里，人们享受着魔法卡片（SpellCard，又名符<br />
+卡）带来的便捷。 <br />
+&nbsp;<br />
+现在，不需要立下契约也可以使用魔法了！你还不来试一试？ <br />
+&nbsp; 比如，我们在魔法百科全书（Encyclopedia&nbsp; of&nbsp; Spells）里用&ldquo;freeze&rdquo;作为关<br />
+键字来查询，会有很多有趣的结果。 <br />
+例如，我们熟知的Cirno，她的冰冻魔法当然会有对应的 SpellCard 了。 当然，<br />
+更加令人惊讶的是，居然有冻结时间的魔法，Cirno 的冻青蛙比起这些来真是小<br />
+巫见大巫了。 <br />
+这说明之前的世界中有很多魔法少女曾许下控制时间的愿望，比如 Akemi <br />
+Homura、Sakuya Izayoi、&bdquo;&bdquo; <br />
+当然，在本题中我们并不是要来研究历史的，而是研究魔法的应用。 <br />
+&nbsp;<br />
+我们考虑最简单的旅行问题吧：&nbsp; 现在这个大陆上有 N 个城市，M 条双向的<br />
+道路。城市编号为 1~N，我们在 1 号城市，需要到 N 号城市，怎样才能最快地<br />
+到达呢？ <br />
+&nbsp; 这不就是最短路问题吗？我们都知道可以用 Dijkstra、Bellman-Ford、<br />
+Floyd-Warshall等算法来解决。 <br />
+&nbsp; 现在，我们一共有 K 张可以使时间变慢 50%的 SpellCard，也就是说，在通<br />
+过某条路径时，我们可以选择使用一张卡片，这样，我们通过这一条道路的时间<br />
+就可以减少到原先的一半。需要注意的是： <br />
+&nbsp; 1. 在一条道路上最多只能使用一张 SpellCard。 <br />
+&nbsp; 2. 使用一张SpellCard 只在一条道路上起作用。 <br />
+&nbsp; 3. 你不必使用完所有的 SpellCard。 <br />
+&nbsp;&nbsp; <br />
+&nbsp; 给定以上的信息，你的任务是：求出在可以使用这不超过 K 张时间减速的<br />
+SpellCard 之情形下，从城市1 到城市N最少需要多长时间。 </span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><br />
+第一行包含三个整数：N、M、K。 <br />
+接下来 M 行，每行包含三个整数：Ai、Bi、Timei，表示存在一条 Ai与 Bi之<br />
+间的双向道路，在不使用 SpellCard 之前提下，通过它需要 Timei的时间。 </span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">输出一个整数，表示从1 号城市到 N号城市的最小用时。 </span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 1 <br />
+1 2 4 <br />
+4 2 6 <br />
+1 3 8 <br />
+3 4 8 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7 <br />
+【样例1 解释】 <br />
+  在不使用 SpellCard 时，最短路为 1à2à4，总时间为 10。现在我们可<br />
+以使用 1 次 SpellCard，那么我们将通过 2à4 这条道路的时间减半，此时总<br />
+时间为7。 <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据：1&nbsp; &le;&nbsp; K&nbsp; &le;&nbsp; N &le;&nbsp; 50，M&nbsp; &le;&nbsp; 1000。 <br /><br />
+&nbsp; 1&le;&nbsp; Ai，Bi &le;&nbsp; N，2 &le;&nbsp; Timei&nbsp; &le;&nbsp; 2000。 <br /><br />
+为保证答案为整数，保证所有的 Timei均为偶数。 <br /><br />
+所有数据中的无向图保证无自环、重边，且是连通的。&nbsp;&nbsp;&nbsp;<br /><br />
+&nbsp;</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2662'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2662'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2662'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2113. -- Zju2599 Graduated Lexicographical Ordering</title><center><h2>2113: Zju2599 Graduated Lexicographical Ordering</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2113'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2113'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2113'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Consider integer numbers from 1 to n. Let us call the sum of digits of an integer number its weight. Denote the weight of the number x as w(x). Now let us order the numbers using so called graduated lexicographical ordering, or shorter grlex ordering. Consider two integer numbers a and b. If w(a) &lt; w(b) then a goes before b in grlex ordering. If w(a) = w(b) then a goes before b in grlex ordering if and only if the decimal representation of a is lexicographically smaller than the decimal representation of b. Let us consider some examples. 120 &lt; grlex4 since w(120) = 1 + 2 + 0 = 3 &lt; 4 = w(4). 555 &lt; grlex78 since w(555) = 15 = w(78) and &quot;555&quot; is lexicographicaly smaller than &quot;78&quot;. 20 &lt; grlex200 since w(20) = 2 = w(200) and &quot;20&quot; is lexicographicaly smaller than &quot;200&quot;. Given n and some integer number k, find the position of the number k in grlex ordering of integer numbers from 1 to n, and the k-th number in this ordering. </span></p>
+<p></p>
+<p><span style="font-size: medium">考虑所有从1到n的整数。我们设一个整数 x 的十进制各位数字之和为 w(x)。 <br />
+让我们重新将整数排序：对于整数a 和整数b，如果w(a)&lt;w(b)，则a 在 b之前。如果<br />
+w(a)=w(b)，那么a 在b之前当且仅当a 的十进制表示在字典序中小于 b 的十进制表示。例<br />
+如： <br />
+120 &lt; grlex4 因为&nbsp; w(120) = 1 + 2 + 0 = 3 &lt; 4 = w(4)。 <br />
+555 &lt; grlex78 因为&nbsp; w(555) = 15 = w(78) 并且&nbsp; &quot;555&quot;&nbsp; 的字典序小于&nbsp; &quot;78&quot;。 <br />
+20 &lt; grlex200 因为&nbsp; w(20) = 2 = w(200) 并且&nbsp; &quot;20&quot;&nbsp; 的字典序小于&nbsp; &quot;200&quot;。 <br />
+给定整数n和k，你需要求出1-n中的数按照上述方法排序后，k是第几个数，以及第 k<br />
+个数是多少。 <br />
+输入：包含多组数据，每组数据包含两个整数 n和 k。输入的最后一行是 n=k=0。 <br />
+输出：对于每组数据，输出一行两个整数，分别表示k在 1-n中的编号，以及第 k个数<br />
+是多少。 <br />
+数据规模：1 &le; k &le; n &le; 10^18<br />
+。 </span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">There are several lines in the input file, and each line stands two integers n and k (1 &lt;= k &lt;= n &lt;= 10^18). </span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each line in the input, output one line in the output file. First print the position of the number k in grlex ordering of integer numbers from 1 to n, and then the integer that occupies the k-th position in this ordering. </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>20 10<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2 14<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2113'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2113'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2113'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5185. -- [Usaco2018 Jan]Lifeguards</title><center><h2>5185: [Usaco2018 Jan]Lifeguards</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5185'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5185'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5185'>Discuss</a>]</center><h2>Description</h2><div class=content><div>农夫约翰为他的奶牛们开了一个游泳池，他认为这将有助于他们放松和生产更多的牛奶。为确保安全，他请了N只</div>
+<div>牛做救生员，每只牛都有一个工作时间，为一些连续的时间间隔为了简单起见，泳池每天从时间0打开到到10^9，</div>
+<div>所以每个区间都可以用两个整数来描述，给定的这两个整数就是区间的开始和结束时刻。例如，一个救生员从t =&nbsp;</div>
+<div>4时开始工作和在t=7时结束，共覆盖三个时间单位（注意端点也是覆盖到的时间点）。但不幸的是，农夫约翰雇佣</div>
+<div>了比它支付能力多出K个的救生员。他需要开除正好K个救生员，求出剩余的救生员最大能够覆盖多长的时间（一段</div>
+<div>时间被覆盖当且仅当这时有至少一个救生员在工作）</div></div><h2>Input</h2><div class=content><p>第一行包含N和K（K&le;N&le;10^5，1&le;K&le;100）</p>
+<div>接下来的N行，每行描述一个在区间1...10^9上的救生员</div>
+<div>给定这个救生员区间的开始和结束位置，其中有些救生员的区间可能会相交。</div></div><h2>Output</h2><div class=content><p>&nbsp;请输出一个数字，表示如果农夫约翰开除K个救生员，剩余救生员最大能够覆盖的时间长度</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+1 8<br />
+7 15<br />
+2 14</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12<br />
+农夫约翰应该开除掉覆盖1...8和7...15两个区间的两个救生员</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum%20%E9%B8%A3%E8%B0%A2WenDavid%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>Platinum 鸣谢WenDavid提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5185'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5185'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5185'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

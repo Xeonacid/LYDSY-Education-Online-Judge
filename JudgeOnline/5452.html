@@ -1,0 +1,104 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>1:注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671
+2:替用户ir1d发布如下信息,希望大家能够积极支持。
+OI Wiki 致力于成为一个开放自由的 OI 知识整合站点，欢迎感兴趣的同学参与贡献 https://oi-wiki.org	</div>
+</div>
+</center>
+</div>
+<title>Problem 5452. -- [wc2013]彩色项链</title><center><h2>5452: [wc2013]彩色项链</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5452'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5452'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5452'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一条项链由N个珠子连接而成，编号依次为0, 1, 2, &hellip;, N-1。每个珠子的颜色用0~9之间的一位数字来表示（因此</div>
+<div>，可用的颜色一共有10种）。一条长度为4的项链如下图所示：（圆圈中的数字表示颜色，圆圈旁边的数字为珠子</div>
+<div>的编号）</div>
+<div></div>
+<div>&nbsp;</div>
+<div><img src="upload/201811/111(1).png" width="322" height="319" alt="" /></div>
+<div>需要注意的是，如图1所示，编号为0, 1, 2, &hellip;, N-1的珠子大小是依次递增的，设编号为i的珠子的颜色值为ai，</div>
+<div>则数字序列a0a1&hellip;an-1可以唯一的表示一种项链。例如，图1所示的项链表示为&quot;1337&quot;。</div>
+<div>现在有一台自动生产项链的机器，它的结构和工作方式如下所述：</div>
+<div>机器的核心控制部件主要包括：一个CPU、一个整数寄存器START、和存储器S。</div>
+<div>机器内部固化有一段程序，由CPU解释执行。该程序的输入是长度为N的十进制数字序列A，输出是另一个长度为N的</div>
+<div>十进制数字序列B。每次执行程序前将S初始化为输入序列A；程序结束后把S作为输出串B。START初始化为0。</div>
+<div>程序包含M条指令，顺序编号为1~M。指令共有5种，以下是指令的格式和功能：（尖括号&lt;&gt;表示指令参数，都是整数）</div>
+<div><img src="upload/201811/222.jpg" width="883" height="443" alt="" /></div>
+<div>由于项链是环型的，因此第i位和第i+kN位（k为整数）代表数字序列的同一位置。例如当N=4时，第6位和第2位是等价的。</div>
+<div>下面是一个程序的例子：</div>
+<div>MUL 3 2</div>
+<div>SETSTART 2 1</div>
+<div>ONDIGIT 0 4 1</div>
+<div>SHIFT 3 -2</div>
+<div>END</div>
+<div>机器启动的时候，输入一个数字串S0，执行程序得到一个新的数字序列S1并生产出S1代表的项链来，以后机器每生</div>
+<div>产出一条新项链Sn，就把Sn对应的数字序列作为输入重新执行一遍程序，得到一个新的数字序列Sn+1并生产出新的</div>
+<div>项链。由于长度为N的项链种类数目是有限的（至多10N种不同的项链），因此如果让机器一直工作下去，某些种类</div>
+<div>的项链会被生产出无限多条。编程计算出这些将被无限生产出的项链有多少种。在本题中，可以被生产出来的项链</div>
+<div>种类总数保证不超过10^6。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第1行包含两个整数N和M (1&lt;=N&lt;=100,000，2&lt;=M&lt;=30)，</div>
+<div>第2行包含一个有N个数字的串S0。</div>
+<div>第3行到第M+2行为一段程序，每行一条指令，程序保证无错，行末和行首均没有空格。</div>
+<div>
+<div></div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>仅有一行，包含一个整数，是将被无限生产出来的项链种类数目。</div>
+<p></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5<br />
+1234<br />
+MUL 3 2<br />
+SETSTART 2 1<br />
+ONDIGIT 0 4 1<br />
+SHIFT 3 –2<br />
+END</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+//该样例对应于题目描述中给出的示例程序。前29次生产出来的项链是：<br />
+4426  4886  6796  8356  0676  4136  6286  6526  4306  0866 <br />
+6712  2432  4882  2796  8556  0716  6412  2822  4562  2192 <br />
+2786  6556  0316  6602  0322  4062  2182  4382  2786…<br />
+可以看出，从2786开始机器陷入了循环，因此从2786开始的8条项链将被无限制的生产出来。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Qingyu%E4%B8%8A%E4%BC%A0'>鸣谢Qingyu上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5452'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5452'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5452'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br><div>版权所有 &copy;2008-2018 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a></div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

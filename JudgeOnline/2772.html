@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2772. -- policija</title><center><h2>2772: policija</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>47&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2772'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2772'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2772'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium"><span style="color: black">已知一个无向图，现在有若干个询问请你回答：</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span><span style="color: black">．</span><span style="color: black">A B G1 G2</span><span style="color: black">求从</span><span style="color: black">A</span><span style="color: black">到Ｂ是否能不通过</span><span style="color: black">G1-G2</span><span style="color: black">这条已经存在的边</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><span style="color: black">．</span><span style="color: black">A B C</span><span style="color: black">求从</span><span style="color: black">A</span><span style="color: black">到</span><span style="color: black">B</span><span style="color: black">能否不通过</span><span style="color: black">C</span><span style="color: black">这个点</span></span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N M</span><span style="color: black">表示点数和边数</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: black">下接</span><span style="color: black">M</span><span style="color: black">行，每行两个数表示一条边</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: black">接下来一个数</span><span style="color: black">Q</span><span style="color: black">表示问题总数</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: black">下面</span><span style="color: black">Q</span><span style="color: black">行每行开头一个数</span><span style="color: black">k</span><span style="color: black">表示询问的种类，如果是</span><span style="color: black">1</span><span style="color: black">就是第一种询问，后面接四个数表示</span><span style="color: black">A</span><span style="color: black">，</span><span style="color: black">B</span><span style="color: black">，</span><span style="color: black">G1</span><span style="color: black">，</span><span style="color: black">G2</span><span style="color: black">；如果是</span><span style="color: black">2</span><span style="color: black">就是第二种询问，后面接三个数</span><span style="color: black">A,B,C</span><span style="color: black">。</span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div></div><h2>Output</h2><div class=content><p>&nbsp;</p>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: black">对于每一个询问如果答案是是则输出一行</span><span style="color: black">yes</span><span style="color: black">否则输出一行</span><span style="color: black">no</span></span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium"><span style="color: black">&nbsp;&nbsp;&nbsp; </span></span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+    13 15<br />
+1 2<br />
+2 3<br />
+3 5<br />
+2 4<br />
+4 6<br />
+2 6<br />
+1 4<br />
+1 7<br />
+7 8<br />
+7 9<br />
+7 10<br />
+8 11<br />
+8 12<br />
+9 12<br />
+12 13<br />
+5<br />
+1 5 13 1 2<br />
+1 6 2 1 4<br />
+1 13 6 7 8<br />
+2 13 6 7<br />
+2 13 6 8<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+yes<br />
+yes<br />
+yes<br />
+no<br />
+yes<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据Q&lt;=300000，2&lt;=N&lt;=100000，1&lt;=M&lt;=500000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2772'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2772'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2772'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

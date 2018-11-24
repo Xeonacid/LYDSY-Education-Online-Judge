@@ -1,0 +1,61 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1287. -- Cards交换卡片</title><center><h2>1287: Cards交换卡片</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>30&nbsp;&nbsp;<span class=green>Solved: </span>18<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1287'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1287'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1287'>Discuss</a>]</center><h2>Description</h2><div class=content>包括小C在内有N个小朋友, 他们有一个共同的爱好就是收集一些印有NBA球星的卡片． 而可能出现类似这样的情况：小朋友A有>= 2张Tmac的卡片, 而没有一张Yao的卡片; 而小朋友B有>= 2张Yao的卡片, 而没有一张Tmac的卡片, 因此他们会选择交换卡片(1张换1张), 这样他们两个人都有了Yao和Tmac的卡片． 当然这只是一个例子, 而小朋友之间为了使自己的不同的卡片总数尽可能的多, 会相互之间进行交换．一个小朋友会和小C进行交换当且仅当通过一次交换后他的不同的卡片总数会+1, 当然小C不会在意这一点啦, 他可以任意与别人进行交换．小C想知道如何通过若干次交换可以使得自己得到的不同的卡片总数尽可能的多．</div><h2>Input</h2><div class=content>输入文件第一行有两个正整数N, M, 分别表示小朋友的个数以及卡片的总数．为了方便, 本题中第一个小朋友为小C．
+接下来有N行, 每行M个非负整数表示第i个小朋友第j种卡片的张数．</div><h2>Output</h2><div class=content>输出文件只有一个整数表示小C最多可以得到多少种不同的卡片</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+2 1 0 0<br />
+0 2 0 0<br />
+1 0 3 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+友情提示：小C有{1, 1, 2}, 第2个小朋友有{2, 2}, 第3个小朋友有{1, 3, 3, 3, 4}, 小C可以用一张1换第2个小朋友的一张2(第2个小朋友有2种不同的卡片了, 他会选择进行交换), 得到{1, 2, 2}, 再用1张2去换第3个小朋友的一张3, 得到{1, 2, 3}．他不可能得到4, 因此他最多的到3种不同的卡片．</span></div><h2>HINT</h2>
+			<div class=content><p>30%的测试数据中, N, M <= 20．<br />
+100%的测试数据中, N, M <= 200, Card[i][j] <= 1000．</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1287'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1287'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1287'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

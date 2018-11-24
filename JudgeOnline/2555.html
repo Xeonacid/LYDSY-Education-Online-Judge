@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2555. -- SubString</title><center><h2>2555: SubString</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>4233&nbsp;&nbsp;<span class=green>Solved: </span>1301<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2555'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2555'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2555'>Discuss</a>]</center><h2>Description</h2><div class=content><div>懒得写背景了，给你一个字符串init，要求你支持两个操作</div>
+<div>(1):在当前字符串的后面插入一个字符串</div>
+<div>(2):询问字符串s在当前字符串中出现了几次？(作为连续子串)</div>
+<div>你必须在线支持这些操作。</div></div><h2>Input</h2><div class=content><div>第一行一个数Q表示操作个数</div>
+<div>第二行一个字符串表示初始字符串init</div>
+<div>接下来Q行，每行2个字符串Type,Str</div>
+<div>Type是ADD的话表示在后面插入字符串。</div>
+<div>Type是QUERY的话表示询问某字符串在当前字符串中出现了几次。</div>
+<div>为了体现在线操作，你需要维护一个变量mask，初始值为0&nbsp;</div>
+<p><img height="266" alt="" width="568" src="upload/201112/11.JPG" style="font-size: large;" /><span style="font-size: large;">&nbsp; &nbsp;&nbsp;</span></p>
+<div>
+<div>读入串Str之后，使用这个过程将之解码成真正询问的串TrueStr。</div>
+<div>询问的时候，对TrueStr询问后输出一行答案Result</div>
+<div>然后mask=maskxorResult</div>
+<div>插入的时候，将TrueStr插到当前字符串后面即可。</div>
+<div>HINT:ADD和QUERY操作的字符串都需要解压</div>
+<div>长度 &lt;= 600000，询问次数&lt;= 10000,询问总长度&lt;= 3000000</div>
+<div>新加数据一组--2015.05.20</div>
+</div></div><h2>Output</h2><div class=content></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+A<br />
+QUERY B<br />
+ADD BBABBBBAAB</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Ctsc%E6%A8%A1%E6%8B%9F%E8%B5%9BBy%20%E6%B4%81%E5%A6%B9'>Ctsc模拟赛By 洁妹</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2555'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2555'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2555'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

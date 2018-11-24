@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4653. -- [Noi2016]区间</title><center><h2>4653: [Noi2016]区间</h2><span class=green>Time Limit: </span>60 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1317&nbsp;&nbsp;<span class=green>Solved: </span>698<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4653'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4653'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4653'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在数轴上有 n个闭区间 [l1,r1],[l2,r2],...,[ln,rn]。现在要从中选出 m 个区间，使得这 m个区间共同包含至少一个位置。换句话说，就是使得存在一个 x，使得对于每一个被选中的区间 [li,ri]，都有 li&le;x&le;ri。</div>
+<div></div>
+<div>对于一个合法的选取方案，它的花费为被选中的最长区间长度减去被选中的最短区间长度。区间 [li,ri] 的长度定义为 ri&minus;li，即等于它的右端点的值减去左端点的值。</div>
+<div></div>
+<div>求所有合法方案中最小的花费。如果不存在合法的方案，输出 &minus;1。</div></div><h2>Input</h2><div class=content><div>第一行包含两个正整数 n,m用空格隔开，意义如上文所述。保证 1&le;m&le;n</div>
+<div></div>
+<div>接下来 n行，每行表示一个区间，包含用空格隔开的两个整数 li 和 ri 为该区间的左右端点。</div>
+<div>N&lt;=500000,M&lt;=200000,0&le;li&le;ri&le;10^9</div></div><h2>Output</h2><div class=content><div>只有一行，包含一个正整数，即最小花费。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 3<br />
+3 5<br />
+1 2<br />
+3 4<br />
+2 2<br />
+1 5<br />
+1 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4653'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4653'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4653'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

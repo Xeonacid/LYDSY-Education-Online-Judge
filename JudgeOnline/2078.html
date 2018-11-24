@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2078. -- [POI2004]WYS</title><center><h2>2078: [POI2004]WYS</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>47&nbsp;&nbsp;<span class=green>Solved: </span>32<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2078'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2078'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2078'>Discuss</a>]</center><h2>Description</h2><div class=content>Byteotia 是一个被海洋环绕的岛屿. 岛屿上有很多湖泊. 在这些湖泊上又有一些小岛,小岛上可能又有湖泊和更小的岛. 海洋的级别为0. Byteotia 级别为1. 在Byteotian 上的湖泊的级别为2 ., 如果一个湖泊在一个级别为w的岛屿上,那么这个湖泊的级别为w+1,类似的如果一个岛屿被一个级别为j的湖泊环绕上,那么这个岛屿的级别为j+1. 所有湖泊和岛屿的海岸线都是平行或垂直于坐标轴的. 没有两条海岸线重合或相交. 我们想求出级别最高的那个湖泊或者岛屿的级别. 
+</div><h2>Input</h2><div class=content>第一行一个整数n, 表示岛屿和湖泊的总数, 1 <= n <= 40000. 接下来每行描述一个岛屿或者湖泊. 每行首先一个偶数, k, 表示该海岸线包含有多少个顶点, 4 <= k <= 10000. 接下来k 个整数: x1, x2, ..., xk, 0 <= xi <= 108. 这些点的坐标分别为(x1, x2), (x3, x2), (x3, x4), (x5, x4), ... (xk-1, xk), (x1, xk). 他们按照逆时针顺序构成多边形: 
+&#8226;	一个湖泊的海岸线在它所在的岛屿的海岸线给出后再给出, 
+&#8226;	一个岛屿的海岸线在它被环绕的湖泊的海岸线给出后再给出. 
+地图上不会超过有200,000 个点. 
+</div><h2>Output</h2><div class=content>一个整数表示最高级别. 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+4 1 0 17 12<br />
+16 10 4 16 11 2 4 8 2 3 3 2 1 16 3 15 2<br />
+8 8 10 3 5 12 8 11 6<br />
+6 10 9 15 10 9 7<br />
+4 4 6 7 9<br />
+4 6 8 5 7<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=STAGE&#32;3'>STAGE 3</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2078'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2078'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2078'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

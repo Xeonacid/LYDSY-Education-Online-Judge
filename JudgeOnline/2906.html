@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2906. -- 颜色</title><center><h2>2906: 颜色</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>150&nbsp;&nbsp;<span class=green>Solved: </span>53<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2906'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2906'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2906'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-align: left;"><span style="font-size: medium">给定一个长度为N的颜色序列C，对于该序列中的任意一个元素Ci，都有1&lt;=Ci&lt;=M。对于一种颜色ColorK来说，区间[L,R]内的权值定义为这种颜色在该区间中出现的次数的平方，即区间[L,R]内中满足Ci=ColorK的元素个数的平方。接下来给出Q个询问，询问区间[L,R]内颜色[a,b]的权值总和。</span></div>
+<div style="text-align: left;"><span style="font-size: medium">&nbsp;</span></div>
+<div></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第1行三个整数N,M,Q。分别代表序列长度，颜色总数和询问总数。</span></div>
+<div><span style="font-size: medium">第2行N个整数，代表序列Ci。</span></div>
+<div><span style="font-size: medium">第3行到第Q+2行，每行4个整数l,r,a,b。记上一次计算出的答案为Lans。那么实际的l,r,a,b为给出的l,r,a,b xor上Lans。第一个询问的时候Lans=0。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">总共Q行，对于每一个询问，输出权值总和</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 2 3<br />
+1 1 2 2 <br />
+1 4 1 2<br />
+10 11 9 10<br />
+3 0 0 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+2<br />
+0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><font size="3">1&lt;=N,Q&lt;=50000,M&lt;=20000</font></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2906'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2906'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2906'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

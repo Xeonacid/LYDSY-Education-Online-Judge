@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1767. -- [Ceoi2009]harbingers</title><center><h2>1767: [Ceoi2009]harbingers</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>524&nbsp;&nbsp;<span class=green>Solved: </span>142<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1767'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1767'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1767'>Discuss</a>]</center><h2>Description</h2><div class=content>给定一颗树，树中每个结点有一个邮递员，每个邮递员要沿着唯一的路径走向capital(1号结点)，每到一个城市他可以有两种选择：
+1.继续走到下个城市
+2.让这个城市的邮递员替他出发。
+每个邮递员出发需要一个准备时间W[I]，他们的速度是V[I]，表示走一公里需要多少分钟。
+现在要你求出每个城市的邮递员到capital的最少时间(不一定是他自己到capital，可以是别人帮他）
+
+N<=100000
+
+3 ≤  N ≤  100 000 
+0 ≤  Si≤ 10^9
+ 
+1 ≤  Vi≤ 10^9
+ 
+The length of each road will not exceed 10 000 
+For 20% of the tests, N ≤  2 500 
+For 50% of the tests, each town will have at most 2 adjacent roads (i.e., the graph of 
+roads will be a line) </div><h2>Input</h2><div class=content>N
+以下N-1行A,B,C三个数表示A,B之间有一条长为C的边。
+再N行每行两数Wi,Vi
+输出有一行N-1个数表示如题所述。
+</div><h2>Output</h2><div class=content></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 <br />
+1 2 20 <br />
+2 3 12 <br />
+2 4 1 <br />
+4 5 3 <br />
+26 9 <br />
+1 10 <br />
+500 2 <br />
+2 30 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>206 321 542 328 </span></div><h2>HINT</h2>
+			<div class=content><p><img border="0" src="images/1767.jpg"> <br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1767'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1767'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1767'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1849. -- 和谐庆典
+</title><center><h2>1849: 和谐庆典
+</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1849'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1849'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1849'>Discuss</a>]</center><h2>Description</h2><div class=content>一年一度的HXOI结束了,主办方决定举办一次游行以庆祝这一次活动的圆满完成。
+举办地设在了YL City,YL City可以看做一个N×M的矩阵,以左上角为坐标原点,从上至下为X轴正方向,从左至右为Y轴正方向，这样YL City的每一个位置都可以由一个数对(x,y)来表示(1≤x≤N,1≤y≤M)。
+一开始所有志愿者在入口集合，然后每一个志愿者沿着不同的路线行进,最后在终点汇合。当然，为了使游行更加完美，每一条从起点到终点的路线都必须有志愿者负责。由于时间紧迫,考虑到过于复杂的路线会使得志愿者出错，因此主办方对游行的路线作了如下规定,从起点开始,志愿者要么直走，要么向右走，并且不能经过相同的地方。
+现在主办方已经决定将游行的出发点设在(N+1,1),而终点设在(X0,Y0),而你负责计算这次游行需要多少志愿者的参与。
+
+</div><h2>Input</h2><div class=content>第一行有三个正整数N,M,K。
+第二行有两个正整数Y0,X0
+第三~N+2行，每行M个字符,如果第(i+2)行,第j个字符是+,表示(i,j)可以通过，否则表示(i,j)不能通过(池塘，WC等等..)。
+</div><h2>Output</h2><div class=content>
+由于答案可能很大，你只需输出答案模K后的结果。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+3 5 10<br />
+4 2<br />
++++++<br />
+++*++<br />
+++++*<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>在30%的数据中,N,M < =20<br />
+在100%的数据中,N,M < = 100,K < = 10^9<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1849'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1849'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1849'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3048. -- [Usaco2013 Jan]Cow Lineup </title><center><h2>3048: [Usaco2013 Jan]Cow Lineup </h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>253&nbsp;&nbsp;<span class=green>Solved: </span>182<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3048'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<p><span style="font-size: medium">&nbsp;Farmer John's N cows (1 &lt;= N &lt;= 100,000) are lined up in a row. Each cow is identified by an integer &quot;breed ID&quot; in the range 0...1,000,000,000; the breed ID of the ith cow in the lineup is B(i). Multiple cows can share the same breed ID. FJ thinks that his line of cows will look much more impressive if there is a large contiguous block of cows that all have the same breed ID. In order to create such a block, FJ chooses up to K breed IDs and removes from his lineup all the cows having those IDs. Please help FJ figure out the length of the largest consecutive block of cows with the same breed ID that he can create by doing this. </span></p>
+<p></p>
+<div style="text-indent: 15.05pt"><b><span style="font-size: 15pt">给你一个长度为</span></b><b><span style="font-size: 15pt">n(1&lt;=n&lt;=100,000)</span></b><b><span style="font-size: 15pt">的自然数数列，其中每一个数都小于等于</span></b><b><span style="font-size: 15pt">10</span></b><b><span style="font-size: 15pt">亿，现在给你一个</span></b><b><span style="font-size: 15pt">k</span></b><b><span style="font-size: 15pt">，表示你最多可以删去</span></b><b><span style="font-size: 15pt">k</span></b><b><span style="font-size: 15pt">类数。数列中相同的数字被称为一类数。设该数列中满足所有的数字相等的连续子序列被叫做完美序列，你的任务就是通过删数使得该数列中的最长完美序列尽量长。</span></b></div></div><h2>Input</h2><div class=content><p><span style="font-size: medium">* Line 1: Two space-separated integers: N and K. <br />
+* Lines 2..1+N: Line i+1 contains the breed ID B(i). <br />
+<br />
+</span></p></div><h2>Output</h2><div class=content><p><br />
+* Line 1: The largest size of a contiguous block of cows with identical breed IDs that FJ can create.</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9 1 <br />
+2 <br />
+7 <br />
+3 <br />
+7 <br />
+7 <br />
+3 <br />
+7 <br />
+5 <br />
+7 <br />
+<br />
+INPUT DETAILS: There are 9 cows in the lineup, with breed IDs 2, 7, 3, 7, 7, 3, 7, 5, 7. FJ would like to remove up to 1 breed ID from this lineup. <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4 <br />
+<br />
+OUTPUT DETAILS: By removing all cows with breed ID 3, the lineup reduces to 2, 7, 7, 7, 7, 5, 7. In this new lineup, there is a contiguous block of 4 cows with the same breed ID (7). <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div><b><span style="font-size: 15pt">样例解释：</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">长度为</span></b><b><span style="font-size: 15pt">9</span></b><b><span style="font-size: 15pt">的数列，最多只能删去</span></b><b><span style="font-size: 15pt">1</span></b><b><span style="font-size: 15pt">类数。</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">不删，最长完美序列长度为</span></b><b><span style="font-size: 15pt">2.</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">删去一类数</span></b><b><span style="font-size: 15pt">3</span></b><b><span style="font-size: 15pt">，序列变成</span></b><b><span style="font-size: 15pt">2 7 7 7 7 5 7</span></b><b><span style="font-size: 15pt">，最长完美序列长度为</span></b><b><span style="font-size: 15pt">4.</span></b><b><span style="font-size: 15pt">因此答案为</span></b><b><span style="font-size: 15pt">4.</span></b></div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3048'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

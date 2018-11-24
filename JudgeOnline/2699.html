@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2699. -- 更新</title><center><h2>2699: 更新</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>94&nbsp;&nbsp;<span class=green>Solved: </span>58<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2699'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2699'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2699'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于一个数列A[1..N]，一种寻找最大值的方法是：依次枚举A[2]到A[N]，如果A[i]比当前的A[1]值要大，那么就令A[1]=A[i]，最后A[1]为所求最大值。假设所有数都在范围[1, K]内，按上面的步骤执行，有多少个长度N的数列满足A[1]被更新的次数恰好为P呢？</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本题有多组数据。输入第一行一个数T为数据组数，下面T行每行依次三个数N、K和P。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对每组数据输出一行，为方案数模1000000007的值。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<p>
+<table cellspacing="0" cellpadding="0" border="1" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse">
+    <tbody>
+        <tr>
+            <td valign="top" width="164" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: black 1pt solid; width: 123.2pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">输入</span></div>
+            </td>
+            <td valign="top" width="164" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 123.2pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">输出</span></div>
+            </td>
+            <td valign="top" width="240" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: black 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 179.7pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">解释</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="164" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: black 1pt solid; width: 123.2pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">3</span></div>
+            <div><span style="font-size: medium">4 3 2</span></div>
+            <div><span style="font-size: medium">2 3 1</span></div>
+            <div><span style="font-size: medium">3 4 1</span></div>
+            </td>
+            <td valign="top" width="164" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 123.2pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">6</span></div>
+            <div><span style="font-size: medium">3</span></div>
+            <div><span style="font-size: medium">30</span></div>
+            </td>
+            <td valign="top" width="240" style="border-right: black 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 179.7pt; padding-top: 0cm; border-bottom: black 1pt solid; background-color: transparent">
+            <div><span style="font-size: medium">对第一组数据N=4, K=3, P=2, 所有满足的序列有下面六种：</span></div>
+            <div><span style="font-size: medium">1) {1,1,2,3}&nbsp;&nbsp; 2) {1,2,1,3}</span></div>
+            <div><span style="font-size: medium">3) {1,2,2,3}&nbsp;&nbsp; 4) {1,2,3,1}</span></div>
+            <div><span style="font-size: medium">5) {1,2,3,2}&nbsp;&nbsp; 6) {1,2,3,3}</span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="margin: 12pt 0cm 3pt"><span style="font-size: medium"><b>数据范围</b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 前20%的数据满足T &le; 5</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">前50%的数据满足1 &le; N &le; 50，1 &le; K &le; 100</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对100%的数据，T &le; 1000，1 &le; N &le; 150，0 &le; P &lt; N，1 &le; K &le; 300</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata></span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata></span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2699'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2699'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2699'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

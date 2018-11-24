@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3718. -- [PA2014]Parking</title><center><h2>3718: [PA2014]Parking</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>220&nbsp;&nbsp;<span class=green>Solved: </span>107<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3718'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3718'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3718'>Discuss</a>]</center><h2>Description</h2><div class=content><p>你的老板命令你将停车场里的车移动成他想要的样子。<br />
+停车场是一个长条矩形，宽度为w。我们以其左下角顶点为原点，坐标轴平行于矩形的边，建立直角坐标系。停车场很长，我们可以认为它一直向右边伸展到无穷远处。<br />
+车都是边平行于坐标轴的矩形，大小可能不同。你可以将车任意地平移（但不能旋转），只要他们不超出停车场的边界，且不能互相碰撞，但紧挨着是允许的（即任意时刻任两辆车的重叠面积为0）。<br />
+你知道目前各辆车的摆放位置，以及老板心中所想的位置。你需要判断是否可以办到老板的任务。</p>
+<p><img height="121" alt="" width="613" src="upload/201409/parrys-crop.gif" /></p></div><h2>Input</h2><div class=content><p>第一行为一个整数t(1&lt;=t&lt;=20)，表示测试数据数量。<br />
+对于每组测试数据，第一行两个整数n,w(1&lt;=n&lt;=50000,1&lt;=w&lt;=10^9)，分别表示车的数量和停车场的宽度。<br />
+接下来n行，第i行有四个整数x1,y1,x2,y2(0&lt;=x1,x2&lt;=10^9,0&lt;=y1,y2&lt;=w)，表示编号为i的车的当前位置是由x1,y1,x2,y2确定的矩形。（注意：数据有可能出现x1&gt;x2或y1&gt;y2）<br />
+再接下来n行，格式和意义同上，表示车的目标位置。</p></div><h2>Output</h2><div class=content><p>输出t行，第i行为TAK（是）或NIE（否），表示第i组测试数据中能否按照要求进行移动。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3 3<br />
+0 0 2 2<br />
+2 1 4 3<br />
+4 0 6 1<br />
+0 0 2 2<br />
+2 1 4 3<br />
+0 2 2 3<br />
+3 3<br />
+0 0 2 2<br />
+2 1 4 3<br />
+4 0 6 1<br />
+2 1 4 3<br />
+0 0 2 2<br />
+4 0 6 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+NIE</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Jcvb'>鸣谢Jcvb</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3718'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3718'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3718'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

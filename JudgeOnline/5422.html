@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>1:注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671
+	</div>
+</div>
+</center>
+</div>
+<title>Problem 5422. -- 最大愉悦值</title><center><h2>5422: 最大愉悦值</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5422'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5422'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5422'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小焰焰有N个妹纸，编号为1~n。N个妹纸的家之间由N-1条双向道路连接，且任意两个妹纸家可以互相到达。为了后</div>
+<div>宫和谐，小焰焰每次都会选择两个妹纸一起玩耍，小焰焰对每一个妹纸有一个喜爱程度xi，每次玩耍小焰焰获得的</div>
+<div>愉悦值可以通过公式min(xi,xj)*dis(I,j)计算. &nbsp;dis(I,j)表示妹纸I和妹纸j之间的路径长度。由于这个世界充满</div>
+<div>了可能性，所以小焰焰对妹纸的喜爱程度以及城市道路的长度都有可能发生改变，小焰焰希望计算出每次他能获得</div>
+<div>的最大愉悦值，但是他忙于泡新的妹纸无暇编程解决这一问题，于是他把这个问题交给了你。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个正整数n、m，分别表示妹纸数和操作数。</div>
+<div>第二行n个整数，第i个整数xi表示小焰焰对妹纸xi的喜爱程度</div>
+<div>接下来n-1行，每行三个整数ai、bi、ci，表示妹纸ai和妹纸bi间有一条ci的道路。</div>
+<div>接下来m行，每行是如下格式的一种</div>
+<div>1：A ai bi t：表示妹纸ai到妹纸bi的路径上每一条道路加上t&nbsp;</div>
+<div>2：C p x：表示妹纸p的喜爱程度改为x</div>
+<div>3：Q：表示询问当前小焰焰当前选择两个妹纸所能获得的最大愉悦值（见题目描述）</div>
+<div>n&lt;=3000，m&lt;=100000，询问数小于等于50</div>
+<div>1&lt;=ai、bi、p&lt;=n，1&lt;=x、ci&lt;=10000，|t|&lt;=10000，数据保证任何时刻道路长度大于0</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每一个Q，输出一个整数为最大愉悦值</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 5<br />
+1 2 3<br />
+1 3 3<br />
+2 3 2<br />
+Q<br />
+C 2 3<br />
+Q<br />
+A 1 3 2<br />
+Q</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+6<br />
+7<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5422'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5422'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5422'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br><div>版权所有 &copy;2008-2018 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a></div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

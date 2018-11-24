@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4121. -- [Baltic2015]Network</title><center><h2>4121: [Baltic2015]Network</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>85&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4121'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4121'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4121'>Discuss</a>]</center><h2>Description</h2><div class=content><p>The government of Byteland has decided that it is time to connect their little country to the Internet, so that all citizens can participate in programming competitions and watch videos of cute cats. When it was time to build the network backbone of the country, they assigned the company Internet Optimists Inc. with connecting all the n computers of Byteland. The connections were made as direct links between pairs of computers in such a way that any pair of computers are connected by a sequence of links.</p>
+<div>Byteland is not a rich country by any means, so to minimize costs the network topology was built in the form of a tree (i.e. there are exactly n-1 direct links between computers). Far too late, it was realised that this solution suffers from a serious drawback. If just a single link is broken, the computers of Byteland will be partitioned so that some computers cannot communicate with each other!</div>
+<div>To improve the reliability of Byteland's network, it was decided that it should at least tolerate if a single link is broken. Your task is to help Internet Optimists Inc. to improve the network in a cheapest way. Given the network topology of Byteland (i.e. which n-1 &nbsp;pairs of computers are connected by direct links), find the minimum number of links that need to be added so that the network will still be connected if any single link is broken.</div>
+<div>
+<div>给定一颗树，求最少加多少条边使形成的图形任意删除一条变后都联通，边是无向的</div>
+<div>输出最少加边数和任意一种加边方案。注意<span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.549334526062px;">不能加已出现的边</span></div>
+</div></div><h2>Input</h2><div class=content><p>The first line of input contains a positive integer n(N&gt;=3), the number of computers in Byteland. For simplicity, all computers are numbered from 1 to n. Each of the following n-1 lines contains a pair of integers a and b (1&lt;=a,b&lt;=n,a&lt;&gt;b) that describes a direct link between computers a and b.</p>
+<div></div></div><h2>Output</h2><div class=content><p>In the first line of output your program should write an integer k, the minimal number of links that should be added to the network. In each of the following k lines your program should write a pair of integers a and b (1&lt;=a,b&lt;=N,a&lt;&gt;b) &nbsp;that denote the numbers of computers that should be connected by a link. The links can be written in any order. If there is more than one solution, your program should output any one of them.</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+1 2<br />
+2 3<br />
+2 4<br />
+5 4<br />
+6 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1 5<br />
+3 6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;N&lt;=500 000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2fengchanghn%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87%E5%8F%8ASPJ'>鸣谢fengchanghn提供译文及SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4121'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4121'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4121'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4532. -- [BeiJing2014 WinterCamp] 珠链</title><center><h2>4532: [BeiJing2014 WinterCamp] 珠链</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>120&nbsp;&nbsp;<span class=green>Solved: </span>54<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4532'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4532'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4532'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Alex喜欢玩网络游戏，认为这是智力和体力的综合锻炼。在一次游戏活动中，他意外获得了一个传说中威力极其强大的法宝：珠链。&nbsp;</div>
+<div>珠链，顾名思义，就是由许多小珠子串起来的一条链。珠子有很多种颜色。Alex听说过，只有将珠链打磨纯净，珠链才能发挥最大的威力。&nbsp;</div>
+<div>纯净珠链是指这样的珠链：它可以分成若干个长度相等的段，使任何两段的任何相同位置的珠子的颜色均不同，相同位置指珠子在段内的相对位置相同；而且每段的长度以及划分的段数也是有规范的，Alex记得，每段包含的珠子数目必须在L到R之间，而且划分的段数不能少于S。&nbsp;</div>
+<div>所谓打磨，就是从珠链的首和尾拿掉连续的若干个珠子。打磨后的纯净珠链的威力等于它的每个珠子具有的魔力值之和。一个珠子的魔力值只与它在打磨前的珠链中的位置有关。在查找和分析了大量实验数据以后，Alex发现珠子的魔力值等于珠子原来位置编号的约数个数！&nbsp;</div>
+<div>兴奋不已的Alex想将珠链打磨成威力最大的纯净珠链。然而，马上要参加期末考试的Alex来不及计算了，你能否帮助Alex算出最大的威力值呢？&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行是四个整数N, L, R, S。&nbsp;</div>
+<div>第二行是一个长度等于N的字符串，表示Alex得到的珠链。字符串的第i个字符表示珠链的第i个珠子的颜色。相同字母表示相同颜色。珠子的位置从1编号到N。&nbsp;</div>
+<div>1 &le; N &le; 500,000，1 &le; L, R, S &le; N, 0 &le; R &ndash; L &le; 10. 输入的字符串只包含大写和小写的英文字母。字母区分大小写。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一行，表示打磨后的纯净珠链的最大威力值。如果无法打磨成满足要求的纯净珠链，输出 -1.&nbsp;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 2 3 2 <br />
+abcbcaa </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>15 <br />
+【样例解释】 <br />
+能够打磨出的合乎要求的纯净珠链有三种：bc/aa, abc/bca和bcb/caa。其中威力最大的是第三种，其威力值等于2+2+3+2+4+2 = 15。 <br />
+如果给出的珠链是纯净珠链，那么可以不打磨。纯净珠链必须能划分成不少于S个等长的段且每段长度在L到R之间。  </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4532'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4532'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4532'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

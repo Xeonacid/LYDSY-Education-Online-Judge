@@ -1,0 +1,107 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2099. -- [Usaco2010 Dec]Letter 恐吓信</title><center><h2>2099: [Usaco2010 Dec]Letter 恐吓信</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>281&nbsp;&nbsp;<span class=green>Solved: </span>188<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2099'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2099'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2099'>Discuss</a>]</center><h2>Description</h2><div class=content>
+FJ刚刚和邻居发生了一场可怕的争吵，他咽不下这口气，决定佚名发给他的邻居
+一封脏话连篇的信。他有无限张完全相同的已经打印好的信件，都包含
+N个字母(1 <= N <= 50,000)。他想剪出其中一些并且粘帖成一个很长的字母串。
+
+FJ太懒了，他想用最少的次数裁剪信件。他有一把举世无双的剪刀，他可以从
+一封信中只剪一刀剪出连续一段。同样，剪一刀可以得到整个完整的字符串。
+
+他想知道他最少需要剪多少刀从而获得这封M个字母的长信？
+
+保证这总是可能的。
+
+考虑下面38个字母的信：
+
+        THEQUICKBROWNFOXDO
+        GJUMPSOVERTHELAZYDOG
+
+以及FJ想要获得的9个字母的信：
+
+        FOXDOG
+        DOG
+
+以上是为了读入方便，实际上这两封信就是：
+
+        THEQUICKBROWNFOXDOGJUMPSOVERTHELAZYDOG
+        FOXDOGDOG
+
+由于FOXDOG已经存在了，FJ可以剪一刀得到FOXDOG。还剩下一个DOG，FJ可以选择
+其中任何一个DOG剪下来。
+
+因此，他一共要剪2刀。
+
+</div><h2>Input</h2><div class=content>
+* 第一行： 两个空格分隔的整数： N, M
+
+* 第2..?行： 一些行包含N个字母，FJ原来拥有的信，每行不会超过80个字母。
+
+* 第?...?行： 一些行包含M个字母，FJ想要写的信，每行不会超过80个字母。
+
+</div><h2>Output</h2><div class=content>
+* 第1行： FJ获得他想要写的信所需要切的最少次数。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+38 9<br />
+THEQUICKBROWNFOXDO<br />
+GJUMPSOVERTHELAZYDOG<br />
+FOXDOG<br />
+DOG<br />
+<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2099'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2099'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2099'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

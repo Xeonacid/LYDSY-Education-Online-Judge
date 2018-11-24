@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3932. -- [CQOI2015]任务查询系统</title><center><h2>3932: [CQOI2015]任务查询系统</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>4627&nbsp;&nbsp;<span class=green>Solved: </span>1549<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3932'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3932'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3932'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>最近实验室正在为其管理的超级计算机编制一套任务管理系统，而你被安排完成其中的查询部分。超级计算机中的</div>
+<div>任务用三元组(Si,Ei,Pi)描述，(Si,Ei,Pi)表示任务从第Si秒开始，在第Ei秒后结束（第Si秒和Ei秒任务也在运行</div>
+<div>），其优先级为Pi。同一时间可能有多个任务同时执行，它们的优先级可能相同，也可能不同。调度系统会经常向</div>
+<div>查询系统询问，第Xi秒正在运行的任务中，优先级最小的Ki个任务（即将任务按照优先级从小到大排序后取前Ki个</div>
+<div>）的优先级之和是多少。特别的，如果Ki大于第Xi秒正在运行的任务总数，则直接回答第Xi秒正在运行的任务优先</div>
+<div>级之和。上述所有参数均为整数，时间的范围在1到n之间（包含1和n）。</div>
+</div>
+<div></div></div><h2>Input</h2><div class=content><div>
+<div>输入文件第一行包含两个空格分开的正整数m和n，分别表示任务总数和时间范围。接下来m行，每行包含三个空格</div>
+<div>分开的正整数Si、Ei和Pi(Si&le;Ei)，描述一个任务。接下来n行，每行包含四个空格分开的整数Xi、Ai、Bi和Ci，</div>
+<div>描述一次查询。查询的参数Ki需要由公式 Ki=1+(Ai*Pre+Bi) mod Ci计算得到。其中Pre表示上一次查询的结果，</div>
+<div>对于第一次查询，Pre=1。</div>
+</div>
+<div></div>
+<div></div></div><h2>Output</h2><div class=content><div>
+<div>输出共n行，每行一个整数，表示查询结果。</div>
+</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+1 2 6<br />
+2 3 3<br />
+1 3 2<br />
+3 3 4<br />
+3 1 3 2<br />
+1 1 3 4<br />
+2 2 4 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+8<br />
+11</span></div><h2>HINT</h2>
+			<div class=content><p><div>样例解释</div><br />
+<div>K1 = (1*1+3)%2+1 = 1</div><br />
+<div>K2 = (1*2+3)%4+1 = 2</div><br />
+<div>K3 = (2*8+4)%3+1 = 3</div><br />
+<div>对于100%的数据，1&le;m,n,Si,Ei,Ci&le;100000，0&le;Ai,Bi&le;100000，1&le;Pi&le;10000000，Xi为1到n的一个排列</div><br />
+<div></div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3932'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3932'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3932'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

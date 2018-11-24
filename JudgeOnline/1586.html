@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1586. -- 路径统计path</title><center><h2>1586: 路径统计path</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>88&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1586'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1586'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1586'>Discuss</a>]</center><h2>Description</h2><div class=content>
+	
+一个矩阵由r行c列共r*c个小正方形组成。行从下到上编号为1到r，列从左到右编号为1到c。所有坐标都是(row,colmn)的形式。
+给出n个特殊点的坐标，保证特殊点在矩阵内，依次编号为1到n，从(1,1)到(r,c)的包含严格k个特殊点的路径称为k型路径。
+同时路径必须遵循以下规则：
+1.	每次你只能向上或向右。即你只能从(x,y)走到(x+1,y)或(x,y+1)
+2.	特殊点在路径中出现的顺序必须与给出的顺序相同，即如果特殊点a出现在特殊点b之前，那么a必须小于b。
+请输出0型路径，1型路径…,n型路径的条数mod 1000007
+</div><h2>Input</h2><div class=content>第一行两个数R,C。
+第二行描述1-n号特殊点的行号。请读到行尾。
+第二行描述1-n号特殊点的列号。
+
+</div><h2>Output</h2><div class=content>N+1个用空格隔开的整数，分别表示1型路径…,n型路径的条数mod 1000007
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+3<br />
+2 3<br />
+2 2<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 3 2<br />
+<br />
+【样例解释】<br />
+0型路径<br />
+(1, 1) -> (1, 2) -> (1, 3) -> (2, 3) -> (3, 3)<br />
+1型路径<br />
+(1, 1) -> (2, 1) -> (2, 2) -> (2, 3) -> (3, 3)<br />
+(1, 1) -> (1, 2) -> (2, 2) -> (2, 3) -> (3, 3)<br />
+(1, 1) -> (2, 1) -> (3, 1) -> (3, 2) -> (3, 3)<br />
+2型路径<br />
+(1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3)<br />
+(1, 1) -> (1, 2) -> (2, 2) -> (3, 2) -> (3, 3)<br />
+<br />
+【数据规模】<br />
+对于100%数据<br />
+1<=R,C<=50<br />
+0<=N<=50<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1586'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1586'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1586'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

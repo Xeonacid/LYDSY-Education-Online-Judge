@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2477. -- Biggest Number</title><center><h2>2477: Biggest Number</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>8&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2477'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2477'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2477'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font face="Times New Roman"><span lang="EN-US">You have a maze </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">with</span><span lang="EN-US"> obstacles and </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">non-zero digits</span><span lang="EN-US"> in it:</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font face="Times New Roman"><span lang="EN-US"><img height="176" width="366" alt="" src="upload/201109/aa.jpg" /></span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font face="Times New Roman"><span lang="EN-US">You can start from any square, walk in the maze, and finally stop at some square. </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">Each step, you may only walk into one of the <b style="mso-bidi-font-weight: normal"><i style="mso-bidi-font-style: normal"><u>four neighbouring squares (up, down, left, right) </u></i></b>and y</span><span lang="EN-US">ou cannot walk into obstacles</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"> or</span><span lang="EN-US"> </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">walk into</span><span lang="EN-US"> a square more than once. When you finish, you can get a number by writing down the digits you encounter in the same order as you </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">meet</span><span lang="EN-US"> them.</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"> </span><span lang="EN-US">For example, you can get numbers 9784, 4832145 etc. The biggest number you can get is 791452384, shown </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">in the picture </span><span lang="EN-US">above.</span></font></span><font size="2"><font face="Times New Roman"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><font face="Times New Roman">Your task is to find the biggest number you can get.</font></span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><font size="2"><font face="Times New Roman"><o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 54pt 0pt 0cm; tab-stops: 468.0pt 522.0pt"><span style="font-size: medium"><span lang="EN-US"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">There will be at most 25 test cases. Each test begins with two integers <i>R</i> and <i>C</i> (2&lt;=<i>R</i>,<i>C</i>&lt;=15, <i>R*C</i>&lt;=30), the number of rows and columns of the maze. The next <i>R</i> rows represent the maze. Each line contains exactly <i>C</i> characters (without leading or trailing spaces), each of them will be either '</font>#</span><font face="Times New Roman"><span lang="EN-US">' or one of the nine non-zero digits. </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">There will be at least one non-obstacle squares (i.e. squares with a non-zero digit in it) in the maze. </span><span lang="EN-US">The input is terminated by a test case with <i>R</i>=<i>C</i>=0, you should not process it.</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 54pt 0pt 0cm; tab-stops: 468.0pt 522.0pt"><span style="font-size: medium"><span lang="EN-US"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font face="Times New Roman"><span lang="EN-US">For each test case, print the </span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN">biggest</span><span lang="EN-US"> number you can find, on a single line.</span></font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-fareast-language: ZH-CN"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 7<br />
+##9784#<br />
+##123##<br />
+##45###<br />
+0 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>791452384</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%B9%96%E5%8D%97%E7%9C%81%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B'>湖南省第六届大学生计算机程序设计竞赛   </a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2477'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2477'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2477'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

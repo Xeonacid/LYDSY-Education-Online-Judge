@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2059. -- [Usaco2010 Nov]Buying Feed 购买饲料</title><center><h2>2059: [Usaco2010 Nov]Buying Feed 购买饲料</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>433&nbsp;&nbsp;<span class=green>Solved: </span>171<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2059'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2059'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2059'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;约翰开车来到镇上，他要带K吨饲料回家。运送饲料是需要花钱的，如果他的车上有X吨饲料，每公里就要花费X^2元，开车D公里就需要D* X^2元。约翰可以从N家商店购买饲料，所有商店都在一个坐标轴上，第i家店的位置是Xi，饲料的售价为每吨Ci元，库存为Fi。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰从坐标X=O开始沿坐标轴正方向前进，他家在坐标X=E上。为了带K吨饲料回家，</span></div>
+<div><span style="font-size: medium">约翰最少的花费是多少呢？假设所有商店的库存之和不会少于K。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;举个例子，假设有三家商店，情况如下所示：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;坐标&nbsp;&nbsp;&nbsp;&nbsp;X=1&nbsp;&nbsp;&nbsp;&nbsp;X=3&nbsp;&nbsp;&nbsp;&nbsp;X=4&nbsp;&nbsp;&nbsp;&nbsp;E=5</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;库存&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;售价&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;如果K=2，约翰的最优选择是在离家较近的两家商店购买饲料，则花在路上的钱是</span><span style="font-size: medium">1+4=5，花在商店的钱是2+2=4，共需要9元。</span></div></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第1行:三个整数K,E,N 第2..N+1行:第i+1行的三个整数代表,X_i,F_i,C_i. </span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">一个整数,代表最小花费 </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 5 3<br />
+3 1 2<br />
+4 1 2<br />
+1 1 1<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2059'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2059'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2059'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

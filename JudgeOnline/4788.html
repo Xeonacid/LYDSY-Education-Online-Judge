@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4788. -- [CERC2016]Bipartite Blanket</title><center><h2>4788: [CERC2016]Bipartite Blanket</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>133&nbsp;&nbsp;<span class=green>Solved: </span>65<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4788'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4788'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4788'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在二分图中，所有点被划分成了两个不相交的集合A和B，每条边都恰好连接着某个A和某个B。一个匹配是一个边集</div>
+<div>，满足没有任何两条边有相同的端点。我们称一个匹配M覆盖了点集V当且仅当V中的每个点都是M中至少一条边的端</div>
+<div>点。给定一个二分图，每个点有一个正整数权值。定义一个点集的权值为其中所有点的权值之和。给定一个参数t</div>
+<div>，请统计有多少点集V，满足V的权值不小于t，且V被至少一个匹配M覆盖。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行包含两个正整数n,m(1&lt;=n,m&lt;=20)，分别表示A集合的点数和B集合的点数。</div>
+<div>接下来n行，每行m个01字符，其中第i行第j列为1表示A_i和B_j之间有一条边。</div>
+<div>接下来一行包含n个正整数v_1,v_2,...,v_n(1&lt;=v_i&lt;=10^7)，分别表示A中每个点的权值。</div>
+<div>接下来一行包含m个正整数w_1,w_2,...,w_m(1&lt;=w_i&lt;=10^7)，分别表示B中每个点的权值。</div>
+<div>最后一行包含一个正整数t(1&lt;=t&lt;=4*10^8)，表示参数t。</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出一行一个整数，即满足条件的点集个数。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+010<br />
+111<br />
+010<br />
+1 2 3<br />
+8 5 13<br />
+21</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+HINT<br />
+3个集合分别为{a1,a2,b2,b3}、{a3,b2,b3}、{a2,a3,b2,b3}。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4788'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4788'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4788'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

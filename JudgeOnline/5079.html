@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5079. -- probe</title><center><h2>5079: probe</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5079'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5079'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5079'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你在一个秘密据点门口安装了监控探头，希望监控人员出入情况。探头记录了据点某天从早到晚的人员进出情况，</div>
+<div>你不知道据点内开始的人数。同时，进出据点的人可能会进行伪装，你无法从探头记录中得知伪装的人的身份。探</div>
+<div>头的每条记录是以下两个形式之一：</div>
+<div>E id</div>
+<div>当id&gt;0时，表示编号为id的人进入了这个据点；当id为0时，表示一个伪装的人进入了据点。</div>
+<div>L id</div>
+<div>当id&gt;0时，表示编号为id的人离开了这个据点；当id为0时，表示一个伪装的人离开了据点。</div>
+<div></div>
+<div>你想弄清楚，这个据点是不是一定有其他出入口，如果没有的话，当一天结束时，待在据点里的人的最少可能数量是多少。</div>
+<div></div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个数T，表示数据组数。</div>
+<div>对于每组数据，第一行一个整数N，表示记录数量。</div>
+<div>下面N行，每行一个记录，为E id或L id。</div>
+<div>N &lt;= 1000，T &lt;= 10, 0 &lt;= id &lt;= 2000。</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每个数据输出一行，如果该据点一定有其他出入口，输出OTHER。</div>
+<div>否则，输出这天结束时据点里的最少可能人数。</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3<br />
+E 5<br />
+L 0<br />
+E 5<br />
+2<br />
+L 1<br />
+L 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+OTHER</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5079'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5079'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5079'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

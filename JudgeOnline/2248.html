@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2248. -- Pku3901 The Computer Game</title><center><h2>2248: Pku3901 The Computer Game</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2248'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2248'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2248'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="plm"></div>
+<div class="ptx" lang="en-US">John and Brus are playing a military strategic game on a PC. The game is played on the flat world map. At the beginning of the game Brus places his army. Then John has to choose strategic points for his army according to the following rules: <br />
+<p style="padding-left: 30px"><br />
+each strategic point must be a lattice point (x, y) (a lattice point is a point with integer coordinates) such that |x| + |y| &lt; N; <br />
+John can choose any positive number of strategic points; <br />
+all the strategic points must be distinct; <br />
+each of the strategic points must be free (i.e. not occupied by Brus&rsquo;s army); <br />
+each pair of different strategic points must be connected (possibly via some other strategic points). <br />
+</p>
+<br />
+Here two different lattice points (x1, y1) and (x2, y2) are connected if |x1 &ndash; x2| + |y1 &ndash; y2| = 1. If A, B and C are strategic points, A and B are connected, B and C are connected, then A and C are also connected. <br />
+Your task is to find the number of ways for John to choose strategic points for his army.</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt"><font size="3"><span style="font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">给定一个形状特殊的棋盘如右图，其中有些格子已经被选定了。</span><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt"><font size="3"><span style="font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">问取出一个连通块的方案数有多少种。</span><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt"><font size="3"><span style="font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">其中</span><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><font face="Times New Roman">N&lt;=6</font></span><span style="font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">（也就是竖着最长的一条长度</span><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><font face="Times New Roman">&lt;=13</font></span><span style="font-family: 宋体; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">）。</span></font><span lang="EN-US" style="mso-bidi-font-size: 10.5pt"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><div class="ptx" lang="en-US">The first line contains single integer T &ndash; the number of test cases. Each test case starts with a line containing two integers N and M separated by a single space. N is the number mentioned in the first rule. M is the number of lattice points on the world map already occupied by Brus&rsquo;s army. Each of the following M lines contains two integers Xk and Yk separated by a single space. Each lattice point (Xk, Yk) is occupied by Brus&rsquo;s army.</div></div><h2>Output</h2><div class=content><div class="ptx" lang="en-US">For each test case print a single line containing the number of ways for John to choose strategic points for his army.</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 <br />
+2 1 <br />
+7 7 <br />
+2 3 <br />
+0 0 <br />
+4 -7 <br />
+7 -4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>20 <br />
+4<br />
+Hint<br />
+<br />
+Constraints: <br />
+1 ≤ T ≤ 74, <br />
+1 ≤ N ≤ 7, <br />
+1 ≤ M ≤ 225, <br />
+-7 ≤ Xk, Yk ≤ 7, <br />
+all (Xk, Yk) will be distinct.</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2248'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2248'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2248'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

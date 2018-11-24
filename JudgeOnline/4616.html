@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4616. -- [Wf2016]Road Times</title><center><h2>4616: [Wf2016]Road Times</h2><span class=green>Time Limit: </span>60 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4616'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4616'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4616'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有一些城市，你知道连接每一对城市之间的路的长度，而且路都是单向的。每条路都有固定的30码至60码的限速（</div>
+<div>可以是小数）。运输货车一定会沿着最短路行进，而且在每条路上会始终以最高限速行驶。因此，在不知道其余信</div>
+<div>息的情况下，如果一次行程长度为50km，则它需要花的时间在50至100分钟之间。但是你有其余的信息--例如之前</div>
+<div>的行程所花的时间。请使用这些信息给出最准确的估算。</div></div><h2>Input</h2><div class=content><div>
+<div>第一行一个数n(1 &le; n &le; 30)，表示城市数量。城市从0标号到n-1。</div>
+<div>之后n行，每行n个数，表示城市之间的路程长度：第i行第j个数表示从城市i到城市j的直接距离（km），-1表示没</div>
+<div>有道路直接连接这两个城市。城市到自己的距离一定是0；其它的距离都为正数且不超过1000。最多只会有100条路</div>
+<div>。</div>
+<div>接下来一行一个数r(1 &le; r &le; 100)表示已经运送过的路线数量。</div>
+<div>接下来r行，每行三个整数s、d、t，表示从城市s到城市d花了t分钟。</div>
+<div>最后一行一个数q(1 &le; q &le; 100)表示询问数量。</div>
+<div>接下来q行每行2个数s和d表示运送的起始地点和目的地。</div>
+<div>你可以认为这r+q对起始地点和目的地之间都有一条唯一的最短路径。</div>
+</div></div><h2>Output</h2><div class=content><div>对于每个询问输出一行，先输出该询问的起始地点和目的地</div>
+<div>然后输出估计行程时间的最小值和最大值，绝对或相对误差在1e-6以内算作正确。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+0 50 -1<br />
+55 0 40<br />
+-1 40 0<br />
+1<br />
+0 2 90<br />
+3<br />
+0 1<br />
+1 2<br />
+1 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0 1 50.0 80.0<br />
+1 2 40.0 70.0<br />
+1 0 55.0 110.0</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Shimakaze%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>鸣谢Shimakaze提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4616'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4616'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4616'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

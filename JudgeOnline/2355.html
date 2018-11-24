@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2355. -- 夜间巡逻 </title><center><h2>2355: 夜间巡逻 </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2355'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2355'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2355'>Discuss</a>]</center><h2>Description</h2><div class=content><p>一个城市内有 n个地点需要夜间巡逻，而巡逻员只有WZK和他愉快的伙伴小Y 两人。为<br />
+了分工明确，两个人各自被划分一块凸多边形的区域（区域可能退化成一条直线、一个点），<br />
+这两块区域加起来必须覆盖这 n个地点。为了不在巡逻的时候吵起来，两个人负责的区域必<br />
+须严格不相交。WZK很大方地让小Y决定两块区域的具体边界，但小 Y 知道，如果WZK负责<br />
+的区域面积大于自己负责的面积，WZK肯定会不同意，但是小Y 又希望自己巡逻的区域尽量<br />
+小一些，因此他向你寻求帮助。</p></div><h2>Input</h2><div class=content><p>第一行，一个整数 n (1&lt;=n&lt;=50)表示两块区域加起来必须覆盖的点的个数。 <br />
+第二行，n个绝对值不超过 1000的整数，表示这n个点的横坐标。 <br />
+第三行，n个绝对值不超过 1000的整数，表示这n个点的纵坐标。</p></div><h2>Output</h2><div class=content><p>仅一行，为小 Y负责的局域的面积的最小可行值，保留一位小数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 <br />
+-1000 -1000 1000 1000 0 <br />
+-1000 1000 -1000 1000 0 <br />
+ </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1000000.0 </span></div><h2>HINT</h2>
+			<div class=content><p><p>一种最优的方案是 WZK负责(-1000,-1000) (-1000,1000)这两个点，这是一个面积为 0<br /><br />
+的退化成一条直线的区域，小 Y负责(1000,-1000) (1000,1000) (0,0)这三个点，这是一个<br /><br />
+面积为1000000的三角形区域。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2355'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2355'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2355'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

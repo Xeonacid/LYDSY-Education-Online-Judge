@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1623. -- [Usaco2008 Open]Cow Cars 奶牛飞车</title><center><h2>1623: [Usaco2008 Open]Cow Cars 奶牛飞车</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>667&nbsp;&nbsp;<span class=green>Solved: </span>467<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1623'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;编号为1到N的N只奶牛正各自驾着车打算在牛德比亚的高速公路上飞驰．高速公路有M(1&le;M&le;N)条车道．奶牛i有一个自己的车速上限Si(l&le;Si&le;1,000,000)．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;在经历过糟糕的驾驶事故之后，奶牛们变得十分小心，避免碰撞的发生．每条车道上，如果某一只奶牛i的前面有K只奶牛驾车行驶，那奶牛i的速度上限就会下降K*D个单位，也就是说，她的速度不会超过Si&nbsp;-&nbsp;kD(O&le;D&le;5000)，当然如果这个数是负的，那她的速度将是0．牛德比亚的高速会路法规定，在高速公路上行驶的车辆时速不得低于/(1&le;L&le;1,000,000)．那么，请你计算有多少奶牛可以在高速公路上行驶呢？</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第1行输入N，M，D，L四个整数，之后N行每行一个整数输入Si．</span></div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 23px;">N&lt;=50000</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;输出最多有多少奶牛可以在高速公路上行驶．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 1 1 5//三头牛开车过一个通道.当一个牛进入通道时，它的速度V会变成V-D*X(X代表在它前面有多少牛),它减速后，速度不能小于L<br />
+5<br />
+7<br />
+5<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+There are three cows with one lane to drive on, a speed decrease<br />
+of 1, and a minimum speed limit of 5.<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+Two cows are possible, by putting either cow with speed 5 first and the cow<br />
+with speed 7 second.<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1623'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1623'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1623'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

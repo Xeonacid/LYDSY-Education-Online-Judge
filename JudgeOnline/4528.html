@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4528. -- LotteryTree</title><center><h2>4528: LotteryTree</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4528'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4528'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4528'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你发行了一种彩票，并且有P人买了它。现在你要决定谁中奖。</div>
+<div>你已经决定了用一个有根树来选择优胜者。你需要做的事情被列在下面：</div>
+<div>&bull;参与者从1到P连续编号。</div>
+<div>&bull;首先，你将树画在一个矩形的白板上，并需要满足以下条件：</div>
+<div>&ndash;树上的每一个结点对应白板上的一个圆圈。圆圈很小以至于你可以</div>
+<div>忽略他们的大小。</div>
+<div>&ndash;树上的每条边对应连接两个圈的线段。没有两条边相交。</div>
+<div>&ndash;根节点一定画在白板的最上方。</div>
+<div>&ndash;对于每个结点，连向它们儿子们的边都要向下走。（换句话说，父亲</div>
+<div>必须画在儿子的上方。）</div>
+<div>&ndash;所有的叶子需画在白板的底边。</div>
+<div>&bull;接下来，你将白板的底边分成P段，每个叶子被恰好一条线段包含。将1</div>
+<div>到P这些个不同的数字分配给每个线段，然后将数字标注在线段内的叶子上。</div>
+<div>&bull;现在，你要重复下述过程：找到一个空结点X，它的所有儿子都标注了数</div>
+<div>字；如果有多个这样的结点，随机选择一个；然后在X的儿子中随机选</div>
+<div>择一个，将这个儿子的数字标注在X上；当根节点被标上数字时过程结</div>
+<div>束。</div>
+<div>你会获得整数P和用于描述你使用的树的数组tree。这棵树有N个结点，</div>
+<div>从0到N-1编号。结点0是树根。对于每个其他结点，它父亲的编号小于它的</div>
+<div>编号。更正式的说，对于在1和N-1之间的i，tree[i]是结点i父亲的编号。</div>
+<div>你想要让抽奖公平，即，保证每个参与者有相同的机率赢取大奖。为此，你可以</div>
+<div>在合法的要求下选择怎样画这棵树，以及怎样分配数字到叶子上。回答&ldquo;YES&rdquo;</div>
+<div>（不需要引号）如果抽奖可以公平，否则回答&ldquo;NO&rdquo;。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>多组数据，读入到文件结束。</div>
+<div>每组数据第一行读入两个整数N和P&mdash;&mdash;所用树的大小以及参与者人数。</div>
+<div>第二行读入N-1个整数，描述数组tree；其中第i个整数为tree[i]。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>每组数据输出单独一行一个单词&ldquo;YES&rdquo;或&ldquo;NO&rdquo;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+0 0 0<br />
+10 2<br />
+0 0 0 1 1 2 2 3 3<br />
+10 3<br />
+0 0 1 1 2 2 4 4 4<br />
+9 3<br />
+0 0 1 1 1 3 3 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+YES<br />
+NO<br />
+NO</span></div><h2>HINT</h2>
+			<div class=content><p><p>P&le;N&le;100</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4528'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4528'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4528'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

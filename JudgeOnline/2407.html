@@ -1,0 +1,63 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2407. -- 探险</title><center><h2>2407: 探险</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>296&nbsp;&nbsp;<span class=green>Solved: </span>147<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2407'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2407'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2407'>Discuss</a>]</center><h2>Description</h2><div class=content><div>探险家小T好高兴！X国要举办一次溶洞探险比赛，获奖者将得到丰厚奖品哦！小T虽然对奖品不感兴趣，但是这个大振名声的机会当然不能错过！</div>
+<div>比赛即将开始，工作人员说明了这次比赛的规则：每个溶洞和其他某些溶洞有暗道相连。两个溶洞之间可能有多条道路，也有可能没有，但没有一条暗道直接从自己连到自己。参赛者需要统一从一个大溶洞出发，并再次回到这个大溶洞。</div>
+<div>如果就这么点限制，那么问题就太简单了，可是举办方又提出了一个条件：<b>不能经过同一条暗道两次</b>。这个条件让大家犯难了。这该怎么办呢？</div>
+<div>到了大溶洞口后，小T愉悦地发现这个地方他曾经来过，他还记得有哪些暗道，以及通过每条暗道的时间。小T现在向你求助，你能帮他算出至少要多少时间才能回到大溶洞吗？</div></div><h2>Input</h2><div class=content><p>第一行两个数<i>n</i><i>，m</i>表示溶洞的数量以及暗道的数量。</p>
+<div>接下来m行，每行4个数<i>s</i><i>、t</i><i>、w</i><i>、v</i>，表示一个暗道连接的两个溶洞<i>s</i><i>、t</i>，这条暗道正着走（<i>s </i><i><span>&agrave;</span> t</i>）的所需要的时间<i>w</i>，倒着走（<i>t </i><i><span>&agrave;</span> s</i>）所需要的时间<i>v</i>。由于溶洞的相对位置不同，<i>w</i>与<i>v</i>可能不同。</div></div><h2>Output</h2><div class=content><div>输出一行一个数t，表示最少所需要的时间。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+1 2 2 1<br />
+2 3 4 5<br />
+3 1 3 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8</span></div><h2>HINT</h2>
+			<div class=content><p><p class="NOI" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><font face="Times New Roman" size="3">N&lt;=10000,M&lt;=200000,1&lt;=W,V&lt;=10000</font></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2407'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2407'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2407'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

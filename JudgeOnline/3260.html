@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3260. -- 跳</title><center><h2>3260: 跳</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>270&nbsp;&nbsp;<span class=green>Solved: </span>147<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3260'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3260'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3260'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>邪教喜欢在各种各样空间内跳。现在，邪教来到了一个二维平面。</div>
+<div>在这个平面内，如果邪教当前跳到了(x,y)，那么他下一步可以选择跳到以下4个点：</div>
+<div>(x-1,y),(x+1,y),(x,y-1),(x,y+1)。</div>
+<div>而每当邪教到达一个点，他需要耗费一些体力，</div>
+<div>假设到达(x,y)需要耗费的体力用C(x,y)表示。</div>
+<div>对于C(x,y)，有以下几个性质：</div>
+<div>1、若x=0或者y=0，则C(x,y)=1。</div>
+<div>2、若x&gt;0且y&gt;0，则C(x,y)=C(x,y-1)+C(x-1,y)。</div>
+<div>3、若x&lt;0且y&lt;0，则C(x,y)=无穷大。</div>
+<div>现在，邪教想知道从(0,0)出发到(N,M)，最少花费多少体力</div>
+<div>到达(0,0)点花费的体力也需要被算入）。</div>
+<div>由于答案可能很大，只需要输出答案对10^9+7取模的结果。</div>
+</div></div><h2>Input</h2><div class=content><div>读入两个整数 N ，M，表示邪教想到达的点。 &nbsp;</div>
+<div>0&lt;=N, M&lt;=10^12 &nbsp; ，N*M&lt;=10^12</div></div><h2>Output</h2><div class=content><p><span style="line-height: 19px; font-size: 12pt;">输出仅一个整数，表示邪教需要花费的最小体力对</span><span style="line-height: 19px; font-size: 12pt;">&nbsp;10^9+7</span><span style="line-height: 19px; font-size: 12pt;">取模的结果。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1  2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3260'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3260'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3260'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

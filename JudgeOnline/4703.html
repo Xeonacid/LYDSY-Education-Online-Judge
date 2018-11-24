@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4703. -- 幸运数</title><center><h2>4703: 幸运数</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>31&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4703'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4703'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4703'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你应该知道，什么是最大公约数：对于任意两个非零整数x，y，若整数d能同时被x和y整除，则称d为x与y的公约数</div>
+<div>。定义x与y的最大公约数gcd(x, y)为x与y的最大的公约数。如gcd(6, 9) = 3，gcd(12, 16) = 4，gcd(25, 32) =</div>
+<div>&nbsp;1，等等。这里，我们定义什么是幸运数：对于一个正整数d，我们使用di表示d在十进制表示下，按从低位到高位</div>
+<div>顺序的第i位数字。设F(d)表示d的奇数位的数字之和，即F(d) = d1 + d3 + d5 + &hellip;&hellip;；设G(d)表示d的偶数位的</div>
+<div>数字之和，即G(d) = d2 + d4 + d6 + &hellip;&hellip;；若F(d)与G(d)均大于0，且F(d)与G(d)的最大公约数不超过K，则称d</div>
+<div>为幸运数。其中K是一个已知的常数。举个例子来说，若d = 641，则d1 = 1，d2 = 4，d3 = 6，F(641) = 1 + 6 =</div>
+<div>&nbsp;7，G(641) = 4。此时F(d)与G(d)的最大公约数即gcd(7, 4)等于1。则当K不小于1时641是幸运数。请你回答下面</div>
+<div>的问题：对于给定的K，在不小于L并且不超过R的所有整数中，有多少个数是幸运数？注意，输入文件包含多组测</div>
+<div>试数据。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个整数T，表示有T组测试数据。</div>
+<div>接下来T行，每行包含三个整数K、L、R，表示一次询问。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出T行，每行一个整数，依次表示每组测试数据的答案。</div>
+<div>1 &le; L &le; R &le; 10^18， 1 &le; K &le; 10^2，1 &le; T &le; 1000</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 1 10<br />
+2 28 34<br />
+100 987654321 987654321<br />
+1 1 50000<br />
+1 50001 100000</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+5<br />
+1<br />
+30298<br />
+30309<br />
+【样例解释】<br />
+K = 1时，1到10之间不存在幸运数。<br />
+K = 2时，28到34之间的幸运数有28、29、31、32、34，共5个。<br />
+K = 100时，987654321是幸运数。<br />
+K = 1时，1到50000之间的幸运数有30298个，50001到100000之间的幸运数有30309个。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4703'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4703'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4703'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1351. -- [Baltic2006]COUNTRIES</title><center><h2>1351: [Baltic2006]COUNTRIES</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>143&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1351'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1351'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1351'>Discuss</a>]</center><h2>Description</h2><div class=content><div>This problem considers how mighty countries arise from humble beginnings. Consider a two-dimensional map of the area. On this map there are n cities. Each city i is in a distinct location with coordinates (xi, yi) on the map. The city has also a number si of soldiers in it under the command of a general.</div>
+<div>The influence city i exerts to another location (x, y) is computed as si divided by the squared distance between it and (x, y). It is as if the mass of soldiers in city i exerted a gravitational pull to all map locations around it. City i is threatened by another city j if the influence exerted by city j on the location (xi, yi) of city i exceeds its number of soldiers si: then city j can dispatch enough soldiers to overpower all the soldiers defending city i. If city i is not threatened by any other city j, then its grateful citizens elect its invincible general as their king, and turn their city into the capital of his kingdom.</div>
+<div>On the other hand, if some city j threatening city i exerts strictly more influence on its location (xi, yi) than any other city k, then the citizens of city i have no choice: city I must surrender to city j. Henceforth city i must obey the same capital as city j obeys; however, the si soldiers in city i do not join the army of city j or the capital. Otherwise city i is saved by mutual distrust of the equally threatening cities j and k: If one of them would attack and overpower city i, then the other would in turn attack and overpower the battle-weary first attackers. However, the citizens of city i can no longer elect its general as their king, because he has failed in his duty to keep the city safe from threats. Thus they must turn their city into the capital of a democracy instead.</div>
+<div>Your task is to write a program, which takes the information about the cities on the map as inputs, and outputs for each city i one of the three outcomes:</div>
+<div>&bull; It is the capital of a kindgom.</div>
+<div>&bull; It is the capital of a democracy.</div>
+<div>&bull; It obeys city j as its capital.</div></div><h2>Input</h2><div class=content><div style="font-size: 11.8181819915771px;">The input is read from a text file named countries.in. The first line consists of one integer 1 &le; n &le; 1000, the number of cities. The following n lines give the information on the n cities, each city as its own line. Line i + 1 gives the information on city i as the three integers xi, yi, si which are separated by single space characters. All these numbers are in range 0 &le; xi, yi, si &le; 1000.</div></div><h2>Output</h2><div class=content><div style="font-size: 11.8181819915771px;">The output is written into a text file named countries.out. The output consists of n lines, where line i consists of the outcome for city i:</div>
+<div style="font-size: 11.8181819915771px;">&bull; The character K if city i is the capital of a kingdom.</div>
+<div style="font-size: 11.8181819915771px;">&bull; The character D if city i is the capital of a democracy.</div>
+<div style="font-size: 11.8181819915771px;">&bull; The number 1 &le; j &le; n of the city which city i obeys as its capital if city i had to surrender.</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+2 5 14<br />
+2 3 2<br />
+3 2 7<br />
+1 1 2<br />
+2 1 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>K<br />
+D<br />
+K<br />
+3<br />
+3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1351'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1351'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1351'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

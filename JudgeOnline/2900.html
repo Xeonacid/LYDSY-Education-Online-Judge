@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2900. -- 好玩的数字游戏</title><center><h2>2900: 好玩的数字游戏</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>105&nbsp;&nbsp;<span class=green>Solved: </span>63<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2900'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2900'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2900'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">TK</span><span style="font-size: 12pt">在虐题的同时，也喜欢玩游戏。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">现在，有这样的一个游戏，规则是这样的：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">先随机给出一个数字</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">，然后你在操场上把</span><span style="font-size: 12pt">1</span><span style="font-size: 12pt">到</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">的所有数字写成一排，就像这样：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">123456789101112131415&hellip;.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">接着你在每个数字前面添上加减号，每逢排在奇数位上的数字，就写上加号；每逢排在偶数位上的数字，就写上减号。恩</span><span style="font-size: 12pt">&hellip;</span><span style="font-size: 12pt">最后你得到一个超级长的式子。并且可以算出这个式子的结果。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">TK</span><span style="font-size: 12pt">觉得这个游戏很有意思，于是他没日没夜地玩啊玩啊玩啊</span><span style="font-size: 12pt">&hellip;</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">或许你觉得这个游戏没有意思</span><span style="font-size: 12pt">&hellip;</span><span style="font-size: 12pt">恩</span><span style="font-size: 12pt">&hellip;</span><span style="font-size: 12pt">但是，如果你是</span><span style="font-size: 12pt">TK</span><span style="font-size: 12pt">，对于给定的</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">，你能够算出来最后的结果应该是多少么？</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: 12pt">多组数据。每个测试点的数据组数不超过</span><span style="font-size: 12pt">1000</span><span style="font-size: 12pt">组。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">每一行仅一个正整数</span><span style="font-size: 12pt">N</span><span style="font-size: 12pt">。保证没有多余的什么奇怪的字符。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">每个测试点的数据最后一行一定是数字</span><span style="font-size: 12pt">0</span><span style="font-size: 12pt">。代表这个测试点的结束。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">对于每组数据，输出相应的结果。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12<br />
+0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 15pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">【样例说明】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 15pt; mso-fareast-font-family: 华文细黑"><o:p></o:p></span></b></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><span style="mso-tab-count: 1"><font face="Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">对于</span></font><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">12</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">这个数字：</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 20.25pt"><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">写成一行就是：</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">123456789101112<o:p></o:p></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 20.25pt"><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">那么，形成的表达式就是：</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">+1-2+3-4+5-6+7-8+9-1+0-1+1-1+2=5.<o:p></o:p></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 15pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">【数据范围】</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 15pt; mso-fareast-font-family: 华文细黑"><o:p></o:p></span></b></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font size="3"><span lang="EN-US"><span style="mso-tab-count: 1"><font face="Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">对于</span></font><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">10%</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的数据：保证第一行是数字</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">100</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，第二行是</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">0.<o:p></o:p></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><span style="mso-tab-count: 1"><font face="Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">对于</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">20%</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的数据：保证数据组数不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">10</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">N</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">10^5<o:p></o:p></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><span style="mso-tab-count: 1"><font face="Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">对于</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">50%</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的数据：保证数据组数不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">20</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">N</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">10^10<o:p></o:p></font></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><span style="mso-tab-count: 1"><font face="Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">对于</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">100%</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">的数据：保证数据组数不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">100</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">，</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">N</font></span><span style="font-size: 12pt; font-family: 华文细黑; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri">不超过</span><span lang="EN-US" style="font-size: 12pt; mso-fareast-font-family: 华文细黑"><font face="Calibri">10^15<o:p></o:p></font></span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2900'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2900'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2900'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

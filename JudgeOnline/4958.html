@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4958. -- [Wf2017]Tarot Sham Boast</title><center><h2>4958: [Wf2017]Tarot Sham Boast</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>34&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4958'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4958'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4958'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你的对手太坏了! 在每年的年度石头剪刀布锦标赛上,你总是能进总决赛。 (你的石头技巧无与伦比,你的布震撼人</div>
+<div>心! 不过你的剪刀需要练练) 但是每年,你的对手总是能打败你,即使他的操作看上去是完全是随机的!而且他发布</div>
+<div>新闻声称他无可匹敌。他的秘诀是什么?幸运的是,你认为你已经找到了。就在今年,锦标赛之前的时候,你发现他拜</div>
+<div>访了城里的许多萨满。啊哈! 原来他在使用超自然力量对付你! 你觉得这次可以好好玩一玩了。所以你拜访了一群</div>
+<div>算命师,他们用塔罗牌帮你预测了对手在比赛中会使用的操作序列。然而,你最初的兴奋已经过去了,你现在感觉自</div>
+<div>己有点智障。这怎么可能赢?最后你才发现你已经对这种随机预测的欺诈行为付出了许多钱。好吧,你可能会在比赛</div>
+<div>中留意其中一些预测。但是用哪些预测好呢?在总决赛中,你和你的对手将玩n轮石头剪刀布。每一轮中,你和你的对</div>
+<div>手会从三种选择 (石头、剪刀、布) 中选择一个操作。根据你们的选择来确定每一轮的胜利者 (实际上与本题没太</div>
+<div>大关系) 。给定总决赛的长度和一些预测,请你按照在总决赛中作为你对手操作的一个连续子序列出现的可能性排</div>
+<div>序它们,这里假设对方每一轮的选择是独立随机的。</div></div><h2>Input</h2><div class=content><div>第一行包含两个整数n(1&le;n&le;10^6)和s(1&le;s&le;10),分别表示总决赛的轮数和序列的数量。</div>
+<div>接下来s行,每行描述一种预测,包含一个由'R','P','S' 组成的字符串。</div>
+<div>所有的预测拥有相同的长度,长度在1到n之间(含边界),且不会超过10^5 。</div></div><h2>Output</h2><div class=content><div>输出按照在总决赛出现的可能性降序输出所有的预测。</div>
+<div>对于可能性相同的预测,按照他们在输入中的顺序输出。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例1<br />
+3 4<br />
+PP<br />
+RR<br />
+PS<br />
+SS<br />
+样例2<br />
+20 3<br />
+PRSPS<br />
+SSSSS<br />
+PPSPP</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例1<br />
+PS<br />
+PP<br />
+RR<br />
+SS<br />
+样例2<br />
+PRSPS<br />
+PPSPP<br />
+SSSSS</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Tangjz%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91'>鸣谢Tangjz提供翻译</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4958'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4958'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4958'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

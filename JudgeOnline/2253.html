@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2253. -- [2010 Beijing wc]纸箱堆叠 </title><center><h2>2253: [2010 Beijing wc]纸箱堆叠 </h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>622&nbsp;&nbsp;<span class=green>Solved: </span>217<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2253'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2253'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2253'>Discuss</a>]</center><h2>Description</h2><div class=content><p>P 工厂是一个生产纸箱的工厂。纸箱生产线在人工输入三个参数 n p a , , 之后，<br />
+即可自动化生产三边边长为</p>
+<p>(a mod P,a^2 mod p,a^3 mod P)<br />
+(a^4 mod p,a^5 mod p,a^6 mod P)<br />
+....<br />
+(a^(3n-2) mod p,a^(3n-1) mod p,a^(3n) mod p)</p>
+<p>的n个纸箱。在运输这些纸箱时，为了节约空间，必须将它们嵌套堆叠起来。<br />
+一个纸箱可以嵌套堆叠进另一个纸箱当且仅当它的最短边、次短边和最长边<br />
+长度分别严格小于另一个纸箱的最短边、次短边和最长边长度。这里不考虑<br />
+任何旋转后在对角线方向的嵌套堆叠。 <br />
+你的任务是找出这n个纸箱中数量最多的一个子集，使得它们两两之间都可<br />
+嵌套堆叠起来。</p></div><h2>Input</h2><div class=content><p>输入文件的第一行三个整数，分别代表&nbsp;a,p,n&nbsp;&nbsp;<br />
+</p></div><h2>Output</h2><div class=content><p>&nbsp;<br />
+输出文件仅包含一个整数，代表数量最多的可嵌套堆叠起来的纸箱的个数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata> 10 17 4 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> <br />
+2 <br />
+【样例说明】 <br />
+生产出的纸箱的三边长为(10, 15, 14), (4, 6, 9) , (5, 16, 7), (2, 3, 13)。其中只有<br />
+(4, 6, 9)可堆叠进(5, 16, 7)，故答案为 2。<br />
+2<=P<=2000000000,1<=a<=p-1,a^k mod p<>0,ap<=2000000000,1<=N<=50000 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2253'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2253'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2253'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

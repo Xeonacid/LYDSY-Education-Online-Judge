@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4102. -- [Usaco2015 Open]Bessie</title><center><h2>4102: [Usaco2015 Open]Bessie</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>197&nbsp;&nbsp;<span class=green>Solved: </span>115<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4102'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4102'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4102'>Discuss</a>]</center><h2>Description</h2><div class=content><div>For Bessie the cow&rsquo;s birthday, Farmer John has given her free reign over one of his best fields to eat grass.</div>
+<div>The field is covered in N patches of grass (1&le;N&le;1000), conveniently numbered 1&hellip;N, that each have a distinct</div>
+<div>quality value. If Bessie eats grass of quality Q, she gains Q units of energy. Each patch is connected to up to 10</div>
+<div>neighboring patches via bi-directional paths, and it takes Bessie E units of energy to move between adjacent</div>
+<div>patches (1&le;E&le;1,000,000). Bessie can choose to start grazing in any patch she wishes, and she wants to stop</div>
+<div>grazing once she has accumulated a maximum amount of energy.</div>
+<div>Unfortunately, Bessie is a picky bovine, and once she eats grass of a certain quality, she&rsquo;ll never eat grass at or</div>
+<div>below that quality level again! She is still happy to walk through patches without eating their grass; in fact, she</div>
+<div>might find it beneficial to walk through a patch of high-quality grass without eating it, only to return later for a tasty snack.</div>
+<div>Please help determine the maximum amount of energy Bessie can accumulate.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">为了庆祝贝茜的生日,FJ给她吃草的自由. N块草地,标号1到N(1&lt;=N&lt;=1000),草地有营养价值.当贝茜走到这个草地,可以获得等于这块草地的营养价值的能量. 每块草地最多有10条双向边,每走一条边,贝茜花费E的能量. 贝茜拿可以从任何地方出发,当她不能获得更多的能量的时候她就会停止. 然而因为贝茜挑食,她每次不会吃低于或等于上次的营养价值的草地,所以她获得的能量是严格上升的,当然她可以选择只是经过一块草地而不吃草.</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">算出贝茜能够获得的最大能量.</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;"></div>
+</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N and E. Each of the remaining N lines describe a patch of grass.</div>
+<div>They contain two integers Q and D giving the quality of the patch (in the range 1&hellip;1,000,000) and</div>
+<div>its number of neighbors. The remaining D numbers on the line specify the neighbors.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">第一排两个数 N和E</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">剩下N排,每排包含Q,D两个数字,Q代表这个草地的营养价值,D代表这个点的边数,剩下D个数表示于这块草地相邻的草地.</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;"></div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Please output the maximum amount of energy Bessie can accumulate.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">一个整数</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">最大权值</div>
+</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 2<br />
+4 1 2<br />
+1 3 1 3 4<br />
+6 2 2 5<br />
+5 2 2 5<br />
+2 2 3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+Bessie starts at patch 4 gaining 5 units of energy from the grass there. She then takes the path to patch 5 losing 2 units of energy during her travel. She refuses to eat the lower quality grass at patch 5 and travels to patch 3 again losing 2 units of energy. Finally she eats the grass at patch 3 gaining 6 units of energy for a total of 7 energy.<br />
+Note tha the sample case above is different from test case 1 when you submit.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;求译文!请发至lydsy2012@163.com</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver%20%E9%B8%A3%E8%B0%A2yeguanghao%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Silver 鸣谢yeguanghao提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4102'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4102'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4102'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

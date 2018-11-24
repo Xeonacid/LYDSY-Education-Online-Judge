@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2069. -- [POI2004]ZAW</title><center><h2>2069: [POI2004]ZAW</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>314&nbsp;&nbsp;<span class=green>Solved: </span>147<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2069'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2069'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2069'>Discuss</a>]</center><h2>Description</h2><div class=content>在Byte山的山脚下有一个洞穴入口. 这个洞穴由复杂的洞室经过隧道连接构成. 洞穴的入口是一条笔直通向“前面洞口”的道路. 隧道互相都不交叉(他们只在洞室相遇). 两个洞室要么就通过隧道连接起来,要么就经过若干隧道间接的相连. 
+现在决定组织办一个'King's of Byteotia Cup' 比赛. 参赛者的目标就是任意选择一条路径进入洞穴并尽快出来即可. 一条路径必须经过除了“前面洞口”之外还至少要经过其他一个洞室.一条路径中一个洞不能重复经过(除了“前面洞室”以外),类似的一条隧道也不能重复经过.
+一个著名的洞穴探险家 Byteala 正准备参加这个比赛. Byteala 已经训练了数月而且他已获得了洞穴系统的一套详细资料. 对于每条隧道他都详细计算了从两个方向经过所需要的时间. 经过一个洞室的时间很短可以忽略不记. 现在Byteala 向计算一条符合条件的最优路径.
+</div><h2>Input</h2><div class=content>第一行有两个数n 和 m (3 <= n <= 5000, 3 <= m <= 10000) 分别表示洞室的数目以及连接他们的隧道的数目. 洞室从1 到 n编号. “前面洞室”的编号为1. 接下来m 行描述了所有的隧道. 每行四个整数a,b,c,d 表示从洞室a到洞室b需要c分钟的时间,而从洞室b到洞室a需要d分钟的时间, 1 <= a,b <= n, a <> b, 1 <= c,d <= 10000. 你可以假设符合要求的路径肯定存在.
+</div><h2>Output</h2><div class=content>输出一行,最少需要多少时间完成比赛.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+1 2 4 3<br />
+2 3 4 2<br />
+1 3 1 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Stage&#32;1'>Stage 1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2069'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2069'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2069'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

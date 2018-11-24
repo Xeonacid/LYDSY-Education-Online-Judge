@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5211. -- [Zjoi2018]线图</title><center><h2>5211: [Zjoi2018]线图</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5211'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5211'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5211'>Discuss</a>]</center><h2>Description</h2><div class=content><div>九条可怜是一个热爱出题的女孩子。今天可怜想要出一道和图论相关的题。在一张无向图G上，我们可以对它进行</div>
+<div>一些非常有趣的变换，比如说对偶，又或者说取补。这样的操作往往可以赋予一些传统的问题新的活力。例如求补</div>
+<div>图的连通性、补图的最短路等等，都是非常有趣的问题。最近可怜知道一种新的变换：求原图的线图(linegraph)</div>
+<div>对于无向图G=&lt;V,E&gt;它的线图L(G)也是一个无向图：1:它的点集大小为|E|，每个点唯一对应着原图的一条边。2:两</div>
+<div>个点之间有边当且仅当这两个点对应的边在原图上有公共点（注意不会有自环）。下图是一个简单的例子，左图是</div>
+<div>原图，右图是它对应的线图。其中点1对应原图的边(1,2)，点2对应(1,4)，点3对应(1,3)，点4对应(3,4)</div>
+<div><img src="upload/201803/1(2).png" width="289" height="135" alt="" /></div>
+<div>经过一些初步的摸索，可怜发现线图的性质要比补图复杂很多，其中突出的一点就是补图的补图会变回原图，而L(</div>
+<div>L(G))在绝大部分情况下不等于G，甚至在大多数情况下它的点数和边数会以很快的速度增长。因此，可怜想要从最</div>
+<div>简单的入手，即计算L<sup>k</sup>(G)的点数（L<sup>k</sup>(G)表示对G求k次线图）。然而遗憾的是，即使是这个问题，对可怜来说还是</div>
+<div>太困难了，因此她进行了一定的弱化。她给出了一棵n个节点的树T，现在她想让你计算一下L<sup>k</sup>(T)的点数。</div>
+<div></div></div><h2>Input</h2><div class=content><div>第一行输入两个整数n,k，表示树的点数以及连续求线图的次数。</div>
+<div>接下来n?1行每行两个整数u,v表示树上的一条边。</div>
+<div>2 &le; n &le; 5000</div>
+<div>k&lt;=9</div>
+<div></div></div><h2>Output</h2><div class=content><p>输出一行一个整数，表示答案对998244353取模后的值</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3<br />
+1 2<br />
+2 3<br />
+2 5<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;<img src="upload/201803/2.jpg" width="613" height="251" alt="" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5211'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5211'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5211'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

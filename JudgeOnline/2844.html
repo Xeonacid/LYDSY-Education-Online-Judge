@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2844. -- albus就是要第一个出场</title><center><h2>2844: albus就是要第一个出场</h2><span class=green>Time Limit: </span>6 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2093&nbsp;&nbsp;<span class=green>Solved: </span>863<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2844'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2844'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2844'>Discuss</a>]</center><h2>Description</h2><div class=content><div>已知一个长度为n的正整数序列A（下标从1开始）， 令 S = { x | 1 &lt;= x &lt;= n }, S 的幂集2^S定义为S 所有子</div>
+<div>集构成的集合。定义映射 f : 2^S -&gt; Zf(空集) = 0f(T) = XOR A[t] , 对于一切t属于T现在albus把2^S中每个集</div>
+<div>合的f值计算出来， 从小到大排成一行， 记为序列B（下标从1开始）。 给定一个数， 那么这个数在序列B中第1</div>
+<div>次出现时的下标是多少呢？</div></div><h2>Input</h2><div class=content><p>第一行一个数n, 为序列A的长度。接下来一行n个数， 为序列A， 用空格隔开。最后一个数Q， 为给定的数.</p></div><h2>Output</h2><div class=content><div>共一行， 一个整数， 为Q在序列B中第一次出现时的下标模10086的值.</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1 2 3<br />
+1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+样例解释：<br />
+N = 3, A = [1 2 3]<br />
+S = {1, 2, 3}<br />
+2^S = {空, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}<br />
+f(空) = 0<br />
+f({1}) = 1<br />
+f({2}) = 2<br />
+f({3}) = 3<br />
+f({1, 2}) = 1 xor 2 = 3<br />
+f({1, 3}) = 1 xor 3 = 2<br />
+f({2, 3}) = 2 xor 3 = 1<br />
+f({1, 2, 3}) = 0<br />
+所以<br />
+B = [0, 0, 1, 1, 2, 2, 3, 3]<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据范围：<br /><br />
+1 &lt;= N &lt;= 10,0000<br /><br />
+其他所有输入均不超过10^9</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%B9%96%E5%8C%97%E7%9C%81%E9%98%9F%E4%BA%92%E6%B5%8B'>湖北省队互测<br />
+<br />
+</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2844'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2844'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2844'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1104. -- [POI2007]洪水pow</title><center><h2>1104: [POI2007]洪水pow</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>585&nbsp;&nbsp;<span class=green>Solved: </span>277<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1104'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1104'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1104'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　AKD市处在一个四面环山的谷地里。最近一场大暴雨引发了洪水，AKD市全被水淹没了。Blue Mary，AKD市的市<br />
+长，召集了他的所有顾问（包括你）参加一个紧急会议。经过细致的商议之后，会议决定，调集若干巨型抽水机，<br />
+将它们放在某些被水淹的区域，而后抽干洪水。你手头有一张AKD市的地图。这张地图是边长为m*n的矩形，被划分<br />
+为m*n个1*1的小正方形。对于每个小正方形，地图上已经标注了它的海拔高度以及它是否是AKD市的一个组成部分<br />
+。地图上的所有部分都被水淹没了。并且，由于这张地图描绘的地面周围都被高山所环绕，洪水不可能自动向外排<br />
+出。显然，我们没有必要抽干那些非AKD市的区域。每个巨型抽水机可以被放在任何一个1*1正方形上。这些巨型抽<br />
+水机将持续地抽水直到这个正方形区域里的水被彻底抽干为止。当然，由连通器原理，所有能向这个格子溢水的格<br />
+子要么被抽干，要么水位被降低。每个格子能够向相邻的格子溢水，&ldquo;相邻的&rdquo;是指（在同一高度水平面上的射影<br />
+）有公共边。</p></div><h2>Input</h2><div class=content><p>　　第一行是两个数m,n(1&lt;=m，n&lt;=1000). 以下m行，每行n个数，其绝对值表示相应格子的海拔高度；若该数为正<br />
+，表示他是AKD市的一个区域；否则就不是。请大家注意:所有格子的海拔高度其绝对值不超过1000,且可以为零.</p></div><h2>Output</h2><div class=content><p>　　只有一行，包含一个整数，表示至少需要放置的巨型抽水机数目。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 9<br />
+-2 -2 -1 -1 -2 -2 -2 -12 -3<br />
+-2 1 -1 2 -8 -12 2 -12 -12<br />
+-5 3 1 1 -12 4 -6 2 -2<br />
+-5 -2 -2 2 -12 -3 4 -3 -1<br />
+-5 -6 -2 2 -12 5 6 2 -1<br />
+-4 -8 -8 -10 -12 -8 -6 -6 -4<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p><p><img border="0" alt="" src="images/1104.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1104'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1104'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1104'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

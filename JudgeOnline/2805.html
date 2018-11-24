@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2805. -- [Ctsc2012]Circuit</title><center><h2>2805: [Ctsc2012]Circuit</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>151&nbsp;&nbsp;<span class=green>Solved: </span>115<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2805'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2805'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2805'>Discuss</a>]</center><h2>Description</h2><div class=content><p><img alt="" src="upload/201205/1(1).jpg" /></p>
+<p><img alt="" src="upload/201205/2(1).jpg" /></p></div><h2>Input</h2><div class=content><p class="MsoNormal" align="left" style="margin: 12.75pt -3pt 0pt 42pt; line-height: 13.75pt; text-align: left; mso-line-height-rule: exactly; tab-stops: 95.0pt 141.0pt 264.05pt; mso-layout-grid-align: none"><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">第一行输入N,M分别表示树的节点数和操作<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 10pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><font face="Times New Roman"><span style="mso-spacerun: yes">&nbsp;</span><o:p></o:p></font></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm -3pt 0pt 18pt; line-height: 13.75pt; text-align: left; mso-line-height-rule: exactly; tab-stops: 96.1pt 118.2pt 206.4pt 344.9pt 363.25pt; mso-layout-grid-align: none"><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">个数。接下来</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1">&nbsp; </span>N</span></i><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">-1</span></font><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">行，每行两个数</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span>u</span></i><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">,<i style="mso-bidi-font-style: normal">v</i></span></font><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">，表示有一条连接节点</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span>u</span></i><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">,<i style="mso-bidi-font-style: normal">v</i></span></font><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">的边，这条边</span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">上恰好包含一个电阻。</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman">&nbsp;</font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">接下来</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-tab-count: 1">&nbsp; </span>M</font></span></i><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">行，每行一个命令，格式见题目描述。</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" align="left" style="margin: 12.75pt -3pt 0pt 42pt; line-height: 13.75pt; text-align: left; mso-line-height-rule: exactly; tab-stops: 107.25pt 219.5pt 231.35pt; mso-layout-grid-align: none"><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">对于每个</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-tab-count: 1">&nbsp;&nbsp; </span>Q</font></span><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">命令，输出一个数表示此刻该点的电压</span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">值。你可以输出任意多位的小数，只要你的答案和标准答案相差不超过</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman">10-3</font></span><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><span style="mso-tab-count: 1"> </span></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">就算</span><span lang="EN-US" style="font-size: 10pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><font face="Times New Roman"><span style="mso-spacerun: yes">&nbsp;</span></font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">合法。</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4  3<br />
+1  2<br />
+2  3<br />
+2  4 Q 2 <br />
+C 2 4 5  Q 2 <br />
+ <br />
+ </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.0000000000 -1.6666666666 <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img alt="" src="upload/201205/1(2).jpg" /></p><br />
+<p class="MsoNormal" align="left" style="margin: 0cm -1.5pt 0pt 42pt; text-indent: 0cm; line-height: 13.75pt; text-align: left; mso-line-height-rule: exactly; tab-stops: 227.65pt 289.7pt; mso-layout-grid-align: none; mso-list: l0 level1 lfo1"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><span style="mso-list: Ignore"><span style="font: 7pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman">3 &le; <i style="mso-bidi-font-style: normal">N</i>,<i style="mso-bidi-font-style: normal">M</i> &le; 50000</font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">，</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </span>1 &le; <i style="mso-bidi-font-style: normal">u</i>,<i style="mso-bidi-font-style: normal">v</i> &le; <i style="mso-bidi-font-style: normal">n</i></font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">，</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1 &le; <i style="mso-bidi-font-style: normal">w</i> &le; 10</font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">，树中最长链的长<span lang="EN-US"><o:p></o:p></span></span></p><br />
+<p class="MsoNormal" align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 1pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 10pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><font face="Times New Roman"><span style="mso-spacerun: yes">&nbsp;</span><o:p></o:p></font></span></p><br />
+<p class="MsoNormal" align="left" style="margin: 0cm -3pt 0pt 18pt; line-height: 14.25pt; text-align: left; mso-line-height-rule: exactly; tab-stops: 71.0pt; mso-layout-grid-align: none"><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">度不超过</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-tab-count: 1">&nbsp; </span>50</font></span><span style="font-size: 12pt; color: black; font-family: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: Arial; mso-font-kerning: 0pt">。</span><span lang="EN-US" style="font-size: 12pt; color: black; mso-bidi-font-family: Arial; mso-font-kerning: 0pt"><font face="Times New Roman"> <o:p></o:p></font></span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2805'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2805'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2805'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

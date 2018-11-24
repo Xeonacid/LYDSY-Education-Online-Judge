@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3906. -- Trie</title><center><h2>3906: Trie</h2><span class=green>Time Limit: </span>6 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3906'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3906'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3906'>Discuss</a>]</center><h2>Description</h2><div class=content><p><img width="1229" height="499" src="upload/201503/v2.PNG" alt="" /></p></div><h2>Input</h2><div class=content><p>The first line contains an integer T (T &le; 5), denoting the number of the test cases.For each test case, the first line contains an integer n(1 &le; n &le; 105).From the second to the n-th line, this n - 1 lines describe Bob' s Trie. The i-th line contains an integer u(u &lt; i), and a lowercase letter c, which means that the father of node i is node u and the character on that edge is c. We ensure that for each node i, letters on edges connecting i and its children are all different.The next line contains an integer m(m &le; 105), which means there are m operations.The next m lines describe all operations. In each line, the first integer indicates the type of this operation. 1 means Bob will add a new trait and 2 means Bob is asking you a question. The second integer k is the size of set P , and the next k integers are the elements of P. We ensure that these k integers are different, and they are all between 1 and n. The total size of the m sets will not be larger than 5*10^5.</p></div><h2>Output</h2><div class=content><p>For each test case, output the answer for each query operation, one answer in a line.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+6<br />
+1 a<br />
+1 b<br />
+1 c<br />
+3 a<br />
+3 b<br />
+5<br />
+1 2 3 4<br />
+2 2 5 6<br />
+1 2 2 3<br />
+2 2 4 5<br />
+2 1 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+3<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014&#32;Asia&#32;AnShan&#32;Regional&#32;Contest'>2014 Asia AnShan Regional Contest</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3906'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3906'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3906'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

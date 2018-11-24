@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3639. -- Query on a tree VII</title><center><h2>3639: Query on a tree VII</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>349&nbsp;&nbsp;<span class=green>Solved: </span>146<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3639'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3639'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3639'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="header">
+<div class="time-limit"><span style="font-size: medium">You are given a tree (an acyclic undirected connected graph) with <span class="tex-span"><i>n</i></span> nodes. The tree nodes are numbered from 1 to <span class="tex-span"><i>n</i></span>. </span></div>
+</div>
+<div class="legend">
+<p><span style="font-size: medium">Each node has a color, white or black, and a weight.</span></p>
+<p><span style="font-size: medium">We will ask you to perfrom some instructions of the following form:</span></p>
+<p></p>
+<ul type="disc">
+    <li><span style="font-size: medium">0 <span class="tex-span"><i>u</i></span> : ask for the maximum weight among the nodes which are connected to <span class="tex-span"><i>u</i></span>, two nodes are connected iff all the node on the path from <span class="tex-span"><i>u</i></span> to <span class="tex-span"><i>v</i></span> (inclusive <span class="tex-span"><i>u</i></span> and <span class="tex-span"><i>v</i></span>) have a same color. </span></li>
+    <li><span style="font-size: medium">1 <span class="tex-span"><i>u</i></span> : toggle the color of <span class="tex-span"><i>u</i></span>(that is, from black to white, or from white to black). </span></li>
+    <li><span style="font-size: medium">2 <span class="tex-span"><i>u</i></span> <span class="tex-span"><i>w</i></span>: change the weight of <span class="tex-span"><i>u</i></span> to <span class="tex-span"><i>w</i></span>. </span></li>
+</ul>
+</div>
+<p></p>
+<p></p>
+<div class="input-specification"></div></div><h2>Input</h2><div class=content><div class="input-specification">
+<p><span style="font-size: medium">The first line contains a number <span class="tex-span"><i>n</i></span> denoted how many nodes in the tree(<span class="tex-span">1&thinsp;&le;&thinsp;<i>n</i>&thinsp;&le;&thinsp;10<sup class="upper-index">5</sup></span>). The next <span class="tex-span"><i>n</i>&thinsp;-&thinsp;1</span> lines, each line has two numbers (<span class="tex-span"><i>u</i>,&thinsp; <i>v</i></span>) describe a edge of the tree(<span class="tex-span">1&thinsp;&le;&thinsp;<i>u</i>,&thinsp; <i>v</i>&thinsp;&le;&thinsp;<i>n</i></span>). </span></p>
+<p><span style="font-size: medium">The next 2 lines, each line contains <span class="tex-span"><i>n</i></span> number, the first line is the initial color of each node(0 or 1), and the second line is the initial weight, let's say <span class="tex-span"><i>W</i><sub class="lower-index"><i>i</i></sub></span>, of each node(<span class="tex-span">|<i>W</i><sub class="lower-index"><i>i</i></sub>|&thinsp;&le;&thinsp;10<sup class="upper-index">9</sup></span>).</span></p>
+<p><span style="font-size: medium">The next line contains a number <span class="tex-span"><i>m</i></span> denoted how many operations we are going to process(<span class="tex-span">1&thinsp;&le;&thinsp;<i>m</i>&thinsp;&le;&thinsp;10<sup class="upper-index">5</sup></span>). The next <span class="tex-span"><i>m</i></span> lines, each line describe a operation (<span class="tex-span"><i>t</i>,&thinsp; <i>u</i></span>) as we mentioned above(<span class="tex-span">0&thinsp;&le;&thinsp;<i>t</i>&thinsp;&le;&thinsp;2</span>, <span class="tex-span">1&thinsp;&le;&thinsp;<i>u</i>&thinsp;&le;&thinsp;<i>n</i></span>, <span class="tex-span">|<i>w</i>|&thinsp;&le;&thinsp;10<sup class="upper-index">9</sup></span>).</span></p>
+</div>
+<p></p>
+<p></p>
+<div class="output-specification"></div></div><h2>Output</h2><div class=content><div class="output-specification">
+<p><span style="font-size: medium">For each query operation, output the corresponding result.</span></p>
+</div>
+<p></p>
+<p></p>
+<div class="sample-tests"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+1 2<br />
+1 3<br />
+1 4<br />
+1 5<br />
+0 1 1 1 1<br />
+1 2 3 4 5<br />
+3<br />
+0 1<br />
+1 1<br />
+0 1<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+5<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;xiaodao'>By xiaodao</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3639'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3639'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3639'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

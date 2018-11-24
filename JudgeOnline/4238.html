@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4238. -- 电压</title><center><h2>4238: 电压</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>523&nbsp;&nbsp;<span class=green>Solved: </span>232<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4238'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4238'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4238'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你知道Just Odd Inventions社吗？这个公司的业务是&ldquo;只不过是奇妙的发明(Just Odd Inventions)&rdquo;。这里简称为JOI社。</div>
+<div>JOI社的某个实验室中有着复杂的电路。电路由n个节点和m根细长的电阻组成。节点被标号为1~N</div>
+<div>每个节点有一个可设定的状态【高电压】或者【低电压】。每个电阻连接两个节点，只有一端是高电压，另一端是低电压的电阻才会有电流流过。两端都是高电压或者低电压的电阻不会有电流流过。</div>
+<div>某天，JOI社为了维护电路，选择了一根电阻，为了能让【只有这根电阻上的电流停止流动，其他M-1根电阻中都有电流流过】，需要调节各节点的电压。为了满足这个条件，能选择的电阻共有多少根？</div>
+<div>对了，JOI社这个奇妙的电路是用在什么样的发明上的呢？这是公司内的最高机密，除了社长以外谁都不知道哦~</div>
+<div>现在给出电路的信息，请你输出电路维护时可以选择使其不流的电阻的个数。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个空格分隔的正整数N和M，表示电路中有N个节点和M根电阻。</div>
+<div>接下来M行，第i行有两个空格分隔的正整数Ai和Bi(1&lt;=Ai&lt;=N,1&lt;=Bi&lt;=N,Ai&ne;Bi)，表示第i个电阻连接节点Ai和节点Bi。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一行一个整数，代表电路维护时可选择的使其不流的电阻个数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4<br />
+1 2<br />
+2 3<br />
+3 2<br />
+4 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p><div>可以选择第一根电阻或第四根电阻。</div><br />
+<div>&nbsp;<img src="upload/201508/bb.jpg" width="364" height="174" alt="" /></div><br />
+<div>2&lt;=N&lt;=10^5</div><br />
+<div>1&lt;=M&lt;=2*10^5</div><br />
+<div>不保证图是连通的，不保证没有重边</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=JOI%202013~2014%20%E6%98%A5%E5%AD%A3training%E5%90%88%E5%AE%BF%20%E7%AB%9E%E6%8A%803%20By%20PoPoQQQ'>JOI 2013~2014 春季training合宿 竞技3 By PoPoQQQ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4238'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4238'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4238'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

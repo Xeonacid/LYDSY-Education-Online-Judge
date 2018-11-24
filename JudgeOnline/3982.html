@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3982. -- [WF2012]Stacking Plates</title><center><h2>3982: [WF2012]Stacking Plates</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>39&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3982'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3982'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3982'>Discuss</a>]</center><h2>Description</h2><div class=content><div>盘子装运公司是一家网络零售商，顾名思义，是一家只销售盘子的公司。该公司销售的盘子由不计其数的生产厂商提供，品种是全宇宙最多的，为此公司的员工倍感自豪。</div>
+<div>在最近的一次成本分析中，公司员工发现，他们花费了大量金钱在盘子的装箱环节。一部分原因是盘子在被运输工具运走前，需要被堆成一堆。很显然，这个阶段较预期浪费了大量的时间。或许你可以为公司提供帮助。</div>
+<div>一次装运的盘子由若干厂商生产的盘子组合而成。各家厂商将其生产的盘子从小到大堆成一堆（小盘在上，大盘在下），再运送到公司。我们称上述按照顺序排列的盘堆顺序合理。为了方便装运，你必须将来自各个厂商的盘子重新组合成顺序合理的一堆。将来自各厂商的盘堆组合成一个盘堆时，可以进行如下两种操作：</div>
+<div>拆分(Split)：可以将一个盘堆堆顶任意数目的盘子抬起，并放置在原堆的一侧，使堆一分为二。</div>
+<div>合并(Join)：可以将一个盘堆放置在另一堆的堆顶，前提是在上方的堆最底层的盘子尺寸不大于在下方的堆最顶层的盘子尺寸。</div>
+<div>注意不能将一个盘堆堆顶上的若干盘子直接移动到另一个盘堆的堆顶，必须先拆分，后合并。给定盘堆若干，你需要求出将这些盘堆通过两种操作合并成一堆的最少次数。下面的图是对输入输出样例的解释。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>本题有多组输入数据。每组输入的第一行只有一个整数n，表示盘堆的数目，接下来的n行是对每个盘堆的描述，第i+1行的第一个整数hi为第i个盘堆的盘子数，之后有hi个正整数，为盘堆从上至下各个盘子的直径（直径为不超过10000的正整数），这些整数保证按照从小到大的顺序排列。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据，输出数据编号以及将n个盘堆按照规则合并为一个盘堆的最少操作次数。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3 1 2 4<br />
+2 3 5<br />
+3<br />
+4 1 1 1 1<br />
+4 1 1 1 1<br />
+4 1 1 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: 5<br />
+Case 2: 2</span></div><h2>HINT</h2>
+			<div class=content><p><p>H&lt;=50,数据组数&lt;=400</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3982'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3982'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3982'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5138. -- [Usaco2017 Dec]Push a Box</title><center><h2>5138: [Usaco2017 Dec]Push a Box</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>100&nbsp;&nbsp;<span class=green>Solved: </span>12<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5138'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5138'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5138'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Bessie and her friends have invented a new game. The game is named accurately, but not particularly&nbsp;</div>
+<div>creatively. They call it the &quot;Push A Box Around The Barn To Get It In The Right Spot And Don't Move&nbsp;</div>
+<div>The Hay&quot; game (if you think that's excessive, you should see some of the variable names the cows use</div>
+<div>&nbsp;when they write code...)The barn can be modeled as an N&times;M rectangular grid. Some of the grid cells</div>
+<div>&nbsp;have hay in them. Bessie occupies one cell in this grid, and a large wooden box occupies another ce</div>
+<div>ll. Bessie and the box are not able to fit in the same cell at the same time, and neither can fit in</div>
+<div>to a cell containing hay.Bessie can move in the 4 orthogonal directions (north, east, south, west) a</div>
+<div>s long as she does not walk into hay. If she attempts to walk to the space with the box, then the bo</div>
+<div>x will be pushed one space in that direction, as long as there is an empty cell on the other side. I</div>
+<div>f there is no empty cell, then Bessie will not be able to make that move.A certain grid cell is desi</div>
+<div>gnated as the goal. Bessie's goal is to get the box into that location.Given the layout of the barn,</div>
+<div>&nbsp;including the starting positions of the box and the cow, and the target position of the box, determ</div>
+<div>ine if it possible to win the game.</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line has three numbers, N, M, and Q,&nbsp;</div>
+<div>where N is the number of rows in the grid and M is the number of columns.</div>
+<div>1&le;N,M&le;1500</div>
+<div>1&le;Q&le;50,000</div>
+<div>On the next N lines is a representation of the grid,&nbsp;</div>
+<div>where characters represent empty cells (.), hay (#),</div>
+<div>Bessie's starting position (A), and the box's initial location (B).</div>
+<div></div>
+<div>This is followed by Q lines, each with a pair of integers (R,C).&nbsp;</div>
+<div>For each pair, you should determine if it is possible to get the box to that cell at row R, column C,&nbsp;</div>
+<div>starting from the initial state of the barn. The top row is row 1, and the left column is column 1.</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Q lines, each with either the string &quot;YES&quot; or &quot;NO&quot;.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5 4<br />
+##.##<br />
+##.##<br />
+A.B..<br />
+##.##<br />
+##.##<br />
+3 2<br />
+3 5<br />
+1 3<br />
+5 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>NO<br />
+YES<br />
+NO<br />
+NO<br />
+To push the box to the position (3, 5), the cow just needs to move 3 spaces to the right.<br />
+None of the other three positions are attainable.</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum'>Platinum</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5138'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5138'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5138'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

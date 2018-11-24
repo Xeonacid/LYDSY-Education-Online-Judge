@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2696. -- 航班安排</title><center><h2>2696: 航班安排</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>103&nbsp;&nbsp;<span class=green>Solved: </span>59<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2696'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2696'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2696'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">神犇航空有K架飞机，为了简化问题，我们认为每架飞机都是相同的。神犇航空的世界中有N个机场，以0..N-1编号，其中0号为基地机场，每天0时刻起飞机才可以从该机场起飞，并不晚于T时刻回到该机场。一天，神犇航空接到了M个包机请求，每个请求为在s时刻从a机场起飞，在恰好t时刻到达b机场，可以净获利c。设计一种方案，使得总收益最大。<br />
+</span></p></div><h2>Input</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行，4个正整数N,M,K,T，如题目描述中所述；<br />
+　　以下N行，每行N个整数，描述一个N*N的矩阵t，t&shy;<sub>i,j</sub>表示从机场i空载飞至机场j，需要时间t<sub>i,j</sub>；<br />
+　　以下N行, 每行N个整数，描述一个N*N的矩阵f，f&shy;<sub>i,j</sub>表示从机场i空载飞至机场j，需要费用f<sub>i,j</sub>；<br />
+　　以下M行，每行5个整数描述一个请求，依次为a,b,s,t,c。<br />
+</span></div></div><h2>Output</h2><div class=content><div class="pdcont"><span style="font-size: medium">　　仅一行，一个整数，表示最大收益。<br />
+</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 1 10<br />
+0 5<br />
+5 0<br />
+0 5<br />
+5 0<br />
+0 1 0 5 10<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据规模及约定<br /><br />
+　　对于10%的测试数据，K=1；<br /><br />
+　　另有20%的测试数据，K=2；<br /><br />
+　　对于全部的测试数据，N,M&lt;=200，K&lt;=10，T&lt;=3000，ti,j&lt;=200，fi,j&lt;=2000，0&lt;=a,b&lt;N，0&lt;=s&lt;=t&lt;=T，0&lt;=c&lt;=10000，ti,i=fi,i=0，ti,j&lt;=ti,k+tk,j，fi,j&lt;=fi,k+fk,j。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2696'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2696'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2696'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

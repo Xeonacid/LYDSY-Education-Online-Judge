@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4739. -- 定向越野</title><center><h2>4739: 定向越野</h2><span class=green>Time Limit: </span>80 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>44&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4739'>Discuss</a>]</center><h2>Description</h2><div class=content><div>定向越野是一项集智力与体力为一体的体育运动，在这项活动中，选手需要从起点出发，在尽可能短的时间内到达</div>
+<div>指定的地点。牛牛非常喜爱这项运动，但是他不知道怎么样才能更快到达终点。他听说来参加集训的你智力过人，</div>
+<div>于是他把定向越野的地图交给了你，希望你帮他解决一些问题。牛牛给你的地图描述的是一块平地，地图上不仅清</div>
+<div>楚地标出了起点和终点的坐标，还标有若干个互不相交圆形区域，每个区域表示一个圆形的水域。对于不会游泳的</div>
+<div>牛牛来说，进入水域是根本不可能的。因此，牛牛的行动路线不能从水域中穿过。牛牛想知道这样的路线长度最小</div>
+<div>可以是多少。特别地，我们认为如果两个圆形水域相切，牛牛能够从中间经过。</div></div><h2>Input</h2><div class=content><div>第一行包含四个实数Sx,Sy,Tx,Ty，分别表示起点的x,y坐标和终点的x,y坐标。</div>
+<div>第二行包含一个正整数n，表示水域的个数。</div>
+<div>接下来n行，每行3个整数xi,yi,ri表示一片水域的圆心的x,y坐标和半径。</div>
+<div>n&le;500，-1000&le;xi,yi,ri,Sx,Sy,Tx,Ty&le;1000，保证起点和终点都不在水域的内部或边界上，起点和终点不重合</div>
+<div></div></div><h2>Output</h2><div class=content><div>输出一行，包含一个实数，四舍五入精确到小数点后恰好1位，表示答案。你的输出必须和标准输出完全一样才算正确。</div>
+<div>测试数据保证四舍五入后的答案和准确答案的差的绝对值不大于4&times;10^(-2)。</div>
+<div>（浮点误差即对于大多数的算法，你可以正常地使用浮点数类型而不用对它进行特殊的处理）</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 20 11<br />
+2<br />
+5 5 4<br />
+16 9 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>23.0</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;<img src="upload/201704/2268a.png" width="333" height="223" alt="" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4739'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

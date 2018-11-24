@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2453. -- 维护队列</title><center><h2>2453: 维护队列</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1554&nbsp;&nbsp;<span class=green>Solved: </span>734<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2453'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2453'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2453'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt">你小时候玩过弹珠吗？</div>
+<div style="text-indent: 21pt">小朋友A有一些弹珠，A喜欢把它们排成队列，从左到右编号为1到N。为了整个队列鲜艳美观，小朋友想知道某一段连续弹珠中，不同颜色的弹珠有多少。当然，A有时候会依据个人喜好，替换队列中某个弹珠的颜色。但是A还没有学过编程，且觉得头脑风暴太浪费脑力了，所以向你来寻求帮助。</div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt">输入文件第一行包含两个整数N和M。</div>
+<div style="text-indent: 21pt">第二行N个整数，表示初始队列中弹珠的颜色。</div>
+<div style="text-indent: 21pt">接下来M行，每行的形式为&ldquo;Q L R&rdquo;或&ldquo;R x c&rdquo;，&ldquo;Q L R&rdquo;表示A想知道从队列第L个弹珠到第R个弹珠中，一共有多少不同颜色的弹珠，&ldquo;R x c&rdquo;表示A把x位置上的弹珠换成了c颜色。</div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt">对于每个Q操作，输出一行表示询问结果。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+2 3<br />
+1 2<br />
+Q 1 2<br />
+R 1 2<br />
+Q 1 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，有1 &le; N &le; 10000, 1 &le; M &le; 10000，小朋友A不会修改超过1000次，所有颜色均用1到10^6的整数表示。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2453'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2453'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2453'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

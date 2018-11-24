@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1819. -- [JSOI]Word Query电子字典
+</title><center><h2>1819: [JSOI]Word Query电子字典
+</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1137&nbsp;&nbsp;<span class=green>Solved: </span>389<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1819'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1819'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1819'>Discuss</a>]</center><h2>Description</h2><div class=content>人们在英文字典中查找某个单词的时候可能不知道该单词的完整拼法，而只知道该单词的一个错误的近似拼法，这时人们可能陷入困境，为了查找一个单词而浪费大量的时间。带有模糊查询功能的电子字典能够从一定程度上解决这一问题：用户只要输入一个字符串，电子字典就返回与该单词编辑距离最小的几个单词供用户选择。
+字符串a与字符串b的编辑距离是指：允许对a或b串进行下列“编辑”操作，将a变为b或b变为a，最少“编辑”次数即为距离。
+&#61548;	删除串中某个位置的字母；
+&#61548;	添加一个字母到串中某个位置；
+&#61548;	替换串中某一位置的一个字母为另一个字母；
+
+JSOI团队正在开发一款电子字典，你需要帮助团队实现一个用于模糊查询功能的计数部件：对于一个待查询字符串，如果它是单词，则返回-1；如果它不是单词，则返回字典中有多少个单词与它的编辑距离为1。
+
+</div><h2>Input</h2><div class=content>第一行包含两个正整数N (N  < =  10,000)和M (M < = 10,000)。
+接下来的N行，每行一个字符串，第i + 1行为单词Wi。单词长度在1至20之间。再接下来M行，每行一个字符串，第i + N + 1表示一个待查字符串Qi。待查字符串长度在1至20之间。Wi和Qi均由小写字母构成，文件中不包含多余空格。所有单词互不相同，但是查询字符串可能有重复。
+
+提示：有50%的数据范围：N < =  1,000，M < = 1,000。
+</div><h2>Output</h2><div class=content>输出应包括M行，第i行为一个整数Xi。Xi = -1表示Qi为字典中的单词；否则Xi表示与Qi编辑距离为1的单词的个数。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+abcd<br />
+abcde<br />
+aabc<br />
+abced<br />
+abcd<br />
+abc<br />
+abcdd	</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>-1<br />
+2<br />
+3<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>abcd在单词表中出现过；abc与单词abcd、aabc的编辑距离都是1；abcdd与单词abcd、abcde、abced的编辑距离都是1。<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=JSOI%E7%AC%AC%E4%BA%8C%E8%BD%AEContest1'>JSOI第二轮Contest1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1819'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1819'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1819'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

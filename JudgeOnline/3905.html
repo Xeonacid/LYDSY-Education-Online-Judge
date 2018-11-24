@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3905. -- Square</title><center><h2>3905: Square</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>51&nbsp;&nbsp;<span class=green>Solved: </span>34<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3905'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3905'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3905'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Nothing is more beautiful than square! So, given a grid of cells, each cell being black or white, it is reasonable to evaluate this grid&rsquo;s beautifulness by the side length of its maximum continuous subsquare which fully consists of white cells.<br />
+Now you&rsquo;re given an N &times; N grid, and the cells are all black. You can paint some cells white. But other cells are broken in the sense that they cannot be paint white. For each integer i between 0 and N inclusive, you want to find the number of different painting schemes such that the beautifulness is exactly i. Two painting schemes are considered different if and only if some cells have different colors. Painting nothing is considered to be a scheme.</div>
+<div><img width="820" height="324" src="upload/201503/v1.jpg" alt="" /><br />
+For example, N = 3 and there are 4 broken cells as shouwn in Fig. J(a). There are 2 painting schemes for i=2 as shown in Fig. J(b) and J(c).<br />
+You just need to output the answer modulo 10^9 + 7.</div>
+<div>给你一个n * n(n &lt;= 8)的棋盘，上面有一些格子必须是黑色，其它可以染<br />
+黑或者染白，对于一个棋盘，定义它的优美度为它上面最大的连续白色<br />
+子正方形的边长，对于每个0 &lt;= i &lt;= n，问有多少种染色方案使得棋盘的<br />
+优美度为i？</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line contains an integer T (T &le; 10) denoting the number of the test cases.<br />
+For  each test case, the first line contains an integer N (1 &le; N &le; 8),  denoting the size of the grid is N &times; N . Then N lines follow, each line  containing an N-character string of &ldquo;o&rdquo; and &ldquo;*&rdquo;, where &ldquo;o&rdquo; stands for a  paintable cell and &ldquo;*&rdquo; for a broken cell.</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each test case, for each integer i between 0 and N inclusive, output the answer in a single line.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+3<br />
+oo*<br />
+ooo<br />
+***<br />
+8<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo<br />
+oooooooo</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+29<br />
+2<br />
+0<br />
+1<br />
+401415247<br />
+525424814<br />
+78647876<br />
+661184312<br />
+550223786<br />
+365317939<br />
+130046<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014&#32;Asia&#32;AnShan&#32;Regional&#32;Contest'>2014 Asia AnShan Regional Contest </a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3905'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3905'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3905'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1629. -- [Usaco2007 Demo]Cow Acrobats</title><center><h2>1629: [Usaco2007 Demo]Cow Acrobats</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1130&nbsp;&nbsp;<span class=green>Solved: </span>578<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1629'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1629'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1629'>Discuss</a>]</center><h2>Description</h2><div class=content>Farmer John's N (1 <= N <= 50,000) cows (numbered 1..N) are planning
+to run away and join the circus.  Their hoofed feet prevent them
+from tightrope walking and swinging from the trapeze (and their
+last attempt at firing a cow out of a cannon met with a dismal
+failure). Thus, they have decided to practice performing acrobatic
+stunts.
+
+The cows aren't terribly creative and have only come up with one
+acrobatic stunt: standing on top of each other to form a vertical
+stack of some height.  The cows are trying to figure out the order
+in which they should arrange themselves within this stack.
+
+Each of the N cows has an associated weight (1 <= W_i <= 10,000)
+and strength (1 <= S_i <= 1,000,000,000).  The risk of a cow
+collapsing is equal to the combined weight of all cows on top of
+her (not including her own weight, of course) minus her strength
+(so that a stronger cow has a lower risk).  Your task is to determine
+an ordering of the cows that minimizes the greatest risk of collapse
+for any of the cows.
+
+
+//有三个头牛，下面三行二个数分别代表其体重及力量
+//它们玩叠罗汉的游戏，每个牛的危险值等于它上面的牛的体重总和减去它的力量值，因为它要扛起上面所有的牛嘛.
+//求所有方案中危险值最大的最小
+
+
+</div><h2>Input</h2><div class=content>* Line 1: A single line with the integer N.
+
+* Lines 2..N+1: Line i+1 describes cow i with two space-separated
+        integers, W_i and S_i.
+
+</div><h2>Output</h2><div class=content>* Line 1: A single integer, giving the largest risk of all the cows in
+        any optimal ordering that minimizes the risk.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+10 3<br />
+2 5<br />
+3 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+Put the cow with weight 10 on the bottom. She will carry the other<br />
+two cows, so the risk of her collapsing is 2+3-3=2. The other cows<br />
+have lower risk of collapsing.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1629'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1629'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1629'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

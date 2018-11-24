@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2888. -- 资源运输</title><center><h2>2888: 资源运输</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>107&nbsp;&nbsp;<span class=green>Solved: </span>61<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2888'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2888'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2888'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小Y盯上了最近发行的即时战略游戏&mdash;&mdash;ResourceTransport。但在前往通关之路的道路上，一个小游戏挡住了小Y的步伐。&ldquo;国家的本质是生产与收集资源&rdquo;是整款游戏的核心理念，这个小游戏也不例外。简单的说，用户需要管理一个国家，使其繁荣富强。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个国家含有N个城市，游戏开始时城市间没有任何道路。城市可以通过高速公路连接。为了减少建设费用，每对城市间最多存在一条路径。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小Y拥有极强的游戏天赋，很快就把所有城市的生产能力提到了满级，把高速公路的建设费用修改成了0。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">悲剧的是，对于每个连通的城市群，都要把该城市群中的某个城市设立成资源集合处，小Y把这件事忘了；更悲剧的是，建造高速公路这件事，小Y也忘了。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">可小Y是个完美主义者，他请来了你帮他设立资源集合处，自己负责建造高速公路。<b>假设连通城市群中的某个城市</b><b>i</b><b>到该城市群的资源集合处最少需要经过Di</b><b>条高速公路，那么总运输费用为Sigma(Di)</b>。<b>你需要在每个连通城市群中设立一个资源集合处，使得总费用最小。小</b><b>Y</b><b>有时会向你询问此时最小的总费用</b>。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">问题很简单，麻烦的是小Y会在你好不容易算出最小总费用时建造一条新的高速公路。由于每个连通的城市群只能有一个资源集合处，所以最小总费用又得重新计算，这可真是个苦差事&hellip;&hellip;</span></div></div><h2>Input</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第一行两个整数N，M分别表示国家中的城市数与小Y的操作数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来M行，每行可能为：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.A x y：表示在城市x和城市y间建造一条高速公路，保证此操作出现N-1次；</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.Q：表示小Y询问此时的最小总费用。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于每个Q操作，单独输出一行一个整数Ans，表示所求的答案。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+8 10<br />
+Q<br />
+A 1 2<br />
+A 4 5<br />
+A 6 7<br />
+A 3 4<br />
+Q<br />
+A 2 5<br />
+A 6 8<br />
+A 4 6<br />
+Q<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+0<br />
+4<br />
+12<br />
+【样例解释】<br />
+       1.开始所有城市互不联通，每个城市都是资源集合处，费用为0；<br />
+2.后来分别把城市1、城市4、城市7、城市8设立为资源集合处，费用为4；<br />
+3.最后把城市4设立为资源集合处，费用为12。</span></div><h2>HINT</h2>
+			<div class=content><p><p>N<span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&lt;=40000,M<span lang="EN-US" style="font-size: 10.5pt; font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&lt;=80000</span></span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2888'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2888'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2888'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

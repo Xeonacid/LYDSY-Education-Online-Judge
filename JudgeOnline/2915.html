@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2915. -- [Poi1997] gen</title><center><h2>2915: [Poi1997] gen</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>17&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2915'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2915'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2915'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="center"></div>
+<div style="text-indent: 20.65pt"><span style="font-size: medium"><b>基因串</b>是由一串有限长度的基因所组成的，其中每一个基因都可以用26个英文大写字母中的一个来表示，不同的字母表示不同的基因类型。一个单独的基因可以生长成为一对新的基因，而可能成长的规则是通过一个有限的成长规则集所决定的。每一个成长的规则可以用三个大写英文字母A<sub>1</sub>A<sub>2</sub>A<sub>3</sub>来描述，这个规则的意思是基因A<sub>1</sub>可以成长为一对基因A<sub>2</sub>A<sub>3</sub>。</span></div>
+<div><span style="font-size: medium">我们用大写字母S来表示一类被称作<b>超级基因</b>的基因。因为每一个基因串都是由一串超级基因根据给出的规则所成长出来的。</span></div>
+<div><span style="font-size: medium">任务：</span></div>
+<div><span style="font-size: medium">请写一个程序：</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>读入有限条成长的规则和一些我们想要得到的基因串；</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>对于每个基因串，试判断它是否可以由一个有限长度的超级基因串成长得出。如果可以，那么请给出可成长为该基因串的最短超级基因串的长度；</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>把结果输出</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行包括一个整数<i>n</i>，<i>1 </i><i>&pound; n </i><i>&pound; 10000</i>。以下的<i>n</i>行中每行都包括一个成长的规则，每个规则由三个大写英文字母组成。</span></div>
+<div><span style="font-size: medium">在该文件的第<i>n+1</i>行包括一个整数<i>k</i>，<i>1 </i><i>&pound; k </i><i>&pound; 10000</i>。以下的<i>k</i>行中每行都有一个基因串。每个基因串都是一个长度不超过100的大写字符串。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">你应该输出入下内容：</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>一个正整数，表示成长为改基因串所需的最短的超级基因串的长度；</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>或一个单词NIE（波兰语的&ldquo;否&rdquo;），如果说无法由超级基因串成长成为该基因串。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+SAB<br />
+SBC<br />
+SAA<br />
+ACA<br />
+BCC<br />
+CBC<br />
+3<br />
+ABBCAAABCA<br />
+CCC<br />
+BA<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+NIE</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2915'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2915'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2915'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

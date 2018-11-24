@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4392. -- [Usaco2015 dec]Counting Haybales</title><center><h2>4392: [Usaco2015 dec]Counting Haybales</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>228&nbsp;&nbsp;<span class=green>Solved: </span>109<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4392'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4392'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4392'>Discuss</a>]</center><h2>Description</h2><div class=content><p>Farmer John is trying to hire contractors to help rearrange his farm, but so far all of them have quit when they saw the complicated sequence of instructions FJ wanted them to follow. Left to complete the project by himself, he realizes that indeed, he has made the project perhaps more complicated than necessary. Please help him follow his instructions to complete the farm upgrade.<br />
+<br />
+FJ's farm consists of NN fields in a row, conveniently numbered 1&hellip;N1&hellip;N. In each field there can be any number of haybales. Farmer John's instructions contain three types of entries:<br />
+<br />
+1) Given a contiguous interval of fields, add a new haybale to each field.<br />
+<br />
+2) Given a contiguous interval of fields, determine the minimum number of haybales in a field within that interval.<br />
+<br />
+3) Given a contiguous interval of fields, count the total number of haybales inside that interval.</p>
+<p>农夫约翰打算重修他的农场。他有 N 块土地，连续排列成一行，标号为 1&hellip;N。在每块土地上有任意数量的草堆。他可以发出三种指令：<br />
+1) 对一个连续区间的土地，每块土地增加相同数量的草堆。<br />
+2) 对一个连续区间的土地，输出其中最少的草堆数量。<br />
+3) 对一个连续区间的土地，输出草堆数量总数。<br />
+<br />
+第一行两个正整数，N (1&le;N&le;200,000) 和 Q (1&le;Q&le;100,000)。<br />
+下一行是N个非负整数，最大100,000，表示每块土地上有多少个草堆。<br />
+以下Q行，每行一单个大写字母开头(M，P或S)，空格后跟随两个正整数 A 和 B (1&le;A&le;B&le;N), 或者三个正整数 A, B, 和 C (1&le;A&le;B&le;N; 1&le;C&le;100,000)。当且仅当第一个字母是 P 时，是三个正整数。<br />
+当该字母是M，输出区间A&hellip;B的最小草堆数。<br />
+当该字母是P，在区间A&hellip;B，每块土地增加C堆草。<br />
+当该字母是M，输出区间A&hellip;B的草堆数之和。<br />
+<br />
+每行一个数字，用于响应'M' 或 'S' 命令。</p>
+<p></p></div><h2>Input</h2><div class=content><p>The first line contains two positive integers, N (1&le;N&le;200,000) and Q (1&le;Q&le;100,000).<br />
+<br />
+The next line contains N nonnegative integers, each at most 100,000, indicating how many haybales are initially in each field.<br />
+<br />
+Each  of the next Q lines contains a single uppercase letter, either M, P or  S, followed by either two positive integers AA and BB (1&le;A&le;B&le;N), or  three positive integers AA, BB, and CC (1&le;A&le;B&le;N; 1&le;C&le;100,000). There  will be three positive integers if and only if the uppercase letter is  P.<br />
+<br />
+If the letter is M, print the minimum number of haybales in the interval of fields from A&hellip;B.<br />
+<br />
+If the letter is P, put C new haybales in each field in the interval of fields from A&hellip;B.<br />
+<br />
+If the letter is S, print the total number of haybales found within interval of fields from A&hellip;B.</p></div><h2>Output</h2><div class=content><p>A line in the output should appear in response to every 'M' or 'S' entry in FJ's instructions.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5<br />
+3 1 2 4<br />
+M 3 4<br />
+S 1 3<br />
+P 2 3 1<br />
+M 3 4<br />
+S 1 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+6<br />
+3<br />
+8</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Platinum鸣谢Claris提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4392'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4392'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4392'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

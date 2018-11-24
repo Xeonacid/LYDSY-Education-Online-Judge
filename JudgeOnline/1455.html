@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1455. -- 罗马游戏</title><center><h2>1455: 罗马游戏</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>2556&nbsp;&nbsp;<span class=green>Solved: </span>1125<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1455'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1455'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1455'>Discuss</a>]</center><h2>Description</h2><div class=content><p>罗马皇帝很喜欢玩杀人游戏。  他的军队里面有n个人，每个人都是一个独立的团。最近举行了一次平面几何测试，每个人都得到了一个分数。  皇帝很喜欢平面几何，他对那些得分很低的人嗤之以鼻。他决定玩这样一个游戏。  它可以发两种命令：  1. Merger(i, j)。把i所在的团和j所在的团合并成一个团。如果i, j有一个人是死人，那么就忽略该命令。  2. Kill(i)。把i所在的团里面得分最低的人杀死。如果i这个人已经死了，这条命令就忽略。  皇帝希望他每发布一条kill命令，下面的将军就把被杀的人的分数报上来。（如果这条命令被忽略，那么就报0分）</p></div><h2>Input</h2><div class=content><div>第一行一个整数n（1&lt;=n&lt;=1000000）。n表示士兵数，m表示总命令数。&nbsp;</div>
+<div>第二行n个整数，其中第i个数表示编号为i的士兵的分数。</div>
+<div>第三行一个整数m(1&lt;=m&lt;=100000) 第3+i行描述第i条命令。</div>
+<div>命令为如下两种形式：&nbsp;</div>
+<div>1. M i j&nbsp;</div>
+<div>2. K i</div></div><h2>Output</h2><div class=content><p>如果命令是Kill，对应的请输出被杀人的分数。（如果这个人不存在，就输出0）</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+100 90 66 99 10<br />
+7<br />
+M 1 5<br />
+K 1<br />
+K 1<br />
+M 2 3<br />
+M 3 4<br />
+K 5<br />
+K 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10<br />
+100<br />
+0<br />
+66<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>部分数据如下&nbsp;<a href="upload/201607/aa.rar">JudgeOnline/upload/201607/aa.rar</a></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1455'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1455'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1455'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

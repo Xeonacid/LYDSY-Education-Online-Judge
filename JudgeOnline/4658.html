@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4658. -- rescue</title><center><h2>4658: rescue</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>65&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4658'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4658'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4658'>Discuss</a>]</center><h2>Description</h2><div class=content><div>wyh8000很喜欢看书，特别是那种很容易死脑细胞的书。</div>
+<div>wyh8000看书喜欢从第K页开始看起，然后看到第M页，但是wvh8000并不是有耐心的小盆友，他</div>
+<div>只想快点完成看书任务，然后就可以去愉快的农别人了，于是他经常跳着看，但是他一次最多跳D页，</div>
+<div>然后阅读那一页的内容，然后死掉A的脑细胞。当然如果那一页的内容他比较感兴趣，又会回复一定</div>
+<div>的脑细胞。</div>
+<div>好心的学长不希望看到wyh8000的脑细胞死光，你能帮助wvh8000死掉尽可能少的脑细胞吗？</div></div><h2>Input</h2><div class=content><div>第一行五个非负整数K，M，D，A，N。</div>
+<div>K，M，D，A如题目描述。N表示有N页wvh8000比较感兴趣。</div>
+<div>接下来N行，每一行两个正整数，Ti，Bi。，表示当wvh8000阅读第Ti页时，能回复Bi的脑细胞。</div>
+<div>l &lt;= Bi，A，D&le;10^9，l&lt;N&lt;105。0&lt;=K&lt;T1&lt;T2&lt;&hellip;&lt;Tn&lt;M &lt;= 10^9。</div></div><h2>Output</h2><div class=content><div>一个整数ans。表示能拯救的最多的脑细胞数，若最后还是损失则为负数。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>0 10 4 10 2<br />
+3 10<br />
+8 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>-20<br />
+wyh8000从第0页开始看。<br />
+wyh8000跳到第3页，损失10脑细胞。<br />
+wyh8000阅读第3页，拯救10脑细胞。<br />
+wyh8000跳到第7页并阅读，损失10脑细胞。<br />
+wyh8000眺到第10页并阅读，损失10脑细胞。<br />
+学长最后无能为力，但是损失20是最优的策略，所以输出为-20。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4658'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4658'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4658'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

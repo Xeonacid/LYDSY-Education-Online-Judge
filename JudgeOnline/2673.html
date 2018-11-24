@@ -1,0 +1,93 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2673. -- [Wf2011]Chips Challenge</title><center><h2>2673: [Wf2011]Chips Challenge</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>108&nbsp;&nbsp;<span class=green>Solved: </span>49<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2673'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2673'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2673'>Discuss</a>]</center><h2>Description</h2><div class=content><p>有一个芯片，芯片上有N*N（1&le;N&le;40）个插槽，可以在里面装零件。</p>
+<p>有些插槽不能装零件，有些插槽必须装零件，剩下的插槽随意。</p>
+<p>要求装好之后满足如下两条要求：</p>
+<p>1、第&nbsp;i&nbsp;行和第&nbsp;i&nbsp;列的零件数目必须一样多（1&le;i&le;N）。</p>
+<p>2、第 i 行的零件数目不能超过总的零件数目的 A/B（1&le;i&le;N，0&le;A&le;B&le;1000，B&ne;0）。</p>
+<p>求最多可以另外放多少个零件（就是除掉必须放的）。如果无解输出impossible。</p></div><h2>Input</h2><div class=content><p>The input consists of several test cases. Each case starts with a line containing three integers: The size of the chip N (1&lt;=N&lt;=40), and A and B (1&lt;=A&lt;=1000, 0&lt;=A&lt;=B) as described above. Each of the following N lines contains N characters describing the slots, one of `.', `/' or `C', as described above.</p>
+<p>The last test case is followed by a line containing three zeros.</p>
+<p></p></div><h2>Output</h2><div class=content><p>For each test case, display a single line beginning with the case number. If there is a solution, display the maximum number of widgets that can be added to the chip. Display ``impossible&quot; if there is no solution.</p>
+<p>Follow the format of the sample output.</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 1<br />
+/.<br />
+//<br />
+2 50 100<br />
+/.<br />
+C/<br />
+2 100 100<br />
+./<br />
+C.<br />
+5 3 10<br />
+CC/..<br />
+././/<br />
+..C.C<br />
+/.C..<br />
+/./C/<br />
+5 2 10<br />
+CC/..<br />
+././/<br />
+..C.C<br />
+/.C..<br />
+/./C/<br />
+0 0 0<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: 0<br />
+Case 2: 1         <br />
+Case 3: impossible<br />
+Case 4: 7         <br />
+Case 5: impossible<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2673'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2673'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2673'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

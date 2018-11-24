@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2932. -- [Poi1999]树的染色问题</title><center><h2>2932: [Poi1999]树的染色问题</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>54&nbsp;&nbsp;<span class=green>Solved: </span>50<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2932'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2932'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2932'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">一棵二叉树采用以下规则描述：</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">1．如果一个节点度数为0，则仅用一个元素&ldquo;0&rdquo;来描述它。</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">2．如果一个节点度数为1，则对它的描述以&ldquo;1&rdquo;开头，后面接着对它的孩子的描述。</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">3．如果一个节点度数为2，则对它的描述以&ldquo;2&rdquo;开头，后面接着的首先是它的左孩子的描述，然后是右孩子的描述。</span></div>
+<div><span style="font-size: medium">在树中每一个节点必须被着为红色、绿色或蓝色。然而，我们必须遵循如下规定：</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">1．根点和它的孩子不能有相同的颜色。</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">2．如果一个节点有两个孩子，那么这两个节点必定有两个不同的颜色。</span></div>
+<div><span style="font-size: medium">有多少个节点可以被着为绿色呢？</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">写一个程序：</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">1．读取对一棵树的描述。</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">2．计算可以被着为绿色的节点的最大值和最小值。</span></div>
+<div style="margin-left: 18pt; text-indent: -18pt"><span style="font-size: medium">3．把结果输出 </span></div></div><h2>Input</h2><div class=content><div style="margin: auto 0cm">&nbsp;</div>
+<div><span style="font-size: medium">首行是由一个字符串组成（不长于10000字符），它是对一棵树的描述。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">首行两个用空格隔开的整数，它们分别表示可以被着为绿色的节点的最大和最小数目。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1122002010<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5 2<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2932'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2932'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2932'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

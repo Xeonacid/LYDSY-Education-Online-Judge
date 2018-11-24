@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2925. -- [Poi1999]单一阿拉伯数字表示法</title><center><h2>2925: [Poi1999]单一阿拉伯数字表示法</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>26&nbsp;&nbsp;<span class=green>Solved: </span>19<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2925'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2925'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2925'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">假设K是一个不为0的十进制阿拉伯数字。如果有这样一个表达式：它的值为X同时它仅仅包含了由阿拉伯数字K所组成的数字，那么我们称这样的算术表达式为整数X的K-表示法（所有这些数字当然也是十进制的）。在这个表达式中，下面的算术操作是允许的：包括加、减、乘、除,而圆括号也是允许使用的。除法只有当被除数是除数的若干倍时才能使用。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>例如</b></span></div>
+<div><span style="font-size: medium">下面每一个表达式是数字12的5-表示法： </span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">5+5+(5:5)+(5:5) </span></li>
+    <li><span style="font-size: medium">(5+(5))+5:5+5:5 </span></li>
+    <li><span style="font-size: medium">55:5+5:5 </span></li>
+    <li><span style="font-size: medium">(55+5):5 </span></li>
+</ul>
+<div><span style="font-size: medium">K-表示法的长度是这个表达式中阿拉伯K出现的次数。上面例子中的头两个表示法长度是6，第三个是5，第四个是4。 </span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">写一个程序：</span></div>
+<div style="margin-left: 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>阿拉伯数字K和数字的级数，</span></div>
+<div style="margin-left: 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>从这个级数检验每一个数字，看它是否有长度最多为8的K-表示法，如果存在则程序找出这个表示法的最小长度。</span></div>
+<div style="margin-left: 21pt; text-indent: -21pt"><span style="font-size: medium">l<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>把结果输出 </span></div></div><h2>Input</h2><div class=content><div style="margin: auto 0cm">&nbsp;</div>
+<div><span style="font-size: medium">输入文件MON.IN的首行包括阿拉伯数字K，K是{1,&hellip;,9}中的元素。第二行包括数字n（<i>1&lt;=n&lt;=10</i>）。在接下来的n 行中有自然数序列<i>a<sub>1</sub>,...,a<sub>n</sub></i>,<i> 1&lt;=a<sub>i</sub>&lt;=32000</i> (for <i>i=1,..,n</i>)，每一行一个数字。</span></div>
+<div style="margin: auto 0cm">
+<div style="margin: auto 0cm"></div>
+</div></div><h2>Output</h2><div class=content><div style="margin: auto 0cm">
+<div style="margin: auto 0cm"></div>
+<span style="font-size: medium">由n行组成。第I行应该包括：</span></div>
+<div style="margin: 0cm 0cm 0pt 18pt; text-indent: -18pt"><span style="font-size: medium">1．&nbsp;1．假设一个长度不大于8的表示法存在，确定一个数字，它是a<i><sub>i</sub></i>的K-表示法的最小长度。</span></div>
+<div style="margin: 0cm 0cm 0pt 18pt; text-indent: -18pt"><span style="font-size: medium">2．&nbsp;2．如果数字a<i><sub>i</sub></i>的K-表达法的最小长度是大于8则为单词NIE（波兰语为&ldquo;没有&rdquo;）</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+2<br />
+12<br />
+31168<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> <br />
+4<br />
+NIE<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2925'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2925'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2925'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

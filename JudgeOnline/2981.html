@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2981. -- [Poi2002]括号</title><center><h2>2981: [Poi2002]括号</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>18&nbsp;&nbsp;<span class=green>Solved: </span>11<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2981'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2981'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2981'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="center"></div>
+<div><span style="font-size: medium">减法不满足结合率, 例如 (5-2)-1=2, 但 5-(2-1)=4, 因此 (5-2)-1&lt;&gt;5-(2-1). 这意味着表达式5-2-1 依赖减法操作的顺序. 如果没有扩号，假定表达式计算从左到右, 即5-2-1 等于 (5-2)-1.我们给出表达式的形式如下：</span></div>
+<div align="center"><span style="font-size: medium"><i>x</i><sub>1</sub> +/- <i>x</i><sub>2</sub> +/- ... +/- <i>x<sub>n</sub></i>,</span></div>
+<div><span style="font-size: medium">+/- 表示+ (加)&nbsp;- (减), <i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,...,<i>x<sub>n</sub></i> 表示计算变量. 对下面的表达式</span></div>
+<div align="center"><span style="font-size: medium"><i>x</i><sub>1</sub>-<i>x</i><sub>2</sub>-...-<i>x<sub>n</sub></i></span></div>
+<div><span style="font-size: medium">我们想插入<i>n</i>-1对括号得到和表达式相同的结果.例如，我们想得到和下面表达式相等值的表达式 </span></div>
+<div align="center"><span style="font-size: medium"><i>x</i><sub>1</sub>-<i>x</i><sub>2</sub>-<i>x</i><sub>3</sub>+<i>x</i><sub>4</sub>+<i>x</i><sub>5</sub>-<i>x</i><sub>6</sub>+<i>x</i><sub>7</sub></span></div>
+<div><span style="font-size: medium">可以对下面的表达式插入括号</span></div>
+<div align="center"><span style="font-size: medium"><i>x</i><sub>1</sub>-<i>x</i><sub>2</sub>-<i>x</i><sub>3</sub>-<i>x</i><sub>4</sub>-<i>x</i><sub>5</sub>-<i>x</i><sub>6</sub>-<i>x</i><sub>7</sub></span></div>
+<div><span style="font-size: medium">得到</span></div>
+<div align="center"><span style="font-size: medium">(((<i>x</i><sub>1</sub>-<i>x</i><sub>2</sub>)-((<i>x</i><sub>3</sub>-<i>x</i><sub>4</sub>)-<i>x</i><sub>5</sub>))-(<i>x</i><sub>6</sub>-<i>x</i><sub>7</sub>)).</span></div>
+<div><span style="font-size: medium"><b>注意:</b> 我们只对完整而正确的表达式有兴趣，一个完整正确的表达式必须符合</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">它可能是单个变量, </span></li>
+    <li><span style="font-size: medium">可能形如(<i>w</i><sub>1</sub>-<i>w</i><sub>2</sub>), 而且 <i>w</i><sub>1</sub> 和 <i>w</i><sub>2</sub> 都是完成而正确的表达式. </span></li>
+</ul>
+<div><span style="font-size: medium">通常来说，我们对如下空括号形式不感兴趣: (), (<i>x<sub>i</sub></i>), ((...)). 而表达式 <i>x</i><sub>1</sub>-(<i>x</i><sub>2</sub>-<i>x</i><sub>3</sub>) 不是完整的，因为它缺少最外层的括号.</span></div></div><h2>Input</h2><div class=content><div style="margin: auto 0cm"><span style="font-size: medium">第一行有一个整数 <i>n</i>, 2&lt;=<i>n</i>&lt;=1&nbsp;000&nbsp;000. 表示表达式变量的个数.在下面的 <i>n</i>-1 行有一个字符<tt>+</tt> 或 <tt>-</tt>. 第<i>i</i>行 出现的字符给出了<i>x<sub>i</sub></i><sub>-1</sub> 和 <i>x<sub>i</sub></i> 之间的操作. </span></div>
+<div></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">对表达式<i>x</i><sub>1</sub>-<i>x</i><sub>2</sub>-...-<i>x<sub>n</sub></i>添加n-1对括号，使得它与给出的表达式等价。在<tt>naw.out</tt> 中写入一个整数，表示插入空格的不同方案数，答案不超过1&nbsp;000&nbsp;000&nbsp;000。</span></div>
+<p>
+<divre></divre>
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+-<br />
+-<br />
++<br />
++<br />
+-<br />
++<br />
+<br />
+<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2981'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2981'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2981'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

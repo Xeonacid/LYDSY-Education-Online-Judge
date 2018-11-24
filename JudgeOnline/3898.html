@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3898. -- 打的士</title><center><h2>3898: 打的士</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>48&nbsp;&nbsp;<span class=green>Solved: </span>27<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3898'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3898'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3898'>Discuss</a>]</center><h2>Description</h2><div class=content><div>酒足饭饱之后。</div>
+<div>一帮人都喝醉了。</div>
+<div>嘛，由于酒驾查的很严格，所以说接下来就是送客人回家的难题了。</div>
+<div>嘛，接下来就是操蛋的设定。</div>
+<div>小T把喝醉的人分成了好多组，每一组要用一部车把他们送回家睡大觉。</div>
+<div>然后呢，每一组可以租用的车子也是不一样的，具体而言，对于第i组，有T[i]种的车子(型号可能相同)来把他们送回去。当然咯，小T只需要安排一辆车子就可以送走这一组所有的人了。由于囊中羞射，小T一定只会每组安排一辆车。</div>
+<div>更具体的，送回家的费用，是所有租用的车子里面，型号最大的和型号最小的车子，型号的差距。（尼玛，你这是啥题面啊，有TM啥关系啊</div>
+<div>但是呢= =，由于喝醉的人是相继的醉，不可能啊出现如下场景：</div>
+<div>&ldquo;大家一起醉吧。&rdquo;</div>
+<div>&ldquo;好！&rdquo;</div>
+<div>一杯而下，全倒了。。。</div>
+<div>所以呢，这样动态的安排车子，又给小T加了不少麻烦。也就是说，小T需要处理如下两个操作。</div>
+<div>1.有一组人醉倒了。</div>
+<div>2.询问当前所有醉倒的人送回家的费用。</div>
+<div>但是又出现了一个问题。</div>
+<div>小A说：&ldquo;你能解决，老子给你1000W。&rdquo;</div>
+<div>小T说：&ldquo;你还不如把车子全租了。&rdquo;</div>
+<div>小A说：&ldquo;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&rdquo;</div>
+<div>小A思考了一下又说：&ldquo;既然不能全租，那就来个限定吧，租车的型号必须大于等于L。&rdquo;</div>
+<div>小T给了小A一巴掌。。。。。。</div>
+<div>&ldquo;GFS就能拽？&rdquo;</div>
+<div></div></div><h2>Input</h2><div class=content><div>
+<div>第一行有一个正整数，N，表示操作的总数目。</div>
+<div>接下来N行，每行首先包含了一个字母C或者Q。</div>
+<div>如果是C，则表示，现在有一组人醉倒了，他们需要租车。C的后面有一个正整数T[]表示的是这一组有T[]部车子可以租。接下来有T[]个数字，分别表示他们可以租的车子的型号。</div>
+<div>如果是Q，则后面有一个限制，L，表示对于当前所有已经醉的组，算出他们租车的最小费用。并且租车的最小型号是L。</div>
+<div></div>
+</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每一个Q操作，输出最小费用。如果无法安排，请阁下输出-1。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+C 3 1 5 9<br />
+C 3 2 5 11<br />
+Q 0<br />
+C 3 2 8 19<br />
+Q 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+3</span></div><h2>HINT</h2>
+			<div class=content><p><div>第一问选择5 5。</div><br />
+<div>第二问选择8 9 11。1 2 2由于限制不能选择。</div><br />
+<div>M&lt;=200000,车子数量总和&lt;=550000, 所有车子的型号均&gt;=0，&lt;10^9。询问的L也&lt;10^9。</div><br />
+<p></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E6%8F%90%E4%BE%9B'>By 佚名提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3898'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3898'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3898'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

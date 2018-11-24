@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4418. -- [Shoi2013]扇形面积并</title><center><h2>4418: [Shoi2013]扇形面积并</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>218&nbsp;&nbsp;<span class=green>Solved: </span>119<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4418'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4418'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4418'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给定N个同心的扇形，求有多少面积，被至少K个扇形所覆盖。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行是三个整数n，m，k。n代表同心扇形的个数，m用来等分 [-&pi;,&pi;]的弧度。</div>
+<div>从第二行开始的n行，每行三个整数r，a1，a2。描述了一个圆心在原点的扇形，半径为r，圆心角是从弧度&pi;a1/m到&pi;a2/m，a1可能大于a2，逆时针扫过的区域为该扇形面积。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一个整数ans，至少被K个扇形所覆盖的总面积等于&pi;/2m&times;ans</div>
+<div>保证答案不超过2^63-1</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>【输入样例1】<br />
+3 8 2<br />
+1 -8 8<br />
+3 -7 3<br />
+5 -5 5<br />
+【输入样例2】<br />
+2 4 1<br />
+4 4 2<br />
+1 -4 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>【输出样例1】<br />
+76<br />
+【输出样例2】<br />
+98<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，1&le;n&le;10^5, &nbsp; 1&le;m&le;10^6,1&le;k&le;5000,1&le;ri&le;10^5,-m&le;a1,a2&le;m</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4418'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4418'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4418'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

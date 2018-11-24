@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4633. -- 道路魔法</title><center><h2>4633: 道路魔法</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4633'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4633'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4633'>Discuss</a>]</center><h2>Description</h2><div class=content><div>SHUXK 位于一个王国之中。这个王国由N个城市构成，城市之间连有双向的道路，通过每条道路都需要一定的时间</div>
+<div>。SHUXK 发现这个王国有两个主要城市 A 和 B，这两个城市之间人员来往非常频繁，以致于经常会发生交通堵塞</div>
+<div>。他想使用魔法来改善这个情况。他拥有一种&ldquo;路径魔法&rdquo;：一次选择一条从 A 城到 B 城的路径（可以经过一条</div>
+<div>边多次，也可以经过自环），将这条路径上每条道路的通过时间减少T（ T可以取任意非负实数）。SHUXK 可以使</div>
+<div>用这种魔法任意多次，但是仍然有一些限制：</div>
+<div>1. 不能使得某一条道路的通过时间T &le; 0，否则会违反时间法；</div>
+<div>2. 由于使用一次魔法所需要的魔力与路径上的道路数量呈指数关系，所以</div>
+<div>一次选择的路径上不能有超过??条道路。</div>
+<div>想着自己是在为民造福， SHUXK 很高兴。他的愉悦度定义为每一次路径魔法的T值之和再除以 7。（为什么要除以</div>
+<div>&nbsp;7？因为 SHUXK 很喜欢 142857 这个数）SHUXK 想知道他最多可以获得多少愉悦度。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含五个正整数N,M,A,B,L分别表示城市的数量、道路的数量、 A 城和 B 城的编号以及 SHUXK 的路径魔法</div>
+<div>限制的道路数量。</div>
+<div>以下M行每行含三个正整数x,y,t表示城市x和城市t间连有一条道路，通过所需的时间为t（ 1 &le; t&le; 10000）。</div>
+<div>N&lt;=100,M&lt;=500,L&lt;=6</div>
+<p></p></div><h2>Output</h2><div class=content><div>只有一行一个实数，表示 SHUXK 可以获得的最大的愉悦度。 当你</div>
+<div>的答案与标准答案的绝对误差不超过10^-6时即视为正确。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5 1 5 3<br />
+1 2 2<br />
+1 3 2<br />
+2 4 2<br />
+3 4 2<br />
+4 5 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.428571<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4633'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4633'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4633'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

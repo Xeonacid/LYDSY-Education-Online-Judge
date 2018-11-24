@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2370. -- 单词矩阵</title><center><h2>2370: 单词矩阵</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2370'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2370'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2370'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt" align="left"><span style="color: black">对于包含字母A到Y各一次的单词S，将其从上到下从左到右写在一个5*5的矩阵中，如单词ADJPTBEKQUCGLRVFINSWHMOXY写出来如下：</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">A D J P T</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">B E K Q U</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">C G L R V</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">F I N S W</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">H M O X Y</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">若该矩阵满足每一行每一列的字母都是字典序递增的则称S为优美的，如上述单词就是优美的，而ADJPTBEGQUCKLRVFINSWHMOXY则不是（第二列不满足要求）。</span></div>
+<div align="left"><b><span style="font-size: 12pt; color: black">Your Task</span></b></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">将所有优美的单词按字典序列出，从小到大编号1,2,&hellip;&hellip;</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">请你完成以下两种任务：</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt" align="left"><span style="color: black">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black">给定一个优美的单词，求其编号。</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt" align="left"><span style="color: black">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black">给定一个编号，求对应的优美的单词。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt" align="left"><span style="color: black">第一行一个字母，W表示任务1，N表示任务2</span></div>
+<div style="text-indent: 21pt" align="left"><span style="color: black">若是任务1，第二行是一个优美的单词，否则第二行是一个正整数，表示某个优美的单词的编号，保证该数不超过优美的单词的总数</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt" align="left"><span style="color: black">一行，若是任务1，输出对应编号，否则输出对应的优美的单词</span></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例输入一<br />
+W<br />
+ABCDEFGHIJKLMNOPQRSUTVWXY<br />
+样例输入二<br />
+N<br />
+20<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出一<br />
+2<br />
+<br />
+样例输出二<br />
+ABCDEFGHIJKLMNOPQSUWRTVXY</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2370'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2370'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2370'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

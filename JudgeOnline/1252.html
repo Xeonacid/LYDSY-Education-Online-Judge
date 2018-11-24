@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1252. -- SGU278 Fuel</title><center><h2>1252: SGU278 Fuel</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>20&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1252'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1252'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1252'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="word-spacing: 0px; font: 14px/23px Helvetica, 'Microsoft Yahei', verdana; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">A fuel station has infinite amount of each of&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">N</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;kinds of fuel. Each kind of fuel has density&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">a</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">, cost&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">b</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;and intensity&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">c</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">.&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">m</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;kilograms of such fuel has volume&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">ma</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">, intensity&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">mc</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;and costs&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">mb</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;dollars. Your car can store any mixture of different kinds of fuel such that the overall volume does not exceed&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">A</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">. You have&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">B</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;dollars. Your task is to determine the maximal overall intensity of the fuel you can buy. Note that you can buy any nonnegative amount of any kind of fuel, not necessarily an integer number of kilograms.</span></div>
+<div style="word-spacing: 0px; font: 14px/23px Helvetica, 'Microsoft Yahei', verdana; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><font face="Verdana, Geneva, Arial, Helvetica, sans-serif"><span style="font-size: 15px; line-height: 19px"><br />
+</span></font></div>
+<p></p></div><h2>Input</h2><div class=content><div style="word-spacing: 0px; font: 14px/23px Helvetica, 'Microsoft Yahei', verdana; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">The first line of the input contains three integers&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">N</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">,&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">A</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">,&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">B</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;(1&le;&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">N</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&le; 100000, 1&le;&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">A</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">,</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">B</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&le; 1000). Each of the next&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">N</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;lines describes one kind of fuel.&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">i</i><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">+1-st line contains three integers&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">a</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">,&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">b</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">,&nbsp;</span><i style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">c</i><sub style="line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i></sub><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">&nbsp;(0</span><a style="color: rgb(101,53,40)"><sub style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif"><i>i</i>,<i>b</i><sub><i>i</i></sub>,<i>c</i><sub><i>i</i></sub>&le; 1000).</sub></a><sub><font face="Verdana, Geneva, Arial, Helvetica, sans-serif"><span style="font-size: 15px; line-height: 19px"><br />
+</span></font>
+<div></div>
+</sub></div></div><h2>Output</h2><div class=content><div>
+<div>&nbsp;</div>
+<div><span style="font-size: 15px; line-height: 19px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif">The only line of the output must contain single number with 3 digits after the decimal point, being the maximal overall intensity.</span></div>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 3 3<br />
+1 2 1<br />
+2 1 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2.000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>A,B均大于0,小于等于100000 Ai,Bi,Ci均大于0小于等于1000 50%数据N小于等于100 100%数据N小于等于100000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1252'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1252'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1252'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

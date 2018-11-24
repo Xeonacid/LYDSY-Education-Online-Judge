@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4878. -- [Lydsy1705月赛]挑战NP-Hard</title><center><h2>4878: [Lydsy1705月赛]挑战NP-Hard</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>507&nbsp;&nbsp;<span class=green>Solved: </span>172<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4878'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4878'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4878'>Discuss</a>]</center><h2>Description</h2><div class=content><div>天才大学生quailty热衷于解决NP-Hard问题，你如果AC 了这道题，就可以成为他真正的粉丝。图染色问题：给定</div>
+<div>无向图G和一个正整数k。对于图中的每个点，选择一个在[1,k]之间的整数作为其颜色。你需要保证对于每条边，</div>
+<div>其两端点的颜色均不相同。简单k路径问题：给定无向图G和一个正整数k。请找到一条经过了恰好k条边的简单路径</div>
+<div>。即，你需要找到一个长度为k+1的序列v_1,v_2,...,v_{k+1}，满足1&lt;=v_i&lt;=n，且任意两个v均不相同，同时v_i</div>
+<div>与v_{i+1}之间存在一条边。现在给定无向图G和一个正整数k，quailty知道你没有他的水平，所以你只需解决上面</div>
+<div>的任意一个问题就可以成为他的粉丝。</div></div><h2>Input</h2><div class=content><div>第一行包含一个正整数T(1&lt;=T&lt;=1000)，表示测试数据的组数。</div>
+<div>对于每组数据，第一行包含三个正整数n,m,k(1&lt;=n&lt;=1000,1&lt;=m&lt;=10000,1&lt;=k&lt;=n)，分别表示图的点数与边数。</div>
+<div>接下来m行，每行两个正整数a,b(1&lt;=a,b&lt;=n)，表示a到b之间存在一条无向边。</div>
+<div>输入数据保证不存在重边与自环，且总边数不超过100000。</div></div><h2>Output</h2><div class=content><div>对于每组数据：</div>
+<div>若选择了图染色问题，请输出&ldquo;color&rdquo;，然后输出n个在1到k之间的正整数，分别表示每个点的颜色。</div>
+<div>若选择了简单路径问题，请输出&ldquo;path&rdquo;，然后输出k+1个在1到n之间的正整数，分别表示路径上每个点的编号。</div>
+<div>若有多组可行解，输出任意一组。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+4 5 2<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 1<br />
+1 3<br />
+3 3 3<br />
+1 2<br />
+2 3<br />
+3 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>path 3 2 1<br />
+color 1 2 3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%9C%ACOJ%E4%BB%98%E8%B4%B9%E8%8E%B7%E5%BE%97'>本OJ付费获得</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4878'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4878'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4878'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

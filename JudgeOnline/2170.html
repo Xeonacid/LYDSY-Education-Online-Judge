@@ -1,0 +1,60 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2170. -- 画圈圈</title><center><h2>2170: 画圈圈</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>124&nbsp;&nbsp;<span class=green>Solved: </span>88<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2170'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2170'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2170'>Discuss</a>]</center><h2>Description</h2><div class=content><p>有N行M列的点组成一个点阵。你通过用水平和竖直的线段连接一些相邻的点画若干闭合的回路，将所有的点连接起来，组成一个图形。连的线被视为是内部和外部的界限。其中，有一些点（用*和#表示）不用被连接，且用*表示的点在必须在图形内部，用#表示的点必须在图形外部。例如：（用＋表示点，－和｜表示线，ｘ表示图形内部）＋－＋－＋－＋－＋－＋　｜ｘｘｘｘｘｘｘｘｘ｜　＋ｘ＋－＋－＋ｘ﹡ｘ＋　｜ｘ｜　　　｜ｘｘｘ｜＋－＋　＃　＋ｘ＋－＋　　　　　　　｜ｘ｜＋－＋－＋　＋ｘ＋－＋　｜ｘｘｘ｜　｜ｘｘｘ｜＋－＋－＋　＋－＋－＋以及＋－＋－＋－＋－＋｜ｘｘｘｘｘｘｘ｜＋ｘ＋－＋－＋ｘ＋｜ｘ｜　　　｜ｘ｜＋ｘ＋　＃　＋ｘ＋　　　注意：这个点是在外部！｜ｘ｜　　　｜ｘ｜＋ｘ＋－＋－＋ｘ＋｜ｘｘｘｘｘｘｘ｜＋－＋－＋－＋－＋你要写一个程序来计算一共有多少种连线的方法。我们只关心它模一个大质数123456791的余数。</p></div><h2>Input</h2><div class=content><p>输入的第一行包含两个正整数，分别表示行数N和列数M。接下来N行，每行M个字符表示点的情况（用.*#来表示三种点）。 50%的数据满足：总的方法数小于220000 100%的数据满足： M&le;12，N&le;20</p></div><h2>Output</h2><div class=content><p>输出一个整数，表示总方法数模123456791的余数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 6<br />
+......<br />
+....*.<br />
+..#...<br />
+......<br />
+......</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>117</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E7%89%88%E6%9D%83%E6%89%80%E6%9C%89%E8%80%85%EF%BC%9A%E8%8C%83%E6%B5%A9%E5%BC%BA'>版权所有者：范浩强</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2170'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2170'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2170'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

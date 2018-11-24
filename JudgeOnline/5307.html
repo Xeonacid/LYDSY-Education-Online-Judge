@@ -1,0 +1,101 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5307. -- [Zjoi2018]树</title><center><h2>5307: [Zjoi2018]树</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>6&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5307'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5307'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5307'>Discuss</a>]</center><h2>Description</h2><div class=content><div>九条可怜是一个热爱出题的女孩子。</div>
+<div></div>
+<div>虽然出题本身是一件非常有趣的事情，但是要把题目给出成正式比赛，就不是那么有趣了：</div>
+<div>造数据总是一件让人心力憔悴的事情。</div>
+<div></div>
+<div>在ZJOI2018Day1中，可怜出了一道和树相关的非常有趣的题，</div>
+<div>她打算采用一种常用的方式随机生成一棵n个节点的有根树：</div>
+<div></div>
+<div>节点1作为树的根。</div>
+<div>对于i&isin;[2,n]，独立地从[1,i)中等概率随机选取一个节点作为i的父亲。</div>
+<div></div>
+<div>可怜不是很想考虑这样随机出来的数据能不能卡掉暴力，毕竟乱搞也是OI比赛的一部分。</div>
+<div>可怜比较在意的是题目的区分度，以及是不是所有可能的分数都出现了。</div>
+<div>因此，可怜希望任何两个测试点的树是有区别的：</div>
+<div>这样就可能会有错误的程序能只通过其中一个点。</div>
+<div></div>
+<div>因此，可怜想要计算，通过上面的方法独立的随机生成k棵n个节点的有根树T<sub>1</sub>至T<sub>k</sub>，</div>
+<div>他们两两同构的概率是多少。</div>
+<div></div>
+<div>两棵n个节点的有根树T1和T2同构当且仅当存在长度为n的排列p，</div>
+<div>满足p<sub>1</sub>=1，且对于存在i&isin;[2,n]，若i在T<sub>1</sub>的父亲是f，则p<sub>i</sub>在T<sub>2</sub>的父亲是p<sub>f</sub>。</div>
+<div></div></div><h2>Input</h2><div class=content><div>
+<div>第一行输入三个整数n,k,p，表示节点个数，树的个数以及模数。</div>
+<div>10^8&lt;=p&lt;=10^9,且p是质数。</div>
+<div>N&lt;=2000</div>
+<div>K&lt;=10^9</div>
+</div>
+<div></div>
+<div></div></div><h2>Output</h2><div class=content><div>输出一行一个整数，表示答案对p取模后的值。</div>
+<div>即如果答案的最简分数表示为a/b，输出a&times;b<sup>&minus;1</sup> mod p。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 2 998244353<br />
+3 2 998244353<br />
+4 2 998244353<br />
+10 2 998244353<br />
+50 233 998244353</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+499122177<br />
+332748118<br />
+113919852<br />
+634280054<br />
+样例中有五组不同的数据，所以输入格式略有不同。<br />
+在实际的测试数据中，输入只有一行。在第一组数据中，能够生成的树是唯一的，<br />
+因此生成的两棵树必定相同。<br />
+在第二组数据中，能够生成的树只有两种，他们是不同构的。<br />
+因此生成的两棵树同构的概率为1，在模998244353意义下为499122177。<br />
+在第三组数据中，能够生成的树有6种，如下图所示。<br />
+其中第二、三、四棵（第一排中间三棵）是同构的，其余两两不同构。<br />
+因此生成的两棵树同构的概率为1，在模998244353意义下为332748118。</span></div><h2>HINT</h2>
+			<div class=content><p><p><img src="upload/201804/vv1(3).jpg" width="501" height="260" alt="" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5307'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5307'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5307'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

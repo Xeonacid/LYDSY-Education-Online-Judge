@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4845. -- [Neerc2016]Game on Graph</title><center><h2>4845: [Neerc2016]Game on Graph</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>36&nbsp;&nbsp;<span class=green>Solved: </span>17<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4845'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4845'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4845'>Discuss</a>]</center><h2>Description</h2><div class=content><div>ls和他的妹子sl经常在一个有向图上玩游戏以秀恩爱，允许自环。游戏方式是将棋子放在某一个点，然后每轮可以</div>
+<div>将棋子移到它能到达的棋子上，如果某个人不能操作了，则判负。然而规则并没有那么简单，由于sl真是太喜欢ls</div>
+<div>了，她很希望ls能多陪陪她，因此如果她有两种决策，一种能让她必胜，另一种能让这个游戏永远持续下去，她会</div>
+<div>选择后者，否则如果她不能让这个游戏永远持续下去，她会选择让她赢的决策。反之由于ls十分忙碌，有很多工作</div>
+<div>要做，不希望在这个游戏上浪费太多时间，因此如果ls有两种决策，一种会让他必败，一种则会让这个游戏永远持</div>
+<div>续下去，他会选择前者，即使他会输给他的妹子，当然，如果他可以不让这个游戏永远持续下去，他还是希望赢的</div>
+<div>。ls绝顶聪明，那么他的妹子sl也不会差到哪去，所以两人均采取最优的决策。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个整数n(1&lt;=n&lt;=100000),m(1&lt;=m&lt;=200000)，表示有n个点m条单向边。</div>
+<div>之后m行每行两个数u,v，表示有一条u到v的单向边。</div>
+<p></p></div><h2>Output</h2><div class=content><div>两行，第一行输出一个字符串包含n个字符，第i个字符表示sl先手且棋子初始放在第i个点，游戏的结局状况</div>
+<div>第二行同样一个字符串包含n个字符，第i个字符表示ls先手且棋子初始放在第i个点，游戏的结局状况。</div>
+<div>字符一共三种：&quot;W&quot;表示先手必胜，&quot;L&quot;表示先手必败，&quot;D&quot;则表示游戏将永远持续下去。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 7<br />
+1 2<br />
+2 1<br />
+2 3<br />
+1 4<br />
+4 1<br />
+4 5<br />
+5 6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>WDLDWL<br />
+DWLLWL</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4845'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4845'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4845'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

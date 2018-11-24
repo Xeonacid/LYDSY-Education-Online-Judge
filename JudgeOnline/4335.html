@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4335. -- JSOI2012 采购</title><center><h2>4335: JSOI2012 采购</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4335'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4335'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4335'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给定一个由N个节点，若干条无向边组成的城市，某些节点处有一辆或多辆汽车，一辆汽车只能使用一次，可以行驶任意长度。&nbsp;</div>
+<div>坐车和步行速度不同，坐车每个单位距离需要Ds的时间，步行每个单位距离需要Ws的时间。&nbsp;</div>
+<div>给定一个长度为M的访问列表，要求从0号节点出发，依次访问列表中的每个节点，最后回到0号节点。可以选择坐车或步行，求完成任务所需的最短时间。&nbsp;</div>
+<div>注意：每辆车只能在一次访问中被用一次，而且之后都不能再用了</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行三个整数N，M，P&nbsp;</div>
+<div>N为点数，M为访问列表长度，P为车辆数。&nbsp;</div>
+<div>第二个M个数，按顺序给出需要访问的点&nbsp;</div>
+<div>第三行P个整数，表示在第X号上有车，一个点可以有多个车。&nbsp;</div>
+<div>第四行到第N+3行，每行N个整数，给出地图，为无向图。&nbsp;</div>
+<div>第i+4行第J+1列的数字Aij表示i号点到J号点的距离。0&lt;=Aij&lt;=200,Aij=0表示没有路&nbsp;</div>
+<div>下面一行两个数字，Ds和Ws分别表示坐车每单位距离所需要的时间和步行每单位距离所要的时间 1保证有解&nbsp;</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>所需要最小时间</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 2 1<br />
+2 3<br />
+1<br />
+0 0 1 0<br />
+0 0 0 2<br />
+1 0 0 3<br />
+0 2 3 0<br />
+1 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>36</span></div><h2>HINT</h2>
+			<div class=content><p><p>N,M,P&lt;=200</p><br />
+<p>应上传者要求，此题不公开，如有异议，请提出.</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4335'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4335'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4335'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

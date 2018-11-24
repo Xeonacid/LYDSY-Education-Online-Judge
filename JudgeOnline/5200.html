@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5200. -- [NWERC2017]Factor-Free Tree</title><center><h2>5200: [NWERC2017]Factor-Free Tree</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>115&nbsp;&nbsp;<span class=green>Solved: </span>32<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5200'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5200'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5200'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一棵Factor-Free Tree是指一棵有根二叉树，每个点包含一个正整数权值，且每个点的权值都与其所有祖先的权值互质。</div>
+<div>二叉树中序遍历是指按照左子树-根-右子树的顺序递归遍历二叉树，将每个点的权值依次写下来得到的序列。</div>
+<div></div>
+<div>给定一个序列a_1,a_2,...,a_n，请判断它是不是可能是某棵Factor-Free Tree的中序遍历序列，如果是的话请给出例子。</div>
+<div><img src="upload/201803/1(1).jpg" width="222" height="172" alt="" /></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数n(1&lt;=n&lt;=1000000)。</div>
+<div>第二行包含n个正整数a_1,a_2,...,a_n(1&lt;=a_i&lt;=10^7)，表示节点编号为1到n的每个点的权值。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>若不是，输出impossible</div>
+<div>否则输出一行n个整数，依次表示序列每一项代表的节点在树中的父亲节点，若是根节点则输出0。</div>
+<div>若有多组解，输出任意一组。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+2 7 15 8 9 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2 0 4 2 4 5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91%E5%8F%8ASPJ'>鸣谢Claris提供翻译及SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5200'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5200'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5200'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

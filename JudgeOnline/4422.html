@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4422. -- [Cerc2015]Cow Confinement</title><center><h2>4422: [Cerc2015]Cow Confinement</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>155&nbsp;&nbsp;<span class=green>Solved: </span>76<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4422'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4422'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4422'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一个10^6行10^6列的网格图，上面有一些牛、花和一些矩形围栏，围栏在格子的边界上，牛和花在格子里，牛只能向下或向右走，牛也不能穿过围栏和地图边界，求每头牛它能到达的花的数量。注意栅栏不会相交</div>
+<div><img width="486" height="492" alt="" src="upload/201603/aa.png" /></div>
+<div></div>
+<p class="MsoNormal"></p>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个数f表示矩形围栏的数量。</div>
+<div>接下来f行，每行四个数x1,y1,x2,y2，表示(x1,y1)在围栏内部矩形的左上角，(x2,y2)在右下角。</div>
+<div>接下来一行一个数m表示花的数量。</div>
+<div>接下来m行每行两个数x,y，表示在(x,y)处有一朵花。</div>
+<div>接下来一行一个数n表示牛的数量。</div>
+<div>接下来n行每行两个数x,y，表示在(x,y)处有一头牛。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>总共n行，每行一个数ans，第i个数表示第i头牛能到ans个花。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+2 2 8 4<br />
+1 9 4 10<br />
+6 7 9 9<br />
+3 3 7 3<br />
+9<br />
+3 4<br />
+8 4<br />
+11 5<br />
+10 7<br />
+10 8<br />
+9 8<br />
+2 8<br />
+4 11<br />
+9 11<br />
+8<br />
+1 1<br />
+5 10<br />
+6 9<br />
+3 7<br />
+7 1<br />
+4 2<br />
+7 5<br />
+3 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+1<br />
+0<br />
+1<br />
+3<br />
+1<br />
+3<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p><div style="font-family: 'lucida Grande', Verdana, 'Microsoft YaHei'; font-size: 14px; line-height: 19.16666603088379px;">0&lt;=f&lt;=<span style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(204, 204, 204); z-index: 1;" data="200000" t="7">200000</span></div><br />
+<div style="font-family: 'lucida Grande', Verdana, 'Microsoft YaHei'; font-size: 14px; line-height: 19.16666603088379px;">0&lt;=m&lt;=<span style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(204, 204, 204); z-index: 1;" data="200000" t="7">200000</span></div><br />
+<div style="font-family: 'lucida Grande', Verdana, 'Microsoft YaHei'; font-size: 14px; line-height: 19.16666603088379px;">1&lt;=n&lt;=<span style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(204, 204, 204); z-index: 1; position: static;" data="200000" t="7">200000</span></div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4422'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4422'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4422'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1212. -- [HNOI2004]L语言</title><center><h2>1212: [HNOI2004]L语言</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>2179&nbsp;&nbsp;<span class=green>Solved: </span>1025<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1212'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1212'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1212'>Discuss</a>]</center><h2>Description</h2><div class=content><p>标点符号的出现晚于文字的出现，所以以前的语言都是没有标点的。现在你要处理的就是一段没有标点的文章。 一段文章T是由若干小写字母构成。一个单词W也是由若干小写字母构成。一个字典D是若干个单词的集合。 我们称一段文章T在某个字典D下是可以被理解的，是指如果文章T可以被分成若干部分，且每一个部分都是字典D中的单词。 例如字典D中包括单词{&lsquo;is&rsquo;, &lsquo;name&rsquo;, &lsquo;what&rsquo;, &lsquo;your&rsquo;}，则文章&lsquo;whatisyourname&rsquo;是在字典D下可以被理解的 因为它可以分成4个单词：&lsquo;what&rsquo;, &lsquo;is&rsquo;, &lsquo;your&rsquo;, &lsquo;name&rsquo;，且每个单词都属于字典D，而文章&lsquo;whatisyouname&rsquo; 在字典D下不能被理解，但可以在字典D&rsquo;=D+{&lsquo;you&rsquo;}下被理解。这段文章的一个前缀&lsquo;whatis&rsquo;，也可以在字典D下被理解 而且是在字典D下能够被理解的最长的前缀。 给定一个字典D，你的程序需要判断若干段文章在字典D下是否能够被理解。 并给出其在字典D下能够被理解的最长前缀的位置。</p></div><h2>Input</h2><div class=content><p>输入文件第一行是两个正整数n和m，表示字典D中有n个单词，且有m段文章需要被处理。 之后的n行每行描述一个单词，再之后的m行每行描述一段文章。 其中1&lt;=n, m&lt;=20，每个单词长度不超过10，每段文章长度不超过1M。</p></div><h2>Output</h2><div class=content><p>对于输入的每一段文章，你需要输出这段文章在字典D可以被理解的最长前缀的位置。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+is<br />
+name<br />
+what<br />
+your<br />
+whatisyourname<br />
+whatisyouname<br />
+whaisyourname<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>14<br />
+6<br />
+0	整段文章’whatisyourname’都能被理解<br />
+前缀’whatis’能够被理解<br />
+没有任何前缀能够被理解<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1212'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1212'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1212'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

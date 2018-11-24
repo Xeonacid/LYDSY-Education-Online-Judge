@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2511. -- 信心题</title><center><h2>2511: 信心题</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>36&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2511'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2511'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2511'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">给定一个<i>N</i>个顶点的凸多边形，多边形可能有多个点在一条直线上。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">给定<i>M</i>条直线，对于每条直线，问这条直线将多边形划分成的两个区域中，面积较小的那个区域的面积。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">第1行包含一个<b><u>正整数</u></b><i>N</i>，表示了多边形顶点数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来<i>N</i>行，每行两个绝对值不超过10000的整数<i>x</i>, <i>y</i>，按顺时针或者逆时针顺序给出了多边形每个顶点坐标。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第<i>N</i>+2行包含一个正整数<i>M</i>，表示了询问直线的个数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">接下来M行，每行4个绝对值不超过10000的整数<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>，表示了询问直线过(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>), (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>)两点，并保证了(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) &ne; (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>)。<b><u>若直线将凸多边形划分成两部分，则输出较小那部分的面积，否则输出</u></b><b><u>0</u></b><b><u>。</u></b></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">应包含<i>M</i>行，对于每条直线输出对应结果，<b><u>保留</u></b><b><u>4</u></b><b><u>位小数</u></b>。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata> 5<br />
+0 0<br />
+0 5<br />
+0 10<br />
+10 10<br />
+10 0<br />
+4<br />
+0 0 10 10<br />
+9 10 10 9<br />
+10 -1 12 11<br />
+10 10 0 5<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>50.0000<br />
+0.5000<br />
+0.0000<br />
+25.0000<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">对于100%的数据，有N, M &le; 50000</span></p><br />
+<p><span style="font-size: medium">保留小数点后6位或以上，SPJ检查精度为小数点后4位</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD%20%20Jason%E4%B8%B6Hsiao%20%E6%8F%90%E4%BE%9BSPJ'>2011福建集训  Jason丶Hsiao 提供SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2511'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2511'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2511'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

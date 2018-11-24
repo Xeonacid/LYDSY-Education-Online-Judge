@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3375. -- [Usaco2004 Mar]Paranoid Cows 发疯的奶牛</title><center><h2>3375: [Usaco2004 Mar]Paranoid Cows 发疯的奶牛</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>32&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3375'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3375'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3375'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰有N(1&le;N&le;100000)头奶牛，它们都可以控制自己的产奶量．一头产奶不多的奶牛会被其它奶牛嘲笑,&nbsp;约翰制订一张产奶时间表，第i头奶牛在Ai_Bi时间段里产奶(0&le;Ai&lt;Bi&le;10^9)．这头奶牛必须在Ai的时候进入奶棚在Bi的时候离开．奶棚的门很小，同一时刻只能有一头奶牛通过．&nbsp;如果第i头奶牛产奶的时间段包含第j头奶牛产奶的时间段，即A&lt;Aj&lt;Bj&lt;Bi.那么，我们称这两个时间段是&ldquo;巢段&rdquo;．&nbsp;&nbsp;&ldquo;巢段&rdquo;是一件很糟糕的事，因为第j头奶牛在奶棚的时间里第i头奶牛一直都在．这样第i头奶牛就能估计第j头奶牛的产奶量．由于产奶量被别的奶牛知道了的奶牛会发疯，所以约翰不希望&ldquo;巢段&rdquo;的发生．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;帮助约翰确定最大的k(1&le;K&le;N)，在1到K的奶牛中不存在&ldquo;巢段&rdquo;．</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：奶牛的数量N．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到N+1行：每行有两个用空格隔开的数字，表示这头奶牛的产奶时间段．</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个整数K</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+7 20<br />
+1 4<br />
+3 12<br />
+6 10<br />
+0 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 3<br />
+<br />
+样例说明<br />
+    第4头奶牛( 6-10)被包含于第3头奶牛(3-12)．另外，1至3头奶牛不存在“巢段”</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Orange'>Orange</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3375'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3375'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3375'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

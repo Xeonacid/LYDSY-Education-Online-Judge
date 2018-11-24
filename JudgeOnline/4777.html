@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4777. -- [Usaco2017 Open]Switch Grass</title><center><h2>4777: [Usaco2017 Open]Switch Grass</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>234&nbsp;&nbsp;<span class=green>Solved: </span>66<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4777'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4777'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4777'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John has recently been experimenting with cultivating different types of grass on his farm, r</div>
+<div>ealizing that different types of cows like different types of grass. However, he must be careful to&nbsp;</div>
+<div>ensure that different types of grass are planted sufficiently far away from each-other, in order to&nbsp;</div>
+<div>prevent them from being inextricably mixed.FJ's farm consists of Nfields (1&le;N&le;200,000), where M pa</div>
+<div>irs of fields are connected by bi-directional pathways (1&le;M&le;200,000). Using these pathways, it is&nbsp;</div>
+<div>possible to walk from any field to any other field. Each pathway has an integer length in the range&nbsp;</div>
+<div>1&hellip;1,000,000. Any pair of fields will be linked by at most one direct pathway.In each field, FJ init</div>
+<div>ially plants one of Ktypes of grass (1&le;K&le;N). Over time, however, he might decide to switch the gra</div>
+<div>ss in some field to a different type. He calls this an &quot;update&quot; operation. He might perform several&nbsp;</div>
+<div>updates over the course of time, which are all cumulative in nature.After each update, FJ would like</div>
+<div>&nbsp;to know the length of the shortest path between two fields having different grass types. That is, a</div>
+<div>mong all pairs of fields having different grass types, he wants to know which two are closest. Ideal</div>
+<div>ly, this number is large, so he can prevent grass of one type from mixing with grass of another type</div>
+<div>. It is guaranteed that the farm will always have at least two fields with different grass types.In&nbsp;</div>
+<div>30 percent of the input cases, each field will be directly connected to at most 10 pathways.</div>
+<div>
+<div>给定一张带权无向图，每个点有一个颜色，每次改变一个点的颜色，要求你在操作后输出这个图中最近异色点对之</div>
+<div>间的距离最近异色点对定义为：一对点颜色不同，且距离最小</div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains four integers, N, M, K, and Q, where Q is the number of updates (1</div>
+<div>&le;Q&le;200,000). The next M lines describe the paths; each one contains three integers A, B, and L, in</div>
+<div>dicating a path from field A to field B (both integers in the range 1&hellip;N) of length L. The next line</div>
+<div>&nbsp;indicates the initial type of grass growing in each field (N integers in the range 1&hellip;K). Finally,&nbsp;</div>
+<div>the last Q lines each describe an update, specified by two integers A and B, where the grass in fiel</div>
+<div>d A is to be updated to type B</div>
+<p></p></div><h2>Output</h2><div class=content><div>For each update, print the length of the shortest path between two fields with different types of grass</div>
+<div>
+<div>after the update is applied.</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 3 4<br />
+1 2 3<br />
+2 3 1<br />
+1 1 2<br />
+3 3<br />
+2 3<br />
+1 2<br />
+2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+3<br />
+3<br />
+1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Platinum'>Platinum</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4777'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4777'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4777'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

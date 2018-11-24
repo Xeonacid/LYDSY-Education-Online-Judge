@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3300. -- [USACO2011 Feb]Best Parenthesis</title><center><h2>3300: [USACO2011 Feb]Best Parenthesis</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>237&nbsp;&nbsp;<span class=green>Solved: </span>130<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3300'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3300'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3300'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Recently, the cows have been competing with strings of balanced&nbsp;</div>
+<div>parentheses and comparing them with each other to see who has the&nbsp;</div>
+<div>best one.&nbsp;</div>
+<div>Such strings are scored as follows (all strings are balanced): the&nbsp;</div>
+<div>string &quot;()&quot; has score 1; if &quot;A&quot; has score s(A) then &quot;(A)&quot; has score&nbsp;</div>
+<div>2*s(A); and if &quot;A&quot; and &quot;B&quot; have scores s(A) and s(B), respectively,&nbsp;</div>
+<div>then &quot;AB&quot; has score s(A)+s(B). For example, s(&quot;(())()&quot;) =&nbsp;</div>
+<div>s(&quot;(())&quot;)+s(&quot;()&quot;) = 2*s(&quot;()&quot;)+1 = 2*1+1 = 3.&nbsp;</div>
+<div>Bessie wants to beat all of her fellow cows, so she needs to calculate&nbsp;</div>
+<div>the score of some strings. Given a string of balanced parentheses&nbsp;</div>
+<div>of length N (2 &lt;= N &lt;= 100,000), help Bessie compute its score.&nbsp;</div>
+<div></div>
+<div>计算&ldquo;平衡字符串&rdquo;的分数，&ldquo;平衡字符串&rdquo;是指由相同数量的&lsquo;（&rsquo;和&lsquo;）&rsquo;组成，&nbsp;</div>
+<div>且以&lsquo;（&rsquo;开头，以&lsquo;）&rsquo;结尾的字符串。&nbsp;</div>
+<div>计算规则：&nbsp;</div>
+<div>字符串&ldquo;（）&rdquo;的得分是1.&nbsp;</div>
+<div>如果，平衡字符串&ldquo;A&rdquo;的得分是是S(A)，那么字符串&ldquo;（A）&rdquo;得分是2*S(A) ；&nbsp;</div>
+<div>如果，&ldquo;A&rdquo;，&ldquo;B&rdquo; 得分分别是S(A)和S(B)，那么平衡字符串&ldquo;AB&rdquo;得分为S(A)+S(B)&nbsp;</div>
+<div>例如：s(&quot;(())()&quot;) =s(&quot;(())&quot;)+s(&quot;()&quot;) = 2*s(&quot;()&quot;)+1 = 2*1+1 = 3.</div></div><h2>Input</h2><div class=content><p><font size="3" face="Times New Roman">* Line 1: A single integer: N <br />
+* Lines 2..N + 1: Line i+1 will contain 1 integer: 0 if the ith <br />
+character of the string is '(', and 1 if the ith character of the string is ')' <br />
+第1行：N，平衡字符串长度 <br />
+第2至N+1行：Linei+1 整数0或1,0代表字符&lsquo;（&rsquo;，1代表&lsquo;）&rsquo;</font></p></div><h2>Output</h2><div class=content><p><font size="3" face="Times New Roman">* Line 1: The score of the string. Since this number can get quite large, output the score modulo 12345678910. <br />
+计算字符串得分，结果对12345678910取模</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+0<br />
+0<br />
+1<br />
+1<br />
+0<br />
+1<br />
+INPUT DETAILS:<br />
+This corresponds to the string "(())()".</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3300'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3300'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3300'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

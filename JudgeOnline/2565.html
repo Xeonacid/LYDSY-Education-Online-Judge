@@ -1,0 +1,61 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2565. -- 最长双回文串</title><center><h2>2565: 最长双回文串</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3181&nbsp;&nbsp;<span class=green>Solved: </span>1605<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2565'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2565'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2565'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="background: white" align="left"><span style="font-size: 12pt; color: #200000">顺序和逆序读起来完全一样的串叫做回文串。比如</span><span style="font-size: 12pt; color: #200000">acbca</span><span style="font-size: 12pt; color: #200000">是回文串，而</span><span style="font-size: 12pt; color: #200000">abc</span><span style="font-size: 12pt; color: #200000">不是（</span><span style="font-size: 12pt; color: #200000">abc</span><span style="font-size: 12pt; color: #200000">的顺序为</span><span style="font-size: 12pt; color: #200000">&ldquo;abc&rdquo;</span><span style="font-size: 12pt; color: #200000">，逆序为</span><span style="font-size: 12pt; color: #200000">&ldquo;cba&rdquo;</span><span style="font-size: 12pt; color: #200000">，不相同）。</span><span style="font-size: 12pt; color: #200000"><br />
+</span><span style="font-size: 12pt; color: #200000">输入长度为</span><span style="font-size: 12pt; color: #200000">n</span><span style="font-size: 12pt; color: #200000">的串</span><span style="font-size: 12pt; color: #200000">S</span><span style="font-size: 12pt; color: #200000">，求</span><span style="font-size: 12pt; color: #200000">S</span><span style="font-size: 12pt; color: #200000">的最长双回文子串</span><span style="font-size: 12pt; color: #200000">T,</span><span style="font-size: 12pt; color: #200000">即可将</span><span style="font-size: 12pt; color: #200000">T</span><span style="font-size: 12pt; color: #200000">分为两部分</span><span style="font-size: 12pt; color: #200000">X</span><span style="font-size: 12pt; color: #200000">，</span><span style="font-size: 12pt; color: #200000">Y</span><span style="font-size: 12pt; color: #200000">，（</span><span style="font-size: 12pt; color: #200000">|X|,|Y|&ge;1</span><span style="font-size: 12pt; color: #200000">）且</span><span style="font-size: 12pt; color: #200000">X</span><span style="font-size: 12pt; color: #200000">和</span><span style="font-size: 12pt; color: #200000">Y</span><span style="font-size: 12pt; color: #200000">都是回文串。</span></div></div><h2>Input</h2><div class=content><p><font size="3"><font color="#200000">一行由小写英文字母组成的字符串<span style="font-size: 12pt; color: #200000">S</span></font></font><span style="font-size: 12pt; color: #200000">。</span></p></div><h2>Output</h2><div class=content><div style="background: white" align="left"><span style="font-size: 12pt; color: #200000">一行一个整数，表示最长双回文子串的长度。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>baacaabbacabb<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>样例说明<br /><br />
+从第二个字符开始的字符串aacaabbacabb可分为aacaa与bbacabb两部分，且两者都是回文串。<br /><br />
+对于100%的数据，2&le;|S|&le;10^5</p><br />
+<p>2015.4.25新加数据一组</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2012%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9FRound%201%20day2'>2012国家集训队Round 1 day2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2565'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2565'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2565'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

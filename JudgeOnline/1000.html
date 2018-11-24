@@ -1,0 +1,120 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1000. -- A+B Problem</title><center><h2>1000: A+B Problem</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>5 MB<br><span class=green>Submit: </span>30476&nbsp;&nbsp;<span class=green>Solved: </span>17561<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1000'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1000'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1000'>Discuss</a>]</center><h2>Description</h2><div class=content><p>输入两个数字，输出它们之和</p></div><h2>Input</h2><div class=content><p>一行两个数字A,B(0&lt;=A,B&lt;100)</p>
+<p></p></div><h2>Output</h2><div class=content><p>输出这两个数字之和</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p><p>Q: Where are the input and the output? A: Your program shall always <font color="#ff0000">read input from stdin (Standard Input) and write output to stdout (Standard Output)</font>. For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout. You <font color="#ff0000">shall not output any extra data</font> to standard output other than that required by the problem, otherwise you will get a &quot;Wrong Answer&quot;. User programs are not allowed to open and read from/write to files. You will get a &quot;Runtime Error&quot; or a &quot;Wrong Answer&quot; if you try to do so. Here is a sample solution for problem 1000 using C++/G++:</p><br />
+<pre><br />
+#include <iostream></iostream><br />
+using namespace std;<br />
+int  main()<br />
+{<br />
+    int a,b;<br />
+    cin &gt;&gt; a &gt;&gt; b;<br />
+    cout &lt;&lt; a+b &lt;&lt; endl;<br />
+    return 0;<br />
+}</pre><br />
+<p>It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error. Here is a sample solution for problem 1000 using C/GCC:</p><br />
+<pre><br />
+#include <stdio.h></stdio.h><br />
+<br />
+int main()<br />
+{<br />
+    int a,b;<br />
+    scanf(&quot;%d %d&quot;,&amp;a, &amp;b);<br />
+    printf(&quot;%d\n&quot;,a+b);<br />
+    return 0;<br />
+}</pre><br />
+<p>Here is a sample solution for problem 1000 using PASCAL:</p><br />
+<pre><br />
+program p1000(Input,Output); <br />
+var <br />
+  a,b:Integer; <br />
+begin <br />
+   Readln(a,b); <br />
+   Writeln(a+b); <br />
+end.</pre><br />
+<p>Here is a sample solution for problem 1000 using JAVA: Now java compiler is jdk 1.5, next is program for 1000</p><br />
+<pre><br />
+import java.io.*;<br />
+import java.util.*;<br />
+public class Main<br />
+{<br />
+            public static void main(String args[]) throws Exception<br />
+            {<br />
+                    Scanner cin=new Scanner(System.in);<br />
+                    int a=cin.nextInt(),b=cin.nextInt();<br />
+                    System.out.println(a+b);<br />
+            }<br />
+}</pre><br />
+<p>Old program for jdk 1.4</p><br />
+<pre><br />
+import java.io.*;<br />
+import java.util.*;<br />
+<br />
+public class Main<br />
+{<br />
+    public static void main (String args[]) throws Exception<br />
+    {<br />
+        BufferedReader stdin = <br />
+            new BufferedReader(<br />
+                new InputStreamReader(System.in));<br />
+<br />
+        String line = stdin.readLine();<br />
+        StringTokenizer st = new StringTokenizer(line);<br />
+        int a = Integer.parseInt(st.nextToken());<br />
+        int b = Integer.parseInt(st.nextToken());<br />
+        System.out.println(a+b);<br />
+    }<br />
+}</pre></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1000'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1000'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1000'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

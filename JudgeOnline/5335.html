@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5335. -- [TJOI2018]智力竞赛</title><center><h2>5335: [TJOI2018]智力竞赛</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>75&nbsp;&nbsp;<span class=green>Solved: </span>56<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5335'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5335'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5335'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小豆报名参加智力竞赛，他带上了n个好朋友作为亲友团一块来参加比赛。</div>
+<div>比赛规则如下:</div>
+<div>一共有m道题目，每个入都有1次答题机会，每次答题为选择一道题目回答，在回答正确后，可以从这个题目的后续</div>
+<div>题目，直达题目答错题目或者没有后续题目。每个问题都会代表一个价值，比赛最后的参赛选手获得奖励价值等价</div>
+<div>于该选手和他的亲友团没有回答的问题中的最低价值。我们现在知道小豆和他的亲友团实力非常强，能够做出这次</div>
+<div>竞赛中的所有题目。</div>
+<div>小豆想知道在知道题目和后续题目的条件下，他最大能获得价值是多少?</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行有两个整数n, m。(n &nbsp;&le; 50, m &nbsp;&le; 500)</div>
+<div>接下来m行，第i+1行表示编号为i的题目的题目信息;</div>
+<div>格式如下vi, ki, ai_1, ai_2, ..., ai_ki 。</div>
+<div>其中vi表示该题目的价值，ki &nbsp;表示这个题目的后续，</div>
+<div>ai_1, ai_2, ..., ai_ki 表示这i 个题目的后续题目编号。</div>
+<div>1 &lt; n &le; 50, 1 &lt; m &le; 500, vi &le; 10^9, ki, ai_j &le; m。</div>
+<p></p></div><h2>Output</h2><div class=content><div>如果全部题目都能答对，这输出&ldquo;AK&rdquo;，否则输出小豆可以获得的最高奖励价值。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 3<br />
+1 0<br />
+2 1 3<br />
+3 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>AK<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5335'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5335'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5335'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

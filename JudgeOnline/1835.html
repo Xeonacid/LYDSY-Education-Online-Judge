@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1835. -- [ZJOI2010]base 基站选址</title><center><h2>1835: [ZJOI2010]base 基站选址</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1760&nbsp;&nbsp;<span class=green>Solved: </span>820<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1835'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1835'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1835'>Discuss</a>]</center><h2>Description</h2><div class=content>	有N个村庄坐落在一条直线上，第i(i>1)个村庄距离第1个村庄的距离为Di。需要在这些村庄中建立不超过K个通讯基站，在第i个村庄建立基站的费用为Ci。如果在距离第i个村庄不超过Si的范围内建立了一个通讯基站，那么就成它被覆盖了。如果第i个村庄没有被覆盖，则需要向他们补偿，费用为Wi。现在的问题是，选择基站的位置，使得总费用最小。
+输入数据 (base.in)
+	输入文件的第一行包含两个整数N,K，含义如上所述。
+	第二行包含N-1个整数，分别表示D2,D3,…,DN ，这N-1个数是递增的。
+	第三行包含N个整数，表示C1,C2,…CN。
+	第四行包含N个整数，表示S1,S2,…,SN。
+	第五行包含N个整数，表示W1,W2,…,WN。
+</div><h2>Input</h2><div class=content>	输出文件中仅包含一个整数，表示最小的总费用。
+</div><h2>Output</h2><div class=content>3 2
+1 2
+2 3 2
+1 1 0
+10 20 30
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>	4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>	40%的数据中，N<=500；<br />
+	100%的数据中，K<=N，K<=100，N<=20,000，Di<=1000000000，Ci<=10000，Si<=1000000000，Wi<=10000。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day1'>Day1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1835'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1835'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1835'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

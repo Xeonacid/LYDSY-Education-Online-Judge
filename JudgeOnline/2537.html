@@ -1,0 +1,62 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2537. -- [neerc2007]Language Recognition</title><center><h2>2537: [neerc2007]Language Recognition</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>83&nbsp;&nbsp;<span class=green>Solved: </span>48<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2537'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2537'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2537'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">DFA（确定性有限状态自动机）是一个有向图，顶点称为状态，边称为转移。每个转移用一个字母标记。对于每个状态s和每个转移l，至多有一个转移从s出发且标记为l。DFA有一个初始状态和若干个结束状态。DFA定义的语言的单词可以由从开始状态到结束状态的路径上所有的字母连接起来。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">图中表示一个语言（包括单词：fix,foo,ox）的DFA。第一个DFA有7个状态，它不是最优的。第二个DFA定义的是同一个语言，但只有5个状态。</span></div>
+<div><span style="font-size: medium">给定一个语言，包含有限个单词，求出定义该语言的DFA得最少状态数。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 第一行有一个整数n(1&lt;=n&lt;=5000)，表示语言的单词数。接下来n行，每行一个单词。每个单词由1到30个小写字母组成。输入的所有单词互不相同。</span></div></div><h2>Output</h2><div class=content><div style="margin: 13pt 0cm">&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 一个数，定义该语言的DFA得最少状态数。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+fix<br />
+foo<br />
+ox<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2537'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2537'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2537'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

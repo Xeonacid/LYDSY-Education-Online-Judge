@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4641. -- 基因改造</title><center><h2>4641: 基因改造</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>196&nbsp;&nbsp;<span class=green>Solved: </span>116<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4641'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4641'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4641'>Discuss</a>]</center><h2>Description</h2><div class=content><div>&quot;人类智慧的冰峰，只有萌萌哒的我寂寞地守望。&quot;</div>
+<div>--TB</div>
+<div></div>
+<div>TB正走在改造人类智慧基因的路上。TB发现人类智慧基因一点也不萌萌哒，导致人类普遍智商过低，为了拯救低智</div>
+<div>商人群，博爱的TB开始改造人类智慧基因。人类智慧DNA由C种人类智慧脱氧核苷酸构成（这是一种十分特殊的DNA</div>
+<div>）。TB智慧DNA片段T长度为M，她可以把另一段长度为M的人类智慧DNA片段S改造成T。改造过程中，TB可以充分发</div>
+<div>挥智慧，将任意两种人类智慧脱氧核苷酸交换（比如对于片段S=12321，交换1和2变成S=21312，交换1和4变成4232</div>
+<div>4），可以无限次交换。如果S可以通过若干次交换变成T，那么就称S为&quot;萌萌哒人类基因片段&quot;。TB想知道对于一个</div>
+<div>长度为N的人类智慧DNA片段S[1~N]，有多少个长度为M的连续子片段S[i~i+M-1]，是&quot;萌萌哒人类基因片段&quot;，并且</div>
+<div>这些&quot;萌萌哒人类基因片段&quot;在哪里。</div></div><h2>Input</h2><div class=content><div>输入文件的第一行包含两个正整数case和C，分别表示数据组数和人类智慧脱氧核苷酸的种数。</div>
+<div>接下来3*case行，每三行表示一组数据：</div>
+<div>第一行一个正整数N和M，表示人类智慧DNA片段S和TB智慧DNA片段T的长度。</div>
+<div>第二行N个正整数，表示人类智慧DNA片段S。</div>
+<div>第三行M个正整数，表示TB智慧DNA片段T。</div>
+<div>对于所有数据数据，case=3, n,m,C&lt;=1000000</div></div><h2>Output</h2><div class=content><div>对于每组数据：</div>
+<div>第一行一个正整数tot，表示&quot;萌萌哒人类基因片段&quot;的个数。</div>
+<div>接下来一行tot个用空格隔开的正整数pos，表示&quot;萌萌哒人类基因片段&quot;开头所在的位置。要求从小到大输出每个pos。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+6 3<br />
+1 2 1 2 3 2<br />
+3 1 3<br />
+6 3<br />
+1 2 1 2 1 2<br />
+3 1 3<br />
+6 3<br />
+1 1 2 1 2 1<br />
+3 1 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1 2 4<br />
+4<br />
+1 2 3 4<br />
+3<br />
+2 3 4<br />
+对于第一组数据：<br />
+S[1~3]=121，可以先将1和2交换变成212，再将2和3交换变成313。<br />
+S[2~4]=212，可以将2和3交换变成313。<br />
+S[4~6]=232，可以先将2和3交换变成323，再将1和2交换变成313。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4641'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4641'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4641'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

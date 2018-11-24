@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2139. -- road</title><center><h2>2139: road</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>62&nbsp;&nbsp;<span class=green>Solved: </span>48<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2139'>Discuss</a>]</center><h2>Description</h2><div class=content><div>很久很久以前，中原地区分成了N个国家，编号为1到N，任意两个国家都可互达。每个国家有一个攻击值A[i]和防</div>
+<div>御值B[i]。定义一个人从i国去j国的危险值为：假如A[i]&gt;B[j]，则危险值为( - )，否则危险值为0。现在，Nan从</div>
+<div>国家1出发，经过每一个国家有且仅有一次，最后回到国家1，要求找出一种方案，使得其中危险值的最大值最小。</div></div><h2>Input</h2><div class=content><div>第一行正整数N，表示有N个国家；&nbsp;N&lt;=1000000</div>
+<div>第二行正整数A[1],A[2],x,y,z，有等式A[i]=(x*A[i-1]+y*A[i-2]+z)mod 32767；</div>
+<div>第三行正整数B[1],B[2],x,y,z，有等式B[i]=(x*B[i-1]+y*B[i-2]+z)mod 32767。</div></div><h2>Output</h2><div class=content><p>输出一个数,表示危险值的最大值最小是多少。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+2 4 1231 4432 123<br />
+123 45 3245 555 6676 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9171832<br />
+【样例说明】<br />
+A数组为2,4,13911,5151,3031 <br />
+B数据为123,45,24364,26060,21765 <br />
+其中一种最优方案为1- 2- 4- 3- 5-1，危险值分别为0,0,0,0,9171832</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2139'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

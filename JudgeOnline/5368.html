@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5368. -- [Pkusc2018]真实排名</title><center><h2>5368: [Pkusc2018]真实排名</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>139&nbsp;&nbsp;<span class=green>Solved: </span>67<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5368'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5368'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5368'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小C是某知名比赛的组织者，该比赛一共有n名选手参加，每个选手的成绩是一个非负整数，定义一个选手的排名是</div>
+<div>：成绩不小于他的选手的数量（包括他自己）。例如如果333位选手的成绩分别是[1,2,2]，那么他们的排名分别是</div>
+<div>[3,2,2]。拥有上帝视角的你知道所有选手的实力，所以在考试前就精准地估计了每个人的成绩，设你估计的第iii</div>
+<div>个选手的成绩为Ai,且由于你是上帝视角，所以如果不发生任何意外的话，你估计的成绩就是选手的最终成绩。但</div>
+<div>是在比赛当天发生了不可抗的事故（例如遭受到了外星人的攻击），导致有一些选手的成绩变成了最终成绩的两倍</div>
+<div>，即便是有上帝视角的你也不知道具体是哪些选手的成绩翻倍了，唯一知道的信息是这样的选手恰好有k个。现在</div>
+<div>你需要计算，经过了不可抗事故后，对于第i位选手，有多少种情况满足他的排名没有改变。由于答案可能过大，</div>
+<div>所以你只需要输出答案对998244353取模的值即可。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个正整数n,k</div>
+<div>第二行n个非负整数A1..An</div>
+<div>1&le;k&lt;n&le;10^5 ，0&le;Ai&le;10^9</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出n行，第i行一个非负整数ansi，表示经过不可抗事故后，第i位选手的排名没有发生改变的情况数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+1 2 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+2<br />
+样例解释<br />
+一共有3种情况：(1,2)翻倍，(1,3)翻倍，(2,3)翻倍。<br />
+对于第一个选手来说，他的成绩就算翻倍，其他人都不低于他，所以任意情况下他的排名都不会改变。<br />
+对于第二个选手来说，如果是(1,2)翻倍，成绩变成(2,4,3)，他的排名变成了第一；<br />
+如果是(1,3)翻倍，则成绩变成(2,2,6)，他的排名变成了第三；如果是(2,3)翻倍，则成绩变成(1,4,6)，他的排名还是第二。<br />
+所以只有一种情况。<br />
+对于第三个选手来说，如果是(1,2)翻倍，他的排名会变成第二，其他情况下都还是第一。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5368'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5368'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5368'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

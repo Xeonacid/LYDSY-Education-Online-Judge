@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4363. -- Path</title><center><h2>4363: Path</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4363'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4363'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4363'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给出一个n个节点的无根树，边有权值。现在有m个询问，每个询问给出两个数k,x，你需要选择恰</div>
+<div>好k条简单路径，满足：</div>
+<div>&bull;至少有一条路径经过编号为x的点</div>
+<div>&bull;这k条路径所包含的边的权值和尽可能大（每条边的权值只算一次）</div>
+<div>你的任务即对每个询问给出可能的最大边权和。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行二个整数n,m。</div>
+<div>接下来n1行，每行三个整数x,y,v，描述一条边权为v的，连接x和y的边。保证v值之和不会</div>
+<div>超过int。</div>
+<div>接下来m行，每行二个整数k,x,描述一组询问。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组询问，输出一行一个整数，描述答案。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 3<br />
+1 2 2<br />
+2 3 2<br />
+3 4 2<br />
+4 6 1<br />
+3 5 10<br />
+3 1<br />
+4 1<br />
+2 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>14<br />
+13<br />
+17</span></div><h2>HINT</h2>
+			<div class=content><p><p>1&lt;=N,M&lt;=10^5</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4363'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4363'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4363'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

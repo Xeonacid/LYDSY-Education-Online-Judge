@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3580. -- 冒泡排序</title><center><h2>3580: 冒泡排序</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>256&nbsp;&nbsp;<span class=green>Solved: </span>112<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3580'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3580'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3580'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　　下面是一段实现冒泡排序算法的C++代码：</span></p>
+<p><span style="font-size: medium">　　for (int i=1;i&lt;n;i++)<br />
+　　for (int j=1;j&lt;=n-i;j++)<br />
+　　if (a[j]&gt;a[j+1])<br />
+　　swap(a[j],a[j+1]);</span></p>
+<p></p>
+<p><span style="font-size: medium">　　其中待排序的a数组是一个1~n的排列，swap函数将交换数组中对应位置的值。<br />
+　　对于给定的数组a以及给定的非负整数k，使用这段代码执行了正好k次swap操作之后数组a中元素的值会是什么样的呢？<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">　　输入文件共2行。<br />
+　　第1行包含空格隔开的一个正整数n和一个非负整数k；<br />
+　　第2行包含n个空格隔开的互不相同的正整数，表示初始时a数组中的排列。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">　　输出文件共1行。<br />
+　　若在执行完整个代码之后执行swap的次数仍不够k，那么输出一个字符串&rdquo;Impossible!&rdquo;(不含引号)，否则按顺序输出执行swap操作k次之后数组a的每一个元素，用空格隔开。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 1<br />
+1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Impossible!<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">n&lt;=10^6<br /><br />
+k&lt;=10^12<br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E6%8F%90%E4%BE%9B'>By 佚名提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3580'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3580'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3580'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2285. -- [Sdoi2011]保密</title><center><h2>2285: [Sdoi2011]保密</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>648&nbsp;&nbsp;<span class=green>Solved: </span>225<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2285'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2285'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2285'>Discuss</a>]</center><h2>Description</h2><div class=content><div>现在，保密成为一个很重要也很困难的问题。如果没有做好，后果是严重的。比如，有个人没有自己去修电脑，又没有拆硬盘，后来的事大家都知道了。</div>
+<div>当然，对保密最需求的当然是军方，其次才是像那个人。为了应付现在天上飞来飞去的卫星，军事基地一般都会建造在地下。</div>
+<div>某K国的军事基地是这样子的：地面上两排大天井共n1个作为出入口，内部是许多除可以共享出入口外互不连通的空腔，每个空腔有且只有两个出入口，并且这两个出入口不会在同一排。为了方便起见，两排出入口分别编号为1,3,5&hellip;和2,4,6&hellip;并且最大的编号为n1。</div>
+<div>虽然上面扯了那么多关于保密的东西，但是其实解密也是一件很纠结的事情。但其实最简单直接暴力无脑的解密方法就是找个人去看看。。。</div>
+<div>我们有很牛X的特种部队，只需要派出一支特种部队到K国基地的某个出入口，那么和这个出入口直接相连的所有空腔都可以被探索，但也只有这些空腔可以被这支部队探索。现在有足够多的特种部队可以供你调遣，你必须使用他们调查完所有的K国基地内的空腔。</div>
+<div>当然，你的基地离K国基地不会太近，周边的地图将会给你，表示为n个检查点和m条连接这些点的道路，其中点1到点n1就是K国基地的出入口，点n是你的部队的出发点。对每条道路，有不同的通行时间t和安全系数s。因为情报部门只对单向的道路安全系数进行了评估，所以这些道路只允许单向通行，并且不会存在环。</div>
+<div>一支特种部队从你的基地出发，通过某条路径，到达某个K国基地出入口，此时这支部队的危险性表示为总时间和这条路径经过的所有道路的安全系数和的比值。整个行动的危险性表示为你派出的所有部队的危险性之和。你需要使这个值最小的情况下探索整个K国基地。</div>
+<div>快点完成这个任务，在K国的叫兽宣布你是K国人之前。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行2个正整数n，m (4 &lt;= n &lt;= 700, m &lt;= 100000) 表示整个地区地图上的检查点和道路数。</div>
+<div>下面m行，每行4个正整数a, b, t, s(a, b &lt;=n, 1 &lt;= t, s &lt;= 10)表示一条从a到b的道路需时为t，安全系数为s。</div>
+<div>接下来1行2个正整数m1和n1(m1 &lt;= 40000, n1 &lt; min{n, 161}), m1表示K国基地空腔的个数，n1表示K国基地出入口的个数。</div>
+<div>再接下来m1行，每行2个正整数u, v (u, v&lt;=n1, u是奇数，v是偶数)，表示每个空腔的2个出入口。&nbsp;</div>
+<p class="NOI" style="margin: 13pt 0cm"><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p>一行，最小的危险性，保留一位小数。或者输出&rdquo;-1&rdquo;（无引号）表示此任务不可能完成。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5<br />
+5 1 10 1<br />
+5 1 10 1<br />
+5 2 9 1<br />
+5 3 7 1<br />
+5 4 8 1<br />
+4 4<br />
+1 2<br />
+1 4<br />
+3 2<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>17.0</span></div><h2>HINT</h2>
+			<div class=content><p><p></p><br />
+<p>n1&lt;=20</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Stage2&#32;day2'>Stage2 day2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2285'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2285'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2285'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

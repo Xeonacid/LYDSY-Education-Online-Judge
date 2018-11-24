@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3753. -- Wall</title><center><h2>3753: Wall</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>49&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3753'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3753'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3753'>Discuss</a>]</center><h2>Description</h2><div class=content><div>众所周知，GFW的出现促进了社会的和谐。Wayne于是想研究一下GFW。</div>
+<div>Wayne喜欢网格，所以他把一些网站排成了N_ M的网格，每个格子代表一个网站。每个网</div>
+<div>站有一个评分，当然评分可正可负。现在Wayne想用一堵&ldquo;墙&rdquo;围住一些网站，使得评分和最大。</div>
+<div>所谓&ldquo;墙&rdquo;，就是一个由网格的边组成的简单多边形，不能自交，也不能有空洞。</div>
+<div>过了一会儿Wayne发现这个模型太一般了。出于一些原因，有些网站必须在&ldquo;墙&rdquo;外，我们称之</div>
+<div>为&ldquo;坏网站&rdquo;；而有些网站必须在&ldquo;墙&rdquo;内，我们称之为&ldquo;好网站&rdquo;。当然了，&ldquo;坏网站&rdquo;的评分不一定</div>
+<div>低，&ldquo;好网站&rdquo;的评分不一定高。Wayne又想知道，这种情况下，能够得到的最大评分和。注意，并</div>
+<div>不总是存在合法的方案，所以当无法实现时，输出&ldquo;Can not establish GFW.&rdquo;。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div></div>
+<div>第一行两个正整数N和M。</div>
+<div>接下来N行，每行M个用空格隔开的整数，表示网站的权值。</div>
+<div>最后N行，每行M个用空格隔开的整数，1 表示坏网站，2 表示好网站，0 表示其他网站。</div>
+<div>
+<p></p>
+</div></div><h2>Output</h2><div class=content><div>输出两行，第一行一个整数表示一堵&ldquo;墙&rdquo;能围住的最大评分和，第二行表示有限制时的答案。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+2 -1 2<br />
+-3 100 -3<br />
+-3 20 -3<br />
+2 0 2<br />
+0 1 0<br />
+0 0 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>123<br />
+17 <br />
+ <br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><div>对于 100% 的数据，N&lt;=10，M&lt;=10，权值的绝对值不超过 10^6 ，且至少一个权值非负，至少一个好网站。</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3753'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3753'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3753'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

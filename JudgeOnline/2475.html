@@ -1,0 +1,58 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2475. -- 射击游戏</title><center><h2>2475: 射击游戏</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>12&nbsp;&nbsp;<span class=green>Solved: </span>8<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2475'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2475'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2475'>Discuss</a>]</center><h2>Description</h2><div class=content><p><img alt="" src="upload/201109/11(1).jpg" /></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 20pt; mso-char-indent-count: 2.0"><font size="2"><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">输入文件最多包含</span><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">25</font></span><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">组测试数据，每个数据仅包含两行，第一行是整数</span><i><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">n</font></span></i><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">（</span><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">1&lt;=<i>n</i>&lt;=6</font></span><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">），即积木的列数。第二行包含</span><i><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">n</font></span></i><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">个正整数</span><font face="Times New Roman"><i><span lang="EN-US" style="mso-fareast-language: ZH-CN">h</span></i><sub><span lang="EN-US" style="mso-fareast-language: ZH-CN">1</span></sub><span lang="EN-US" style="mso-fareast-language: ZH-CN">, <i>h</i><sub>2</sub>,..., <i>h<sub>n</sub></i>(1&lt;=<i>h<sub>i</sub></i>&lt;=6)</span></font><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">，表示从左往右数第</span><i><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">i</font></span></i><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">列的高度。积木的排列方式保证符合题目描述（即：图形周长等于它最小包围矩形的周长，且各列的高度不全相同）。</span><font face="Times New Roman"><i><span lang="EN-US" style="mso-fareast-language: ZH-CN">n</span></i><span lang="EN-US" style="mso-fareast-language: ZH-CN">=0</span></font><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">表示输入结束，你的程序不应当处理这一行。</span></font><span lang="EN-US" style="mso-fareast-language: ZH-CN"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 20pt; mso-char-indent-count: 2.0"><font size="2"><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">对于每组数据，输出仅一行，即</span><span lang="EN-US" style="mso-fareast-language: ZH-CN"><font face="Times New Roman">A</font></span><span style="font-family: 宋体; mso-fareast-language: ZH-CN; mso-bidi-font-family: 宋体">获胜的概率，四舍五入保留六位小数。</span></font><span lang="EN-US" style="mso-fareast-language: ZH-CN"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+2 1 1<br />
+0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.555556</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;湖南省第六届大学生计算机程序设计竞赛</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E5%88%98%E6%B1%9D%E4%BD%B3%E5%85%88%E7%94%9F%E6%8E%88%E6%9D%83%E4%BD%BF%E7%94%A8'>鸣谢刘汝佳先生授权使用</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2475'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2475'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2475'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

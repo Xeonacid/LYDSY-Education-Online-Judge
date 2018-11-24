@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4689. -- Find the Outlier</title><center><h2>4689: Find the Outlier</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>58&nbsp;&nbsp;<span class=green>Solved: </span>34<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4689'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4689'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4689'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Abacus教授刚刚完成了一个制作数表的计算引擎的设计。它被设计用于同时计算一个多项式在许多点的取值。例如</div>
+<div>对于多项式 f(x)=x^2+2x+1 ，一种可能的计算结果是 f(0)=1,f(1)=4,f(2)=9.f(3)=16,f(4)=25 。不幸的是，引</div>
+<div>擎存在一个故障使得计算出的值总有一个是错的，例如对于上述多项式，它可能输出 1,4,12,16,25 而不是 1,4,9</div>
+<div>,16,25 。请你帮教授找出发生故障的是哪个点值。</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入包含多组测试数据。</div>
+<div>每组数据第一行包含一个正整数 d 表示多项式的度数，即多项式最高次项的项数，保证 d&le;5 。</div>
+<div>接下来 d+3 行，每行一个实数，第 i 行表示输出的 f(i) &nbsp;的值，保证-100.0&le;f(i)&le;100.0 。</div>
+<div>你可以认为恰好只有一个点值出故障，且与实际值的误差超过 1.0 。</div>
+<div>由于不可避免的误差，其他数字与精确值的误差不超过10^(-6) &nbsp;。</div>
+<div>输入以一个零作为结束。</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据，输出一个非负整数 i 表示 f(i) &nbsp;的值发生故障。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+1.0<br />
+4.0<br />
+12.0<br />
+16.0<br />
+25.0<br />
+1<br />
+-30.5893962764<br />
+5.76397083962<br />
+39.3853798058<br />
+74.3727663177<br />
+4<br />
+42.4715310246<br />
+79.5420238202<br />
+28.0282396675<br />
+-30.3627807522<br />
+-49.8363481393<br />
+-25.5101480106<br />
+7.58575761381<br />
+5<br />
+-21.9161699038<br />
+-48.469304271<br />
+-24.3188578417<br />
+-2.35085940324<br />
+-9.70239202086<br />
+-47.2709510623<br />
+-93.5066246072<br />
+-82.5073836498<br />
+0 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+1<br />
+1<br />
+6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Tangjz%E6%8F%90%E4%BE%9B%E8%AF%95%E9%A2%98'>鸣谢Tangjz提供试题</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4689'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4689'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4689'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

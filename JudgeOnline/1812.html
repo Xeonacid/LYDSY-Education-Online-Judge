@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1812. -- [Ioi2005]riv
+</title><center><h2>1812: [Ioi2005]riv
+</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>598&nbsp;&nbsp;<span class=green>Solved: </span>363<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1812'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1812'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1812'>Discuss</a>]</center><h2>Description</h2><div class=content>几乎整个Byteland王国都被森林和河流所覆盖。小点的河汇聚到一起，形成了稍大点的河。就这样，所有的河水都汇聚并流进了一条大河，最后这条大河流进了大海。这条大河的入海口处有一个村庄——名叫Bytetown
+在Byteland国，有n个伐木的村庄，这些村庄都座落在河边。目前在Bytetown，有一个巨大的伐木场，它处理着全国砍下的所有木料。木料被砍下后，顺着河流而被运到Bytetown的伐木场。Byteland的国王决定，为了减少运输木料的费用，再额外地建造k个伐木场。这k个伐木场将被建在其他村庄里。这些伐木场建造后，木料就不用都被送到Bytetown了，它们可以在 运输过程中第一个碰到的新伐木场被处理。显然，如果伐木场座落的那个村子就不用再付运送木料的费用了。它们可以直接被本村的伐木场处理。
+注意：所有的河流都不会分叉，也就是说，每一个村子，顺流而下都只有一条路——到bytetown。
+国王的大臣计算出了每个村子每年要产多少木料，你的任务是决定在哪些村子建设伐木场能获得最小的运费。其中运费的计算方法为：每一块木料每千米1分钱。
+编一个程序：
+1．从文件读入村子的个数，另外要建设的伐木场的数目，每年每个村子产的木料的块数以及河流的描述。
+2．计算最小的运费并输出。</div><h2>Input</h2><div class=content>
+第一行 包括两个数 n（2<=n<=100），k（1<=k<=50,且 k<=n）。n为村庄数，k为要建的伐木场的数目。除了bytetown外，每个村子依次被命名为1，2，3……n，bytetown被命名为0。
+接下来n行，每行包涵3个整数
+wi——每年i村子产的木料的块数 （0<=wi<=10000）
+vi——离i村子下游最近的村子（或bytetown）（0<=vi<=n）
+di——vi到i的距离(km)。（1<=di<=10000）
+保证每年所有的木料流到bytetown的运费不超过2000,000,000分
+50％的数据中n不超过20。
+</div><h2>Output</h2><div class=content>输出最小花费，精确到分。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 2<br />
+1 0 1<br />
+1 1 10<br />
+10 2 5<br />
+1 2 3	<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1812'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1812'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1812'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

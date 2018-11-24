@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2266. -- Selling Land</title><center><h2>2266: Selling Land</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>61&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2266'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2266'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2266'>Discuss</a>]</center><h2>Description</h2><div class=content><p>
+<p></p>
+<center>Figure 1: In this example, dark squares represent swamp. Per may, for example, sell three overlapping grey areas, with dimensions 2&times;1, 2&times;4 and 4&times;1 respectively. The total perimeter is 6 + 12 + 10=28. Note that he can get more money by selling even more land. This figure corresponds to the case in the sample input.</center>
+<div class="p"><!----></div>
+<p>Now Per would like to know how many parcels of each perimeter he needs to sell in order to maximize his profit. Can you help him? You may assume that he can always find a buyer for each piece of land, as long as it doesn't contain any swamps. Also, Per is sure that no square within his parcel is owned by somebody else.</p>
+<p>给一个01矩阵，对每个右下角位置求以它为右下角&ldquo;周长&rdquo;最大的矩形 <br />
+输出选的矩形中周长是x的有几个？</p>
+</p>
+<p>&nbsp;</p>
+<p>As you may know, the country of Absurdistan is full of abnormalities. For example, the whole country can be divided into unit squares that are either grass or swamp. Also, the country is famous for its incapable bureaucrats. If you want to buy a piece of land (called a parcel), you can only buy a rectangular area, because they cannot handle other shapes. The price of the parcel is determined by them and is proportional to the perimeter of the parcel, since the bureaucrats are unable to multiply integers and thus cannot calculate the area of the parcel.</p>
+<div class="p"><!----></div>
+<p>Per owns a parcel in Absurdistan surrounded by swamp and he wants to sell it, possibly in parts, to some buyers. When he sells a rectangular part of his land, he is obliged to announce this to the local bureaucrats. They will first tell him the price he is supposed to sell it for. Then they will write down the name of the new owner and the coordinates of the south-east corner of the parcel being sold. If somebody else already owns a parcel with a south-east corner at the same spot, the bureaucrats will deny the change of ownership.</p>
+<div class="p"><!----></div>
+<p>Per realizes that he can easily trick the system. He can sell overlapping areas, because bureaucrats only check whether the south-east corners are identical. However, nobody wants to buy a parcel containing swamp.</p>
+<p>&nbsp;</p>
+<p><a href="http://acm.tzc.edu.cn/acmhome/judge/images/3391.jpg"><img alt="" src="http://acm.tzc.edu.cn/acmhome/judge/images/3391.jpg" /></a></p></div><h2>Input</h2><div class=content><div class="panel_bottom" align="left">
+<p align="left"><font face="Times New Roman" size="3">On the first line a positive integer: the number of test cases, at most 100. After that per test case: </font></p>
+<p></p>
+<p></p>
+<div class="p"><!----></div>
+<p>One line with two integers n and m (1 &le; n, m &le; 1&nbsp;000): the dimensions of Per's parcel.</p>
+<p class="p">n lines, each with m characters. Each character is either `<tt><font face="NSimsun">#</font></tt>' or `<tt><font face="NSimsun">.</font></tt>'. The j-th character on the i-th line is a `<tt><font face="NSimsun">#</font></tt>' if position (i, j) is a swamp, and `<tt><font face="NSimsun">.</font></tt>' if it is grass. The north-west corner of Per's parcel has coordinates (1, 1), and the south-east corner has coordinates (n,m).</p>
+</div></div><h2>Output</h2><div class=content><div class="panel_bottom" align="left">
+<p align="left"><font face="Times New Roman" size="3">Per test case: </font></p>
+<p></p>
+<p></p>
+<p>Zero or more lines containing a complete list of how many parcels of each perimeter Per needs to sell in order to maximize his profit. More specifically, if Per should sell p<sub>i</sub> parcels of perimeter i in the optimal solution, output a single line &quot;p<sub>i</sub><tt><font face="NSimsun">&nbsp;x&nbsp;</font></tt>i&quot;. The lines should be sorted in increasing order of i. No two lines should have the same value of i, and you should not output lines with p<sub>i</sub>=0.</p>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+6 5<br />
+..#.#<br />
+.#...<br />
+#..##<br />
+...#.<br />
+#....<br />
+#..#.<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6 x 4  //周长为四的，有六个<br />
+5 x 6  //周长为六的，有五个.<br />
+5 x 8<br />
+3 x 10<br />
+1 x 12<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>鸣谢wjbzbrm</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2266'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2266'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2266'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

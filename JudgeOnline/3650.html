@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3650. -- 环游世界</title><center><h2>3650: 环游世界</h2><span class=green>Time Limit: </span>80 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>24 MB<br><span class=green>Submit: </span>69&nbsp;&nbsp;<span class=green>Solved: </span>34<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3650'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3650'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3650'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">ZTY想要环游世界！他会驾驶一架飞机沿着赤道顺时针飞行一周。现在他手头有S架飞机，每架飞机的油箱都有自己的容量限制Di，表示在飞机的油箱装满的情况下，最远可以飞行多远。赤道上有n座城市，相邻两座城市间有一定的距离。ZTY有很多钱，所以你可以不用考虑加油的问题，只需要认为降落到每座城市都可以把飞机的油箱加满。ZTY想要尽快完成环游世界的目标，所以他想要飞机降落的次数尽量少。那么ZTY就想要问你：对每架飞机，最少降落多少次才可以完成环游世界的任务？注意：ZTY可以选择任意一个城市作为他的起点。另外，最后回到起点也需要算一次降落。<br />
+</span></p></div><h2>Input</h2><div class=content><p><br />
+<font size="4">第一行两个整数，表示n与s。<br />
+接下来一行n个整数，第i个整数表示第i个城市与第i+1个城市间的距离（第n个整数表示第n个城市与第1个城市间的距离）。<br />
+接下来s个整数，第i个整数表示第i架飞机的容量限制Di。</font></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">对 s 架飞机每架飞机输出一行。如果 ZTY 使用这架飞机不可能完成环游世界的目标，输出&ldquo;NO&rdquo;。否则输出 ZTY最少需要降落多少次。 </span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+6 4 <br />
+2 2 1 3 3 1 <br />
+3 2 4 11 <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+8 3 <br />
+2 2 2 2 2 2 2 2 <br />
+1 16 2 <br />
+<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">样例 1 解释： <br /><br />
+对第一架飞机，可以按 6-&gt;2-&gt;4-&gt;5-&gt;6的顺序来飞行。 <br /><br />
+对第二架飞机，显然它不能越过 4与 5 之间3的距离。 <br /><br />
+&nbsp;</span></p><br />
+<p><span style="font-size: medium">对 100%的数据 n 不超过 1000000，s 不超过 100。赤道长度（所有距离和）不超过10^9。所有输入小于2^31。&nbsp;<br /><br />
+&nbsp;&nbsp; <br /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3650'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3650'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3650'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3125. -- CITY</title><center><h2>3125: CITY</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>542&nbsp;&nbsp;<span class=green>Solved: </span>243<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3125'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3125'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3125'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">小明和小华要参加NOI，踏上了去X市的火车。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">小明望着窗外的田野，大楼，工厂缓缓后退，在思考着什么。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">这时，对面的小华拿出手机对着他说：&ldquo;看！我们在这个位置！&rdquo;</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">小明望着手机上显示的地图，城市被接到分割成各个方块，而自己所在的点在慢慢移动。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">他突然意识到自己甚至还没游历过这个自己所在的小城市，学校和家貌以及之间来回的道路似乎成了这个小城的唯一印象。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">若我把它们全部走一圈，可能要仔细计划下吧&hellip;&hellip;不，那么多方案，其实我应该早能做到了吧&hellip;&hellip;小明在心里对自己说。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">第一行有两个数N, M表示地图被分割成N*M个块，接下来有N行，每行有M个字符。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;.&nbsp;&nbsp;表示这个块可以通过</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;-&nbsp;表示这个块只可以左右通过</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;|&nbsp;表示这个块只可以上下通过</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;#&nbsp;表示这个块不能通过</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">（从每个块只能走到其上下左右相邻的四个块）</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">一个数，表示小明把所以可以通过的块都经过且只经过一次并回到原地的方案数。</span></div>
+<div style="text-align: justify; widows: 2; text-transform: none; background-color: rgb(255,255,255); margin-top: 0pt; text-indent: 0px; font: 10.5pt Calibri; white-space: normal; orphans: 2; margin-bottom: 0pt; letter-spacing: normal; color: rgb(0,0,0); margin-left: 0pt; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Sample 1<br />
+2 2<br />
+..<br />
+..<br />
+ <br />
+ <br />
+Sample 2<br />
+Input:<br />
+4 4<br />
+....<br />
+..-.<br />
+....<br />
+....<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Output 1<br />
+1<br />
+<br />
+<br />
+Output 2<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据范围: 0 &lt; N, M &lt; 13 不保证答案在long 范围之内</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=taorunz%E6%8F%90%E4%BE%9B'>taorunz提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3125'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3125'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3125'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

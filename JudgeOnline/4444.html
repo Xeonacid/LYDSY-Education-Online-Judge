@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4444. -- [Scoi2015]国旗计划</title><center><h2>4444: [Scoi2015]国旗计划</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>844&nbsp;&nbsp;<span class=green>Solved: </span>422<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4444'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4444'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4444'>Discuss</a>]</center><h2>Description</h2><div class=content><div>A国正在开展一项伟大的计划&mdash;&mdash;国旗计划。这项计划的内容是边防战士手举国旗环绕边境线奔袭一圈。这</div>
+<div>项计划需要多名边防战士以接力的形式共同完成，为此，国土安全局已经挑选了N名优秀的边防战上作为这</div>
+<div>项计划的候选人。</div>
+<div>A国幅员辽阔，边境线上设有M个边防站，顺时针编号1至M。每名边防战士常驻两个边防站，并且善于</div>
+<div>在这两个边防站之间长途奔袭，我们称这两个边防站之间的路程是这个边防战士的奔袭区间。n名边防战士</div>
+<div>都是精心挑选的，身体素质极佳，所以每名边防战士的奔袭区间都不会被其他边防战士的奔袭区间所包含。</div>
+<div>现在，国十安全局局长希望知道，至少需要多少名边防战士，才能使得他们的奔袭区间覆盖全部的边境线，</div>
+<div>从而顺利地完成国旗计划。不仅如此，安全局局长还希望知道更详细的信息：对于每一名边防战士，在他必</div>
+<div>须参加国旗计划的前提下，至少需要多少名边防战士才能覆盖全部边境线，从而顺利地完成国旗计划。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第1行，包含2个正整数N,M，分别表示边防战士数量和边防站数量。</div>
+<div>随后n行，每行包含2个正整数。其中第i行包含的两个正整数Ci、Di分别表示i号边防战士常驻的两个边防站编号，</div>
+<div>Ci号边防站沿顺时针方向至Di号边防站力他的奔袭区间。数据保证整个边境线都是可被覆盖的。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出数据仅1行，需要包含n个正整数。其中，第j个正整数表示j号边防战士必须参加的前提下至少需要</div>
+<div>多少名边防战士才能顺利地完成国旗计划</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 8       <br />
+2 5         <br />
+4 7         <br />
+6 1          <br />
+7 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 3 4 3</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;n&le;2&times;10^5，M&lt; 10^9，1&le;Ci，Di&le;M</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4444'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4444'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4444'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

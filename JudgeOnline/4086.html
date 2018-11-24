@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4086. -- [Sdoi2015]旅行计划</title><center><h2>4086: [Sdoi2015]旅行计划</h2><span class=green>Time Limit: </span>80 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>87&nbsp;&nbsp;<span class=green>Solved: </span>42<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4086'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4086'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4086'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在有 N 座城市的国度．Alice希望可以开始一场充满传奇的旅行。TA 希望可以从一个城市出发开始旅行，每次前</div>
+<div>往一个相邻的城市，途中不重复得经过恰好 K 座城市，最后抵达另外一个城市并结束旅行。需要注意的是，起点</div>
+<div>与终点也被考虑为经过的城市，也就是说包括起点和终点在内经过的所有城市都是不能重复的。现在，Alice 希望</div>
+<div>知道哪些城市对 &lt;u,v&gt; 可以作为合法的旅行起点与终点。</div>
+<div></div></div><h2>Input</h2><div class=content><div>本题每一个测试点有多组测试数据。第一行给定正整数 T ，表示数据组数。</div>
+<div>对于每一组数据来说，第一行给定三个整数 N，M 和 K，表示城市个数，城市之间的相邻关系个数，还有旅途应该</div>
+<div>经过的城市个数。M 行．每一行给定两个整数 u 和 v ，表示标号为 u 的城市与标号为 v 的城市之间是相邻的．</div>
+<div>即可以从其中一个城市出发前往另外一个。</div>
+<div>N&le;1000，M&le;5000，2&le;K&le;7 且T*(k div 2)^(k div 2)&lt;=60</div>
+<div style="font-size: 11.8181819915771px;"></div></div><h2>Output</h2><div class=content><div>对于每一组数据．输出 N 行．每行 N 个字符。</div>
+<div>其中第 i 行第 j 个字符，或者为&ldquo;Y&rdquo;或者为&ldquo;N&rdquo;，分别表示是否存在从城市 i 出发到城市 j 结束的合法旅行方案。</div>
+<div></div>
+<div style="font-size: 11.8181819915771px;"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 <br />
+5 6 4 <br />
+1 2 <br />
+2 3 <br />
+3 5 <br />
+1 4 <br />
+4 5 <br />
+2 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>NYYYY <br />
+YNNYY <br />
+YNNYN <br />
+YYYNY <br />
+YYNYN</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4086'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4086'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4086'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

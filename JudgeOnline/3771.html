@@ -1,0 +1,111 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3771. -- Triple</title><center><h2>3771: Triple</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>943&nbsp;&nbsp;<span class=green>Solved: </span>548<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3771'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3771'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3771'>Discuss</a>]</center><h2>Description</h2><div class=content><div>我们讲一个悲伤的故事。</div>
+<div>从前有一个贫穷的樵夫在河边砍柴。</div>
+<div>这时候河里出现了一个水神，夺过了他的斧头，说：</div>
+<div>&ldquo;这把斧头，是不是你的？&rdquo;</div>
+<div>樵夫一看：&ldquo;是啊是啊！&rdquo;</div>
+<div>水神把斧头扔在一边，又拿起一个东西问：</div>
+<div>&ldquo;这把斧头，是不是你的？&rdquo;</div>
+<div>樵夫看不清楚，但又怕真的是自己的斧头，只好又答：&ldquo;是啊是啊！&rdquo;</div>
+<div>水神又把手上的东西扔在一边，拿起第三个东西问：</div>
+<div>&ldquo;这把斧头，是不是你的？&rdquo;</div>
+<div>樵夫还是看不清楚，但是他觉得再这样下去他就没法砍柴了。</div>
+<div>于是他又一次答：&ldquo;是啊是啊！真的是！&rdquo;</div>
+<div>水神看着他，哈哈大笑道：</div>
+<div>&ldquo;你看看你现在的样子，真是丑陋！&rdquo;</div>
+<div>之后就消失了。</div>
+<div></div>
+<div>樵夫觉得很坑爹，他今天不仅没有砍到柴，还丢了一把斧头给那个水神。</div>
+<div>于是他准备回家换一把斧头。</div>
+<div>回家之后他才发现真正坑爹的事情才刚开始。</div>
+<div>水神拿着的的确是他的斧头。</div>
+<div>但是不一定是他拿出去的那把，还有可能是水神不知道怎么偷偷从他家里拿走的。</div>
+<div>换句话说，水神可能拿走了他的一把，两把或者三把斧头。</div>
+<div></div>
+<div>樵夫觉得今天真是倒霉透了，但不管怎么样日子还得过。</div>
+<div>他想统计他的损失。</div>
+<div>樵夫的每一把斧头都有一个价值，不同斧头的价值不同。总损失就是丢掉的斧头价值和。</div>
+<div>他想对于每个可能的总损失，计算有几种可能的方案。</div>
+<div>注意：如果水神拿走了两把斧头a和b，(a,b)和(b,a)视为一种方案。拿走三把斧头时，(a,b,c),(b,c,a),(c,a,b),(c,b,a),(b,a,c),(a,c,b)视为一种方案。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行是整数N，表示有N把斧头。</div>
+<div>接下来n行升序输入N个数字Ai，表示每把斧头的价值。</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>若干行，按升序对于所有可能的总损失输出一行x y，x为损失值，y为方案数。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+4<br />
+5<br />
+6<br />
+7<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4 1<br />
+5 1<br />
+6 1<br />
+7 1<br />
+9 1<br />
+10 1<br />
+11 2<br />
+12 1<br />
+13 1<br />
+15 1<br />
+16 1<br />
+17 1<br />
+18 1<br />
+样例解释<br />
+11有两种方案是4+7和5+6，其他损失值都有唯一方案，例如4=4,5=5,10=4+6,18=5+6+7.</span></div><h2>HINT</h2>
+			<div class=content><p><p>所有数据满足：Ai&lt;=40000</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3771'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3771'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3771'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

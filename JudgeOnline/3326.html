@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3326. -- [Scoi2013]数数 </title><center><h2>3326: [Scoi2013]数数 </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>154&nbsp;&nbsp;<span class=green>Solved: </span>81<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3326'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3326'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3326'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="left"><span style="font-size: 12pt">Fish </span><span style="font-size: 12pt">是一条生活在海里的鱼，有一天他很无聊，就开始数数玩。</span></div>
+<div align="left"><span style="font-size: 12pt">他数数玩的具体规则是：</span></div>
+<div align="left"><span style="font-size: 12pt">1. </span><span style="font-size: 12pt">确定数数的进制B</span></div>
+<div align="left"><span style="font-size: 12pt">2. </span><span style="font-size: 12pt">确定一个数数的区间[L, R]</span></div>
+<div align="left"><span style="font-size: 12pt">3. </span><span style="font-size: 12pt">对于[L, R] 间的每一个数，把该数视为一个字符串，列出该字符串的每一个（连续的）子串对应的B进制数的值。</span></div>
+<div align="left"><span style="font-size: 12pt">4. </span><span style="font-size: 12pt">对所有列出的数求和。</span></div>
+<div align="left"><span style="font-size: 12pt">现在Fish 数了一遍数，但是不确定自己的结果是否正确了。由于[L, R] 较大，他没有多余精力去验证是否正确，你能写一个程序来帮他验证吗？</span></div>
+<div align="left">&nbsp;</div>
+<div style="margin: 0cm 0cm 12pt" align="left">&nbsp;</div></div><h2>Input</h2><div class=content><div align="left"><span style="font-size: 12pt">输入包含三行。<br />
+第一行仅有一个数B，表示数数的进制。<br />
+第二行有N +1 个数，第一个数为N，表示数L 在B 进制下的长度为N，接下里的N个数从高位到低位的表示数L 的具体每一位。<br />
+第三行有M+ 1 个数，第一个数为M，表示数R 在B 进制下的长度为M，接下里的M个数从高位到低位的表示数R 的具体每一位。<br />
+<br />
+20% 数据，0 &lt;= R &lt;= L &lt;= 10^5。<br />
+50% 数据，2 &lt;= B &lt;= 1000，1 &lt;= N,M &lt;= 1000。<br />
+100% 数据，2 &lt;= B &lt;= 10^5，1 &lt;= N,M &lt;= 10^5。 </span></div></div><h2>Output</h2><div class=content><div align="left"><span style="font-size: 12pt">输出仅一行，即按照Fish 数数规则的结果，结果用10 进制表示，由于该数可能很大，输出该数模上20130427的模数。 </span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10<br />
+3 1 0 3<br />
+3 1 0 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>120<br />
+Hint<br />
+[103, 103] 之间仅有数103，该数的所有子串包括1, 10, 103, 0, 03, 3，其和为120。</span></div><h2>HINT</h2>
+			<div class=content><p><p>应上传者要求，此系列试题不公开,如有异议，本站将删除之。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3326'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3326'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3326'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

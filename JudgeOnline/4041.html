@@ -1,0 +1,113 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4041. -- [Neerc2013]ASCII Puzzle</title><center><h2>4041: [Neerc2013]ASCII Puzzle</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>4&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4041'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4041'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4041'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一个W*H的矩形，被分为k=n^2块，且W=nw,H=nh,那么每块满足一下条件&nbsp;</div>
+<div>1.每块是4联通区域&nbsp;</div>
+<div>2.若把矩形均分成k个w*h的矩形，每块可以对应一个矩形，且包含这个矩形四个角的小格（图中黑色部分）&nbsp;</div>
+<div>3.每块的格子只能来自对应的矩形，对应矩形相邻的格子，对应矩形相邻矩形内部的格子（图中灰色部分）&nbsp;</div>
+<div>4.任意两块之间的分界线不会是直线。&nbsp;</div>
+<div>5.任意一块都在一个（3w-2）*（3*h-2）的格子里，且中心对应2中提及的矩形（图中粗线部分）&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行为k w h&nbsp;</div>
+<div>以下k个（3w-2）*（3*h-2）矩形描述每一块情况&nbsp;</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>输出第一行为W H&nbsp;</div>
+<div>输出任意一组符合要求的原矩形&nbsp;</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 3<br />
+..........<br />
+..........<br />
+...AAAA...<br />
+...AAAAAA.<br />
+...A.AA...<br />
+..........<br />
+..........<br />
+<br />
+..........<br />
+..........<br />
+...BBBB...<br />
+.....BB...<br />
+...BBBB...<br />
+....BB....<br />
+.....B....<br />
+<br />
+..........<br />
+..........<br />
+...C..C...<br />
+..CCC.C...<br />
+...CCCC...<br />
+..........<br />
+..........<br />
+<br />
+..........<br />
+....D.....<br />
+...DDDD...<br />
+...DDD....<br />
+...DDDD...<br />
+..........<br />
+..........</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8 6<br />
+AAAABBBB<br />
+AAAAAABB<br />
+ADAABBBB<br />
+DDDDCBBC<br />
+DDDCCCBC<br />
+DDDDCCCC</span></div><h2>HINT</h2>
+			<div class=content><p><div><br />
+<div>k=N*N</div><br />
+<div>1&lt;=N&lt;=4</div><br />
+<div>3&lt;=W,H&lt;=5</div><br />
+<div>请不要提交，尚无SPJ</div><br />
+</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4041'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4041'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4041'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

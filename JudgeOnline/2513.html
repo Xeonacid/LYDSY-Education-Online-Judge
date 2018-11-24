@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2513. -- 菜园</title><center><h2>2513: 菜园</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>7&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2513'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2513'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2513'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="margin: 17pt 0cm 16.5pt"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 你有一个<i>N</i>*<i>M</i>大的长方形菜园，每个格子代表一块田地。</span><span style="font-size: medium"> 现在你想要检查一下菜园内的田地，于是你决定从右上角出发，在菜园里走一圈回到右上角。最后，所有在你走过的这个环内的田地都被认为检查过了。为了保护植物，你的路径只能在田地边界的小路上走，不能走到田地里面。并且你走过的路径不能自交， 小路保证足够宽，你可以多次沿着一条小路走，并且这些路径都不相交。</span></div>
+<div style="line-height: 150%"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 先在给你菜园的地图，其中有的田地标记为&rdquo;I&rdquo;，表示这些田地是你想要检查的；有的田地被标记为&rdquo;X&rdquo;，表示这些田地是你不想检查的；有的田地被标记为&rdquo;.&rdquo;，表示这些田地你不关心。</span></div>
+<div style="line-height: 150%"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 假设菜园中有K个&rdquo;I&rdquo;，那么你要输出K个数字，其中第i个数为：恰好检查任意i个标记为&rdquo;I&rdquo;的田地，并且没有检查任何一个标记为&rdquo;X&rdquo;的田地的最短路。</span></div></div><h2>Input</h2><div class=content><div style="margin: 13pt 0cm; line-height: 150%">&nbsp;<span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输入的第一行为<i>N</i>，<i>M</i>表示田地大小。</span></div>
+<div style="line-height: 150%"><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接下来<i>N</i>行，每行<i>M</i>个字母（&rdquo;I&rdquo; ，&rdquo;X&rdquo; 或 &rdquo;.&rdquo;）描述菜园。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出一行，<i>K</i>个数字用空格隔开，如题目描述中所述。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>       2 2<br />
+       XX<br />
+       XI<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>       8<br />
+<br />
+       <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30%满足K=1；<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%数据满足N,M&le;50，除了&rdquo;.&rdquo;之外的字符最多10个。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2010%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2010福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2513'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2513'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2513'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

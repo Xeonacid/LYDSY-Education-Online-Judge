@@ -1,0 +1,62 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1118. -- [POI2009]Prz</title><center><h2>1118: [POI2009]Prz</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>135&nbsp;&nbsp;<span class=green>Solved: </span>52<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1118'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1118'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1118'>Discuss</a>]</center><h2>Description</h2><div class=content><p>你的任务是计算一个函数F(x, y)，其中x和y是两个正整数序列。F的定义如下： boolean F(x, y) if W(x) &ne; W(y) then return 0 else if |W(x)| = |W(y)| = 1 then return 1 else return F(p(x), p(y)) &nbsp;and &nbsp;F(s(x), s(y)). W(x)表示序列x中元素的集合。（元素的顺序和出现次数将被无视） p(x)表示序列x的最长前缀，满足：W(x) &ne; W(p(x)) s(x)表示序列x的最长后缀。满足：W(x) &ne; W(s(x)) |Z|表示集合Z中元素个数</p></div><h2>Input</h2><div class=content><p>第一行k表示数据组数。对于每组数据，第一行n,m分别表示x序列的长度与y序列的长度，第二行n个数表示xi，第三行m个数表示yi 1&lt;=k&lt;=13 1&lt;=n,m&lt;=100000 1&lt;=xi,yi&lt;=100</p></div><h2>Output</h2><div class=content><p>k行，对于每组数据，若F(x,y)为真输出1，否则输出0。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+4 5<br />
+3 1 2 1<br />
+1 3 1 2 1<br />
+7 7<br />
+1 1 2 1 2 1 3<br />
+1 1 2 1 3 1 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p><p>感谢MT大牛贡献译文.</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1118'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1118'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1118'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

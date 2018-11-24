@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1847. -- [HDOJ3204]Expression Counting</title><center><h2>1847: [HDOJ3204]Expression Counting</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>19&nbsp;&nbsp;<span class=green>Solved: </span>9<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1847'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1847'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1847'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">YY is a clever boy. One day, he feels very boring and writes some expressions randomly. Later, he discovers that although some expressions were written in different forms, they are essentially the same, such as a+(b-c), (a+b)-c. After several attempts, he becomes interested in this and wants to know the number of distinct expressions involving n different operands. To make the problem easier, you can assume that only operators +, -, *, / and parentheses are permitted. </span></p>
+<div><span style="font-size: medium">有一些表达式本质上是相同的，如a+(b-c), (a+b)-c。你的任务是统计出N元的不同表达式有多少个。</span></div>
+<div><span style="font-size: medium">为使问题简单些，只有+-*/和括号是允许的。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><p><span style="font-size: medium">The input consists of multiple test cases. For each test case, there is one line containing only one integer n. (1&lt;=n&lt;=30) End of input is indicated by a line containing a zero. </span></p>
+<div><span style="font-size: medium">一个整数N，意义如上描述。N&lt;=30。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each test case, output the number of distinct expressions involving n different operands. Since the answer is very large, you only need to output the answer modulo 1,000,000,007. </span></p>
+<div><span style="font-size: medium">一个整数表示表达式个数。</span></div>
+<div><span style="font-size: medium">因为答案可能很大，只需输出对1,000,000,007取模后的值。</span></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+2<br />
+3<br />
+4<br />
+0<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+6<br />
+68<br />
+1170<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">There are 6 distinct expressions involving 2 operands: a+b, a-b, b-a, a*b, a/b, b/a. There are 68 distinct expressions involving 3 operands: a+b+c, a+b-c, a-b+c, a-b-c, b-a+c, b-a-c, c-a-b, a*b*c, a*b/c, a/b*c, a/b/c, b/a*c, b/a/c, c/a/b, a+b*c, b+a*c, c+a*b, a+b/c, a+c/b, b+a/c, b+c/a, c+a/b, c+b/a, a-b*c, b-a*c, c-a*b, a-b/c, a-c/b, b-a/c, b-c/a, c-a/b, c-b/a, b*c-a, a*c-b, a*b-c, b/c-a, c/b-a, a/c-b, c/a-b, a/b-c, b/a-c, a*(b+c), b*(a+c), c*(a+b), a*(b-c), a*(c-b), b*(a-c), b*(c-a), c*(a-b), c*(b-a), a/(b+c), b/(a+c), c/(a+b), a/(b-c), a/(c-b), b/(a-c), b/(c-a), c/(a-b), c/(b-a), (b+c)/a, (a+c)/b, (a+b)/c, (b-c)/a, (c-b)/a, (a-c)/b, (c-a)/b, (a-b)/c, (b-a)/c. When n=4, note that (a-b)/(c-d) and (b-a)/(d-c) are the same, but a/b-c/d and b/a-d/c are not. </span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><b><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">提示：</span></b></span><b><font size="3"><span lang="EN-US"><o:p></o:p></span></font></b></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">二元的表达式：</span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a+b, a-b, b-a, a*b, a/b, b/a. </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">三元的表达式：</span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a+b+c, a+b-c, a-b+c, a-b-c, b-a+c, b-a-c, c-a-b, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a*b*c, a*b/c, a/b*c, a/b/c, b/a*c, b/a/c, c/a/b, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a+b*c, b+a*c, c+a*b, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a+b/c, a+c/b, b+a/c, b+c/a, c+a/b, c+b/a, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a-b*c, b-a*c, c-a*b, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a-b/c, a-c/b, b-a/c, b-c/a, c-a/b, c-b/a, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">b*c-a, a*c-b, a*b-c, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">b/c-a, c/b-a, a/c-b, c/a-b, a/b-c, b/a-c, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a*(b+c), b*(a+c), c*(a+b), </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a*(b-c), a*(c-b), b*(a-c), b*(c-a), c*(a-b), c*(b-a), </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a/(b+c), b/(a+c), c/(a+b), </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">a/(b-c), a/(c-b), b/(a-c), b/(c-a), c/(a-b), c/(b-a), </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">(b+c)/a, (a+c)/b, (a+b)/c, </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman">(b-c)/a, (c-b)/a, (a-c)/b, (c-a)/b, (a-b)/c, (b-a)/c. </font></span></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span lang="EN-US"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">注意四元的表达式中</span><span lang="EN-US"><font face="Times New Roman">(a-b)/(c-d)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">(b-a)/(d-c)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">是相同的，而</span><span lang="EN-US"><font face="Times New Roman">a/b-c/d</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">b/a-d/c</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">是不同的。</span></span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1847'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1847'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1847'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3952. -- 字符串集合</title><center><h2>3952: 字符串集合</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3952'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3952'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3952'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有三个字符串集合， Pre 、 Mid 和 Suf 。我们称一个字符串的二元组 (p, q) 合法，当且仅当：</div>
+<div>1. p 属于集合 Pre ；</div>
+<div>2. q 属于集合 Suf ；</div>
+<div>3. 存在 p 的一个长度不小于 k1 的子串 p'、 q 的一个长度不小于 k2 的子串 q' ，以及集合 Mid 中的一个字符串 s ，使得 p' + q' 是 s 的一个子串。这里的 + 代表字符串的连接。</div>
+<div>你可以进行任意次操作，一次操作中，你需要选择一个合法的二元组 (p, q) ，并从集合 Pre 中删去字符串 p ，从集合 Suf 中删去字符串 q 。求最多的操作次数。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入的第一行包含三个正整数 s1 、 s2 和 s3 ，分别代表集合 Pre 、 Mid 和 Suf 中字符串的个数。</div>
+<div>第二行包含两个正整数 k1 和 k2 ，含义如问题描述中所述。</div>
+<div>接下来 s1 行，每行包含一个字符串，代表集合 Pre 中的一个字符串。</div>
+<div>接下来 s2 行，每行包含一个字符串，代表集合 Mid 中的一个字符串。</div>
+<div>接下来 s3 行，每行包含一个字符串，代表集合 Suf 中的一个字符串。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一行，包含一个正整数，表示最多可以操作的次数。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 4<br />
+2 3<br />
+aab<br />
+bbb<br />
+aabbcdd<br />
+cdd<br />
+bcd<br />
+zz<br />
+bcde</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p><div>样例中合法的二元组有 (aab, bcd) 、 (aab, bcde) 和 (bbb, ccd) 。</div><br />
+<div>字符串 zz 的长度小于 k2 ，因此不存在包含这个字符串的合法二元组。</div><br />
+<div>数据规模和约定</div><br />
+<div>令 len(S) 为集合 S 中所有字符串的长度和。再令 L = max{len(Pre), len(Mid), len(Suf)} 。</div><br />
+<div>对于 10% 的数据， s1, s2, s3 &le; 5 ， L &le; 30 。</div><br />
+<div>对于 20% 的数据， s1, s2, s3 &le; 30 ， L &le; 300 。</div><br />
+<div>对于 50% 的数据， s1, s2, s3 &le; 500 ， L &le; 10000 。</div><br />
+<div>对于 100% 的数据， s1, s2, s3 &le; 25000 ， L &le; 50000 ， 0 &le; k1, k2 &le; L 。字符串只含有小写英文字母。</div><br />
+<div>注意题目中的&ldquo;集合&rdquo;和数学中定义的集合不同，其中可以有相同的字符串。</div><br />
+<div>尚无数据，请不要提交！求此题数据！</div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2014%E5%B9%B4%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8D%81%E4%BA%94%E4%BA%BA%E4%BA%92%E6%B5%8B'>2014年国家集训队十五人互测</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3952'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3952'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3952'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

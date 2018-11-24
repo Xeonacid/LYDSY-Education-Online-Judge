@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4609. -- [Wf2016]Branch Assignment</title><center><h2>4609: [Wf2016]Branch Assignment</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>226&nbsp;&nbsp;<span class=green>Solved: </span>73<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4609'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4609'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4609'>Discuss</a>]</center><h2>Description</h2><div class=content><div>要完成一个由s个子项目组成的项目，给b(b&gt;=s)个部门分配，从而把b个部门分成s个组。分组完成后，每一组的任</div>
+<div>意两个点之间都要传递信息。假设在(i,j)两个点间传送信息，要先把信息加密，然后快递员从i出发到总部，再加</div>
+<div>密，在到j点。出于安全原因，每次只能携带一条消息。现在给出了道路网络、各个部门和总部的位置，请输出快</div>
+<div>递员要走的最小总距离。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含四个整数n,b,s,r。n(2&lt;=n&lt;=5000)代表路口数，b(1&lt;=b&lt;=n-1)是部门数，s(1&lt;=s&lt;=b)是子项目数</div>
+<div>r(1&lt;=r&lt;=50000)是道路数。路口标号为1~n，部门在路口1~b，总部在路口b+1。</div>
+<div>接下来r行每行三个整数u,v,l，描述一条从u到v长度为l(0&lt;=l&lt;=10000)的双向边。保证没有重边，保证图强连通。</div></div><h2>Output</h2><div class=content><p>&nbsp;输出快递员要走的最小总距离。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4 3 8<br />
+1 5 15<br />
+5 1 15<br />
+2 5 2<br />
+5 2 3<br />
+3 5 1<br />
+5 3 1<br />
+4 5 2<br />
+5 4 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Yts1999%E4%B8%8A%E4%BC%A0%EF%BC%8Clbn187%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>鸣谢Yts1999上传，lbn187提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4609'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4609'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4609'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

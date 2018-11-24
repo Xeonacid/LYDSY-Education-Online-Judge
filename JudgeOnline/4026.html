@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4026. -- dC Loves Number Theory </title><center><h2>4026: dC Loves Number Theory </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>679&nbsp;&nbsp;<span class=green>Solved: </span>208<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4026'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4026'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4026'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>&nbsp;dC 在秒了BZOJ 上所有的数论题后，感觉萌萌哒，想出了这么一道水题，来拯救日益枯</div>
+<div>竭的水题资源。&nbsp;</div>
+<div>&nbsp; 给定一个长度为 n的正整数序列A，有q次询问，每次询问一段区间内所有元素乘积的</div>
+<div>&phi;（&phi;(n)代表1~n 中与n互质的数的个数） 。由于答案可能很大，所以请对答案 mod 10^6 +&nbsp;</div>
+<div>777。 （本题强制在线，所有询问操作的l,r都需要 xor上一次询问的答案 lastans，初始时，</div>
+<div>lastans = 0）&nbsp;</div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><p>&nbsp;第一行，两个正整数，N，Q，表示序列的长度和询问的个数。&nbsp;</p>
+<div>第二行有N 个正整数，第i个表示Ai.&nbsp;</div>
+<div>下面Q行，每行两个正整数，l r，表示询问[l ^ lastans,r ^ lastans]内所有元素乘积的&phi;&nbsp;</div></div><h2>Output</h2><div class=content><p>Q行，对于每个询问输出一个整数。&nbsp;</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 10<br />
+3 7 10 10 5 <br />
+3 4<br />
+42 44<br />
+241 242<br />
+14 9<br />
+1201 1201<br />
+0 6<br />
+245 245<br />
+7 7<br />
+6 1<br />
+1203 1203<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>40<br />
+240<br />
+12<br />
+1200<br />
+2<br />
+240<br />
+4<br />
+4<br />
+1200<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;1 &lt;= N &lt;= 50000&nbsp;</p><br />
+<div>1 &lt;= Q &lt;= 100000&nbsp;</div><br />
+<div>1 &lt;= Ai &lt;= 10^6&nbsp;</div><br />
+<div></div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=orz&#32;Loidc'>orz Loidc</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4026'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4026'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4026'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3006. -- 基站建设</title><center><h2>3006: 基站建设</h2><span class=green>Time Limit: </span>200 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>16&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3006'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3006'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3006'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Up主家终于买电脑了，但是接下来有各种问题要处理。首要解决的问题就是网络问题。他要从移动公司开始，通过一些基站来传递网络到他家。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为了简化问题，我们假设移动公司，所有的基站，up主家位于同一条直线上，他们都位于这一条直线上的某一点x，这些点不会重合。每个基站发射和接收的范围都是一个切于地面的圆，发射的半径r1是固定的，接收半径r2是可调的的。如下图：</span></div>
+<div><span style="font-size: medium"><img height="270" alt="" width="537" src="upload/201301/1.jpg" /></span></div>
+<div></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个点i如果能从另一个点j接收到信号(当且仅当x[j] &lt; x[i])，必须满足i的接收范围与j的发射范围相切，并且需要付sqrt(r2[i])的额外费用。同时启动每一个点i都需要费用v[i].</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当然一个点如果能够发射的up主家只需要这个点的发射范围与up主家所在的竖线相切或相交即可，如下图：</span></div>
+<div><span style="font-size: medium"><img height="262" alt="" width="373" src="upload/201301/2.jpg" /></span></div>
+<div></div>
+<div><span style="font-size: medium">当然费用越少就越好咯，于是up主想要请你帮他的忙。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一行两个整数n,m.表示基站个数(包括移动公司)，up主家的坐标。(保证大等于所以基站的坐标)</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 记下来n行，每行三个整数x[i],r1[i],v[i],表示每个基站的坐标，发射范围以及费用。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X[i]是按照坐标从小到大输入的，移动公司位于最小的那个坐标。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R为1..n的排列。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个实数，保留小数点后三位。</span></div>
+<div><span style="font-size: medium"><b>&nbsp;</b></span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 33<br />
+5 4 660<br />
+10 2 2040<br />
+11 6 3207<br />
+14 5 2006<br />
+18 3 6130<br />
+19 9 3363<br />
+22 1 1265<br />
+25 8 2836<br />
+27 10 7961<br />
+29 7 9075<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3501.000<br />
+ <br />
+ <br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据 n&lt;=5*1000000,x[i],m &lt;= 10^12,v[i] &lt;= 10000<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3006'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3006'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3006'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3165. -- [Heoi2013]Segment</title><center><h2>3165: [Heoi2013]Segment</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1000&nbsp;&nbsp;<span class=green>Solved: </span>413<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3165'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">要求在平面直角坐标系下维护两个操作： <br />
+1.在平面上加入一条线段。记第i条被插入的线段的标号为i。 <br />
+2.给定一个数k,询问与直线&nbsp;x = k相交的线段中，交点最靠上的线段的编号。&nbsp;&nbsp;<br />
+</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">&nbsp;<br />
+第一行一个整数n，表示共n&nbsp;个操作。 <br />
+接下来n行，每行第一个数为0或1。 <br />
+&nbsp;<br />
+若该数为&nbsp;0，则后面跟着一个正整数&nbsp;k，表示询问与直线&nbsp; <br />
+x = ((k&nbsp;+lastans&ndash;1)%39989+1)相交的线段中交点（包括在端点相交的情形）最靠上的线段的编号，其中%表示取余。若某条线段为直线的一部分，则视作直线与线段交于该线段y坐标最大处。若有多条线段符合要求，输出编号最小的线段的编号。 <br />
+若该数为&nbsp;1，则后面跟着四个正整数&nbsp;x0, y0, x 1, y 1，表示插入一条两个端点为 <br />
+((x0+lastans-1)%39989+1,(y0+lastans-1)%10^9+1)和((x<br />
+1+lastans-1)%39989+1,(y1+lastans-1)%10^9+1) 的线段。 <br />
+其中lastans为上一次询问的答案。初始时lastans=0。&nbsp;<br />
+&nbsp;<br />
+&nbsp;</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: large;">对于每个&nbsp;0操作，输出一行，包含一个正整数，表示交点最靠上的线段的编</span><font size="4">号。若不存在与直线相交的线段，答案为0。 <br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 <br />
+1 8 5 10 8<br />
+1 6 7 2 6<br />
+0 2<br />
+0 9<br />
+1 4 7 6 7<br />
+0 5<br />
+ </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2 <br />
+0 3 <br />
+ <br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，1 &le; n &le; 10^5 , 1 &le; &nbsp;k, x0, x1 &le; 39989, 1 &le; y0 &le; y1 &le; 10^9。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3165'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3165'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3165'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

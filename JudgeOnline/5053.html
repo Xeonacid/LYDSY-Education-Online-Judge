@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5053. -- [ioi2004]Phidias 菲迪亚斯神</title><center><h2>5053: [ioi2004]Phidias 菲迪亚斯神</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>28&nbsp;&nbsp;<span class=green>Solved: </span>15<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5053'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5053'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5053'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有名的希臘雕刻神菲迪亚斯正在为他下一座雄伟的雕像作准备。为了这座雕像他需要大小为 W1&times;H1, W2&times;H2, ...</div>
+<div>, WN &times;HN 的矩形大理石板。最近菲迪亚斯获得一块矩形大理石块。菲迪亚斯想把这块石板切成所需要的大小。石</div>
+<div>板或是石板所切割出的部分都可以由垂直(或水平)方向纵贯(或是横贯)加以切割到底，成兩块矩形石板，同时切割</div>
+<div>出的这兩块矩形石板都必须具有整数的宽度与高度。石板只能以此种方法加以切割，同时石板不能粘合成较大石板</div>
+<div>。因为石板具有花纹，所以石板也不能旋转。如果菲迪亚斯切割出一块 A&times;B 的石板，则此石板不能被当成 B&times;A&nbsp;</div>
+<div>的石板使用，除非 A等于 B。 对每一种所需石板大小菲迪亚斯可切割出零或更多块石板。如果当所有的切割完成</div>
+<div>时，一块产生出的石板并不是任何所需要的大小，则此石板成为废料。菲迪亚斯想知道如何切割最初的石板，让所</div>
+<div>产生的废料最少。举例來說，下图中的原始石板宽度为 21 且高度为 11，而所需石板大小为 10&times;4,6&times;2, 7&times;5&nbsp;</div>
+<div>及 15&times;10, 则最小废料总面积为 10。下图同时画出最小废料总面积为10 的切割方法</div>
+<div><img src="upload/201709/11(1).jpg" width="297" height="182" alt="" /></div>
+<div>你的工作是写一个程序由给定的原始石板大小及所需要的各种石板大小计算出最小的废料总面积。</div></div><h2>Input</h2><div class=content><div>第一行为兩个整数。第一个整数W 为原始石板的宽度，第二个整数H 为原始石板的高度。</div>
+<div>第二行为一个整数N，代表所需石板种類数目。以下 N 行为各种所需石板的大小。</div>
+<div>每一行为兩个整数，第一个整数为所需石板宽度 Wi，第二个整数为所需石板宽度 Wi&nbsp;</div>
+<div>(1 &le; i &le; N)。</div>
+<div>1 &le; W &le; 600</div>
+<div>1 &le; H &le; 600,</div>
+<div>0 &le; N &le; 200,</div>
+<div>1 &le; Wi &le; W，</div>
+<div>1 &le; Hi &le;H。</div>
+<div></div>
+<p class="MsoNormal"></p>
+<p></p></div><h2>Output</h2><div class=content><div>为一行且仅包含一个整数，代表最小废料总面积。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>21 11<br />
+4<br />
+10 4<br />
+6 2<br />
+7 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5053'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5053'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5053'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

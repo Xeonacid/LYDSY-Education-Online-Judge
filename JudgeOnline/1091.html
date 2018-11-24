@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1091. -- [SCOI2003]切割多边形</title><center><h2>1091: [SCOI2003]切割多边形</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>382&nbsp;&nbsp;<span class=green>Solved: </span>172<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1091'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1091'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1091'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium;">　　有一个凸p边形(p&lt;=8)，我们希望通过切割得到它。一开始的时候，你有一个n*m的矩形，即它的四角的坐标分<br />
+别为(0,0), (0,m), (n,0), (n,m)。每次你可以选择一条直线把当前图形切割成两部分，保留其中一个部分（另一<br />
+部分扔掉）切割线的长度为此直线在多边形内部的部分的长度。求出最短的切割线总长度。下面是一个例子。我们<br />
+需要得到中间的多边形。<br />
+</span></p>
+<p><span style="font-size: medium;"> <img border="0" alt="" src="images/1091/1.jpg" /> </span></p>
+<p><span style="font-size: medium;">　　分别沿着直线1，2，3，4进行切割即可，得到中间的四边形。<br />
+</span></p></div><h2>Input</h2><div class=content><p>　　第一行有两个整数n, m(0 &lt; n,m &lt; 500)，第二行为一个整数p(3&lt;=p&lt;=8)。以下p行每行为两个整数x, y(0 &lt; x<br />
+&nbsp;&lt; n, 0 &lt; y &lt; m)，为按顺时针给出的各顶点坐标。数据保证多边形的是凸的，无三点共线。输入数据无错误。</p></div><h2>Output</h2><div class=content><p>　　仅一行，为最短切割线的总长度，四舍五入到小数点后3位。允许有0.001的误差。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>100 100<br />
+4<br />
+80 80<br />
+70 30<br />
+20 20<br />
+20 80</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>312.575</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium;">样例对应于图中给出的例子。</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1091'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1091'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1091'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

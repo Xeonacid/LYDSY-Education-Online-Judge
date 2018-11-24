@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2572. -- Zju1017 The Bermuda Triangle</title><center><h2>2572: Zju1017 The Bermuda Triangle</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>6&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2572'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2572'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2572'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-justify: inter-ideograph"><span style="font-size: medium">
+<h1 align="center" style="margin: 12pt 0cm 18pt; text-align: center"></h1>
+<p class="MsoNormal" style="text-justify: inter-ideograph; margin: 0cm 0cm 0pt; text-align: justify"><span lang="EN-US"><font face="Times New Roman">People in the hidden region of the Bermuda Triangle make everything they need in triangular shapes. One day, someone decided to break the rule and bake a hexagonally shaped cake. But as usual, he has to serve the cake in triangular pieces. The pieces are equilateral triangles but in different sizes for different people. He can use as many triangles as needed to cut the cake into pieces, such that nothing remains from the cake. For example, the following figure shows one way that a hexagon with side 9 can be cut into triangles with side 2 and 3. (The cake is cut along the thick lines, thin lines are drawn to show the sizes).</font></span></p>
+</span><span style="font-size: medium">
+<p class="MsoNormal" style="text-justify: inter-ideograph; margin: 0cm 0cm 0pt; text-align: justify"></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; margin: 0cm 0cm 0pt; text-align: justify"><span style="font-size: medium"><span lang="EN-US"><font face="Times New Roman"><img alt="" src="upload/201112/1.jpg" /></font></span></span></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; margin: 0cm 0cm 0pt; text-align: justify"></p>
+<p class="MsoNormal" style="text-justify: inter-ideograph; margin: 0cm 0cm 0pt; text-align: justify"></p>
+</span></div>
+<div style="text-justify: inter-ideograph"><span style="font-size: medium">Input is a hexagon and triangle types (specified by the length of their sides) and the goal is to decide if the hexagon can be completely divided by the given triangle types.</span></div>
+<p><span style="font-size: medium">给出蛋糕的边长，和N种能作为原料的小正三角形的边，问能否拉出这个蛋糕。</span></p></div><h2>Input</h2><div class=content><div style="text-justify: inter-ideograph"><span style="font-size: medium">The first line of the input file contains a single integer <i>t </i>(1 &pound; <i>t</i> &pound; 10), the number of test cases, followed by the input data for each test case. Each test case consists of a single line, containing <i>s </i>(1&nbsp;&lt;= <em>s</em>&lt;= 25), the length of the hexagon's side, followed by <i>n</i>, the number of triangle types (1&nbsp;&lt;= <i>n</i>&nbsp;&lt;= 10), followed by <i>n</i> integers representing the length of each triangle type's side (between 1 and 25, inclusive).</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">There should be one output line per test case containing either YES or NO depending on whether the hexagon can be completely divided by the given triangle types.</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+5 2 2 3<br />
+7 2 3 2<br />
+13 2 2 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>NO<br />
+NO<br />
+YES</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2572'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2572'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2572'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

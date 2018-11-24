@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2612. -- [Poi2003]Sums</title><center><h2>2612: [Poi2003]Sums</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>118&nbsp;&nbsp;<span class=green>Solved: </span>59<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2612'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2612'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2612'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">我们给定一个整数集合<i>A</i>. 考虑一个非负整数集合<i>A</i>', 所有属于<i>A</i>' 的集合的数x满足当且仅当能被表示成一些属于<i>A</i> 的元素的和(数字可重复). 比如, 当 <i>A</i>&nbsp;=&nbsp;{2,5,7}, 属于<i>A</i>' 的数为: 0 (0个元素的和), 2, 4 (2&nbsp; +&nbsp; 2) and 12 (5&nbsp;+&nbsp;7 or 7&nbsp;+&nbsp;5 or 2&nbsp;+&nbsp;2&nbsp;+&nbsp;2&nbsp;+&nbsp;2&nbsp;+&nbsp;2&nbsp;+&nbsp;2); 但是元素1和3不属于<i>A</i>'.</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行有一个整数<i>n</i>: 代表集合 <i>A</i>的元素个数, 1&nbsp;&lt;=&nbsp;<i>n</i>&nbsp;&lt;=&nbsp;5000. 接下来每行一个数<i>a<sub>i</sub></i>描述一个元素, 1&nbsp;&lt;=&nbsp;<i>a<sub>i</sub></i>&nbsp;&lt;=&nbsp;50000. <i>A</i>&nbsp;=&nbsp;{<i>a</i><sub>1</sub>,&nbsp;<i>a</i><sub>2</sub>,&nbsp;...,&nbsp;<i>a<sub>n</sub></i>}, <i>a</i><sub>1</sub>&nbsp;&lt;&nbsp;<i>a</i><sub>2</sub>&nbsp;&lt;&nbsp;...&nbsp;&lt;&nbsp;<i>a<sub>n</sub></i>. </span></div>
+<div><span style="font-size: medium">接下来一个整数<i>k</i>, 1&nbsp;&lt;=&nbsp;<i>k</i>&nbsp;&lt;=&nbsp;10000. 每行一个0 到 1000000000, 分别代表<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>, ..., <i>b<sub>k</sub></i>.</span></div>
+<div></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">输出<i>k</i>行. 第<i>i</i>行打印<tt>TAK</tt>, 如果 <i>b<sub>i</sub></i> 属于<i>A</i>', 否则打印<tt>NIE</tt>. </span></div>
+<p>
+<divre></divre>
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+<br />
+<br />
+2<br />
+5<br />
+7<br />
+6<br />
+0<br />
+1<br />
+4<br />
+12<br />
+3<br />
+2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+NIE<br />
+TAK<br />
+TAK<br />
+NIE<br />
+TAK<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2612'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2612'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2612'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1694. -- [Usaco2007 Demo]Grazing on the Run</title><center><h2>1694: [Usaco2007 Demo]Grazing on the Run</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>245&nbsp;&nbsp;<span class=green>Solved: </span>163<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1694'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1694'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1694'>Discuss</a>]</center><h2>Description</h2><div class=content>
+A long, linear field has N (1 <= N <= 1,000) clumps of grass at
+unique integer locations on what will be treated as a number line.
+Think of the clumps as points on the number line.
+
+Bessie starts at some specified integer location L on the number
+line (1 <= L <= 1,000,000) and traverses the number line in the two
+possible directions (sometimes reversing her direction) in order
+to reach and eat all the clumps.  She moves at a constant speed
+(one unit of distance in one unit of time), and eats a clump instantly
+when she encounters it.
+
+Clumps that aren't eaten for a while get stale.  We say the
+``staleness'' of a clump is the amount of time that elapses from
+when Bessie starts moving until she eats a clump.  Bessie wants to
+minimize the total staleness of all the clumps she eats.
+
+Find the minimum total staleness that Bessie can achieve while
+eating all the clumps.
+
+</div><h2>Input</h2><div class=content>* Line 1 : Two space-separated integers: N and L.
+
+* Lines 2..N+1: Each line contains a single integer giving the
+        position P of a clump (1 <= P <= 1,000,000).
+
+</div><h2>Output</h2><div class=content>
+* Line 1: A single integer: the minimum total staleness Bessie can
+        achieve while eating all the clumps.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+4 10<br />
+1<br />
+9<br />
+11<br />
+19<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+Four clumps: at 1, 9, 11, and 19. Bessie starts at location 10.<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+44<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+Bessie can follow this route:<br />
+<br />
+* start at position 10 at time 0<br />
+* move to position 9, arriving at time 1<br />
+* move to position 11, arriving at time 3<br />
+* move to position 19, arriving at time 11<br />
+* move to position 1, arriving at time 29<br />
+<br />
+giving her a total staleness of 1+3+11+29 = 44.  There are other routes<br />
+with the same total staleness, but no route with a smaller one.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1694'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1694'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1694'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

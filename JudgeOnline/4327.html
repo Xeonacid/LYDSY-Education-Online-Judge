@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4327. -- JSOI2012 玄武密码</title><center><h2>4327: JSOI2012 玄武密码</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>538&nbsp;&nbsp;<span class=green>Solved: </span>240<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4327'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4327'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4327'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在美丽的玄武湖畔，鸡鸣寺边，鸡笼山前，有一块富饶而秀美的土地，人们唤作进香河。相传一日，一缕紫气从天而至，只一瞬间便消失在了进香河中。老人们说，这是玄武神灵将天书藏匿在此。&nbsp;</div>
+<div>很多年后，人们终于在进香河地区发现了带有玄武密码的文字。更加神奇的是，这份带有玄武密码的文字，与玄武湖南岸台城的结构有微妙的关联。于是，漫长的破译工作开始了。&nbsp;</div>
+<div>经过分析，我们可以用东南西北四个方向来描述台城城砖的摆放，不妨用一个长度为N的序列来描述，序列中的元素分别是&lsquo;E&rsquo;，&lsquo;S&rsquo;，&lsquo;W&rsquo;，&lsquo;N&rsquo;，代表了东南西北四向，我们称之为母串。而神秘的玄武密码是由四象的图案描述而成的M段文字。这里的四象，分别是东之青龙，西之白虎，南之朱雀，北之玄武，对东南西北四向相对应。&nbsp;</div>
+<div>现在，考古工作者遇到了一个难题。对于每一段文字，其前缀在母串上的最大匹配长度是多少呢？&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行有两个整数，N和M，分别表示母串的长度和文字段的个数。&nbsp;</div>
+<div>
+<div>第二行是一个长度为N的字符串，所有字符都满足是E,S,W和N中的一个。&nbsp;</div>
+<div>之后M行，每行有一个字符串，描述了一段带有玄武密码的文字。依然满足，所有字符都满足是E,S,W和N中的一个。&nbsp;</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出有M行，对应M段文字。&nbsp;</div>
+<div>每一行输出一个数，表示这一段文字的前缀与母串的最大匹配串长度。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 3<br />
+SNNSSNS<br />
+NNSS<br />
+NNN<br />
+WSEE</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+2<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，N&lt;=10^7，M&lt;=10^5，每一段文字的长度&lt;=100。</p><br />
+<p>应上传者要求，此题不公开，如有异议，请提出.</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4327'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4327'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4327'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

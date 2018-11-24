@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2886. -- 最短路</title><center><h2>2886: 最短路</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>84&nbsp;&nbsp;<span class=green>Solved: </span>56<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2886'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2886'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2886'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小Y最近学得了最短路算法，一直想找个机会好好练习一下。话虽这么说，OJ上最短路的题目都被他刷光了。正巧他的好朋友小A正在研究一类奇怪的图，他也想凑上去求下它的最短路。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 小A研究的图可以这么看：在一个二维平面上有任意点(x,y)（0&lt;=x&lt;=N,0&lt;=y&lt;=M,且x,y均为整数），且(x,y)向(x-1,y)（必须满足1&lt;=x）和(x,y-1)（必须满足1&lt;=y）连一条边权为0的双向边。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每个点都有一个非负点权，不妨设(x,y)的权值为F[x][y]，则有：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.x=0或y=0：F[x][y]=1；2.其他情况：F[x][y]=F[x-1][y]+F[x][y-1]。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现在，小Y想知道(0,0)到(N,M)的最短路，即使得经过的点的权值之和最小。为了炫耀自己学过最短路算法，他决定和你进行一场比赛，看谁的程序跑得快。然则小Y没有学过高精度算法，所以他希望输出答案时只输出答案模1000000007后的值。</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一行两个正整数N,M，表示图的大小。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一行一个整数Ans，表示答案模1000000007后的值。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6</span></div><h2>HINT</h2>
+			<div class=content><p><div><span style="font-size: 15pt">【数据范围】</span></div><br />
+<div>10%的数据满足N,M&lt;=20；</div><br />
+<div>30%的数据满足N,M&lt;=100；</div><br />
+<div>60%的数据满足min(N,M)&lt;=100；</div><br />
+<div>100%的数据满足N*M&lt;=10^12。</div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2886'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2886'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2886'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3794. -- 糖果</title><center><h2>3794: 糖果</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3794'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3794'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3794'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Ertanis一直谋划着送给XXX很多很多糖果。</div>
+<div>经过了很久的准备后，Ertanis共买好了k种不同口味的糖果，共计n包，每包均有10^s（0&lt;=s&lt;=2）颗糖果，且这n包现在杂乱的在桌面上排成一排。由于种种奇葩原因，Ertanis每次只会选择连在一起的同种糖果送给XXX， 而XXX则会一颗一颗很快把得到的糖果吃完。不幸的是，由于量子理论的扰动，对于第i种糖果的每一颗均有Ci的概率不好吃。但糖果本身还是很对XXX胃口的，若XXX在吃到难吃糖果或吃完了Ertanis这次送的所有糖果时已连续吃了k颗好的第i种糖果，可得到k^Pi的快乐指数（1&lt;=Pi&lt;=4）。</div>
+<div>自然，Ertanis希望糖果给XXX带来的快乐指数越大越好，但他是一个蒟蒻，对此完全没有一点头绪，就只好请你帮他算出采用最优方案时糖果所能带来的快乐指数的期望值。算完后Ertanis会给你100颗Ci=1的糖果作为奖励。</div>
+<p></p></div><h2>Input</h2><div class=content><div>&nbsp; &nbsp; 第一行两个整数n，k， 表示糖果总数和口味数。</div>
+<div>&nbsp; &nbsp; 第二行n个整数Gi（1&lt;=Gi&lt;=k）,表示第i颗糖的口味。</div>
+<div>&nbsp; &nbsp; 第3～k+2行，每行先给出一个整数Pi，然后是一个实数Ci，含义如描述中所示。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>&nbsp; &nbsp; &nbsp; 一个实数， 表示Ertanis采用最优方案时快乐指数的期望值，保留至小数点后3位。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>【输入样例1】<br />
+3 2 0<br />
+1 2 1<br />
+2 0.5<br />
+1 0.4<br />
+<br />
+【输入样例2】<br />
+5 2 0<br />
+1 2 1 2 1<br />
+4 0.5<br />
+2 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>【输出样例1】<br />
+2.100<br />
+<br />
+【输出样例2】<br />
+16.750<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div></div><br />
+<div>样例解释：</div><br />
+<div>第一组样例中最优方案是先寄出第2颗糖，期望为0.6，序列变为{1,1}，再将剩下的全部寄出，期望为（4+1+1+0）/4=1.5，故总期望为2.1</div><br />
+<div>第二组样例中最优方案为先寄出第2颗糖，期望1.0，序列变为{1,1,2,1}，再寄出第3颗糖，期望1.0，序列变为{1,1,1}，最后将剩下的全部寄出，期望为（81+16+16+2+1+1+1+0）/8=14.75，故总期望为16.75</div><br />
+<div>【数据范围】</div><br />
+<div>&nbsp; &nbsp; 对于30%数据保证k=1</div><br />
+<div>对于另外40%的数据保证对任意Ci(1&lt;=i&lt;=k)存在Ci = 0 或 Ci=1</div><br />
+<div>对于100%的数据保证 &nbsp;1&lt;=n&lt;=200 &nbsp;, &nbsp;1&lt;=k&lt;=max(n,15) ， 数据中所有实数小数部分不超过2位</div><br />
+<div>数据不保证每种糖果都出现</div><br />
+<div>数据保证任意糖果总数量均不大于50000</div><br />
+<div>保证答案不大于10^15</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3794'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3794'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3794'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2681. -- 玩游戏2</title><center><h2>2681: 玩游戏2</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>17&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2681'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2681'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2681'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt"><span style="font-size: medium">游戏是在一个无环的无向图中进行的，每个点上面有一些金币,每次小K可以对一个金币&gt;=2的点，拿走一个金币，并将另一个金币放到它相邻的点上，而游戏中有一个点叫做Target Point,如果在游戏的过程中Target Point上有金币的话，小K就赢了。</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt"><span style="font-size: medium">巧合的是这个游戏是小Z开发的，在得知小K在玩这个游戏之后，为了报上次的一箭之仇，他决定设计金币的分布让小K必败。</span></div>
+<div style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt"><span style="font-size: medium">而小Z深知小K的光环的威力，如果放置的金币太少,小K会马上发现这个游戏是不可能赢的。于是他求助于你，他最多能放多少个金币呢？？</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本题有多组数据。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一行，两个整数N,M( 1&lt;=M&lt;=N&lt;=60 ),表示共有N个节点，而M为Targer Point</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下面有N行,每行为一个长度为N的字符串，如果第i个字符串的第j个字符是'Y',则代表i与j之间有边。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><p><font size="4">最多能放多少个金币,如果答案超过了2*10^9则输出-1</font></p>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2<br />
+NYN<br />
+YNY<br />
+NYN<br />
+1 1<br />
+N<br />
+ <br />
+ </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+0<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2681'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2681'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2681'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

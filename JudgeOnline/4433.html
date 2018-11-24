@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4433. -- [Cerc2015]Hovering Hornet</title><center><h2>4433: [Cerc2015]Hovering Hornet</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>23&nbsp;&nbsp;<span class=green>Solved: </span>13<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4433'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4433'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4433'>Discuss</a>]</center><h2>Description</h2><div class=content><p>你将一只大黄蜂困在一个餐桌上的盒子里。不幸的是，你的骰子也被困在其中，你无法继续玩大富翁了，除非接受大黄蜂的愤怒把骰子拿出来。你转而计算大黄蜂所能看见的点数来消磨时间。<br />
+大黄蜂、骰子和盒子都在一个标准三维座标系中，其x轴指向东方，y轴指向北方，z轴指向上方。餐桌的桌面与平面x-y重合。<br />
+<img width="659" height="364" alt="" src="upload/201603/ff.png" /><br />
+骰子是一个1&times;1&times;1的立方体，放置在盒子的底部、座标系的原点上。即骰子的一组对角顶点的座标为(-0.5,-0.5,0)和(0.5,0.5,1)。骰子的顶面点数为5，北面点数为1，东面点数为3，南面点数为6，西面点数为4，底面(因为看不见所以无关紧要)点数为2。<br />
+盒子是一个5&times;5&times;5的立方体。盒子通过其底面(一个5&times;5的正方形)的座标说明。<br />
+假设大黄蜂随机地在盒子中盘旋，请计算被黄蜂看到的点数的期望值。骰子是不透明的，因此，大黄蜂能看见点数仅当其座标与点数所在的骰子表面中心的连线没有穿过骰子。</p></div><h2>Input</h2><div class=content><p>输入包括4行，<br />
+第k行包括两个浮点数xk和yk(-5&lt;=xk,yk&lt;=5)&mdash;&mdash;底面第k个顶点在平面x-y内的座标。顶点的座标将以逆时针顺序给出。底面为正方形且每条边长为5。<br />
+盒子将完全包含骰子，并且除了底面，骰子与盒子不会有任何的接触或交叉。</p></div><h2>Output</h2><div class=content><p>输出一个浮点数&mdash;&mdash;可见点数的期望值。答案允许小于10-6的误差。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Input1<br />
+-2.5 -1.5<br />
+2.5 -1.5<br />
+2.5 3.5<br />
+-2.5 3.5<br />
+Input2<br />
+3 0<br />
+0 4<br />
+-4 1<br />
+-1 -3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Output1<br />
+10.6854838710<br />
+<br />
+<br />
+Output2<br />
+10.1226478495 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4433'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4433'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4433'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

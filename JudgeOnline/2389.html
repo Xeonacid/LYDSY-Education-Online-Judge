@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2389. -- XY的赛车场 </title><center><h2>2389: XY的赛车场 </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>94&nbsp;&nbsp;<span class=green>Solved: </span>58<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2389'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2389'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2389'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: 15pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>神牛XY是一中信息组最牛逼，也是最富有的孩子，而他又是一个赛车迷。XY神牛要成年了，所以他的父亲XZG准备给他建一座赛车场。XZG要建这座赛车场上有N个连接点，建M截直道，连接这N个连接点（不存在从I到I的直道）。而建这M截直道是有顺序的，按从1到M建。</div>
+<div style="text-indent: 21pt">对于建设过程中的赛车场，XZG希望知道这时XY是否可以使用赛车场了，使用的方法有几种。而赛车场可以使用的标准如下：1.赛车跑道必须由已建的直道组成，即选出组成赛车跑道的直道是已建直道的子集。2.赛车跑道必须是封闭的、，即必须从任意一个点出发可以回到这个点。3.每个连接点可以多次经过，但是每条直道只能经过一次。</div>
+<div style="text-indent: 21pt">XZG想知道对于修好第1至第M条直道后可行的组成赛车场的方案有多少种。</div></div><h2>Input</h2><div class=content><div><span style="font-size: 15pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>输入第一行是两个数N和M。</div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>接下来M行，每行两个数A,B，表示第I条直道连接A到B。</div></div><h2>Output</h2><div class=content><div><span style="font-size: 15pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>M行，每行一个数SI表示表示连接了第I条直道后的方案数。由于答案较大，所以答案MOD 10^9+9。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+1 3<br />
+2 3<br />
+1 2<br />
+1 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+0<br />
+1<br />
+3<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>Data Limit <br /><br />
+对于10%的数据，1&le;N&le;10，1&le;M&le;10；<br /><br />
+对于40%的数据，1&le;N&le;1000，1&le;M&le;50000；<br /><br />
+对于100%的数据，1&le;N&le;500000，1&le;M&le;1000000；</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2389'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2389'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2389'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

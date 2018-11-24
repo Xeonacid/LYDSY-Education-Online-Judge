@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2899. -- 含糊的安全锁</title><center><h2>2899: 含糊的安全锁</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2899'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2899'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2899'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">D博士最近设计了一款新的密码锁，密码锁的工作原理如下：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><img height="59" width="122" alt="" src="upload/201211/2.jpg" /></span></div>
+<div style="text-indent: 21pt"></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 密码A是一个N个数的序列，每个元素都是1至N之间的一个整数。刚刚安装时，密码锁内部会随机出一个1至N的排列B，然后根据A、B产生一组比对码C：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 其中表示元素i在B中的位置，比如说：B = {3，1，2}，那么有：B<sub>3</sub><sup>-1</sup> =1、B<sub>1</sub><sup>-1</sup> =2。</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这种密码锁有非常优异的性能，比如说就算有人通过黑客手段得到C，他们也不可能轻易的得到正确的A输入，而如果没有A，仅仅得到了C也是没有用的。出于此，Y老板向D博士订购了一套这样的密码锁。这时一种D博士没有考虑到的特殊情况发生了：</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y老板是一个非常健忘的人，有一天他竟然忘记了自己密码锁的密码！</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">D博士立刻从中取出了对应码C，但是因为不知道B，他仍然无法找出A的具体值，于是他把这个艰巨的任务交给你，他的助手。你的任务是，统计所有可能的A序列总数。</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">输入文件第一行包含一个整数N，第二行包含N个整数表示对比码C。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">输出文件仅包含一个整数，即所有可能的A序列的总数，鉴于答案可能很大，你只需要输出其模1000000007的余数即可。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+3 2 5 2 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>120<br />
+Data Limit<br />
+对于30%的数据，有1 ≤ N ≤ 8。<br />
+对于100%的数据，有1 ≤ N ≤ 50。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2899'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2899'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2899'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

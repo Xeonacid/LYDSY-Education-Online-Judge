@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3146. -- [Feyat Cup1.5]Cir</title><center><h2>3146: [Feyat Cup1.5]Cir</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>74&nbsp;&nbsp;<span class=green>Solved: </span>24<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3146'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3146'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3146'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">话说saber很喜欢吃东西，&ldquo;自古以来王总是容易肚子饿的。&rdquo;<br />
+这也充分说明了吃东西的重要性。很久很久以前就有这么篇文章《论摄食行 为对于灵长类生物的意义与重要性》。如果您有兴趣地话，可以仔细研究一下， 我个人觉得挺有意思的。据说其中隐藏了狗狗的神秘力量的来源？（大雾） 那篇文章里面讲述了一个小故事：当星球即将毁灭之时，勇敢的人类向星球挑战，用一个游戏决定胜负。恐怖<br />
+的阴霾笼罩大地，双方都试图消除黑暗&nbsp;......&nbsp;决斗的最后人类获得了胜利，于是挽回了自然的延续。法法塔很认真地进行研究，逐步挖掘出了人类已经忘却的历史。当时是这样 的，地球拒绝太阳的照射，用圆形的阴霾笼罩了大陆，万物即将凋零。人类和 星球达成了协议，双方轮流选择一个地方创造光明，驱散所有覆盖了此地的阴 影。最后给整个世界带来光明的将成为胜者，决定万物的命运。法法塔回溯了时光，发现当时的决斗策略在现在看来是极为愚昧的，所有行 动几乎都是盲目的，但是凭借这不可想象的运势，人类取得了最终的胜利。 法法塔想明白，为了获胜，第一步能够选择的地点的面积是多少。</span></p>
+<p></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><br />
+第一行一个整数n,&nbsp;接下来n行，每行三个实数&nbsp;xi;yi;r i，分别表示第i个阴霾覆盖的区域，其中&nbsp;xi;yi描述了圆心的坐标，ri描述了圆的半径。<br />
+输入数据保证第一个圆是 (0&nbsp;;&nbsp;0;&nbsp;106 )，其余的圆都被这个圆包含，而且没有任意两个圆 的边界相交。</span></p>
+<p></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">一行一个数，表示第一步确保胜利能够选择的地点的面积，请精确到小数点后6位。</span></p>
+<p><span style="font-size: medium"><br />
+</span></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+0010 005 001<br />
+<br />
+<br />
+3.141593<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata></span></div><h2>HINT</h2>
+			<div class=content><p><p>100% 的数据 n&lt;= 10^5 。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Hza%E6%8F%90%E4%BE%9B'>Hza提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3146'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3146'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3146'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

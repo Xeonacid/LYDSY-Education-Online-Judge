@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1739. -- [Usaco2005 mar]Space Elevator 太空电梯</title><center><h2>1739: [Usaco2005 mar]Space Elevator 太空电梯</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>233&nbsp;&nbsp;<span class=green>Solved: </span>169<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1739'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">The cows are going to space! They plan to achieve orbit by building a sort of space elevator: a giant tower of blocks. They have K (1 &lt;= K &lt;= 400) different types of blocks with which to build the tower. Each block of type i has height h_i (1 &lt;= h_i &lt;= 100) and is available in quantity c_i (1 &lt;= c_i &lt;= 10). Due to possible damage caused by cosmic rays, no part of a block of type i can exceed a maximum altitude a_i (1 &lt;= a_i &lt;= 40000). Help the cows build the tallest space elevator possible by stacking blocks on top of each other according to the rules. </span></p>
+<div><span style="font-size: medium">牛们要到太空去了！他们打算建造一座太空电梯来送他们进入轨道．</span></div>
+<div><span style="font-size: medium">有K(1&le;K&le;400)神方块，第i种有一个特定的高度hi(l&le;hi&le;100)，一定的存量ci(l&le;ci&le;10).为防宇宙射线的破坏，第i种方块的任何部分不能超过高度ai(l&le;ai&le;40000)．</span><span style="font-size: medium">&nbsp;请用这些方块堆出最高的太空电梯．</span></div></div><h2>Input</h2><div class=content><p>* Line 1: A single integer, K * Lines 2..K+1: Each line contains three space-separated integers: h_i, a_i, and c_i. Line i+1 describes block type i.</p>
+<div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入一个整数K.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;接下来K行，每行输入三个整数hi，ai，ci．</span></div></div><h2>Output</h2><div class=content><p>* Line 1: A single integer H, the maximum height of a tower that can be built</p>
+<div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个整数，表示最大高度．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+7 40 3<br />
+5 23 8<br />
+2 52 6<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>48<br />
+从底部开始，先放3个方块2，之后3个方块1，接下来6个方块3．不能把3个方块1堆到4个方<br />
+块2上，因为这样最高的方块1的顶部高度超过了40.<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1739'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1739'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1739'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

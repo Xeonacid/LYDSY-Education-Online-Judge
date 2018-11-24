@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1595. -- [Usaco2008 Jan]人工湖</title><center><h2>1595: [Usaco2008 Jan]人工湖</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>255&nbsp;&nbsp;<span class=green>Solved: </span>120<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1595'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1595'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1595'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>夏日那让人喘不过气的酷热将奶牛们的烦躁情绪推到了最高点．最终，约翰决定建一个人工湖供奶牛消暑之用．为</div>
+<div>了使湖看起来更加真实，约翰决定将湖的横截面建成N(1&le;N&le;105)个连续的平台高低错落的组合状，所有的平台从</div>
+<div>左到右按1到N依次编号．当然咯，在湖中注入水后，这些平台都将被淹没． &nbsp; &nbsp;平台i在设计图上用它的宽度wi(l</div>
+<div>&le;wi&le;1000)和高度（你可以理解为该平台顶离约翰挖的地基的高度）Hi.（1&le;Hi&le;1000000）来描述的．所有平台</div>
+<div>的高度都是独一无二的．湖的边缘可以视为无限高的平台．下面给出了一张约翰的设计图：</div>
+</div>
+<div><img height="361" width="285" alt="" src="upload/201401/22(13).jpg" /></div>
+<div>&nbsp;按约翰的设想，在坑挖好后，他会以1单位每分钟的速度往最低的那个平台上注水．水在离开水管后立即下落，直</div>
+<div>到撞到平台顶或是更早些时候注入的水然后，与所有常温下的水一样，它会迅速地流动、扩散．简单起见，你可以</div>
+<div>认为这些都是在瞬间完成的．约翰想知道，对于每一个平台，它的顶部是从哪个时刻开始，与水面的距离至少为1</div>
+<div>单位长度．注意：数据不保证答案全部在32位整型变量的范围内</div></div><h2>Input</h2><div class=content><div>* 第1行: 1个整数，N</div>
+<div>* 第2..N+1行: 第i+1行为2个用空格隔开的整数W_i、H_i，描述了第i个平台</div></div><h2>Output</h2><div class=content><p><span style="font-size: medium">* 第1..N行: 第i行为1个整数，表示平台i的顶到水面的距离从何时开始大于1 单位长度 </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+4 2<br />
+2 7<br />
+6 4<br />
+输入说明:<br />
+输入对应了题目中给出的例子，一共有3个平台，FJ选定的注水点在最低的<br />
+1号平台上方。</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+50<br />
+26<br />
+输入对应了题目中给出的例子，一共有3个平台，约翰选定的注水点在最低的1号平台上方．    <br />
+4分钟后乎台1被淹没．26分钟后平台3被淹没．50分钟后平台2被淹没．</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1595'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1595'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1595'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

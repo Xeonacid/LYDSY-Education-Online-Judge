@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2983. -- [Balkan2009]reading</title><center><h2>2983: [Balkan2009]reading</h2><span class=green>Time Limit: </span>25 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>35&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2983'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2983'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2983'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 15.75pt"><span style="font-size: medium">定义任意两小写字母间有一个差别值X（1&lt;=X&lt;=5），假设26个小写字母随意排列构成的都是单词，则对于一个单词可算出差别总和为sum，例如：</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">假设X[e-l]=3，X[l-y]=2，X[l-l]=1，则单词&ldquo;elly&rdquo;的sum值为3+1+2=6。</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">现在给出N和M，N表示sum值的上限（可以等于N），M表示已知关系个数，接下来M行，每行三个数L1，L2，F，表示字母L1到L2和L2到L1的X值都为F，若未提及的字母对则默认它们的X值为1，则问总共可形成多少符合条件的单词？</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div style="text-indent: 15.75pt"><span style="font-size: medium">第一行N,M&nbsp;（1&lt;=N&lt;=1000 000 000）</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">之后M行，每行三个数L1，L2，F，保证每对字母最多出现一次。</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp; 符合条件的单词总数 mod 1000 000 007 的结果。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">数据范围</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp; 50% N&lt;=1000 000</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">100% N&lt;=1000 000 000&nbsp;&nbsp; 1&lt;=F&lt;=5</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>20 10<br />
+e l 3<br />
+e o 1<br />
+o n 2<br />
+o r 4<br />
+r a 4<br />
+i n 5<br />
+e n 2<br />
+n t 3<br />
+t w 3<br />
+w i 5<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 470059518</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2983'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2983'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2983'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

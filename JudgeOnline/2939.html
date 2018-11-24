@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2939. -- [Poi2000]滑雪</title><center><h2>2939: [Poi2000]滑雪</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>91&nbsp;&nbsp;<span class=green>Solved: </span>54<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2939'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2939'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2939'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="center"></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">一个滑雪队在Byte山上组织了一次训练。山的北坡有一个滑雪场，所有的滑雪者都要从山上的起点站滑到山下的终点站。此次训练中各队员同时出发到终点站会合，除了始末两处外，队员们的滑雪路径不能相交，且山上的滑雪道只能从上往下滑。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">滑雪道的分布地图由多块被林地连接的空地组成，每块空地都处于不同的高度。两块空地间至多由一块林地连接。滑雪过程中，滑雪者可以选择路径访问任一空地（但不必全部经过）。各滑雪道只在空地相会，既不穿隧道，也不临空飞越。</span></div>
+<div><span style="font-size: medium"><b>任务：</b></span></div>
+<div style="text-indent: 18pt"><span style="font-size: medium">编写一个程序完成下列工作：</span></div>
+<div style="margin: 0cm 0cm 0pt 36pt; text-indent: -18pt"><span style="font-size: medium">●<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp; </span>读入滑雪场的地图；</span></div>
+<div style="margin: 0cm 0cm 0pt 36pt; text-indent: -18pt"><span style="font-size: medium">●<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>算出能参加训练的最大队员数；</span></div>
+<div style="margin: 0cm 0cm 0pt 36pt; text-indent: -18pt"><span style="font-size: medium">●<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>把结果输出</span></div></div><h2>Input</h2><div class=content><div>&nbsp;<span style="font-size: medium">第一行是空地的数目n，2&le;n&le;5000。以下n-1行，每行都有一些用空格分开的整数，第(i+1)行的数字描述的是从空地i沿林地往下可到达的其它空地。该行第一个整数k表示这些空地的个数，以下k个整数即它们的编号，按从东到西的顺序排列(即通向各空地的林地的位置)。空地从1到n编号。起点站建于空地1，终点站建于空地n。</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;仅一行，包括一个整数，即能参加训练的最大人数。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>15<br />
+5 3 5 9 2 4<br />
+1 9<br />
+2 7 5 <br />
+2 6 8<br />
+1 7<br />
+1 10<br />
+2 14 11<br />
+2 10 12<br />
+2 13 10<br />
+3 13 15 12<br />
+2 14 15<br />
+1 15<br />
+1 15<br />
+1 15<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2939'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2939'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2939'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

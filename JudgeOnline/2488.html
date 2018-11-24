@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2488. -- Pku3902 The Bad Number</title><center><h2>2488: Pku3902 The Bad Number</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>23&nbsp;&nbsp;<span class=green>Solved: </span>17<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2488'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2488'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2488'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">John and Brus believe that number N is a very bad number. Thus they try to avoid it every time and everywhere. <br />
+Now the guys would like to represent number M as a sum of positive numbers, each of which not exceeding K. But don&rsquo;t forget about the bad number N! Each summand must not be divisible by N, moreover the number of summands also must not be divisible by N. <br />
+Your task is to find the minimal possible number of summands in such representation of M. <br />
+For example, if N=3, M=11, K=6 then we can represent M as 5+6, but as far as 6 is divisible by 3 we must have at least 3 summands. But as far as N=3 we can&rsquo;t have 3 summands and thus the answer is 4. One of the possible ways to represent M is 11=4+4+2+1.</span></div>
+<p>给你三个整数N，M，K（N, M, K&le;10^9），求一个最小的P，使得M能够被分成P个正整数的和。</p>
+<p>并且这些整数要满足：（一）不能是N的倍数，（二）大小不能超过K。并且P也不能是N的倍数。</p></div><h2>Input</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">The first line contains single integer T &ndash; the number of test cases. Each test case consists of a single line containing three integers N, M and K separated by single spaces.</span></div></div><h2>Output</h2><div class=content><p class="pst">&nbsp;</p>
+<div class="ptx" lang="en-US"><span style="font-size: medium">For each test case print a single line containing the minimal possible number of summands according to the requirements described above. If it is impossible to do this output &ldquo;-1&rdquo; (quotes for clarity) instead.</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+2 <br />
+3 11 6 <br />
+2 12 47<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+4 <br />
+-1<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+Hint</p><br />
+<p>Constraints: <br /><br />
+1 &le; T &le; 74, <br /><br />
+1 &le; N, M, K &le; 1000000000 (109).</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2488'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2488'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2488'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

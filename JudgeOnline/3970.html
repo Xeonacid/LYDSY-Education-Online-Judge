@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3970. -- [WF2013] Map Tiles</title><center><h2>3970: [WF2013] Map Tiles</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3970'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3970'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3970'>Discuss</a>]</center><h2>Description</h2><div class=content><div>出版地图并不是一件容易的事。首先你需要通过一些适当的变换来在一个二维平面上显示出地球的&ldquo;球&rdquo;的形状，然后另一个问题出现了&mdash;&mdash;最优质的地图太大了，以至于不能被印在一页纸上。为了解决这个问题，地图出版者经常将地图分成若干矩形部分，并在同一页的各个矩形砖上打印各个部分。在本题中，你将验证以上的&ldquo;平铺&rdquo;过程。</div>
+<div>国际地图出版公司（ICPC）需要通过减少用于打印地图的砖数来最小化他们的打印成本。即使对于固定的砖块大小（由页面大小决定）与地图比例尺，你仍然可以通过调整矩形砖网格的位置来进行优化。</div>
+<div>图1左侧是一种用14个矩形砖来覆盖一个地图区域的方法。右侧显示了如何在不改变矩形砖的大小或方向的情况下，只用10个砖来覆盖同一区域。</div>
+<div><img src="upload/201504/1111.png" width="779" height="421" alt="" /></div>
+<div></div>
+<div></div>
+<div>图1：两种平铺德州地图的方法</div>
+<div>你的任务是帮助ICPC找到为了覆盖指定的区域，最少需要多少矩形砖。为简化问题，假定这个指定的区域是一个闭合的多边形，且不自交。</div>
+<div>注意这些砖组成的矩形网格必须与X轴和Y轴平行，也就是，他们互相接触的部分只能是整条边，而且不能旋转。此外，虽然输入的所有坐标都是整数，但矩形砖可能位于非整数坐标上。</div>
+<div>这个多边形可能碰到矩形网格的边缘线（比如样例2）。但是，为了避免浮点误差，你可以假设当这个多边形向外移动不超过10-6的距离时，答案不会变化。</div>
+<p></p></div><h2>Input</h2><div class=content><div>输入包含一组数据。第一行三个整数：n、xs、ys，其中n为多边形的顶点数，xs和ys为每个矩形砖在X轴和Y轴方向上的长度。接下来n行，每行两个整数x和y，表示多边形的各个顶点的坐标。给出的顶点顺序可能按照逆时针，也可能按照顺时针。</div>
+<p></p></div><h2>Output</h2><div class=content><div>为了覆盖这个多边形，最少需要的矩形砖数目。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12 9 9<br />
+1 8<br />
+1 16<br />
+6 16<br />
+9 29<br />
+19 31<br />
+23 24<br />
+30 23<br />
+29 18<br />
+20 12<br />
+22 8<br />
+14 0<br />
+14 8</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>10<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><div>3&lt;=n&lt;=50，1&lt;=xs, ys&lt;=100，0&lt;=x&lt;=10xs，0&lt;=y&lt;=10ys。</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3970'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3970'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3970'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

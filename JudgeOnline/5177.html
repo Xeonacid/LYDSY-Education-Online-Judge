@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5177. -- [Jsoi2013]贪心的导游</title><center><h2>5177: [Jsoi2013]贪心的导游</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>100&nbsp;&nbsp;<span class=green>Solved: </span>38<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5177'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5177'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5177'>Discuss</a>]</center><h2>Description</h2><div class=content><div>南京有一条著名的购物街。购物街嘛，就是一排整齐的商店啦~</div>
+<div>导游小Z每次都会把游客团带到购物街里走一段，然后选择一个商店进去购物。小Z接待的游客都是购物狂，他们恨</div>
+<div>不得将店内的商品洗劫一空，也就是说，只要他们能买，就一定会继续买（钱够不够你不用考虑，他们都有信用卡</div>
+<div>可以透支）。但是有一点，他们都非常讲究平等、很谦虚，每个人都不能忍受比别人多买什么东西或者少买什么东</div>
+<div>西，于是他们每个人最后买的商品数量都是一样的。这虽然导致他们没办法每次都把商店搬空，但是每次已经给店</div>
+<div>家带来一大笔生意了，店家已经非常感谢了！为了表示感谢，店家决定把游客们买完之后剩下来那几件没卖掉的商</div>
+<div>品就送给导游小Z了。贪心的小Z自然希望自己能获赠的商品数量越大越好啦~现在告诉你这一排共n个商店（标号为</div>
+<div>0到n-1）每个商店里的商品总数，每次小Z会带一批共p个游客的旅游团，到其中u号商店和v号商店之间逛一逛，请</div>
+<div>你帮小Z在所逛的商店区间内选择一个，告诉小Z他最多能获赠多少件商品。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行，包含两个整数n、m，分别表示商店个数、小Z带来的旅游团个数。</div>
+<div>接下来一行，包含n个整数ai（i=0,1,&hellip;&hellip;,n-1），表示第i个商店的商品总数。</div>
+<div>接下来m行，每行三个整数u、v、p（0&le;u,v&le;n-1，2&le;p&le;1000）</div>
+<div>表示这个旅游团逛u号商店和v号商店之间的商店（包含u、v），且这个旅游团的人数为p。</div>
+<div>n&le;1000000， m&le;50000， 0&le;ai&le;1000， 2&le;p&le;1000</div>
+<p></p></div><h2>Output</h2><div class=content><div>共输出m行，每行一个整数，第i行输出第i个旅游团购物后，小Z最多能获赠的商品数量。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5<br />
+2 4 6 8 10<br />
+0 1 2<br />
+1 4 3<br />
+2 4 2<br />
+1 1 9<br />
+0 4 7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0 <br />
+2 <br />
+0 <br />
+4 <br />
+6<br />
+第一个旅游团， 2 个人， 0 号商店到 1 号商店的区间。若去 1 号商店，共 2 件商品，每人买 1 件，剩 0 件<br />
+。若去 2 号商店，共 4 件商品，每人买 2 件，剩 0 件。所以，小 Z 最多获赠 0 件。<br />
+第二个旅游团， 3 个人，小 Z 选择带他们去 4 号商店，共 8 件商品，每人买 2 件商品（因为每人 3 件不够）<br />
+，剩下 2 件，小 Z 最多获赠就是 2 件。 可以验证去其它商店小 Z 最多获赠的商品不会达到 2 件。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5177'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5177'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5177'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

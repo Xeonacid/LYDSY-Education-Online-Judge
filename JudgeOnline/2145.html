@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2145. -- 悄悄话</title><center><h2>2145: 悄悄话</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>376&nbsp;&nbsp;<span class=green>Solved: </span>154<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2145'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2145'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2145'>Discuss</a>]</center><h2>Description</h2><div class=content><div>在这个有话不直说的年代，密码学越来越被广泛接受。我们引用经典的&ldquo;凯撒密码&rdquo;。在英文中，凯撒加密只对26</div>
+<div>个字母生效（分大小写）我们按照a到z来排字母。凯撒加密的原理就是把原文的每一个字母都按顺序往后移K位。</div>
+<div>这个K将被作为密钥。（&rsquo;a&rsquo;往后移变成&rsquo;b&rsquo;，&rsquo;z&rsquo;往后移会变成&rsquo;a&rsquo;）（0&lt;=K&lt;=25）现在给出一系列用凯撒</div>
+<div>加密的英文句子，请你编写程序逐句翻译。也就是说，请你确定一个密钥，使得解码以后的文字最符合英文的规则</div>
+<div>与规范。数据保证存在唯一的解码方案，使得明码是完全可以分辨的英文句子。</div></div><h2>Input</h2><div class=content><p>输入一定包括10行每一行都是用同一密钥加密的英文。</p></div><h2>Output</h2><div class=content><p>输出10行，为解密结果。不允许格式上有任何不同。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Welcome to the test. This is the 1st sample test case.<br />
+Vdkbnld sn sgd sdrs. Sghr hr sgd 2mc rzlokd sdrs bzrd.<br />
+Welcome to the test. This is the 3rd sample test case.<br />
+Nvctfdv kf kyv kvjk. Kyzj zj kyv 4ky jrdgcv kvjk trjv.<br />
+Govmywo dy dro docd. Drsc sc dro 5dr ckwzvo docd mkco.<br />
+Nvctfdv kf kyv kvjk. Kyzj zj kyv 6ky jrdgcv kvjk trjv.<br />
+Jrypbzr gb gur grfg. Guvf vf gur 7gu fnzcyr grfg pnfr.<br />
+Ucjamkc rm rfc rcqr. Rfgq gq rfc 8rf qyknjc rcqr ayqc.<br />
+Ckriusk zu znk zkyz. Znoy oy znk 9zn ygsvrk zkyz igyk.<br />
+Xfmdpnf up uif uftu. Uijt jt uif mbtu tbnqmf uftu dbtf.<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Welcome to the test. This is the 1st sample test case.<br />
+Welcome to the test. This is the 2nd sample test case.<br />
+Welcome to the test. This is the 3rd sample test case.<br />
+Welcome to the test. This is the 4th sample test case.<br />
+Welcome to the test. This is the 5th sample test case.<br />
+Welcome to the test. This is the 6th sample test case.<br />
+Welcome to the test. This is the 7th sample test case.<br />
+Welcome to the test. This is the 8th sample test case.<br />
+Welcome to the test. This is the 9th sample test case.<br />
+Welcome to the test. This is the last sample test case.<br />
+【数据说明】<br />
+数据将从不同的方面考察。请尽量保证程序的准确性。<br />
+每一行长度不会太短(不少于3个单词的完整句)。没有全角字符和其他语言符号，可能包含半角空格和标点。<br />
+单个测试点不超过5kB。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2145'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2145'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2145'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

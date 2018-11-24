@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3256. -- 基因序列相似性问题</title><center><h2>3256: 基因序列相似性问题</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>85&nbsp;&nbsp;<span class=green>Solved: </span>40<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3256'>Discuss</a>]</center><h2>Description</h2><div class=content><div>给定2个长度分别为m和n的DNA序列X和Y，以及一个长度为p的模式子串P．</div>
+<div>带有子序列包含约束的最长公共子序列问题就是要找出x和Y的不包含P为其子串的最长公共子序列。</div>
+<div>例如，如果给定的DNA序列x和Y分别为X=AATGCCTAGGC，Y=CGATCTGGAC，模式子序列P=TGGC，</div>
+<div>则子序列ATCTGGC是X和Y的一个无约束的最长公共子序列</div>
+<div>而不包含P为其子串的最长公共子序列是ATCTGC(可能不唯一)。</div>
+<div>编程任务：找出给定序列X和Y带有不包含子串P约束的最长公共子序列。</div></div><h2>Input</h2><div class=content><div>第1行中给出正整数m,n,p，分别表示给定序列X和Y以及模式子序列P的长度。</div>
+<div>接下来的3行分别给出序列X和Y以及模式子串P。</div>
+<div>注意：此题输入数据，全是一些小写英文字母。</div>
+<div>m&lt;200,n&lt;200,p&lt;200</div></div><h2>Output</h2><div class=content><div>将计算出的X和Y带有包含子序列P约束的最长公共子串的长度输出</div>
+<div>不存在则长度为0。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>11 10 4<br />
+AATGCCTAGGC<br />
+CGATCTGGAC<br />
+TGGC</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3256'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3256'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3256'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

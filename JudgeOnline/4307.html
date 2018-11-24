@@ -1,0 +1,110 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4307. -- Maishroom & Class</title><center><h2>4307: Maishroom & Class</h2><span class=green>Time Limit: </span>25 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4307'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4307'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4307'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Maishroom在全国各地开设了OI辅导班，比如四川班等等。Maishroom的辅导班有两种讲师，也就是助教（主要是机房里其他小伙伴）和教师（主要是Maishroom自己）。当一个助教去打vp的时候，显然他就不能授课了，不过没有关系，因为只是助教。当一个教师A（例如Maishroom）去打（看）vp（片）的时候，他需要找另一个讲师B来代替自己的授课。如果B也是教师，他也需要另一个讲师C来代替自己，依次类推。</div>
+<div>现在我们需要知道：</div>
+<div>1）有多少个讲师不能去打vp。</div>
+<div>2）有多少对讲师（A,B），单独地，每个人都可以去打vp，然而不能一起打（开）vp（黑）。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行，两个整数N, K。分别表示：辅导班里的讲师数与教师数。</div>
+<div>约定：编号1~K的为教师，编号K+1~N的为助教。</div>
+<div>以下K行，表示各个教师可以被哪些讲师替代。</div>
+<div>第i+1行，第一个整数Di，代表可代替教师i的讲师数，之后Di个整数为其编号。</div>
+<p></p></div><h2>Output</h2><div class=content><div>一行，两个整数。分别代表两问的答案。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 5<br />
+2 6 7<br />
+1 7<br />
+2 2 7<br />
+1 5<br />
+1 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2 3</span></div><h2>HINT</h2>
+			<div class=content><p><div>教师4, 5不能去打vp。因为剩下一个人不能做两个人的事。</div><br />
+<div>当教师2, 3开黑的时候，讲师7不可能同时顶替他们两个人。</div><br />
+<div>事实上，(2, 3), (2, 7), (3, 7)都满足，可以单独vp，不能一起开黑。</div><br />
+<div><span style="font-size:10.5pt;line-height:115%;<br />
+font-family:微软雅黑;mso-ascii-font-family:Consolas;mso-hansi-font-family:Consolas;<br />
+mso-bidi-font-family:Consolas;mso-ansi-language:EN-US;mso-fareast-language:<br />
+ZH-CN;mso-bidi-language:AR-SA">对于</span><span lang="EN-US" style="font-size:10.5pt;<br />
+line-height:115%;font-family:Consolas;mso-fareast-font-family:微软雅黑;mso-bidi-font-family:<br />
+Consolas;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">100%</span><span style="font-size:10.5pt;line-height:115%;font-family:<br />
+微软雅黑;mso-ascii-font-family:Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:<br />
+Consolas;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">的数据：</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;<br />
+font-family:Consolas;mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">1</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">K</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">N</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">5,000</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">，</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">1</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">M</span><span style="font-size:10.5pt;line-height:115%;font-family:微软雅黑;mso-ascii-font-family:<br />
+Consolas;mso-hansi-font-family:Consolas;mso-bidi-font-family:Consolas;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:10.5pt;line-height:115%;font-family:Consolas;<br />
+mso-fareast-font-family:微软雅黑;mso-bidi-font-family:Consolas;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">20,000</span></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4307'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4307'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4307'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

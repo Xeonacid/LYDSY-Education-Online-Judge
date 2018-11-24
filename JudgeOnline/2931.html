@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2931. -- [Poi1999]溜冰场问题</title><center><h2>2931: [Poi1999]溜冰场问题</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2931'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2931'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2931'>Discuss</a>]</center><h2>Description</h2><div class=content><p><font face="宋体" size="3">一场溜冰比赛在<span lang="EN-US">Byteland</span>最大的溜冰场举行。溜冰场是一个大小为<span lang="EN-US">10000 * 10000</span>的正方形。一个选手在裁判选定的起点开始滑冰，他的任务是滑到由裁判选定的终点。起点和终点不相同。一个选手在滑冰场的平行赛道上滑行。在滑冰场上设置了一些障碍物。每一个障碍物是一个棱柱，它的底部是边与滑冰场的各边平行的多边形。底部的每两个相邻的边总是垂直的。障碍物没有公共点。每一个滑道完结于一个点，在一个选手首先碰到一个障碍物的垂直于滑道方向一面。换一句话说，仅当一个选手撞到墙或者到了终点才能停下来。摔到溜冰场外则取消参赛资格。选手可以沿着障碍物的墙滑行。</font></p>
+<p></p>
+<p></p>
+<p><img height="243" width="490" alt="" src="upload/201212/11(1).jpg" /></p>
+<div>判断一个选手依照所给的规则是否可以到达终点，假设他从起点开始滑行。如果如此，那么他需要滑行的最少数目是多少？</div>
+<div style="margin: auto 0cm"><b><font size="3">任务</font></b></div>
+<div>写一个程序:</div>
+<ul type="disc">
+    <li>读取溜冰场，障碍物的描述和起点终点的坐标，</li>
+    <li>检验，一个从起点出发，遵循上述规则滑行的选手是否可以到达终点，如果可以，计算他需要滑行的最少数目，</li>
+    <li>把结果输出</li>
+</ul></div><h2>Input</h2><div class=content><div style="margin: auto 0cm"><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">我们定义一个坐标系统来描述滑冰场物体的位置。滑冰场是一个顶点分别为(0,0),(10000,0),(10000,10000),(0,10000)的正方形。在输入文件LOD.IN的首行有两个被单空格号隔开的整数<i>z<sub>1</sub> </i>和 <i>z<sub>2</sub></i> ，0&lt;=<i>z<sub>1</sub>, z<sub>2</sub></i>&lt;=10000。数字对(<i>z<sub>1</sub>, z<sub>2</sub></i>)表示起点的坐标。在文件的第二行有两个被单空格号分开的整数<i>t<sub>1</sub> </i>和<i>t<sub>2</sub></i> （0&lt;=<i>t<sub>1</sub>, t<sub>2</sub></i>&lt;=10000）。数字对（<i>t<sub>1</sub>, t<sub>2</sub></i>）表示终点的坐标。在文件的第三行包含了一个整数<i>s</i>,（1&lt;=<i>s</i>&lt;=2500）。这是障碍物的数目。下面的几行是对障碍物的描述。每一个障碍物的描述由一行包括一个等于障碍物的墙数（底边）的正整数r开始。接下来的r行的每一行有两个由单空格号隔开的整数x和y。那是障碍物底部顶点的坐标，按照顺时针顺序给出。（当按照这个方向绕障碍物一圈，它的内部在左手边）。障碍物的墙的总数不超过10000。</span></div></div><h2>Output</h2><div class=content><ul type="disc">
+    <li><span style="font-size: medium">如果从起点到终点是不可能的，则字符串为&lsquo;NIE&rsquo;， </span></li>
+    <li><span style="font-size: medium">如果可能，则写出到达终点的最小滑行数。 </span></li>
+</ul></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>40 10<br />
+5 40<br />
+3<br />
+6<br />
+0 15<br />
+0 60<br />
+20 60<br />
+20 55<br />
+5 55<br />
+5 15<br />
+12<br />
+30 55<br />
+30 60<br />
+60 60<br />
+60 0<br />
+0 0<br />
+0 5<br />
+55 5<br />
+55 35<br />
+50 35<br />
+50 40<br />
+55 40<br />
+55 55<br />
+6<br />
+30 25<br />
+15 25<br />
+15 30<br />
+35 30<br />
+35 15<br />
+30 15<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> <br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><img height="559" width="564" alt="" src="upload/201212/22.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2931'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2931'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2931'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

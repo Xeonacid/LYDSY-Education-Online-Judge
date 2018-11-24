@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3940. -- [Usaco2015 Feb]Censoring</title><center><h2>3940: [Usaco2015 Feb]Censoring</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>598&nbsp;&nbsp;<span class=green>Solved: </span>295<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3940'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3940'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3940'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John has purchased a subscription to Good Hooveskeeping magazine for his cows, so they have plenty&nbsp;</div>
+<div>of material to read while waiting around in the barn during milking sessions. Unfortunately, the latest&nbsp;</div>
+<div>issue contains a rather inappropriate article on how to cook the perfect steak, which FJ would rather his&nbsp;</div>
+<div>cows not see (clearly, the magazine is in need of better editorial oversight).</div>
+<div>FJ has taken all of the text from the magazine to create the string S of length at most 10^5 characters.&nbsp;</div>
+<div>He has a list of censored words t_1 ... t_N that he wishes to delete from S. To do so Farmer John finds&nbsp;</div>
+<div>the earliest occurrence of a censored word in S (having the earliest start index) and removes that instance&nbsp;</div>
+<div>of the word from S. He then repeats the process again, deleting the earliest occurrence of a censored word&nbsp;</div>
+<div>from S, repeating until there are no more occurrences of censored words in S. Note that the deletion of one&nbsp;</div>
+<div>censored word might create a new occurrence of a censored word that didn't exist before.</div>
+<div>Farmer John notes that the censored words have the property that no censored word appears as a substring of&nbsp;</div>
+<div>another censored word. In particular this means the censored word with earliest index in S is uniquely&nbsp;</div>
+<div>defined.Please help FJ determine the final contents of S after censoring is complete.</div>
+<div>FJ把杂志上所有的文章摘抄了下来并把它变成了一个长度不超过10^5的字符串S。他有一个包含n个单词的列表，列表里的n个单词</div>
+<div>记为t_1...t_N。他希望从S中删除这些单词。&nbsp;</div>
+<div>FJ每次在S中找到最早出现的列表中的单词(最早出现指该单词的开始位置最小)，然后从S中删除这个单词。他重复这个操作直到S中</div>
+<div>没有列表里的单词为止。注意删除一个单词后可能会导致S中出现另一个列表中的单词&nbsp;</div>
+<div>FJ注意到列表中的单词不会出现一个单词是另一个单词子串的情况，这意味着每个列表中的单词在S中出现的开始位置是互不相同的&nbsp;</div>
+<div>请帮助FJ完成这些操作并输出最后的S</div>
+<pre style="font-size: 14px;"></pre>
+<p></p></div><h2>Input</h2><div class=content><div>The first line will contain S. The second line will contain N, the number of censored words. The next N lines contain the strings t_1 ... t_N. Each string will contain lower-case alphabet characters (in the range a..z), and the combined lengths of all these strings will be at most 10^5.</div>
+<div>第一行包含一个字符串S&nbsp;</div>
+<div>第二行包含一个整数N&nbsp;</div>
+<div>接下来的N行，每行包含一个字符串，第i行的字符串是t_i</div>
+<pre style="font-size: 14px;"></pre>
+<p></p></div><h2>Output</h2><div class=content><div><span style="font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">The string S after all deletions are complete. It is guaranteed that S will not become empty during the deletion process.</span></div>
+<div>
+<div>一行，输出操作后的S</div>
+<div></div>
+</div>
+<div>
+<pre style="font-size: 14px;"></pre>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>begintheescapexecutionatthebreakofdawn<br />
+2<br />
+escape<br />
+execution</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>beginthatthebreakofdawn</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3940'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3940'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3940'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

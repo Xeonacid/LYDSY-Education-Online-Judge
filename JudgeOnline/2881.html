@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2881. -- [Ceoi2000] LandsScape</title><center><h2>2881: [Ceoi2000] LandsScape</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>15&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2881'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2881'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2881'>Discuss</a>]</center><h2>Description</h2><div class=content><div><b><span style="font-size: 16pt">&nbsp;</span></b><span style="font-size: 16pt">话说rins操作技术太无下限了，出门装手一抽就买了2个鞋子，结果没钱了</span><span style="font-size: 16pt">&hellip;</span><span style="font-size: 16pt">于是rins一路被压榨，走上上爆塔，走下下路崩，无奈之下他硬着头皮来到了中路，然后就被pcx虐残了..rins发现自己只有-1滴血</span><span style="font-size: 16pt">,</span><span style="font-size: 16pt">万幸自己无下限</span><span style="font-size: 16pt">..</span><span style="font-size: 16pt">于是掉头就跑，奔到了野区的山岭上，xx紧随其后，带着1000米高精准爆菊神器准备收了这FB。不过此时天色已晚，pcx视力不太好，只有有光的地方才能被他打到，已知天空高度为sky，有t个一闪一闪的小星星位于不同位置，如果<b>山上某一点与星星i的连线不穿过山上其他点</b>或<b>刚好与山整条线重合</b>，则称星星i可以照亮该点，rins开了疾风步，可以躲在任意一点，那么pcx是否能爆了rins，得到fb呢？如果能，则至少要利用几个星星呢？</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: 16pt">&nbsp;</span><span style="font-size: 16pt">第一行</span><span style="font-size: 16pt"> sky</span></div>
+<div><span style="font-size: 16pt">第二行</span><span style="font-size: 16pt"> t</span></div>
+<div><span style="font-size: 16pt">第</span><span style="font-size: 16pt">3</span><span style="font-size: 16pt">到</span><span style="font-size: 16pt">3+t-1</span><span style="font-size: 16pt">行</span><span style="font-size: 16pt">每行一个数，第</span><span style="font-size: 16pt">i</span><span style="font-size: 16pt">个星星的横坐标，保证星星横坐标已从小到大排好</span></div>
+<div><span style="font-size: 16pt">第</span><span style="font-size: 16pt">3+t </span><span style="font-size: 16pt">行</span><span style="font-size: 16pt"> n </span></div>
+<div><span style="font-size: 16pt">接下来</span><span style="font-size: 16pt">n</span><span style="font-size: 16pt">行</span><span style="font-size: 16pt">每行两个数，表示山的转折点的<b>纵坐标和横坐标</b></span><span style="font-size: 16pt">，保证横坐标已从小到大排好</span></div>
+<p></p></div><h2>Output</h2><div class=content><div><b><span style="font-size: 22pt">&nbsp;</span></b><span style="font-size: 16pt">如果可以虐死</span><span style="font-size: 16pt">rins</span><span style="font-size: 16pt">，则输出最少利用的星星个数；</span></div>
+<div><span style="font-size: 16pt">&nbsp;&nbsp; </span><span style="font-size: 16pt">否则输出&ldquo;</span><span style="font-size: 16pt">Shit..I can't see rins...</span><span style="font-size: 16pt">&rdquo;不包括引号。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>  100<br />
+3<br />
+2 7 14<br />
+9<br />
+10 0<br />
+80 3<br />
+10 5<br />
+70 8<br />
+50 10<br />
+40 12<br />
+20 13<br />
+90 14<br />
+40 17<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata> 3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p></p><br />
+<p></p><br />
+<p><img height="432" width="528" alt="" src="upload/201210/11(1).jpg" /></p><br />
+<p></p><br />
+<p>数据范围与约定<br /><br />
+&nbsp; 对于10%数据 rins RP比较好<br /><br />
+对于20%的数据：t=1<br /><br />
+&nbsp;对于另外30%的数据：2&lt;=n&lt;=3<br /><br />
+对于100%的数据：sky&lt;=10000<br /><br />
+t&lt;=100 <br /><br />
+2&lt;=n&lt;=100<br /><br />
+0&lt;=所有山的纵坐标&lt;sky<br /><br />
+0&lt;=所有横坐标&lt;=1000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2881'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2881'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2881'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

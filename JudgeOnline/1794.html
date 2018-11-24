@@ -1,0 +1,76 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1794. -- [Ioi2008]Linear Garden</title><center><h2>1794: [Ioi2008]Linear Garden</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>249&nbsp;&nbsp;<span class=green>Solved: </span>143<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1794'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1794'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1794'>Discuss</a>]</center><h2>Description</h2><div class=content>Ramesses二世刚刚获胜归来。为了纪念这一胜利，他决定建造一座壮观的花园。这个花园里的植物排成一行，从他在Luxor的宫殿直达Karnak的神庙。所种植的植物只有莲花和纸莎草，因为它们分别代表上埃及和下埃及。
+这个花园中必须有N棵植物，并且必须保持平衡，即在花园中任取一段，其中莲花和纸莎草的棵数之差不能超过2。
+花园可以被表示为由字母L（莲花）和P（纸莎草）组成的字符串。例如，当N等于5时，有14种可能的平衡花园，按照字母排序如下：LLPLP，LLPPL，LPLLP，LPLPL，LPLPP， LPPLL，LPPLP，PLLPL，PLLPP，PLPLL，PLPLP，PLPPL，PPLLP 和 PPLPL。
+给定长度的所有可能的平衡花园可按字母顺序排序，并从1开始编号。例如，当N等于5时，第12号花园是PLPPL。
+任务
+写一个程序，给定植物棵数N和一个表示平衡花园的字符串，计算该花园的序号模M的结果，其中M是一个给定的整数。
+注意，在问题求解中，数值 M 除了简化计算外没有其他的作用。
+限制
+1 <= N <= 1,000,000
+7 <= M <= 10,000,000
+评分
+有总分40分的测试点的N不超过40。
+</div><h2>Input</h2><div class=content>你的程序需要从标准输入上读入下列数据：
+&#61548;	第一行是整数N，说明花园中植物的数量。
+&#61548;	第二行是整数M。
+&#61548;	第三行是长度为N的由字符L或P组成的字符串，表示一个平衡的花园。
+</div><h2>Output</h2><div class=content>你的程序需要向标准输出上输出一个介于0和M-1（含）的整数，占一行，表示该花园的序号模M。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+7<br />
+PLPPL	</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>实际的序号是12。因此输出的是12模7，即5。<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1794'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1794'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1794'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

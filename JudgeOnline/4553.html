@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4553. -- [Tjoi2016&Heoi2016]序列</title><center><h2>4553: [Tjoi2016&Heoi2016]序列</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1299&nbsp;&nbsp;<span class=green>Solved: </span>602<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4553'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4553'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4553'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;佳媛姐姐过生日的时候，她的小伙伴从某宝上买了一个有趣的玩具送给他。玩具上有一个数列，数列中某些项的值</p>
+<div>可能会变化，但同一个时刻最多只有一个值发生变化。现在佳媛姐姐已经研究出了所有变化的可能性，她想请教你</div>
+<div>，能否选出一个子序列，使得在任意一种变化中，这个子序列都是不降的？请你告诉她这个子序列的最长长度即可</div>
+<div>。注意：每种变化最多只有一个值发生变化。在样例输入1中，所有的变化是：</div>
+<div>1 2 3</div>
+<div>2 2 3</div>
+<div>1 3 3</div>
+<div>1 1 31 2 4</div>
+<div>选择子序列为原序列，即在任意一种变化中均为不降子序列在样例输入2中，所有的变化是:3 3 33 2 3选择子序列</div>
+<div>为第一个元素和第三个元素，或者第二个元素和第三个元素，均可满足要求</div></div><h2>Input</h2><div class=content><p>&nbsp;输入的第一行有两个正整数n, m，分别表示序列的长度和变化的个数。接下来一行有n个数，表示这个数列原始的</p>
+<div>状态。接下来m行，每行有2个数x, y，表示数列的第x项可以变化成y这个值。1 &lt;= x &lt;= n。所有数字均为正整数</div>
+<div>，且小于等于100,000</div></div><h2>Output</h2><div class=content><p>&nbsp;<span style="font-family: gbsnu8f; font-size: 9pt;">输<span style="font-family: gbsnu51; font-size: 9pt;">出<span style="font-family: gbsnu4e; font-size: 9pt;">一个<span style="font-family: gbsnu65; font-size: 9pt;">整数<span style="font-family: gbsnuff; font-size: 9pt;">，<span style="font-family: gbsnu88; font-size: 9pt;">表<span style="font-family: gbsnu79; font-size: 9pt;">示<span style="font-family: gbsnu5b; font-size: 9pt;">对<span style="font-family: gbsnu5e; font-size: 9pt;">应<span style="font-family: gbsnu76; font-size: 9pt;">的<span style="font-family: gbsnu7b; font-size: 9pt;">答<span style="font-family: gbsnu68; font-size: 9pt;">案<br style="orphans: 2; text-align: -webkit-auto; widows: 2;" />
+</span></span></span></span></span></span></span></span></span></span></span></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+1 2 3<br />
+1 2<br />
+2 3<br />
+2 1<br />
+3 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4553'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4553'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4553'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

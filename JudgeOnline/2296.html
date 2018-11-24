@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2296. -- 【POJ Challenge】随机种子</title><center><h2>2296: 【POJ Challenge】随机种子</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>603&nbsp;&nbsp;<span class=green>Solved: </span>272<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2296'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2296'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2296'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<p></p>
+<p>
+<dd>
+<div>
+<p>1tthinking除了随机算法，其他什么都不会。但是他还是可以ac很多题目，他用的是什么呢？他会选择一个好的随机种子，然后输出答案。往往他选择的一个好的种子可以有99%的概率ac题目。</p>
+<p>他会按照下面的规则选择一个种子。首先1tthinking有自己喜欢的一个幸运数字 <em>x</em>。然后他会找一个数字 <em>a</em> 使得 (1)<em>a</em> is a 是 <em>x</em> 的倍数 (2) <em>a</em> 的十进制表示包含0到9。</p>
+<p>举个例子, 如果 <em>x</em> = 1, 那么 9182736450 就是一个1tthinking需要的随机种子。</p>
+<p>然而1tthinking有的时候花了很久也找不到这个数，他感到很失望。现在他把问题留给了你。</p>
+<p><img alt="" src="http://media.openjudge.cn/images/g3206_1.jpg" /></p>
+</div>
+<p></p>
+<p></p>
+</dd>
+</p></div><h2>Input</h2><div class=content><p></p>
+<p></p>
+<p>
+<dt>&nbsp; </dt>
+<dd>
+<div>
+<p>第1行，一个整数 <em>T</em> (0 &le; <em>T</em> &le; 100), 幸运数字的数量。</p>
+<p>第2到 <em>T</em> + 1行: <em>X<sub>i</sub></em> (0 &le; <em>X<sub>i</sub></em> &le; 10<sup>6</sup>), 1tthinking的幸运数字。</p>
+</div>
+<p></p>
+<p></p>
+</dd>
+</p></div><h2>Output</h2><div class=content><p></p>
+<p></p>
+<p>
+<dt>&nbsp; </dt>
+<dd>
+<p>第1到 <em>T</em>: 一个整数 <em>Y<sub>i</sub></em> (0 &le; <em>Y<sub>i</sub></em> &le; 10<sup>16</sup>), 满足条件的随机种子. 如果不存在，输出-1。</p>
+<p></p>
+<p></p>
+</dd>
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+2<br />
+10<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>9876543210<br />
+9876543210<br />
+9876543210<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%20dnc1994%E6%8F%90%E4%BE%9Bspj%E7%A8%8B%E5%BA%8F'>鸣谢 dnc1994提供spj程序</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2296'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2296'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2296'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

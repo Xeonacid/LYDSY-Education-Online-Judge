@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2376. -- 保龄球</title><center><h2>2376: 保龄球</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>62&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2376'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2376'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2376'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="NormalText" align="center" style="margin: 0cm 0cm 0pt; text-indent: 0cm; text-align: center; mso-char-indent-count: 0"><b><span lang="EN-US" style="font-size: 16pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></b></p>
+<p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你一个人去保龄球馆去打保龄球。总共有</span><span lang="EN-US"><font face="Times New Roman">k</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个球可用。每个球的宽度为</span><span lang="EN-US"><font face="Times New Roman">w</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。在你前方有</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个球棒要打。这</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">球棒紧密的排成一行，且第</span><span lang="EN-US"><font face="Times New Roman">i</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个球棒宽度为</span><span lang="EN-US"><font face="Times New Roman">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，价值为</span><span lang="EN-US"><font face="Times New Roman">x<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。你的每个球恰能击中第</span><span lang="EN-US"><font face="Times New Roman">a</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个</span><span lang="EN-US"><font face="Times New Roman">~</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第</span><span lang="EN-US"><font face="Times New Roman">a+w-1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个的球棒（如果此球棒存在的话）。球棒被打到就倒了，且互不影响。你可以向任意方向击球，甚至球的一部分可以越过最左、最右边球棒所构成的边界。求最大价值。</span></font></p>
+<p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p></p></div><h2>Input</h2><div class=content><p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">文件第一行是三个整数</span><span lang="EN-US"><font face="Times New Roman">n,k,w</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。以下</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行是</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，第</span><span lang="EN-US"><font face="Times New Roman">I</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个代表</span><span lang="EN-US"><font face="Times New Roman">x<sub>i</sub></font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span></font></p>
+<p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"></p></div><h2>Output</h2><div class=content><p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><font size="3">仅一行，为最大价值。</font></span></p>
+<p class="NormalText" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt; mso-char-indent-count: 0"><span lang="EN-US"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></span></p>
+<pre></pre></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9 2 3<br />
+2<br />
+8<br />
+5<br />
+1<br />
+9<br />
+6<br />
+9<br />
+3<br />
+2<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+39<br />
+<br />
+ <br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>100%的数据满足1&le;n&le;10000，1&le;w&le;100，1&le;k&le;500；<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=CCC2007'>CCC2007</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2376'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2376'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2376'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

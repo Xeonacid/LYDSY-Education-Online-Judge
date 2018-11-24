@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2340. -- 山形压缩</title><center><h2>2340: 山形压缩</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>1&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2340'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2340'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2340'>Discuss</a>]</center><h2>Description</h2><div class=content><div>YY面对一座复杂的山，觉得看着头晕，YY认为，可以减少一些拐点的使用，而让剩下的拐点</div>
+<div>描述的山形状近似于原来的山。当然，无论如何，山的端点是不能删掉的。YY定义，两座山</div>
+<div>称作近似，当且仅当在一切横坐标处，两座山的海拔高度之差（绝对值）都不超过Delta。</div>
+<div>那么，YY给你了山的形状，以及Delta，让你尽量简化这座山，告诉他删除哪些拐点以后得</div>
+<div>到的山与原来的山近似，而且要删除尽量多的拐点。</div></div><h2>Input</h2><div class=content><div>第一行有两个非负整数N和Delta，N满足3 &lt;= N &lt;= 10000。</div>
+<div>后面N行，第i行有两个非负整数Xi和Yi，表示折线上第i个拐点的坐标。</div>
+<div>题中所有坐标都在0到20000之间。</div></div><h2>Output</h2><div class=content><div>第一行一个正整数M，即你删去的点的个数。</div>
+<div>后面有M行，每行一个正整数，表示你删除的点。这M个数字必须是升序的。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 1<br />
+0 0<br />
+2 4<br />
+4 7<br />
+8 3<br />
+10 0<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+2<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2340'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2340'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2340'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

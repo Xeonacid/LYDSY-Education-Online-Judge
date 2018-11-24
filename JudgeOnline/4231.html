@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4231. -- 回忆树</title><center><h2>4231: 回忆树</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>226&nbsp;&nbsp;<span class=green>Solved: </span>82<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4231'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4231'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4231'>Discuss</a>]</center><h2>Description</h2><div class=content><div>回忆树是树。</div>
+<div>具体来说，是n个点n-1条边的无向连通图，点标号为1~n，每条边上有一个字符（出于简化目的，我们认为只有小写字母）。</div>
+<div>对一棵回忆树来说，回忆当然是少不了的。</div>
+<div>一次回忆是这样的：你想起过往，触及心底&hellip;唔,不对，我们要说题目。</div>
+<div>这题中我们认为回忆是这样的：给定2个点u，v(u可能等于v)和一个非空字符串s，问从u到v的简单路径上的所有边按照到u的距离从小到大的顺序排列后，边上的字符依次拼接形成的字符串中给定的串s出现了多少次。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行2个整数，依次为树中点的个数n和回忆的次数m。</div>
+<div>接下来n-1行，每行2个整数u、v和1个小写字母c，表示回忆树的点u、v之间有一条边，边上的字符为c</div>
+<div>接下来2m行表示m次回忆，每次回忆2行：第1行2个整数u、v，第2行给出回忆的字符串s。</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每次回忆，输出串s出现的次数。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>12 3<br />
+1 2 w<br />
+2 3 w<br />
+3 4 x<br />
+4 5 w<br />
+5 6 w<br />
+6 7 x<br />
+7 8 w<br />
+8 9 w<br />
+9 10 x<br />
+10 11 w<br />
+11 12 w<br />
+1 7<br />
+wwx<br />
+1 12<br />
+www<br />
+1 12<br />
+w</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+0<br />
+8</span></div><h2>HINT</h2>
+			<div class=content><p><div>对于100%的数据，n&lt;=100000,m&lt;=100000,询问串的总长&lt;=300000</div><br />
+<div></div><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4231'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4231'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4231'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

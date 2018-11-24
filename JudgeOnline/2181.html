@@ -1,0 +1,94 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2181. -- 跳大五杀</title><center><h2>2181: 跳大五杀</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>33&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2181'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2181'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2181'>Discuss</a>]</center><h2>Description</h2><div class=content>打团战了！肉盾们开着刃甲就顶了上去，法师们一边走位一边甩技能，DPS们开BKB开疯狂开臂章抓着对面英雄就点。只有Doggy还站在队伍的最后一排。为什么？因为他选的英雄是虚空假面，他在寻找战机。 
+虚空有两个强大的主动技能： 
+
+时间漫游 快捷键：W 
+迅速移动到一个地点，降低目标区域300范围内所有敌方单位的攻击速度和移动速度，持续3秒。 
+
+时间结界 快捷键：C 
+虚空假面撕裂时空创造的结界，使其中不论敌我任何单位甚至是防御塔都处于静止。他自己却可以凭借和这个结界的神秘联系而行动自如。 
+
+Doggy的想法是：先用时间漫游瞬间移动到某个地点，然后扔一个时间结界（圆形）把英雄都控住，接下来就是…Triple- Triple- Triple Kill了。 
+
+现在给出每个英雄的坐标以及每个英雄的对我方的威胁值（可正可负，比如对面神装敌法的威胁值就是一个很大的正数，而死成鬼的火枪的威胁值就很小。我方英雄的威胁值基本都是负的，当然某些玩得巨差的除外），再给定时间漫游的最大距离、时间结界的施法距离（施法距离：结界的中心点和虚空的位置不得大于这个值）和时间结界的作用半径。Doggy想知道用一个时间结界最大能罩到多少威胁值的英雄。 
+
+
+</div><h2>Input</h2><div class=content>第一行3个整数Rw,Rc,R，分别为时间漫游的最大距离、时间结界的施法距离和时间结界的作用半径。（0<=Rw,Rc,R<=10000） 
+接下来10行每行三个整数描述一个英雄： 
+x y w表示坐标为（x,y）的英雄具有威胁值w（-10000<=x,y,w<=10000） 
+第一行始终描述虚空假面的信息。由于不会被自己的技能影响，虚空的威胁值总是为0。 
+</div><h2>Output</h2><div class=content>仅一行一个数，最大能罩到多少威胁值的英雄。 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10000 10000 1<br />
+100 100 0<br />
+-1 0 100<br />
+1 0 100<br />
+0 -1 100<br />
+0 1 100<br />
+999 1000 -100<br />
+1001 1000 -100<br />
+1000 999 -100<br />
+1000 1001 -100<br />
+1000 1000 100<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+400<br />
+<br />
+样例解释：<br />
+向(0,0)点扔一个时间结界可以控住前4个总和为400的英雄。<br />
+<br />
+注：我们认为整个过程中其他英雄的位置不会变，距离使用欧几里得距离。<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2181'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2181'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2181'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

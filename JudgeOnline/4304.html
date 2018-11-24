@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4304. -- 道路改建</title><center><h2>4304: 道路改建</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>203&nbsp;&nbsp;<span class=green>Solved: </span>55<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4304'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4304'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4304'>Discuss</a>]</center><h2>Description</h2><div class=content><div>人称不死将军的林登&bull;万，与他的兄弟林登&bull;图两人的足迹踏遍了地球的每一寸土地。他们曾将战火燃遍了世界。即使是lifei888这样的强悍人物也从来没有将他彻底击败。</div>
+<div>这一次，林登&bull;万在N个城市做好了暴动的策划。然而，在起事的前一天，将军得知计划已经泄漏，决定更改计划，集中力量掌握一部分城市。</div>
+<div>具体来说，有M条单向边连接着这N座城市。对于两座城市A,B，如果它们能够通过单向边直接或间接的互相到达，那么就林登&bull;万可以同时控制A,B两座城市而不至于分散力量，反之则会被lifei888各个击破。</div>
+<div>为了扩大成果，将军还组织了人手改建道路。这些人可以在起事前将其中一条有向边改变成双向边（注意只能改建其中一条单向边，另外M-1条单向边保持不变）,现在，将军想要知道他通过改建其中一条单向边最多能控制几座城市，以及被改建的这一条单向边有多少种选择方案。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行为两个正整数N,M。</div>
+<div>接下来M行每行两个范围在1~N内的正整数x,y，表示有一条从x到y的单向边。</div>
+<div>输入保证任意两点的任意方向最多只有一条边直接相连。</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出共三行。</div>
+<div>第一行一个正整数，将军最多能控制的城市数量。</div>
+<div>第二行一个正整数L，表示有L种改建方案使得将军能控制最多的城市。</div>
+<div>第三行L个按递增顺序给出的正整数ki，表示改建输入中的第ki条有向边能使将军能控制最多的城市。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4<br />
+1 2<br />
+2 3<br />
+1 3<br />
+4 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+3<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;<br />
+mso-hansi-font-family:&quot;Times New Roman&quot;">对于</span><span lang="EN-US">100%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:<br />
+&quot;Times New Roman&quot;">的数据，</span><span lang="EN-US">N&lt;=<st1:chmetcnv unitname="m" sourcevalue="2000" hasspace="True" negative="False" numbertype="1" tcsc="0" w:st="on">2000 M</st1:chmetcnv>&lt;=N*N</span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4304'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4304'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4304'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

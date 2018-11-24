@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1612. -- [Usaco2008 Jan]Cow Contest奶牛的比赛</title><center><h2>1612: [Usaco2008 Jan]Cow Contest奶牛的比赛</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>1313&nbsp;&nbsp;<span class=green>Solved: </span>891<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1612'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1612'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1612'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">FJ的N(1 &lt;= N &lt;= 100)头奶牛们最近参加了场程序设计竞赛:)。在赛场上，奶牛们按1..N依次编号。每头奶牛的编程能力不尽相同，并且没有哪两头奶牛的水平不相上下，也就是说，奶牛们的编程能力有明确的排名。 整个比赛被分成了若干轮，每一轮是两头指定编号的奶牛的对决。如果编号为A的奶牛的编程能力强于编号为B的奶牛(1 &lt;= A &lt;= N; 1 &lt;= B &lt;= N; A != B) ，那么她们的对决中，编号为A的奶牛总是能胜出。 FJ想知道奶牛们编程能力的具体排名，于是他找来了奶牛们所有 M(1 &lt;= M &lt;= 4,500)轮比赛的结果，希望你能根据这些信息，推断出尽可能多的奶牛的编程能力排名。比赛结果保证不会自相矛盾。 </span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">* 第1行: 2个用空格隔开的整数：N 和 M </span></p>
+<p><span style="font-size: medium">* 第2..M+1行: 每行为2个用空格隔开的整数A、B，描述了参加某一轮比赛的奶 牛的编号，以及结果（编号为A，即为每行的第一个数的奶牛为 胜者） </span></p></div><h2>Output</h2><div class=content><p><font size="4">* 第1行: 输出1个整数，表示排名可以确定的奶牛的数目 </font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5<br />
+4 3<br />
+4 2<br />
+3 2<br />
+1 2<br />
+2 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+输出说明:<br />
+<br />
+    编号为2的奶牛输给了编号为1、3、4的奶牛，也就是说她的水平比这3头奶<br />
+牛都差。而编号为5的奶牛又输在了她的手下，也就是说，她的水平比编号为5的<br />
+奶牛强一些。于是，编号为2的奶牛的排名必然为第4，编号为5的奶牛的水平必<br />
+然最差。其他3头奶牛的排名仍无法确定。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1612'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1612'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1612'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

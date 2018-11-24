@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1139. -- [POI2009]Wie</title><center><h2>1139: [POI2009]Wie</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>155&nbsp;&nbsp;<span class=green>Solved: </span>87<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1139'>Discuss</a>]</center><h2>Description</h2><div class=content><p></p>
+<div>Byteasar has become a hexer - a conqueror of monsters. Currently he is to return to his hometown Byt</div>
+<div>eburg. The way home, alas, leads through a land full of beasts. Fortunately the habitants, forced to</div>
+<div>fight the monsters for centuries, have mastered the art of blacksmithery - they are now capable ofma</div>
+<div>king special swords that are very efficient against the beasts. The land Byteasar wanders throughis&nbsp;</div>
+<div>quite vast: many towns lie there, and many roads connect them. These roads do not cross outside the&nbsp;</div>
+<div>towns (mostly because some of them are underground passages).Byteasar has gathered all practicalinfo</div>
+<div>rmation about the land (all hexers like to know these things). He knows what kind of monsters hemay&nbsp;</div>
+<div>come across each of the roads and how much time he needs to walk it down. He also knows in which vil</div>
+<div>lages there are blacksmiths and against what kinds of monsters the swords that they make work.Byteas</div>
+<div>ar wants to get back to Byteburg as soon as possible. As a hexer he is quite ashamed that he does no</div>
+<div>t know the best route, and that he has no sword on him at the moment. Help him find the shortest pat</div>
+<div>h to Byteburg such that whenever he could meet some king of monster, previously he would havea chanc</div>
+<div>e to get an appropriate sword to fight the beast. You need not worry about the number or weight of t</div>
+<div>he swords - every hexer is as strong as an ox, so he can carry (virtually) unlimited number of equip</div>
+<div>ment, swords in particular.</div>
+<div>大陆上有n个村庄，m条双向道路，p种怪物，k个铁匠，每个铁匠会居住在一个村庄里，你到了那个村庄后可以让他</div>
+<div>给你打造剑，每个铁匠打造的剑都可以对付一些特定种类的怪物，每条道路上都可能出现一些特定种类的怪物，每</div>
+<div>条道路都有一个通过所需要的时间，现在要从1走到n，初始的时候你没有剑，要求在经过一条道路的时候，对于任</div>
+<div>意一种可能出现在这条道路上的的怪物，你都有已经有至少一把剑可以对付他，求从1走到n的最短时间（打造剑不</div>
+<div>需要时间）</div></div><h2>Input</h2><div class=content><div>
+<div>第一行正整数 n m p k (1 &le; n &le; 200, 0 &le; m &le; 3 000, 1 &le; p &le; 13, 0 &le; k &le; n). 分别表示点数，边数</div>
+<div>，剑/怪物的型号数，铁匠数。&nbsp;</div>
+<div>接下来k行描述铁匠，格式如下： 所在点编号w，所能锻造的剑种类数q，升序给出q个1到p的不同的整数表示型号</div>
+<div>。 接下来m行描述边： 连接的顶点 x y，通过需要的时间t，路上的怪物数s，s个单调上升的1到p整数表示怪物型</div>
+<div>号。</div>
+</div></div><h2>Output</h2><div class=content><p>第一行输出最少时间。如果无法到达 输出-1</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 7 4 2<br />
+2 1 2<br />
+3 2 1 3<br />
+1 2 2 0<br />
+2 3 9 0<br />
+1 4 2 1 2<br />
+2 5 3 0<br />
+4 5 5 2 2 3<br />
+4 6 18 0<br />
+5 6 3 2 1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>24</span></div><h2>HINT</h2>
+			<div class=content><p><p><img alt="" border="0" src="images/1139.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1139'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1139'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1139'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

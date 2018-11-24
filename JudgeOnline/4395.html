@@ -1,0 +1,73 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4395. -- [Usaco2015 dec]Switching on the Lights</title><center><h2>4395: [Usaco2015 dec]Switching on the Lights</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>203&nbsp;&nbsp;<span class=green>Solved: </span>96<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4395'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4395'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4395'>Discuss</a>]</center><h2>Description</h2><div class=content><p>Farmer John has recently built an enormous barn consisting of an N&times;NN&times;N grid of rooms (2&le;N&le;100), numbered from (1,1)up to (N,N). Being somewhat afraid of the dark, Bessie the cow wants to turn on the lights in as many rooms as possible.<br />
+<br />
+Bessie starts in room (1,1), the only room that is initially lit. In some rooms, she will find light switches that she can use to toggle the lights in other rooms; for example there might be a switch in room (1,1) that toggles the lights in room (1,2)(1,2). Bessie can only travel through lit rooms, and she can only move from a room (x,y)(x,y) to its four adjacent neighbors (x&minus;1,y), (x+1,y), (x,y&minus;1)(x,y&minus;1) and (x,y+1) (or possibly fewer neighbors if this room is on the boundary of the grid).<br />
+<br />
+Please determine the maximum number of rooms Bessie can illuminate.</p>
+<p></p>
+<p>有N*N个房间，组成了一张N*N的网格图，Bessie一开始位于左上角(1,1)，并且只能上下左右行走。</p>
+<p>一开始，只有(1,1)这个房间的灯是亮着的，Bessie只能在亮着灯的房间里活动。</p>
+<p>有另外M条信息，每条信息包含四个数a,b,c,d，表示房间(a,b)里有房间(c,d)的灯的开关。</p>
+<p>请计算出最多有多少个房间的灯可以被打开</p>
+<p></p></div><h2>Input</h2><div class=content><p>The first line of input contains integers NN and MM (1&le;M&le;20,000).<br />
+<br />
+The  next MM lines each describe a single light switch with four integers  xx, yy, aa, bb, that a switch in room (x,y) can be used to toggle the  lights in room (a,b). Multiple switches may exist in any room, and  multiple switches may toggle the lights of any room.</p></div><h2>Output</h2><div class=content><p>A single line giving the maximum number of rooms Bessie can illuminate.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 6<br />
+1 1 1 2<br />
+2 1 2 2<br />
+1 1 1 3<br />
+2 3 3 1<br />
+1 3 1 2<br />
+1 3 2 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5</span></div><h2>HINT</h2>
+			<div class=content><p><p>Here, Bessie can use the switch in (1,1) to turn on lights in (1,2) and (1,3). She can then walk to (1,3) and turn on the lights in (2,1), from which she can turn on the lights in (2,2). The switch in (2,3) is inaccessible to her, being in an unlit room. She can therefore illuminate at most 5 rooms.</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Silver鸣谢Claris提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4395'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4395'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4395'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

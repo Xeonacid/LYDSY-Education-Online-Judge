@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3638. -- Cf172 k-Maximum Subsequence Sum</title><center><h2>3638: Cf172 k-Maximum Subsequence Sum</h2><span class=green>Time Limit: </span>50 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>315&nbsp;&nbsp;<span class=green>Solved: </span>170<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3638'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3638'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3638'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">给一列数，要求支持操作： 1.修改某个数的值 2.读入l,r,k，询问在[l,r]内选不相交的不超过k个子段，最大的和是多少。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">The first line contains integer <span class="tex-span"><i>n</i></span> <span class="tex-span">(1&thinsp;&le;&thinsp;<i>n</i>&thinsp;&le;&thinsp;10<sup class="upper-index">5</sup>)</span>, showing how many numbers the sequence has. The next line contains <span class="tex-span"><i>n</i></span> integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>,&thinsp;<i>a</i><sub class="lower-index">2</sub>,&thinsp;...,&thinsp;<i>a</i><sub class="lower-index"><i>n</i></sub></span> <span class="tex-span">(|<i>a</i><sub class="lower-index"><i>i</i></sub>|&thinsp;&le;&thinsp;500)</span>. </span></p>
+<p><span style="font-size: medium">The third line contains integer <span class="tex-span"><i>m</i></span> <span class="tex-span">(1&thinsp;&le;&thinsp;<i>m</i>&thinsp;&le;&thinsp;10<sup class="upper-index">5</sup>)</span> &mdash; the number of queries. The next <span class="tex-span"><i>m</i></span> lines contain the queries in the format, given in the statement.</span></p>
+<p><span style="font-size: medium">All changing queries fit into limits: <span class="tex-span">1&thinsp;&le;&thinsp;<i>i</i>&thinsp;&le;&thinsp;<i>n</i></span>, <span class="tex-span">|<i>val</i>|&thinsp;&le;&thinsp;500</span>.</span></p>
+<p><span style="font-size: medium">All queries to count the maximum sum of at most <span class="tex-span"><i>k</i></span> non-intersecting subsegments fit into limits: <span class="tex-span">1&thinsp;&le;&thinsp;<i>l</i>&thinsp;&le;&thinsp;<i>r</i>&thinsp;&le;&thinsp;<i>n</i></span>, <span class="tex-span">1&thinsp;&le;&thinsp;<i>k</i>&thinsp;&le;&thinsp;20</span>. It is guaranteed that the number of the queries to count the maximum sum of at most <span class="tex-span"><i>k</i></span> non-intersecting subsegments doesn't exceed <span class="tex-span">10000</span>.</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each query to count the maximum sum of at most <span class="tex-span"><i>k</i></span> non-intersecting subsegments print the reply &mdash; the maximum sum. Print the answers to the queries in the order, in which the queries follow in the input.</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9<br />
+9 -8 9 -1 -1 -1 9 -8 9<br />
+3<br />
+1 1 9 1<br />
+1 1 9 2<br />
+1 4 6 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>17<br />
+25<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">In the first query of the first example you can select a single pair <span class="tex-span">(1,&thinsp;9)</span>. So the described sum will be 17.</span></p><br />
+<p><span style="font-size: medium">Look at the second query of the first example. How to choose two subsegments? (1, 3) and (7, 9)? Definitely not, the sum we could get from (1, 3) and (7, 9) is 20, against the optimal configuration (1, 7) and (9, 9) with 25.</span></p><br />
+<p><span style="font-size: medium">The answer to the third query is 0, we prefer select nothing if all of the numbers in the given interval are negative.</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;xiaodao'>By xiaodao</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3638'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3638'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3638'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

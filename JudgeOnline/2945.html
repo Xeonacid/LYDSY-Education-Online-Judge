@@ -1,0 +1,94 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2945. -- [Poi2000]气垫船</title><center><h2>2945: [Poi2000]气垫船</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>59&nbsp;&nbsp;<span class=green>Solved: </span>29<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2945'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2945'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2945'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">在一个气垫船厂用不同高度方块建造了一个测试轨道。一条完美的轨道，被称做<b>lollobrigida</b>，是相邻两个方块的高度不同且连续的三个方块的高度既不是递减也不是递增的轨道。</span></div>
+<div><span style="font-size: medium">用更形式的表达，设<i>h<sub>1</sub>,...,h<sub>n</sub></i>是建造轨道的方块的高度。如果任意1 &lt;= <i>i</i> &lt;= <i>n</i>-2都有满足下面条件：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium"><i>h<sub>i</sub></i> &lt; <i>h<sub>i+1</sub></i> and <i>h<sub>i+1</sub></i> &gt; <i>h<sub>i+2</sub></i> or </span></li>
+    <li><span style="font-size: medium"><i>h<sub>i</sub></i> &gt; <i>h<sub>i+1</sub></i> and <i>h<sub>i+1</sub></i> &lt; <i>h<sub>i+2</sub></i>, </span></li>
+</ul>
+<div><span style="font-size: medium">这样我们便称一条轨道为<b>lollobrigida</b>。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>例子</b></span></div>
+<div><span style="font-size: medium">我们不可能用下面一组高度的方块来建造lollobrigida：3, 3, 3, 5, 2，因为两个高度为3的方块会相邻或者会出现下列情况：(2,3,5)或者(5,3,2)，这些都是不允许的。</span></div>
+<div><span style="font-size: medium">这儿有一个用另一组高度的方块建造的lollobrigida的例子(3, 2, 5, 2, 3, 1)。 我们也可以用这些方块建造其他不同的lollobrigidas。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">读入几组数据，对于每一组数据：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">读入方块的个数和每个方块的高度</span></li>
+    <li><span style="font-size: medium">检查是否能建造lollobrigida</span></li>
+</ul></div><h2>Input</h2><div class=content><div style="margin: auto 0cm"><span style="font-size: medium">第一行有一个正整数d，1 &lt;= <i>d</i> &lt;= 100，表示输入数据的组数。接下来的一行是第一组数据。</span></div>
+<div><span style="font-size: medium">在每组数据的第一行有一个正整数n，3 &lt;= <i>n</i> &lt;= 1000000，表示方块的个数。</span></div>
+<div><span style="font-size: medium">接下来的<i>n</i>行中每行有一个正整数<i>h</i> 表示一个方块的高度1 &lt;= <i>h</i> &lt;= 10<sup>9</sup>。</span></div>
+<div><span style="font-size: medium">接着是下一组数据。</span></div></div><h2>Output</h2><div class=content><div style="margin: auto 0cm">&nbsp;</div>
+<div><span style="font-size: medium">应该有<i>d</i>行，一个表示一组数据。每一行都有一个单词，第<i>i</i> 行的单词：</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">TAK (波兰语中是的意思)，如果第<i>i</i>组数据可以建造lollobrigida</span></li>
+    <li><span style="font-size: medium">NIE (波兰语中否的意思)，不可以建造</span></li>
+</ul></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+5<br />
+3<br />
+3<br />
+3<br />
+5<br />
+2<br />
+6<br />
+3<br />
+3<br />
+1<br />
+5<br />
+2<br />
+2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>NIE<br />
+TAK<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2945'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2945'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2945'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

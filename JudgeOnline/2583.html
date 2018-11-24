@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2583. -- PKU3127 Lineland's Airport</title><center><h2>2583: PKU3127 Lineland's Airport</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2&nbsp;&nbsp;<span class=green>Solved: </span>0<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2583'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2583'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2583'>Discuss</a>]</center><h2>Description</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">Lineland is a strange country. As the name suggests, it's shape (as seen from above) is just a straight line, rather than some two-dimensional shape. The landscape along this line is very mountainous, something which occasionally leads to some problems. One such problem now occurs: in this modern era the king wants to build an airport to stimulate the country's economy. Unfortunately, it's impossible for airplanes to land on steep airstrips, so a horizontal piece of land is needed. To accommodate for the larger airplanes, this strip needs to have length at least L. <br />
+<br />
+Over the years, the inhabitants of Lineland have become very proficient in flattening pieces of land. Given a piece a land, they can remove rock quickly. They don't want to add rock for that may lead to an unstable landing strip. To minimize the amount of effort, however, they want to remove the least amount of rock necessary to reach their goal: a flat piece of land of length L. What is this minimum amount? Because of the low-dimensional nature of Lineland, the amount of rock that needs to be removed is measured as the total area of land above the place where the landing strip is placed, rather than the volume (so in the Figure below, the amount of land removed is given by the lightly shaded area). <br />
+</span>
+<div align="center"><span style="font-size: medium"><img src="http://poj.org/images/3127_1.jpg" alt="" /></span></div>
+<span style="font-size: medium"><br />
+</span></div>
+<p></p></div><h2>Input</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">One line with a positive number: the number of test cases (at most 25). Then for each test case: </span>
+<ul>
+    <li><span style="font-size: medium">One line with an integer N, 2 &le; N &le; 500, the number of points, and an integer L, 1 &le; L &le; 10 000, the necessary length to flatten. </span></li>
+    <li><span style="font-size: medium">lines with two integers xi and yi with 0 &le; xi, yi &le; 10 000 describing the landscape of Lineland. The xi are in (strictly) ascending order. At position xi the height of the landscape is yi. Between two xi the landscape has constant slope. (So the landscape is piecewise linear). The difference between xN and x1 is greater than or equal to L.</span></li>
+</ul>
+</div></div><h2>Output</h2><div class=content><div class="ptx" lang="en-US"><span style="font-size: medium">For each test case, output one line with the minimum amount of rock which must be removed in order to build the airport. The answer should be given as a floating point number with an absolute error of at most 10<sup>&minus;3</sup>.</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+3 5<br />
+0 2<br />
+4 2<br />
+14 0<br />
+4 3<br />
+0 2<br />
+2 0<br />
+4 0<br />
+5 3<br />
+3 10<br />
+10 2<br />
+30 2<br />
+35 7<br />
+2 777<br />
+222 333<br />
+4444 5555<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+0.9000<br />
+0.3750<br />
+0.0000<br />
+373362.4867<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2583'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2583'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2583'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3029. -- 守卫者的挑战</title><center><h2>3029: 守卫者的挑战</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>498&nbsp;&nbsp;<span class=green>Solved: </span>262<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3029'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3029'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3029'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　　打开了黑魔法师Vani的大门，队员们在迷宫般的路上漫无目的地搜寻着关押applepi的监狱的所在地。突然，眼前一道亮光闪过。&ldquo;我，Nizem，是黑魔法圣殿的守卫者。如果你能通过我的挑战，那么你可以带走黑魔法圣殿的地图&hellip;&hellip;&rdquo;瞬间，队员们被传送到了一个擂台上，最初身边有一个容量为K的包包。<br />
+　　擂台赛一共有N项挑战，各项挑战依次进行。第i项挑战有一个属性ai，如果ai&gt;=0，表示这次挑战成功后可以再获得一个容量为ai的包包；如果ai=-1，则表示这次挑战成功后可以得到一个大小为1 的地图残片。地图残片必须装在包包里才能带出擂台，包包没有必要全部装满，但是队员们必须把 【获得的所有的】地图残片都带走（没有得到的不用考虑，只需要完成所有N项挑战后背包容量足够容纳地图残片即可），才能拼出完整的地图。并且他们至少要挑战成功L次才能离开擂台。<br />
+　　队员们一筹莫展之时，善良的守卫者Nizem帮忙预估出了每项挑战成功的概率，其中第i项挑战成功的概率为pi%。现在，请你帮忙预测一下，队员们能够带上他们获得的地图残片离开擂台的概率。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">　　第一行三个整数N,L,K。<br />
+　　第二行N个实数，第i个实数pi表示第i项挑战成功的百分比。<br />
+　　第三行N个整数，第i个整数ai表示第i项挑战的属性值.</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">　　一个整数，表示所求概率，四舍五入保留6 位小数。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例输入1<br />
+3 1 0<br />
+10 20 30<br />
+-1 -1 2<br />
+<br />
+样例输入2<br />
+5 1 2<br />
+36 44 13 83 63<br />
+-1 2 -1 2 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出1<br />
+0.300000<br />
+<br />
+样例输出2<br />
+0.980387<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>　　若第三项挑战成功，如果前两场中某场胜利，队员们就有空间来容纳得到的地图残片，如果挑战失败，根本就没有获得地图残片，不用考虑是否能装下；若第三项挑战失败，如果前两场有胜利，没有包来装地图残片，如果前两场都失败，不满足至少挑战成功次（）的要求。因此所求概率就是第三场挑战获胜的概率。</p><br />
+<p>　　对于 100% 的数据，保证0&lt;=K&lt;=2000，0&lt;=N&lt;=200，-1&lt;=ai&lt;=1000，0&lt;=L&lt;=N，0&lt;=pi&lt;=100。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Poetize1'>Poetize1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3029'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3029'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3029'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

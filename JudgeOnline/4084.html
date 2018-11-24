@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4084. -- [Sdoi2015]双旋转字符串</title><center><h2>4084: [Sdoi2015]双旋转字符串</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>573&nbsp;&nbsp;<span class=green>Solved: </span>248<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4084'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4084'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4084'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>给定两个字符串集合 S 和 T 。其中 S 中的所有字符串长度都恰好为 N ，而 T 中所有字符串长度都恰好为 M 。</div>
+<div>且 N+M 恰好为偶数。如果记 S 中字符串全体为 S1，S2，...，STotalS ,而 T 中字符串全体为 T1，T2，...，TT</div>
+<div>otalT 。现在希望知道有多少对 &lt;i,j&gt; ，满足将 Si 和 Tj 拼接后得到的字符串 Si+Tj 满足双旋转性。一个长度</div>
+<div>为偶数字符串 W 可以表示成两段长度相同的字符串的拼接，即 W=U+V。如果 V 可以通过 U 旋转得到，则称 W 是</div>
+<div>满足双旋转性的。比如说字符串 U=&ldquo;vijos&rdquo;可以通过旋转得到&ldquo;ijosv&rdquo;，&ldquo;josvi&rdquo;，&ldquo;osvij&rdquo; 或&ldquo;svijo&rdquo;</div>
+<div>。那么&ldquo;vijosjosvi&rdquo;就是满足双旋转性的字符串。</div>
+</div>
+<div></div>
+<p></p>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行输入四个正整数，分别为 TotalS，TotalT，N 和 M，依次表示集合 S 的大小，集合 T 的大小，集合 S 中字符串的长度和集合 T 中字符串的长度。</div>
+<div>之后 TotalS 行，依次给出 S 中所有的字符串 Si，1&le;i&le;TotalS。保证每一个字符串长度都恰为 N ，且字符串只由 26 个小写字母组成。</div>
+<div>之后 TotalT 行，依次给出 T 中所有的字符串 Ti，1&le;i&le;TotalT。保证每一个字符串长度都恰为 M ，且字符串只由 26 个小写字母组成。</div>
+<div>2&le;N*TotalS+M*TotalT&le;4&times;10^6，N&gt;=M</div>
+</div>
+<div style="font-size: 11.8181819915771px;"></div>
+<p></p></div><h2>Output</h2><div class=content><p>输出一个整数，表示满足要求的数字对 &lt;i,j&gt; 有多少个。</p>
+<div style="font-size: 11.8181819915771px;"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 4 7 3 <br />
+vijosvi <br />
+josvivi <br />
+vijosos <br />
+ijosvsv <br />
+jos <br />
+vij <br />
+ijo <br />
+jos</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4084'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4084'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4084'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

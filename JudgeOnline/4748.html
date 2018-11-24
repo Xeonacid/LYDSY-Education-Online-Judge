@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4748. -- [Usaco2016 Dec]Cities and States</title><center><h2>4748: [Usaco2016 Dec]Cities and States</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>134&nbsp;&nbsp;<span class=green>Solved: </span>73<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4748'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4748'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4748'>Discuss</a>]</center><h2>Description</h2><div class=content><div>To keep his cows intellectually stimulated, Farmer John has placed a large map of the USA on the wal</div>
+<div>l of his barn. Since the cows spend many hours in the barn staring at this map, they start to notice</div>
+<div>&nbsp;several curious patterns. For example, the cities of Flint, MI and Miami, FL share a very special r</div>
+<div>elationship: the first two letters of &quot;Flint&quot; give the state code (&quot;FL&quot;) for Miami, and the first tw</div>
+<div>o letters of &quot;Miami&quot; give the state code (&quot;MI&quot;) for Flint.Let us say that two cities are a &quot;special&nbsp;</div>
+<div>pair&quot; if they satisfy this property and come from different states. The cows are wondering how many&nbsp;</div>
+<div>special pairs of cities exist. Please help them solve this amusing geographical puzzle!</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N (1&le;N&le;200,000), the number of cities on the map.The next N lines</div>
+<div>&nbsp;each contain two strings: the name of a city (a string of at least 2 and at most 10 uppercase lette</div>
+<div>rs), and its two-letter state code (a string of 2 uppercase letters). Note that the state code may b</div>
+<div>e something like ZQ, which is not an actual USA state. Multiple cities with the same name can exist,</div>
+<div>&nbsp;but they will be in different states.</div>
+<div>
+<div>依次给出N（1&le;N&le;200,000）个城市名及其州的代码（州代码保证仅有两位）。我们说，两个城市是一个&ldquo;特殊对</div>
+<div>&rdquo;，如果他们来自不同的州且A城市的州代码是B城市的城市名首两位，B城市的州代码是A城市的城市名首两位。问</div>
+<div>：在给定的信息中有多少个&ldquo;特殊对&rdquo;？</div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Please output the number of special pairs of cities.</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+MIAMI FL<br />
+DALLAS TX<br />
+FLINT MI<br />
+CLEMSON SC<br />
+BOSTON MA<br />
+ORLANDO FL</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver%20%E9%B8%A3%E8%B0%A2winmt%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87'>Silver 鸣谢winmt提供译文</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4748'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4748'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4748'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

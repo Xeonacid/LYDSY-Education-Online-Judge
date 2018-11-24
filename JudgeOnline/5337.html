@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5337. -- [TJOI2018]str</title><center><h2>5337: [TJOI2018]str</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>50&nbsp;&nbsp;<span class=green>Solved: </span>36<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5337'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5337'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5337'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小豆参加了生物实验室。在实验室里，他主要研究蛋臼质。他现在研究的蛋臼质是由k个氨基酸按一定顺序构成的</div>
+<div>。每一个氨基酸都可能有a种碱基序 &nbsp;列si_j 构成。现在小豆有一个碱基串s，小豆想知道在这个碱基上都多少中</div>
+<div>不同的组合方式可能得到这个蛋白质。即求由k段字符串有序合并成的字符串s1,有多少种不同方式能够匹配字符串</div>
+<div>s，其中k段字符串的选法不同，或者与s匹配上 &nbsp;的位置不同认为是不同的方式。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行一个数，表示这个蛋臼质由k个氨基酸。</div>
+<div>第二行一个字符串s，表示小豆现在有的碱基串。</div>
+<div>第三行开始接下来k行表示第i个氨基酸可能的碱基序列，对于第i个氨基酸，ai表示这个氨基酸可能的碱基序列种数，</div>
+<div>接下来ai个字符串表示这ai 种可能的碱基序列，用空格隔开。</div>
+<div>1 &le; k &le; 100, |s| &le; 10000,ai &le; 10</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出一个数目标是不同的方案数</div>
+<div>(不同的方案数是指不同的子碱基串或者相同的碱基串不同的氨基酸排列方式)</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+ABC<br />
+2  A AB<br />
+2  C BC</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+提示<br />
+第一个选A第二个选C，得到AC能够与ABC产生0中匹配方式  <br />
+第一个选A第二个选BC，得到ABC能够与ABC产生1中匹配方式<br />
+第一个选AB第二个选C，得到ABC能够与ABC产生1中匹配方式<br />
+第一个选AB第二个选BC，得到ABBC能够与ABC产生0中匹配方式<br />
+所以一共2种</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5337'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5337'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5337'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

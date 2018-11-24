@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4699. -- 树上的最短路</title><center><h2>4699: 树上的最短路</h2><span class=green>Time Limit: </span>40 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>188&nbsp;&nbsp;<span class=green>Solved: </span>56<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4699'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4699'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4699'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>下水道的主干路由n个节点和n-l条边组成，每条边有一个通过它所需的时间Ti。换言之，这是一棵n个节点的带权</div>
+<div>树。现在，要用最快的速度赶往目标节点k。下水道有一些塌陷，这导致主干路的某一段路径可以通过该塌陷到另</div>
+<div>一条路径。对于一个塌陷，我们用(L1，ri，L2，R2，c)来描述，即对于主干路上L1到R1路径上的任意节点x，L2到</div>
+<div>r2路径上的任意节点y，都可以在c的时间内从x走到y。因为不知道自己所在的到底是哪个节点，所以要求出每个节</div>
+<div>点到目标节点K的最短距离。注意边是单向的</div>
+<div></div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div style="font-size: 11.8181819915771px;">第一行两个数n，m，k，表示节点数、塌陷数和目标节点编号，空格分隔。</div>
+<div style="font-size: 11.8181819915771px;">接下来n-l行，每行3个数x,y,t，表示主干路的一条边连接点x,y，通过的时间为t。</div>
+<div style="font-size: 11.8181819915771px;">接下来m行，每行5个数L1，r1，L2，r2，c，表示一个塌陷。</div>
+<div style="font-size: 11.8181819915771px;">N&lt;=250000 &nbsp;</div>
+<div style="font-size: 11.8181819915771px;">m&lt;=100000</div>
+<div style="font-size: 11.8181819915771px;">1 &lt; = L1,L2, R1, R2,x,y &lt; = N</div>
+<div style="font-size: 11.8181819915771px;">1&lt; = t,c&lt; = 2^31-1。</div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>n行，每行一个数，表示第i个节点到第k个节点的最短路径长度。</div>
+<div>特别的，在第k行你应当输出0。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3 5<br />
+1 2 100<br />
+2 3 100<br />
+3 4 100<br />
+4 5 100<br />
+1 2 4 5 200<br />
+2 2 4 4 90<br />
+3 3 2 2 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>200<br />
+190<br />
+195<br />
+100<br />
+0</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4699'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4699'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4699'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

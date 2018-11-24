@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2362. -- 二叉树计数</title><center><h2>2362: 二叉树计数</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>115&nbsp;&nbsp;<span class=green>Solved: </span>19<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2362'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2362'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2362'>Discuss</a>]</center><h2>Description</h2><div class=content><div align="center"><b>&nbsp;</b></div>
+<div style="text-indent: 20.25pt" align="left">在那个植树节，晚上，小L，小H，小X讨论起了一个关于树的问题：</div>
+<div style="text-indent: 20.25pt" align="left">有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">但是他们发现，答案随<i>N</i>增长的速度太快了，他们想不出什么好方法，便求助于你。</div>
+<div style="text-indent: 20.25pt" align="left">由于答案可能会很大，你只需要输出答案mod 10<i><sup>K</sup></i>后的结果即可。</div></div><h2>Input</h2><div class=content><div align="left">包含两个正整数<i>N</i>，<i>K</i>。表示询问有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">&nbsp;</div>
+<div align="left"></div></div><h2>Output</h2><div class=content><div align="left">包含一个非负整数，为答案mod 10<i><sup>K</sup></i>后的结果。</div>
+<div align="left">&nbsp;</div>
+<div style="text-indent: 20.25pt" align="left"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 10<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，有N&le;200000，K&le;64；<br /><br />
+&nbsp;<br /><br />
+【提示】<br /><br />
+关于二叉树：<br /><br />
+二叉树的递归定义：二叉树要么为空，要么由根结点，左子树，右子树组成。左子树和右子树分别是一棵二叉树。<br /><br />
+请注意，有根树和二叉树的三个主要差别：<br /><br />
+1. 树的结点个数至少为1，而二叉树的结点个数可以为0；<br /><br />
+2. 树中结点的最大度数没有限制，而二叉树结点的最大度数为2；<br /><br />
+3. 树的结点无左、右之分，而二叉树的结点有左、右之分。<br /><br />
+关于最长链：<br /><br />
+最长链为这棵二叉树中一条最长的简单路径，即不经过重复结点的一条路径。可以容易证明，二叉树中最长链的起始、结束结点均为叶子结点。<br /><br />
+&nbsp;</p><br />
+<p><br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2362'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2362'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2362'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

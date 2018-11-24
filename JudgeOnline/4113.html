@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4113. -- [Wf2015]Qanat</title><center><h2>4113: [Wf2015]Qanat</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>28&nbsp;&nbsp;<span class=green>Solved: </span>24<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4113'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4113'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4113'>Discuss</a>]</center><h2>Description</h2><div class=content><p>有一座三角形的山，三个顶点分别为(0,0),(w,0),(w,h) (w &gt; h)，我们需要挖管道，使得(0,0)-&gt;(w,0)这条水平线与(w,h)-&gt;(w,0)这条垂直线被挖通，挖的土需要通过所挖的管道运送出来。为了方便这个过程我们可以多挖n个辅助管道，我们需要选择n个x轴上的坐标ai，挖通三角形斜边上对应点到(ai,0)这条垂直线，挖这些管道所产生的土也需要运送出来(运送到山的表面，即斜边上或是(0,0)处)，而这些管道也能用来运送土。现在假设管道的宽度可以忽略不记，求最优的坐标选择方案，使得将土运送出来的代价和最小。</p></div><h2>Input</h2><div class=content><p>第一行三个整数w,h(w&gt;h),n。表示山的水平宽与垂直高，以及辅助管道个数。</p></div><h2>Output</h2><div class=content><p>第一行一个实数表示最小代价和。接下来n行按x坐标从小到大输出选择的管道x坐标，n&gt;10则输出前10个即可。<br />
+答案保留9位小数。数据保证没有两个管道的x坐标差值小于0.001</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>输入1<br />
+8 4 1<br />
+<br />
+输入2<br />
+195 65 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>输出<br />
+31.500000000<br />
+3.000000000<br />
+<br />
+输出2<br />
+12220.000000000<br />
+48.000000000<br />
+108.000000000</span></div><h2>HINT</h2>
+			<div class=content><p><p>【数据范围】<br /><br />
+1 &lt;= w &lt;= 10000, 1 &lt;= n &lt;= 1000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2GyWXwshMy%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87%E5%8F%8A%E6%95%B0%E6%8D%AE'>鸣谢GyWXwshMy提供译文及数据</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4113'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4113'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4113'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

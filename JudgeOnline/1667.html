@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1667. -- [Usaco2006 Oct]Cows on Skates滑旱冰的奶牛</title><center><h2>1667: [Usaco2006 Oct]Cows on Skates滑旱冰的奶牛</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>682&nbsp;&nbsp;<span class=green>Solved: </span>181<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1667'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1667'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1667'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">经过跟Farmer John长达数年的谈判，奶牛们终于如愿以偿地得到了想要的旱冰鞋。农场上大部分的区域都很平整，适合在上面滑动，但有一些小块的土地上有很多的岩石，凭奶牛们的旱冰技术，是没有办法通过的。 农场可以看成一个被划分成R(1&lt;=R&lt;=113)行C(1&lt;=C&lt;=77)列的矩阵。快要开饭了，贝茜发现自己在坐标为(1,1)的格子里，并且她想赶到坐标为(R,C)的牛棚去享用她的晚饭。贝茜知道，以她所在的格子为起点，每次向上、下、左、右滑动（但不能沿对角线滑动），一定能找到一条通往牛棚的、不经过任何有大量岩石的格子的路。请你为她指出任意一条通往牛棚的路径。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">* 第1行: 两个用空格隔开的整数，R和C * 第2..R+1行: 每行包含C个字符（不含空格），字符只可能是'.'或'*'。是'.' 的话，表示贝茜能从这个格子里通过，是'*'的话，则这个格子 是不能通过的多岩石地带 </span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">* 第1..?行: 每行包含2个用空格隔开的整数，表示贝茜回牛棚路径所通过的格 子的坐标。输出的第一行显然应该是1 1，最后一行是R C。输出中 的其余行，依次给出路径中格子的坐标，相邻的两个坐标所表示的 格子必须相邻。 </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 8<br />
+..*...**<br />
+*.*.*.**<br />
+*...*...<br />
+*.*.*.*.<br />
+....*.*.<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 1<br />
+1 2<br />
+2 2<br />
+3 2<br />
+3 3<br />
+3 4<br />
+2 4<br />
+1 4<br />
+1 5<br />
+1 6<br />
+2 6<br />
+3 6<br />
+3 7<br />
+3 8<br />
+4 8<br />
+5 8</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1667'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1667'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1667'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

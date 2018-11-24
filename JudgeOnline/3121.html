@@ -1,0 +1,83 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3121. -- Maze</title><center><h2>3121: Maze</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>5&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3121'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3121'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3121'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Wayne喜欢玩游戏，并且时常在游戏中思考怎么玩儿才能使花的时间最少。<br />
+某天Wayne在玩儿一个最新的游戏，这个游戏类似于走迷宫：游戏设置在一个二维坐标系中，有一个简单多边形，每条边都平行于某一条坐标轴，且顶点坐标都是整数。游戏中有很多轮，每一轮都会给出位于多边形内的起点S和终点T，Wayne每次从S点出发，每一步可以选择上下左右四个方向之一，前进任意距离，但不能走出多边形。<br />
+因为游戏时间与距离是成正比的，于是Wayne就想知道，每一轮所需要走的最短距离。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">第一行一个正整数N，表示多边形的点数。<br />
+接下来N行按顺时针或逆时针描述这个多边形，每行两个整数X,Y，表示多边形上点的坐标。<br />
+接下来一行一个正整数M，表示游戏的轮数。<br />
+接下来M行每行四个整数表示起点和终点的坐标，即Xs,Ys,Xt,Yt。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">对于每一轮游戏单独输出一行一个非负整数表示所需走的最短距离。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8<br />
+0 0<br />
+0 2<br />
+3 2<br />
+3 0<br />
+2 0<br />
+2 1<br />
+1 1<br />
+1 0<br />
+2<br />
+0 2 3 0<br />
+0 0 2 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>【数据规模和约定】<br /><br />
+对于5%的数据，满足N = 4。<br /><br />
+另外有20%的数据，满足N &lt;= 300，M &lt;= 50。<br /><br />
+另外有10%的数据，满足N &lt;= 5 * 10^3，M &lt;= 10^5。<br /><br />
+另外有25%的数据，满足N &lt;= 10^5，M &lt;= 300。<br /><br />
+对于100%的数据，满足4 &lt;= N &lt;= 10^5，1 &lt;= M &lt;= 10^5，0 &lt;= X,Y &lt;= 10^8。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=zcwwzdjn%E6%8F%90%E4%BE%9B'>zcwwzdjn提供</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3121'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3121'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3121'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

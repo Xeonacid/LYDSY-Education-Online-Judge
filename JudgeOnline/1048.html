@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1048. -- [HAOI2007]分割矩阵</title><center><h2>1048: [HAOI2007]分割矩阵</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1167&nbsp;&nbsp;<span class=green>Solved: </span>851<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1048'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　将一个a*b的数字矩阵进行如下分割：将原矩阵沿某一条直线分割成两个矩阵，再将生成的两个矩阵继续如此<br />
+分割（当然也可以只分割其中的一个），这样分割了（n-1)次后，原矩阵被分割成了n个矩阵。（每次分割都只能<br />
+沿着数字间的缝隙进行）原矩阵中每一位置上有一个分值，一个矩阵的总分为其所含各位置上分值之和。现在需要<br />
+把矩阵按上述规则分割成n个矩阵，并使各矩阵总分的均方差最小。请编程对给出的矩阵及n，求出均方差的最小值<br />
+。</p></div><h2>Input</h2><div class=content><p>第一行为3个整数，表示a,b,n(1&lt;a,b&lt;=10,1&lt;n&lt;=10）的值。<br />
+第二行至第n+1行每行为b个小于100的非负整数，表示矩阵中相应位置上的分值。每行相邻两数之间用一个空<br />
+格分开。<br />
+</p></div><h2>Output</h2><div class=content><p>仅一个数，为均方差的最小值（四舍五入精确到小数点后2位）</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4 4<br />
+2 3 4 6<br />
+5 7 5 1<br />
+10 4 0 5<br />
+2 0 2 3<br />
+4 1 1 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.50</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1048'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1048'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1048'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

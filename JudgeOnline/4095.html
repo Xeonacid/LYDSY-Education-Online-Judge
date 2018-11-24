@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4095. -- [Usaco2013 Dec]The Bessie Shuffle</title><center><h2>4095: [Usaco2013 Dec]The Bessie Shuffle</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>28&nbsp;&nbsp;<span class=green>Solved: </span>16<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4095'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4095'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4095'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Bessie有了一套新的做牌技术，M张牌被Bessie洗牌后，第i张牌会跑到p[i]的位置。现有N张牌从1..N编号，称为卡组。Bessie从卡组取前M张进行一次洗牌，然后将最上面的牌面朝下放置到一边的牌堆，剩下的牌面朝下放回卡组。重复此过程直至卡组剩下M-1张牌。接着Bessie将这M-1张牌逐一面朝下放到牌堆中。接下来有Q个询问，问第x[Q]张牌的编号。</div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>
+<div>第1行N, M, Q (2&lt;=M &lt;= N, 1&lt;=Q &lt;= 5,000)</div>
+<div>接下来M行，每行一个p[i]</div>
+<div>接下来Q行，每行是一个x[i]， 表示一个询问</div>
+</div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每一个询问的编号</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 3 5<br />
+3<br />
+1<br />
+2<br />
+1<br />
+2<br />
+3<br />
+4<br />
+5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+5<br />
+3<br />
+1<br />
+2<br />
+<br />
+OUTPUT DETAILS:<br />
+The shuffle proceeds as:<br />
+[1, 2, 3, 4, 5] -> [2, 3, 1, 4, 5] (put 2 face down)<br />
+[3, 1, 4, 5] -> [1, 4, 3, 5] (put 1 face down)<br />
+[4, 3, 5] -> [3, 5, 4] (put 3 face down)<br />
+[5, 4] (put 5 face down)<br />
+[4] (put 4 face down)<br />
+This produces the final order of [4, 5, 3, 1, 2]<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;100% 数据，N &lt;= 1,000,000,000, M&lt;=100,000</p><br />
+<div></div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4095'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4095'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4095'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

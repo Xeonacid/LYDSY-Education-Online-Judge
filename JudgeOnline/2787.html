@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2787. -- Spoj 11482. Count on a trie</title><center><h2>2787: Spoj 11482. Count on a trie</h2><span class=green>Time Limit: </span>6 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>84&nbsp;&nbsp;<span class=green>Solved: </span>24<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2787'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2787'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2787'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Maintain two sets of strings S and T.Initially,each set contains an empty string with id 1.<br />
+Your program are to perform the following four operations:</span></p>
+<p><span style="font-size: medium">1.Add a char c to the end of an existed string Si in S,then insert the new string into S.Since there has been n strings in S already,the new string will hold the id n+1.<br />
+2.Add a char c to the beginning or to the end of an existed string Ti in T,then insert the new string into T.<br />
+3.Choose two existed strings Ti and Tj from T,next combine them into a new one TiTj,then insert the new string into T.<br />
+4.Print the time that an existed string Ti in T appears in an string Si in S.Your program should print 0 if Ti is an empty string.&nbsp;</span></p>
+<p><span style="font-size: medium">维护两个字符串集合S,T，一开始S和T都只有一个空串,编号都为1,要求支持操作:<br />
+1.在S的某一个串Si后添加一个字符c，加入S<br />
+2.在T的某一个串Ti的前面或后面添加一个字符c，加入T<br />
+3.将T的两个串Ti,Tj首尾相接形成一个新串TiTj，加入T<br />
+4.询问T中的某个串Ti在S中某个串Si中的出现次数.（如果Ti是空串，输出0）<br />
+</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">In the first line,there is an integer Q,which means the number of operations to perform.<br />
+In the next Q lines,the i-th line describes the i-th operation containing some integers.Such a line may look like this:<br />
+1 Si c<br />
+2 0 Ti c =&gt;add c to the beginning of Ti<br />
+2 1 Ti c =&gt;add c to the end of Ti<br />
+3 Ti Tj<br />
+4 Ti Si</span></p>
+<p><span style="font-size: medium">Q&lt;=300000,'a'&lt;=c&lt;='z'<br />
+The number of the first operation will not exceed 100000.&nbsp;<br />
+The number of the third operation will not exceed 30000.<br />
+The number of fourth operation will not exceed 100000.&nbsp;&nbsp;&nbsp;</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">For each &quot;4 Ti Si&quot; operation,print its result;</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>18<br />
+1 1 a<br />
+1 2 a<br />
+1 3 b<br />
+1 2 b<br />
+1 5 a<br />
+1 5 b<br />
+2 1 1 a<br />
+3 2 2<br />
+2 0 3 b<br />
+2 1 2 b<br />
+3 2 5<br />
+3 5 2<br />
+4 7 6<br />
+4 5 6<br />
+4 3 4<br />
+4 2 4<br />
+4 2 7<br />
+4 2 6<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+1<br />
+2<br />
+1<br />
+2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2787'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2787'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2787'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

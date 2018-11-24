@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4455. -- [Zjoi2016]小星星</title><center><h2>4455: [Zjoi2016]小星星</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>768&nbsp;&nbsp;<span class=green>Solved: </span>457<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4455'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4455'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4455'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>小Y是一个心灵手巧的女孩子，她喜欢手工制作一些小饰品。她有n颗小星星，用m条彩色的细线串了起来，每条细</div>
+<div>线连着两颗小星星。有一天她发现，她的饰品被破坏了，很多细线都被拆掉了。这个饰品只剩下了n?1条细线，但</div>
+<div>通过这些细线，这颗小星星还是被串在一起，也就是这些小星星通过这些细线形成了树。小Y找到了这个饰品的设</div>
+<div>计图纸，她想知道现在饰品中的小星星对应着原来图纸上的哪些小星星。如果现在饰品中两颗小星星有细线相连，</div>
+<div>那么要求对应的小星星原来的图纸上也有细线相连。小Y想知道有多少种可能的对应方式。只有你告诉了她正确的</div>
+<div>答案，她才会把小饰品做为礼物送给你呢。</div>
+</div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>
+<div>第一行包含个2正整数n,m，表示原来的饰品中小星星的个数和细线的条数。</div>
+<div>接下来m行，每行包含2个正整数u,v，表示原来的饰品中小星星u和v通过细线连了起来。</div>
+<div>这里的小星星从1开始标号。保证u&ne;v，且每对小星星之间最多只有一条细线相连。</div>
+<div>接下来n-1行，每行包含个2正整数u,v，表示现在的饰品中小星星u和v通过细线连了起来。</div>
+<div>保证这些小星星通过细线可以串在一起。</div>
+<div>n&lt;=17,m&lt;=n*(n-1)/2</div>
+</div>
+</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>输出共1行，包含一个整数表示可能的对应方式的数量。</div>
+<div>如果不存在可行的对应方式则输出0。</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+1 2<br />
+1 3<br />
+1 4<br />
+4 1<br />
+4 2<br />
+4 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6</span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;题解:<a href="upload/201603/4455.txt">JudgeOnline/upload/201603/4455.tx</a>t</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4455'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4455'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4455'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

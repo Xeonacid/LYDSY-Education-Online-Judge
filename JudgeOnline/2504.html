@@ -1,0 +1,95 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2504. -- 间谍</title><center><h2>2504: 间谍</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2504'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2504'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2504'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 6pt"><span style="font-size: 12pt">作为一名间谍，你的任务是确定国家之间运送的货物。每箱货物在驶离出口国后，都会被导向至少一个中间港口。在所有的港口，货物都储存在仓库之中，所以你没法从出口国到进口国追踪特定的箱子。卫星照片告诉你每条航道上每个方向运输了多少箱货物。同时你还知道这些箱子都走最短路。</span></div>
+<p><span style="font-size: 12pt">你的任务是确定指定的两个国家之间的最大可能货运量和最小可能货运量，以箱数记。货运网络可以看作是一棵无根树，其中国家是叶子节点，中间港口是中间节点。同时你了解到，每箱货物一旦到达离开港口，绝对不会折返原路。</span></p>
+<p><span style="font-size: 12pt"><img alt="" src="upload/201111/3.jpg" /><br />
+<br />
+</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 6pt; mso-char-indent-count: .5"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如上图所示，有</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">6</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个国家，标号为</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">1,2,4,5,7,9</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，还有三个港口，标号为</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">3,6,8</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。虽然从</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号国家到</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">4</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号国家的路径上的每条边都通过了至少</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">4</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">箱货物，但是实际上没法从</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号国家到</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">4</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号国家输送</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">4</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">箱货物。非要如此，则在</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">6</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号港口会有</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">箱从</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号国家的送来的货物被迫折返，如是不可。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p></o:p></span></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-tab-count: 1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入的第一行有一个整数</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt">n</span></i><span lang="EN-US" style="font-size: 12pt"> (3 &lt;= <i style="mso-bidi-font-style: normal">n</i> &lt;= 10000)</span></font><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：节点个数（包括了国家和中间港口）。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">之后的</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">n-1</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行每行有四个整数</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt">a</span></i><span lang="EN-US" style="font-size: 12pt">, <i style="mso-bidi-font-style: normal">b</i>, <i style="mso-bidi-font-style: normal">c1</i>, <i style="mso-bidi-font-style: normal">c2</i> (1 &lt;= <i style="mso-bidi-font-style: normal">a</i>, <i style="mso-bidi-font-style: normal">b</i> &lt;= <i style="mso-bidi-font-style: normal">n</i> and 0 &lt;= <i style="mso-bidi-font-style: normal">c1</i>, <i style="mso-bidi-font-style: normal">c2</i> &lt;= 1000)</span></font><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示从</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">a</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">b</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的航道上有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">c1</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">箱货物，从</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">b</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">a</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的航道上有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">c2</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">箱货物。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">最后一行是两个整数</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">fr</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><font face="Times New Roman"><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt">to </span></i><span lang="EN-US" style="font-size: 12pt">(1 &lt;= <i style="mso-bidi-font-style: normal">fr</i>, <i style="mso-bidi-font-style: normal">to</i> &lt;=<i style="mso-bidi-font-style: normal">n</i>, <i style="mso-bidi-font-style: normal">fr</i> != <i style="mso-bidi-font-style: normal">to</i>)</span></font><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">：指定的两个国家，分别是出口国和进口国。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">每行的整数由单个空格隔开。输入数据满足</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">Kirchhoff</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">定律：在每个港口输入的箱数等于输出的箱数。虽说满足此定律并不意味着必然存在一个输出方案满足输入的描述，但是，输入数据经过特殊设计，确保至少一个方案的存在性<a name="_GoBack"></a>。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p></o:p></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-tab-count: 1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出一行，包括两个由单个空格分隔开的整数，分别为从</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">fr</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">to</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的最小和最大可能运输箱数，要求满足给定的数据。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span lang="EN-US"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>9<br />
+<br />
+1 6 4 1<br />
+<br />
+2 6 2 1<br />
+<br />
+6 3 4 0<br />
+<br />
+7 3 1 1<br />
+<br />
+9 3 1 1<br />
+<br />
+3 8 6 2<br />
+<br />
+8 4 4 1<br />
+<br />
+8 5 2 1<br />
+<br />
+1 4<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 3<br />
+<br />
+【数据规模和约定】<br />
+50%的数据中n≤10；<br />
+100%的数据中n≤10000。<br />
+<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2504'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2504'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2504'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

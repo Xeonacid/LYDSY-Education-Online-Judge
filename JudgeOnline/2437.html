@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2437. -- [Noi2011]兔兔与蛋蛋</title><center><h2>2437: [Noi2011]兔兔与蛋蛋</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>884&nbsp;&nbsp;<span class=green>Solved: </span>569<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2437'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2437'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2437'>Discuss</a>]</center><h2>Description</h2><div class=content><p><img height="959" alt="" width="695" src="upload/201310/11.jpg" /></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">输入的第一行包含两个正整数 n、m。 <br />
+接下来 n行描述初始棋盘。其中第i 行包含 m个字符，每个字符都是大写英文字母&quot;X&quot;、大写英文字母&quot;O&quot;或点号&quot;.&quot;之一，分别表示对应的棋盘格中有黑色棋子、有白色棋子和没有棋子。其中点号&quot;.&quot;恰好出现一次。 <br />
+接下来一行包含一个整数 k（1&le;k&le;1000） ，表示兔兔和蛋蛋各进行了k次操作。 <br />
+接下来 2k行描述一局游戏的过程。其中第 2i &ndash; 1行是兔兔的第 i 次操作（编号为i的操作） ，第2i行是蛋蛋的第i次操作。每个操作使用两个整数x,y来描述，表示将第x行第y列中的棋子移进空格中。 <br />
+输入保证整个棋盘中只有一个格子没有棋子， 游戏过程中兔兔和蛋蛋的每个操作都是合法的，且最后蛋蛋获胜。 </span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">输出文件的第一行包含一个整数r，表示兔兔犯错误的总次数。 <br />
+接下来r 行按递增的顺序给出兔兔&ldquo;犯错误&rdquo;的操作编号。其中第 i 行包含一个整数ai表示兔兔第i 个犯错误的操作是他在游戏中的第 ai次操作。 <br />
+1 &le;n&le; 40， 1 &le;m&le; 40 </span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例一：<br />
+1 6 <br />
+XO.OXO <br />
+1 <br />
+1 2 <br />
+1 1 <br />
+样例二：<br />
+3 3 <br />
+XOX <br />
+O.O <br />
+XOX <br />
+4 <br />
+2 3 <br />
+1 3 <br />
+1 2 <br />
+1 1 <br />
+2 1 <br />
+3 1 <br />
+3 2 <br />
+3 3 <br />
+样例三：<br />
+4 4 <br />
+OOXX <br />
+OXXO <br />
+OO.O <br />
+XXXO <br />
+2 <br />
+3 2 <br />
+2 2 <br />
+1 2 <br />
+1 3 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例一：<br />
+1 <br />
+1 <br />
+样例二：<br />
+0<br />
+样例三：<br />
+2<br />
+1<br />
+2<br />
+<br />
+样例1对应图一中的游戏过程<br />
+样例2对应图三中的游戏过程</span></div><h2>HINT</h2>
+			<div class=content><p><p><img height="600" alt="" width="537" src="upload/201310/22.jpg" /></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day2'>Day2</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2437'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2437'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2437'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

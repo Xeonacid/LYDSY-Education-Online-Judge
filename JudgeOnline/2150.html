@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2150. -- 部落战争</title><center><h2>2150: 部落战争</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>1243&nbsp;&nbsp;<span class=green>Solved: </span>694<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2150'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2150'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2150'>Discuss</a>]</center><h2>Description</h2><div class=content><div>lanzerb的部落在A国的上部，他们不满天寒地冻的环境，于是准备向A国的下部征战来获得更大的领土。 A国是一</div>
+<div>个M*N的矩阵，其中某些地方是城镇，某些地方是高山深涧无人居住。lanzerb把自己的部落分成若干支军队，他们</div>
+<div>约定：&nbsp;</div>
+<div>1. 每支军队可以从任意一个城镇出发，并只能从上往向下征战，不能回头。</div>
+<div>途中只能经过城镇，不能经过高山深涧。&nbsp;</div>
+<div>2. 如果某个城镇被某支军队到过，则其他军队不能再去那个城镇了。&nbsp;</div>
+<div>3. 每支军队都可以在任意一个城镇停止征战。&nbsp;</div>
+<div>4. 所有军队都很奇怪，他们走的方法有点像国际象棋中的马。</div>
+<div>不过马每次只能走1*2的路线，而他们只能走R*C的路线。&nbsp;</div>
+<div>lanzerb的野心使得他的目标是统一全国，但是兵力的限制使得他们在配备人手时力不从心。假设他们每支军队都</div>
+<div>能顺利占领这支军队经过的所有城镇，请你帮lanzerb算算至少要多少支军队才能完成统一全国的大业。</div></div><h2>Input</h2><div class=content><div>第一行包含4个整数M、N、R、C，意义见问题描述。</div>
+<div>接下来M行每行一个长度为N的字符串。</div>
+<div>如果某个字符是'.'，表示这个地方是城镇；如果这个字符时'x'，表示这个地方是高山深涧。</div>
+<div>1&lt;=M,N&lt;=50，1&lt;=R,C&lt;=10。</div></div><h2>Output</h2><div class=content><p>输出一个整数，表示最少的军队个数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>【样例输入一】<br />
+3 3 1 2<br />
+...<br />
+.x.<br />
+... <br />
+【样例输入二】<br />
+5 4 1 1<br />
+....<br />
+..x.<br />
+...x<br />
+....<br />
+x...<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>【样例输出一】<br />
+4<br />
+<br />
+【样例输出二】<br />
+5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2150'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2150'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2150'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

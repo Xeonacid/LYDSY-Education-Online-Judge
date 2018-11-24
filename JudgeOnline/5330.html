@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5330. -- [Sdoi2018]反回文串</title><center><h2>5330: [Sdoi2018]反回文串</h2><span class=green>Time Limit: </span>66 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>29&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5330'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5330'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5330'>Discuss</a>]</center><h2>Description</h2><div class=content><div>&ldquo;回文串什么的最讨厌了&hellip;&hellip;&rdquo;</div>
+<div>小Q讨厌任何形式的回文串：</div>
+<div>（1）如果一个字符串从左往右读和从右往左读是一样的，那么小Q讨厌它；例如aa和aba</div>
+<div>（2）对于一个字符串来说，若将某个前缀子串移除并拼接到字符串的尾部，能得到一个小Q讨厌的字符串，</div>
+<div>那么小Q也会讨厌原来的这个字符串；例如aab和baa。</div>
+<div>现在问题来了，如果任意字符串只可以由k种已知的字符组成（也就是说字符集的大小为k），</div>
+<div>那么长度为n的所有字符串里，有多少字符串是小Q讨厌的？</div>
+<div>答案可能很大，你只需要给出答案对p取模后的值。</div>
+<div></div>
+<p class="MsoNormal"></p>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数T，表示有T组测试数据。</div>
+<div>接下来T行，每行描述一组测试数据，包含三个正整数n,k和p。</div>
+<div>1&lt;=T&lt;=10,1&lt;=n&lt;=10^18,1&lt;=k&lt;=n,10^9&lt;=p&lt;=2^30</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组测试数据，输出一行，包含一个整数，表示答案对p取模的值。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10<br />
+9311702400 2063322107 1032035101<br />
+9311702400 3847844404 1014424217<br />
+9311702400 6992683534 1067435323<br />
+9311702400 1356819643 1024817347<br />
+9311702400 6944668829 1042812553<br />
+9311702400 9162670852 1003177793<br />
+9311702400 6567188538 1062813337<br />
+9311702400 3910301217 1018910293<br />
+9311702400 2463242636 1018694167<br />
+9311702400 4797739673 1050709027</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>618961590<br />
+28597316<br />
+1016219343<br />
+977847638<br />
+108994801<br />
+100559666<br />
+694084378<br />
+492868358<br />
+336126742<br />
+176095716</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5330'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5330'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5330'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

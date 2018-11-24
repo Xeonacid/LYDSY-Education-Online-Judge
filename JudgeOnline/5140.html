@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5140. -- [Usaco2017 Dec]A Pie for a Pie</title><center><h2>5140: [Usaco2017 Dec]A Pie for a Pie</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>68&nbsp;&nbsp;<span class=green>Solved: </span>38<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5140'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5140'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5140'>Discuss</a>]</center><h2>Description</h2><div class=content><div>
+<div>Bessie and Elsie have each baked N pies (1&le;N&le;10^5). Each of the 2N pies has a tastiness value acco</div>
+<div>rding to Bessie and a (possibly different) tastiness value according to Elsie.Bessie is thinking abo</div>
+<div>ut giving one of her pies to Elsie. If Elsie receives a pie from Bessie, she will feel obligated to&nbsp;</div>
+<div>give one of her pies to Bessie. So as to not appear stingy nor flamboyant, Elsie will try to pick a&nbsp;</div>
+<div>pie that is at least as tasty (in Elsie's eyes) as the pie she received, but no more than D units ta</div>
+<div>stier (0&le;D&le;10^9). Such a pie may not exist, in which case Elsie will adopt a pseudonym and exile h</div>
+<div>erself to Japan.But if Elsie does give Bessie a pie in return, Bessie will similarly try to give Els</div>
+<div>ie a pie which is at least as tasty but no more than DD units tastier (in Bessie's eyes) as the pie&nbsp;</div>
+<div>Elsie just gave her. Should this be impossible, Bessie too will exile herself. Otherwise she will gi</div>
+<div>ve her chosen pie to Elsie. This cycle will continue until one of the cows is exiled, an unhappy out</div>
+<div>come, or one of the cows receives a pie which she accords a tastiness value of 0, in which case the&nbsp;</div>
+<div>gift exchange will end and both cows will be happy.Note that a pie may not be gifted twice, nor can&nbsp;</div>
+<div>either cow return a pie gifted to her.For each of the NN pies Bessie could select as her initial gif</div>
+<div>t to Elsie, determine the minimum number of pies that could possibly be gifted in the resulting exch</div>
+<div>ange before the cows are happy.</div>
+<div>两只牛，牛A和牛B，他们对水果派的品味不同，每个人都有n&lt;=1e5个派，每个派都有两种得分a[i], b[i]，其中a[</div>
+<div>i]是牛A对该派的评分，b[i]是牛B的评分, 0 &lt;= a[i], b[i] &lt;= 1e9。两只牛开始礼尚往来，从牛A开始，它选一</div>
+<div>个pie给牛B，设这个pie的评分是(a[i], b[i])。此时牛B为了不失礼节（不太小气，也不要太谄媚）要选出一个B</div>
+<div>评分在[b[i], b[i]+d]范围内的pie(a[j], b[j])，给A。同理，A又要选出一个A评分在[a[j], a[j]+d]范围内的pi</div>
+<div>e给B，如此往复。每个pie都只能传递一次。如果A收到了一个A评分为0的pie，或者B收到了一个B评分为0的pie，</div>
+<div>那么礼尚往来就愉快的结束了。否则，就不愉快结束（即一个人无法选出合法的pie给对方时）。下面让你输出，</div>
+<div>对于A的每一个pie，如果第一轮A把这个pie交给B，礼尚往来最少可以几轮愉快结束？如果无法愉快结束，就输出-1</div>
+</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line contains the two integers N and D.</div>
+<div>The next 2N lines contain two space-separated integers each,&nbsp;</div>
+<div>respectively denoting the value of a particular pie according to Bessie, and the value of that pie according to Elsie.</div>
+<div>The first N lines refer to Bessie's pies, and the remaining N lines refer to Elsie's pies.</div>
+<div>It is guaranteed that all tastiness values are in the range [0,10^9]</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>There should be N lines in the output.&nbsp;</div>
+<div>Line i should contain a single integer: the minimum number of pies that could be gifted in a happy gift&nbsp;</div>
+<div>exchange started with Bessie's pie i.&nbsp;</div>
+<div>If no gift exchange starting with pie i is happy, then line i should contain the single integer -1 instead.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1<br />
+1 1<br />
+5 0<br />
+4 2<br />
+1 4</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3<br />
+1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5140'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5140'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5140'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

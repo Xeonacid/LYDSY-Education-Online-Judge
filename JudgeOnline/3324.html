@@ -1,0 +1,91 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3324. -- [Scoi2013]火柴棍数字 </title><center><h2>3324: [Scoi2013]火柴棍数字 </h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>46&nbsp;&nbsp;<span class=green>Solved: </span>20<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3324'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3324'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3324'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">Fish</span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">是一条生活在海里的鱼，有一天他很无聊，于是他去捡了人类扔进海里的垃圾，打算用这些来玩些什么。他从捡回来的垃圾堆里找到了不少火柴棍，便把这些火柴棍拼成了一个长度为<span lang="EN-US">n </span>的十进制数，每个数字的拼法如下图所示</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><b><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">注意：每个数字占据的宽度和摆放方式是固定的，故以下情况均不合法。</span></b></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><b><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><img height="303" alt="" width="762" src="upload/201312/3.jpg" /></span></b></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"></p>
+<p></p>
+<div align="left"><b><span style="font-size: 12pt"><img height="200" alt="" width="814" src="upload/201312/1.jpg" /></span></b></div>
+<p></p>
+<div align="left"></div>
+<div align="left"></div>
+<p><span style="font-size: 12pt">拼完之后他好累，感觉再也不会拼了。</span></p>
+<p></p>
+<div align="left"><span style="font-size: 12pt">他对拼出来的数大小不满意，希望通过移动一些火柴棍的位置来把这个数变得尽量大。由于太累，他只能最多移动k 根火柴棍。而且由于数字的最低位放在墙边，他不能在该数的低位后面添加数字，但他可以在该数的前面添加数字。</span></div>
+<div align="left"><span style="font-size: 12pt">你能帮他算出他移动火柴棍之后的数最大能是多大吗？</span></div>
+<div align="left"><b><span style="font-size: 12pt">注意：火柴棍对于Fish 来说是很贵重的物品，所以不允许折断或丢弃火柴棍。</span></b></div>
+<div align="left"><b><span style="font-size: 12pt">注意：火柴头的方向不影响数字的辨识，例如下面几种情况都是数字1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></div>
+<div align="left">&nbsp;</div>
+<div align="left"><img height="196" alt="" width="600" src="upload/201312/2.jpg" /></div></div><h2>Input</h2><div class=content><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输入仅含一行，分别是长度为<span lang="EN-US">n </span>的十进制数<span lang="EN-US">x </span>和最多移动火柴棍的数量<span lang="EN-US">k</span>。<span lang="EN-US">x </span>没有前导零。<span lang="EN-US"><br />
+</span>对于<span lang="EN-US">30% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 10</span>，<span lang="EN-US">0 &lt;= k &lt;= 10</span>。<span lang="EN-US"><br />
+</span>对于<span lang="EN-US">100% </span>的数据，<span lang="EN-US">1 &lt;= n &lt;= 500</span>，<span lang="EN-US">0 &lt;=k &lt;=3500</span>。<span lang="EN-US"> <o:p></o:p></span></span></p>
+<p></p></div><h2>Output</h2><div class=content><p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-outline-level: 2"><b><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><o:p></o:p></span></b>&nbsp;</p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt">输出仅一行，表示移动火柴棍之后的最大数。<span lang="EN-US"> <o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>Sample #1<br />
+3 2<br />
+<br />
+Sample #2<br />
+3 3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Sample #1<br />
+17<br />
+<br />
+Sample #2<br />
+71<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>应上传者要求，此系列试题不公开,如有异议，本站将删除之。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3324'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3324'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3324'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

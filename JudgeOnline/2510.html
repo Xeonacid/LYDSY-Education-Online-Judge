@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2510. -- 弱题</title><center><h2>2510: 弱题</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>511&nbsp;&nbsp;<span class=green>Solved: </span>280<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2510'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2510'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2510'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">有<i>M</i>个球，一开始每个球均有一个初始标号，标号范围为1～<i>N</i>且为整数，标号为<i>i</i>的球有<i>a<sub>i</sub></i>个，并<b>保证</b><b>&Sigma;</b><b><i>a<sub>i</sub></i></b><b> = <i>M</i></b>。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">每次操作<b><u>等概率</u></b>取出一个球（即取出每个球的概率均为1/<i>M</i>），若这个球标号为<i>k</i>（<i>k</i> &lt; <i>N</i>），则将它重新标号为<i>k</i> + 1；若这个球标号为<i>N</i>，则将其重标号为1。<b>（取出球后并不将其丢弃）</b></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">现在你需要求出，经过<i>K</i>次这样的操作后，每个标号的球的期望个数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">第1行包含三个<b><u>正整数</u></b><i>N</i>，<i>M</i>，<i>K</i>，表示了标号与球的个数以及操作次数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第2行包含<i>N</i>个<b><u>非负整数</u></b><i>a<sub>i</sub></i>，表示初始标号为<i>i</i>的球有<i>a<sub>i</sub></i>个。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div><h2>Output</h2><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">应包含<i>N</i>行，第<i>i</i>行为标号为<i>i</i>的球的期望个数，四舍五入保留3位小数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 3 2<br />
+3 0<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1.667<br />
+1.333<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>【样例说明】<br /><br />
+第1次操作后，由于标号为2球个数为0，所以必然是一个标号为1的球变为标号为2的球。所以有2个标号为1的球，有1个标号为2的球。<br /><br />
+第2次操作后，有1/3的概率标号为2的球变为标号为1的球（此时标号为1的球有3个），有2/3的概率标号为1的球变为标号为2的球（此时标号为1的球有1个），所以标号为1的球的期望个数为1/3*3+2/3*1 = 5/3。同理可求出标号为2的球期望个数为4/3。<br /><br />
+&nbsp;<br /><br />
+【数据规模与约定】<br /><br />
+对于10%的数据，N &le; 5, M &le; 5, K &le; 10；<br /><br />
+对于20%的数据，N &le; 20, M &le; 50, K &le; 20；<br /><br />
+对于30%的数据，N &le; 100, M &le; 100, K &le; 100；<br /><br />
+对于40%的数据，M &le; 1000, K &le; 1000；<br /><br />
+对于100%的数据，N &le; 1000, M &le; 100,000,000, K &le; 2,147,483,647。</p><br />
+<p><br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=2011%E7%A6%8F%E5%BB%BA%E9%9B%86%E8%AE%AD'>2011福建集训</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2510'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2510'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2510'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

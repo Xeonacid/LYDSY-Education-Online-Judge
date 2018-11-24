@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1871. -- [Beijing2009 WinterCamp]函数依赖</title><center><h2>1871: [Beijing2009 WinterCamp]函数依赖</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>194&nbsp;&nbsp;<span class=green>Solved: </span>44<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1871'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1871'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1871'>Discuss</a>]</center><h2>Description</h2><div class=content><img border="0" src="images/1871.jpg"> </div><h2>Input</h2><div class=content>输入文件的第一行为一个整数 N(N ≤ 10)和 M(1 ≤ M ≤ 1000)，表示属性集中
+的属性个数和函数依赖集中的依赖个数。这里我们默认大写字母中的前 N 个字
+母为我们所考虑的属性。接下来的 M 行每行一个字符串表示一个函数依赖，如
+AB-->DE。(中间的蕴含符号是由减号和大于号组成。另外需要说明的是，只有当
+我们同时得到 A和 B 的时候，才能推出D和 E） 。 
+</div><h2>Output</h2><div class=content>第一行希望你输出你找到的候选码的个数K。 接下来的 K行每行
+输出一个候选码。候选码本身按字母顺序排列，所有候选码按照字典顺序排列输
+出。如果没有找到候选码，输出“No candidate key”(不含引号)。 
+ </div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5 <br />
+AB->C <br />
+AC->B <br />
+AD->E <br />
+BC->D <br />
+E->A <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4 <br />
+AB <br />
+AC <br />
+BE <br />
+CE <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>对于30%的测试数据，满足只有二元联系(即不存在函数依赖左边或右边的<br />
+属性个数超过 1 个)。 <br />
+对于 40%的测试数据，满足N ≤ 5。 <br />
+对于 70%的测试数据，满足M ≤ 100。 <br />
+对于100%的测试数据，满足 1 ≤ N ≤ 10, 1 ≤ M ≤ 1000。 <br />
+ </p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Day1'>Day1</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1871'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1871'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1871'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

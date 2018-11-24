@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2363. -- Sgu395 Binary Cat Club</title><center><h2>2363: Sgu395 Binary Cat Club</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2363'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2363'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2363'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" style="text-indent: 20.25pt; text-align: left; "><b>学校电脑社进行了一次聚会，包了一个大厅唱<span lang="EN-US">KTV</span>。现在有关于这次聚会的<i style="mso-bidi-font-style:normal"><span lang="EN-US">N</span></i>条记录，每条记录的格式有<span lang="EN-US">+name</span>，<span lang="EN-US">-name</span>，<span lang="EN-US">=visitors</span>三种，分别表示进来一个叫&rdquo;<span lang="EN-US">name</span>&rdquo;的人，出去一个叫&rdquo;<span lang="EN-US">name</span>&rdquo;的人，当前聚会厅有<span lang="EN-US">visitors</span>个人。现在记录的一部分遗失，但剩下记录的顺序是原顺序。给出剩下的记录，请添加最少条数的记录，使之合理化。注意：可以有人进出会厅多次，可以有人聚会结束待在会厅。</b></p>
+<p class="MsoNormal" style="text-align: left; "><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="text-indent: 0px; text-align: left; "><b><br />
+</b></p>
+<p></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="text-indent:20.25pt"><span style="font-size:12.0pt;
+font-family:宋体">第一行一个数<span lang="EN-US">n</span>。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:20.25pt"><span style="font-size:12.0pt;
+font-family:宋体">接下来<span lang="EN-US">n</span>行，按顺序每行一条记录。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><b><br />
+</b></p>
+<p></p></div><h2>Output</h2><div class=content><p class="MsoNormal"><b><br />
+</b></p>
+<p class="MsoNormal" style="text-indent: 23.25pt; "><span style="font-size: 12pt; font-family: 宋体; ">仅一行一个数，表示最小所需的费用。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent: 23.25pt; "></p>
+<p class="MsoPlainText" style="text-indent: 23.5pt; "></p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8<br />
+<br />
+= 2<br />
+<br />
++ mt<br />
+<br />
+- ljw<br />
+<br />
+= 4<br />
+<br />
+- zdy<br />
+<br />
+- htx<br />
+<br />
++ sjf<br />
+<br />
+= 10<br />
+<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>19 <br />
+<br />
+数据范围<br />
+<br />
+1<=n<=200<br />
+<br />
+每条= visitors记录中的visitors不超过100。<br />
+<br />
+每个名字的长度不超过5，且都由小写字母组成；</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2363'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2363'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2363'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

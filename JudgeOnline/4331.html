@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4331. -- JSOI2012 越狱老虎桥</title><center><h2>4331: JSOI2012 越狱老虎桥</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>36&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4331'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4331'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4331'>Discuss</a>]</center><h2>Description</h2><div class=content><div>这里，是美丽的南京；这里，是秀美的进香河；这里是安逸的老虎桥。&nbsp;</div>
+<div>如果说进香河的美，美在其秀美的风光，倒不如说是美在了那惬意的南京古典小巷式生活。如果说进香河的迷人，在其淳朴的民风，倒不如说是那被历史掩埋了的秘密吸引着人们好奇的心。&nbsp;</div>
+<div>也许很多人都还记得，老虎桥监狱，北洋时期江南最大的监狱，在近一个世纪中，面对满清、北洋、民国、新中国几朝兴衰，名称屡次更替，沧桑尽显其中。&nbsp;</div>
+<div>现在的人们，恐怕很难相信，到底有多少惊心动魄的事情曾经就在这里上演。&nbsp;</div>
+<div>那是1948年的冬天，南京地下组织的一支小分队决定偷袭老虎桥监狱，救出被困的数百名人员。那时的老虎桥监狱，被N层电网围了起来，由内而外，依次编号为1,2,&hellip;,N。第1层电网接有高压电。有M条高压线，连接了所有电网，其中第i条高压线连接了第ai和bi层电网，如果要破坏第i条高压线，需要至少动用Ti位特工。面对这么多层电网，偷袭小分队犯愁了。至少需要破坏一层电网，否则是无法偷袭成功的。&nbsp;</div>
+<div>然而，狡猾的间谍却知道了这件事情，为了破坏偷袭计划，敌人秘密地又增加了一条高压线，不让偷袭小分队的成员发现。&nbsp;</div>
+<div>为了能够偷袭成功，不论新增的这一条秘密高压线是连接哪两层电网的，小分队都必须要破坏且仅破坏一条高压线，使得至少有一层电网不通电。注意，对于新增的高压线，我们并不知道需要多少位特工才能成功破坏。现在的问题是，偷袭小分队至少需要多少名特工呢？&nbsp;</div>
+<div>决战就在今夜！&nbsp;</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行有2个整数，N和M，分别表示电网层数和高压线个数。&nbsp;</div>
+<div>之后M行，每行3个整数，分别是ai, bi和Ti。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>输出只有一行，包含一个整数，表示最少需要动用的特工人数。&nbsp;</div>
+<div>如果计划必然失败，则输出 -1。&nbsp;</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 2 <br />
+1 2 1 <br />
+2 3 2 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>-1 <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据，N&lt;=500000，M&lt;=1000000，T&lt;=100000。&nbsp;</p><br />
+<p>应上传者要求，此题不公开，如有异议，请提出.</p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4331'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4331'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4331'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

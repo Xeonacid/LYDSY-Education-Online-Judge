@@ -1,0 +1,96 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4255. -- Keep Fit!</title><center><h2>4255: Keep Fit!</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>25&nbsp;&nbsp;<span class=green>Solved: </span>11<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4255'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4255'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4255'>Discuss</a>]</center><h2>Description</h2><div class=content><div>You&rsquo;re designing &nbsp;a game console with a special &nbsp;board which can evaluate how balance people &nbsp;are.&nbsp;</div>
+<div>After the user stands on the board, it can record the movement of the user's &quot;center of gravity&quot;.&nbsp;</div>
+<div>Technically, &nbsp;the record is a sequence of &nbsp;n &nbsp;points &nbsp;on &nbsp;the &nbsp;2D plane &nbsp;(the user's &quot;center of gravity&quot;&nbsp;</div>
+<div>projected to the game board), where the origin (0,0) is the center of the game board. Samples are taken&nbsp;</div>
+<div>every 0.01 second, so if the user stands on it for one minute, your database gets 6000 sample points. &nbsp;</div>
+<div>In order to know better about his balancing status, the user can ask the game console some questions.&nbsp;</div>
+<div>Each question (i,j) means: count how many pairs of sample points, chosen from the interval between&nbsp;</div>
+<div>the i-th sample and the j-th sample (inclusive), whose Manhattan distance is no more than d, where d&nbsp;</div>
+<div>is the preset balance threshold parameter in the system.&nbsp;</div>
+<div>Your task is to write a program that can answer the questions. Note that you don't have to answer the&nbsp;</div>
+<div>questions one by one. You can read all the questions first, and then answer them.&nbsp;</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>There are no more than 3 test cases. The first line contains three integers n, d, q(1&lt;=n&lt;=200000,&nbsp;</div>
+<div>1&lt;=d&lt;=10^8, 1&lt;=q&lt;=10000), the number of points, the balance threshold and the number of queries.&nbsp;</div>
+<div>The next n lines contain the coordinates (x,y) (|x|,|y|&lt;=10^8) of the sample points, in order. The points&nbsp;</div>
+<div>are numbered 1~n. The next q lines contain the questions (i,j) (1&lt;=i&lt;=j&lt;=n).&nbsp;</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>For each test case, print the case number in the first line, then the answers of the questions, one on&nbsp;</div>
+<div>each line.&nbsp;</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 1 2 <br />
+0 0 <br />
+1 0 <br />
+3 0 <br />
+2 1 <br />
+2 0 <br />
+2 4 <br />
+1 5 <br />
+5 2 2 <br />
+0 0 <br />
+1 0 <br />
+3 0 <br />
+2 1 <br />
+2 0 <br />
+2 4 <br />
+1 5 </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Case 1: <br />
+0 <br />
+4 <br />
+Case 2: <br />
+3 <br />
+8 </span></div><h2>HINT</h2>
+			<div class=content><p><p>&nbsp;2015年湖南省大学生程序设计竞赛</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E5%88%98%E6%B1%9D%E4%BD%B3%E5%85%88%E7%94%9F%E6%8E%88%E6%9D%83%E4%BD%BF%E7%94%A8'>鸣谢刘汝佳先生授权使用</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4255'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4255'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4255'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

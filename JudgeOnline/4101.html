@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4101. -- [Usaco2015 Open]Trapped in the Haybales </title><center><h2>4101: [Usaco2015 Open]Trapped in the Haybales </h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>73&nbsp;&nbsp;<span class=green>Solved: </span>36<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4101'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4101'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4101'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John has received a shipment of N large hay bales (1&le;N&le;100,000), and placed them at various locations along the road</div>
+<div>connecting the barn with his house. Each bale j has a size Sj and a distinct position Pj giving its location along the one-dimensional</div>
+<div>road. Bessie the cow is currently located at position B, where there is no hay bale.</div>
+<div>Bessie the cow can move around freely along the road, even up to the position at which a bale is located, but she cannot cross</div>
+<div>through this position. As an exception, if she runs in the same direction for D units of distance, she builds up enough speed to</div>
+<div>break through and permanently eliminate any hay bale of size strictly less than D. Of course, after doing this, she might open up</div>
+<div>more space to allow her to make a run at other hay bales, eliminating them as well.</div>
+<div></div>
+<div>FJ is currently re-painting his house and his barn, and wants to make sure Bessie cannot reach either one (cows and fresh paint</div>
+<div>do not make a good combination!) Accordingly, FJ wants to make sure Bessie never breaks through the leftmost or rightmost hay</div>
+<div>bale, so she stays effectively trapped within the hay bales. FJ has the ability to add hay to a single bale of his choosing to help</div>
+<div>keep Bessie trapped. Please help him determine the minimum amount of extra size he needs to add to some bale to ensure Bessie</div>
+<div>stays trapped.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">农夫约翰将N(1&lt;=N&lt;=100000)堆干草放在了一条平直的公路上。第j堆干草的大小为Sj，坐标为Pj。奶牛贝茜位于一个没有干草堆的点B。</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">奶牛贝茜可以在路上自由移动，甚至可以走到某个干草堆上，但是不能穿过去。但是如果她朝同一个方向跑了D个单位的距离，那么她就有足够大的速度去击碎任何大小严格小于D的干草堆。当然，在这之后如果她继续朝着该方向前进，那么她的速度不会清零。</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;">约翰可以指定某堆干草，并增大它的大小，他想知道他最少需要增大多少，才能把奶牛贝茜困住，或者根本不可能。</div>
+</div>
+<div></div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 20.909090042114258px;"></div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N as well as Bessie's initial position B. Each of the next N lines describes a bale, and</div>
+<div>contains two integers giving its size and position. All sizes and positions are in the range 1&hellip;109.</div>
+<div></div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Print a single integer, giving the minimum amount of hay FJ needs to add to prevent Bessie from escaping.</div>
+<div>Print -1 if it is impossible to prevent Bessie's escape.</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 7<br />
+8 1<br />
+1 4<br />
+3 8<br />
+12 15<br />
+20 20</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E8%AF%91%E6%96%87%20Silver'>鸣谢Claris提供译文 Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4101'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4101'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4101'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

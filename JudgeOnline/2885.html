@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2885. -- 数列</title><center><h2>2885: 数列</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>5<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2885'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2885'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2885'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 21pt"><b><span style="font-size: 16pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b><span style="font-size: 16pt">给出一个长度为</span></b><b><span style="font-size: 16pt">N</span></b><b><span style="font-size: 16pt">（</span></b><b><span style="font-size: 16pt">N&le;100000</span></b><b><span style="font-size: 16pt">）的正整数数列，其中的每一个数都在［</span></b><b><span style="font-size: 16pt">1</span></b><b><span style="font-size: 16pt">，</span></b><b><span style="font-size: 16pt">10000</span></b><b><span style="font-size: 16pt">］的范围内，现在可以给数列中的每个数加一个不同的正整数修正量（也可以不加），给一个数加上</span></b><b><span style="font-size: 16pt">x</span></b><b><span style="font-size: 16pt">的代价为</span></b><b><span style="font-size: 16pt">x<sup>2</sup></span></b><b><span style="font-size: 16pt">。在修正后的数列中，计算每两个相邻整数的差的绝对值，将它乘以</span></b><b><span style="font-size: 16pt">C</span></b><b><span style="font-size: 16pt">（</span></b><b><span style="font-size: 16pt">C</span></b><b><span style="font-size: 16pt">为输入的常量）算入代价中。要求求出代价最小的方案。</span></b></div>
+<div><b><span style="font-size: 16pt">1&lt;=n&lt;=10000 </span></b><b><span style="font-size: 16pt">每个数</span></b><b><span style="font-size: 16pt">[1,100] 50%</span></b></div>
+<div><b><span style="font-size: 16pt">1&lt;=n&lt;=100000 </span></b><b><span style="font-size: 16pt">每个数</span></b><b><span style="font-size: 16pt">[1,10000] 100%</span></b></div>
+<div><b><span style="font-size: 16pt">1&lt;=c&lt;=1000</span></b></div></div><h2>Input</h2><div class=content><div><b><span style="font-size: 16pt">第一行一个整数</span></b><b><span style="font-size: 16pt">n</span></b></div>
+<div><b><span style="font-size: 16pt">接下来</span></b><b><span style="font-size: 16pt">n</span></b><b><span style="font-size: 16pt">行</span></b><b><span style="font-size: 16pt">n</span></b><b><span style="font-size: 16pt">个数</span></b></div></div><h2>Output</h2><div class=content><p>一个整数表示答案。<br />
+</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 100<br />
+4<br />
+1<br />
+2<br />
+4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>13</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2885'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2885'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2885'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

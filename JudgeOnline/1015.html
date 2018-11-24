@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1015. -- [JSOI2008]星球大战starwar</title><center><h2>1015: [JSOI2008]星球大战starwar</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>7467&nbsp;&nbsp;<span class=green>Solved: </span>3530<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1015'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1015'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1015'>Discuss</a>]</center><h2>Description</h2><div class=content><p>　　很久以前，在一个遥远的星系，一个黑暗的帝国靠着它的超级武器统治者整个星系。某一天，凭着一个偶然的<br />
+机遇，一支反抗军摧毁了帝国的超级武器，并攻下了星系中几乎所有的星球。这些星球通过特殊的以太隧道互相直<br />
+接或间接地连接。 但好景不长，很快帝国又重新造出了他的超级武器。凭借这超级武器的力量，帝国开始有计划<br />
+地摧毁反抗军占领的星球。由于星球的不断被摧毁，两个星球之间的通讯通道也开始不可靠起来。现在，反抗军首<br />
+领交给你一个任务：给出原来两个星球之间的以太隧道连通情况以及帝国打击的星球顺序，以尽量快的速度求出每<br />
+一次打击之后反抗军占据的星球的连通快的个数。（如果两个星球可以通过现存的以太通道直接或间接地连通，则<br />
+这两个星球在同一个连通块中）。</p></div><h2>Input</h2><div class=content><p>　　输入文件第一行包含两个整数，N (1&nbsp; &lt; =&nbsp; N&nbsp; &lt; =&nbsp; 2M) 和M (1&nbsp; &lt; =&nbsp; M&nbsp; &lt; =&nbsp; 200,000)，分别表示星球的<br />
+数目和以太隧道的数目。星球用 0 ~ N-1的整数编号。接下来的M行，每行包括两个整数X, Y，其中（0 &lt; = X &lt;&gt; <br />
+Y 表示星球x和星球y之间有&ldquo;以太&rdquo;隧道，可以直接通讯。接下来的一行为一个整数k，表示将遭受攻击的星球的<br />
+数目。接下来的k行，每行有一个整数，按照顺序列出了帝国军的攻击目标。这k个数互不相同，且都在0到n-1的范<br />
+围内。</p></div><h2>Output</h2><div class=content><p>第一行是开始时星球的连通块个数。接下来的K行，每行一个整数，表示经过该次打击后现存星球<br />
+的连通块个数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8 13<br />
+0 1<br />
+1 6<br />
+6 5<br />
+5 0<br />
+0 6<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+7 1<br />
+7 2<br />
+7 6<br />
+3 6<br />
+5<br />
+1<br />
+6<br />
+3<br />
+5<br />
+7</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+1<br />
+2<br />
+3<br />
+3</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1015'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1015'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1015'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

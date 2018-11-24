@@ -1,0 +1,59 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4193. -- cyclotron</title><center><h2>4193: cyclotron</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>10&nbsp;&nbsp;<span class=green>Solved: </span>7<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4193'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4193'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4193'>Discuss</a>]</center><h2>Description</h2><div class=content><p>掩体纪元2334年，三体人遗留在地球的智子在失去了三体人的控制后，出现了内部紊乱，智子在太阳系中展开为了二维，因为自身引力与自体性的原因成为了球状，而且两个智子不会重叠在一起，其又在太阳引力的影响下分布在太阳系行星轨面上。智子的存在显然影响到了人类的生存，人类计划破坏太阳系中的智子，首选计划为使用环日加速器对其进行大规模摧毁，备选计划再派出飞船将余下的智子破坏。但是环日加速器的使用消耗了极大的资源，并且发射后需要很长的时间来维护。故人们希望先利用环日加速器对智子进行破坏，然后再让飞船出动。因为环日加速器对粒子充了极大的能量，所以可以认为其运动轨迹为任意大小的圆形（可能退化为直线，即半径为正无穷）。其速度非常快，可以认为任意距离的路径都可以瞬间达成。而且智子的质量仅为原子质量，所以可以考虑粒子对智子进行撞击之后依然按照原轨道运动。一旦一个智子被粒子撞击（甚至粒子只是擦过智子），智子都会由于粒子的巨大能量而被破坏。现在Picks作为人类代表，给了你以环日加速器发射点（发射点没有被任一个智子覆盖）为坐标原点的坐标轴中，每个智子位置及每个智子的半径，人类为了合理地调遣飞船，想知道一次轰击最多破坏多少个智子，请你帮助他们！一句话：平面上有n个互不相交且不包含原点的圆，请你找一个过原点的圆M（可能退化为一条直线，即圆半径为正无穷），使得与M有交（包括边界）的圆的个数尽可能地多。</p></div><h2>Input</h2><div class=content><p>第一行一个数：n，表示智子数量。<br />
+接下来 n 行，每行三个整数：x;y;r，表示一个智子球心的坐标（z 坐标已省略）及半径。</p></div><h2>Output</h2><div class=content><p>输出一行一个整数，表示最多破坏多少智子。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1 3 2<br />
+-4 2 2<br />
+2 0 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p><p>1&lt;=N&lt;=1000,0&lt;=|x|,|y|&lt;=10^4</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4193'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4193'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4193'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

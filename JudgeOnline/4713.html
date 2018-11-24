@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4713. -- 迷失的字符串</title><center><h2>4713: 迷失的字符串</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>299&nbsp;&nbsp;<span class=green>Solved: </span>52<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4713'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4713'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4713'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有一棵n个节点的大树，上面每条边有一个小写字符。</div>
+<div>对于任意两个不同的点u,v，我们可以在树上找到u出发到v终止的唯一的一条最短路径，并将沿途经过的边上的字符依次写下来，得到一个字符串。</div>
+<div>对于一个字符串，如果存在这样一个点对(u,v)，使得它们路径上的字符串与其完全匹配，那么我们就称这个字符串属于这棵树。</div>
+<div>现在有m个迷失的字符串，请你写一个程序帮助判断每一条字符串是否属于这棵树。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行包含一个正整数n(2&lt;=n&lt;=30000)，表示树的点数。</div>
+<div>接下来n-1行每行包含两个正整数a,b和一个小写字符c(1&lt;=a,b&lt;=n,a!=b)，表示a点到b点之间有一条无向的树边，上面写着字符c。</div>
+<div>接下来一行包含一个正整数m(1&lt;=m&lt;=30000)，表示迷失的字符串的个数。</div>
+<div>接下来m行，每行一个由小写字符组成的字符串，分别表示每个迷失的字符串。</div>
+<div>输入数据保证所有迷之的字符串的长度之和不超过30000。</div>
+<p></p></div><h2>Output</h2><div class=content><div>包含m行，对于第i行，如果在树上可以找到第i个字符串，输出YES，否则输出NO。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+1 2 b<br />
+1 4 a<br />
+2 3 c<br />
+9<br />
+bc<br />
+cb<br />
+b<br />
+c<br />
+d<br />
+aa<br />
+ab<br />
+abc<br />
+cba</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>YES<br />
+YES<br />
+YES<br />
+YES<br />
+NO<br />
+NO<br />
+YES<br />
+YES<br />
+YES</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;Claris'>By Claris</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4713'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4713'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4713'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

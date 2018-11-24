@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4437. -- [Cerc2015]Looping Labyrinth</title><center><h2>4437: [Cerc2015]Looping Labyrinth</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>35&nbsp;&nbsp;<span class=green>Solved: </span>19<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4437'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4437'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4437'>Discuss</a>]</center><h2>Description</h2><div class=content><p>一座迷宫是由一个矩形网格铺上一种图案得到的。矩形网格有n行m列，每一个格子不是空的就是被覆盖的。如此就形成了一个无穷大的网格，且图案向四个方向无限循环。<br />
+&nbsp;&nbsp;&nbsp; 我们给每个格子编号(包括负整数),行数向下递增，列数向右递增，座标为(0,0)的单元格为原点。整个迷宫由复制图案到每个n&times;m的矩阵而成(没有旋转和镜像操作)。每个图案的左上角的单元格的行数可被n整除，列数可被m整除。原图案的左上角位于原点，右下角的座标为(n-1,m-1)。<br />
+&nbsp;&nbsp;&nbsp; 我们需从一个单元格出发，向上、下、左、右移动，经过一些空格，到达原点。<br />
+&nbsp;&nbsp;&nbsp; 你将被给出一个图案和一些出发点。确定从这些出发点出发是否能逃出迷宫。</p></div><h2>Input</h2><div class=content><p>第一行包括2个整数n和m(1&lt;=n,m&lt;=100)&mdash;&mdash;图案的行数和列数。<br />
+接下来n行每行包括一个长度为m的字符串，表示图案的一行。&ldquo;#&rdquo;表示一个被覆盖的单元格，&ldquo;.&rdquo;表示未被覆盖的单元格。<br />
+接下来一行包括一个整数q&mdash;&mdash;出发点的个数。<br />
+接下来q行，每行包括两个整数r和c(-109&lt;=r,c,&lt;=109)&mdash;&mdash;出发点的座标。<br />
+原点和所有出发点都是空单元格。</p></div><h2>Output</h2><div class=content><p>输出包括q行。<br />
+对每个出发点，如果能过逃出迷宫，输出&ldquo;yes&rdquo;,否则输出&ldquo;no&rdquo;。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 9<br />
+．．＃＃＃＃＃．．<br />
+．．＃．．．＃．． <br />
+．．．．．．＃．． <br />
+．．＃＃＃＃＃．． <br />
+．．＃．．．．．． <br />
+．．＃．．．＃．． <br />
+5<br />
+1 4<br />
+5 4<br />
+1 -5<br />
+5 -5<br />
+-1000000000 0</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>yes<br />
+no<br />
+no<br />
+yes<br />
+yes<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4437'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4437'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4437'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

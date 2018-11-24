@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3695. -- 滑行</title><center><h2>3695: 滑行</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>410&nbsp;&nbsp;<span class=green>Solved: </span>137<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3695'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3695'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3695'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 首长NOI惨跪，于是去念文化课了。现在，他面对一道物理题。<br />
+&nbsp;&nbsp;&nbsp; 现在有一个小滑块可以在地面上滑行，地面上被划分成不同的区域，使得小滑块在不同的<br />
+区域内部有一个不同的速度上限。<br />
+&nbsp;&nbsp;&nbsp; 小滑块在(0，0)点，我们现在要推动小滑块到目标点（x,y）。<br />
+&nbsp;&nbsp;&nbsp; 地面上有N层区域，每层区域都是矩形，现在给你一个序列{Hi}表示每层区域的高度，覆盖的地面横坐标范围是0～X，第i个区域的限速是vi。<br />
+&nbsp;&nbsp;&nbsp; 注： Y=Sigma(Hi) 其中i从1到N<br />
+其它的地方小滑块不允许进入。<br />
+现在我们要设计一个路线使得小滑块滑到目标点的用时最小。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">&nbsp; 第一行两个整数，分别表示N、x。<br />
+&nbsp; 第二行N个整数，第i个数表示Hi。。<br />
+&nbsp; 第三行N个整数，第i个数表示Vi。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">&nbsp; 一行一个整数，表示最小用时，保留到小数点后第三位。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 5<br />
+5<br />
+1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>7.071<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size: medium">N&lt;=100,X&lt;=1000,对于任意i,满足1&lt;=i&lt;=N-1,有Vi&lt;V(i+1)</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3695'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3695'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3695'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

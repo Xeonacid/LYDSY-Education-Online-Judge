@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3873. -- [Ahoi2014&Jsoi2014]拼图</title><center><h2>3873: [Ahoi2014&Jsoi2014]拼图</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>204&nbsp;&nbsp;<span class=green>Solved: </span>79<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3873'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3873'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3873'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;JYY最近迷上了拼图游戏。作为一个计算机科学家，JYY有一套黑白色的拼图，他希望通过合理的拼接，使得拼出的最终图案中，能包含面积最大的全白色子矩形。JYY一共有S块拼图，并且由1到S编号。编号为i的拼图是一个N行列的方格矩形，每个方格都为黑色或者白色。一开始JYY将他的这S块拼图按照编号顺序左右相连依次放在桌上拼成了一个N行M列（这里M=Sigma(Wi)(1&lt;=i&lt;=S）的大矩形。之后JYY发现，可以通过改变这S块拼图的连接次序，使得拼成的N行M列的大矩形中，最大全白子矩形面积变大。现在JYY想知道，怎么拼才能得到最大的全白子矩形呢？请你帮助他计算出最佳的拼接方案。</p></div><h2>Input</h2><div class=content><p>每个输入文件中包含多组测试数据。输入文件第一行包含一个整数T，代表</p>
+<div>测试数据的组数，接下来按顺序描述了每组测试数据。</div>
+<div>每组测试数据的第一行包含两个整数S和N。</div>
+<div>接下来S组输入，第i组对应编号为i的拼图。</div>
+<div>在第i组输入中，第一行包含一个整数；</div>
+<div>接下来N行描述一个N行列的0/1矩形；</div>
+<div>其中第x行y列为0则表示该拼图对应位置的颜色是白色，反之则为黑色。</div>
+<div></div>
+<p></p>
+<div></div></div><h2>Output</h2><div class=content><p>&nbsp;对于每组数据输出一行包含一个整数ans，表示最大可能的全白色子矩形的面积。</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1<br />
+34<br />
+4<br />
+1001<br />
+0000<br />
+0010<br />
+1001<br />
+3<br />
+000<br />
+010<br />
+000<br />
+011<br />
+2<br />
+00<br />
+10<br />
+01<br />
+00</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6</span></div><h2>HINT</h2>
+			<div class=content><p><div>对于100%的数据满足1&lt;=S,N,Wi&lt;=10^5,N*Sigma(Wi)&lt;=10^5,T&lt;=3</div><br />
+<div>添加数组一组--2015.02.28</div></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Round2%20By%20%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>Round2 By 佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3873'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3873'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3873'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

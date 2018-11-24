@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5091. -- [Lydsy1711月赛]摘苹果</title><center><h2>5091: [Lydsy1711月赛]摘苹果</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>189&nbsp;&nbsp;<span class=green>Solved: </span>148<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5091'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5091'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5091'>Discuss</a>]</center><h2>Description</h2><div class=content><div>小Q的工作是采摘花园里的苹果。在花园中有n棵苹果树以及m条双向道路，苹果树编号依次为1到n，每条道路的两</div>
+<div>端连接着两棵不同的苹果树。假设第i棵苹果树连接着d_i条道路。小Q将会按照以下方式去采摘苹果：</div>
+<div></div>
+<div>1.小Q随机移动到一棵苹果树下，移动到第i棵苹果树下的概率为d_i/(2m)，但不在此采摘。</div>
+<div></div>
+<div>2.等概率随机选择一条与当前苹果树相连的一条道路，移动到另一棵苹果树下。</div>
+<div></div>
+<div>3.假设当前位于第i棵苹果树下，则他会采摘a_i个苹果，多次经过同一棵苹果树下会重复采摘。</div>
+<div></div>
+<div>4.重复第2和3步k次。</div>
+<div></div>
+<div>请写一个程序帮助计算小Q期望摘到多少苹果。</div>
+<div></div></div><h2>Input</h2><div class=content><p>第一行包含三个正整数n,m,k(n,k&lt;=100000,m&lt;=200000)，分别表示苹果树和道路的数量以及重复步骤的次数。</p>
+<div>第二行包含n个正整数，依次表示a_1,a_2,...,a_n(1&lt;=a_i&lt;=100)。</div>
+<div>接下来m行，每行两个正整数u,v(1&lt;=u,v&lt;=n,u!=v)，表示第u和第v棵苹果树之间存在一条道路。</div>
+<div></div>
+<div></div></div><h2>Output</h2><div class=content><p>&nbsp;若答案为P/Q，则输出一行一个整数，即P*Q^{-1} mod 1000000007(10^9+7)。</p>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4 2<br />
+2 3 4<br />
+1 2<br />
+1 2<br />
+2 3<br />
+3 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>750000011<br />
+//期望为5.75=23/4=(23*250000002) mod 1000000007=750000011。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E6%9C%ACOJ%E4%BB%98%E8%B4%B9%E8%8E%B7%E5%8F%96'>本OJ付费获取</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5091'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5091'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5091'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

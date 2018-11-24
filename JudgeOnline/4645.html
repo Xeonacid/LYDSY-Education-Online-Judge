@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4645. -- graph</title><center><h2>4645: graph</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>11&nbsp;&nbsp;<span class=green>Solved: </span>3<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4645'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4645'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4645'>Discuss</a>]</center><h2>Description</h2><div class=content><div>图的定义：图G是一个有序二元组(V,E)，其中V称为顶集，E称为边集，</div>
+<div>E与V不相交。它们亦可写成V(G)和E(G)。</div>
+<div>此题中图不允许有重边和自环。</div>
+<div>树的定义：树是一种特殊的图，它是一个连通图，且任意删去一条边，它</div>
+<div>就不连通。</div>
+<div>两个图同构的定义：</div>
+<div>设这两个图为G1=(VI，E1)，G2=(V2，E2)</div>
+<div>1．点数相同。</div>
+<div>2．如果是一个有标号的图，那么他们同构等价于E1=E2。</div>
+<div>3．如果是一个无标号的图，且存在一种对于Gl和G2的标号使得新的两个有</div>
+<div>标号图同构，那么它们同构。</div>
+<div>问题描述：</div>
+<div>1．给定一个整数n，求n个点的有标号的无根树的个数。</div>
+<div>2．给定一个整数n，求n个点的有标号的有根树的个数。</div>
+<div>3．给定一个整数n，求n个点的无标号的无根树的个数。</div>
+<div>4．给定一个整数n，求n个点的无标号的有根树酌个数。</div>
+<div>5．给定一个整数n，求n个点的有标号的所有点的度数均为偶数的图的个数。</div>
+<div>6．给定一个整数n，求n个点的有标号的欧拉图的个数。</div>
+<div>7．给定一个整数n，求n个点的有标号的二分图的个数。</div>
+<div>求方案数对m取模的结果。保证m是质数。</div>
+<div></div></div><h2>Input</h2><div class=content><div>
+<div>一行八个数m，nl，n2，n3，n4，n5，n6，n7，分别为原问题中的m和七个问题</div>
+<div>1&lt; nl，n2，n5&lt;10^18，n3，n4，n6，n7&le;1000，l&lt;m&lt;10^9</div>
+</div>
+<div></div></div><h2>Output</h2><div class=content><div>一行七个数，表示七个问题的答案。</div>
+<div></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 2 2 2 2 2 2 2    </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 2 1 1 1 0 2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4645'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4645'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4645'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

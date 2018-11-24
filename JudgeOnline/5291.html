@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5291. -- [Bjoi2018]链上二次求和</title><center><h2>5291: [Bjoi2018]链上二次求和</h2><span class=green>Time Limit: </span>140 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>109&nbsp;&nbsp;<span class=green>Solved: </span>38<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5291'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5291'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5291'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有一条长度为n的链（1&le;i&lt;n，点i与点i+1之间有一条边的无向图），每个点有一个整数权值，第i个点的权值是</div>
+<div>a_i。现在有m个操作，每个操作如下：</div>
+<div></div>
+<div>操作1（修改）：给定链上两个节点u、v和一个整数d，表示将链上u到v唯一的简单路径上每个点权值都加上d。</div>
+<div></div>
+<div>操作2（询问）：给定两个正整数L、r，表示求链上所有节点个数大于等于L且小于等于r的简单路径节点权值和之和。</div>
+<div></div>
+<div>由于答案很大，只用输出对质数1000000007取模的结果即可。</div>
+<div>一条节点个数为k的简单路径节点权值和为这条上所有k个节点（包括端点）的权值之和，</div>
+<div>而本题中要求是对所有满足要求的简单路径，求这一权值和的和。</div>
+<div>由于是无向图，路径也是无向的，即点1到点2的路径与点2到点1的路径是同一条，不要重复计算。</div></div><h2>Input</h2><div class=content><div>输入第一行包含两个正整数n、m，分别表示节点个数和操作次数。</div>
+<div>第二行包含n个整数，其中第ii个数ai为第ii个点的初始权值。</div>
+<div>接下来m行，每行为1 u v d或2 l r的形式，分别表示进行一次操作1（修改）或操作2（询问）。</div>
+<div>记操作 1（修改）的次数为 m</div>
+<div>n &lt;= 200000,&nbsp;</div>
+<div>m &lt;= 500000,&nbsp;</div>
+<div>m'&lt;= 100000,&nbsp;</div>
+<div>0 &lt;= a_i &lt;1000000007</div>
+<div>1 &lt;= u &lt;= n</div>
+<div>1&lt;= v &lt;= n&nbsp;</div>
+<div>0 &lt;= d &lt; 1000000007</div>
+<div>l &lt;= r &lt;= n</div></div><h2>Output</h2><div class=content><div>对于每次询问，输出一行一个整数，表示答案对1000000007取模的余数。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5<br />
+1 1 1 1 1<br />
+2 5 5<br />
+2 1 2<br />
+1 1 2 2<br />
+2 1 1<br />
+1 1 5 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+13<br />
+9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>鸣谢佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5291'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5291'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5291'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

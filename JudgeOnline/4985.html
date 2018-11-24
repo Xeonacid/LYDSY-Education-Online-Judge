@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4985. -- 评分</title><center><h2>4985: 评分</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>52&nbsp;&nbsp;<span class=green>Solved: </span>38<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4985'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4985'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4985'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Lj最近参加一个选秀比赛，有N个评委参加了这次评分，N是奇数。评委编号为1到N。每位评委给Lj打的分数是一个</div>
+<div>整数，评委i(1 ≦ i ≦ N)的打分为Di。这次采用了一种创新的方法计算最后得分，计算规则是：最初N位评委排</div>
+<div>成一排，检查队伍排头的3位评委的评分，去掉一个最高分和一个最低分，剩下的一个评委移动到队伍最后，反复</div>
+<div>执行以上操作，直到队伍中的评委只剩一位，那么这个评委的打分就是Lj的最后得分。由于有的评委年纪比较大了</div>
+<div>，不记得自己的位置了，现在有M(1 ≦ M ≦ N - 2)个评委很快找到了自己的位置，剩下的N-M人找不到位置了，</div>
+<div>需要给他们重新安排位置。</div>
+<div>由于Lj希望自己的得分尽可能高。请你帮忙计算出LJ最后得分可能的最大值。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行为整数N和M，用空格分隔。表示有N位评委，其中M人的初始排列位置已经确定。</div>
+<div>接下来M行中第i行(1 ≦ i ≦ M)为两个整数Di和Pi，用空格分隔。</div>
+<div>表示第i位评委的评分为Di，初始排列位置为队伍排头开始的第Pi位。</div>
+<div>接下来N-M行中第i行(1 ≦ i ≦ N ? M)为整数Di+M，表示评委(i+M)的评分为Di+M。</div>
+<div>3 ≦ N ≦ 99 999，</div>
+<div>1 ≦ M ≦ N - 2，</div>
+<div>1 ≦ Di ≦ 109 (1 ≦ i ≦ N)，</div>
+<div>1 ≦ Pi ≦ N (1 ≦ i ≦ M)，</div>
+<div>Pi != Pj (1 ≦ i &lt; j ≦ M)。</div>
+<p></p></div><h2>Output</h2><div class=content><div>&nbsp;输出一行，为1个整数，表示LJ得分的最大值。</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 3<br />
+5 2<br />
+5 5<br />
+8 6<br />
+6<br />
+2<br />
+8<br />
+9</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+//最高得分的评分排列：2, 5, 6, 8, 5, 8, 9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4985'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4985'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4985'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4839. -- [Neerc2016]Abbreviation</title><center><h2>4839: [Neerc2016]Abbreviation</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>126&nbsp;&nbsp;<span class=green>Solved: </span>50<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4839'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4839'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4839'>Discuss</a>]</center><h2>Description</h2><div class=content><div>一个大写的单词的定义是一个单词的首字母为大写字母，之后的字母均为小写字母且至少要包含1个小写字母，例</div>
+<div>如：Ab,Abc,Abd,Abcde均为大写的单词，而ab,A,ABc,AcB,AB均不是大写的单词。一个可缩略序列的定义为一个字</div>
+<div>符串由至少两个大写的单词组成，且由恰好一个空格隔开（不能是两个或多个空格，也不能有标点符号。一个可缩</div>
+<div>略序列的缩略操作的定义为首先取这个可缩略序列的所有的大写的单词的首字母首先组成一个字符串（中间不含空</div>
+<div>格），然后是一个空格，接着是一个左括号，再接着是这个可缩略序列，最后紧接着是一个右括号。（细节详见输</div>
+<div>入输出样例）</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入不超过1000行，每行至多120个字符，每行的字符仅由大小写字母，空格，逗号或点（英文中的句号）</div>
+<div>没有前置或后置空格，无空行且输入至少有一行。</div>
+<div></div></div><h2>Output</h2><div class=content><div>对于输入的每一行，输出对该行中所有的可缩略序列执行缩略操作后的字符串。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>样例输入1：<br />
+This is ACM North Eastern European Regional Contest,<br />
+sponsored by International Business Machines.<br />
+The. Best. Contest. Ever.<br />
+A Great Opportunity for all contestants.<br />
+样例输入2：<br />
+ab Ab A Abc AB Abcd ABc Abcde AbC<br />
+样例输入3：<br />
+Oh  No  Extra Spaces.And,Punctuation Ruin Everything</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出1：<br />
+This is ACM NEERC (North Eastern European Regional Contest),<br />
+sponsored by IBM (International Business Machines).<br />
+The. Best. Contest. Ever.<br />
+A GO (Great Opportunity) for all contestants.<br />
+样例输出2：<br />
+ab Ab A Abc AB Abcd ABc Abcde AbC<br />
+样例输出3：<br />
+Oh  No  ES (Extra Spaces).And,PRE (Punctuation Ruin Everything)</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4839'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4839'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4839'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

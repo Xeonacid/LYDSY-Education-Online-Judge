@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1448. -- woj1350 Necklace</title><center><h2>1448: woj1350 Necklace</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>58&nbsp;&nbsp;<span class=green>Solved: </span>22<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1448'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1448'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1448'>Discuss</a>]</center><h2>Description</h2><div class=content>有一串由n珠子构成的环形珠链。珠链上的每个珠子要么黑色要么白色。每个珠子都能感应到它左边的k个珠子以及右边的k个珠子。每一秒珠子都会尝试改变自己的颜色，对于一个珠子，如果它感应到的2k个珠子中有奇数个是黑色，那么它会改变自己的颜色，否则它会保持自己原来的状态。并且所有要改变颜色的珠子都会在同一时刻改变自己的颜色。由于珠链是环形的，因此，对于两条珠链，如果其中一条可以通过旋转变成另外一条，那么这两条珠链是本质相同的。给出n、k、t以及一条长度为n的珠链的珠子的颜色，问有多少条本质不同的珠链能够在t秒之后变成给出的珠链。
+
+<img border="0" src="images/1448.jpg">
+</div><h2>Input</h2><div class=content>第一行给出数据组数
+下面每组数据,先给出N,K,T
+再一行给出珠子的描述</div><h2>Output</h2><div class=content>给出有多少组不同的形态,答案mod 9973</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 <br />
+6 1 1 <br />
+bbbwww <br />
+6 1 1 <br />
+bwbbww <br />
+12 2 1 <br />
+bbwwwbwwwwww </span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4 <br />
+0 <br />
+1 </span></div><h2>HINT</h2>
+			<div class=content><p>数据范围：1<=&#61603; n<= &#61603; 200, 1<=&#61603; k<= &#61603; (n - 1) / 2, 0<= &#61603; t <=&#61603; 200，有多组数据，数据组数不多于20。<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1448'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1448'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1448'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

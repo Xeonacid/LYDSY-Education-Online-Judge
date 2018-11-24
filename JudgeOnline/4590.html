@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4590. -- [Shoi2015]自动刷题机</title><center><h2>4590: [Shoi2015]自动刷题机</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1519&nbsp;&nbsp;<span class=green>Solved: </span>542<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4590'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4590'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4590'>Discuss</a>]</center><h2>Description</h2><div class=content><div>曾经发明了信号增幅仪的发明家SHTSC又公开了他的新发明：自动刷题机--一种可以自动AC题目的神秘装置。自动</div>
+<div>刷题机刷题的方式非常简单：首先会瞬间得出题目的正确做法，然后开始写程序，每秒，自动刷题机的代码生成模</div>
+<div>块会有两种可能的结果：</div>
+<div>A.写了x行代码。</div>
+<div>B.心情不好，删掉了之前写的y行代码。（如果y大于当前代码长度则相当于全部删除。）</div>
+<div>对于每个OJ所有题目，存在某个固定的长度n&gt;0。一旦自动刷题机在某秒结束时积累了大于等于n行的代码，它就会</div>
+<div>自动提交并AC此题，然后新建一个文件开始写下一题。SHTSC在某个OJ上跑了一天的自动刷题机，得到了很多条关</div>
+<div>于写代码的日志信息。他突然发现自己没有记录这个OJ的n究竟是多少。所幸他通过自己在OJ上的Rank知道了机一</div>
+<div>共切了k道题。希望你计算n可能的最小值和最大值。</div>
+<p></p></div><h2>Input</h2><div class=content><div>第一行两个整数l，k，表示刷题机的日志一共有l行，一共了切了k题。</div>
+<div>第二行l个整数，x1&hellip;xl。xi&gt;=0表示写了xi行代码。xi&lt;0表示删除了这道题的-xi行代码。</div>
+<div>1&lt;=l,k&lt;=100000，|xi|&lt;=10^9</div>
+<p></p></div><h2>Output</h2><div class=content><div>输出两个数a，b。分别代表n可能的最小值和最大值。如果不存在这样的n则输出-1。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 2<br />
+2<br />
+5<br />
+-3<br />
+9<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 7<br />
+//样例1：如果n=2那么刷题机就会切掉3题。但如果n>7刷题机最多只能切1题。考虑n=4发生了什么。<br />
+第一秒：刷题机写了2行。<br />
+第二秒：刷题机又写了5行，共有7行，提交，自信AC。<br />
+第三秒：刷题机删掉了3行，共有0行。<br />
+第四秒：刷题机写了9行，共有9行，提交，自信AC。<br />
+一共AC了两题。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By%20%E4%BD%9A%E5%90%8D%E4%B8%8A%E4%BC%A0'>By 佚名上传</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4590'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4590'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4590'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

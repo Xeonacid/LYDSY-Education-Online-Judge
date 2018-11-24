@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3724. -- PA2014Final Krolestwo</title><center><h2>3724: PA2014Final Krolestwo</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>66&nbsp;&nbsp;<span class=green>Solved: </span>21<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3724'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3724'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3724'>Discuss</a>]</center><h2>Description</h2><div class=content><p>你有一个无向连通图，边的总数为偶数。<br />
+设图中有k个奇点（度数为奇数的点），你需要把它们配成k/2个点对（显然k被2整除）。对于每个点对(u,v)，你需要用一条长度为偶数（假设每条边长度为1）的路径将u和v连接。每条路径允许经过重复的点，但不允许经过重复的边。这k/2条路径之间也不能有重复的边。</p></div><h2>Input</h2><div class=content><p>第一行有两个整数n,m(2&lt;=n,m&lt;=250000)，分别表示点数、边数，m为偶数。<br />
+接下来m行，每行两个整数a,b(1&lt;=a,b&lt;=n,a&ne;b)，表示a,b间连有一条边。不存在重边。保证奇点的数目不为零。</p></div><h2>Output</h2><div class=content><p>如果你认为无解就输出NIE。<br />
+设图中有k个奇点，则输出由k/2部分组成，每个部分包含两行：第一行为u,v,l，表示连接的两个点，及路径长度。第二行为空格隔开的l个整数，表示u到v的路径。边按照输入顺序从1到m编号。<br />
+若有多组答案，任意输出其中一个。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 8<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+5 6<br />
+6 1<br />
+1 4<br />
+2 5</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>样例输出：<br />
+1 5 2<br />
+6 5<br />
+2 4 2<br />
+8 4<br />
+另一种合法输出：<br />
+1 5 6<br />
+1 2 3 7 6 5<br />
+2 4 2<br />
+8 4<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Jcvb'>鸣谢Jcvb</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3724'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3724'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3724'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

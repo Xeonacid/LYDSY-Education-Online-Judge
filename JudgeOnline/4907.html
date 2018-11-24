@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4907. -- [BeiJing2017]同构</title><center><h2>4907: [BeiJing2017]同构</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>1<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4907'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4907'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4907'>Discuss</a>]</center><h2>Description</h2><div class=content><div>你有n个点，你可以在这n个点之间连无向边，两个点之间至多只能连一条边，也不允许连自环，问至多能连多少条</div>
+<div>边。但这个问题的答案显然是n(n-1)/2条。所以有一个额外的限制，要求这个图不存在非平凡的自同构。一个图G</div>
+<div>有非平凡的自同构定义为存在一个1,2,...,n的置换p(1), p(2),...,p(n)满足对于所有点u, v，(u, v)之间有边当</div>
+<div>且仅当(p(u), p(v))之间有边，并且这个置换非平凡也就是存在一个点u使得p(u) &ne; u。比如对于一个5个点的图(</div>
+<div>1,2),(2,3),(3,4),(4,5),(5,1),(1,3)，那么p(1)=3, p(2)=2, p(3)=1, p(4)=5, p(5)=4为这个图的一个非平凡的</div>
+<div>自同构。你要回答一个n个点的无向简单的不存在非平凡自同构的图最多有多少条边，如果答案不存在，即不存在n</div>
+<div>个点满足条件的图，请输出 &quot;-1&quot; (不包含引号)，否则输出答案对10^9+7的余数。</div></div><h2>Input</h2><div class=content><div>第一行一个正整数T表示数据组数。接下来T行，每行一个正整数n表示你要回答的图的点的个数。</div>
+<div>
+<div><span style="font-family: arial, verdana, helvetica, sans-serif;">本题只有一个点n=10^100</span><br style="font-family: arial, verdana, helvetica, sans-serif;" />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">其余测试点n&lt;=10^18</span></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>共T行，每行输出 &quot;-1&quot; 或者答案对10^9+7的余数。</div>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+1<br />
+2<br />
+3<br />
+4<br />
+5<br />
+6</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0<br />
+-1<br />
+-1<br />
+-1<br />
+-1<br />
+9</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4907'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4907'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4907'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

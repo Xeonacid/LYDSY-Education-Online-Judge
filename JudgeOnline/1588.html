@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1588. -- [HNOI2002]营业额统计</title><center><h2>1588: [HNOI2002]营业额统计</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>18930&nbsp;&nbsp;<span class=green>Solved: </span>7987<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1588'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1588'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1588'>Discuss</a>]</center><h2>Description</h2><div class=content><p>营业额统计 Tiger最近被公司升任为营业部经理，他上任后接受公司交给的第一项任务便是统计并分析公司成立以来的营业情况。 Tiger拿出了公司的账本，账本上记录了公司成立以来每天的营业额。分析营业情况是一项相当复杂的工作。由于节假日，大减价或者是其他情况的时候，营业额会出现一定的波动，当然一定的波动是能够接受的，但是在某些时候营业额突变得很高或是很低，这就证明公司此时的经营状况出现了问题。经济管理学上定义了一种最小波动值来衡量这种情况： 该天的最小波动值  当最小波动值越大时，就说明营业情况越不稳定。 而分析整个公司的从成立到现在营业情况是否稳定，只需要把每一天的最小波动值加起来就可以了。你的任务就是编写一个程序帮助Tiger来计算这一个值。 第一天的最小波动值为第一天的营业额。 	输入输出要求</p></div><h2>Input</h2><div class=content><div>第一行为正整数 ，表示该公司从成立一直到现在的天数，接下来的n行每行有一个整数(有可能有负数) ，表示第i</div>
+<div>天公司的营业额。</div>
+<div>天数n&lt;=32767,</div>
+<div>每天的营业额ai &lt;= 1,000,000。</div>
+<div>最后结果T&lt;=2^31</div>
+<p></p></div><h2>Output</h2><div class=content><p>输出文件仅有一个正整数，即Sigma(每天最小的波动值) 。结果小于2^31 。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6<br />
+5<br />
+1<br />
+2<br />
+5<br />
+4<br />
+6	</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>12<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>结果说明：5+|1-5|+|2-1|+|5-5|+|4-5|+|6-5|=5+4+1+0+1+1=12</p><br />
+<p>该题数据bug已修复.----2016.5.15</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1588'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1588'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1588'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

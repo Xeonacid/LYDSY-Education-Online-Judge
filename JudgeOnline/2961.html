@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2961. -- 共点圆</title><center><h2>2961: 共点圆</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>1226&nbsp;&nbsp;<span class=green>Solved: </span>496<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2961'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2961'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2961'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">　　在平面直角坐标系中，Wayne需要你完成n次操作，操作只有两种：<br />
+　　1.0 x y。表示在坐标系中加入一个以(x, y)为圆心且过原点的圆。<br />
+　　2.1 x y。表示询问点(x, y)是否在所有已加入的圆的内部（含圆周），且至少在一个圆内部（含圆周）。<br />
+　　为了减少你的工作量，题目保证圆心严格在x轴上方（纵坐标为正），且横坐标非零。<br />
+</span></p></div><h2>Input</h2><div class=content><p><font size="4">　　第1行一个整数n。<br />
+　　接下来n行，每行第一个数是0或1，分别表示两种操作。<br />
+　　接着有两个实数x和y，具体意义见题面。<br />
+</font></p></div><h2>Output</h2><div class=content><p><font size="4">　　对于每个询问操作，如果点在所有已加入的圆内（或圆周上），则输出&ldquo;Yes&rdquo;（不含引号）；否则输出&ldquo;No&rdquo;（不含引号）。<br />
+</font></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5<br />
+0 2.0000 3.0000<br />
+0 4.0000 1.0000<br />
+1 1.000000 1.000000<br />
+0 -3.0000 2.0000<br />
+1 1.000000 1.000000<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Yes<br />
+No</span></div><h2>HINT</h2>
+			<div class=content><p><div id="pcont1" style="margin-top: 20px; display: block; word-spacing: 0px; font: 12px ����, 'Times New Roman'; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; background-color: rgb(255,255,255); text-align: left; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><br />
+<div class="pdcont" style="font-size: 14px; color: rgb(32,0,0); font-family: 'Times New Roman', ����"><img height="313" width="523" alt="" src="upload/201212/11(6).jpg" /></div><br />
+<div class="pdcont" style="font-size: 14px; color: rgb(32,0,0); font-family: 'Times New Roman', ����">对于100%的数据，n&le;500000，所有坐标绝对值不超过10000。<br /><br />
+　　输入数据保证圆心纵坐标为正，横坐标非零。<br /><br />
+　　圆心坐标保留4位小数，询问点坐标保留6位小数，请选手注意控制精度。<br /><br />
+</div><br />
+</div><br />
+<p><br class="Apple-interchange-newline" /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E9%98%9F%E6%B8%85%E5%8D%8E%E9%9B%86%E8%AE%AD%202012-2013%20%E7%AC%AC%E4%BA%8C%E5%A4%A9'>中国国家队清华集训 2012-2013 第二天</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2961'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2961'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2961'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

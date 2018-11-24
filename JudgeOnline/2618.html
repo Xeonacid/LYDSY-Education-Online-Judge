@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2618. -- [Cqoi2006]凸多边形</title><center><h2>2618: [Cqoi2006]凸多边形</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>2266&nbsp;&nbsp;<span class=green>Solved: </span>1110<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2618'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2618'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2618'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="text-indent: 24pt"><span style="font-size: 12pt">逆时针给出</span><i><span style="font-size: 12pt">n</span></i><span style="font-size: 12pt">个凸多边形的顶点坐标，求它们交的面积。例如</span><span style="font-size: 12pt">n=2</span><span style="font-size: 12pt">时，两个凸多边形如下图：</span></div>
+<div style="text-indent: 24pt"><span style="font-size: 12pt"><img height="266" alt="" width="238" src="upload/201203/1(7).jpg" /></span></div>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">则相交部分的面积为</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">5.233</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p></div><h2>Input</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行有一个整数</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">n</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示凸多边形的个数，以下依次描述各个多边形。第</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">i</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个多边形的第一行包含一个整数</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">m<sub>i</sub></font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示多边形的边数，以下</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">m<sub>i</sub></font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行每行两个整数，逆时针给出各个顶点的坐标。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></p></div><h2>Output</h2><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-spacerun: yes"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出文件仅包含一个实数，表示相交部分的面积，保留三位小数。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><o:p><font face="Times New Roman">&nbsp;</font></o:p></span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+6<br />
+-2 0<br />
+-1 -2<br />
+1 -2<br />
+2 0<br />
+1 2<br />
+-1 2<br />
+4<br />
+0 -3<br />
+1 -1<br />
+2 2<br />
+-1 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5.233</span></div><h2>HINT</h2>
+			<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">100%</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据满足：</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">2&lt;=<i style="mso-bidi-font-style: normal">n</i>&lt;=10</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">3&lt;=<i style="mso-bidi-font-style: normal">m<sub>i</sub></i>&lt;=50</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，每维坐标为</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">[-1000,1000]</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">内的整数</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p><br />
+<p><span lang="EN-US" style="font-size: 12pt; font-family: &quot;Times New Roman&quot;; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><br clear="all" style="page-break-before: always; mso-special-character: line-break" /><br />
+</span></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2618'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2618'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2618'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

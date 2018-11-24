@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1910. -- [Ctsc2002] Award 颁奖典礼</title><center><h2>1910: [Ctsc2002] Award 颁奖典礼</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>395&nbsp;&nbsp;<span class=green>Solved: </span>207<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1910'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1910'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1910'>Discuss</a>]</center><h2>Description</h2><div class=content>IOI2002的颁奖典礼将在YONG-IN Hall隆重举行。人们在经历了充满梦幻的世界杯之后变得更加富于情趣。为了使颁奖典礼更具魅力，有人建议在YONG-IN Hall中搭建一个I字型的颁奖台，以此代表信息学Informatics。考虑到比赛的赞助商们可能要在YONG-IN Hall中摆设了许多展示台，他们可能不愿意移动展示台的位置。你作为IOI2002的金牌得主自然地成为了他们求助的对象。
+YONG-IN Hall是一个矩形的网格区域。每个赞助商的展示台都占据了若干个单位网格。I型颁奖台将正向搭建，且平行于YONG-IN Hall的边缘。I型颁奖台是由三个矩形相接叠成的，其中上方和下方的矩形的两侧必须都超出中间的矩形，否则将被误解成T, L, J等字母。例如：
+<img border="0" src="images/1910_1.jpg"> 
+这是两个合法的I型颁奖台，而以下三种情况均不合法：
+<img border="0" src="images/1910_2.jpg"> 
+希望你编程寻找面积最大的I型颁奖台，使其不覆盖任何展示台。
+</div><h2>Input</h2><div class=content>第一行包含两个正整数n, m(1<=n,m<=200)，分别表示YONG-IN Hall的矩形网格区域的行数和列数。以下n行每行包含m个数字，非0即1，每个数字描述一个单位网格，1表示该单位网格存在展示台，0表示该单位网格不存在展示台。
+</div><h2>Output</h2><div class=content>仅包含一个正整数，表示最大的I型颁奖台的面积。如果不存在合法的I型颁奖台，则输出0。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 8<br />
+1 1 1 1 1 0 0 1<br />
+1 0 0 0 0 1 1 1<br />
+1 0 0 0 0 0 1 1<br />
+1 0 1 0 1 0 1 0<br />
+1 0 0 0 0 0 0 1<br />
+1 1 0 0 0 1 0 1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>15<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><img border="0" src="images/1910_3.jpg"> </p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1910'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1910'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1910'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

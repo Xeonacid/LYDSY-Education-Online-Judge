@@ -1,0 +1,75 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3035. -- 导弹防御塔</title><center><h2>3035: 导弹防御塔</h2><span class=green>Time Limit: </span>2 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>199&nbsp;&nbsp;<span class=green>Solved: </span>88<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3035'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3035'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3035'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Freda的城堡&mdash;&mdash;<br />
+&ldquo;Freda，城堡外发现了一些入侵者！&rdquo;<br />
+&ldquo;喵...刚刚探究完了城堡建设的方案数，我要歇一会儿嘛lala~&rdquo;<br />
+&ldquo;可是入侵者已经接近城堡了呀！&rdquo;<br />
+&ldquo;别担心，rainbow，你看呢，这是我刚设计的导弹防御系统的说~&rdquo;<br />
+&ldquo;喂...别卖萌啊&hellip;&hellip;&rdquo;</span></p>
+<p><span style="font-size: medium">Freda控制着N座可以发射导弹的防御塔。每座塔都有足够数量的导弹，但是每座塔每次只能发射一枚。在发射导弹时，导弹需要T1秒才能从防御塔中射出，而在发射导弹后，发射这枚导弹的防御塔需要T2分钟来冷却。<br />
+所有导弹都有相同的匀速飞行速度V，并且会沿着距离最短的路径去打击目标。计算防御塔到目标的距离Distance时，你只需要计算水平距离，而忽略导弹飞行的高度。导弹在空中飞行的时间就是 (Distance/V) 分钟，导弹到达目标后可以立即将它击毁。<br />
+现在，给出N座导弹防御塔的坐标，M个入侵者的坐标，T1、T2和V，你需要求出至少要多少分钟才能击退所有的入侵者。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium"><br />
+第一行五个正整数N,M,T1,T2,V。<br />
+接下来M行每行两个整数，代表入侵者的坐标。<br />
+接下来N行每行两个整数，代表防御塔的坐标。</span></p></div><h2>Output</h2><div class=content><p><span style="font-size: medium">输出一个实数，表示最少需要多少分钟才能击中所有的入侵者，四舍五入保留六位小数。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3 30 20 1<br />
+0 0<br />
+0 50<br />
+50 0<br />
+50 50<br />
+0 1000<br />
+1000 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>91.500000<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>对于100%的数据， 1&le;N&le;50, 1&le;M&le;50，坐标绝对值不超过10000，T1,T2,V不超过2000.</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Poetize3'>Poetize3</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3035'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3035'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3035'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

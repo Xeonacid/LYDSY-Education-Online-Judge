@@ -1,0 +1,155 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2551. -- Tablouri Young</title><center><h2>2551: Tablouri Young</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>54&nbsp;&nbsp;<span class=green>Solved: </span>21<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2551'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2551'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2551'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span class="Apple-style-span" style="word-spacing: 0px; font: medium Arial,Microsoft Yahei,Simsun,sans-serif; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">
+<p align="justify"><font face="Times New Roman" size="3">Consider m natural numbers n<sub>1</sub>, n<sub>2</sub>, &hellip;, n<sub>m<span class="Apple-converted-space">&nbsp;</span></sub>with the property n<sub>1&sup3;<span class="Apple-converted-space">&nbsp;</span></sub>n<sub>2&sup3;<span class="Apple-converted-space">&nbsp;</span></sub>&hellip;&sup3; n<sub>m</sub>&gt;0.</font></p>
+<p align="justify"><font face="Times New Roman" size="3">We define a Young table as an arrangement in a table of n<sub>1</sub>+n<sub>2</sub>+&hellip;+n<sub>m</sub><span class="Apple-converted-space">&nbsp;</span>natural numbers (bigger than 0 and any two different), so that the i<sup>th</sup><span class="Apple-converted-space">&nbsp;</span>line has n<sub>i</sub><span class="Apple-converted-space">&nbsp;</span>elements (1&pound; i&pound; m) in ascending order from left to right, and the elements from the same column are in ascending order from bottom to top.</font></p>
+<p align="justify"><font face="Times New Roman" size="3">An example of Young table for m=4, n<sub>1</sub>=6, n<sub>2</sub>=4, n<sub>3</sub>=4, n<sub>4</sub>=1 is the following:</font></p>
+<p align="center"></p>
+<center>
+<table cellspacing="1" cellpadding="7" width="224">
+    <tbody>
+        <tr>
+            <td valign="top" width="16%">
+            <p><font face="Courier New" size="3"><font face="Courier New">1</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">2</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">5</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">9</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">10</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">15</font></font></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="16%">
+            <p><font face="Courier New" size="3"><font face="Courier New">3</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">6</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">7</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">13</font></font></p>
+            </td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+        </tr>
+        <tr>
+            <td valign="top" width="16%">
+            <p><font face="Courier New" size="3"><font face="Courier New">4</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">8</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">12</font></font></p>
+            </td>
+            <td valign="top" width="17%">
+            <p><font face="Courier New" size="3"><font face="Courier New">14</font></font></p>
+            </td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+        </tr>
+        <tr>
+            <td valign="top" width="16%">
+            <p><font face="Courier New" size="3"><font face="Courier New">11</font></font></p>
+            </td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+            <td valign="top" width="17%"></td>
+        </tr>
+    </tbody>
+</table>
+</center>
+<p></p>
+<b>
+<p><font face="Times New Roman">Task:</font></p>
+</b>
+<p><font face="Times New Roman" size="3">Given n<sub>1</sub>, n<sub>2</sub>, &hellip;, n<sub>m</sub></font><font face="Times New Roman"><sub><font size="3"><span class="Apple-converted-space">&nbsp;</span></font></sub><font size="3">determine the number of Young tables containing the elements<span class="Apple-converted-space">&nbsp;</span></font></font><font face="Times New Roman" size="3">1, 2, &hellip;, n<sub>1</sub>+n<sub>2</sub>+&hellip;+n<sub>m</sub>.</font></p>
+</span></p></div><h2>Input</h2><div class=content><ul>
+    <li><font face="Times New Roman" size="3"><i>on the first line is</i>: the natural number m;</font></li>
+</ul>
+<ul>
+    <li><font face="Times New Roman" size="3"><i>on the second line are</i>: the numbers n<sub>1</sub>, n<sub>2</sub>, &hellip;, n<sub>m</sub><span class="Apple-converted-space">&nbsp;</span>separated by a space.</font></li>
+</ul></div><h2>Output</h2><div class=content><p><font face="Times New Roman" size="3">contain the number of Young tables that can be built.</font></p>
+<p><font size="3"><b>
+<p><font face="Times New Roman">Constraints:</font></p>
+</b></font></p>
+<ul><font face="Courier New" size="3">
+    <ul>
+        <li>1&lt;= m&lt;= 20</li>
+    </ul>
+    </font>
+    <li><font face="Courier New" size="3">n<sub>1&lt;=</sub>12</font></li>
+</ul></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+3 2<br />
+<br />
+ <br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+5</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Romania2002'>Romania2002</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2551'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2551'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2551'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

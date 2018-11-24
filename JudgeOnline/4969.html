@@ -1,0 +1,72 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4969. -- 染色</title><center><h2>4969: 染色</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>3&nbsp;&nbsp;<span class=green>Solved: </span>2<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4969'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4969'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4969'>Discuss</a>]</center><h2>Description</h2><div class=content><div>有n个格子，现在用若干种颜色对这些格子的一部分染色，若染了k个格子，那么能够得到a_k的分数。设b_i表示恰</div>
+<div>好用i种颜色进行染色的所有不同方案的分数和。当两种方案染色的格子数不同，或将染色了的格子按照编号从小</div>
+<div>到大排列后有任意一对对应的格子颜色不同，就称这两种方案是不同的。特别地，用0种颜色只有一种方案，就是</div>
+<div>染0个格子，即b_0=a_0。</div>
+<div><img src="upload/201708/11.jpg" width="342" height="255" alt="" /></div>
+<div>如图，白色表示没有染色的格子，第一种方案与第二种是相同的，与第三种是不同的。</div>
+<div>现在给出b_0,b_1,b_2...b_n在模998244353意义下的值，你需要求出a_0,a_1,a_2...a_n在模998244353意义下的值,答案显然唯一。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行正整数n。</div>
+<div>第二行n+1个数b_0,b_1,b_2...b_n。</div>
+<div>n&lt;=100000</div>
+<div>所有b_i均为小于998244353的非负整数</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><p>一行n+1个数a_0,a_1,a_2...a_n</p>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4<br />
+3 10 60 120 72</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3 2 3 2 3 </span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4969'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4969'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4969'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

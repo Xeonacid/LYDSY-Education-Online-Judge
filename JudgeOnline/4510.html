@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4510. -- [Usaco2016 Jan]Radio Contact</title><center><h2>4510: [Usaco2016 Jan]Radio Contact</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>88&nbsp;&nbsp;<span class=green>Solved: </span>73<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4510'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4510'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4510'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Farmer John has lost his favorite cow bell, and Bessie the cow has agreed to help him find it! They both fan out and search the farm along different paths, but stay in contact via radio so they can keep in touch with each-other. Unfortunately, the batteries in their radios are running low, so they want to plan their movements so as to conserve power, by trying to stay always within a short distance apart.</div>
+<div>Farmer John starts at location (fx,fy) and plans to follow a path consisting of N steps, each of which is either 'N' (north), 'E' (east), 'S' (south), or 'W' west. Bessie starts at location (bx,bybx,by) and follows a similar path consisting of MM steps. Both paths may share points in common. At each time step, Farmer John can either stay put at his current location, or take one step forward along his path, in whichever direction happens to be next (assuming he has not yet reached the final location in his path). Bessie can make a similar choice. At each time step (excluding the first step where they start at their initial locations), their radios consume energy equal to the square of the distance between them.</div>
+<div></div>
+<div>Please help FJ and Bessie plan a joint movement strategy that will minimize the total amount of energy consumed up to and including the final step where both of them first reach the final locations on their respective paths.</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>The first line of input contains N and M (1&lt; =N,M&lt; =1000). The second line contains integers fx and fy, and the third line contains bxbx and byby (0&lt; =fx,fy,bx,by&lt; =10000). The next line contains a string of length N describing FJ's path, and the final line contains a string of length MM describing Bessie's path.</div>
+<div>It is guranteed that Farmer John and Bessie's coordinates are always in the range (0&lt; =x,y&lt; =1000) throughout their journey. Note that East points in the positive x direction and North points in the positive y direction.</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>Output a single integer specifying the minimum energy FJ and Bessie can use during their travels.</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 7<br />
+3 0<br />
+5 0<br />
+NN<br />
+NWWWWWN</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>28</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Gold'>Gold</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4510'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4510'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4510'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

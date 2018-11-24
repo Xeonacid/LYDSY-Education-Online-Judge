@@ -1,0 +1,71 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2897. -- 电子稻草人</title><center><h2>2897: 电子稻草人</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>9&nbsp;&nbsp;<span class=green>Solved: </span>6<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2897'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2897'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2897'>Discuss</a>]</center><h2>Description</h2><div class=content><div style="line-height: 150%">今后，农民就不必依靠原始的稻草人来驱赶偷吃农作物的鸟类了。一种全新的发明电子稻草人将使鸟类远离田地。</div>
+<div style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果你有三个电子稻草人，摆放在田里的三个位置，那么鸟儿就不能飞进这三个稻草人组成的三角形内，因为这里面有他们发出的激光。同理，如果有多个稻草人摆放在田里，那么他们所围成的区域（通常称之为凸包）将被保护。例如下图：</div>
+<div style="line-height: 150%"><img height="226" alt="" width="277" src="upload/201211/1.jpg" /></div>
+<div style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图中的黑点代表电子稻草人，阴影部分为收到保护的区域。</div>
+<div style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这个发明听起来不错，但是他又两个缺点：一是电子稻草人十分昂贵，所以农夫不能卖的起很多电子稻草人；二是他们十分沉重，必须放在坚实的地基上，这就限制的摆放稻草人的位置。</div>
+<div style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现在给出可以放稻草人的n个点的坐标，以及农夫可以购买最多稻草人数m，求最大可以保护田地的面积。</div>
+<div>&nbsp;</div></div><h2>Input</h2><div class=content><div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">输入数据包括三行。</span></div>
+<div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">第一行有n个数，为n个可以放置稻草人点的x坐标；</span></div>
+<div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">第二行有n个数，为n个可以放置稻草人点的y坐标；</span></div>
+<div style="text-indent: 21pt; line-height: 150%"><span style="font-size: medium">第三行一个整数，m。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">一个实数sum，为所求的面积（答案误差小于1e-9）。</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1 6 5 3 7 9<br />
+2 5 1 5 7 6 4<br />
+4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>24.0<br />
+Data Limit<br />
+所有的坐标在0到1000之间，保证解大于0。</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2897'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2897'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2897'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

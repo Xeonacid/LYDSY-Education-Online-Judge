@@ -1,0 +1,84 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3890. -- [Usaco2015 Jan]Meeting Time</title><center><h2>3890: [Usaco2015 Jan]Meeting Time</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>339&nbsp;&nbsp;<span class=green>Solved: </span>184<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3890'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3890'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3890'>Discuss</a>]</center><h2>Description</h2><div class=content><div>Bessie和她的妹妹Elsie想要从谷仓旅行到他们最喜欢的地区去。她们会在同一时间离开谷仓，也希望要在同一时</div>
+<div>间到达她们的目的地地区。农场由N个地区组成，分别编号为1..N (1 &lt;= N &lt;= 100)，谷仓位于1号区域，而她们的</div>
+<div>目的地是N号区域。由于农场是依山而建的，两个区域之间会有高度差，编号小的地区海拔高于编号大的地区的海</div>
+<div>拔，即1号地区海拔最高，N号地区海拔最低。会有M条小路两两连接不同地区。因为山路过于陡峭，路只允许以下</div>
+<div>坡的方式行走。比如就一条路连接了5号区域和8号区域，那么只允许从5号区域前往8号区域而不允许反向行走。每</div>
+<div>两个地区之间至多只有一条路，所以M &lt;= N(N-1)/2。Bessie和Elsie走路所花费的时间是不一样的。比如，走同一</div>
+<div>条路，Bessie会需要10个单位时间，而Elsie会要20个。请注意，因为她们在赶时间，所以只会在路上花费时间，</div>
+<div>进入或者离开一个区域不需要花费时间，而且她们也不会停下来等对方。请帮忙计算出Bessie和Elsie最短需要多</div>
+<div>少时间才能同时出发且同时到达她们的目的地。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>
+<div>第一行包含两个以空格分隔的整数，分别为N和M。</div>
+<div>接下来M行描述连接区域之间的路的情况</div>
+<div>每一行给出四个以空格分隔的整数A B C D，表示A区域和B区域之间有一条路，</div>
+<div>Bessie需要C个单位时间来走完这条路，而Elsie需要D个单位时间来走。</div>
+<div>C和D都在区间1..100内。</div>
+</div>
+<p></p></div><h2>Output</h2><div class=content><div>
+<div>输出一个整数。即Bessie和Elsie同时出发且同时达到N号区域所需要的最少时间。</div>
+<div>如果无法到达N号区域或者不可能同时到达，请输出单词 &quot;IMPOSSIBLE&quot;（引号不用输出）。</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3<br />
+1 3 1 2<br />
+1 2 1 2<br />
+2 3 1 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+SOLUTION NOTES:<br />
+Bessie is twice as fast as Elsie on each path, but if Bessie takes the<br />
+path 1->2->3 and Elsie takes the path 1->3 they will arrive at the<br />
+same time.</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3890'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3890'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3890'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

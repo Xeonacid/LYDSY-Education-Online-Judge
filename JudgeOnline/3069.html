@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3069. -- [Pa2011]Hard Choice 艰难的选择</title><center><h2>3069: [Pa2011]Hard Choice 艰难的选择</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>128 MB<br><span class=green>Submit: </span>195&nbsp;&nbsp;<span class=green>Solved: </span>86<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3069'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3069'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3069'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">Byteasar是一个很纠结的人。每次他经过Bytetown的时候都知道有至少2条不同的路径可以选择，这导致他必须花很长时间来决定走哪条路。Byteasar最近听说了Bytetown的修路计划，他可能是唯一一个为此感到高兴的人&mdash;&mdash;他有机会消除他的烦恼。</span></p>
+<p><span style="font-size: medium">在Byteasar一共有n个岔口，连接着m条双向道路。两条路径<strong>完全不同</strong>当且仅当他们没有公共的道路（但是允许经过相同的岔口）。</span></p>
+<p><span style="font-size: medium">Byteasar想知道：对于两个岔口<code>x y</code>，是否存在一对完全不同的路径。</span></p></div><h2>Input</h2><div class=content><p><span style="font-size: medium">第一行3个整数：<code>n, m, z (2&lt;=n&lt;=100000, 1&lt;=m,z&lt;=100000)</code>，分别代表：n个岔口，m条边，事件数z。岔口编号为1~n。</span></p>
+<p><span style="font-size: medium">下面m行：<code>ai, bi (1&lt;=ai,bi&lt;= n, ai!=bi)</code>，描述一条边</span></p>
+<p><span style="font-size: medium">然后下面z行描述事件：<code>ti, ci, di (t='Z' or 'P', 1&lt;=ci,di&lt;=n, ci!=di)</code>。事件按照时间排序。</span></p>
+<ul>
+    <li><span style="font-size: medium">当<code>t='Z'</code>，表示删除一条边<code>(ci, di)</code>，保证这条边之前没有被删除。注意，边可以被全部删除！ </span></li>
+    <li><span style="font-size: medium">当<code>t='P'</code>，询问是否存在从ci到di的一对完全不同的路径。 </span></li>
+</ul></div><h2>Output</h2><div class=content><p><span style="font-size: medium">对于每组询问，如果存在，输出<code>TAK</code>，否则输出<code>NIE</code>。</span></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7 8 7<br />
+1 2<br />
+1 3<br />
+1 4<br />
+2 3<br />
+3 4<br />
+3 7<br />
+7 4<br />
+5 6<br />
+Z 1 4<br />
+P 1 3<br />
+P 2 4<br />
+Z 1 3<br />
+P 1 3<br />
+Z 6 5<br />
+P 5 6<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>TAK<br />
+TAK<br />
+NIE<br />
+NIE<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3069'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3069'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3069'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

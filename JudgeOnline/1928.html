@@ -1,0 +1,82 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1928. -- Kthroad</title><center><h2>1928: Kthroad</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>6&nbsp;&nbsp;<span class=green>Solved: </span>4<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1928'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1928'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1928'>Discuss</a>]</center><h2>Description</h2><div class=content><pre style="text-indent: 21pt"><span style="font-size: medium">众所周知，在太阳系外围有一圈小行星带，而太阳系中离小行星带最近的Neptune往往面临着遭受小行星轰击的威胁。突然，某天Neptune上的天文台发现有一群小行星有k颗气势汹汹的袭来。作为Neptune的天文部长的小t想知道这些小行星分别要多久会撞到Neptune。你能够帮助他吗？</span></pre>
+<pre style="text-indent: 21pt"><span style="font-size: medium">这些小行星的运行遵循以下一些规则：</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>任意两颗小行星不会经过完全一样的路径，但有可能有绝大部分相同。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>对于某些小行星有可能受到其路径上的比较大的矮行星的引力作用，而围绕某个区域转圈。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>由于力的方向性，所以所有路径方向都是一定的。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">4.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>我们把空间中小行星可能经过的地方抽象成一个个点，并标号。共有N个点</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">5.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>由于我们只关心其路径长度，所以并不给出这些点的具体坐标。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">6.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>两点间有可能有多条直接路径。任意两点间共有M条这样的路径。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">7.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>每课小行星在一个单位时间中会运动一个天文单位。且都会在当前的从起点到Neptune的最短路径上运行。</span></pre>
+<pre style="margin-left: 39pt; text-indent: -18pt"><span style="font-size: medium">8.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>每颗小行星对于我们来说都是一样的。</span></pre>
+<pre><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 请你编程求出所有小行星从起点（同一个起点）到达Neptune的所需花费的时间。</span></pre>
+<pre><span style="font-size: medium">&nbsp;&nbsp;&nbsp; </span></pre></div><h2>Input</h2><div class=content><pre style="margin-left: 47.25pt; text-indent: -47.25pt"><span style="font-size: medium">第1行: 5个用空格隔开的整数：N、M、K、S、T，N个点M条边K个小行星, 起点的标号S，Neptune的标号T。</span></pre>
+<pre style="text-indent: 5.25pt"><span style="font-size: medium">接下来M行每行3个大于0的整数，表示每条边的起点标号和终点标号以及这条边的长度。 </span></pre>
+<pre><span style="font-size: medium">&nbsp;</span></pre></div><h2>Output</h2><div class=content><pre><span style="font-size: medium">共有K行每行一个整数，表示一颗小行星所要花费的时间。</span></pre>
+<pre><span style="font-size: medium">&nbsp;</span></pre></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>6 6 2 1 6<br />
+1 2 1<br />
+2 4 1<br />
+4 5 1<br />
+5 6 1<br />
+2 3 1<br />
+3 5 1<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>4<br />
+4<br />
+ <br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>数据约定N&lt;= 10000, M &lt;= 500000, K &lt;= 100<br /><br />
+对于所有数据在给定的数据范围内阶梯增长。<br /><br />
+</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1928'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1928'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1928'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

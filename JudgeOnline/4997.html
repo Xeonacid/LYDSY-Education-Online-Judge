@@ -1,0 +1,92 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 4997. -- [Usaco2017 Feb]Why Did the Cow Cross the Road III</title><center><h2>4997: [Usaco2017 Feb]Why Did the Cow Cross the Road III</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>80&nbsp;&nbsp;<span class=green>Solved: </span>55<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4997'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4997'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4997'>Discuss</a>]</center><h2>Description</h2><div class=content><p>&nbsp;Why did the cow cross the road? Well, one reason is that Farmer John's farm simply has a lot of road</p>
+<div>s, making it impossible for his cows to travel around without crossing many of them.</div>
+<div></div>
+<div>为什么牛过马路？ 其中一个简单的原因就是农民约翰的农场有很多道路，使得他的母牛不得不穿越许多道路。</div>
+<div></div>
+<div>FJ's farm is arranged as an N&times;N square grid of fields (2 &lt;= N &lt;= 100), Certain pairs of adjacent fi</div>
+<div>elds (e.g., north-south or east-west) are separated by roads, and a tall fence runs around the exter</div>
+<div>nal perimeter of the entire grid, preventing cows from leaving the farm. Cows can move freely from a</div>
+<div>ny field to any other adjacent field (north, east, south, or west), although they prefer not to cros</div>
+<div>s roads unless absolutely necessary.</div>
+<div></div>
+<div>FJ的农场在N&times;N的网格中（2&le;N&le;100），某些相邻的区域（例如，南北或东西）由道路分隔，高大的围栏围绕着</div>
+<div>整个格栅的外围，防止牛离开农场。 牛可以从任何场地自由移动到任何其他相邻的区域（北，东，南或西），不</div>
+<div>过除非不得已，她们并不愿意穿越道路。</div>
+<div></div>
+<div>There are K cows (1 &lt;= K &lt;= 100, K &lt;= N^2) on FJ's farm, each located in a different field. A pair o</div>
+<div>f cows is said to be &quot;distant&quot; if, in order for one cow to visit the other, it is necessary to cross</div>
+<div>&nbsp;at least one road. Please help FJ count the number of distant pairs of cows.</div>
+<div></div>
+<div>在FJ的农场有 K 头牛（1&le;K&le;100,K&le;N^2)，每个位于不同的区域。 定义一对牛是&ldquo;遥远的&rdquo;，是指让一头牛访</div>
+<div>问另一头牛时，必须至少穿过一条路。 请帮助FJ计算有多少对牛是&ldquo;遥远的&rdquo;。</div>
+<div></div></div><h2>Input</h2><div class=content><p>The first line of input contains N, K, and R.&nbsp;</p>
+<div>The next R lines describe R roads that exist between pairs of adjacent fields.&nbsp;</div>
+<div>Each line is of the form r c c r' c'(integers in the range 1&hellip;N)</div>
+<div>indicating a road between the field in (row r, column c) and the adjacent field in (row r',column c').&nbsp;</div>
+<div>The final K lines indicate the locations of the K cows, each specified in terms of a row and column.</div>
+<div></div>
+<div>第一行输入包含 N， K和 R。</div>
+<div>接下来的 R 行描述存在于相邻区域对之间的 R 条路。 每行的格式为 r, cc, r', c' 都是在1...N中的整数）</div>
+<div>表示在两个相邻的区域（第r行第c列，和第r行第c列）之间的路。 最终的K行表示 K 头牛的位置，也用行列来表示。</div>
+<div></div></div><h2>Output</h2><div class=content><div>Print the number of pairs of cows that are distant.</div>
+<div>输出遥远的牛数量对。</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 3 3<br />
+2 2 2 3<br />
+3 3 3 2<br />
+3 3 2 3<br />
+3 3<br />
+2 2<br />
+2 3</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=4997'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4997'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=4997'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

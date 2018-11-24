@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2163. -- 复杂的大门</title><center><h2>2163: 复杂的大门</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>259 MB<br><span class=green>Submit: </span>421&nbsp;&nbsp;<span class=green>Solved: </span>262<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2163'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2163'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2163'>Discuss</a>]</center><h2>Description</h2><div class=content><p>你去找某bm玩，到了门口才发现要打开他家的大门不是一件容易的事&hellip;&hellip;<br />
+他家的大门外有n个站台，用1到n的正整数编号。你需要对每个站台访问一定次数以后大门才能开启。站台之间有m个单向的传送门，通过传送门到达另一个站台不需要花费任何代价。而如果不通过传送门，你就需要乘坐公共汽车，并花费1单位的钱。值得庆幸的是，任意两个站台之间都有公共汽车直达。<br />
+现在给你每个站台必须访问的次数Fi，对于站台i，你必须恰好访问Fi次（不能超过）。<br />
+我们用u、v、w三个参数描述一个传送门，表示从站台u到站台v有一个最多可以使用w次的传送门（不一定要使用w次）。值得注意的是，对于任意一对传送门(u1,v1)和(u2,v2)，如果有u1&lt;u2，则有v1&le;v2；如果有v1&lt;v2，则有u1&le;u2；且u1=u2和v1=v2不同时成立。<br />
+你可以从任意的站台开始，从任意的站台结束。出发去开始的站台需要花费1单位的钱。你需要求出打开大门最少需要花费多少单位的钱。<br />
+</p></div><h2>Input</h2><div class=content><p>第一行包含两个正整数n、m，意义见题目描述。第二行包含n个正整数，第i个数表示Fi。接下来有m行，每行有三个正整数u、v、w，表示从u到v有一个可以使用w次的传送门。</p></div><h2>Output</h2><div class=content><p>输出一行一个整数，表示打开大门最少花费的钱数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3<br />
+5 5 5 5<br />
+1 2 1<br />
+3 2 1<br />
+3 4 1</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>17</span></div><h2>HINT</h2>
+			<div class=content><p><p>有20%的数据满足n&le;10，m&le;50；对于所有的w、Fi，满足1&le;w,Fi&le;10。有50%的数据满足n&le;1000，m&le;10000。100%的数据满足1&le;n&le;10000，1&le;m&le;100000；对于所有的u、v，满足1&le;u,v&le;n，u&ne;v；对于所有的w、Fi，满足1&le;w,Fi&le;50000。以上的每类数据中都存在50%的数据满足对于所有的w、Fi，有w=Fi=1。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2163'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2163'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2163'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

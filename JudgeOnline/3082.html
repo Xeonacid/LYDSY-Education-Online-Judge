@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 3082. -- Graph2</title><center><h2>3082: Graph2</h2><span class=green>Time Limit: </span>100 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>256 MB<br><span class=green>Submit: </span>52&nbsp;&nbsp;<span class=green>Solved: </span>19<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3082'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3082'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3082'>Discuss</a>]</center><h2>Description</h2><div class=content><div><span style="font-size: medium">一个无向图，N个点，编号从1~N，M条边，编号从1~M。接下来Q个操作，插入一条边，编号为原有编号数+1；删除一条边，编号数不变；询问两个点是否能够互达。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">第一行两个整数N,M</span></div>
+<div><span style="font-size: medium">接下来M行，每行两个整数，表示该条边所连接的两个点。</span></div>
+<div><span style="font-size: medium">接下来一行一个整数Q</span></div>
+<div><span style="font-size: medium">接下来Q行，是以下三种之一:</span></div>
+<div><span style="font-size: medium">D x，表示删除编号为x的边（一条边被删除多次等价于删除一次）</span></div>
+<div><span style="font-size: medium">I x y，表示在点x和点y之间插入一条边</span></div>
+<div><span style="font-size: medium">Q x y，表示询问点x和点y是否能互达</span></div>
+<div><span style="font-size: medium">保证点和边的编号合法。</span></div></div><h2>Output</h2><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">对于每个询问输出一行，&rdquo;Yes&rdquo;表示能达到，&rdquo;No&rdquo;表示不能。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 1<br />
+1 2<br />
+5<br />
+Q 1 2<br />
+D 1<br />
+Q 1 2<br />
+I 1 2<br />
+Q 1 2<br />
+ <br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Yes<br />
+No<br />
+Yes<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p><br /><br />
+对于100%的数据，N&lt;=50000,M&lt;=100000,Q&lt;=100000</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search='></a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=3082'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3082'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=3082'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

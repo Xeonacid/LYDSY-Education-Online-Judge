@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 5203. -- [NEERC2017 Northern]Grand Test</title><center><h2>5203: [NEERC2017 Northern]Grand Test</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>32&nbsp;&nbsp;<span class=green>Solved: </span>10<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5203'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5203'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5203'>Discuss</a>]</center><h2>Description</h2><div class=content><div>简单路径是指没有重复经过同一个点的路径。</div>
+<div>给定一个n个点，m条边的简单无向图，问是否能找到两个不同的点S和T，满足S和T之间存在至少三条不同的简单路径。</div>
+<div>这三条简单路经之间也不能有重复的边。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class=content><div>输入数据的第一行包含一个正整数Case(1&lt;=Case&lt;=100000)，表示测试数据的组数。</div>
+<div>每组数据第一行包含两个正整数n,m(1&lt;=n,m&lt;=100000)，分别表示点数和边数。</div>
+<div>接下来m行，每行两个正整数u_i,v_i(1&lt;=u_i&lt;v_i&lt;=n)，表示一条无向边。</div>
+<div>输入数据保证不存在重边和自环，且sum n,sum m&lt;=100000。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class=content><div>对于每组数据，若无解，输出-1，否则第一行输出两个正整数S和T。</div>
+<div>接下来3行描述3条S到T的路径，每行先输出一个正整数t，表示路径上的点数，然后依次从S输出到T路径上的每个点。</div>
+<div>若有多组解，输出任意一组。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+6 6<br />
+3 6<br />
+3 4<br />
+1 4<br />
+1 2<br />
+1 3<br />
+2 3<br />
+3 1<br />
+1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 3<br />
+3 1 2 3<br />
+2 1 3<br />
+3 1 4 3<br />
+-1</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=%E9%B8%A3%E8%B0%A2Claris%E6%8F%90%E4%BE%9B%E7%BF%BB%E8%AF%91%E5%8F%8ASPJ'>鸣谢Claris提供翻译及SPJ</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=5203'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5203'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=5203'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

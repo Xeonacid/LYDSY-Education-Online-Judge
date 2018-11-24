@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 1685. -- [Usaco2005 Oct]Allowance 津贴</title><center><h2>1685: [Usaco2005 Oct]Allowance 津贴</h2><span class=green>Time Limit: </span>5 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>64 MB<br><span class=green>Submit: </span>300&nbsp;&nbsp;<span class=green>Solved: </span>223<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1685'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1685'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1685'>Discuss</a>]</center><h2>Description</h2><div class=content><p><span style="font-size: medium">As a reward for record milk production, Farmer John has decided to start paying Bessie the cow a small weekly allowance. FJ has a set of coins in N (1 &lt;= N &lt;= 20) different denominations, where each denomination of coin evenly divides the next-larger denomination (e.g., 1 cent coins, 5 cent coins, 10 cent coins, and 50 cent coins). Using the given set of coins, he would like to pay Bessie at least some given amount of money C (1 &lt;= C &lt;= 100,000,000) every week. Please help him compute the maximum number of weeks he can pay Bessie. </span></p>
+<div><span style="font-size: medium">作为对勤勤恳恳工作的贝茜的奖励，约翰已经决定开始支付贝茜一个小的每周津贴．</span><span style="font-size: medium">&nbsp;&nbsp;约翰有n(1&le;N&le;20)种币值的硬币，面值小的硬币总能整除面值较大的硬币．比如说，币值有如下几种：1美分，5美分，10美分，50美分&hellip;．．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;利用给定的这些硬币，他将要每周付给贝茜一定金额的津贴C(1&le;C&le;10^8)．</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;请帮他计算出他最多能给贝茜发几周的津贴．</span></div></div><h2>Input</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行：2个用空格隔开的整数n和C.</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第2到n+1行：每行两个整数表示一种币值的硬币．第一个整数V(I&le;y&le;10^8)，表示币值．</span></div>
+<div><span style="font-size: medium">第二个整数B(1&le;B&le;10^6)，表示约翰拥有的这种硬币的个数．</span></div></div><h2>Output</h2><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;一个整数，表示约翰付给贝茜津贴得最多的周数．</span></div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>    3  6<br />
+    10  1<br />
+    1  1 00<br />
+    5  1 20<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>   111<br />
+样例说明<br />
+    约翰想要每周付给贝茜6美分．他有1个10美分的硬币、100个1美分的硬币、120个5美分的硬币．约翰可以第一周付给贝茜一个10美分的硬币，接着的10周每周付给贝茜2个5芙分硬币，接下来的100周每周付给贝茜一个1美分的硬币和1个5美分的硬币．共计111周．</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=Silver'>Silver</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=1685'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1685'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=1685'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>

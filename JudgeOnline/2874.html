@@ -1,0 +1,187 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="https://www.lydsy.com/JudgeOnline/faqs.php">F.A.Qs</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/">Home</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/bbs.php">Discuss</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/problemset.php">ProblemSet</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/status.php">Status</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/ranklist.php">Ranklist</a></th>
+        <th><a href="https://www.lydsy.com/JudgeOnline/contest.php">Contest</a></th>
+        <th><a href="http://begin.lydsy.com/JudgeOnline">入门OJ</a></th>
+		<th><a href="https://www.lydsy.com/JudgeOnline/modifypage.php"><b>ModifyUser</b></a>&nbsp;&nbsp;<a href='https://www.lydsy.com/JudgeOnline/userinfo.php?user=Xeonacid'>
+				<font color=red>Xeonacid</font></a></th><th><a href="https://www.lydsy.com/JudgeOnline/logout.php">Logout</a></th>		<th><a href="https://www.lydsy.com/JudgeOnline/donation.php"><font color=red>捐赠本站</font></a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>注册本OJ方式请见https://www.lydsy.com/JudgeOnline/wttl/thread.php?tid=5671	</div>
+</div>
+</center>
+</div>
+<title>Problem 2874. -- 训练士兵</title><center><h2>2874: 训练士兵</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>512 MB<br><span class=green>Submit: </span>267&nbsp;&nbsp;<span class=green>Solved: </span>72<br>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2874'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2874'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2874'>Discuss</a>]</center><h2>Description</h2><div class=content><p class="MsoNormal" align="center" style="text-align:center"><font face="宋体" size="5"><br />
+</font></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">Ryz</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">正在着手于训练一批精锐士兵。</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">Ryz</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">手下有</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">n*m</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">个士兵，排成一个</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">n</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">行</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">m</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">列的方阵。在一天中，</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">ryz</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">会对士兵下达一些命令，每个命令作用于一个小方阵的所有士兵，并且会增加他们的疲劳值。现在</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">ryz</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">想知道，在一整天训练中，某些小方阵中的士兵的疲劳值总和是多少。</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><font face="宋体" size="3"><br />
+</font></p>
+<p></p></div><h2>Input</h2><div class=content><p></p>
+<div></div>
+<div>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">第一行有</span><span lang="EN-US" style="font-size: 12pt; ">3</span><span style="font-size: 12pt; font-family: 宋体; ">个整数</span><span lang="EN-US" style="font-size: 12pt; ">n,m,k,q</span><span style="font-size: 12pt; font-family: 宋体; ">。分别表示方阵的行数、列数、指令数和询问数。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">接下来</span><span lang="EN-US" style="font-size: 12pt; ">k</span><span style="font-size: 12pt; font-family: 宋体; ">行，每行</span><span lang="EN-US" style="font-size: 12pt; ">5</span><span style="font-size: 12pt; font-family: 宋体; ">个整数</span><span lang="EN-US" style="font-size: 12pt; ">x1,x2,y1,y2,s</span><span style="font-size: 12pt; font-family: 宋体; ">，描述一个指令，表示这条指令对所有坐标</span><span lang="EN-US" style="font-size: 12pt; ">(x,y)</span><span style="font-size: 12pt; font-family: 宋体; ">满足</span><span lang="EN-US" style="font-size: 12pt; ">x1&lt;=x&lt;=x2</span><span style="font-size: 12pt; font-family: 宋体; ">且</span><span lang="EN-US" style="font-size: 12pt; ">y1&lt;=y&lt;=y2</span><span style="font-size: 12pt; font-family: 宋体; ">的士兵产生了</span><span lang="EN-US" style="font-size: 12pt; ">s</span><span style="font-size: 12pt; font-family: 宋体; ">的疲劳值。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span lang="EN-US" style="font-size: 12pt; ">(1&lt;=x1&lt;=x2&lt;=n</span><span style="font-size: 12pt; font-family: 宋体; ">，</span><span lang="EN-US" style="font-size: 12pt; ">1&lt;=y1&lt;=y2&lt;=m</span><span style="font-size: 12pt; font-family: 宋体; ">，</span><span lang="EN-US" style="font-size: 12pt; ">0&lt;=s&lt;=1000)<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">接下来</span><span lang="EN-US" style="font-size: 12pt; ">q</span><span style="font-size: 12pt; font-family: 宋体; ">行，每行</span><span lang="EN-US" style="font-size: 12pt; ">2</span><span style="font-size: 12pt; font-family: 宋体; ">个整数</span><span lang="EN-US" style="font-size: 12pt; ">x,y(x,y&lt;=10^9)</span><span style="font-size: 12pt; font-family: 宋体; ">，描述一个询问，询问是被加密的。一个询问的密码是上一个询问的答案</span><span lang="EN-US" style="font-size: 12pt; ">(</span><span style="font-size: 12pt; font-family: 宋体; ">记为</span><span lang="EN-US" style="font-size: 12pt; ">c)</span><span style="font-size: 12pt; font-family: 宋体; ">，第一个询问的密码是</span><span lang="EN-US" style="font-size: 12pt; ">0</span><span style="font-size: 12pt; font-family: 宋体; ">。询问参数的计算方式如下：</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span lang="EN-US" style="font-size: 12pt; ">x1=c % n+1,x2=(c+x) % n+1</span><span style="font-size: 12pt; font-family: 宋体; ">，如果</span><span lang="EN-US" style="font-size: 12pt; ">x1&gt;x2</span><span style="font-size: 12pt; font-family: 宋体; ">则交换</span><span lang="EN-US" style="font-size: 12pt; ">x1</span><span style="font-size: 12pt; font-family: 宋体; ">和</span><span lang="EN-US" style="font-size: 12pt; ">x2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span lang="EN-US" style="font-size: 12pt; ">y1=c % m+1,y2=(c+y) % m +1</span><span style="font-size: 12pt; font-family: 宋体; ">，如果</span><span lang="EN-US" style="font-size: 12pt; ">y1&gt;y2</span><span style="font-size: 12pt; font-family: 宋体; ">则交换</span><span lang="EN-US" style="font-size: 12pt; ">y1</span><span style="font-size: 12pt; font-family: 宋体; ">和</span><span lang="EN-US" style="font-size: 12pt; ">y2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">询问所有坐标</span><span lang="EN-US" style="font-size: 12pt; ">(x,y)</span><span style="font-size: 12pt; font-family: 宋体; ">满足</span><span lang="EN-US" style="font-size: 12pt; ">x1&lt;=x&lt;=x2</span><span style="font-size: 12pt; font-family: 宋体; ">且</span><span lang="EN-US" style="font-size: 12pt; ">y1&lt;=y&lt;=y2</span><span style="font-size: 12pt; font-family: 宋体; ">的士兵的疲劳值总和。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">保证答案</span><span lang="EN-US" style="font-size: 12pt; ">&lt;2^64</span><span style="font-size: 12pt; font-family: 宋体; ">。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 12pt; "><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><font face="宋体" size="3"><br />
+</font></p>
+<p class="MsoNormal"></p>
+</div></div><h2>Output</h2><div class=content><p></p>
+<div></div>
+<div>
+<p class="MsoNormal" style="text-indent: 21pt; "><span style="font-size: 12pt; font-family: 宋体; ">对于每个询问，输出一行答案。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size: 12pt; "><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"></p>
+</div></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata><br />
+输入样例1<br />
+<br />
+4 5 3 3<br />
+<br />
+1 3 2 2 7<br />
+<br />
+2 4 2 3 5<br />
+<br />
+1 4 4 5 6<br />
+<br />
+1 2<br />
+<br />
+0 3<br />
+<br />
+2 2<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata><br />
+输出样例1<br />
+<br />
+24<br />
+<br />
+12<br />
+<br />
+46<br />
+<br />
+ <br />
+<br />
+第一次询问的是左上角坐标为(1,1),右下角坐标为(2,3)的这个矩形<br />
+<br />
+第二次询问的是左上角坐标为(1,3),右下角坐标为(1,5)的这个矩形<br />
+<br />
+第三次询问的是左上角坐标为(1,3)，右下角坐标为(3,5)这个矩形<br />
+<br />
+ <br />
+<br />
+ <br />
+<br />
+ <br />
+<br />
+ <br />
+<br />
+输入样例2<br />
+<br />
+5 5 5 5<br />
+<br />
+1 1 1 3 242<br />
+<br />
+1 4 4 5 83<br />
+<br />
+3 5 3 3 221<br />
+<br />
+2 2 1 3 254<br />
+<br />
+5 5 2 2 105<br />
+<br />
+0 1<br />
+<br />
+0 4<br />
+<br />
+2 1<br />
+<br />
+1 3<br />
+<br />
+0 1<br />
+<br />
+ <br />
+<br />
+输出样例2<br />
+<br />
+484<br />
+<br />
+0<br />
+<br />
+992<br />
+<br />
+442<br />
+<br />
+304<br />
+<br />
+ <br />
+<br />
+ </span></div><h2>HINT</h2>
+			<div class=content><p><p><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;<br />
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:<br />
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;<br />
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">对于</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:&quot;Times New Roman&quot;;<br />
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;<br />
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">100%</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:<br />
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:<br />
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:<br />
+ZH-CN;mso-bidi-language:AR-SA">的数据</span><span lang="EN-US" style="font-size:<br />
+12.0pt;mso-bidi-font-size:10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:<br />
+宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;<br />
+mso-bidi-language:AR-SA"> n,m&lt;=10^8,k&lt;=40000,q&lt;=100000</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:<br />
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:<br />
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:<br />
+ZH-CN;mso-bidi-language:AR-SA">；</span></p><br />
+<p></p></p></div><h2>Source</h2>
+			<div class=content><p><a href='https://www.lydsy.com/JudgeOnline/problemset.php?search=By&#32;Ryz'>By Ryz</a></p></div><center>[<a href='https://www.lydsy.com/JudgeOnline/submitpage.php?id=2874'>Submit</a>][<a href='https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2874'>Status</a>][<a href='https://www.lydsy.com/JudgeOnline/bbs.php?id=2874'>Discuss</a>]</center>﻿<br>
+<a href="https://www.lydsy.com/JudgeOnline/"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=ko">한국어</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=cn">中文</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=fa">فارسی</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=en">English</a>&nbsp;
+		<a href="https://www.lydsy.com/JudgeOnline/setlang.php?lang=th">ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2018 大视野在线测评</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
